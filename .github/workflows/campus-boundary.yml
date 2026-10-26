@@ -1,0 +1,36 @@
+# 캠퍼스 코드 경계 검사 — PR 이 campus/ 와 포크 전용 파일 밖(학사 코드)을 고치면 실패한다.
+# 학사 코드는 원본(AIM-Output/26-WE-Meet-Project)에서 고치고 동기화로 받는다 (.github/README.md '구분하는 법').
+# 원본 동기화를 PR 로 받아야 할 때는 PR 에 'upstream-sync' 라벨을 붙이면 이 검사를 건너뛴다.
+name: Campus boundary
+
+on:
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  boundary:
+    if: ${{ !contains(github.event.pull_request.labels.*.name, 'upstream-sync') }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: campus/ 밖을 고쳤는지 검사
+        env:
+          BASE: ${{ github.event.pull_request.base.sha }}
+          HEAD: ${{ github.event.pull_request.head.sha }}
+        run: |
+          changed=$(git -c core.quotepath=false diff --name-only "$BASE"..."$HEAD")
+          echo "바뀐 파일:"
+          echo "$changed"
+          outside=$(echo "$changed" | grep -Ev '^(campus/|\.github/README\.md$|\.github/pull_request_template\.md$|\.github/workflows/campus-[^/]+\.ya?ml$)' || true)
+          if [ -n "$outside" ]; then
+            echo "::error::campus/ 밖의 학사 파일을 고쳤습니다. 학사 코드는 원본 저장소(AIM-Output/26-WE-Meet-Project)에서 고친 뒤 동기화로 받으세요."
+            echo "$outside"
+            exit 1
+          fi
+          echo "경계 OK — 캠퍼스 영역과 포크 전용 파일만 바뀌었습니다."

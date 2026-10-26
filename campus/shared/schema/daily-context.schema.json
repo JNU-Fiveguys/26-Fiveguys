@@ -1,0 +1,80 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/JNU-Fiveguys/26-Fiveguys/campus/shared/schema/daily-context.schema.json",
+  "title": "DailyContext v1 — 오늘 맥락",
+  "description": "학사 PC 앱이 만들어 캠퍼스 서버로 올리는 하루치 맥락. 학사 ↔ 캠퍼스 사이의 유일한 계약이다(기능 정의서 CA0-3). 일정 제목·과목명·강의실 호수·교수명·성적·이름·학번은 넣지 않는다.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["version", "date", "generatedAt", "campus", "blocks"],
+  "properties": {
+    "version": { "const": 1 },
+    "date": {
+      "description": "맥락이 가리키는 날 (로컬 날짜)",
+      "type": "string",
+      "format": "date"
+    },
+    "generatedAt": {
+      "description": "PC 앱이 만든 시각 (시간대 포함)",
+      "type": "string",
+      "format": "date-time"
+    },
+    "campus": {
+      "enum": ["gwangju", "yeosu", "hwasun"]
+    },
+    "blocks": {
+      "description": "그날의 바쁜 구간. 캠퍼스 쪽이 이 사이의 빈 구간으로 공강을 계산한다",
+      "type": "array",
+      "items": { "$ref": "#/$defs/block" }
+    },
+    "examPeriod": {
+      "description": "시험기간 여부",
+      "type": "boolean",
+      "default": false
+    },
+    "dueSoonCount": {
+      "description": "24시간 안에 마감되는 과제 등의 개수 (제목 없이 개수만)",
+      "type": "integer",
+      "minimum": 0,
+      "default": 0
+    }
+  },
+  "$defs": {
+    "hhmm": {
+      "type": "string",
+      "pattern": "^([01][0-9]|2[0-3]):[0-5][0-9]$|^24:00$"
+    },
+    "block": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "start", "end"],
+      "properties": {
+        "kind": {
+          "description": "class = 수업, exam = 시험, busy = 내 일정(시각만)",
+          "enum": ["class", "exam", "busy"]
+        },
+        "start": { "$ref": "#/$defs/hhmm" },
+        "end": { "$ref": "#/$defs/hhmm" },
+        "building": {
+          "description": "건물 코드 — 강의실 '공7-223' 에서 '-' 앞(공7). class·exam 에만 넣고 busy 에는 넣지 않는다",
+          "type": "string",
+          "maxLength": 20
+        }
+      }
+    }
+  },
+  "examples": [
+    {
+      "version": 1,
+      "date": "2026-10-28",
+      "generatedAt": "2026-10-28T07:00:00+09:00",
+      "campus": "gwangju",
+      "blocks": [
+        { "kind": "class", "start": "09:00", "end": "10:15", "building": "공7" },
+        { "kind": "busy", "start": "10:30", "end": "11:00" },
+        { "kind": "exam", "start": "13:00", "end": "14:15", "building": "공2" }
+      ],
+      "examPeriod": true,
+      "dueSoonCount": 2
+    }
+  ]
+}
