@@ -178,7 +178,7 @@ server/                    얇은 서버 (나중에)
 
 ### 4단계 — 데스크톱 앱 (Tauri)
 - [x] 데이터 폴더 → `osenv.appdata`: `%LOCALAPPDATA%\kr.univus.desktop\data` / `~/Library/Application Support/kr.univus.desktop/data` 에 저장소와 같은 모양(앱 식별자 폴더 — 설치 폴더 `%LOCALAPPDATA%\UnivUs` 와 분리, 제거할 때 '앱 데이터 삭제'가 지우는 곳)(F6 상대경로 규칙 유지). 기존 데이터 이전은 자동이 아니라 `python -m osenv migrate-data`(복사·덮어쓰지 않음 — SQLite 를 두 실행 방식이 같이 열지 않게)
-- [x] 실행 토큰·빈 포트 — Origin 을 늘리는 대신 **창이 사이드카와 같은 origin(127.0.0.1:<빈 포트>)을 연다**. `/desktop/launch?code=` 한 번 쓰는 코드 → HttpOnly·SameSite=Strict 세션 쿠키, 쿠키 없으면 모든 요청 403. 저장소 실행은 검사 없음(그대로)
+- [x] 실행 토큰·빈 포트 — Origin 을 늘리는 대신 **창이 사이드카와 같은 origin(127.0.0.1:<빈 포트>)을 연다**. `/desktop/launch?code=` 한 번 쓰는 코드 → HttpOnly·SameSite=Strict 세션 쿠키(맥은 Lax — WKWebView 가 tauri:// 시작 화면에서 넘어온 303 에 Strict 쿠키를 붙이지 않아 첫 화면이 403 이 됐다, 2026-10-27), 쿠키 없으면 모든 요청 403. 저장소 실행은 검사 없음(그대로)
 - [x] 실행환경 1벌 — `desktop.py` 를 PyInstaller onedir(`univus-backend`, 약 153MB)로. 기능 코드는 원본 .py 로 넣고 import 를 AST 로 훑어 hiddenimports. 자식 프로세스는 `osenv.module_cmd` → `<실행 파일> --run-module eclass sync`. pid_alive·프로세스 찾기(CIM/pgrep)·작업 경로 확인이 묶인 실행 파일 이름도 안다. 작업 스케줄러는 `register-task.ps1 -Command` 로 앱 실행 파일을 등록
 - [x] Chromium — **첫 실행 때 앱 데이터 폴더로 백그라운드 다운로드**(지금까지 검증된 Playwright Chromium·신뢰 기기 쿠키를 그대로 쓰려고. Edge 채널은 지문이 달라져 2차 인증이 다시 뜰 수 있다). 받는 동안 '내려받는 중' 안내(`osenv.chromium_state`)
 - [x] 트레이 상주(창 닫기 = 숨기기) · 로그인할 때 실행(autostart, `--hidden`) · 단일 인스턴스 · 바깥 링크는 기본 브라우저 · 종료 시 사이드카 정리(stdin 닫기 → 5초 뒤 강제)

@@ -232,7 +232,11 @@ def desktop_launch(code: str = ""):
     if not C.SESSION_TOKEN or not C.consume_launch_code(code):
         return JSONResponse({"detail": "이미 쓰였거나 맞지 않는 실행 코드입니다 — 앱을 다시 실행하세요"}, status_code=403)
     resp = RedirectResponse("/", status_code=303)
-    resp.set_cookie(C.SESSION_COOKIE, C.SESSION_TOKEN, httponly=True, samesite="strict", path="/")
+    # 맥(WKWebView)은 tauri:// 시작 화면에서 넘어온 이 이동을 다른 사이트 이동으로 봐서, 303 에 실은 Strict 쿠키를
+    # 리다이렉트된 '/' 요청에 붙이지 않는다 → 첫 화면이 403 (2026-10-27 실측). 앱 창은 바깥 주소를 열지 않고(on_navigation)
+    # 변경 요청은 Origin 검사가 막으므로 맥만 Lax 로 둔다. Windows(WebView2)는 그대로 Strict.
+    samesite = "lax" if sys.platform == "darwin" else "strict"
+    resp.set_cookie(C.SESSION_COOKIE, C.SESSION_TOKEN, httponly=True, samesite=samesite, path="/")
     print("desktop: 앱 창이 연결됨 (실행 코드 사용)", file=sys.stderr, flush=True)
     return resp
 

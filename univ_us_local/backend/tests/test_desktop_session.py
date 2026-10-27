@@ -59,7 +59,8 @@ def test_session_flow(sidecar):
     status, headers = _get(base, launch)
     assert status == 303
     cookie = headers["Set-Cookie"]
-    assert "HttpOnly" in cookie and "samesite=strict" in cookie.lower()
+    samesite = "lax" if sys.platform == "darwin" else "strict"     # 맥 WKWebView 는 Strict 면 첫 화면이 403 (main.desktop_launch)
+    assert "HttpOnly" in cookie and f"samesite={samesite}" in cookie.lower()
     cv = cookie.split(";")[0]
     assert _get(base, "/api/status", cv)[0] == 200
     assert _get(base, launch)[0] == 403                            # 실행 코드는 한 번만
