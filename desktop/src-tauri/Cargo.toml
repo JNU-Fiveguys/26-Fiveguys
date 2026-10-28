@@ -1,6 +1,6 @@
 [package]
 name = "univus-desktop"
-version = "0.2.0"
+version = "0.2.1"
 description = "유니버스 데스크톱 앱 — 로컬 서버(사이드카)를 띄우고 창·트레이를 맡는다"
 edition = "2021"
 publish = false
