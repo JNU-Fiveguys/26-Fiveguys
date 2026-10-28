@@ -180,6 +180,33 @@ def _c3_login():
         return None
 
 
+def _find_hakstd_page(context):
+    """로그인이 끝난 학사정보 탭. SSO 가 새 탭을 열었을 수도 있으므로 전체를 확인한다."""
+    for page in reversed(context.pages):
+        if not page.is_closed() and urlparse(page.url).hostname == urlparse(C.HAKSTD_BASE).hostname:
+            if not _on_hakstd_login(page.url) and not _on_sso(page.url):
+                return page
+    return None
+
+
+def _wait_hakstd_page(context, browser, timeout_s: float = 600):
+    """본인의 로그인을 기다리면서 Playwright 의 주소 변경·새 탭 이벤트도 처리한다."""
+    deadline = time.monotonic() + timeout_s
+    while browser.is_connected():
+        found = _find_hakstd_page(context)
+        if found is not None:
+            return found
+        remaining = deadline - time.monotonic()
+        pages = context.pages
+        if remaining <= 0 or not pages:
+            return None
+        # time.sleep + page.url 만으로는 sync Playwright 의 이벤트 루프가 돌지 않아
+        # 로그인 뒤에도 이전 URL 을 계속 보게 된다. 이 호출로 이벤트를 전달받는다.
+        with contextlib.suppress(Exception):
+            pages[-1].wait_for_timeout(min(250, remaining * 1000))
+    return None
+
+
 @contextlib.contextmanager
 def hakstd_page(interactive: bool = False):
     from playwright.sync_api import sync_playwright
@@ -194,7 +221,14 @@ def hakstd_page(interactive: bool = False):
                 kw["storage_state"] = storage
             state["ctx"] = state["browser"].new_context(**kw)
             state["page"] = state["ctx"].new_page()
-            return _enter(state["page"])
+            entered = _enter(state["page"])
+            if not entered:
+                # 원래 로그인 탭은 그대로이고 다른 탭에서 SSO 가 끝난 경우.
+                found = _wait_hakstd_page(state["ctx"], state["browser"], timeout_s=0.5)
+                if found is not None:
+                    state["page"] = found
+                    return True
+            return entered
 
         def close() -> None:
             if state["browser"]:
@@ -218,20 +252,20 @@ def hakstd_page(interactive: bool = False):
                     if not ok:
                         close()
         if not ok and interactive:
-            print("  로그인 창을 엽니다 — 직접 로그인하세요 (학사정보시스템 화면이 뜨면 자동으로 이어집니다)")
+            print("  로그인 창을 엽니다 — 직접 로그인하세요 (학사정보시스템 화면이 뜨면 자동으로 이어집니다)", flush=True)
             close()
             # C3 세션에서 시작한다 — 신뢰 기기 쿠키가 있으면 아이디·비밀번호만으로 끝난다(빈 창이면 휴대폰 인증부터 다시).
             # 끝났을 수 있는 SSO 세션 쿠키는 뺀 것(fresh_state)으로 — 남기면 SSO 가 로그인 화면으로 되돌려 보내는 고리가 된다
             lm = _c3_login()
             fresh = lm.fresh_state() if lm is not None and hasattr(lm, "fresh_state") else None
             ok = open_(fresh, headed=True)
-            deadline = time.time() + 600
-            while not ok and time.time() < deadline and state["browser"].is_connected():
-                url = state["page"].url
-                if "hakstd.jnu.ac.kr" in url and not _on_sso(url) and not _on_hakstd_login(url):
+            if not ok:
+                found = _wait_hakstd_page(state["ctx"], state["browser"])
+                if found is not None:
+                    state["page"] = found
                     ok = True
-                    break
-                time.sleep(1)
+            if ok:
+                print("  학사정보시스템 로그인 완료 — 항목을 읽습니다", flush=True)
         if not ok:
             close()
             raise LoginRequired("학사정보시스템 로그인이 필요합니다 — '로그인 창 열기'로 가져오세요")

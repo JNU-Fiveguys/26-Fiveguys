@@ -82,7 +82,7 @@ def _run_import(interactive: bool) -> None:
     cmd = C.module_cmd("graduation.hakstd", "--out", str(C.IMPORT_OUT))
     if interactive:
         cmd.append("--interactive")
-    env = {**os.environ, "PLAYWRIGHT_BROWSERS_PATH": str(C.C3_BROWSERS), "PYTHONUTF8": "1",
+    env = {**os.environ, "PLAYWRIGHT_BROWSERS_PATH": str(C.C3_BROWSERS), "PYTHONUTF8": "1", "PYTHONUNBUFFERED": "1",
            "C3_AGENT_DIR": str(C.C3_AGENT_DIR), "C3_STATE_DIR": str(C.C3_STATE_DIR), "C2_AGENT_DIR": str(C.C2_AGENT_DIR)}
     try:
         with open(C.IMPORT_LOG, "a", encoding="utf-8") as log:
