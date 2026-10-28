@@ -7,8 +7,9 @@
 |---|---|---|
 | 무엇 | 내 PC 의 유니버스(Univ-Us) 데스크톱 앱 | 폰에서 쓰는 캠퍼스 앱(PWA) + 캠퍼스 서버 |
 | 어디서 왔나 | WE-Meet 프로젝트 [AIM-Output/26-WE-Meet-Project](https://github.com/AIM-Output/26-WE-Meet-Project) 를 **포크해서 그대로** 받아 쓴다 | 이 저장소에서 **새로 만든다** — 전부 [`campus/`](../campus/) 안 |
-| 상태 | 동작 중 (v0.2.0) | 기능 정의 완료 · 개발 시작 |
+| 상태 | 동작 중 ([v0.2.1](https://github.com/AIM-Output/26-WE-Meet-Project/releases/tag/v0.2.1)) · [설치 파일 받기](https://github.com/AIM-Output/26-WE-Meet-Project/releases/latest) | 기능 정의 완료 · 개발 시작 |
 
+> 학사 앱 **설치 파일**(Windows `.exe` · 맥 `.dmg`)은 원본 저장소의 [Releases](https://github.com/AIM-Output/26-WE-Meet-Project/releases/latest)에서 받습니다 — 이 저장소에는 설치 파일이 없습니다.
 > 학사 앱을 설치해서 쓰는 방법은 루트의 [README.md](../README.md), 학사 앱 개발은 [DEVELOPMENT.md](../DEVELOPMENT.md) — 둘 다 원본 문서 그대로입니다.
 > 이 문서(`.github/README.md`)가 저장소 첫 화면에 보이는 **프로젝트 소개**입니다.
 
