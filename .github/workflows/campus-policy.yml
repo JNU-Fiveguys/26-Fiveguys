@@ -1,0 +1,37 @@
+# 캠퍼스 승인 규칙 — main 보호 규칙의 필수 검사(campus-policy).
+#  - 자기 팀 폴더만 바꾼 PR: 승인 없이 통과 → 작성자가 바로 merge
+#  - 두 폴더 이상 · 다른 팀 폴더 · 공통 폴더: 바뀐 팀 폴더마다 그 팀원 1명 + 팀장 승인이 있어야 통과
+# 판정 스크립트와 팀 명단(.github/campus-policy.py · campus-owners.json)은 언제나 main 에서 읽는다.
+# 리뷰가 올라오면(pull_request_review) 다시 판정한다.
+name: Campus policy
+
+on:
+  pull_request_target:
+    types: [opened, synchronize, reopened, ready_for_review]
+    branches: [main]
+  pull_request_review:
+    types: [submitted, dismissed]
+
+permissions:
+  contents: read
+  pull-requests: read
+
+jobs:
+  campus-policy:
+    if: github.event.pull_request.base.ref == 'main'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          sparse-checkout: .github
+          persist-credentials: false
+
+      - name: 승인 규칙 판정
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+          AUTHOR: ${{ github.event.pull_request.user.login }}
+        run: python3 .github/campus-policy.py

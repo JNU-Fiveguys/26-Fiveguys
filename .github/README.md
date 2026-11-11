@@ -56,8 +56,10 @@
 │   ├── README.md                    ★ 이 문서 (포크 전용)
 │   ├── pull_request_template.md     ★ PR 체크리스트 (포크 전용)
 │   ├── workflows/campus-boundary.yml ★ 경계 검사 (포크 전용)
-│   ├── workflows/macos.yml · release.yml   원본 — 학사 앱 빌드
-│   └── CODEOWNERS                   원본 — 모든 PR 은 팀장 승인
+│   ├── workflows/campus-policy.yml  ★ 승인 규칙 검사 — main 의 필수 검사 (포크 전용)
+│   ├── campus-policy.py · campus-owners.json ★ 승인 규칙 판정 · 팀 폴더와 팀원 명단 (포크 전용)
+│   ├── workflows/macos.yml · release.yml   원본 — 학사 앱 빌드 (이 저장소에서는 꺼 둠)
+│   └── CODEOWNERS                   원본 파일을 포크에서 고침 — 리뷰 요청 대상(팀 폴더는 그 팀, 나머지는 팀장)
 │
 │   ── 아래는 학사 에이전트: 원본 WE-Meet 그대로, 이 저장소에서 고치지 않는다 ──
 ├── C0~C4_*_agent/ · F1~F12_*_agent/  학사 기능 (공통 기반 C · 기능 F)
@@ -73,11 +75,11 @@
 |---|---|---|
 | 1 | **캠퍼스 코드는 `campus/` 안에만** 만든다 | 무엇을 이 팀이 만들었는지가 폴더 하나로 보인다. 기여는 `git log --author=<이름> -- campus/` 로 확인된다 |
 | 2 | **학사 코드(`campus/` 밖 전부)는 이 저장소에서 고치지 않는다.** 고칠 일이 생기면 원본 [26-WE-Meet-Project](https://github.com/AIM-Output/26-WE-Meet-Project) 에서 고친 뒤 동기화로 받는다 | 원본을 따라 받을 때 충돌이 나지 않는다 |
-| 3 | 포크 전용 설정은 **원본에 없는 새 파일**로만 둔다 — `.github/README.md` · `.github/pull_request_template.md` · `.github/workflows/campus-*.yml` | 같은 이유. 루트 `README.md` 대신 `.github/README.md` 를 쓰는 것도 이 때문이다(GitHub 는 `.github/README.md` 를 먼저 보여 준다) |
+| 3 | 포크 전용 설정은 **원본에 없는 새 파일**로만 둔다 — `.github/README.md` · `.github/pull_request_template.md` · `.github/campus-*` · `.github/workflows/campus-*.yml`. 예외는 `.github/CODEOWNERS` 하나(GitHub 가 다른 위치를 읽지 않아서) | 같은 이유. 루트 `README.md` 대신 `.github/README.md` 를 쓰는 것도 이 때문이다(GitHub 는 `.github/README.md` 를 먼저 보여 준다) |
 | 4 | 캠퍼스 코드는 **학사 폴더를 import 하지 않는다.** 학사 정보는 [오늘 맥락](../campus/shared/schema/daily-context.schema.json)으로만 받는다. 학사 앱 쪽 내보내기·폰 연결 기능은 학사 범위라 원본에 만들고 동기화로 받는다 | 두 쪽이 따로 개발·배포돼도 깨지지 않는다 |
 | 5 | 서버는 **공용 데이터와 키만** 보관한다 — 이름·학번·성적·학교 로그인 정보는 받지 않고, 위치·취향·대화는 폰에 둔다 | 학사 앱의 "로그인 정보 서버 미보관" 원칙을 그대로 잇는다 |
 
-**자동 점검**: PR 이 `campus/` 와 포크 전용 파일 밖을 고치면 [`campus-boundary`](workflows/campus-boundary.yml) 검사가 실패한다(저장소 Actions 를 켜야 돈다).
+**자동 점검**: PR 이 `campus/` 와 포크 전용 파일 밖을 고치면 [`campus-boundary`](workflows/campus-boundary.yml) 검사가 실패한다. merge 조건은 [`campus-policy`](workflows/campus-policy.yml) 검사가 정한다(아래 '함께 개발하기').
 
 ---
 
@@ -102,8 +104,16 @@
    git clone https://github.com/JNU-Fiveguys/26-Fiveguys.git
    ```
 2. **캠퍼스 개발** — [campus/README.md](../campus/README.md) (폴더·스택·코드 규칙)
-3. **브랜치** — `ca1/…` · `ca4/…` · `server/…` · `mobile/…` 처럼 맡은 곳 이름으로 시작
-4. **PR** — `main` 으로. [PR 체크리스트](pull_request_template.md)를 채우고, 팀장 승인 뒤 머지
+3. **브랜치** — 이 저장소에 바로 만든다(팀원은 쓰기 권한이 있어 포크가 필요 없다). `ca1/…` · `ca2/…` · `server/…` · `mobile/…` 처럼 맡은 곳 이름으로 시작
+4. **PR** — `main` 으로(main 에 바로 push 는 안 된다). [PR 체크리스트](pull_request_template.md)를 채운다. merge 조건은 필수 검사 `campus-policy` 가 판정한다:
+
+   | PR 이 바꾼 곳 | merge 조건 |
+   |---|---|
+   | **자기 팀 폴더 하나만** (CA1 팀 → `campus/CA1_Meal_agent/`, CA2 팀 → `campus/CA2_Assistant_agent/`) | 승인 없이 작성자가 바로 merge |
+   | 두 폴더 이상 · 다른 팀 폴더 · 공통 폴더(`campus/` 의 나머지, `.github` 등) | 바뀐 팀 폴더마다 그 팀원 1명 + 팀장 승인. 작성자의 팀 폴더는 작성자가 그 팀 몫을 대신한다 |
+
+   - 승인은 마지막 커밋에 한 것만 센다 — 승인 뒤 새 커밋을 올리면 다시 승인받는다.
+   - 팀 명단은 [`campus-owners.json`](campus-owners.json). GitHub 팀 구성을 바꾸면 이 파일도 같이 고친다(팀장).
 
 ## 팀
 

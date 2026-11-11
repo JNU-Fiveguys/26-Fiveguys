@@ -1,2 +1,6 @@
-# 모든 파일의 코드 오너 = 저장소 주인. main 으로 가는 PR 은 이 사람의 승인(Approve)이 있어야 머지된다.
-* @Khrrr0131
+# 리뷰 요청 대상. 실제 merge 조건은 필수 검사 campus-policy(.github/campus-policy.py)가 정한다:
+#   자기 팀 폴더만 바꾼 PR 은 승인 없이 merge, 그 밖은 바뀐 팀 폴더의 팀원 1명 + 팀장 승인.
+# 원본(AIM-Output/26-WE-Meet-Project)에도 있는 파일이라, 원본이 이 파일을 고치면 동기화 때 한 번 합쳐야 한다.
+*                             @Khrrr0131
+/campus/CA1_Meal_agent/       @JNU-Fiveguys/ca1-meal-recommender
+/campus/CA2_Assistant_agent/  @JNU-Fiveguys/ca2-campus-assistant

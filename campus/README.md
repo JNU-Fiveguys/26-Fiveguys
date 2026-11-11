@@ -40,11 +40,14 @@
 
 | 브랜치 접두어 | 맡은 곳 |
 |---|---|
-| `ca1/…` · `ca4/…` | 기능 폴더 |
+| `ca1/…` · `ca2/…` | 기능 폴더 |
 | `server/…` · `mobile/…` | 서버 · 앱 |
 | `docs/…` | 정의서·안내 문서 |
 
-- `main` 으로 PR → [PR 체크리스트](../.github/pull_request_template.md) → 팀장 승인 뒤 머지.
+- `main` 으로 PR → [PR 체크리스트](../.github/pull_request_template.md) → 필수 검사 `campus-policy` 통과 뒤 merge.
+  - 자기 팀 폴더(CA1 팀 `CA1_Meal_agent/` · CA2 팀 `CA2_Assistant_agent/`)만 바꾼 PR 은 **승인 없이 바로 merge**.
+  - 그 밖(두 폴더 이상 · 다른 팀 폴더 · `server/`·`mobile/`·`docs/` 같은 공통 폴더)은 바뀐 팀 폴더의 팀원 1명 + 팀장 승인.
+  - 자세한 규칙: [저장소 소개 '함께 개발하기'](../.github/README.md#함께-개발하기)
 - 한 PR 에는 한 가지 일만. 정의서와 다른 결정을 했으면 PR 설명에 적고 정의서도 고친다.
 
 ## 처음 할 일 (9주차까지)

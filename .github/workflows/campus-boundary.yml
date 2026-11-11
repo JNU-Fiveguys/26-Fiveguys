@@ -27,7 +27,7 @@ jobs:
           changed=$(git -c core.quotepath=false diff --name-only "$BASE"..."$HEAD")
           echo "바뀐 파일:"
           echo "$changed"
-          outside=$(echo "$changed" | grep -Ev '^(campus/|\.github/README\.md$|\.github/pull_request_template\.md$|\.github/workflows/campus-[^/]+\.ya?ml$)' || true)
+          outside=$(echo "$changed" | grep -Ev '^(campus/|\.github/README\.md$|\.github/pull_request_template\.md$|\.github/campus-[^/]+$|\.github/workflows/campus-[^/]+\.ya?ml$)' || true)
           if [ -n "$outside" ]; then
             echo "::error::campus/ 밖의 학사 파일을 고쳤습니다. 학사 코드는 원본 저장소(AIM-Output/26-WE-Meet-Project)에서 고친 뒤 동기화로 받으세요."
             echo "$outside"
