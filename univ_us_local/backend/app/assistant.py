@@ -47,6 +47,57 @@ def _load():
 ca2 = _load()
 
 
+# ---------------------------------------------------------------- API 키 금고 (C0 osenv.creds)
+# CA2 settings 는 기본으로 keyring 을 쓰는데, 사이드카는 keyring 을 맥에서만 설치한다(Windows 는 DPAPI).
+# 그래서 앱에서는 학사 앱과 같은 금고로 바꿔 끼운다 — Windows: DPAPI 로 암호화한 파일, 맥: 로그인 키체인.
+_KEY_ENTROPY = b"univus-ca2/llm-api-key/v1"      # 바꾸면 이미 저장된 키를 못 푼다
+_KEY_DESCRIPTION = "univus-ca2"
+
+
+def _use_os_store(S) -> None:
+    c0 = Path(os.environ.get("C0_AGENT_DIR") or C.PROJECT_ROOT / "C0_Platform_agent")
+    if str(c0) not in sys.path:
+        sys.path.append(str(c0))
+    from osenv import IS_WINDOWS                # type: ignore[import-not-found]
+    from osenv import creds as store            # type: ignore[import-not-found]
+
+    if IS_WINDOWS:
+        key_file = Path(S.C.DATA_DIR) / "llm-key.bin"
+
+        def _get():
+            if not key_file.exists():
+                return None
+            return store.dpapi_unprotect(key_file.read_bytes(), _KEY_ENTROPY).decode("utf-8")
+
+        def _set(value: str) -> None:
+            key_file.parent.mkdir(parents=True, exist_ok=True)
+            tmp = key_file.with_suffix(".tmp")
+            tmp.write_bytes(store.dpapi_protect(value.encode("utf-8"), _KEY_ENTROPY, _KEY_DESCRIPTION))
+            os.replace(tmp, key_file)
+
+        def _delete() -> None:
+            key_file.unlink(missing_ok=True)
+    else:
+        def _get():
+            return store.keychain_get(S.KEYRING_SERVICE, S.KEYRING_ACCOUNT)
+
+        def _set(value: str) -> None:
+            store.keychain_set(S.KEYRING_SERVICE, S.KEYRING_ACCOUNT, value)
+
+        def _delete() -> None:
+            store.keychain_delete(S.KEYRING_SERVICE, S.KEYRING_ACCOUNT)
+
+    S._key_get, S._key_set, S._key_delete = _get, _set, _delete
+
+
+if ca2:
+    try:
+        from assistant import settings as _ca2_settings    # type: ignore[import-not-found]
+        _use_os_store(_ca2_settings)
+    except Exception as e:                      # noqa: BLE001 — 금고를 못 붙이면 CA2 기본(keyring)으로 둔다
+        _error = f"API 키 금고를 붙이지 못했습니다: {type(e).__name__}: {e}"
+
+
 def router():
     return ca2.router if ca2 else None
 
