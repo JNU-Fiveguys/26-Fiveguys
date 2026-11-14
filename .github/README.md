@@ -6,11 +6,11 @@
 | | 학사 에이전트 | 캠퍼스 에이전트 |
 |---|---|---|
 | 무엇 | 내 PC 의 유니버스(Univ-Us) 데스크톱 앱 | 폰에서 쓰는 캠퍼스 앱(PWA) + 캠퍼스 서버 |
-| 어디서 왔나 | WE-Meet 프로젝트 [AIM-Output/26-WE-Meet-Project](https://github.com/AIM-Output/26-WE-Meet-Project) 를 **포크해서 그대로** 받아 쓴다 | 이 저장소에서 **새로 만든다** — 전부 [`campus/`](../campus/) 안 |
+| 어디서 왔나 | WE-Meet 프로젝트 [AIM-Output/26-WE-Meet-Project](https://github.com/AIM-Output/26-WE-Meet-Project) 에서 가져왔다 — 2026-11-15 원본과 분리해 이제 **이 저장소에서 고친다** | 이 저장소에서 **새로 만든다** — [`campus/`](../campus/) 에 모아 둔다 |
 | 상태 | 동작 중 ([v0.2.1](https://github.com/AIM-Output/26-WE-Meet-Project/releases/tag/v0.2.1)) · [설치 파일 받기](https://github.com/AIM-Output/26-WE-Meet-Project/releases/latest) | 기능 정의 완료 · 개발 시작 |
 
-> 학사 앱 **설치 파일**(Windows `.exe` · 맥 `.dmg`)은 원본 저장소의 [Releases](https://github.com/AIM-Output/26-WE-Meet-Project/releases/latest)에서 받습니다 — 이 저장소에는 설치 파일이 없습니다.
-> 학사 앱을 설치해서 쓰는 방법은 루트의 [README.md](../README.md), 학사 앱 개발은 [DEVELOPMENT.md](../DEVELOPMENT.md) — 둘 다 원본 문서 그대로입니다.
+> 학사 앱 **설치 파일**(Windows `.exe` · 맥 `.dmg`)은 원본 저장소의 [Releases](https://github.com/AIM-Output/26-WE-Meet-Project/releases/latest)에 있는 분리 전 버전입니다 — 이 저장소에는 아직 설치 파일이 없습니다.
+> 학사 앱을 설치해서 쓰는 방법은 루트의 [README.md](../README.md), 학사 앱 개발은 [DEVELOPMENT.md](../DEVELOPMENT.md) — 둘 다 원본에서 가져온 문서입니다.
 > 이 문서(`.github/README.md`)가 저장소 첫 화면에 보이는 **프로젝트 소개**입니다.
 
 ---
@@ -31,7 +31,7 @@
 
 | 구분 | 기능 | 상태 |
 |---|---|---|
-| 학사 (PC 앱) | e클래스 과제·마감 · 학사일정 · 졸업요건 · 출결 · 강의자료 · 시험 공부 계획 · 과제 우선순위 · 공강 학습 플랜 · 장학 매칭 · 대외활동 · 아침 브리핑 | 원본에서 동작 중 |
+| 학사 (PC 앱) | e클래스 과제·마감 · 학사일정 · 졸업요건 · 출결 · 강의자료 · 시험 공부 계획 · 과제 우선순위 · 공강 학습 플랜 · 장학 매칭 · 대외활동 · 아침 브리핑 | 동작 중 |
 | **CA1** | 공강 맞춤 식사 추천 — 이번 공강에 **다녀올 수 있는** 식당·학식 3곳 (공강·다음 강의실·예산·날씨·취향) | 정의 완료 · 개발 예정 |
 | **CA2** | 캠퍼스 생활 Q&A + 에이전트 대화 — 공식 자료를 근거로 답하고, 추천·메뉴는 알맞은 기능을 대신 불러 준다 | 정의 완료 · 개발 예정 |
 
@@ -43,7 +43,7 @@
 
 ```
 26-Fiveguys/
-├── campus/                        ★ 캠퍼스 에이전트 — 이 팀이 만드는 것은 전부 여기
+├── campus/                        ★ 캠퍼스 에이전트 — 이 팀이 새로 만드는 코드
 │   ├── README.md                    캠퍼스 개발 안내 (규칙·스택·브랜치)
 │   ├── docs/                        기능 정의서
 │   ├── shared/schema/               학사 ↔ 캠퍼스 계약 (오늘 맥락 JSON Schema)
@@ -53,15 +53,11 @@
 │   └── CA2_Assistant_agent/         CA2 캠퍼스 생활 Q&A + 에이전트 대화
 │
 ├── .github/
-│   ├── README.md                    ★ 이 문서 (포크 전용)
-│   ├── pull_request_template.md     ★ PR 체크리스트 (포크 전용)
-│   ├── workflows/campus-boundary.yml ★ 경계 검사 (포크 전용)
-│   ├── workflows/campus-policy.yml  ★ 승인 규칙 검사 — main 의 필수 검사 (포크 전용)
-│   ├── campus-policy.py · campus-owners.json ★ 승인 규칙 판정 · 팀 폴더와 팀원 명단 (포크 전용)
-│   ├── workflows/macos.yml · release.yml   원본 — 학사 앱 빌드 (이 저장소에서는 꺼 둠)
-│   └── CODEOWNERS                   원본 파일을 포크에서 고침 — 리뷰 요청 대상(팀 폴더는 그 팀, 나머지는 팀장)
+│   ├── README.md                    ★ 이 문서
+│   ├── pull_request_template.md     ★ PR 체크리스트
+│   └── workflows/macos.yml · release.yml   학사 앱 빌드 (이 저장소에서는 꺼 둠)
 │
-│   ── 아래는 학사 에이전트: 원본 WE-Meet 그대로, 이 저장소에서 고치지 않는다 ──
+│   ── 아래는 학사 에이전트: WE-Meet 에서 가져온 코드 — 이 저장소에서 바로 고친다 ──
 ├── C0~C4_*_agent/ · F1~F12_*_agent/  학사 기능 (공통 기반 C · 기능 F)
 ├── desktop/ · univ_us_local/         데스크톱 앱 (Tauri + FastAPI 사이드카 + Next.js)
 ├── notice_agent/                     참고 코드
@@ -69,33 +65,22 @@
 └── 요구사항정의서.md · Frontend-*.md · WE-Meet_*.md   학사 문서
 ```
 
-### 구분하는 법 (규칙 5개)
+### 설계 원칙
 
-| # | 규칙 | 이유 |
+| # | 원칙 | 이유 |
 |---|---|---|
-| 1 | **캠퍼스 코드는 `campus/` 안에만** 만든다 | 무엇을 이 팀이 만들었는지가 폴더 하나로 보인다. 기여는 `git log --author=<이름> -- campus/` 로 확인된다 |
-| 2 | **학사 코드(`campus/` 밖 전부)는 이 저장소에서 고치지 않는다.** 고칠 일이 생기면 원본 [26-WE-Meet-Project](https://github.com/AIM-Output/26-WE-Meet-Project) 에서 고친 뒤 동기화로 받는다 | 원본을 따라 받을 때 충돌이 나지 않는다 |
-| 3 | 포크 전용 설정은 **원본에 없는 새 파일**로만 둔다 — `.github/README.md` · `.github/pull_request_template.md` · `.github/campus-*` · `.github/workflows/campus-*.yml`. 예외는 `.github/CODEOWNERS` 하나(GitHub 가 다른 위치를 읽지 않아서) | 같은 이유. 루트 `README.md` 대신 `.github/README.md` 를 쓰는 것도 이 때문이다(GitHub 는 `.github/README.md` 를 먼저 보여 준다) |
-| 4 | 캠퍼스 코드는 **학사 폴더를 import 하지 않는다.** 학사 정보는 [오늘 맥락](../campus/shared/schema/daily-context.schema.json)으로만 받는다. 학사 앱 쪽 내보내기·폰 연결 기능은 학사 범위라 원본에 만들고 동기화로 받는다 | 두 쪽이 따로 개발·배포돼도 깨지지 않는다 |
-| 5 | 서버는 **공용 데이터와 키만** 보관한다 — 이름·학번·성적·학교 로그인 정보는 받지 않고, 위치·취향·대화는 폰에 둔다 | 학사 앱의 "로그인 정보 서버 미보관" 원칙을 그대로 잇는다 |
+| 1 | **캠퍼스 코드는 `campus/` 에 모아 둔다** | 무엇을 이 팀이 새로 만들었는지가 폴더 하나로 보인다. 기여는 `git log --author=<이름> -- campus/` 로 확인된다 |
+| 2 | 캠퍼스 코드는 **학사 폴더를 import 하지 않는다.** 학사 정보는 [오늘 맥락](../campus/shared/schema/daily-context.schema.json)으로만 받는다 | 두 쪽이 따로 개발·배포돼도 깨지지 않는다 |
+| 3 | 서버는 **공용 데이터와 키만** 보관한다 — 이름·학번·성적·학교 로그인 정보는 받지 않고, 위치·취향·대화는 폰에 둔다 | 학사 앱의 "로그인 정보 서버 미보관" 원칙을 그대로 잇는다 |
 
-**자동 점검**: PR 이 `campus/` 와 포크 전용 파일 밖을 고치면 [`campus-boundary`](workflows/campus-boundary.yml) 검사가 실패한다. merge 조건은 [`campus-policy`](workflows/campus-policy.yml) 검사가 정한다(아래 '함께 개발하기').
+검사·승인 규칙은 없다(2026-11-15 모두 없앴다). 팀·폴더 구분 없이 모든 팀원이 저장소의 모든 파일을 고치고 `main` 에 바로 push·merge 할 수 있다.
 
 ---
 
-## 원본 따라 받기 (동기화)
+## 원본과의 관계
 
-원본 WE-Meet 에 새 커밋이 생기면 **팀장**이 맞춘다(main 보호 규칙 때문에 직접 반영은 관리자만 된다).
-
-| 방법 | 하는 법 |
-|---|---|
-| 웹 | 저장소 첫 화면 `This branch is N commits behind …` → **Sync fork** → **Update branch** |
-| 명령 | `gh repo sync JNU-Fiveguys/26-Fiveguys --source AIM-Output/26-WE-Meet-Project --branch main` |
-| 충돌이 날 때 | 내 PC 에서 `git remote add upstream https://github.com/AIM-Output/26-WE-Meet-Project.git`(처음 한 번) → `git fetch upstream` → `git merge upstream/main` → `git push origin main` |
-
-- 웹의 **`Discard commits` 는 누르지 않는다** — 이 저장소에만 있는 커밋(캠퍼스 작업)이 지워진다.
-- 규칙 1~3 을 지키면 원본과 고친 파일이 겹치지 않아 충돌이 거의 나지 않는다.
-- 동기화한 뒤 팀원은 각자 `git pull`.
+2026-11-15 원본 WE-Meet 과 분리했다(GitHub 포크 연결 해제). 이제 원본을 따라 받지 않고, 학사 코드(`campus/` 밖)도 이 저장소에서 바로 고친다.
+원본의 Releases·태그는 분리 전 기록이다.
 
 ## 함께 개발하기
 
@@ -104,22 +89,17 @@
    git clone https://github.com/JNU-Fiveguys/26-Fiveguys.git
    ```
 2. **캠퍼스 개발** — [campus/README.md](../campus/README.md) (폴더·스택·코드 규칙)
-3. **브랜치** — 이 저장소에 바로 만든다(팀원은 쓰기 권한이 있어 포크가 필요 없다). `ca1/…` · `ca2/…` · `server/…` · `mobile/…` 처럼 맡은 곳 이름으로 시작
-4. **PR** — `main` 으로(main 에 바로 push 는 안 된다). [PR 체크리스트](pull_request_template.md)를 채운다. merge 조건은 필수 검사 `campus-policy` 가 판정한다:
-
-   | PR 이 바꾼 곳 | merge 조건 |
-   |---|---|
-   | **자기 팀 폴더 하나만** (CA1 팀 → `campus/CA1_Meal_agent/`, CA2 팀 → `campus/CA2_Assistant_agent/`) | 승인 없이 작성자가 바로 merge |
-   | 두 폴더 이상 · 다른 팀 폴더 · 공통 폴더(`campus/` 의 나머지, `.github` 등) | 바뀐 팀 폴더마다 그 팀원 1명 + 팀장 승인. 작성자의 팀 폴더는 작성자가 그 팀 몫을 대신한다 |
-
-   - 승인은 마지막 커밋에 한 것만 센다 — 승인 뒤 새 커밋을 올리면 다시 승인받는다.
-   - 팀 명단은 [`campus-owners.json`](campus-owners.json). GitHub 팀 구성을 바꾸면 이 파일도 같이 고친다(팀장).
+3. **브랜치** — 이 저장소에 바로 만들거나 `main` 에서 바로 작업한다(팀원은 모두 쓰기 권한이 있어 포크가 필요 없다). 브랜치 이름은 `ca1/…` · `ca2/…` · `server/…` · `mobile/…` 처럼 맡은 곳 이름으로 시작하면 보기 좋다
+4. **반영** — 승인·필수 검사 없이 누구나 바로 한다. 팀·폴더 구분도 없다.
+   - `main` 에 바로 push 해도 되고, PR 을 열어 바로 merge 해도 된다.
+   - push 전에 `git pull` 로 최신을 받는다. 강제 push(`git push -f`)는 다른 사람 커밋을 지우니 하지 않는다.
+   - PR 을 쓸 때는 [PR 체크리스트](pull_request_template.md)를 참고한다.
 
 ## 팀
 
 | 역할 | 맡는 것 |
 |---|---|
-| 팀장 · 학사·통합 | 학사 에이전트(원본), 오늘 맥락 내보내기·PC–폰 연결, 통합·동기화 |
+| 팀장 · 학사·통합 | 학사 에이전트, 오늘 맥락 내보내기·PC–폰 연결, 통합 |
 | AI·데이터 1 | CA1 공강 맞춤 식사 추천 — 조건 해석·순위·취향 학습·평가 |
 | AI·데이터 2 | CA2 캠퍼스 생활 Q&A + 에이전트 대화 — 지식 베이스·검색·도구 호출·평가 |
 | 데이터·인프라 | 캠퍼스 서버 — 기기 등록·공공 데이터 수집·푸시·색인 |

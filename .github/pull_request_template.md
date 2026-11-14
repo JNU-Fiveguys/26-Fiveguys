@@ -4,7 +4,6 @@
 
 ## 확인
 
-- [ ] `campus/` 안만 고쳤다 (학사 코드는 원본 WE-Meet 에서 고친다 — `.github/README.md` '구분하는 법')
 - [ ] 학사 폴더(`C*_agent` · `F*_agent` · `desktop` · `univ_us_local` …)를 import 하지 않았다
 - [ ] 키·비밀번호·개인 데이터(`.env`, 수집 데이터)를 올리지 않았다
 - [ ] 카카오 로컬 API 응답을 저장하거나 로그에 남기지 않는다
