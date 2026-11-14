@@ -45,7 +45,7 @@
 | `docs/…` | 정의서·안내 문서 |
 
 - **승인·필수 검사 없음.** 팀·폴더 구분 없이 누구나 `main` 에 바로 push 하거나, PR 을 열어 바로 merge 할 수 있다 → [저장소 소개 '함께 개발하기'](../.github/README.md#함께-개발하기)
-- push 전에 `git pull` 로 최신을 받는다. 강제 push(`git push -f`)는 다른 사람 커밋을 지우니 하지 않는다.
+- push 전에 `git pull` 로 최신을 받는다. `main` 은 강제 push(`git push -f`)·삭제만 막혀 있다 — push 가 거절되면 `git pull` 로 합친 뒤 다시 push 한다.
 - PR 을 쓸 때는 [PR 체크리스트](../.github/pull_request_template.md)를 참고하고, 한 PR 에는 한 가지 일만. 정의서와 다른 결정을 했으면 PR 설명에 적고 정의서도 고친다.
 
 ## 처음 할 일 (9주차까지)
