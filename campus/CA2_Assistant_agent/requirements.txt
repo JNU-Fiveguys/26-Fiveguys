@@ -1,0 +1,8 @@
+# CA2 — 실행·테스트에 필요한 것 (저장소 개발 venv desktop/sidecar/.venv 에 이미 들어 있다)
+fastapi
+uvicorn
+keyring
+# 테스트
+pytest
+httpx
+pypdf
