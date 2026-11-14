@@ -27,3 +27,36 @@
 1. FAQ 질문 목록(생활관 · 도서관 · 편의시설 · 학생증 · 보건 · 교통 …)
 2. 지식 원천 정리 — 바로 쓸 수 있는 것 / 기관 허락이 필요한 것
 3. 모델 후보 비교표(한국어 품질 · 함수 호출 · 비용 · 속도)
+
+## 프로토타입 (2026-11-14 — 이 PC 에서만 도는 1차 버전)
+
+폰 앱·캠퍼스 서버 없이 **내 PC 에서만** 도는 형태로 먼저 만든다. 사용자가 자기 AI API 키를 넣으면 바로 대화가 켜지고, 키가 없으면 간단 모드(저장된 자료 검색)로 돈다.
+
+```bash
+# 저장소 루트에서 (개발 venv: desktop/sidecar/.venv — fastapi · uvicorn · keyring)
+cd campus/CA2_Assistant_agent
+../../desktop/sidecar/.venv/bin/python -m assistant          # → http://127.0.0.1:8765
+../../desktop/sidecar/.venv/bin/python -m pytest tests -q    # 외부 접속 없이 가짜 LLM 서버로 시험
+```
+
+| 파일 | 하는 일 |
+|---|---|
+| `assistant/settings.py` | AI 연결 설정 — 제공자 목록 · 주소 · 모델은 `data/settings.json`, **키는 OS 암호 저장소(keyring)에만**. 주소를 바꾸면 예전 키를 버린다 |
+| `assistant/llm.py` | OpenAI 호환 호출 — 대화 · 스트리밍 · 도구 호출 조립 · 모델 목록 · 연결 시험 |
+| `assistant/kb.py` · `search.py` | `knowledge/*.json` 을 조각내 키워드(BM25) 검색 — 캠퍼스 필터 · 근거 문턱 · 오래된 문서 표시 |
+| `assistant/agent.py` | 도구 고르기(등록 방식) · 한 턴 상한 · 알림 미리보기 · LLM 없을 때 간단 모드 |
+| `assistant/pdfsearch.py` | 강의자료 PDF 를 쪽별 글자로 읽어(캐시) 질문과 맞는 쪽만 고른다 — 출처 '파일 p.N'. 쪽수 상한을 넘으면 답하지 않는다 |
+| `assistant/privacy.py` | 학번·주민등록번호·비밀번호처럼 보이면 보내기 전에 묻기 |
+| `assistant/api.py` · `web/index.html` | 로컬 API(127.0.0.1 전용) + 시험용 화면 |
+
+**정의서와 다르게 한 것 (프로토타입)**
+- 서버·폰 앱 없이 로컬 서버 하나. 키는 서버가 아니라 사용자 PC 의 암호 저장소에 둔다(사용자가 자기 키를 넣는다).
+- 검색은 키워드(BM25)만 — 임베딩·하이브리드(D3)는 아직 없다. 형태소 분석기 대신 글자 2개 묶음을 쓴다.
+- 도구는 `search_campus_info` · `create_reminder`(미리보기까지만, 실제 알림 발송 없음) 둘. 식사·학식·날씨·오늘 맥락 도구는 없다.
+- 대화 기록은 화면 메모리에만 있다(새로 고치면 지워진다). 피드백 · 관리자 화면 · 평가셋은 아직 없다.
+- `knowledge/` 는 비어 있다 — 비어 있는 동안 `search_campus_info` 도구는 꺼져 있다. 지어낸 예시는 `tests/fixtures/sample.json` 에만 있다.
+- **유니버스 PC 앱에 붙으면 '내 데이터로 답하기'가 된다(2026-11-14 팀 합의).** 학사 백엔드(`univ_us_local/backend/app/assistant.py`)가 이 폴더의
+  `agent.tool` 로 내 일정·과제·시험·출결·졸업 학점·강의자료 도구를 등록하고 `agent.set_role` 로 역할을 바꾼다. 성적은 넘기지 않는다.
+  이 폴더는 학사 코드를 import 하지 않는다(방향은 학사 → CA2 뿐). 정의서의 '학사 질문은 답하지 않는다'(CA2-R30)와 달라진 점이다.
+- 강의자료 본문은 사용자가 **동의한 뒤에만** AI 로 보낸다(`settings.consent`, 학사 요구사항 F4-R40). 내 PC 모델(Ollama)이면 동의 없이도 밖으로 나가지 않는다.
+- `.env` 의 `LLM_MAIN_*` 도 여전히 읽는다(개발용). 화면에서 저장한 설정이 먼저다.
