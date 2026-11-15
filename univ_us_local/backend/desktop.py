@@ -150,8 +150,7 @@ def self_check() -> int:
     os.environ.update(F1_TASKS="off", F6_TASKS="off", F11_AUTOSYNC="off", F12_AUTOSYNC="off", UNIVUS_NO_BROWSER_INSTALL="1")
     appdata.apply(Path(tempfile.mkdtemp(prefix="univus-check-")))
     roots = [d for d in sorted(BUNDLE.iterdir()) if d.is_dir() and (d.name[:1] in "CF") and d.name.endswith("_agent")]
-    if (BUNDLE / "campus" / "CA1_Meal_agent").is_dir():
-        roots.append(BUNDLE / "campus" / "CA1_Meal_agent")
+    roots.extend(d for d in sorted((BUNDLE / "campus").glob("CA*_agent")) if d.is_dir())
     roots.append(BACKEND_DIR)
     names: list[str] = []
     for root in roots:

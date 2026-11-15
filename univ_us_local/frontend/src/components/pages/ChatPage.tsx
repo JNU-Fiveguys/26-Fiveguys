@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { ArrowRight, FileText, KeyRound, MessageCircle, Send, Trash2, TriangleAlert } from "lucide-react";
 import { Page, PageHeader } from "@/components/ui/Layout";
 import { Banner } from "@/components/ui/Feedback";
@@ -50,17 +50,37 @@ export default function ChatPage() {
   const [busy, setBusy] = useState(false);
   const [settings, setSettings] = useState<LlmSettings | null>(null);
   const [showSettings, setShowSettings] = useState(false);
+  const [settingsLoading, setSettingsLoading] = useState(true);
+  const [settingsError, setSettingsError] = useState<string | null>(null);
   const end = useRef<HTMLDivElement>(null);
   const sentQ = useRef(false);
   const history = useRef<{ role: "user" | "assistant"; content: string }[]>([]);
   const request = useRef<AbortController | null>(null);
   const pendingWarning = useRef<string | null>(null);
+  const mounted = useRef(false);
   const awaitingWarning = msgs.some((m) => m.role === "assistant" && m.warn);
 
-  useEffect(() => {
-    assistantApi.settings().then(setSettings).catch(() => setSettings(null));
-    return () => request.current?.abort();
+  const loadSettings = useCallback(async () => {
+    setSettingsLoading(true);
+    setSettingsError(null);
+    try {
+      setSettings(await assistantApi.settings());
+    } catch {
+      setSettingsError("AI 연결 설정을 불러오지 못했습니다. 다시 시도해 주세요.");
+    } finally {
+      setSettingsLoading(false);
+    }
   }, []);
+
+  useEffect(() => {
+    mounted.current = true;
+    void loadSettings();
+    return () => {
+      mounted.current = false;
+      // StrictMode immediately reattaches effects. Abort only an actual unmount.
+      queueMicrotask(() => { if (!mounted.current) request.current?.abort(); });
+    };
+  }, [loadSettings]);
 
   const send = async (question: string, confirmPii = false) => {
     if (request.current || (!confirmPii && pendingWarning.current) || !question.trim()) return;
@@ -151,7 +171,10 @@ export default function ChatPage() {
         title="대화"
         actions={
           <>
-            <button type="button" className="btn btn-ghost btn-sm" onClick={() => setShowSettings((v) => !v)} aria-expanded={showSettings}>
+            <button type="button" className="btn btn-ghost btn-sm" onClick={() => {
+              setShowSettings((v) => !v);
+              if (!settings && !settingsLoading) void loadSettings();
+            }} aria-expanded={showSettings}>
               <KeyRound aria-hidden />
               AI 연결 설정
             </button>
@@ -162,6 +185,16 @@ export default function ChatPage() {
           </>
         }
       />
+      {settingsError && (
+        <Banner tone="warn" className="mb-4" action={
+          <button type="button" className="btn btn-sm" disabled={settingsLoading} onClick={() => void loadSettings()}>
+            다시 불러오기
+          </button>
+        }>
+          {settingsError}
+        </Banner>
+      )}
+      {showSettings && settingsLoading && <p role="status" className="mb-4 text-[13px] text-muted">AI 연결 설정을 불러오는 중…</p>}
       {settings && !settings.configured && (
         <Banner tone="warn" className="mb-4" icon={<TriangleAlert aria-hidden />}>
           AI 가 연결되지 않았습니다. ‘AI 연결 설정’에서 내 API 키를 넣으면 대화가 켜집니다.
