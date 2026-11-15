@@ -5,9 +5,7 @@
   z-index: 45;
   display: grid;
   place-items: center;
-  width: 84px;
-  height: 84px;
-  padding: 3px;
+  padding: 5px;
   overflow: hidden;
   cursor: pointer;
   border: 2px solid var(--primary);
@@ -42,9 +40,10 @@
 .content { display: flex; flex-direction: column; height: 100%; min-height: 0; }
 .toolbar { display: flex; align-items: center; gap: 16px; flex-shrink: 0; padding: 10px 16px; border-bottom: 1px solid var(--border); }
 .toolbar h2 { margin: 0 auto 0 0; font-size: 16px; font-weight: 700; white-space: nowrap; }
-.transparency { display: flex; align-items: center; gap: 8px; color: var(--muted); font-size: 12px; }
-.transparency input { width: 96px; accent-color: var(--primary); cursor: pointer; }
-.transparency output { min-width: 3ch; text-align: right; font-variant-numeric: tabular-nums; }
+.controls { display: flex; align-items: center; flex-wrap: wrap; gap: 8px 16px; }
+.control { display: flex; align-items: center; gap: 8px; color: var(--muted); font-size: 12px; white-space: nowrap; }
+.control input { width: 96px; accent-color: var(--primary); cursor: pointer; }
+.control output { min-width: 5ch; text-align: right; font-variant-numeric: tabular-nums; }
 .close { display: grid; place-items: center; flex-shrink: 0; width: 40px; height: 40px; border-radius: 10px; cursor: pointer; }
 .close:hover { background: var(--surface-3); }
 .close:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
@@ -52,13 +51,14 @@
 
 @media (max-width: 767px) {
   /* 기존 학사 화면의 우측 하단 일정 추가 버튼 위치를 유지한다. */
-  .launcher { right: max(16px, env(safe-area-inset-right)); bottom: calc(92px + env(safe-area-inset-bottom)); width: 68px; height: 68px; }
+  .launcher { right: max(16px, env(safe-area-inset-right)); bottom: calc(92px + env(safe-area-inset-bottom)); }
   .dialog { width: calc(100vw - 16px); height: calc(100dvh - 24px); border-radius: 16px; }
   .toolbar { gap: 8px; padding: 8px; flex-wrap: wrap; }
   .toolbar h2 { font-size: 14px; }
-  .transparency { gap: 4px; }
-  .transparency img { display: none; }
-  .transparency input { width: 64px; }
+  .controls { order: 3; width: 100%; gap: 8px; }
+  .control { display: grid; grid-template-columns: 92px minmax(0, 1fr) 5ch; gap: 8px; width: 100%; }
+  .control img { display: none; }
+  .control input { width: 100%; min-width: 0; }
   .close { width: 32px; height: 32px; }
 }
 

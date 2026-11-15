@@ -8,6 +8,11 @@ import { useStored } from "@/lib/storage";
 import styles from "./MealLauncher.module.css";
 
 const TRANSPARENCY_KEY = "meal.launcher-transparency";
+const SIZE_KEY = "meal.launcher-size";
+const DEFAULT_SIZE = 112;
+const MIN_SIZE = 72;
+const MAX_SIZE = 160;
+const MASCOT_IMAGE = "/images/jeonryong-spoon-fork-3d.png";
 
 // CA1의 화면과 상태를 그대로 보존한다. 앱의 학사 페이지에는 버튼만 추가한다.
 export default function MealLauncher() {
@@ -17,10 +22,14 @@ export default function MealLauncher() {
   const [opened, setOpened] = useState(false);
   const [loaded, setLoaded] = useState(false);
   const [savedTransparency, saveTransparency] = useStored<number>(TRANSPARENCY_KEY, 0);
+  const [savedSize, saveSize] = useStored<number>(SIZE_KEY, DEFAULT_SIZE);
   // 저장소가 차단돼 있어도 현재 창에서 조절할 수 있다.
   const [sessionTransparency, setSessionTransparency] = useState<number | null>(null);
+  const [sessionSize, setSessionSize] = useState<number | null>(null);
   const stored = typeof savedTransparency === "number" && Number.isFinite(savedTransparency) ? savedTransparency : 0;
   const transparency = sessionTransparency ?? Math.min(80, Math.max(0, stored));
+  const storedSize = typeof savedSize === "number" && Number.isFinite(savedSize) ? savedSize : DEFAULT_SIZE;
+  const size = sessionSize ?? Math.min(MAX_SIZE, Math.max(MIN_SIZE, storedSize));
 
   useEffect(() => {
     if (!opened) return;
@@ -44,6 +53,11 @@ export default function MealLauncher() {
     saveTransparency(value);
   }
 
+  function changeSize(value: number) {
+    setSessionSize(value);
+    saveSize(value);
+  }
+
   const opacity = 1 - transparency / 100;
 
   return (
@@ -52,7 +66,7 @@ export default function MealLauncher() {
         ref={launcher}
         type="button"
         className={`${styles.launcher} ${pathname === "/chat" || pathname === "/chat/" ? styles.aboveComposer : ""}`}
-        style={{ opacity }}
+        style={{ opacity, width: size, height: size }}
         onClick={open}
         aria-label="전룡이 식당 추천 열기"
         aria-haspopup="dialog"
@@ -60,7 +74,7 @@ export default function MealLauncher() {
         aria-controls="meal-recommendation-window"
         title="전룡이와 식당 고르기"
       >
-        <Image src="/images/jeonryong-spoon-fork.webp" alt="" width={84} height={84} unoptimized />
+        <Image src={MASCOT_IMAGE} alt="" width={MAX_SIZE} height={MAX_SIZE} unoptimized />
       </button>
       <dialog
         ref={dialog}
@@ -81,21 +95,37 @@ export default function MealLauncher() {
         <div className={styles.content}>
           <header className={styles.toolbar}>
             <h2 id="meal-window-title">식당 추천</h2>
-            <label className={styles.transparency}>
-              <Image src="/images/jeonryong-spoon-fork.webp" alt="" width={32} height={32} unoptimized style={{ opacity }} />
-              <span>전룡이 투명도</span>
-              <input
-                type="range"
-                min="0"
-                max="80"
-                step="5"
-                value={transparency}
-                onChange={(event) => changeTransparency(Number(event.target.value))}
-                aria-label="전룡이 투명도"
-                aria-valuetext={`${transparency}% 투명`}
-              />
-              <output>{transparency}%</output>
-            </label>
+            <div className={styles.controls}>
+              <label className={styles.control}>
+                <Image src={MASCOT_IMAGE} alt="" width={32} height={32} unoptimized style={{ opacity }} />
+                <span>전룡이 투명도</span>
+                <input
+                  type="range"
+                  min="0"
+                  max="80"
+                  step="5"
+                  value={transparency}
+                  onChange={(event) => changeTransparency(Number(event.target.value))}
+                  aria-label="전룡이 투명도"
+                  aria-valuetext={`${transparency}% 투명`}
+                />
+                <output>{transparency}%</output>
+              </label>
+              <label className={styles.control}>
+                <span>전룡이 크기</span>
+                <input
+                  type="range"
+                  min={MIN_SIZE}
+                  max={MAX_SIZE}
+                  step="8"
+                  value={size}
+                  onChange={(event) => changeSize(Number(event.target.value))}
+                  aria-label="전룡이 크기"
+                  aria-valuetext={`${size}픽셀`}
+                />
+                <output>{size}px</output>
+              </label>
+            </div>
             <button type="button" className={styles.close} onClick={close} aria-label="식당 추천 닫기" autoFocus>
               <X size={22} aria-hidden />
             </button>
