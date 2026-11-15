@@ -147,16 +147,19 @@ export interface SyncState {
   running: boolean;
   started_at: string | null;
   finished_at: string | null;
-  exit_code: number | null; // 0 성공 · 1 오류 · 2 로그인 필요 · 3 다른 실행이 진행 중이라 건너뜀 · 4 네트워크 오류 · -1 시간 초과
+  exit_code: number | null; // 0 핵심 정보 저장 완료 · 1 오류 · 2 로그인 필요 · 3 건너뜀 · 4 요청 실패 · -1 수집 시간 초과
   source: "button" | "external" | null; // button = 대시보드에서 누름, external = 예약 작업(작업 스케줄러)·명령줄
   runSource?: RunSource | null; // 실행 이력의 원래 값 — schedule · catchup · retry · button · manual
   attempt?: number; // 재시도 회차 (1 = 첫 시도)
   pid: number | null;
-  retry?: RetryInfo | null; // 네트워크 오류 뒤 다음 재시도를 기다리는 중
+  retry?: RetryInfo | null; // 요청 실패 뒤 다음 재시도를 기다리는 중
   counts?: Record<string, number> | null;
   ledger?: { new: number; changed: number; removed: number; submitted: number } | null;
   already_running?: boolean; // POST /api/sync: 이미 돌고 있어서 새로 띄우지 않음
   error?: string | null;
+  errorKind?: "timeout" | "network" | null;
+  partial?: boolean; // 핵심 정보는 저장했지만 첨부 재시도가 남아 있음
+  warnings?: string[];
 }
 
 export interface Status {

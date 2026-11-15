@@ -31,6 +31,7 @@ F11_AGENT_DIR = Path(os.environ.get("F11_AGENT_DIR") or PROJECT_ROOT / "F11_Scho
 F12_AGENT_DIR = Path(os.environ.get("F12_AGENT_DIR") or PROJECT_ROOT / "F12_Activity_agent")     # F12 대외활동 (activity.api)
 C4_AGENT_DIR = Path(os.environ.get("C4_AGENT_DIR") or PROJECT_ROOT / "C4_Briefing_agent")        # C4 브리핑 (briefing.api) — 다른 기능을 모은다
 CA2_AGENT_DIR = Path(os.environ.get("CA2_AGENT_DIR") or PROJECT_ROOT / "campus" / "CA2_Assistant_agent")  # CA2 캠퍼스 생활 Q&A·대화 (assistant.api)
+CA1_AGENT_DIR = Path(os.environ.get("CA1_AGENT_DIR") or PROJECT_ROOT / "campus" / "CA1_Meal_agent")  # CA1 공강 식사 추천
 
 FRONTEND_OUT = ROOT / "frontend" / "out"                     # `npm run build` 결과 (정적 export)
 

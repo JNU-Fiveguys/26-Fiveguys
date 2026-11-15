@@ -1,0 +1,82 @@
+{
+  "version": 1,
+  "id": "p_0061",
+  "name": "이비가짬뽕 전남대점",
+  "category": "중식",
+  "lat": 35.171822,
+  "lng": 126.897823,
+  "address": "전남광주통합특별시 북구 용봉로 10",
+  "source": "semas",
+  "sourceId": "MA0101202303A0119314",
+  "sourceStatus": "active",
+  "attrs": {
+    "status": "partial"
+  },
+  "research": {
+    "identityStatus": "uncertain",
+    "queries": [
+      "\"이비가짬뽕 전남대점\" 메뉴 영업시간",
+      "\"이비가짬뽕 전남대점\" \"영업시간\""
+    ],
+    "sources": [
+      {
+        "id": "s1",
+        "url": "https://www.ebiga.co.kr/sub3_1?page=6",
+        "title": "이비가짬뽕 공식 국내매장찾기",
+        "type": "official",
+        "addressMatch": true,
+        "note": "검색색인에전남대점용봉로10/062-511-5576. 본문열람시페이지변동으로해당지점행안보임.",
+        "observedAt": "2026-11-11"
+      },
+      {
+        "id": "s2",
+        "url": "https://biz.chungoose.kr/1012572872",
+        "title": "이비가짬뽕 전남대점 사업자정보",
+        "type": "directory",
+        "addressMatch": false,
+        "note": "동명사업자폐업표기이나현상가업체와동일사업자여부확인안되어폐업단정하지않음.",
+        "observedAt": "2026-11-11"
+      }
+    ],
+    "facts": {
+      "menus": {
+        "status": "unconfirmed",
+        "sourceIds": [],
+        "note": "동일 지점의 메뉴와 현행 가격을 확인하지 못함. 값은 생성하지 않음."
+      },
+      "hours": {
+        "status": "unconfirmed",
+        "sourceIds": [],
+        "note": "동일 지점의 요일별 영업시간·휴무를 확인하지 못함. 임의 시간 입력하지 않음."
+      }
+    },
+    "notes": [
+      "공식지점검색색인과동명사업자폐업표시가함께검색됨. 지점현행운영확인필요."
+    ],
+    "checkedAt": "2026-11-11",
+    "method": "web",
+    "unknownFields": [
+      "menus",
+      "hours",
+      "mealType",
+      "takeout",
+      "verifiedAt",
+      "verifiedBy",
+      "break",
+      "lastOrder"
+    ]
+  },
+  "availability": {
+    "status": "excluded",
+    "provider": "naver",
+    "checkedAt": "2026-11-11",
+    "sourceUrl": "https://map.naver.com/p/search/%EC%A0%84%EB%82%A8%EB%8C%80%20%EC%9D%8C%EC%8B%9D%EC%A0%90",
+    "naverPlaceId": null,
+    "observedName": "",
+    "observedAddress": "",
+    "district": null,
+    "addressVerified": false,
+    "nearby": false,
+    "reason": "네이버 지도에서 확인한 네 식당가 명단에 포함되지 않아 제외"
+  }
+}

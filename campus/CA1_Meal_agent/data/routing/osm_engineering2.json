@@ -1,0 +1,281 @@
+{
+  "metadata": {
+    "attribution": "© OpenStreetMap contributors",
+    "license": "ODbL-1.0",
+    "licenseUrl": "https://www.openstreetmap.org/copyright",
+    "source": "https://api.openstreetmap.org/api/0.6/relation/15057693/full.json",
+    "downloadedAt": "2026-11-11T13:26:53.1018302+00:00",
+    "notes": "Public OSM supplemental building relation. Two mapped entrances; use the unique outer-node average consistently with existing building extraction."
+  },
+  "elements": [
+    {
+      "type": "node",
+      "id": 10291913004,
+      "lat": 35.1789334,
+      "lon": 126.9083796,
+      "timestamp": "2022-12-28T19:04:43Z",
+      "version": 1,
+      "changeset": 130614996,
+      "user": "asdfqwer51",
+      "uid": 3350410
+    },
+    {
+      "type": "node",
+      "id": 10291913005,
+      "lat": 35.1791003,
+      "lon": 126.9088476,
+      "timestamp": "2022-12-28T19:04:43Z",
+      "version": 1,
+      "changeset": 130614996,
+      "user": "asdfqwer51",
+      "uid": 3350410
+    },
+    {
+      "type": "node",
+      "id": 10291913006,
+      "lat": 35.1790164,
+      "lon": 126.9088924,
+      "timestamp": "2022-12-28T19:04:43Z",
+      "version": 1,
+      "changeset": 130614996,
+      "user": "asdfqwer51",
+      "uid": 3350410
+    },
+    {
+      "type": "node",
+      "id": 10291913007,
+      "lat": 35.1790567,
+      "lon": 126.9090052,
+      "timestamp": "2022-12-28T19:04:43Z",
+      "version": 1,
+      "changeset": 130614996,
+      "user": "asdfqwer51",
+      "uid": 3350410
+    },
+    {
+      "type": "node",
+      "id": 10291913008,
+      "lat": 35.1791401,
+      "lon": 126.9089606,
+      "timestamp": "2022-12-28T19:04:43Z",
+      "version": 1,
+      "changeset": 130614996,
+      "user": "asdfqwer51",
+      "uid": 3350410
+    },
+    {
+      "type": "node",
+      "id": 10291957709,
+      "lat": 35.1793129,
+      "lon": 126.9094451,
+      "timestamp": "2022-12-28T19:04:43Z",
+      "version": 1,
+      "changeset": 130614996,
+      "user": "asdfqwer51",
+      "uid": 3350410
+    },
+    {
+      "type": "node",
+      "id": 10291957710,
+      "lat": 35.1796085,
+      "lon": 126.9092873,
+      "timestamp": "2022-12-28T19:04:43Z",
+      "version": 1,
+      "changeset": 130614996,
+      "user": "asdfqwer51",
+      "uid": 3350410
+    },
+    {
+      "type": "node",
+      "id": 10291957711,
+      "lat": 35.1795761,
+      "lon": 126.9091965,
+      "timestamp": "2022-12-28T19:04:43Z",
+      "version": 1,
+      "changeset": 130614996,
+      "user": "asdfqwer51",
+      "uid": 3350410
+    },
+    {
+      "type": "node",
+      "id": 10291957712,
+      "lat": 35.1794207,
+      "lon": 126.9092795,
+      "timestamp": "2022-12-28T19:04:43Z",
+      "version": 1,
+      "changeset": 130614996,
+      "user": "asdfqwer51",
+      "uid": 3350410
+    },
+    {
+      "type": "node",
+      "id": 10291957713,
+      "lat": 35.1791172,
+      "lon": 126.9084287,
+      "timestamp": "2022-12-28T19:04:43Z",
+      "version": 1,
+      "changeset": 130614996,
+      "user": "asdfqwer51",
+      "uid": 3350410
+    },
+    {
+      "type": "node",
+      "id": 10291957714,
+      "lat": 35.1792225,
+      "lon": 126.9083724,
+      "timestamp": "2022-12-28T19:04:43Z",
+      "version": 1,
+      "changeset": 130614996,
+      "user": "asdfqwer51",
+      "uid": 3350410
+    },
+    {
+      "type": "node",
+      "id": 10291957715,
+      "lat": 35.1791784,
+      "lon": 126.9082488,
+      "timestamp": "2022-12-28T19:04:43Z",
+      "version": 1,
+      "changeset": 130614996,
+      "user": "asdfqwer51",
+      "uid": 3350410
+    },
+    {
+      "type": "node",
+      "id": 10291957724,
+      "lat": 35.1792302,
+      "lon": 126.9087455,
+      "timestamp": "2022-12-28T19:04:43Z",
+      "version": 1,
+      "changeset": 130614996,
+      "user": "asdfqwer51",
+      "uid": 3350410
+    },
+    {
+      "type": "node",
+      "id": 10291957725,
+      "lat": 35.1792895,
+      "lon": 126.9089115,
+      "timestamp": "2022-12-28T19:04:43Z",
+      "version": 1,
+      "changeset": 130614996,
+      "user": "asdfqwer51",
+      "uid": 3350410
+    },
+    {
+      "type": "node",
+      "id": 10291957726,
+      "lat": 35.179304,
+      "lon": 126.908704,
+      "timestamp": "2022-12-28T19:04:43Z",
+      "version": 1,
+      "changeset": 130614996,
+      "user": "asdfqwer51",
+      "uid": 3350410
+    },
+    {
+      "type": "node",
+      "id": 10291957727,
+      "lat": 35.1793649,
+      "lon": 126.9088702,
+      "timestamp": "2022-12-28T19:04:43Z",
+      "version": 1,
+      "changeset": 130614996,
+      "user": "asdfqwer51",
+      "uid": 3350410
+    },
+    {
+      "type": "node",
+      "id": 10292607373,
+      "lat": 35.1793354,
+      "lon": 126.9087906,
+      "timestamp": "2022-12-29T06:03:08Z",
+      "version": 1,
+      "changeset": 130628415,
+      "user": "asdfqwer51",
+      "uid": 3350410,
+      "tags": {
+        "entrance": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10292607425,
+      "lat": 35.1790372,
+      "lon": 126.9089506,
+      "timestamp": "2022-12-29T06:03:08Z",
+      "version": 1,
+      "changeset": 130628415,
+      "user": "asdfqwer51",
+      "uid": 3350410,
+      "tags": {
+        "entrance": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10302623836,
+      "lat": 35.1794512,
+      "lon": 126.9093713,
+      "timestamp": "2023-01-03T15:35:35Z",
+      "version": 1,
+      "changeset": 130831870,
+      "user": "asdfqwer51",
+      "uid": 3350410
+    },
+    {
+      "type": "way",
+      "id": 1125471454,
+      "timestamp": "2023-01-03T15:35:35Z",
+      "version": 3,
+      "changeset": 130831870,
+      "user": "asdfqwer51",
+      "uid": 3350410,
+      "nodes": [
+        10291913004,
+        10291913005,
+        10291913006,
+        10292607425,
+        10291913007,
+        10291913008,
+        10291957709,
+        10302623836,
+        10291957710,
+        10291957711,
+        10291957712,
+        10291957725,
+        10291957727,
+        10292607373,
+        10291957726,
+        10291957724,
+        10291957713,
+        10291957714,
+        10291957715,
+        10291913004
+      ]
+    },
+    {
+      "type": "relation",
+      "id": 15057693,
+      "timestamp": "2023-01-03T15:35:35Z",
+      "version": 2,
+      "changeset": 130831870,
+      "user": "asdfqwer51",
+      "uid": 3350410,
+      "members": [
+        {
+          "type": "way",
+          "ref": 1125471454,
+          "role": "outer"
+        }
+      ],
+      "tags": {
+        "building": "university",
+        "name": "공과대 2호관",
+        "name:en": "College of Engineering 2",
+        "name:ko": "공과대 2호관",
+        "type": "multipolygon"
+      }
+    }
+  ]
+}

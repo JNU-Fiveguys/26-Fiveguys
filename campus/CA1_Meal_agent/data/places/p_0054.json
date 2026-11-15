@@ -1,0 +1,70 @@
+{
+  "version": 1,
+  "id": "p_0054",
+  "name": "가원",
+  "category": "한식",
+  "lat": 35.174646,
+  "lng": 126.912892,
+  "address": "전남광주통합특별시 북구 우치로 80",
+  "source": "semas",
+  "sourceId": "MA010120220813980496",
+  "sourceStatus": "active",
+  "attrs": {
+    "status": "partial"
+  },
+  "research": {
+    "identityStatus": "matched",
+    "queries": [
+      "\"가원\" \"우치로 80\" 메뉴 영업시간"
+    ],
+    "sources": [
+      {
+        "id": "s1",
+        "url": "https://sinnake-town.com/region/1230010700/stores/I2",
+        "title": "용봉동 상가정보 - 가원",
+        "type": "directory",
+        "addressMatch": true,
+        "note": "동주소백반/한정식 등록만 확인. 메뉴·시간없음.",
+        "observedAt": "2026-11-11"
+      }
+    ],
+    "facts": {
+      "menus": {
+        "status": "unconfirmed",
+        "sourceIds": [],
+        "note": "동일 지점의 메뉴와 현행 가격을 확인하지 못함. 값은 생성하지 않음."
+      },
+      "hours": {
+        "status": "unconfirmed",
+        "sourceIds": [],
+        "note": "동일 지점의 요일별 영업시간·휴무를 확인하지 못함. 임의 시간 입력하지 않음."
+      }
+    },
+    "notes": [],
+    "checkedAt": "2026-11-11",
+    "method": "web",
+    "unknownFields": [
+      "menus",
+      "hours",
+      "mealType",
+      "takeout",
+      "verifiedAt",
+      "verifiedBy",
+      "break",
+      "lastOrder"
+    ]
+  },
+  "availability": {
+    "status": "excluded",
+    "provider": "naver",
+    "checkedAt": "2026-11-11",
+    "sourceUrl": "https://map.naver.com/p/search/%EC%A0%84%EB%82%A8%EB%8C%80%20%EC%9D%8C%EC%8B%9D%EC%A0%90",
+    "naverPlaceId": null,
+    "observedName": "",
+    "observedAddress": "",
+    "district": null,
+    "addressVerified": false,
+    "nearby": false,
+    "reason": "네이버 지도에서 확인한 네 식당가 명단에 포함되지 않아 제외"
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "version": 1,
+  "id": "p_0010",
+  "name": "잇샌드 전대점",
+  "category": "패스트푸드",
+  "lat": 35.177342,
+  "lng": 126.901505,
+  "address": "전남광주통합특별시 북구 설죽로202번길 73",
+  "source": "semas",
+  "sourceId": "MA010120220805685630",
+  "sourceStatus": "active",
+  "attrs": {
+    "status": "partial",
+    "menus": [
+      {
+        "name": "케이준 치킨 샐러드",
+        "price": 7000,
+        "main": true
+      },
+      {
+        "name": "그릴 닭가슴살 샐러드",
+        "price": 9000,
+        "main": true
+      },
+      {
+        "name": "게살 크리미 샌드위치",
+        "price": 7000,
+        "main": true
+      }
+    ]
+  },
+  "research": {
+    "identityStatus": "matched",
+    "queries": [
+      "\"잇샌드 전대점\""
+    ],
+    "sources": [
+      {
+        "id": "s1",
+        "url": "https://www.diningcode.com/profile.php?rid=tLN2wkXYUVuQ",
+        "title": "잇샌드 전남대점 메뉴 및 영업정보",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "상호·주소 일치"
+      },
+      {
+        "id": "s2",
+        "url": "https://www.onkorea.co.kr/gbuk/caDdCIPu6mwN",
+        "title": "잇샌드전대점 인허가·과거후기",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "상호·주소 일치"
+      }
+    ],
+    "facts": {
+      "menus": {
+        "status": "confirmed",
+        "value": [
+          {
+            "name": "케이준 치킨 샐러드",
+            "price": 7000,
+            "main": true
+          },
+          {
+            "name": "그릴 닭가슴살 샐러드",
+            "price": 9000,
+            "main": true
+          },
+          {
+            "name": "게살 크리미 샌드위치",
+            "price": 7000,
+            "main": true
+          }
+        ],
+        "sourceIds": [
+          "s1"
+        ],
+        "note": "주소 일치 매장표의 식사 메뉴. 커피·디저트는 제외."
+      },
+      "hours": {
+        "status": "conflict",
+        "value": [],
+        "sourceIds": [
+          "s1",
+          "s2"
+        ],
+        "note": "현 매장표 월~목08:30~20:00·금~일09:00~15:00, 2025후기는 매일09:00~21:00. 적용 시점 확인 전 보류."
+      }
+    },
+    "notes": [
+      "카페 잇샌드로 소개되는 샌드위치·샐러드점. 카페 전부 제외 범위에 맞는지 재검토 필요."
+    ],
+    "checkedAt": "2026-11-11",
+    "method": "web",
+    "unknownFields": [
+      "hours",
+      "mealType",
+      "takeout",
+      "verifiedAt",
+      "verifiedBy",
+      "break",
+      "lastOrder"
+    ]
+  },
+  "availability": {
+    "status": "excluded",
+    "provider": "naver",
+    "checkedAt": "2026-11-11",
+    "sourceUrl": "https://map.naver.com/p/search/%EC%A0%84%EB%82%A8%EB%8C%80%20%EC%9D%8C%EC%8B%9D%EC%A0%90",
+    "naverPlaceId": null,
+    "observedName": "",
+    "observedAddress": "",
+    "district": null,
+    "addressVerified": false,
+    "nearby": false,
+    "reason": "네이버 지도에서 확인한 네 식당가 명단에 포함되지 않아 제외"
+  }
+}

@@ -1,0 +1,911 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/JNU-Fiveguys/26-Fiveguys/campus/CA1_Meal_agent/data/schema/place.schema.json",
+  "title": "Place v1 — 가게 한 곳",
+  "description": "가게 한 곳 = 파일 하나. 확인한 값만 attrs에 기록한다. 웹 조사는 research 출처·미확인 목록으로 구분하며, 같은 지점의 메뉴·가격과 영업시간이 확인된 가게를 추천한다. 좌석·혼밥은 저장하거나 계산하지 않는다.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "version",
+    "id",
+    "name",
+    "category",
+    "lat",
+    "lng",
+    "source"
+  ],
+  "properties": {
+    "version": {
+      "const": 1
+    },
+    "id": {
+      "description": "p_001 = 실제 가게, s_01 = 개발용 샘플(가짜)",
+      "type": "string",
+      "pattern": "^(p_[0-9]{3,4}|s_[0-9]{2})$"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 60
+    },
+    "category": {
+      "description": "카테고리 사전 — MealQuery include/exclude · 취향이 같은 사전을 쓴다",
+      "enum": [
+        "한식",
+        "중식",
+        "일식",
+        "양식",
+        "분식",
+        "고기",
+        "국밥·찌개",
+        "패스트푸드",
+        "아시안",
+        "카페·베이커리",
+        "학식"
+      ]
+    },
+    "lat": {
+      "type": "number",
+      "minimum": 33,
+      "maximum": 39
+    },
+    "lng": {
+      "type": "number",
+      "minimum": 124,
+      "maximum": 132
+    },
+    "address": {
+      "type": "string",
+      "maxLength": 120
+    },
+    "source": {
+      "description": "semas = 공공데이터 상가(상권)정보, team = 팀이 직접 추가(학식 등), sample = 개발용 가짜 데이터",
+      "enum": [
+        "semas",
+        "team",
+        "sample"
+      ]
+    },
+    "sourceId": {
+      "description": "상가정보의 상가업소번호 (source 가 semas 일 때)",
+      "type": "string"
+    },
+    "sourceStatus": {
+      "description": "active = 최근 선정 목록에 있음, missing = 선정 목록에서 빠져 재확인 필요(폐업 확정 아님). 생략하면 active. missing은 attrs를 보존하되 추천에서 제외한다.",
+      "enum": [
+        "active",
+        "missing"
+      ]
+    },
+    "attrs": {
+      "$ref": "#/$defs/attrs"
+    },
+    "research": {
+      "$ref": "#/$defs/research"
+    },
+    "availability": {
+      "$ref": "#/$defs/availability"
+    },
+    "menuObservation": {
+      "$ref": "#/$defs/menuObservation"
+    },
+    "hoursObservation": {
+      "$ref": "#/$defs/hoursObservation"
+    },
+    "followupReview": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "checkedAt",
+        "reasons",
+        "sources"
+      ],
+      "properties": {
+        "checkedAt": {
+          "type": "string",
+          "format": "date"
+        },
+        "reasons": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "maxLength": 2000
+          }
+        },
+        "sources": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "uri"
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "hhmm": {
+      "type": "string",
+      "pattern": "^([01][0-9]|2[0-3]):[0-5][0-9]$|^24:00$"
+    },
+    "day": {
+      "enum": [
+        "월",
+        "화",
+        "수",
+        "목",
+        "금",
+        "토",
+        "일"
+      ]
+    },
+    "attrs": {
+      "type": "object",
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "required": [
+              "status"
+            ],
+            "properties": {
+              "status": {
+                "const": "partial"
+              }
+            }
+          },
+          "then": {},
+          "else": {
+            "required": [
+              "hours",
+              "menus",
+              "verifiedAt",
+              "verifiedBy"
+            ]
+          }
+        }
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "partial",
+            "complete"
+          ],
+          "description": "partial은 조사 범위를 표시한다. 동일 지점 메뉴·가격과 영업시간이 모두 확인되면 partial이어도 추천한다. complete 또는 생략 시 메뉴·시간과 검수자를 요구한다."
+        },
+        "mealType": {
+          "description": "필요 시간 계산의 식사 유형 (기능 정의서 CA1 5절 표). 간단식 = 분식·덮밥·패스트푸드",
+          "enum": [
+            "학식",
+            "간단식",
+            "일반",
+            "고기·단체",
+            "카페"
+          ]
+        },
+        "takeout": {
+          "description": "포장 가능",
+          "type": "boolean"
+        },
+        "hours": {
+          "description": "영업 요일별 시간. 여기에 없는 요일은 휴무다. 점심·저녁 라스트오더가 다르면 같은 요일의 행을 나눠 각 구간에 lastOrder를 적는다",
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "days",
+              "open",
+              "close"
+            ],
+            "properties": {
+              "days": {
+                "type": "array",
+                "minItems": 1,
+                "uniqueItems": true,
+                "items": {
+                  "$ref": "#/$defs/day"
+                }
+              },
+              "open": {
+                "$ref": "#/$defs/hhmm"
+              },
+              "close": {
+                "$ref": "#/$defs/hhmm"
+              },
+              "lastOrder": {
+                "$ref": "#/$defs/hhmm",
+                "description": "이 영업 구간의 마지막 주문 시각. break가 있으면 브레이크 이후 마지막 구간에만 적용하며 break.end < lastOrder <= close여야 한다. 점심 라스트오더도 있으면 hours 행을 나눈다"
+              },
+              "break": {
+                "description": "한 영업 행 안의 휴식 구간. 이 행의 lastOrder는 휴식 이후에만 적용한다",
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "start",
+                  "end"
+                ],
+                "properties": {
+                  "start": {
+                    "$ref": "#/$defs/hhmm"
+                  },
+                  "end": {
+                    "$ref": "#/$defs/hhmm"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "menus": {
+          "description": "메뉴판에서 옮긴 메뉴. main = 식사가 되는 대표 메뉴(가격대 계산에 쓴다)",
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "name",
+              "price",
+              "main"
+            ],
+            "properties": {
+              "name": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 40
+              },
+              "price": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 200000
+              },
+              "main": {
+                "type": "boolean"
+              },
+              "orderWindow": {
+                "$ref": "#/$defs/menuObservation/properties/menus/items/properties/orderWindow"
+              }
+            }
+          }
+        },
+        "tags": {
+          "description": "특징 태그 — 카테고리 사전의 특징 태그만 사용한다",
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "매운 음식",
+              "채식 가능"
+            ]
+          }
+        },
+        "verifiedAt": {
+          "description": "사람이 메뉴판·영업시간을 확인한 날",
+          "type": "string",
+          "format": "date"
+        },
+        "verifiedBy": {
+          "description": "확인한 사람 GitHub 아이디",
+          "type": "string",
+          "minLength": 1
+        },
+        "note": {
+          "type": "string",
+          "maxLength": 200
+        }
+      }
+    },
+    "research": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "checkedAt",
+        "method",
+        "identityStatus",
+        "queries",
+        "sources",
+        "facts",
+        "unknownFields",
+        "notes"
+      ],
+      "properties": {
+        "checkedAt": {
+          "type": "string",
+          "format": "date"
+        },
+        "method": {
+          "const": "web"
+        },
+        "identityStatus": {
+          "enum": [
+            "matched",
+            "uncertain",
+            "not_found",
+            "closed"
+          ]
+        },
+        "queries": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "sources": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "id",
+              "url",
+              "title",
+              "type",
+              "observedAt",
+              "addressMatch",
+              "note"
+            ],
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "url": {
+                "type": "string",
+                "format": "uri",
+                "pattern": "^https?://"
+              },
+              "title": {
+                "type": "string",
+                "minLength": 1
+              },
+              "type": {
+                "enum": [
+                  "official",
+                  "public_data",
+                  "directory",
+                  "review"
+                ]
+              },
+              "observedAt": {
+                "type": "string",
+                "format": "date"
+              },
+              "publishedAt": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "format": "date"
+              },
+              "addressMatch": {
+                "type": "boolean"
+              },
+              "note": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "facts": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "menus",
+            "hours"
+          ],
+          "properties": {
+            "menus": {
+              "$ref": "#/$defs/menuEvidence"
+            },
+            "hours": {
+              "$ref": "#/$defs/hourEvidence"
+            }
+          }
+        },
+        "unknownFields": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "notes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "evidence": {
+      "type": "object",
+      "required": [
+        "status",
+        "sourceIds",
+        "note"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "confirmed",
+            "partial",
+            "unconfirmed",
+            "conflict"
+          ]
+        },
+        "sourceIds": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "note": {
+          "type": "string"
+        }
+      }
+    },
+    "menuEvidence": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/evidence"
+        }
+      ],
+      "unevaluatedProperties": false,
+      "properties": {
+        "value": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/attrs/properties/menus/items"
+          }
+        }
+      }
+    },
+    "hourEvidence": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/evidence"
+        }
+      ],
+      "unevaluatedProperties": false,
+      "properties": {
+        "value": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/attrs/properties/hours/items"
+          }
+        }
+      }
+    },
+    "naverSourceUrl": {
+      "type": "string",
+      "format": "uri",
+      "pattern": "^https://(?:map\\.naver\\.com|m\\.map\\.naver\\.com|(?:m\\.|pcmap\\.)?place\\.naver\\.com|naver\\.me)/",
+      "description": "실제로 열어 확인한 네이버 지도/플레이스 URL. 검색 결과 없음은 검색 URL을 남긴다."
+    },
+    "availability": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "공공 후보 sourceStatus와 별도인 지도 동일 지점 재확인. listed는 현재 시각 영업 중을 뜻하지 않는다.",
+      "required": [
+        "status",
+        "provider",
+        "checkedAt",
+        "sourceUrl",
+        "naverPlaceId",
+        "observedName",
+        "observedAddress",
+        "district",
+        "addressVerified",
+        "nearby",
+        "reason"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "listed",
+            "excluded",
+            "unconfirmed",
+            "closed"
+          ]
+        },
+        "provider": {
+          "const": "naver"
+        },
+        "checkedAt": {
+          "type": "string",
+          "format": "date"
+        },
+        "sourceUrl": {
+          "$ref": "#/$defs/naverSourceUrl"
+        },
+        "naverPlaceId": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^[1-9][0-9]*$"
+        },
+        "observedName": {
+          "type": "string",
+          "maxLength": 120
+        },
+        "observedAddress": {
+          "type": "string",
+          "maxLength": 200
+        },
+        "district": {
+          "enum": [
+            "후문",
+            "상대",
+            "정문",
+            "예대",
+            null
+          ]
+        },
+        "addressVerified": {
+          "type": "boolean"
+        },
+        "nearby": {
+          "type": "boolean"
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1000
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "const": "listed"
+              }
+            },
+            "required": [
+              "status"
+            ]
+          },
+          "then": {
+            "properties": {
+              "naverPlaceId": {
+                "type": "string"
+              },
+              "observedName": {
+                "minLength": 1
+              },
+              "observedAddress": {
+                "minLength": 1
+              },
+              "district": {
+                "enum": [
+                  "후문",
+                  "상대",
+                  "정문",
+                  "예대"
+                ]
+              },
+              "addressVerified": {
+                "const": true
+              },
+              "nearby": {
+                "const": true
+              }
+            }
+          }
+        }
+      ]
+    },
+    "menuObservation": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "같은 지점의 매장·포장·배달 메뉴 관찰. 원본 attrs는 보존하고 매장 가격 확인값만 추천에 사용한다.",
+      "required": [
+        "sourceUrl",
+        "checkedAt",
+        "priceContext",
+        "menus"
+      ],
+      "properties": {
+        "sourceUrl": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/naverSourceUrl"
+            },
+            {
+              "type": "string",
+              "format": "uri",
+              "pattern": "^https://m\\.booking\\.naver\\.com/order/bizes/[1-9][0-9]*/items/[1-9][0-9]*(?:[/?#].*)?$"
+            },
+            {
+              "type": "string",
+              "format": "uri",
+              "pattern": "^https://blog\\.naver\\.com/[A-Za-z0-9_-]+/[1-9][0-9]*/?$"
+            },
+            {
+              "type": "string",
+              "format": "uri",
+              "pattern": "^https://place\\.map\\.kakao\\.com/[1-9][0-9]*/?(?:\\?[^\\s]*)?$"
+            }
+          ]
+        },
+        "placeSourceUrl": {
+          "$ref": "#/$defs/naverSourceUrl"
+        },
+        "checkedAt": {
+          "type": "string",
+          "format": "date"
+        },
+        "priceContext": {
+          "enum": [
+            "in_store",
+            "delivery",
+            "unknown"
+          ]
+        },
+        "menus": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "name",
+              "price"
+            ],
+            "properties": {
+              "name": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 150
+              },
+              "price": {
+                "type": [
+                  "integer",
+                  "null"
+                ],
+                "minimum": 0
+              },
+              "priceText": {
+                "type": "string",
+                "maxLength": 150
+              },
+              "main": {
+                "type": "boolean"
+              },
+              "priceContext": {
+                "enum": [
+                  "in_store",
+                  "delivery",
+                  "unknown"
+                ],
+                "description": "같은 메뉴 탭에 매장·배달 가격이 혼재할 때 항목별 구분. 생략하면 전체 관찰의 priceContext를 따른다."
+              },
+              "orderWindow": {
+                "type": "object",
+                "required": [
+                  "start",
+                  "end"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "start": {
+                    "$ref": "#/$defs/hhmm"
+                  },
+                  "end": {
+                    "$ref": "#/$defs/hhmm"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "note": {
+          "type": "string",
+          "maxLength": 2000
+        },
+        "status": {
+          "enum": [
+            "confirmed",
+            "unconfirmed"
+          ]
+        },
+        "sourceAddress": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 300
+        },
+        "sourcePublishedAt": {
+          "type": "string",
+          "format": "date",
+          "description": "방문 메뉴판 보완 자료의 게시일. 네이버 블로그 가격은 확인일로부터180일 이내 게시물만 적용한다."
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "required": [
+              "status"
+            ],
+            "properties": {
+              "status": {
+                "const": "confirmed"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "priceContext": {
+                "const": "in_store"
+              },
+              "menus": {
+                "minItems": 1
+              }
+            }
+          }
+        }
+      ]
+    },
+    "hoursObservation": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "동일 지점의 최신 영업시간 관찰. 카카오 보완 출처는 네이버 지점 연결·동일 도로명 건물번호·매장 시간 구분이 필요하다.",
+      "required": [
+        "sourceUrl",
+        "checkedAt",
+        "status",
+        "hours"
+      ],
+      "properties": {
+        "sourceUrl": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/naverSourceUrl"
+            },
+            {
+              "type": "string",
+              "format": "uri",
+              "pattern": "^https://place\\.map\\.kakao\\.com/[1-9][0-9]*/?(?:\\?[^\\s]*)?$"
+            }
+          ]
+        },
+        "checkedAt": {
+          "type": "string",
+          "format": "date"
+        },
+        "status": {
+          "enum": [
+            "confirmed",
+            "unconfirmed"
+          ]
+        },
+        "hours": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "days",
+              "open",
+              "close"
+            ],
+            "properties": {
+              "days": {
+                "type": "array",
+                "minItems": 1,
+                "uniqueItems": true,
+                "items": {
+                  "$ref": "#/$defs/day"
+                }
+              },
+              "open": {
+                "$ref": "#/$defs/hhmm"
+              },
+              "close": {
+                "$ref": "#/$defs/hhmm"
+              },
+              "lastOrder": {
+                "$ref": "#/$defs/hhmm",
+                "description": "이 영업 구간의 마지막 주문 시각. break가 있으면 브레이크 이후 마지막 구간에만 적용하며 break.end < lastOrder <= close여야 한다. 점심 라스트오더도 있으면 hours 행을 나눈다"
+              },
+              "break": {
+                "description": "한 영업 행 안의 휴식 구간. 이 행의 lastOrder는 휴식 이후에만 적용한다",
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "start",
+                  "end"
+                ],
+                "properties": {
+                  "start": {
+                    "$ref": "#/$defs/hhmm"
+                  },
+                  "end": {
+                    "$ref": "#/$defs/hhmm"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "note": {
+          "type": "string",
+          "maxLength": 2000
+        },
+        "closedDates": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "format": "date"
+          },
+          "description": "공개 공지에서 확인한 날짜별 휴무. 추정 날짜는 기록하지 않는다."
+        },
+        "monthlyClosed": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "day",
+              "weeks"
+            ],
+            "properties": {
+              "day": {
+                "$ref": "#/$defs/day"
+              },
+              "weeks": {
+                "type": "array",
+                "minItems": 1,
+                "uniqueItems": true,
+                "items": {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 5
+                }
+              }
+            }
+          }
+        },
+        "placeSourceUrl": {
+          "$ref": "#/$defs/naverSourceUrl"
+        },
+        "sourceAddress": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 300
+        },
+        "hoursContext": {
+          "enum": [
+            "in_store",
+            "delivery",
+            "unknown"
+          ]
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "const": "confirmed"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "hours": {
+                "minItems": 1
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

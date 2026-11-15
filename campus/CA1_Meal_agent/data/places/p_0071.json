@@ -1,0 +1,354 @@
+{
+  "version": 1,
+  "id": "p_0071",
+  "name": "깁미타코 전대후문점",
+  "category": "양식",
+  "lat": 35.1763316517806,
+  "lng": 126.91260475669,
+  "address": "전남광주 북구 우치로 100 1층 깁미타코",
+  "source": "semas",
+  "sourceId": "MA0101202406A0196987",
+  "sourceStatus": "active",
+  "attrs": {
+    "status": "partial",
+    "menus": [
+      {
+        "name": "QUESADILLA SET",
+        "price": 11000,
+        "main": true
+      },
+      {
+        "name": "프레쉬 쉬림프 보울",
+        "price": 15000,
+        "main": true
+      },
+      {
+        "name": "치폴레 퀘사디아 2Pcs",
+        "price": 13500,
+        "main": true
+      }
+    ],
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금",
+          "토",
+          "일"
+        ],
+        "open": "11:30",
+        "close": "21:00",
+        "break": {
+          "start": "15:00",
+          "end": "17:00"
+        },
+        "lastOrder": "20:30"
+      }
+    ]
+  },
+  "research": {
+    "identityStatus": "matched",
+    "queries": [
+      "\"깁미타코\" \"전대후문점\" 메뉴 영업시간"
+    ],
+    "sources": [
+      {
+        "id": "s1",
+        "url": "https://www.diningcode.com/profile.php?rid=54rgUeikpuev",
+        "title": "깁미타코 전대점 매장 정보",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "상호와 도로명 주소를 대조함. URL을 직접 열어 주소와 본문을 확인함."
+      }
+    ],
+    "facts": {
+      "menus": {
+        "status": "confirmed",
+        "value": [
+          {
+            "name": "QUESADILLA SET",
+            "price": 11000,
+            "main": true
+          },
+          {
+            "name": "프레쉬 쉬림프 보울",
+            "price": 15000,
+            "main": true
+          },
+          {
+            "name": "치폴레 퀘사디아 2Pcs",
+            "price": 13500,
+            "main": true
+          }
+        ],
+        "sourceIds": [
+          "s1"
+        ],
+        "note": "주소가 일치하는 지점 페이지에 게시된 메뉴·가격. 실제 결제 가격은 현장 재확인 필요."
+      },
+      "hours": {
+        "status": "confirmed",
+        "value": [
+          {
+            "days": [
+              "월",
+              "화",
+              "수",
+              "목",
+              "금",
+              "토",
+              "일"
+            ],
+            "open": "11:30",
+            "close": "21:00",
+            "break": {
+              "start": "15:00",
+              "end": "17:00"
+            },
+            "lastOrder": "20:30"
+          }
+        ],
+        "sourceIds": [
+          "s1"
+        ],
+        "note": "요일별 게시 영업시간 확인. 별도 휴일·임시 변경과 미게시 휴식시간은 확인되지 않음."
+      }
+    },
+    "notes": [],
+    "checkedAt": "2026-11-11",
+    "method": "web",
+    "unknownFields": [
+      "mealType",
+      "takeout",
+      "verifiedAt",
+      "verifiedBy"
+    ]
+  },
+  "availability": {
+    "status": "listed",
+    "provider": "naver",
+    "checkedAt": "2026-11-11",
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/1243161116/home",
+    "naverPlaceId": "1243161116",
+    "observedName": "깁미타코 전대후문점",
+    "observedAddress": "전남광주 북구 우치로 100 1층 깁미타코",
+    "district": "후문",
+    "addressVerified": true,
+    "nearby": true,
+    "reason": "공개 네이버 지도에서 동일 주소의 전남대 후문 식당으로 확인"
+  },
+  "menuObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/1243161116/menu/list",
+    "checkedAt": "2026-11-11",
+    "priceContext": "in_store",
+    "menus": [
+      {
+        "name": "SET A",
+        "price": 39000,
+        "main": false
+      },
+      {
+        "name": "SET B",
+        "price": 42000,
+        "main": false
+      },
+      {
+        "name": "FRESH SET",
+        "price": 31000,
+        "main": false
+      },
+      {
+        "name": "치미창가",
+        "price": 14000,
+        "main": true
+      },
+      {
+        "name": "프레쉬 바베큐 보울",
+        "price": 13000,
+        "main": true
+      },
+      {
+        "name": "깁미 파히타",
+        "price": 24000,
+        "main": false
+      },
+      {
+        "name": "비리아 타코",
+        "price": 6500,
+        "main": false
+      },
+      {
+        "name": "TACO SET",
+        "price": 11000,
+        "main": true
+      },
+      {
+        "name": "BIRIA SET",
+        "price": 15000,
+        "main": true
+      },
+      {
+        "name": "QUESADILLA SET",
+        "price": 11000,
+        "main": true
+      },
+      {
+        "name": "프레쉬 쉬림프 보울",
+        "price": 15000,
+        "main": true
+      },
+      {
+        "name": "쉬림프 파히타",
+        "price": 26000,
+        "main": false
+      },
+      {
+        "name": "코코넛 쉬림프 타코",
+        "price": 4900,
+        "main": false
+      },
+      {
+        "name": "치폴레 포크 타코",
+        "price": 4500,
+        "main": false
+      },
+      {
+        "name": "비프앤치즈 타코",
+        "price": 4900,
+        "main": false
+      },
+      {
+        "name": "케이엔 치킨 타코",
+        "price": 4500,
+        "main": false
+      },
+      {
+        "name": "까르니따스 타코",
+        "price": 4900,
+        "main": false
+      },
+      {
+        "name": "치미추리&곱창 타코",
+        "price": 4900,
+        "main": false
+      },
+      {
+        "name": "치폴레 퀘사디아 1Pcs",
+        "price": 7000,
+        "main": false
+      },
+      {
+        "name": "치폴레 퀘사디아 2Pcs",
+        "price": 13500,
+        "main": true
+      },
+      {
+        "name": "케이엔치킨 퀘사디아 1PCS",
+        "price": 7000,
+        "main": false
+      },
+      {
+        "name": "케이엔치킨 퀘사디아 2PCS",
+        "price": 13500,
+        "main": true
+      },
+      {
+        "name": "비프앤치즈 퀘사디아 1Pcs",
+        "price": 7500,
+        "main": false
+      },
+      {
+        "name": "비프앤치즈 퀘사디아 2Pcs",
+        "price": 14500,
+        "main": true
+      },
+      {
+        "name": "쉬림프 퀘사디아 1PCS",
+        "price": 7500,
+        "main": false
+      },
+      {
+        "name": "쉬림프 퀘사디아 2PCS",
+        "price": 14500,
+        "main": true
+      },
+      {
+        "name": "까르니따스 퀘사디아 1PCS",
+        "price": 7500,
+        "main": false
+      },
+      {
+        "name": "까르니따스 퀘사디아 2PCS",
+        "price": 13500,
+        "main": true
+      },
+      {
+        "name": "깁미 프라이즈",
+        "price": 8500,
+        "main": false
+      },
+      {
+        "name": "오리지널 프라이즈",
+        "price": 4500,
+        "main": false
+      },
+      {
+        "name": "어니언 프라이즈",
+        "price": 4500,
+        "main": false
+      },
+      {
+        "name": "코코넛 쉬림프",
+        "price": 7500,
+        "main": false
+      },
+      {
+        "name": "콘립",
+        "price": 6000,
+        "main": false
+      },
+      {
+        "name": "과카몰리",
+        "price": 5000,
+        "main": false
+      },
+      {
+        "name": "비리아 라면",
+        "price": 7900,
+        "main": true
+      }
+    ],
+    "note": "메뉴 상태: confirmed. 원본 관찰·좌표 출처는 적용 manifest에 보관합니다.",
+    "status": "confirmed"
+  },
+  "hoursObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/1243161116/home",
+    "checkedAt": "2026-11-11",
+    "status": "confirmed",
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금",
+          "토",
+          "일"
+        ],
+        "open": "11:30",
+        "close": "21:00",
+        "break": {
+          "start": "15:00",
+          "end": "17:00"
+        },
+        "lastOrder": "20:30"
+      }
+    ],
+    "note": "매장 영업시간 관찰. 기존 attrs/research를 덮어쓰지 않습니다."
+  }
+}

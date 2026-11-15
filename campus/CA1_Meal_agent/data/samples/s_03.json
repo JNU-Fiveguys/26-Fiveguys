@@ -1,0 +1,51 @@
+{
+  "version": 1,
+  "id": "s_03",
+  "name": "샘플식당 03 · 일요일 휴무 중식",
+  "category": "중식",
+  "lat": 35.1745,
+  "lng": 126.906,
+  "address": "샘플 주소 (가짜 데이터)",
+  "source": "sample",
+  "attrs": {
+    "mealType": "일반",
+    "takeout": true,
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금",
+          "토"
+        ],
+        "open": "11:00",
+        "close": "21:00"
+      }
+    ],
+    "menus": [
+      {
+        "name": "짜장면",
+        "price": 6000,
+        "main": true
+      },
+      {
+        "name": "짬뽕",
+        "price": 7000,
+        "main": true
+      },
+      {
+        "name": "탕수육(소)",
+        "price": 15000,
+        "main": false
+      }
+    ],
+    "tags": [
+      "매운 음식"
+    ],
+    "note": "일요일 휴무 — 일요일 추천에 나오면 안 된다. 매운 음식 제외 조건 확인용",
+    "verifiedAt": "2026-11-11",
+    "verifiedBy": "sample"
+  }
+}

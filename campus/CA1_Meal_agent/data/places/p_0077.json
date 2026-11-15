@@ -1,0 +1,109 @@
+{
+  "version": 1,
+  "id": "p_0077",
+  "name": "우리할매떡볶이",
+  "category": "분식",
+  "lat": 35.178828,
+  "lng": 126.912459,
+  "address": "전남광주통합특별시 북구 우치로126번길 5",
+  "source": "semas",
+  "sourceId": "MA0101202411A0026878",
+  "sourceStatus": "active",
+  "attrs": {
+    "status": "partial",
+    "menus": [
+      {
+        "name": "가래떡 떡볶이",
+        "price": 5500,
+        "main": true
+      },
+      {
+        "name": "밀 떡볶이",
+        "price": 5500,
+        "main": true
+      },
+      {
+        "name": "할매 로제떡볶이",
+        "price": 6500,
+        "main": true
+      }
+    ]
+  },
+  "research": {
+    "identityStatus": "matched",
+    "queries": [
+      "\"우리할매떡볶이\" \"전남대\""
+    ],
+    "sources": [
+      {
+        "id": "s1",
+        "url": "https://www.diningcode.com/profile.php?rid=aVgFfXGkH6fE",
+        "title": "우리할매떡볶이 광주전대점",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "상호와 도로명 주소를 대조함. URL을 직접 열어 주소와 본문을 확인함."
+      }
+    ],
+    "facts": {
+      "menus": {
+        "status": "confirmed",
+        "value": [
+          {
+            "name": "가래떡 떡볶이",
+            "price": 5500,
+            "main": true
+          },
+          {
+            "name": "밀 떡볶이",
+            "price": 5500,
+            "main": true
+          },
+          {
+            "name": "할매 로제떡볶이",
+            "price": 6500,
+            "main": true
+          }
+        ],
+        "sourceIds": [
+          "s1"
+        ],
+        "note": "주소가 일치하는 지점 페이지에 게시된 메뉴·가격. 실제 결제 가격은 현장 재확인 필요."
+      },
+      "hours": {
+        "status": "conflict",
+        "sourceIds": [
+          "s1"
+        ],
+        "note": "매장 시간표는11:00~21:00·금휴무로 보이나 후기에는매일11:00~22:30이 있음. 운영시간 재확인 필요."
+      }
+    },
+    "notes": [
+      "양도양수 매물도 검색되었으나 폐업 확정 근거로 사용하지 않음."
+    ],
+    "checkedAt": "2026-11-11",
+    "method": "web",
+    "unknownFields": [
+      "hours",
+      "mealType",
+      "takeout",
+      "verifiedAt",
+      "verifiedBy",
+      "break",
+      "lastOrder"
+    ]
+  },
+  "availability": {
+    "status": "excluded",
+    "provider": "naver",
+    "checkedAt": "2026-11-11",
+    "sourceUrl": "https://map.naver.com/p/search/%EC%A0%84%EB%82%A8%EB%8C%80%20%EC%9D%8C%EC%8B%9D%EC%A0%90",
+    "naverPlaceId": null,
+    "observedName": "",
+    "observedAddress": "",
+    "district": null,
+    "addressVerified": false,
+    "nearby": false,
+    "reason": "네이버 지도에서 확인한 네 식당가 명단에 포함되지 않아 제외"
+  }
+}

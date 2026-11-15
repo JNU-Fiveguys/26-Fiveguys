@@ -1,0 +1,1041 @@
+{
+  "version": 1,
+  "id": "p_0078",
+  "name": "써브웨이 광주전남대후문점",
+  "category": "패스트푸드",
+  "lat": 35.1784316208627,
+  "lng": 126.912339032242,
+  "address": "전남광주 북구 우치로 124 1층",
+  "source": "semas",
+  "sourceId": "MA0101202502A0037060",
+  "sourceStatus": "active",
+  "attrs": {
+    "status": "partial",
+    "menus": [
+      {
+        "name": "이탈리안 비엠티 (15cm)",
+        "price": 8500,
+        "main": true
+      },
+      {
+        "name": "스테이크 & 치즈 (15cm)",
+        "price": 9800,
+        "main": true
+      },
+      {
+        "name": "피자썹 (15cm)",
+        "price": 5300,
+        "main": true
+      }
+    ],
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금",
+          "토",
+          "일"
+        ],
+        "open": "08:00",
+        "close": "22:00"
+      }
+    ]
+  },
+  "research": {
+    "identityStatus": "matched",
+    "queries": [
+      "\"써브웨이\" \"광주전남대후문점\""
+    ],
+    "sources": [
+      {
+        "id": "s1",
+        "url": "https://www.diningcode.com/profile.php?rid=4SxxYgPfP7uW",
+        "title": "써브웨이 광주전남대후문점",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "상호와 도로명 주소를 대조함. URL을 직접 열어 주소와 본문을 확인함."
+      }
+    ],
+    "facts": {
+      "menus": {
+        "status": "confirmed",
+        "value": [
+          {
+            "name": "이탈리안 비엠티 (15cm)",
+            "price": 8500,
+            "main": true
+          },
+          {
+            "name": "스테이크 & 치즈 (15cm)",
+            "price": 9800,
+            "main": true
+          },
+          {
+            "name": "피자썹 (15cm)",
+            "price": 5300,
+            "main": true
+          }
+        ],
+        "sourceIds": [
+          "s1"
+        ],
+        "note": "동일 지점 페이지의 단품15cm 메뉴 가격. 게시가격의 매장·배달 채널 차이는 재확인 필요."
+      },
+      "hours": {
+        "status": "confirmed",
+        "value": [
+          {
+            "days": [
+              "월",
+              "화",
+              "수",
+              "목",
+              "금",
+              "토",
+              "일"
+            ],
+            "open": "08:00",
+            "close": "22:00"
+          }
+        ],
+        "sourceIds": [
+          "s1"
+        ],
+        "note": "요일별 게시 영업시간 확인. 별도 휴일·임시 변경과 미게시 휴식시간은 확인되지 않음."
+      }
+    },
+    "notes": [],
+    "checkedAt": "2026-11-11",
+    "method": "web",
+    "unknownFields": [
+      "mealType",
+      "takeout",
+      "verifiedAt",
+      "verifiedBy",
+      "break",
+      "lastOrder"
+    ]
+  },
+  "availability": {
+    "status": "listed",
+    "provider": "naver",
+    "checkedAt": "2026-11-11",
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/1426527361/home",
+    "naverPlaceId": "1426527361",
+    "observedName": "써브웨이 광주전남대후문점",
+    "observedAddress": "전남광주 북구 우치로 124 1층",
+    "district": "후문",
+    "addressVerified": true,
+    "nearby": true,
+    "reason": "공개 네이버 지도에서 동일 주소의 전남대 후문 식당으로 확인"
+  },
+  "menuObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/1426527361/menu",
+    "checkedAt": "2026-11-11",
+    "priceContext": "delivery",
+    "menus": [
+      {
+        "name": "이탈리안 비엠티 (15cm세트)",
+        "price": 12200,
+        "main": true
+      },
+      {
+        "name": "에그마요 (15cm세트)",
+        "price": 10900,
+        "main": true
+      },
+      {
+        "name": "스테이크 & 치즈 (15cm세트)",
+        "price": 13500,
+        "main": true
+      },
+      {
+        "name": "풀드포크 바비큐 (15cm세트)",
+        "price": 12600,
+        "main": true
+      },
+      {
+        "name": "로티세리 바비큐 치킨 (15cm세트)",
+        "price": 12700,
+        "main": true
+      },
+      {
+        "name": "램&후무스 음료 세트",
+        "price": 15900,
+        "main": true
+      },
+      {
+        "name": "램 음료 세트",
+        "price": 17900,
+        "main": true
+      },
+      {
+        "name": "램&후무스 (15cm 세트)",
+        "price": 16600,
+        "main": true
+      },
+      {
+        "name": "램 (15cm 세트)",
+        "price": 18600,
+        "main": true
+      },
+      {
+        "name": "피자썹 (15cm세트)",
+        "price": 9000,
+        "main": true
+      },
+      {
+        "name": "안창 비프&머쉬룸 (15cm세트)",
+        "price": 13900,
+        "main": true
+      },
+      {
+        "name": "안창 비프 (15cm세트)",
+        "price": 15800,
+        "main": true
+      },
+      {
+        "name": "잠봉 플러스 (15cm세트)",
+        "price": 13600,
+        "main": true
+      },
+      {
+        "name": "치킨 베이컨 아보카도 (15cm세트)",
+        "price": 13200,
+        "main": true
+      },
+      {
+        "name": "스파이시 쉬림프 (15cm세트)",
+        "price": 13100,
+        "main": true
+      },
+      {
+        "name": "쉬림프 (15cm세트)",
+        "price": 12900,
+        "main": true
+      },
+      {
+        "name": "로스트 치킨 (15cm세트)",
+        "price": 12700,
+        "main": true
+      },
+      {
+        "name": "써브웨이 클럽 (15cm세트)",
+        "price": 12500,
+        "main": true
+      },
+      {
+        "name": "치킨데리야끼 (15cm세트)",
+        "price": 12300,
+        "main": true
+      },
+      {
+        "name": "스파이시 이탈리안 (15cm세트)",
+        "price": 12200,
+        "main": true
+      },
+      {
+        "name": "잠봉 (15cm세트)",
+        "price": 12100,
+        "main": true
+      },
+      {
+        "name": "비엘티 (15cm세트)",
+        "price": 12000,
+        "main": true
+      },
+      {
+        "name": "치킨 슬라이스 (15cm세트)",
+        "price": 11300,
+        "main": true
+      },
+      {
+        "name": "머쉬룸 (15cm세트)",
+        "price": 11300,
+        "main": true
+      },
+      {
+        "name": "참치 (15cm세트)",
+        "price": 11100,
+        "main": true
+      },
+      {
+        "name": "베지 (15cm세트)",
+        "price": 9900,
+        "main": true
+      },
+      {
+        "name": "램&후무스 (15cm)",
+        "price": 12900,
+        "main": true
+      },
+      {
+        "name": "램 (15cm)",
+        "price": 14900,
+        "main": true
+      },
+      {
+        "name": "피자썹 (15cm)",
+        "price": 5300,
+        "main": true
+      },
+      {
+        "name": "안창 비프&머쉬룸 (15cm)",
+        "price": 10200,
+        "main": true
+      },
+      {
+        "name": "스테이크 & 치즈 (15cm)",
+        "price": 9800,
+        "main": true
+      },
+      {
+        "name": "이탈리안 비엠티 (15cm)",
+        "price": 8500,
+        "main": true
+      },
+      {
+        "name": "로티세리 바비큐 치킨 (15cm)",
+        "price": 9000,
+        "main": true
+      },
+      {
+        "name": "에그마요 (15cm)",
+        "price": 7200,
+        "main": true
+      },
+      {
+        "name": "안창 비프 (15cm)",
+        "price": 12100,
+        "main": true
+      },
+      {
+        "name": "잠봉 플러스 (15cm)",
+        "price": 9900,
+        "main": true
+      },
+      {
+        "name": "치킨 베이컨 아보카도 (15cm)",
+        "price": 9500,
+        "main": true
+      },
+      {
+        "name": "스파이시 쉬림프 (15cm)",
+        "price": 9400,
+        "main": true
+      },
+      {
+        "name": "쉬림프 (15cm)",
+        "price": 9200,
+        "main": true
+      },
+      {
+        "name": "로스트 치킨 (15cm)",
+        "price": 9000,
+        "main": true
+      },
+      {
+        "name": "풀드포크 바비큐 (15cm)",
+        "price": 8900,
+        "main": true
+      },
+      {
+        "name": "써브웨이 클럽 (15cm)",
+        "price": 8800,
+        "main": true
+      },
+      {
+        "name": "치킨데리야끼 (15cm)",
+        "price": 8600,
+        "main": true
+      },
+      {
+        "name": "스파이시 이탈리안 (15cm)",
+        "price": 8500,
+        "main": true
+      },
+      {
+        "name": "잠봉 (15cm)",
+        "price": 8400,
+        "main": true
+      },
+      {
+        "name": "비엘티 (15cm)",
+        "price": 8300,
+        "main": true
+      },
+      {
+        "name": "치킨 슬라이스 (15cm)",
+        "price": 7600,
+        "main": true
+      },
+      {
+        "name": "머쉬룸 (15cm)",
+        "price": 7600,
+        "main": true
+      },
+      {
+        "name": "참치 (15cm)",
+        "price": 7400,
+        "main": true
+      },
+      {
+        "name": "베지 (15cm)",
+        "price": 6200,
+        "main": true
+      },
+      {
+        "name": "램&후무스 (30cm 세트)",
+        "price": 27500,
+        "main": true
+      },
+      {
+        "name": "램 (30cm 세트)",
+        "price": 31300,
+        "main": true
+      },
+      {
+        "name": "안창 비프&머쉬룸 (30cm세트)",
+        "price": 22500,
+        "main": true
+      },
+      {
+        "name": "스테이크 & 치즈 (30cm세트)",
+        "price": 21700,
+        "main": true
+      },
+      {
+        "name": "이탈리안 비엠티 (30cm세트)",
+        "price": 19300,
+        "main": true
+      },
+      {
+        "name": "로티세리 바비큐 치킨 (30cm세트)",
+        "price": 20200,
+        "main": true
+      },
+      {
+        "name": "에그마요 (30cm세트)",
+        "price": 16900,
+        "main": true
+      },
+      {
+        "name": "안창 비프 (30cm세트)",
+        "price": 26000,
+        "main": true
+      },
+      {
+        "name": "잠봉 플러스 (30cm세트)",
+        "price": 21900,
+        "main": true
+      },
+      {
+        "name": "치킨 베이컨 아보카도 (30cm세트)",
+        "price": 21200,
+        "main": true
+      },
+      {
+        "name": "스파이시 쉬림프 (30cm세트)",
+        "price": 21000,
+        "main": true
+      },
+      {
+        "name": "쉬림프 (30cm세트)",
+        "price": 20600,
+        "main": true
+      },
+      {
+        "name": "로스트 치킨 (30cm세트)",
+        "price": 20200,
+        "main": true
+      },
+      {
+        "name": "풀드포크 바비큐 (30cm세트)",
+        "price": 20000,
+        "main": true
+      },
+      {
+        "name": "써브웨이 클럽 (30cm세트)",
+        "price": 19800,
+        "main": true
+      },
+      {
+        "name": "치킨데리야끼 (30cm세트)",
+        "price": 19500,
+        "main": true
+      },
+      {
+        "name": "스파이시 이탈리안 (30cm세트)",
+        "price": 19300,
+        "main": true
+      },
+      {
+        "name": "잠봉 (30cm세트)",
+        "price": 19200,
+        "main": true
+      },
+      {
+        "name": "비엘티 (30cm세트)",
+        "price": 18900,
+        "main": true
+      },
+      {
+        "name": "치킨 슬라이스 (30cm세트)",
+        "price": 17600,
+        "main": true
+      },
+      {
+        "name": "머쉬룸 (30cm세트)",
+        "price": 17600,
+        "main": true
+      },
+      {
+        "name": "참치 (30cm세트)",
+        "price": 17200,
+        "main": true
+      },
+      {
+        "name": "베지 (30cm세트)",
+        "price": 15000,
+        "main": true
+      },
+      {
+        "name": "램&후무스 (30cm)",
+        "price": 23800,
+        "main": true
+      },
+      {
+        "name": "램 (30cm)",
+        "price": 27600,
+        "main": true
+      },
+      {
+        "name": "안창 비프&머쉬룸 (30cm)",
+        "price": 18800,
+        "main": true
+      },
+      {
+        "name": "스테이크 & 치즈 (30cm)",
+        "price": 18000,
+        "main": true
+      },
+      {
+        "name": "이탈리안 비엠티 (30cm)",
+        "price": 15600,
+        "main": true
+      },
+      {
+        "name": "로티세리 바비큐 치킨 (30cm)",
+        "price": 16500,
+        "main": true
+      },
+      {
+        "name": "에그마요 (30cm)",
+        "price": 13200,
+        "main": true
+      },
+      {
+        "name": "안창 비프 (30cm)",
+        "price": 22300,
+        "main": true
+      },
+      {
+        "name": "잠봉 플러스 (30cm)",
+        "price": 18200,
+        "main": true
+      },
+      {
+        "name": "치킨 베이컨 아보카도 (30cm)",
+        "price": 17500,
+        "main": true
+      },
+      {
+        "name": "스파이시 쉬림프 (30cm)",
+        "price": 17300,
+        "main": true
+      },
+      {
+        "name": "쉬림프 (30cm)",
+        "price": 16900,
+        "main": true
+      },
+      {
+        "name": "로스트 치킨 (30cm)",
+        "price": 16500,
+        "main": true
+      },
+      {
+        "name": "풀드포크 바비큐 (30cm)",
+        "price": 16300,
+        "main": true
+      },
+      {
+        "name": "써브웨이 클럽 (30cm)",
+        "price": 16100,
+        "main": true
+      },
+      {
+        "name": "치킨데리야끼 (30cm)",
+        "price": 15800,
+        "main": true
+      },
+      {
+        "name": "스파이시 이탈리안 (30cm)",
+        "price": 15600,
+        "main": true
+      },
+      {
+        "name": "잠봉 (30cm)",
+        "price": 15500,
+        "main": true
+      },
+      {
+        "name": "비엘티 (30cm)",
+        "price": 15200,
+        "main": true
+      },
+      {
+        "name": "치킨 슬라이스 (30cm)",
+        "price": 13900,
+        "main": true
+      },
+      {
+        "name": "머쉬룸 (30cm)",
+        "price": 13900,
+        "main": true
+      },
+      {
+        "name": "참치 (30cm)",
+        "price": 13500,
+        "main": true
+      },
+      {
+        "name": "베지 (30cm)",
+        "price": 11300,
+        "main": true
+      },
+      {
+        "name": "스테이크 & 머쉬룸 그레인 샐러드 세트",
+        "price": 19600,
+        "main": true
+      },
+      {
+        "name": "쉬림프 아보카도 그레인 샐러드 세트",
+        "price": 18800,
+        "main": true
+      },
+      {
+        "name": "로티세리 치킨 더블치즈 그레인 샐러드 세트",
+        "price": 17100,
+        "main": true
+      },
+      {
+        "name": "풀드포크 타코 그레인 샐러드 세트",
+        "price": 17800,
+        "main": true
+      },
+      {
+        "name": "스파이시 쉬림프 타코 그레인 샐러드 세트",
+        "price": 19100,
+        "main": true
+      },
+      {
+        "name": "로티세리 치킨 타코 그레인 샐러드 세트",
+        "price": 18400,
+        "main": true
+      },
+      {
+        "name": "로스트 치킨 베이컨 그레인 샐러드 세트",
+        "price": 17100,
+        "main": true
+      },
+      {
+        "name": "에그마요 베이컨 그레인 샐러드 세트",
+        "price": 16300,
+        "main": true
+      },
+      {
+        "name": "참치 아보카도 그레인 샐러드 세트",
+        "price": 15700,
+        "main": true
+      },
+      {
+        "name": "그린 그레인 샐러드 세트",
+        "price": 13300,
+        "main": true
+      },
+      {
+        "name": "스테이크 & 머쉬룸 그레인 샐러드",
+        "price": 15900,
+        "main": true
+      },
+      {
+        "name": "쉬림프 아보카도 그레인 샐러드",
+        "price": 15100,
+        "main": true
+      },
+      {
+        "name": "로티세리 치킨 더블치즈 그레인 샐러드",
+        "price": 13400,
+        "main": true
+      },
+      {
+        "name": "풀드포크 타코 그레인 샐러드",
+        "price": 14100,
+        "main": true
+      },
+      {
+        "name": "스파이시 쉬림프 타코 그레인 샐러드",
+        "price": 15400,
+        "main": true
+      },
+      {
+        "name": "로티세리 치킨 타코 그레인 샐러드",
+        "price": 14700,
+        "main": true
+      },
+      {
+        "name": "로스트 치킨 베이컨 그레인 샐러드",
+        "price": 13400,
+        "main": true
+      },
+      {
+        "name": "에그마요 베이컨 그레인 샐러드",
+        "price": 12600,
+        "main": true
+      },
+      {
+        "name": "참치 아보카도 그레인 샐러드",
+        "price": 12000,
+        "main": true
+      },
+      {
+        "name": "그린 그레인 샐러드",
+        "price": 9600,
+        "main": true
+      },
+      {
+        "name": "스테이크 & 머쉬룸 샐러드 세트",
+        "price": 18400,
+        "main": true
+      },
+      {
+        "name": "쉬림프 아보카도 샐러드 세트",
+        "price": 17600,
+        "main": true
+      },
+      {
+        "name": "로티세리 치킨 더블치즈 샐러드 세트",
+        "price": 15900,
+        "main": true
+      },
+      {
+        "name": "풀드포크 타코 샐러드 세트",
+        "price": 16600,
+        "main": true
+      },
+      {
+        "name": "스파이시 쉬림프 타코 샐러드 세트",
+        "price": 17900,
+        "main": true
+      },
+      {
+        "name": "로티세리 치킨 타코 샐러드 세트",
+        "price": 17200,
+        "main": true
+      },
+      {
+        "name": "로스트 치킨 베이컨 샐러드 세트",
+        "price": 15900,
+        "main": true
+      },
+      {
+        "name": "에그마요 베이컨 샐러드 세트",
+        "price": 15100,
+        "main": true
+      },
+      {
+        "name": "참치 아보카도 샐러드 세트",
+        "price": 14500,
+        "main": true
+      },
+      {
+        "name": "그린 샐러드 세트",
+        "price": 12100,
+        "main": true
+      },
+      {
+        "name": "미니 로티세리 치킨 샐러드 세트",
+        "price": 7600,
+        "main": false
+      },
+      {
+        "name": "스테이크 & 머쉬룸 샐러드",
+        "price": 14700,
+        "main": true
+      },
+      {
+        "name": "쉬림프 아보카도 샐러드",
+        "price": 13900,
+        "main": true
+      },
+      {
+        "name": "로티세리 치킨 더블치즈 샐러드",
+        "price": 12200,
+        "main": true
+      },
+      {
+        "name": "풀드포크 타코 샐러드",
+        "price": 12900,
+        "main": true
+      },
+      {
+        "name": "스파이시 쉬림프 타코 샐러드",
+        "price": 14200,
+        "main": true
+      },
+      {
+        "name": "로티세리 치킨 타코 샐러드",
+        "price": 13500,
+        "main": true
+      },
+      {
+        "name": "로스트 치킨 베이컨 샐러드",
+        "price": 12200,
+        "main": true
+      },
+      {
+        "name": "에그마요 베이컨 샐러드",
+        "price": 11400,
+        "main": true
+      },
+      {
+        "name": "참치 아보카도 샐러드",
+        "price": 10800,
+        "main": true
+      },
+      {
+        "name": "그린 샐러드",
+        "price": 8400,
+        "main": true
+      },
+      {
+        "name": "미니 로티세리 치킨 샐러드",
+        "price": 3900,
+        "main": false
+      },
+      {
+        "name": "로티세리 스파이시 써브랩 세트",
+        "price": 8600,
+        "main": true
+      },
+      {
+        "name": "참치 더블치즈 써브랩 세트",
+        "price": 8600,
+        "main": true
+      },
+      {
+        "name": "치킨 베이컨 써브랩 세트",
+        "price": 8600,
+        "main": true
+      },
+      {
+        "name": "스테이크앤치즈 아보카도 랩 세트",
+        "price": 11800,
+        "main": true
+      },
+      {
+        "name": "쉬림프 에그마요 랩 세트",
+        "price": 11400,
+        "main": true
+      },
+      {
+        "name": "로티세리 스파이시 써브랩",
+        "price": 4900,
+        "main": true
+      },
+      {
+        "name": "참치 더블치즈 써브랩",
+        "price": 4900,
+        "main": true
+      },
+      {
+        "name": "치킨 베이컨 써브랩",
+        "price": 4900,
+        "main": true
+      },
+      {
+        "name": "스테이크앤치즈 아보카도 랩",
+        "price": 8100,
+        "main": true
+      },
+      {
+        "name": "쉬림프 에그마요 랩",
+        "price": 7700,
+        "main": true
+      },
+      {
+        "name": "웨지 포테이토",
+        "price": 2900,
+        "main": false
+      },
+      {
+        "name": "Cheesy 웨지 포테이토",
+        "price": 3400,
+        "main": false
+      },
+      {
+        "name": "Bacon Cheesy 웨지 포테이토",
+        "price": 3800,
+        "main": false
+      },
+      {
+        "name": "오늘의 수프(레귤러)",
+        "price": 5100,
+        "main": false
+      },
+      {
+        "name": "오늘의 수프(하프)",
+        "price": 3300,
+        "main": false
+      },
+      {
+        "name": "초코칩 쿠키",
+        "price": 2100,
+        "main": false
+      },
+      {
+        "name": "더블 초코칩 쿠키",
+        "price": 2100,
+        "main": false
+      },
+      {
+        "name": "오트밀 레이즌 쿠키",
+        "price": 2100,
+        "main": false
+      },
+      {
+        "name": "라즈베리 치즈케익 쿠키",
+        "price": 2100,
+        "main": false
+      },
+      {
+        "name": "화이트 초코 마카다미아 쿠키",
+        "price": 2100,
+        "main": false
+      },
+      {
+        "name": "쿠키 3개입",
+        "price": 5900,
+        "main": false
+      },
+      {
+        "name": "쿠키팩 (6개입)",
+        "price": 11400,
+        "main": false
+      },
+      {
+        "name": "쿠키박스 (12개입)",
+        "price": 22600,
+        "main": false
+      },
+      {
+        "name": "칩 (랜덤발송)",
+        "price": 2100,
+        "main": false
+      },
+      {
+        "name": "코카콜라 제로 레몬라임 (350ml)",
+        "price": 3000,
+        "main": false
+      },
+      {
+        "name": "코카콜라(355ml)",
+        "price": 3000,
+        "main": false
+      },
+      {
+        "name": "스프라이트(355ml)",
+        "price": 3000,
+        "main": false
+      },
+      {
+        "name": "코카콜라 제로(355ml)",
+        "price": 3000,
+        "main": false
+      },
+      {
+        "name": "스프라이트 제로(355ml)",
+        "price": 3000,
+        "main": false
+      },
+      {
+        "name": "닥터페퍼(350ml)",
+        "price": 3000,
+        "main": false
+      },
+      {
+        "name": "씨그램 레몬(350ml)",
+        "price": 3000,
+        "main": false
+      },
+      {
+        "name": "미닛메이드 오렌지(350ml)",
+        "price": 3900,
+        "main": false
+      },
+      {
+        "name": "토레타(500ml)",
+        "price": 3200,
+        "main": false
+      },
+      {
+        "name": "생수(500ml)",
+        "price": 1900,
+        "main": false
+      },
+      {
+        "name": "바리스타룰스 아메리카노(350ml)",
+        "price": 3300,
+        "main": false
+      },
+      {
+        "name": "바리스타룰스 저당 라떼(350ml)",
+        "price": 4100,
+        "main": false
+      },
+      {
+        "name": "셀렉스 프로핏 초콜릿(330ml)",
+        "price": 4300,
+        "main": false
+      }
+    ],
+    "note": "메뉴 상태: confirmed. 원본 관찰·좌표 출처는 적용 manifest에 보관합니다.",
+    "status": "unconfirmed"
+  },
+  "hoursObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/1426527361/home",
+    "checkedAt": "2026-11-11",
+    "status": "confirmed",
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금",
+          "토",
+          "일"
+        ],
+        "open": "08:00",
+        "close": "22:00"
+      }
+    ],
+    "note": "매장 영업시간 관찰. 기존 attrs/research를 덮어쓰지 않습니다."
+  }
+}

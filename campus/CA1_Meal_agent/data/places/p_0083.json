@@ -1,0 +1,98 @@
+{
+  "version": 1,
+  "id": "p_0083",
+  "name": "움버거앤윙스광주 전남대점",
+  "category": "패스트푸드",
+  "lat": 35.174646,
+  "lng": 126.912892,
+  "address": "전남광주통합특별시 북구 우치로 80",
+  "source": "semas",
+  "sourceId": "MA0101202507A0038441",
+  "sourceStatus": "active",
+  "attrs": {
+    "status": "partial"
+  },
+  "research": {
+    "identityStatus": "matched",
+    "queries": [
+      "\"움버거앤윙스\" \"전남대점\"",
+      "\"움버거앤윙스\" \"우치로 80\""
+    ],
+    "sources": [
+      {
+        "id": "s1",
+        "url": "https://www.diningcode.com/list.dc?query=%EC%A0%84%EB%82%A8%EB%8C%80+%ED%96%84%EB%B2%84%EA%B1%B0",
+        "title": "전남대 햄버거 목록",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "상호와 도로명 주소를 대조함. 공개 검색결과에서 확인했으며 직접 본문은 조회하지 않음."
+      },
+      {
+        "id": "s2",
+        "url": "https://umburger.co.kr/store/?category=0GvGfb2TZ5&sort=STREET",
+        "title": "움버거앤윙스 공식 광주 매장 목록",
+        "type": "official",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "공식 매장 목록 공개 검색결과에서 광주전남대점 우치로 80 주소 확인. 직접 본문 조회하지 않음."
+      },
+      {
+        "id": "s3",
+        "url": "https://polle.com/place/1yEQSx/%EC%9B%80%EB%B2%84%EA%B1%B0%20%EC%95%A4%20%EC%9C%99%EC%8A%A4",
+        "title": "움버거 앤 윙스 광주전남대점",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "공개 검색결과의 메뉴란을 확인. 직접 본문 조회하지 않음."
+      }
+    ],
+    "facts": {
+      "menus": {
+        "status": "partial",
+        "value": [
+          {
+            "name": "버거 오리지널",
+            "price": 5100,
+            "main": true
+          }
+        ],
+        "sourceIds": [
+          "s3"
+        ],
+        "note": "같은 주소 메뉴란 검색결과에 5,100원으로 게시되어 있으나 본문 대조하지 못해 현행 가격 확인 보류."
+      },
+      "hours": {
+        "status": "unconfirmed",
+        "sourceIds": [],
+        "note": "요일별 영업시간·휴무를 확인하지 못함."
+      }
+    },
+    "notes": [],
+    "checkedAt": "2026-11-11",
+    "method": "web",
+    "unknownFields": [
+      "menus",
+      "hours",
+      "mealType",
+      "takeout",
+      "verifiedAt",
+      "verifiedBy",
+      "break",
+      "lastOrder"
+    ]
+  },
+  "availability": {
+    "status": "excluded",
+    "provider": "naver",
+    "checkedAt": "2026-11-11",
+    "sourceUrl": "https://map.naver.com/p/search/%EC%A0%84%EB%82%A8%EB%8C%80%20%EC%9D%8C%EC%8B%9D%EC%A0%90",
+    "naverPlaceId": null,
+    "observedName": "",
+    "observedAddress": "",
+    "district": null,
+    "addressVerified": false,
+    "nearby": false,
+    "reason": "네이버 지도에서 확인한 네 식당가 명단에 포함되지 않아 제외"
+  }
+}

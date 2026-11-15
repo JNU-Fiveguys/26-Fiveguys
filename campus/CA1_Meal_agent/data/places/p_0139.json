@@ -1,0 +1,614 @@
+{
+  "version": 1,
+  "id": "p_0139",
+  "source": "team",
+  "sourceId": "naver:1551114978",
+  "name": "정성카츠 광주전남대점",
+  "address": "전남광주 북구 용주로30번길 50 1층",
+  "category": "일식",
+  "lat": 35.1806511543847,
+  "lng": 126.903378193121,
+  "sourceStatus": "active",
+  "availability": {
+    "status": "listed",
+    "provider": "naver",
+    "checkedAt": "2026-11-11",
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/1551114978/home",
+    "naverPlaceId": "1551114978",
+    "observedName": "정성카츠 광주전남대점",
+    "observedAddress": "전남광주 북구 용주로30번길 50 1층",
+    "district": "예대",
+    "addressVerified": true,
+    "nearby": true,
+    "reason": "공개 네이버 지도에서 동일 주소의 전남대 예대 식당으로 확인"
+  },
+  "menuObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/1551114978/menu",
+    "checkedAt": "2026-11-11",
+    "priceContext": "in_store",
+    "menus": [
+      {
+        "name": "🧡부동의 1위🧡 정성모듬카츠 정식",
+        "price": 13900,
+        "main": true
+      },
+      {
+        "name": "히레카츠 정식",
+        "price": 12900,
+        "main": true
+      },
+      {
+        "name": "[✨맛 보장✨] 김치치즈나베",
+        "price": 13900,
+        "main": true
+      },
+      {
+        "name": "[레트로 감성] 경양식 왕돈까스 정식",
+        "price": 13900,
+        "main": true
+      },
+      {
+        "name": "로스카츠 정식",
+        "price": 12900,
+        "main": true
+      },
+      {
+        "name": "트리플 모듬카츠 정식",
+        "price": 14900,
+        "main": true
+      },
+      {
+        "name": "치즈듬뿍카츠 정식",
+        "price": 13900,
+        "main": true
+      },
+      {
+        "name": "고구마치즈카츠 정식",
+        "price": 14900,
+        "main": true
+      },
+      {
+        "name": "갈릭 치폴레카츠 정식",
+        "price": 13900,
+        "main": true
+      },
+      {
+        "name": "특로스카츠 정식 (노컷팅불가)",
+        "price": 13900,
+        "main": true
+      },
+      {
+        "name": "[🔥辛🔥] 매운돈까스 정식",
+        "price": 13900,
+        "main": true
+      },
+      {
+        "name": "돈카츠 카레덮밥",
+        "price": 9500,
+        "main": true
+      },
+      {
+        "name": "우삼겹 카레덮밥",
+        "price": 9500,
+        "main": true
+      },
+      {
+        "name": "가라아게 카레덮밥",
+        "price": 9500,
+        "main": true
+      },
+      {
+        "name": "카츠동",
+        "price": 9500,
+        "main": true
+      },
+      {
+        "name": "규동",
+        "price": 9500,
+        "main": true
+      },
+      {
+        "name": "가라아게동",
+        "price": 9500,
+        "main": true
+      },
+      {
+        "name": "정통 어묵우동",
+        "price": 8900,
+        "main": true
+      },
+      {
+        "name": "김치어묵우동",
+        "price": 9900,
+        "main": true
+      },
+      {
+        "name": "알리오올리오 파스타",
+        "price": 9900,
+        "main": true
+      },
+      {
+        "name": "갈릭 치폴레파스타",
+        "price": 9900,
+        "main": true
+      },
+      {
+        "name": "크림파스타",
+        "price": 9900,
+        "main": true
+      },
+      {
+        "name": "비빔만두",
+        "price": 7900,
+        "main": false
+      },
+      {
+        "name": "쫄면",
+        "price": 7900,
+        "main": true
+      },
+      {
+        "name": "살얼음 냉모밀",
+        "price": 7900,
+        "main": true
+      },
+      {
+        "name": "치즈듬뿍카츠(2P)",
+        "price": 6900,
+        "main": false
+      },
+      {
+        "name": "고구마치즈카츠(2P)",
+        "price": 7400,
+        "main": false
+      },
+      {
+        "name": "치즈볼(5P)",
+        "price": 4000,
+        "main": false
+      },
+      {
+        "name": "치킨가라아게(6P)",
+        "price": 4000,
+        "main": false
+      },
+      {
+        "name": "치킨가라아게(12P)",
+        "price": 7500,
+        "main": false
+      }
+    ],
+    "note": "메뉴 상태: confirmed. 원본 관찰·좌표 출처는 적용 manifest에 보관합니다.",
+    "status": "confirmed"
+  },
+  "attrs": {
+    "status": "partial",
+    "menus": [
+      {
+        "name": "🧡부동의 1위🧡 정성모듬카츠 정식",
+        "price": 13900,
+        "main": true
+      },
+      {
+        "name": "히레카츠 정식",
+        "price": 12900,
+        "main": true
+      },
+      {
+        "name": "[✨맛 보장✨] 김치치즈나베",
+        "price": 13900,
+        "main": true
+      },
+      {
+        "name": "[레트로 감성] 경양식 왕돈까스 정식",
+        "price": 13900,
+        "main": true
+      },
+      {
+        "name": "로스카츠 정식",
+        "price": 12900,
+        "main": true
+      },
+      {
+        "name": "트리플 모듬카츠 정식",
+        "price": 14900,
+        "main": true
+      },
+      {
+        "name": "치즈듬뿍카츠 정식",
+        "price": 13900,
+        "main": true
+      },
+      {
+        "name": "고구마치즈카츠 정식",
+        "price": 14900,
+        "main": true
+      },
+      {
+        "name": "갈릭 치폴레카츠 정식",
+        "price": 13900,
+        "main": true
+      },
+      {
+        "name": "특로스카츠 정식 (노컷팅불가)",
+        "price": 13900,
+        "main": true
+      },
+      {
+        "name": "[🔥辛🔥] 매운돈까스 정식",
+        "price": 13900,
+        "main": true
+      },
+      {
+        "name": "돈카츠 카레덮밥",
+        "price": 9500,
+        "main": true
+      },
+      {
+        "name": "우삼겹 카레덮밥",
+        "price": 9500,
+        "main": true
+      },
+      {
+        "name": "가라아게 카레덮밥",
+        "price": 9500,
+        "main": true
+      },
+      {
+        "name": "카츠동",
+        "price": 9500,
+        "main": true
+      },
+      {
+        "name": "규동",
+        "price": 9500,
+        "main": true
+      },
+      {
+        "name": "가라아게동",
+        "price": 9500,
+        "main": true
+      },
+      {
+        "name": "정통 어묵우동",
+        "price": 8900,
+        "main": true
+      },
+      {
+        "name": "김치어묵우동",
+        "price": 9900,
+        "main": true
+      },
+      {
+        "name": "알리오올리오 파스타",
+        "price": 9900,
+        "main": true
+      },
+      {
+        "name": "갈릭 치폴레파스타",
+        "price": 9900,
+        "main": true
+      },
+      {
+        "name": "크림파스타",
+        "price": 9900,
+        "main": true
+      },
+      {
+        "name": "비빔만두",
+        "price": 7900,
+        "main": false
+      },
+      {
+        "name": "쫄면",
+        "price": 7900,
+        "main": true
+      },
+      {
+        "name": "살얼음 냉모밀",
+        "price": 7900,
+        "main": true
+      },
+      {
+        "name": "치즈듬뿍카츠(2P)",
+        "price": 6900,
+        "main": false
+      },
+      {
+        "name": "고구마치즈카츠(2P)",
+        "price": 7400,
+        "main": false
+      },
+      {
+        "name": "치즈볼(5P)",
+        "price": 4000,
+        "main": false
+      },
+      {
+        "name": "치킨가라아게(6P)",
+        "price": 4000,
+        "main": false
+      },
+      {
+        "name": "치킨가라아게(12P)",
+        "price": 7500,
+        "main": false
+      }
+    ],
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금",
+          "토",
+          "일"
+        ],
+        "open": "10:30",
+        "close": "21:00",
+        "lastOrder": "20:20"
+      }
+    ]
+  },
+  "hoursObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/1551114978/home",
+    "checkedAt": "2026-11-11",
+    "status": "confirmed",
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금",
+          "토",
+          "일"
+        ],
+        "open": "10:30",
+        "close": "21:00",
+        "lastOrder": "20:20"
+      }
+    ],
+    "note": "매장 영업시간 관찰. 기존 attrs/research를 덮어쓰지 않습니다."
+  },
+  "research": {
+    "checkedAt": "2026-11-11",
+    "method": "web",
+    "identityStatus": "matched",
+    "queries": [
+      "정성카츠 광주전남대점 전남광주 북구 용주로30번길 50 1층"
+    ],
+    "sources": [
+      {
+        "id": "naver-place",
+        "url": "https://pcmap.place.naver.com/restaurant/1551114978/home",
+        "title": "정성카츠 광주전남대점 네이버 지도",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "같은 주소의 지점 확인. 지도 등록 확인은 실시간 영업 중 보증이 아님"
+      },
+      {
+        "id": "naver-menu",
+        "url": "https://pcmap.place.naver.com/restaurant/1551114978/menu",
+        "title": "정성카츠 광주전남대점 메뉴 탭",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "가격 맥락: in_store"
+      },
+      {
+        "id": "naver-hours",
+        "url": "https://pcmap.place.naver.com/restaurant/1551114978/home",
+        "title": "정성카츠 광주전남대점 영업시간",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "게시된 요일별 영업시간. 미확인은 추정하지 않음"
+      }
+    ],
+    "facts": {
+      "menus": {
+        "status": "confirmed",
+        "sourceIds": [
+          "naver-menu"
+        ],
+        "note": "매장 게시값을 확인했습니다.",
+        "value": [
+          {
+            "name": "🧡부동의 1위🧡 정성모듬카츠 정식",
+            "price": 13900,
+            "main": true
+          },
+          {
+            "name": "히레카츠 정식",
+            "price": 12900,
+            "main": true
+          },
+          {
+            "name": "[✨맛 보장✨] 김치치즈나베",
+            "price": 13900,
+            "main": true
+          },
+          {
+            "name": "[레트로 감성] 경양식 왕돈까스 정식",
+            "price": 13900,
+            "main": true
+          },
+          {
+            "name": "로스카츠 정식",
+            "price": 12900,
+            "main": true
+          },
+          {
+            "name": "트리플 모듬카츠 정식",
+            "price": 14900,
+            "main": true
+          },
+          {
+            "name": "치즈듬뿍카츠 정식",
+            "price": 13900,
+            "main": true
+          },
+          {
+            "name": "고구마치즈카츠 정식",
+            "price": 14900,
+            "main": true
+          },
+          {
+            "name": "갈릭 치폴레카츠 정식",
+            "price": 13900,
+            "main": true
+          },
+          {
+            "name": "특로스카츠 정식 (노컷팅불가)",
+            "price": 13900,
+            "main": true
+          },
+          {
+            "name": "[🔥辛🔥] 매운돈까스 정식",
+            "price": 13900,
+            "main": true
+          },
+          {
+            "name": "돈카츠 카레덮밥",
+            "price": 9500,
+            "main": true
+          },
+          {
+            "name": "우삼겹 카레덮밥",
+            "price": 9500,
+            "main": true
+          },
+          {
+            "name": "가라아게 카레덮밥",
+            "price": 9500,
+            "main": true
+          },
+          {
+            "name": "카츠동",
+            "price": 9500,
+            "main": true
+          },
+          {
+            "name": "규동",
+            "price": 9500,
+            "main": true
+          },
+          {
+            "name": "가라아게동",
+            "price": 9500,
+            "main": true
+          },
+          {
+            "name": "정통 어묵우동",
+            "price": 8900,
+            "main": true
+          },
+          {
+            "name": "김치어묵우동",
+            "price": 9900,
+            "main": true
+          },
+          {
+            "name": "알리오올리오 파스타",
+            "price": 9900,
+            "main": true
+          },
+          {
+            "name": "갈릭 치폴레파스타",
+            "price": 9900,
+            "main": true
+          },
+          {
+            "name": "크림파스타",
+            "price": 9900,
+            "main": true
+          },
+          {
+            "name": "비빔만두",
+            "price": 7900,
+            "main": false
+          },
+          {
+            "name": "쫄면",
+            "price": 7900,
+            "main": true
+          },
+          {
+            "name": "살얼음 냉모밀",
+            "price": 7900,
+            "main": true
+          },
+          {
+            "name": "치즈듬뿍카츠(2P)",
+            "price": 6900,
+            "main": false
+          },
+          {
+            "name": "고구마치즈카츠(2P)",
+            "price": 7400,
+            "main": false
+          },
+          {
+            "name": "치즈볼(5P)",
+            "price": 4000,
+            "main": false
+          },
+          {
+            "name": "치킨가라아게(6P)",
+            "price": 4000,
+            "main": false
+          },
+          {
+            "name": "치킨가라아게(12P)",
+            "price": 7500,
+            "main": false
+          }
+        ]
+      },
+      "hours": {
+        "status": "confirmed",
+        "sourceIds": [
+          "naver-hours"
+        ],
+        "note": "매장 게시값을 확인했습니다.",
+        "value": [
+          {
+            "days": [
+              "월",
+              "화",
+              "수",
+              "목",
+              "금",
+              "토",
+              "일"
+            ],
+            "open": "10:30",
+            "close": "21:00",
+            "lastOrder": "20:20"
+          }
+        ]
+      }
+    },
+    "unknownFields": [
+      "mealType",
+      "takeout",
+      "verifiedAt",
+      "verifiedBy",
+      "break"
+    ],
+    "notes": [
+      "네이버 공개 지도 상세·메뉴 탭 직접 확인.",
+      "메뉴 탭에 게시된 전체 텍스트 메뉴 기준. 메뉴판 이미지 전체와 대조한 것은 아님.",
+      "main은 1인 식사 계산을 위한 조사자 분류. 곁들임·음료·공유세트·분량 불명 메뉴는 false로 보수적으로 분류.",
+      "원문 영업시간은 rear_art_batch3.json에 보관.",
+      "브레이크타임은 미게시여서 추가하지 않음.",
+      "병합 입력: rear_art_batch3_manifest.json",
+      "공개 네이버 화면 관찰이며 현장 검증이 아닙니다."
+    ]
+  }
+}

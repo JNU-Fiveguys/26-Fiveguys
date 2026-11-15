@@ -1,0 +1,96 @@
+{
+  "version": 1,
+  "id": "p_0080",
+  "name": "온오프피자 전남대점",
+  "category": "양식",
+  "lat": 35.177008,
+  "lng": 126.901264,
+  "address": "전남광주통합특별시 북구 설죽로202번길 68",
+  "source": "semas",
+  "sourceId": "MA0101202502A0110797",
+  "sourceStatus": "active",
+  "attrs": {
+    "status": "partial",
+    "menus": [
+      {
+        "name": "페파로니피자",
+        "price": 8900,
+        "main": true
+      }
+    ]
+  },
+  "research": {
+    "identityStatus": "matched",
+    "queries": [
+      "\"온오프피자\" \"전남대점\""
+    ],
+    "sources": [
+      {
+        "id": "s1",
+        "url": "https://www.diningcode.com/profile.php?rid=cElKoKqhDtee",
+        "title": "온오프피자 광주전남대점",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "상호와 도로명 주소를 대조함. URL을 직접 열어 주소와 본문을 확인함."
+      },
+      {
+        "id": "s2",
+        "url": "https://www.onoffpizza.com/myboard/st_branch",
+        "title": "온오프피자 공식 전국매장",
+        "type": "official",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "상호와 도로명 주소를 대조함. 공개 검색결과에서 확인했으며 직접 본문은 조회하지 않음."
+      }
+    ],
+    "facts": {
+      "menus": {
+        "status": "confirmed",
+        "value": [
+          {
+            "name": "페파로니피자",
+            "price": 8900,
+            "main": true
+          }
+        ],
+        "sourceIds": [
+          "s1"
+        ],
+        "note": "지점 게시가격 8,900원. 규격·옵션은 미확인."
+      },
+      "hours": {
+        "status": "partial",
+        "sourceIds": [
+          "s1"
+        ],
+        "note": "월~금11:00~익일01:00,휴식14:30~16:00,마지막주문00:40; 토11:00~23:00,일휴무. 기존스키마 자정넘김 미지원이므로 정규hours에억지분할하지않음."
+      }
+    },
+    "notes": [],
+    "checkedAt": "2026-11-11",
+    "method": "web",
+    "unknownFields": [
+      "hours",
+      "mealType",
+      "takeout",
+      "verifiedAt",
+      "verifiedBy",
+      "break",
+      "lastOrder"
+    ]
+  },
+  "availability": {
+    "status": "excluded",
+    "provider": "naver",
+    "checkedAt": "2026-11-11",
+    "sourceUrl": "https://map.naver.com/p/search/%EC%A0%84%EB%82%A8%EB%8C%80%20%EC%9D%8C%EC%8B%9D%EC%A0%90",
+    "naverPlaceId": null,
+    "observedName": "",
+    "observedAddress": "",
+    "district": null,
+    "addressVerified": false,
+    "nearby": false,
+    "reason": "네이버 지도에서 확인한 네 식당가 명단에 포함되지 않아 제외"
+  }
+}

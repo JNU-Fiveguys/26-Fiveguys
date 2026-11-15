@@ -1,0 +1,453 @@
+{
+  "version": 1,
+  "id": "p_0022",
+  "name": "미리내김밥",
+  "category": "분식",
+  "lat": 35.1779838395368,
+  "lng": 126.904259600762,
+  "address": "광주 북구 설죽로214번길 121",
+  "source": "semas",
+  "sourceId": "MA010120220807527529",
+  "sourceStatus": "active",
+  "attrs": {
+    "status": "partial",
+    "menus": [
+      {
+        "name": "김밥",
+        "price": 3000,
+        "main": true
+      },
+      {
+        "name": "떡볶이",
+        "price": 3500,
+        "main": true
+      },
+      {
+        "name": "참치김밥",
+        "price": 4000,
+        "main": true
+      },
+      {
+        "name": "치즈김밥",
+        "price": 4000,
+        "main": true
+      },
+      {
+        "name": "김치김밥",
+        "price": 4000,
+        "main": true
+      },
+      {
+        "name": "땡초김밥",
+        "price": 4000,
+        "main": true
+      },
+      {
+        "name": "땡초참치김밥",
+        "price": 4500,
+        "main": true
+      },
+      {
+        "name": "김치참치김밥",
+        "price": 4500,
+        "main": true
+      },
+      {
+        "name": "땡초김치김밥",
+        "price": 4500,
+        "main": true
+      },
+      {
+        "name": "오뎅",
+        "price": 3500,
+        "main": false
+      },
+      {
+        "name": "공기",
+        "price": 1500,
+        "main": false
+      },
+      {
+        "name": "라면",
+        "price": 4000,
+        "main": true
+      },
+      {
+        "name": "치즈라면",
+        "price": 4500,
+        "main": true
+      },
+      {
+        "name": "만두라면",
+        "price": 4500,
+        "main": true
+      },
+      {
+        "name": "떡라면",
+        "price": 4500,
+        "main": true
+      },
+      {
+        "name": "김치라면",
+        "price": 4500,
+        "main": true
+      },
+      {
+        "name": "찐만두",
+        "price": 5000,
+        "main": true
+      },
+      {
+        "name": "쫄면",
+        "price": 6000,
+        "main": true
+      },
+      {
+        "name": "비빔밥",
+        "price": 5000,
+        "main": true
+      },
+      {
+        "name": "양푼참치비빔밥",
+        "price": 6000,
+        "main": true
+      },
+      {
+        "name": "오므라이스",
+        "price": 6500,
+        "main": true
+      },
+      {
+        "name": "참치볶음밥",
+        "price": 6500,
+        "main": true
+      },
+      {
+        "name": "김치볶음밥",
+        "price": 6500,
+        "main": true
+      },
+      {
+        "name": "떡만두국",
+        "price": 6000,
+        "main": true
+      },
+      {
+        "name": "만두국+공기",
+        "price": 6000,
+        "main": true
+      },
+      {
+        "name": "참치찌개",
+        "price": 6000,
+        "main": true
+      },
+      {
+        "name": "순두부찌개",
+        "price": 6000,
+        "main": true
+      },
+      {
+        "name": "잔치국수",
+        "price": 6000,
+        "main": true
+      },
+      {
+        "name": "비빔국수",
+        "price": 7000,
+        "main": true
+      },
+      {
+        "name": "감자탕(뼈X)",
+        "price": 6500,
+        "main": true
+      },
+      {
+        "name": "육개장",
+        "price": 6500,
+        "main": true
+      },
+      {
+        "name": "라볶이",
+        "price": 6000,
+        "main": true
+      },
+      {
+        "name": "치즈라볶이",
+        "price": 7000,
+        "main": true
+      },
+      {
+        "name": "음료수",
+        "price": 2000,
+        "main": false
+      }
+    ]
+  },
+  "research": {
+    "identityStatus": "matched",
+    "queries": [
+      "\"미리내김밥\" 메뉴 가격"
+    ],
+    "sources": [
+      {
+        "id": "s1",
+        "url": "https://www.diningcode.com/profile.php?rid=DBYa8gmHMsCv",
+        "title": "미리내김밥 전대 매장정보",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "상호·주소 일치"
+      }
+    ],
+    "facts": {
+      "menus": {
+        "status": "partial",
+        "value": [
+          {
+            "name": "오므라이스",
+            "price": 6500,
+            "main": true
+          }
+        ],
+        "sourceIds": [
+          "s1"
+        ],
+        "note": "페이지의 9월 29일 방문 후기에서 확인된 가격. 게시연도·조사일 현재 가격 확인이 안 되어 확정값으로 쓰지 않음."
+      },
+      "hours": {
+        "status": "unconfirmed",
+        "value": [],
+        "sourceIds": [],
+        "note": "요일별 영업시간을 확인하지 못함."
+      }
+    },
+    "notes": [],
+    "checkedAt": "2026-11-11",
+    "method": "web",
+    "unknownFields": [
+      "menus",
+      "hours",
+      "mealType",
+      "takeout",
+      "verifiedAt",
+      "verifiedBy",
+      "break",
+      "lastOrder"
+    ]
+  },
+  "availability": {
+    "status": "listed",
+    "provider": "naver",
+    "checkedAt": "2026-11-11",
+    "sourceUrl": "https://pcmap.place.naver.com/place/1373248477",
+    "naverPlaceId": "1373248477",
+    "observedName": "미리내김밥",
+    "observedAddress": "광주 북구 설죽로214번길 121",
+    "district": "상대",
+    "addressVerified": true,
+    "nearby": true,
+    "reason": "공개 네이버 지도에서 동일 주소의 전남대 상대 식당으로 확인"
+  },
+  "menuObservation": {
+    "sourceUrl": "https://blog.naver.com/ummppocha/224426431216",
+    "placeSourceUrl": "https://pcmap.place.naver.com/restaurant/1373248477/home",
+    "sourceAddress": "광주 북구 설죽로214번길 121",
+    "sourcePublishedAt": "2026-09-29",
+    "checkedAt": "2026-11-12",
+    "priceContext": "in_store",
+    "status": "confirmed",
+    "menus": [
+      {
+        "name": "김밥",
+        "price": 3000,
+        "main": true
+      },
+      {
+        "name": "떡볶이",
+        "price": 3500,
+        "main": true
+      },
+      {
+        "name": "참치김밥",
+        "price": 4000,
+        "main": true
+      },
+      {
+        "name": "치즈김밥",
+        "price": 4000,
+        "main": true
+      },
+      {
+        "name": "김치김밥",
+        "price": 4000,
+        "main": true
+      },
+      {
+        "name": "땡초김밥",
+        "price": 4000,
+        "main": true
+      },
+      {
+        "name": "땡초참치김밥",
+        "price": 4500,
+        "main": true
+      },
+      {
+        "name": "김치참치김밥",
+        "price": 4500,
+        "main": true
+      },
+      {
+        "name": "땡초김치김밥",
+        "price": 4500,
+        "main": true
+      },
+      {
+        "name": "오뎅",
+        "price": 3500,
+        "main": false
+      },
+      {
+        "name": "공기",
+        "price": 1500,
+        "main": false
+      },
+      {
+        "name": "라면",
+        "price": 4000,
+        "main": true
+      },
+      {
+        "name": "치즈라면",
+        "price": 4500,
+        "main": true
+      },
+      {
+        "name": "만두라면",
+        "price": 4500,
+        "main": true
+      },
+      {
+        "name": "떡라면",
+        "price": 4500,
+        "main": true
+      },
+      {
+        "name": "김치라면",
+        "price": 4500,
+        "main": true
+      },
+      {
+        "name": "찐만두",
+        "price": 5000,
+        "main": true
+      },
+      {
+        "name": "쫄면",
+        "price": 6000,
+        "main": true
+      },
+      {
+        "name": "비빔밥",
+        "price": 5000,
+        "main": true
+      },
+      {
+        "name": "양푼참치비빔밥",
+        "price": 6000,
+        "main": true
+      },
+      {
+        "name": "오므라이스",
+        "price": 6500,
+        "main": true
+      },
+      {
+        "name": "참치볶음밥",
+        "price": 6500,
+        "main": true
+      },
+      {
+        "name": "김치볶음밥",
+        "price": 6500,
+        "main": true
+      },
+      {
+        "name": "떡만두국",
+        "price": 6000,
+        "main": true
+      },
+      {
+        "name": "만두국+공기",
+        "price": 6000,
+        "main": true
+      },
+      {
+        "name": "참치찌개",
+        "price": 6000,
+        "main": true
+      },
+      {
+        "name": "순두부찌개",
+        "price": 6000,
+        "main": true
+      },
+      {
+        "name": "잔치국수",
+        "price": 6000,
+        "main": true
+      },
+      {
+        "name": "비빔국수",
+        "price": 7000,
+        "main": true
+      },
+      {
+        "name": "감자탕(뼈X)",
+        "price": 6500,
+        "main": true
+      },
+      {
+        "name": "육개장",
+        "price": 6500,
+        "main": true
+      },
+      {
+        "name": "라볶이",
+        "price": 6000,
+        "main": true
+      },
+      {
+        "name": "치즈라볶이",
+        "price": 7000,
+        "main": true
+      },
+      {
+        "name": "음료수",
+        "price": 2000,
+        "main": false
+      }
+    ],
+    "note": "동일 지점·주소의 매장 방문 자료에서 읽히는 메뉴·가격만 반영. 게시 이후 변경 가능하며 현장 현재 가격 보증은 아님. 메뉴판: https://postfiles.pstatic.net/MjAyNjA5MjhfMjU4/MDAxNzkwNTg4MzQ2MDUx.36X2FkSPQXEX_H2eroOLKqZIJHsxHAa9YPJzSa4-dwcg.GkVzd8pq0mJJbgRqRdw3scHVGJdBpb8V3-IdZbcA65Ig.JPEG/IMG%EF%BC%BF0872.jpg?type=w773"
+  },
+  "hoursObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/place/1373248477",
+    "checkedAt": "2026-11-11",
+    "status": "unconfirmed",
+    "hours": [],
+    "note": "매장 영업시간 관찰. 기존 attrs/research를 덮어쓰지 않습니다."
+  },
+  "followupReview": {
+    "checkedAt": "2026-11-12",
+    "reasons": [
+      "요일별 영업시간: 월~일 영업·휴무와 개점·마감 시간이 필요합니다. 브레이크·마지막 주문은 확인한 경우만 입력하세요."
+    ],
+    "sources": [
+      "https://pcmap.place.naver.com/restaurant/1373248477/home",
+      "https://blog.naver.com/ummppocha/224426431216",
+      "https://postfiles.pstatic.net/MjAyNjA5MjhfMjU4/MDAxNzkwNTg4MzQ2MDUx.36X2FkSPQXEX_H2eroOLKqZIJHsxHAa9YPJzSa4-dwcg.GkVzd8pq0mJJbgRqRdw3scHVGJdBpb8V3-IdZbcA65Ig.JPEG/IMG%EF%BC%BF0872.jpg?type=w773",
+      "https://pcmap.place.naver.com/place/1373248477"
+    ]
+  }
+}

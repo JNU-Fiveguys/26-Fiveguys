@@ -1,0 +1,722 @@
+{
+  "version": 1,
+  "checkedAt": "2026-11-12",
+  "reviewed": 41,
+  "confirmedPlaces": 19,
+  "confirmedStoreMenus": 13,
+  "confirmedHours": 9,
+  "newReady": 23,
+  "remaining": 18,
+  "totalReady": 80,
+  "placesChanged": 0,
+  "dryRun": false,
+  "places": [
+    {
+      "id": "p_0127",
+      "name": "후토루 전대후문점",
+      "ready": true,
+      "missing": [],
+      "sources": [
+        "https://pcmap.place.naver.com/restaurant/1037261717/home",
+        "https://pcmap.place.naver.com/restaurant/1037261717/menu/list",
+        "https://blog.naver.com/kswze7/224337808590"
+      ],
+      "reasons": [
+        "공개 매장 식사 가격과 요일별 영업시간을 연결하여 추천 대상으로 전환했습니다."
+      ]
+    },
+    {
+      "id": "p_0014",
+      "name": "카츠앤맘전대점",
+      "ready": true,
+      "missing": [],
+      "sources": [
+        "https://pcmap.place.naver.com/restaurant/36894596/home",
+        "https://pcmap.place.naver.com/restaurant/36894596/menu/list",
+        "https://blog.naver.com/ss0_rv/224356779893"
+      ],
+      "reasons": [
+        "공개 매장 식사 가격과 요일별 영업시간을 연결하여 추천 대상으로 전환했습니다."
+      ]
+    },
+    {
+      "id": "p_0145",
+      "name": "찐한사골국밥",
+      "ready": true,
+      "missing": [],
+      "sources": [
+        "https://pcmap.place.naver.com/restaurant/1805335047/home",
+        "https://pcmap.place.naver.com/restaurant/1805335047/menu/list",
+        "https://place.map.kakao.com/616626742",
+        "https://ldb-phinf.pstatic.net/20230606_169/1686044387863SEOnG_JPEG/KakaoTalk_20230606_183918145.jpg"
+      ],
+      "reasons": [
+        "공개 매장 식사 가격과 요일별 영업시간을 연결하여 추천 대상으로 전환했습니다."
+      ]
+    },
+    {
+      "id": "p_0131",
+      "name": "명일삼계탕",
+      "ready": true,
+      "missing": [],
+      "sources": [
+        "https://pcmap.place.naver.com/restaurant/1249369391/home",
+        "https://pcmap.place.naver.com/restaurant/1249369391/menu/list",
+        "https://ldb-phinf.pstatic.net/20241209_271/17337112619410oNDs_JPEG/KakaoTalk_20241015_175415234.jpg"
+      ],
+      "reasons": [
+        "공개 매장 식사 가격과 요일별 영업시간을 연결하여 추천 대상으로 전환했습니다."
+      ]
+    },
+    {
+      "id": "p_0050",
+      "name": "알촌 전남대점",
+      "ready": true,
+      "missing": [],
+      "sources": [
+        "https://pcmap.place.naver.com/restaurant/37915784/home",
+        "https://pcmap.place.naver.com/restaurant/37915784/menu/list",
+        "https://place.map.kakao.com/1320251809"
+      ],
+      "reasons": [
+        "공개 매장 식사 가격과 요일별 영업시간을 연결하여 추천 대상으로 전환했습니다."
+      ]
+    },
+    {
+      "id": "p_0013",
+      "name": "한솥도시락 전남대점",
+      "ready": false,
+      "missing": [
+        {
+          "key": "menus",
+          "label": "매장 메뉴·가격",
+          "detail": "배달 가격 또는 가격 구분이 불명확한 자료만 있어 매장 가격을 확인해야 합니다."
+        }
+      ],
+      "sources": [
+        "https://pcmap.place.naver.com/restaurant/13376550/home",
+        "https://pcmap.place.naver.com/restaurant/13376550/menu/list"
+      ],
+      "reasons": [
+        "매장 메뉴·가격: 배달 가격 또는 가격 구분이 불명확한 자료만 있어 매장 가격을 확인해야 합니다.",
+        "2026-08 메뉴판을 확인했으나 본문에 한솥 메뉴 권장가격으로 표시되어 지점의 매장·포장 확정 가격으로 적용하지 않았습니다."
+      ]
+    },
+    {
+      "id": "p_0117",
+      "name": "라즈인도요리 전대후문",
+      "ready": true,
+      "missing": [],
+      "sources": [
+        "https://pcmap.place.naver.com/restaurant/37398013/home",
+        "https://pcmap.place.naver.com/restaurant/37398013/menu/list",
+        "https://place.map.kakao.com/27432446",
+        "https://pcmap.place.naver.com/restaurant/37398013/menu/list?fromPanelNum=1&additionalHeight=76&timestamp=202611112344&locale=ko&svcName=map_pcv5&searchText=%EB%9D%BC%EC%A6%88%EC%9D%B8%EB%8F%84%EC%9A%94%EB%A6%AC%20%EC%A0%84%EB%8C%80%ED%9B%84%EB%AC%B8"
+      ],
+      "reasons": [
+        "공개 매장 식사 가격과 요일별 영업시간을 연결하여 추천 대상으로 전환했습니다."
+      ]
+    },
+    {
+      "id": "p_0119",
+      "name": "마마",
+      "ready": false,
+      "missing": [
+        {
+          "key": "hours",
+          "label": "요일별 영업시간",
+          "detail": "월~일 영업·휴무와 개점·마감 시간이 필요합니다. 브레이크·마지막 주문은 확인한 경우만 입력하세요."
+        }
+      ],
+      "sources": [
+        "https://pcmap.place.naver.com/restaurant/37500690/home",
+        "https://pcmap.place.naver.com/restaurant/37500690/menu/list"
+      ],
+      "reasons": [
+        "요일별 영업시간: 월~일 영업·휴무와 개점·마감 시간이 필요합니다. 브레이크·마지막 주문은 확인한 경우만 입력하세요."
+      ]
+    },
+    {
+      "id": "p_0024",
+      "name": "무등골금호식당",
+      "ready": false,
+      "missing": [
+        {
+          "key": "hours",
+          "label": "요일별 영업시간",
+          "detail": "월~일 영업·휴무와 개점·마감 시간이 필요합니다. 브레이크·마지막 주문은 확인한 경우만 입력하세요."
+        }
+      ],
+      "sources": [
+        "https://pcmap.place.naver.com/restaurant/16178351/home",
+        "https://pcmap.place.naver.com/restaurant/16178351/menu/list"
+      ],
+      "reasons": [
+        "요일별 영업시간: 월~일 영업·휴무와 개점·마감 시간이 필요합니다. 브레이크·마지막 주문은 확인한 경우만 입력하세요."
+      ]
+    },
+    {
+      "id": "p_0033",
+      "name": "봉구스밥버거 전남대상대점",
+      "ready": false,
+      "missing": [
+        {
+          "key": "hours",
+          "label": "요일별 영업시간",
+          "detail": "월~일 영업·휴무와 개점·마감 시간이 필요합니다. 브레이크·마지막 주문은 확인한 경우만 입력하세요."
+        }
+      ],
+      "sources": [
+        "https://pcmap.place.naver.com/restaurant/33894558/home",
+        "https://pcmap.place.naver.com/restaurant/33894558/menu/list"
+      ],
+      "reasons": [
+        "요일별 영업시간: 월~일 영업·휴무와 개점·마감 시간이 필요합니다. 브레이크·마지막 주문은 확인한 경우만 입력하세요.",
+        "보조 지도에 영업시간이 있으나 요기요 제공으로 표시되어 매장 영업시간으로 확정하지 않았습니다."
+      ]
+    },
+    {
+      "id": "p_0023",
+      "name": "뽀글이와둘둘이",
+      "ready": true,
+      "missing": [],
+      "sources": [
+        "https://pcmap.place.naver.com/restaurant/35438757/home",
+        "https://pcmap.place.naver.com/restaurant/35438757/menu/list",
+        "https://place.map.kakao.com/21362415"
+      ],
+      "reasons": [
+        "공개 매장 식사 가격과 요일별 영업시간을 연결하여 추천 대상으로 전환했습니다."
+      ]
+    },
+    {
+      "id": "p_0047",
+      "name": "얌얌 전대상대점",
+      "ready": false,
+      "missing": [
+        {
+          "key": "hours",
+          "label": "요일별 영업시간",
+          "detail": "월~일 영업·휴무와 개점·마감 시간이 필요합니다. 브레이크·마지막 주문은 확인한 경우만 입력하세요."
+        }
+      ],
+      "sources": [
+        "https://pcmap.place.naver.com/restaurant/37504432/home",
+        "https://pcmap.place.naver.com/restaurant/37504432/menu/list"
+      ],
+      "reasons": [
+        "요일별 영업시간: 월~일 영업·휴무와 개점·마감 시간이 필요합니다. 브레이크·마지막 주문은 확인한 경우만 입력하세요."
+      ]
+    },
+    {
+      "id": "p_0039",
+      "name": "가마솥옛날국밥",
+      "ready": true,
+      "missing": [],
+      "sources": [
+        "https://pcmap.place.naver.com/restaurant/19610578/home",
+        "https://pcmap.place.naver.com/restaurant/19610578/menu/list",
+        "https://place.map.kakao.com/21439387"
+      ],
+      "reasons": [
+        "공개 매장 식사 가격과 요일별 영업시간을 연결하여 추천 대상으로 전환했습니다."
+      ]
+    },
+    {
+      "id": "p_0132",
+      "name": "마라푸우 상대점",
+      "ready": false,
+      "missing": [
+        {
+          "key": "menus",
+          "label": "매장 메뉴·가격",
+          "detail": "배달 가격 또는 가격 구분이 불명확한 자료만 있어 매장 가격을 확인해야 합니다."
+        }
+      ],
+      "sources": [
+        "https://pcmap.place.naver.com/restaurant/1328708142/home",
+        "https://place.map.kakao.com/596883620",
+        "https://pcmap.place.naver.com/place/1328708142"
+      ],
+      "reasons": [
+        "매장 메뉴·가격: 배달 가격 또는 가격 구분이 불명확한 자료만 있어 매장 가격을 확인해야 합니다."
+      ]
+    },
+    {
+      "id": "p_0022",
+      "name": "미리내김밥",
+      "ready": false,
+      "missing": [
+        {
+          "key": "hours",
+          "label": "요일별 영업시간",
+          "detail": "월~일 영업·휴무와 개점·마감 시간이 필요합니다. 브레이크·마지막 주문은 확인한 경우만 입력하세요."
+        }
+      ],
+      "sources": [
+        "https://pcmap.place.naver.com/restaurant/1373248477/home",
+        "https://blog.naver.com/ummppocha/224426431216",
+        "https://postfiles.pstatic.net/MjAyNjA5MjhfMjU4/MDAxNzkwNTg4MzQ2MDUx.36X2FkSPQXEX_H2eroOLKqZIJHsxHAa9YPJzSa4-dwcg.GkVzd8pq0mJJbgRqRdw3scHVGJdBpb8V3-IdZbcA65Ig.JPEG/IMG%EF%BC%BF0872.jpg?type=w773",
+        "https://pcmap.place.naver.com/place/1373248477"
+      ],
+      "reasons": [
+        "요일별 영업시간: 월~일 영업·휴무와 개점·마감 시간이 필요합니다. 브레이크·마지막 주문은 확인한 경우만 입력하세요."
+      ]
+    },
+    {
+      "id": "p_0129",
+      "name": "알아지즈 상대점",
+      "ready": true,
+      "missing": [],
+      "sources": [
+        "https://pcmap.place.naver.com/restaurant/1131985085/home",
+        "https://place.map.kakao.com/1303110363",
+        "https://pcmap.place.naver.com/place/1131985085"
+      ],
+      "reasons": [
+        "공개 매장 식사 가격과 요일별 영업시간을 연결하여 추천 대상으로 전환했습니다."
+      ]
+    },
+    {
+      "id": "p_0049",
+      "name": "엄마손중국식분식",
+      "ready": false,
+      "missing": [
+        {
+          "key": "menus",
+          "label": "매장 메뉴·가격",
+          "detail": "배달 가격 또는 가격 구분이 불명확한 자료만 있어 매장 가격을 확인해야 합니다."
+        },
+        {
+          "key": "hours",
+          "label": "요일별 영업시간",
+          "detail": "월~일 영업·휴무와 개점·마감 시간이 필요합니다. 브레이크·마지막 주문은 확인한 경우만 입력하세요."
+        }
+      ],
+      "sources": [
+        "https://pcmap.place.naver.com/restaurant/1087889426/home",
+        "https://place.map.kakao.com/449293113",
+        "https://pcmap.place.naver.com/place/1087889426"
+      ],
+      "reasons": [
+        "매장 메뉴·가격: 배달 가격 또는 가격 구분이 불명확한 자료만 있어 매장 가격을 확인해야 합니다.",
+        "요일별 영업시간: 월~일 영업·휴무와 개점·마감 시간이 필요합니다. 브레이크·마지막 주문은 확인한 경우만 입력하세요.",
+        "보조 지도에 영업시간이 있으나 요기요 제공으로 표시되어 매장 영업시간으로 확정하지 않았습니다."
+      ]
+    },
+    {
+      "id": "p_0006",
+      "name": "한끼도시락",
+      "ready": false,
+      "missing": [
+        {
+          "key": "menus",
+          "label": "매장 메뉴·가격",
+          "detail": "배달 가격 또는 가격 구분이 불명확한 자료만 있어 매장 가격을 확인해야 합니다."
+        },
+        {
+          "key": "hours",
+          "label": "요일별 영업시간",
+          "detail": "월~일 영업·휴무와 개점·마감 시간이 필요합니다. 브레이크·마지막 주문은 확인한 경우만 입력하세요."
+        }
+      ],
+      "sources": [
+        "https://pcmap.place.naver.com/restaurant/1075860086/home",
+        "https://pcmap.place.naver.com/place/1075860086"
+      ],
+      "reasons": [
+        "매장 메뉴·가격: 배달 가격 또는 가격 구분이 불명확한 자료만 있어 매장 가격을 확인해야 합니다.",
+        "요일별 영업시간: 월~일 영업·휴무와 개점·마감 시간이 필요합니다. 브레이크·마지막 주문은 확인한 경우만 입력하세요."
+      ]
+    },
+    {
+      "id": "p_0017",
+      "name": "전대분식",
+      "ready": false,
+      "missing": [
+        {
+          "key": "hours",
+          "label": "요일별 영업시간",
+          "detail": "월~일 영업·휴무와 개점·마감 시간이 필요합니다. 브레이크·마지막 주문은 확인한 경우만 입력하세요."
+        }
+      ],
+      "sources": [
+        "https://pcmap.place.naver.com/restaurant/37501200/home",
+        "https://pcmap.place.naver.com/restaurant/37501200/menu/list"
+      ],
+      "reasons": [
+        "요일별 영업시간: 월~일 영업·휴무와 개점·마감 시간이 필요합니다. 브레이크·마지막 주문은 확인한 경우만 입력하세요."
+      ]
+    },
+    {
+      "id": "p_0105",
+      "name": "삼호반점",
+      "ready": true,
+      "missing": [],
+      "sources": [
+        "https://pcmap.place.naver.com/restaurant/16178952/home",
+        "https://pcmap.place.naver.com/restaurant/16178952/menu/list",
+        "https://place.map.kakao.com/10427755",
+        "https://pcmap.place.naver.com/restaurant/16178952/menu"
+      ],
+      "reasons": [
+        "공개 매장 식사 가격과 요일별 영업시간을 연결하여 추천 대상으로 전환했습니다."
+      ]
+    },
+    {
+      "id": "p_0159",
+      "name": "꿈에그린분식",
+      "ready": true,
+      "missing": [],
+      "sources": [
+        "https://pcmap.place.naver.com/restaurant/2091246902/home",
+        "https://pcmap.place.naver.com/restaurant/2091246902/menu/list",
+        "https://ldb-phinf.pstatic.net/20251225_208/1766673295513uttHQ_JPEG/1000012253.jpg",
+        "https://pcmap.place.naver.com/restaurant/2091246902/menu?fromPanelNum=1&additionalHeight=76&timestamp=202611112338&locale=ko&svcName=map_pcv5&searchText=%EA%BF%88%EC%97%90%EA%B7%B8%EB%A6%B0%EB%B6%84%EC%8B%9D%20%EC%9A%A9%EB%B4%89%EB%8F%99"
+      ],
+      "reasons": [
+        "공개 매장 식사 가격과 요일별 영업시간을 연결하여 추천 대상으로 전환했습니다."
+      ]
+    },
+    {
+      "id": "p_0113",
+      "name": "나루터",
+      "ready": false,
+      "missing": [
+        {
+          "key": "hours",
+          "label": "요일별 영업시간",
+          "detail": "월~일 영업·휴무와 개점·마감 시간이 필요합니다. 브레이크·마지막 주문은 확인한 경우만 입력하세요."
+        }
+      ],
+      "sources": [
+        "https://pcmap.place.naver.com/restaurant/34706804/home",
+        "https://pcmap.place.naver.com/restaurant/34706804/menu/list",
+        "https://pcmap.place.naver.com/restaurant/34706804/menu?fromPanelNum=1&additionalHeight=76&timestamp=202611112342&locale=ko&svcName=map_pcv5&searchText=%EB%82%98%EB%A3%A8%ED%84%B0%20%EC%9A%A9%EB%B4%89%EB%8F%99"
+      ],
+      "reasons": [
+        "요일별 영업시간: 월~일 영업·휴무와 개점·마감 시간이 필요합니다. 브레이크·마지막 주문은 확인한 경우만 입력하세요."
+      ]
+    },
+    {
+      "id": "p_0142",
+      "name": "난타5000피자 전대용봉점",
+      "ready": false,
+      "missing": [
+        {
+          "key": "menus",
+          "label": "매장 메뉴·가격",
+          "detail": "배달 가격 또는 가격 구분이 불명확한 자료만 있어 매장 가격을 확인해야 합니다."
+        },
+        {
+          "key": "hours",
+          "label": "요일별 영업시간",
+          "detail": "월~일 영업·휴무와 개점·마감 시간이 필요합니다. 브레이크·마지막 주문은 확인한 경우만 입력하세요."
+        }
+      ],
+      "sources": [
+        "https://pcmap.place.naver.com/restaurant/1697423048/home",
+        "https://pcmap.place.naver.com/restaurant/1697423048/menu/list"
+      ],
+      "reasons": [
+        "매장 메뉴·가격: 배달 가격 또는 가격 구분이 불명확한 자료만 있어 매장 가격을 확인해야 합니다.",
+        "요일별 영업시간: 월~일 영업·휴무와 개점·마감 시간이 필요합니다. 브레이크·마지막 주문은 확인한 경우만 입력하세요.",
+        "보조 지도에 영업시간이 있으나 요기요 제공으로 표시되어 매장 영업시간으로 확정하지 않았습니다."
+      ]
+    },
+    {
+      "id": "p_0148",
+      "name": "뉴요커피자 본점",
+      "ready": true,
+      "missing": [],
+      "sources": [
+        "https://pcmap.place.naver.com/restaurant/1911743486/home",
+        "https://pcmap.place.naver.com/restaurant/1911743486/menu/list",
+        "https://pcmap.place.naver.com/restaurant/1911743486/menu?fromPanelNum=1&additionalHeight=76&timestamp=202611112331&locale=ko&svcName=map_pcv5&searchText=%EB%89%B4%EC%9A%94%EC%BB%A4%ED%94%BC%EC%9E%90%20%EC%9A%A9%EB%B4%89%EB%8F%99"
+      ],
+      "reasons": [
+        "공개 매장 식사 가격과 요일별 영업시간을 연결하여 추천 대상으로 전환했습니다."
+      ]
+    },
+    {
+      "id": "p_0055",
+      "name": "왕손주먹구이",
+      "ready": true,
+      "missing": [],
+      "sources": [
+        "https://pcmap.place.naver.com/restaurant/1887196713/home",
+        "https://pcmap.place.naver.com/restaurant/1887196713/menu/list",
+        "https://pcmap.place.naver.com/restaurant/1887196713/menu?fromPanelNum=1&additionalHeight=76&timestamp=202611112341&locale=ko&svcName=map_pcv5&searchText=%EC%99%95%EC%86%90%EC%A3%BC%EB%A8%B9%EA%B5%AC%EC%9D%B4%20%EA%B4%91%EC%A3%BC%20%EC%9A%A9%EB%B4%89%EB%8F%99"
+      ],
+      "reasons": [
+        "공개 매장 식사 가격과 요일별 영업시간을 연결하여 추천 대상으로 전환했습니다."
+      ]
+    },
+    {
+      "id": "p_0029",
+      "name": "용봉골",
+      "ready": false,
+      "missing": [
+        {
+          "key": "hours",
+          "label": "요일별 영업시간",
+          "detail": "월~일 영업·휴무와 개점·마감 시간이 필요합니다. 브레이크·마지막 주문은 확인한 경우만 입력하세요."
+        }
+      ],
+      "sources": [
+        "https://pcmap.place.naver.com/restaurant/37500825/home",
+        "https://pcmap.place.naver.com/restaurant/37500825/menu/list",
+        "https://pcmap.place.naver.com/restaurant/37500825/menu?fromPanelNum=2&timestamp=202611112333&locale=ko&svcName=map_pcv5&searchText=%EC%9A%A9%EB%B4%89%EA%B3%A8%20%EA%B4%91%EC%A3%BC"
+      ],
+      "reasons": [
+        "요일별 영업시간: 월~일 영업·휴무와 개점·마감 시간이 필요합니다. 브레이크·마지막 주문은 확인한 경우만 입력하세요."
+      ]
+    },
+    {
+      "id": "p_0056",
+      "name": "테트리스찜닭 전남대점",
+      "ready": true,
+      "missing": [],
+      "sources": [
+        "https://pcmap.place.naver.com/restaurant/1346033389/home",
+        "https://pcmap.place.naver.com/restaurant/1346033389/menu/list",
+        "https://pcmap.place.naver.com/restaurant/1346033389/menu"
+      ],
+      "reasons": [
+        "공개 매장 식사 가격과 요일별 영업시간을 연결하여 추천 대상으로 전환했습니다."
+      ]
+    },
+    {
+      "id": "p_0109",
+      "name": "한우촌",
+      "ready": true,
+      "missing": [],
+      "sources": [
+        "https://pcmap.place.naver.com/restaurant/21519977/home",
+        "https://pcmap.place.naver.com/restaurant/21519977/menu/list",
+        "https://ldb-phinf.pstatic.net/20260415_36/17762253744555Nqsz_JPEG/1776225359382.jpg",
+        "https://place.map.kakao.com/15777781",
+        "https://pcmap.place.naver.com/restaurant/21519977/menu?fromPanelNum=1&additionalHeight=76&timestamp=202611112342&locale=ko&svcName=map_pcv5&searchText=%ED%95%9C%EC%9A%B0%EC%B4%8C%20%EA%B4%91%EC%A3%BC%20%EC%9A%A9%EC%A3%BC%EB%A1%9C30%EB%B2%88%EA%B8%B8"
+      ],
+      "reasons": [
+        "공개 매장 식사 가격과 요일별 영업시간을 연결하여 추천 대상으로 전환했습니다."
+      ]
+    },
+    {
+      "id": "p_0038",
+      "name": "난타5000피자 전대정문점",
+      "ready": false,
+      "missing": [
+        {
+          "key": "menus",
+          "label": "매장 메뉴·가격",
+          "detail": "배달 가격 또는 가격 구분이 불명확한 자료만 있어 매장 가격을 확인해야 합니다."
+        },
+        {
+          "key": "hours",
+          "label": "요일별 영업시간",
+          "detail": "월~일 영업·휴무와 개점·마감 시간이 필요합니다. 브레이크·마지막 주문은 확인한 경우만 입력하세요."
+        }
+      ],
+      "sources": [
+        "https://pcmap.place.naver.com/restaurant/16173961/home",
+        "https://pcmap.place.naver.com/restaurant/16173961/menu/list"
+      ],
+      "reasons": [
+        "매장 메뉴·가격: 배달 가격 또는 가격 구분이 불명확한 자료만 있어 매장 가격을 확인해야 합니다.",
+        "요일별 영업시간: 월~일 영업·휴무와 개점·마감 시간이 필요합니다. 브레이크·마지막 주문은 확인한 경우만 입력하세요."
+      ]
+    },
+    {
+      "id": "p_0137",
+      "name": "로니의몬스터피자 전남대점",
+      "ready": true,
+      "missing": [],
+      "sources": [
+        "https://pcmap.place.naver.com/restaurant/1507113408/home",
+        "https://pcmap.place.naver.com/restaurant/1507113408/menu/list"
+      ],
+      "reasons": [
+        "공개 매장 식사 가격과 요일별 영업시간을 연결하여 추천 대상으로 전환했습니다."
+      ]
+    },
+    {
+      "id": "p_0104",
+      "name": "본가왕손반점",
+      "ready": false,
+      "missing": [
+        {
+          "key": "hours",
+          "label": "요일별 영업시간",
+          "detail": "월~일 영업·휴무와 개점·마감 시간이 필요합니다. 브레이크·마지막 주문은 확인한 경우만 입력하세요."
+        }
+      ],
+      "sources": [
+        "https://pcmap.place.naver.com/restaurant/16169662/home",
+        "https://pcmap.place.naver.com/restaurant/16169662/menu/list",
+        "https://place.map.kakao.com/9029197"
+      ],
+      "reasons": [
+        "요일별 영업시간: 월~일 영업·휴무와 개점·마감 시간이 필요합니다. 브레이크·마지막 주문은 확인한 경우만 입력하세요."
+      ]
+    },
+    {
+      "id": "p_0101",
+      "name": "초가왕족발",
+      "ready": true,
+      "missing": [],
+      "sources": [
+        "https://pcmap.place.naver.com/restaurant/13570391/home",
+        "https://pcmap.place.naver.com/restaurant/13570391/menu/list",
+        "https://ldb-phinf.pstatic.net/20260812_134/1786520786163s8j4h_JPEG/temp_picture.jpg"
+      ],
+      "reasons": [
+        "공개 매장 식사 가격과 요일별 영업시간을 연결하여 추천 대상으로 전환했습니다."
+      ]
+    },
+    {
+      "id": "p_0110",
+      "name": "피자스쿨 광주전대정문점",
+      "ready": true,
+      "missing": [],
+      "sources": [
+        "https://pcmap.place.naver.com/restaurant/21528523/home",
+        "https://pcmap.place.naver.com/restaurant/21528523/menu/list"
+      ],
+      "reasons": [
+        "공개 매장 식사 가격과 요일별 영업시간을 연결하여 추천 대상으로 전환했습니다."
+      ]
+    },
+    {
+      "id": "p_0157",
+      "name": "감쪽 전남대점",
+      "ready": true,
+      "missing": [],
+      "sources": [
+        "https://pcmap.place.naver.com/restaurant/2071340968/home",
+        "https://pcmap.place.naver.com/restaurant/2071340968/menu/list",
+        "https://pcmap.place.naver.com/restaurant/2071340968/booking",
+        "https://pcmap.place.naver.com/restaurant/2071340968/menu?fromPanelNum=1&additionalHeight=76&timestamp=202611112348&locale=ko&svcName=map_pcv5&searchText=%EA%B0%90%EC%AA%BD%20%EC%A0%84%EB%82%A8%EB%8C%80%EC%A0%90"
+      ],
+      "reasons": [
+        "공개 매장 식사 가격과 요일별 영업시간을 연결하여 추천 대상으로 전환했습니다."
+      ]
+    },
+    {
+      "id": "p_0114",
+      "name": "동대문엽기떡볶이 광주전남대점",
+      "ready": true,
+      "missing": [],
+      "sources": [
+        "https://pcmap.place.naver.com/restaurant/35523968/home",
+        "https://pcmap.place.naver.com/restaurant/35523968/menu/list",
+        "https://ldb-phinf.pstatic.net/20261103_50/1793667390539KmHgx_JPEG/edited-1793667387536-0.jpg"
+      ],
+      "reasons": [
+        "공개 매장 식사 가격과 요일별 영업시간을 연결하여 추천 대상으로 전환했습니다."
+      ]
+    },
+    {
+      "id": "p_0108",
+      "name": "동산회관",
+      "ready": true,
+      "missing": [],
+      "sources": [
+        "https://pcmap.place.naver.com/restaurant/20369720/home",
+        "https://pcmap.place.naver.com/restaurant/20369720/menu/list",
+        "https://pcmap.place.naver.com/restaurant/20369720/menu?fromPanelNum=1&additionalHeight=76&timestamp=202611112345&locale=ko&svcName=map_pcv5&searchText=%EB%8F%99%EC%82%B0%ED%9A%8C%EA%B4%80%20%EC%A0%84%EB%82%A8%EB%8C%80"
+      ],
+      "reasons": [
+        "공개 매장 식사 가격과 요일별 영업시간을 연결하여 추천 대상으로 전환했습니다."
+      ]
+    },
+    {
+      "id": "p_0100",
+      "name": "맥도날드 전남대DT점",
+      "ready": false,
+      "missing": [
+        {
+          "key": "menus",
+          "label": "식사 메뉴의 실제 가격",
+          "detail": "주 식사 메뉴가 ‘가격 변동’으로 게시되어 실제 매장 가격이 필요합니다."
+        }
+      ],
+      "sources": [
+        "https://pcmap.place.naver.com/restaurant/85019125/home",
+        "https://pcmap.place.naver.com/restaurant/85019125/menu/list",
+        "https://pcmap.place.naver.com/restaurant/85019125/menu"
+      ],
+      "reasons": [
+        "식사 메뉴의 실제 가격: 주 식사 메뉴가 ‘가격 변동’으로 게시되어 실제 매장 가격이 필요합니다.",
+        "보조 지도 매장 메뉴에도 숫자 가격이 게시되지 않아 배달가·다른 지점 가격으로 대체하지 않았습니다."
+      ]
+    },
+    {
+      "id": "p_0116",
+      "name": "버거킹 전남대후문점",
+      "ready": false,
+      "missing": [
+        {
+          "key": "menus",
+          "label": "매장 메뉴·가격",
+          "detail": "배달 가격 또는 가격 구분이 불명확한 자료만 있어 매장 가격을 확인해야 합니다."
+        }
+      ],
+      "sources": [
+        "https://pcmap.place.naver.com/restaurant/37346559/home",
+        "https://m.booking.naver.com/order/bizes/916853/items/5097110?theme=place&service-target=map-pc&refererCode=menutab&lang=ko&area=bmp"
+      ],
+      "reasons": [
+        "매장 메뉴·가격: 배달 가격 또는 가격 구분이 불명확한 자료만 있어 매장 가격을 확인해야 합니다.",
+        "보조 지도 매장 메뉴에도 숫자 가격이 게시되지 않아 배달가·다른 지점 가격으로 대체하지 않았습니다."
+      ]
+    },
+    {
+      "id": "p_0147",
+      "name": "이런이궈마라탕 전남대점",
+      "ready": false,
+      "missing": [
+        {
+          "key": "menus",
+          "label": "매장 메뉴·가격",
+          "detail": "배달 가격 또는 가격 구분이 불명확한 자료만 있어 매장 가격을 확인해야 합니다."
+        }
+      ],
+      "sources": [
+        "https://pcmap.place.naver.com/restaurant/1879261018/home",
+        "https://pcmap.place.naver.com/restaurant/1879261018/menu/list"
+      ],
+      "reasons": [
+        "매장 메뉴·가격: 배달 가격 또는 가격 구분이 불명확한 자료만 있어 매장 가격을 확인해야 합니다."
+      ]
+    },
+    {
+      "id": "p_0138",
+      "name": "전대주먹구이",
+      "ready": true,
+      "missing": [],
+      "sources": [
+        "https://pcmap.place.naver.com/restaurant/1520354551/home",
+        "https://pcmap.place.naver.com/restaurant/1520354551/menu/list",
+        "https://pcmap.place.naver.com/restaurant/1520354551/menu"
+      ],
+      "reasons": [
+        "공개 매장 식사 가격과 요일별 영업시간을 연결하여 추천 대상으로 전환했습니다."
+      ]
+    },
+    {
+      "id": "p_0102",
+      "name": "쭉심 전대후문점",
+      "ready": true,
+      "missing": [],
+      "sources": [
+        "https://pcmap.place.naver.com/restaurant/16154651/home",
+        "https://pcmap.place.naver.com/restaurant/16154651/menu/list",
+        "https://pcmap.place.naver.com/restaurant/16154651/menu?fromPanelNum=1&additionalHeight=76&timestamp=202611112345&locale=ko&svcName=map_pcv5&searchText=%EC%AD%89%EC%8B%AC%20%EC%A0%84%EB%8C%80%ED%9B%84%EB%AC%B8%EC%A0%90"
+      ],
+      "reasons": [
+        "공개 매장 식사 가격과 요일별 영업시간을 연결하여 추천 대상으로 전환했습니다."
+      ]
+    }
+  ]
+}

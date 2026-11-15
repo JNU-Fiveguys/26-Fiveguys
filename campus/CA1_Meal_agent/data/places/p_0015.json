@@ -1,0 +1,66 @@
+{
+  "version": 1,
+  "id": "p_0015",
+  "name": "연돈볼카츠광주 전남대점",
+  "category": "일식",
+  "lat": 35.175295,
+  "lng": 126.91276,
+  "address": "전남광주통합특별시 북구 우치로 88-1",
+  "source": "semas",
+  "sourceId": "MA010120220807123476",
+  "sourceStatus": "active",
+  "attrs": {
+    "status": "partial"
+  },
+  "research": {
+    "identityStatus": "not_found",
+    "queries": [
+      "\"연돈볼카츠\" \"전남대점\" 메뉴 영업시간",
+      "\"연돈볼카츠\" \"우치로 88-1\"",
+      "\"연돈볼카츠\" \"광주전남대점\""
+    ],
+    "sources": [],
+    "facts": {
+      "menus": {
+        "status": "unconfirmed",
+        "value": [],
+        "sourceIds": [],
+        "note": "매장별 메뉴·가격을 확인하지 못함."
+      },
+      "hours": {
+        "status": "unconfirmed",
+        "value": [],
+        "sourceIds": [],
+        "note": "요일별 영업시간을 확인하지 못함."
+      }
+    },
+    "notes": [
+      "브랜드 공통 행사정보만 검색되어 해당 지점 가격·영업 여부로 사용하지 않음."
+    ],
+    "checkedAt": "2026-11-11",
+    "method": "web",
+    "unknownFields": [
+      "menus",
+      "hours",
+      "mealType",
+      "takeout",
+      "verifiedAt",
+      "verifiedBy",
+      "break",
+      "lastOrder"
+    ]
+  },
+  "availability": {
+    "status": "excluded",
+    "provider": "naver",
+    "checkedAt": "2026-11-11",
+    "sourceUrl": "https://map.naver.com/p/search/%EC%A0%84%EB%82%A8%EB%8C%80%20%EC%9D%8C%EC%8B%9D%EC%A0%90",
+    "naverPlaceId": null,
+    "observedName": "",
+    "observedAddress": "",
+    "district": null,
+    "addressVerified": false,
+    "nearby": false,
+    "reason": "네이버 지도에서 확인한 네 식당가 명단에 포함되지 않아 제외"
+  }
+}

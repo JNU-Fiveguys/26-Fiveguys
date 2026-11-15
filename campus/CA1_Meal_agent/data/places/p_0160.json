@@ -1,0 +1,339 @@
+{
+  "version": 1,
+  "id": "p_0160",
+  "source": "team",
+  "sourceId": "naver:2147103568",
+  "name": "뼈칼집 광주용봉점",
+  "address": "전남광주 북구 용봉택지로 90",
+  "category": "한식",
+  "lat": 35.1782296289829,
+  "lng": 126.896256223903,
+  "sourceStatus": "active",
+  "availability": {
+    "status": "listed",
+    "provider": "naver",
+    "checkedAt": "2026-11-11",
+    "sourceUrl": "https://pcmap.place.naver.com/place/2147103568",
+    "naverPlaceId": "2147103568",
+    "observedName": "뼈칼집 광주용봉점",
+    "observedAddress": "전남광주 북구 용봉택지로 90",
+    "district": "상대",
+    "addressVerified": true,
+    "nearby": true,
+    "reason": "공개 네이버 지도에서 동일 주소의 전남대 상대 식당으로 확인"
+  },
+  "menuObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/2147103568/menu/list",
+    "checkedAt": "2026-11-11",
+    "priceContext": "in_store",
+    "menus": [
+      {
+        "name": "[여름한정]100%서리태콩물국수",
+        "price": 10000,
+        "main": true
+      },
+      {
+        "name": "💥신메뉴 뼈구이 등뼈수육 반반💥",
+        "price": 36000,
+        "main": true
+      },
+      {
+        "name": "💥얼큰함이 살아있는 얼큰뼈육개장💥",
+        "price": 9900,
+        "main": true
+      },
+      {
+        "name": "💥전골로 즐기는 얼큰뼈육개장전골💥",
+        "price": 36000,
+        "main": true
+      },
+      {
+        "name": "불향 가득한 직화뼈구이",
+        "price": 34000,
+        "main": true
+      },
+      {
+        "name": "담백하고 부드러운 등뼈수육",
+        "price": 34000,
+        "main": true
+      },
+      {
+        "name": "푸짐한 왕뼈버섯전골",
+        "price": 34000,
+        "main": true
+      },
+      {
+        "name": "특별한 국물 맛의 왕뼈칼국수",
+        "price": 8900,
+        "main": true
+      },
+      {
+        "name": "쪽파명란마요주먹밥",
+        "price": 6000,
+        "main": false
+      },
+      {
+        "name": "왕만두(4알)",
+        "price": 5000,
+        "main": false
+      },
+      {
+        "name": "고소한 주먹밥",
+        "price": 4000,
+        "main": false
+      }
+    ],
+    "note": "메뉴 상태: confirmed. 원본 관찰·좌표 출처는 적용 manifest에 보관합니다.",
+    "status": "confirmed"
+  },
+  "attrs": {
+    "status": "partial",
+    "menus": [
+      {
+        "name": "[여름한정]100%서리태콩물국수",
+        "price": 10000,
+        "main": true
+      },
+      {
+        "name": "💥신메뉴 뼈구이 등뼈수육 반반💥",
+        "price": 36000,
+        "main": true
+      },
+      {
+        "name": "💥얼큰함이 살아있는 얼큰뼈육개장💥",
+        "price": 9900,
+        "main": true
+      },
+      {
+        "name": "💥전골로 즐기는 얼큰뼈육개장전골💥",
+        "price": 36000,
+        "main": true
+      },
+      {
+        "name": "불향 가득한 직화뼈구이",
+        "price": 34000,
+        "main": true
+      },
+      {
+        "name": "담백하고 부드러운 등뼈수육",
+        "price": 34000,
+        "main": true
+      },
+      {
+        "name": "푸짐한 왕뼈버섯전골",
+        "price": 34000,
+        "main": true
+      },
+      {
+        "name": "특별한 국물 맛의 왕뼈칼국수",
+        "price": 8900,
+        "main": true
+      },
+      {
+        "name": "쪽파명란마요주먹밥",
+        "price": 6000,
+        "main": false
+      },
+      {
+        "name": "왕만두(4알)",
+        "price": 5000,
+        "main": false
+      },
+      {
+        "name": "고소한 주먹밥",
+        "price": 4000,
+        "main": false
+      }
+    ],
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금",
+          "토",
+          "일"
+        ],
+        "open": "11:30",
+        "close": "23:00",
+        "lastOrder": "22:00",
+        "break": {
+          "start": "15:00",
+          "end": "17:00"
+        }
+      }
+    ]
+  },
+  "hoursObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/place/2147103568",
+    "checkedAt": "2026-11-11",
+    "status": "confirmed",
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금",
+          "토",
+          "일"
+        ],
+        "open": "11:30",
+        "close": "23:00",
+        "lastOrder": "22:00",
+        "break": {
+          "start": "15:00",
+          "end": "17:00"
+        }
+      }
+    ],
+    "note": "매장 영업시간 관찰. 기존 attrs/research를 덮어쓰지 않습니다."
+  },
+  "research": {
+    "checkedAt": "2026-11-11",
+    "method": "web",
+    "identityStatus": "matched",
+    "queries": [
+      "뼈칼집 광주용봉점 전남광주 북구 용봉택지로 90"
+    ],
+    "sources": [
+      {
+        "id": "naver-place",
+        "url": "https://pcmap.place.naver.com/place/2147103568",
+        "title": "뼈칼집 광주용봉점 네이버 지도",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "같은 주소의 지점 확인. 지도 등록 확인은 실시간 영업 중 보증이 아님"
+      },
+      {
+        "id": "naver-menu",
+        "url": "https://pcmap.place.naver.com/restaurant/2147103568/menu/list",
+        "title": "뼈칼집 광주용봉점 메뉴 탭",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "가격 맥락: in_store"
+      },
+      {
+        "id": "naver-hours",
+        "url": "https://pcmap.place.naver.com/place/2147103568",
+        "title": "뼈칼집 광주용봉점 영업시간",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "게시된 요일별 영업시간. 미확인은 추정하지 않음"
+      }
+    ],
+    "facts": {
+      "menus": {
+        "status": "confirmed",
+        "sourceIds": [
+          "naver-menu"
+        ],
+        "note": "매장 게시값을 확인했습니다.",
+        "value": [
+          {
+            "name": "[여름한정]100%서리태콩물국수",
+            "price": 10000,
+            "main": true
+          },
+          {
+            "name": "💥신메뉴 뼈구이 등뼈수육 반반💥",
+            "price": 36000,
+            "main": true
+          },
+          {
+            "name": "💥얼큰함이 살아있는 얼큰뼈육개장💥",
+            "price": 9900,
+            "main": true
+          },
+          {
+            "name": "💥전골로 즐기는 얼큰뼈육개장전골💥",
+            "price": 36000,
+            "main": true
+          },
+          {
+            "name": "불향 가득한 직화뼈구이",
+            "price": 34000,
+            "main": true
+          },
+          {
+            "name": "담백하고 부드러운 등뼈수육",
+            "price": 34000,
+            "main": true
+          },
+          {
+            "name": "푸짐한 왕뼈버섯전골",
+            "price": 34000,
+            "main": true
+          },
+          {
+            "name": "특별한 국물 맛의 왕뼈칼국수",
+            "price": 8900,
+            "main": true
+          },
+          {
+            "name": "쪽파명란마요주먹밥",
+            "price": 6000,
+            "main": false
+          },
+          {
+            "name": "왕만두(4알)",
+            "price": 5000,
+            "main": false
+          },
+          {
+            "name": "고소한 주먹밥",
+            "price": 4000,
+            "main": false
+          }
+        ]
+      },
+      "hours": {
+        "status": "confirmed",
+        "sourceIds": [
+          "naver-hours"
+        ],
+        "note": "매장 게시값을 확인했습니다.",
+        "value": [
+          {
+            "days": [
+              "월",
+              "화",
+              "수",
+              "목",
+              "금",
+              "토",
+              "일"
+            ],
+            "open": "11:30",
+            "close": "23:00",
+            "lastOrder": "22:00",
+            "break": {
+              "start": "15:00",
+              "end": "17:00"
+            }
+          }
+        ]
+      }
+    },
+    "unknownFields": [
+      "mealType",
+      "takeout",
+      "verifiedAt",
+      "verifiedBy"
+    ],
+    "notes": [
+      "메뉴 업데이트26.05.29. 서리태콩물국수 여름한정. 상대 인근 안내 있으나 식당가 범위 좌표검증 필요.",
+      "영업시간 원문: 매일11:30-23:00; 브레이크15:00-17:00; 라스트오더22:00. 5월7일 점심휴무 예외공지(연도미표기)",
+      "원문 메뉴 목록·분류는 front_sangdae.json에 보존. main은 1인 식사 예산용 조사자 분류이며 공유 메뉴는 false로 보수적으로 표시.",
+      "공공 좌표 기준 캠퍼스 경계 약304m. 상대 서측 인근 주소로 연결. 동주소 다른 기존 업체와 ID를 합치지 않음.",
+      "병합 입력: front_normalized_manifest.json",
+      "공개 네이버 화면 관찰이며 현장 검증이 아닙니다."
+    ]
+  }
+}

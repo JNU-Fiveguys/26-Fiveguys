@@ -1,0 +1,521 @@
+{
+  "version": 1,
+  "id": "p_0148",
+  "source": "team",
+  "sourceId": "naver:1911743486",
+  "name": "뉴요커피자 본점",
+  "address": "전남광주 북구 용주로30번길 41-2 1층 뉴요커피자",
+  "category": "양식",
+  "lat": 35.1808943625038,
+  "lng": 126.903180291718,
+  "sourceStatus": "active",
+  "availability": {
+    "status": "listed",
+    "provider": "naver",
+    "checkedAt": "2026-11-11",
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/1911743486/home?fromPanelNum=1&additionalHeight=76&timestamp=202611112331&locale=ko&svcName=map_pcv5&searchText=%EB%89%B4%EC%9A%94%EC%BB%A4%ED%94%BC%EC%9E%90%20%EC%9A%A9%EB%B4%89%EB%8F%99",
+    "naverPlaceId": "1911743486",
+    "observedName": "뉴요커피자 본점",
+    "observedAddress": "전남광주 북구 용주로30번길 41-2 1층 뉴요커피자",
+    "district": "예대",
+    "addressVerified": true,
+    "nearby": true,
+    "reason": "공개 네이버 지도에서 동일 주소의 전남대 예대 식당으로 확인"
+  },
+  "menuObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/1911743486/menu?fromPanelNum=1&additionalHeight=76&timestamp=202611112331&locale=ko&svcName=map_pcv5&searchText=%EB%89%B4%EC%9A%94%EC%BB%A4%ED%94%BC%EC%9E%90%20%EC%9A%A9%EB%B4%89%EB%8F%99",
+    "checkedAt": "2026-11-11",
+    "priceContext": "in_store",
+    "menus": [
+      {
+        "name": "1+1 두판 피자",
+        "price": 30900,
+        "main": true
+      },
+      {
+        "name": "반반 피자 (Half&Half)",
+        "price": 19900,
+        "main": true
+      },
+      {
+        "name": "뉴요커 세트",
+        "price": 27900,
+        "main": true
+      },
+      {
+        "name": "훈제치킨 세트",
+        "price": 30900,
+        "main": true
+      },
+      {
+        "name": "피맥 세트",
+        "price": 23900,
+        "main": false
+      },
+      {
+        "name": "피소 세트",
+        "price": 20900,
+        "main": false
+      },
+      {
+        "name": "뉴요커 파티 피자",
+        "price": 24900,
+        "main": true
+      },
+      {
+        "name": "크래미 어셈블 피자",
+        "price": 24900,
+        "main": true
+      },
+      {
+        "name": "풀드포크 치즈 후라이 피자",
+        "price": 23900,
+        "main": true
+      },
+      {
+        "name": "아메리칸 그릴드 쉬림프 피자",
+        "price": 24900,
+        "main": true
+      },
+      {
+        "name": "쉬림프 핫치킨 피자",
+        "price": 24900,
+        "main": true
+      },
+      {
+        "name": "베이컨 페퍼로니 피자",
+        "price": 20900,
+        "main": true
+      },
+      {
+        "name": "슈퍼 콤비네이션 피자",
+        "price": 20900,
+        "main": true
+      },
+      {
+        "name": "트리플 고구마 피자",
+        "price": 20900,
+        "main": true
+      },
+      {
+        "name": "갈릭 쉬림프 피자",
+        "price": 21900,
+        "main": true
+      },
+      {
+        "name": "핫 스파이시 케이준 치킨 피자",
+        "price": 21900,
+        "main": true
+      },
+      {
+        "name": "레트로 소세지 피자",
+        "price": 21900,
+        "main": true
+      },
+      {
+        "name": "베이컨 체다 피자",
+        "price": 18900,
+        "main": true
+      },
+      {
+        "name": "콤비네이션 피자",
+        "price": 18900,
+        "main": true
+      },
+      {
+        "name": "아임 파인 하와이안 피자",
+        "price": 18900,
+        "main": true
+      },
+      {
+        "name": "베이컨 포테이토 피자",
+        "price": 18900,
+        "main": true
+      },
+      {
+        "name": "스위트 고구마무스 피자",
+        "price": 18900,
+        "main": true
+      },
+      {
+        "name": "스위트 콘치즈 피자",
+        "price": 18900,
+        "main": true
+      },
+      {
+        "name": "고르곤졸라 피자",
+        "price": 17900,
+        "main": true
+      },
+      {
+        "name": "더블 치즈 피자",
+        "price": 17900,
+        "main": true
+      },
+      {
+        "name": "뉴욕 페퍼로니 피자",
+        "price": 18900,
+        "main": true
+      },
+      {
+        "name": "리얼 불고기 피자",
+        "price": 18900,
+        "main": true
+      },
+      {
+        "name": "훈제치킨",
+        "price": 13000,
+        "main": true
+      },
+      {
+        "name": "치즈오븐스파게티",
+        "price": 6000,
+        "main": true
+      },
+      {
+        "name": "버팔로 봉",
+        "price": 6000,
+        "main": false
+      },
+      {
+        "name": "버팔로 윙",
+        "price": 6000,
+        "main": false
+      }
+    ],
+    "note": "메뉴 상태: confirmed. 원본 관찰·좌표 출처는 적용 manifest에 보관합니다.",
+    "status": "confirmed"
+  },
+  "attrs": {
+    "status": "partial",
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금",
+          "토",
+          "일"
+        ],
+        "open": "00:00",
+        "close": "02:00"
+      },
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금",
+          "토",
+          "일"
+        ],
+        "open": "09:30",
+        "close": "24:00"
+      }
+    ],
+    "menus": [
+      {
+        "name": "1+1 두판 피자",
+        "price": 30900,
+        "main": true
+      },
+      {
+        "name": "반반 피자 (Half&Half)",
+        "price": 19900,
+        "main": true
+      },
+      {
+        "name": "뉴요커 세트",
+        "price": 27900,
+        "main": true
+      },
+      {
+        "name": "훈제치킨 세트",
+        "price": 30900,
+        "main": true
+      },
+      {
+        "name": "피맥 세트",
+        "price": 23900,
+        "main": false
+      },
+      {
+        "name": "피소 세트",
+        "price": 20900,
+        "main": false
+      },
+      {
+        "name": "뉴요커 파티 피자",
+        "price": 24900,
+        "main": true
+      },
+      {
+        "name": "크래미 어셈블 피자",
+        "price": 24900,
+        "main": true
+      },
+      {
+        "name": "풀드포크 치즈 후라이 피자",
+        "price": 23900,
+        "main": true
+      },
+      {
+        "name": "아메리칸 그릴드 쉬림프 피자",
+        "price": 24900,
+        "main": true
+      },
+      {
+        "name": "쉬림프 핫치킨 피자",
+        "price": 24900,
+        "main": true
+      },
+      {
+        "name": "베이컨 페퍼로니 피자",
+        "price": 20900,
+        "main": true
+      },
+      {
+        "name": "슈퍼 콤비네이션 피자",
+        "price": 20900,
+        "main": true
+      },
+      {
+        "name": "트리플 고구마 피자",
+        "price": 20900,
+        "main": true
+      },
+      {
+        "name": "갈릭 쉬림프 피자",
+        "price": 21900,
+        "main": true
+      },
+      {
+        "name": "핫 스파이시 케이준 치킨 피자",
+        "price": 21900,
+        "main": true
+      },
+      {
+        "name": "레트로 소세지 피자",
+        "price": 21900,
+        "main": true
+      },
+      {
+        "name": "베이컨 체다 피자",
+        "price": 18900,
+        "main": true
+      },
+      {
+        "name": "콤비네이션 피자",
+        "price": 18900,
+        "main": true
+      },
+      {
+        "name": "아임 파인 하와이안 피자",
+        "price": 18900,
+        "main": true
+      },
+      {
+        "name": "베이컨 포테이토 피자",
+        "price": 18900,
+        "main": true
+      },
+      {
+        "name": "스위트 고구마무스 피자",
+        "price": 18900,
+        "main": true
+      },
+      {
+        "name": "스위트 콘치즈 피자",
+        "price": 18900,
+        "main": true
+      },
+      {
+        "name": "고르곤졸라 피자",
+        "price": 17900,
+        "main": true
+      },
+      {
+        "name": "더블 치즈 피자",
+        "price": 17900,
+        "main": true
+      },
+      {
+        "name": "뉴욕 페퍼로니 피자",
+        "price": 18900,
+        "main": true
+      },
+      {
+        "name": "리얼 불고기 피자",
+        "price": 18900,
+        "main": true
+      },
+      {
+        "name": "훈제치킨",
+        "price": 13000,
+        "main": true
+      },
+      {
+        "name": "치즈오븐스파게티",
+        "price": 6000,
+        "main": true
+      },
+      {
+        "name": "버팔로 봉",
+        "price": 6000,
+        "main": false
+      },
+      {
+        "name": "버팔로 윙",
+        "price": 6000,
+        "main": false
+      }
+    ]
+  },
+  "hoursObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/1911743486/home",
+    "checkedAt": "2026-11-12",
+    "status": "confirmed",
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금",
+          "토",
+          "일"
+        ],
+        "open": "00:00",
+        "close": "02:00"
+      },
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금",
+          "토",
+          "일"
+        ],
+        "open": "09:30",
+        "close": "24:00"
+      }
+    ],
+    "note": "매장 영업시간 관찰. 기존 attrs/research를 덮어쓰지 않습니다."
+  },
+  "research": {
+    "checkedAt": "2026-11-11",
+    "method": "web",
+    "identityStatus": "matched",
+    "queries": [
+      "뉴요커피자 본점 전남광주 북구 용주로30번길 41-2 1층 뉴요커피자"
+    ],
+    "sources": [
+      {
+        "id": "naver-place",
+        "url": "https://pcmap.place.naver.com/restaurant/1911743486/home?fromPanelNum=1&additionalHeight=76&timestamp=202611112331&locale=ko&svcName=map_pcv5&searchText=%EB%89%B4%EC%9A%94%EC%BB%A4%ED%94%BC%EC%9E%90%20%EC%9A%A9%EB%B4%89%EB%8F%99",
+        "title": "뉴요커피자 본점 네이버 지도",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "같은 주소의 지점 확인. 지도 등록 확인은 실시간 영업 중 보증이 아님"
+      },
+      {
+        "id": "naver-menu",
+        "url": "https://pcmap.place.naver.com/restaurant/1911743486/menu?fromPanelNum=1&additionalHeight=76&timestamp=202611112331&locale=ko&svcName=map_pcv5&searchText=%EB%89%B4%EC%9A%94%EC%BB%A4%ED%94%BC%EC%9E%90%20%EC%9A%A9%EB%B4%89%EB%8F%99",
+        "title": "뉴요커피자 본점 메뉴 탭",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "가격 맥락: in_store"
+      },
+      {
+        "id": "naver-hours",
+        "url": "https://pcmap.place.naver.com/restaurant/1911743486/home",
+        "title": "뉴요커피자 본점 영업시간",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "게시된 요일별 영업시간. 미확인은 추정하지 않음"
+      }
+    ],
+    "facts": {
+      "menus": {
+        "status": "unconfirmed",
+        "sourceIds": [],
+        "note": "매장 기준 정보 미확인. 배달·가격 맥락 불명 자료는 확정하지 않습니다."
+      },
+      "hours": {
+        "status": "confirmed",
+        "sourceIds": [
+          "naver-hours"
+        ],
+        "note": "매장 게시값을 확인했습니다.",
+        "value": [
+          {
+            "days": [
+              "월",
+              "화",
+              "수",
+              "목",
+              "금",
+              "토",
+              "일"
+            ],
+            "open": "00:00",
+            "close": "02:00"
+          },
+          {
+            "days": [
+              "월",
+              "화",
+              "수",
+              "목",
+              "금",
+              "토",
+              "일"
+            ],
+            "open": "09:30",
+            "close": "24:00"
+          }
+        ]
+      }
+    },
+    "unknownFields": [
+      "menus",
+      "mealType",
+      "takeout",
+      "verifiedAt",
+      "verifiedBy",
+      "break",
+      "lastOrder"
+    ],
+    "notes": [
+      "네이버 공개 지도 상세·메뉴 탭 직접 확인.",
+      "메뉴 탭에 게시된 전체 텍스트 메뉴 기준. 메뉴판 이미지 전체와 대조한 것은 아님.",
+      "main은 식사 가격 계산을 위한 보수적 분류. 공유 요리·곁들임·주류 세트·분량 불명 메뉴를 false로 두며 원문 메뉴와 가격은 모두 보존.",
+      "원문 영업시간은 art_batch4.json에 보관. 미게시 브레이크·라스트오더의 존재 여부는 확인하지 못함.",
+      "매일 09:30~다음 날 02:00이라는 명시 시간은 자정을 기준으로 두 구간으로 분리함.",
+      "피자는 한 판·공유세트 기준이며 술이 포함된 세트가 있음. 치즈오븐스파게티도 1인 식사 분량이 명시되지 않아 현재 모든 메뉴를 main=false로 보존.",
+      "공공 원본 업종은 백반/한정식이나 현재 네이버 상세의 피자 업종·메뉴 관찰에 따라 양식으로 분류함.",
+      "병합 입력: art_batch4_manifest.json",
+      "공개 네이버 화면 관찰이며 현장 검증이 아닙니다."
+    ]
+  },
+  "followupReview": {
+    "checkedAt": "2026-11-12",
+    "reasons": [
+      "공개 매장 식사 가격과 요일별 영업시간을 연결하여 추천 대상으로 전환했습니다."
+    ],
+    "sources": [
+      "https://pcmap.place.naver.com/restaurant/1911743486/home",
+      "https://pcmap.place.naver.com/restaurant/1911743486/menu/list",
+      "https://pcmap.place.naver.com/restaurant/1911743486/menu?fromPanelNum=1&additionalHeight=76&timestamp=202611112331&locale=ko&svcName=map_pcv5&searchText=%EB%89%B4%EC%9A%94%EC%BB%A4%ED%94%BC%EC%9E%90%20%EC%9A%A9%EB%B4%89%EB%8F%99"
+    ]
+  }
+}

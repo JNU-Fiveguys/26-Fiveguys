@@ -1,0 +1,1784 @@
+{
+  "description": "OSM 기반 보행 경로와 직선거리×우회계수 추정의 두 구간 도보 비교",
+  "assumptions": [
+    "실제 공공 상가정보의 좌표를 사용하지만 영업·메뉴·현장 도보를 검증한 것은 아니다.",
+    "시간표는 기존 학사 앱 attendance/summary 형식의 합성 일정이며 개인 시간표를 사용하지 않는다.",
+    "기준일 2026-11-11 수요일 11:50, 공과대 7호관 출발, 13:30 경영대 1호관 다음 수업.",
+    "건물 위치는 OSM 도형 중심점이다. 실내 이동·층 이동·출입구 정확도는 포함하지 않는다.",
+    "OSM 경로에도 위치에서 가까운 보행선까지의 직선 연결 구간(connectorM)이 포함되며 출입구 현장 확인이 필요하다.",
+    "직선 추정은 각 구간 직선거리×detourFactor÷분속의 올림, OSM은 경로 길이÷분속의 올림이다.",
+    "두 구간 모두 OSM을 사용한 여행만 차이 통계에 포함한다. 추정 대체는 원인과 함께 따로 센다.",
+    "추천 순위 비교는 실제 가게가 아닌 기존 s_01~s_08 가짜 샘플을 사용하며 학식은 별도 목록이다.",
+    "OSM도 실측 시간이 아니다. 신호 대기·임시 통제·미등록 보행로에 따른 차이는 남아 있다."
+  ],
+  "network": {
+    "file": "data/routing/walk_network.json",
+    "metadata": {
+      "attribution": "© OpenStreetMap contributors",
+      "license": "ODbL-1.0",
+      "licenseUrl": "https://www.openstreetmap.org/copyright",
+      "source": "https://overpass-api.de/api/interpreter",
+      "downloadedAt": "2026-11-11T08:58:23.282060+00:00",
+      "osmTimestamp": "2026-11-11T08:57:13Z",
+      "bbox": [
+        35.15,
+        126.88,
+        35.2,
+        126.94
+      ],
+      "query": "[out:json][timeout:40];\n(\n  way[\"highway\"](35.15,126.88,35.2,126.94);\n  way[\"barrier\"](35.15,126.88,35.2,126.94);\n  way[\"building\"][\"name\"](35.166,126.898,35.186,126.92);\n  node[\"building\"][\"name\"](35.166,126.898,35.186,126.92);\n  node[\"barrier\"](35.15,126.88,35.2,126.94);\n);\n(._;>;);\nout body;",
+      "notes": "Public OSM snapshot. Unknown access, unmapped entrances and missing paths require field verification."
+    }
+  },
+  "settings": {
+    "metersPerMin": 70.0,
+    "estimateDetourFactor": 1.3,
+    "maxSnapM": 150.0
+  },
+  "context": {
+    "date": "2026-11-11",
+    "start": "11:50",
+    "end": "13:30",
+    "requestedStart": "11:50",
+    "originSource": "timetable",
+    "destinationSource": "timetable",
+    "origin": {
+      "code": "공7",
+      "name": "공과대 7호관",
+      "lat": 35.178227,
+      "lng": 126.9091507,
+      "coordinateType": "building_centroid"
+    },
+    "destination": {
+      "code": "경영1",
+      "name": "경영대 1호관",
+      "lat": 35.1768165,
+      "lng": 126.9040362,
+      "coordinateType": "building_centroid"
+    },
+    "warnings": []
+  },
+  "syntheticAttendance": {
+    "semester": {
+      "id": "2026-2",
+      "start": "2026-09-01",
+      "end": "2026-12-20"
+    },
+    "current": "2026-2",
+    "courses": [
+      {
+        "excluded": false,
+        "sessions": [
+          {
+            "date": "2026-11-11",
+            "start": "11:00",
+            "end": "11:50",
+            "room": "공7-223",
+            "state": "scheduled",
+            "kind": "regular"
+          },
+          {
+            "date": "2026-11-11",
+            "start": "13:30",
+            "end": "14:45",
+            "room": "경영1-101",
+            "state": "scheduled",
+            "kind": "regular"
+          }
+        ]
+      }
+    ]
+  },
+  "selection": {
+    "surveyCount": 1567,
+    "selectedCount": 24,
+    "method": "좌표 중복 제거 후 경계 거리·sourceId 순으로 정렬한 목록에서 등간격 선택"
+  },
+  "summary": {
+    "tripCount": 24,
+    "fullyOsmTrips": 23,
+    "tripsWithFallback": 1,
+    "legSources": {
+      "estimate": 2,
+      "osm": 46
+    },
+    "fallbackReasons": {
+      "disconnected_walk_network": 2
+    },
+    "fullyOsmDeltaMinutes": {
+      "min": -5,
+      "median": 1,
+      "mean": 0.7,
+      "max": 7,
+      "longerTrips": 14,
+      "shorterTrips": 7,
+      "unchangedTrips": 2
+    }
+  },
+  "trips": [
+    {
+      "sourceId": "MA010120220806710701",
+      "name": "한솥도시락 전남대점",
+      "category": "한식",
+      "lat": 35.171897,
+      "lng": 126.900534,
+      "boundaryM": 0.0,
+      "baseline": {
+        "outbound": {
+          "distanceM": 1368.89,
+          "durationMin": 20,
+          "source": "estimate",
+          "fallbackReason": "estimate_requested",
+          "connectorM": 0.0
+        },
+        "toNextClass": {
+          "distanceM": 822.77,
+          "durationMin": 12,
+          "source": "estimate",
+          "fallbackReason": "estimate_requested",
+          "connectorM": 0.0
+        },
+        "totalWalkMin": 32,
+        "totalDistanceM": 2191.66
+      },
+      "routing": {
+        "outbound": {
+          "distanceM": 1299.55,
+          "durationMin": 19,
+          "source": "osm",
+          "fallbackReason": null,
+          "connectorM": 10.5
+        },
+        "toNextClass": {
+          "distanceM": 992.39,
+          "durationMin": 15,
+          "source": "osm",
+          "fallbackReason": null,
+          "connectorM": 7.63
+        },
+        "totalWalkMin": 34,
+        "totalDistanceM": 2291.94
+      },
+      "deltaMinutes": 2,
+      "deltaDistanceM": 100.28,
+      "fullyOsm": true
+    },
+    {
+      "sourceId": "MA0101202409A0145220",
+      "name": "푸라닭광주 용봉점",
+      "category": "패스트푸드",
+      "lat": 35.17142,
+      "lng": 126.902313,
+      "boundaryM": 37.0,
+      "baseline": {
+        "outbound": {
+          "distanceM": 1273.17,
+          "durationMin": 19,
+          "source": "estimate",
+          "fallbackReason": "estimate_requested",
+          "connectorM": 0.0
+        },
+        "toNextClass": {
+          "distanceM": 806.22,
+          "durationMin": 12,
+          "source": "estimate",
+          "fallbackReason": "estimate_requested",
+          "connectorM": 0.0
+        },
+        "totalWalkMin": 31,
+        "totalDistanceM": 2079.39
+      },
+      "routing": {
+        "outbound": {
+          "distanceM": 1222.48,
+          "durationMin": 18,
+          "source": "osm",
+          "fallbackReason": null,
+          "connectorM": 25.16
+        },
+        "toNextClass": {
+          "distanceM": 1103.94,
+          "durationMin": 16,
+          "source": "osm",
+          "fallbackReason": null,
+          "connectorM": 22.3
+        },
+        "totalWalkMin": 34,
+        "totalDistanceM": 2326.42
+      },
+      "deltaMinutes": 3,
+      "deltaDistanceM": 247.03,
+      "fullyOsm": true
+    },
+    {
+      "sourceId": "MA0101202608A0087104",
+      "name": "플뤼",
+      "category": "양식",
+      "lat": 35.176882,
+      "lng": 126.912988,
+      "boundaryM": 67.0,
+      "baseline": {
+        "outbound": {
+          "distanceM": 493.32,
+          "durationMin": 8,
+          "source": "estimate",
+          "fallbackReason": "estimate_requested",
+          "connectorM": 0.0
+        },
+        "toNextClass": {
+          "distanceM": 1057.74,
+          "durationMin": 16,
+          "source": "estimate",
+          "fallbackReason": "estimate_requested",
+          "connectorM": 0.0
+        },
+        "totalWalkMin": 24,
+        "totalDistanceM": 1551.06
+      },
+      "routing": {
+        "outbound": {
+          "distanceM": 608.23,
+          "durationMin": 9,
+          "source": "osm",
+          "fallbackReason": null,
+          "connectorM": 18.33
+        },
+        "toNextClass": {
+          "distanceM": 1237.03,
+          "durationMin": 18,
+          "source": "osm",
+          "fallbackReason": null,
+          "connectorM": 15.46
+        },
+        "totalWalkMin": 27,
+        "totalDistanceM": 1845.26
+      },
+      "deltaMinutes": 3,
+      "deltaDistanceM": 294.2,
+      "fullyOsm": true
+    },
+    {
+      "sourceId": "MA0101202305A0174721",
+      "name": "덮밥장사장 전남대점",
+      "category": "일식",
+      "lat": 35.175422,
+      "lng": 126.913506,
+      "boundaryM": 98.0,
+      "baseline": {
+        "outbound": {
+          "distanceM": 655.15,
+          "durationMin": 10,
+          "source": "estimate",
+          "fallbackReason": "estimate_requested",
+          "connectorM": 0.0
+        },
+        "toNextClass": {
+          "distanceM": 1136.92,
+          "durationMin": 17,
+          "source": "estimate",
+          "fallbackReason": "estimate_requested",
+          "connectorM": 0.0
+        },
+        "totalWalkMin": 27,
+        "totalDistanceM": 1792.07
+      },
+      "routing": {
+        "outbound": {
+          "distanceM": 671.45,
+          "durationMin": 10,
+          "source": "osm",
+          "fallbackReason": null,
+          "connectorM": 15.56
+        },
+        "toNextClass": {
+          "distanceM": 1205.83,
+          "durationMin": 18,
+          "source": "osm",
+          "fallbackReason": null,
+          "connectorM": 12.69
+        },
+        "totalWalkMin": 28,
+        "totalDistanceM": 1877.28
+      },
+      "deltaMinutes": 1,
+      "deltaDistanceM": 85.21,
+      "fullyOsm": true
+    },
+    {
+      "sourceId": "MA010120220808583789",
+      "name": "태극반점",
+      "category": "중식",
+      "lat": 35.177176,
+      "lng": 126.897597,
+      "boundaryM": 141.0,
+      "baseline": {
+        "outbound": {
+          "distanceM": 1373.54,
+          "durationMin": 20,
+          "source": "estimate",
+          "fallbackReason": "estimate_requested",
+          "connectorM": 0.0
+        },
+        "toNextClass": {
+          "distanceM": 762.59,
+          "durationMin": 11,
+          "source": "estimate",
+          "fallbackReason": "estimate_requested",
+          "connectorM": 0.0
+        },
+        "totalWalkMin": 31,
+        "totalDistanceM": 2136.13
+      },
+      "routing": {
+        "outbound": {
+          "distanceM": 1260.13,
+          "durationMin": 19,
+          "source": "osm",
+          "fallbackReason": null,
+          "connectorM": 15.11
+        },
+        "toNextClass": {
+          "distanceM": 703.03,
+          "durationMin": 11,
+          "source": "osm",
+          "fallbackReason": null,
+          "connectorM": 12.24
+        },
+        "totalWalkMin": 30,
+        "totalDistanceM": 1963.16
+      },
+      "deltaMinutes": -1,
+      "deltaDistanceM": -172.97,
+      "fullyOsm": true
+    },
+    {
+      "sourceId": "MA010120220809677177",
+      "name": "풍호양꼬치",
+      "category": "중식",
+      "lat": 35.178974,
+      "lng": 126.901975,
+      "boundaryM": 185.0,
+      "baseline": {
+        "outbound": {
+          "distanceM": 854.67,
+          "durationMin": 13,
+          "source": "estimate",
+          "fallbackReason": "estimate_requested",
+          "connectorM": 0.0
+        },
+        "toNextClass": {
+          "distanceM": 395.7,
+          "durationMin": 6,
+          "source": "estimate",
+          "fallbackReason": "estimate_requested",
+          "connectorM": 0.0
+        },
+        "totalWalkMin": 19,
+        "totalDistanceM": 1250.37
+      },
+      "routing": {
+        "outbound": {
+          "distanceM": 877.17,
+          "durationMin": 13,
+          "source": "osm",
+          "fallbackReason": null,
+          "connectorM": 17.02
+        },
+        "toNextClass": {
+          "distanceM": 461.49,
+          "durationMin": 7,
+          "source": "osm",
+          "fallbackReason": null,
+          "connectorM": 14.15
+        },
+        "totalWalkMin": 20,
+        "totalDistanceM": 1338.66
+      },
+      "deltaMinutes": 1,
+      "deltaDistanceM": 88.29,
+      "fullyOsm": true
+    },
+    {
+      "sourceId": "MA0101202311A0019059",
+      "name": "뚠뚠김치찌개",
+      "category": "한식",
+      "lat": 35.174891,
+      "lng": 126.915087,
+      "boundaryM": 237.0,
+      "baseline": {
+        "outbound": {
+          "distanceM": 851.18,
+          "durationMin": 13,
+          "source": "estimate",
+          "fallbackReason": "estimate_requested",
+          "connectorM": 0.0
+        },
+        "toNextClass": {
+          "distanceM": 1335.06,
+          "durationMin": 20,
+          "source": "estimate",
+          "fallbackReason": "estimate_requested",
+          "connectorM": 0.0
+        },
+        "totalWalkMin": 33,
+        "totalDistanceM": 2186.24
+      },
+      "routing": {
+        "outbound": {
+          "distanceM": 875.49,
+          "durationMin": 13,
+          "source": "osm",
+          "fallbackReason": null,
+          "connectorM": 18.11
+        },
+        "toNextClass": {
+          "distanceM": 1409.88,
+          "durationMin": 21,
+          "source": "osm",
+          "fallbackReason": null,
+          "connectorM": 15.25
+        },
+        "totalWalkMin": 34,
+        "totalDistanceM": 2285.37
+      },
+      "deltaMinutes": 1,
+      "deltaDistanceM": 99.13,
+      "fullyOsm": true
+    },
+    {
+      "sourceId": "MA0101202406A0009627",
+      "name": "탁주",
+      "category": "한식",
+      "lat": 35.17786,
+      "lng": 126.896213,
+      "boundaryM": 282.0,
+      "baseline": {
+        "outbound": {
+          "distanceM": 1529.55,
+          "durationMin": 22,
+          "source": "estimate",
+          "fallbackReason": "estimate_requested",
+          "connectorM": 0.0
+        },
+        "toNextClass": {
+          "distanceM": 936.57,
+          "durationMin": 14,
+          "source": "estimate",
+          "fallbackReason": "estimate_requested",
+          "connectorM": 0.0
+        },
+        "totalWalkMin": 36,
+        "totalDistanceM": 2466.12
+      },
+      "routing": {
+        "outbound": {
+          "distanceM": 1389.44,
+          "durationMin": 20,
+          "source": "osm",
+          "fallbackReason": null,
+          "connectorM": 25.02
+        },
+        "toNextClass": {
+          "distanceM": 891.37,
+          "durationMin": 13,
+          "source": "osm",
+          "fallbackReason": null,
+          "connectorM": 22.16
+        },
+        "totalWalkMin": 33,
+        "totalDistanceM": 2280.81
+      },
+      "deltaMinutes": -3,
+      "deltaDistanceM": -185.31,
+      "fullyOsm": true
+    },
+    {
+      "sourceId": "MA0101202310A0042145",
+      "name": "용봉수산",
+      "category": "일식",
+      "lat": 35.180811,
+      "lng": 126.900853,
+      "boundaryM": 325.0,
+      "baseline": {
+        "outbound": {
+          "distanceM": 1049.13,
+          "durationMin": 15,
+          "source": "estimate",
+          "fallbackReason": "estimate_requested",
+          "connectorM": 0.0
+        },
+        "toNextClass": {
+          "distanceM": 689.1,
+          "durationMin": 10,
+          "source": "estimate",
+          "fallbackReason": "estimate_requested",
+          "connectorM": 0.0
+        },
+        "totalWalkMin": 25,
+        "totalDistanceM": 1738.23
+      },
+      "routing": {
+        "outbound": {
+          "distanceM": 1267.9,
+          "durationMin": 19,
+          "source": "osm",
+          "fallbackReason": null,
+          "connectorM": 27.2
+        },
+        "toNextClass": {
+          "distanceM": 852.22,
+          "durationMin": 13,
+          "source": "osm",
+          "fallbackReason": null,
+          "connectorM": 24.33
+        },
+        "totalWalkMin": 32,
+        "totalDistanceM": 2120.12
+      },
+      "deltaMinutes": 7,
+      "deltaDistanceM": 381.89,
+      "fullyOsm": true
+    },
+    {
+      "sourceId": "MA010120220802501664",
+      "name": "칠분통닭 문흥점",
+      "category": "패스트푸드",
+      "lat": 35.179354,
+      "lng": 126.916148,
+      "boundaryM": 383.0,
+      "baseline": {
+        "outbound": {
+          "distanceM": 842.64,
+          "durationMin": 13,
+          "source": "estimate",
+          "fallbackReason": "estimate_requested",
+          "connectorM": 0.0
+        },
+        "toNextClass": {
+          "distanceM": 1477.31,
+          "durationMin": 22,
+          "source": "estimate",
+          "fallbackReason": "estimate_requested",
+          "connectorM": 0.0
+        },
+        "totalWalkMin": 35,
+        "totalDistanceM": 2319.95
+      },
+      "routing": {
+        "outbound": {
+          "distanceM": 797.1,
+          "durationMin": 12,
+          "source": "osm",
+          "fallbackReason": null,
+          "connectorM": 16.23
+        },
+        "toNextClass": {
+          "distanceM": 1485.23,
+          "durationMin": 22,
+          "source": "osm",
+          "fallbackReason": null,
+          "connectorM": 13.36
+        },
+        "totalWalkMin": 34,
+        "totalDistanceM": 2282.33
+      },
+      "deltaMinutes": -1,
+      "deltaDistanceM": -37.62,
+      "fullyOsm": true
+    },
+    {
+      "sourceId": "MA010120220807529527",
+      "name": "옛날전통순대",
+      "category": "국밥·찌개",
+      "lat": 35.185238,
+      "lng": 126.913232,
+      "boundaryM": 468.0,
+      "baseline": {
+        "outbound": {
+          "distanceM": 1122.33,
+          "durationMin": 17,
+          "source": "estimate",
+          "fallbackReason": "estimate_requested",
+          "connectorM": 0.0
+        },
+        "toNextClass": {
+          "distanceM": 1631.68,
+          "durationMin": 24,
+          "source": "estimate",
+          "fallbackReason": "estimate_requested",
+          "connectorM": 0.0
+        },
+        "totalWalkMin": 41,
+        "totalDistanceM": 2754.01
+      },
+      "routing": {
+        "outbound": {
+          "distanceM": 1172.77,
+          "durationMin": 17,
+          "source": "osm",
+          "fallbackReason": null,
+          "connectorM": 24.83
+        },
+        "toNextClass": {
+          "distanceM": 1631.64,
+          "durationMin": 24,
+          "source": "osm",
+          "fallbackReason": null,
+          "connectorM": 21.96
+        },
+        "totalWalkMin": 41,
+        "totalDistanceM": 2804.41
+      },
+      "deltaMinutes": 0,
+      "deltaDistanceM": 50.4,
+      "fullyOsm": true
+    },
+    {
+      "sourceId": "MA0101202601A0040647",
+      "name": "잘살아보세",
+      "category": "한식",
+      "lat": 35.179345,
+      "lng": 126.894125,
+      "boundaryM": 530.0,
+      "baseline": {
+        "outbound": {
+          "distanceM": 1782.66,
+          "durationMin": 26,
+          "source": "estimate",
+          "fallbackReason": "estimate_requested",
+          "connectorM": 0.0
+        },
+        "toNextClass": {
+          "distanceM": 1226.75,
+          "durationMin": 18,
+          "source": "estimate",
+          "fallbackReason": "estimate_requested",
+          "connectorM": 0.0
+        },
+        "totalWalkMin": 44,
+        "totalDistanceM": 3009.41
+      },
+      "routing": {
+        "outbound": {
+          "distanceM": 1552.0,
+          "durationMin": 23,
+          "source": "osm",
+          "fallbackReason": null,
+          "connectorM": 21.23
+        },
+        "toNextClass": {
+          "distanceM": 1077.84,
+          "durationMin": 16,
+          "source": "osm",
+          "fallbackReason": null,
+          "connectorM": 18.36
+        },
+        "totalWalkMin": 39,
+        "totalDistanceM": 2629.84
+      },
+      "deltaMinutes": -5,
+      "deltaDistanceM": -379.57,
+      "fullyOsm": true
+    },
+    {
+      "sourceId": "MA010120220807518320",
+      "name": "수지분식",
+      "category": "분식",
+      "lat": 35.18737,
+      "lng": 126.908783,
+      "boundaryM": 586.0,
+      "baseline": {
+        "outbound": {
+          "distanceM": 1322.37,
+          "durationMin": 19,
+          "source": "estimate",
+          "fallbackReason": "estimate_requested",
+          "connectorM": 0.0
+        },
+        "toNextClass": {
+          "distanceM": 1625.36,
+          "durationMin": 24,
+          "source": "estimate",
+          "fallbackReason": "estimate_requested",
+          "connectorM": 0.0
+        },
+        "totalWalkMin": 43,
+        "totalDistanceM": 2947.73
+      },
+      "routing": {
+        "outbound": {
+          "distanceM": 1437.71,
+          "durationMin": 21,
+          "source": "osm",
+          "fallbackReason": null,
+          "connectorM": 18.43
+        },
+        "toNextClass": {
+          "distanceM": 1682.62,
+          "durationMin": 25,
+          "source": "osm",
+          "fallbackReason": null,
+          "connectorM": 15.56
+        },
+        "totalWalkMin": 46,
+        "totalDistanceM": 3120.33
+      },
+      "deltaMinutes": 3,
+      "deltaDistanceM": 172.6,
+      "fullyOsm": true
+    },
+    {
+      "sourceId": "MA010120220804964980",
+      "name": "미미마라탕",
+      "category": "중식",
+      "lat": 35.178415,
+      "lng": 126.891239,
+      "boundaryM": 671.0,
+      "baseline": {
+        "outbound": {
+          "distanceM": 2116.49,
+          "durationMin": 31,
+          "source": "estimate",
+          "fallbackReason": "estimate_requested",
+          "connectorM": 0.0
+        },
+        "toNextClass": {
+          "distanceM": 1529.59,
+          "durationMin": 22,
+          "source": "estimate",
+          "fallbackReason": "estimate_requested",
+          "connectorM": 0.0
+        },
+        "totalWalkMin": 53,
+        "totalDistanceM": 3646.08
+      },
+      "routing": {
+        "outbound": {
+          "distanceM": 2116.49,
+          "durationMin": 31,
+          "source": "estimate",
+          "fallbackReason": "disconnected_walk_network",
+          "connectorM": 0.0
+        },
+        "toNextClass": {
+          "distanceM": 1529.59,
+          "durationMin": 22,
+          "source": "estimate",
+          "fallbackReason": "disconnected_walk_network",
+          "connectorM": 0.0
+        },
+        "totalWalkMin": 53,
+        "totalDistanceM": 3646.08
+      },
+      "deltaMinutes": 0,
+      "deltaDistanceM": 0.0,
+      "fullyOsm": false
+    },
+    {
+      "sourceId": "MA010120220813200524",
+      "name": "용봉백숙",
+      "category": "고기",
+      "lat": 35.182844,
+      "lng": 126.896141,
+      "boundaryM": 728.0,
+      "baseline": {
+        "outbound": {
+          "distanceM": 1675.73,
+          "durationMin": 24,
+          "source": "estimate",
+          "fallbackReason": "estimate_requested",
+          "connectorM": 0.0
+        },
+        "toNextClass": {
+          "distanceM": 1276.44,
+          "durationMin": 19,
+          "source": "estimate",
+          "fallbackReason": "estimate_requested",
+          "connectorM": 0.0
+        },
+        "totalWalkMin": 43,
+        "totalDistanceM": 2952.17
+      },
+      "routing": {
+        "outbound": {
+          "distanceM": 1759.73,
+          "durationMin": 26,
+          "source": "osm",
+          "fallbackReason": null,
+          "connectorM": 19.71
+        },
+        "toNextClass": {
+          "distanceM": 1312.89,
+          "durationMin": 19,
+          "source": "osm",
+          "fallbackReason": null,
+          "connectorM": 16.84
+        },
+        "totalWalkMin": 45,
+        "totalDistanceM": 3072.62
+      },
+      "deltaMinutes": 2,
+      "deltaDistanceM": 120.45,
+      "fullyOsm": true
+    },
+    {
+      "sourceId": "MA010120220806698050",
+      "name": "마실",
+      "category": "한식",
+      "lat": 35.183331,
+      "lng": 126.89625,
+      "boundaryM": 775.0,
+      "baseline": {
+        "outbound": {
+          "distanceM": 1693.38,
+          "durationMin": 25,
+          "source": "estimate",
+          "fallbackReason": "estimate_requested",
+          "connectorM": 0.0
+        },
+        "toNextClass": {
+          "distanceM": 1316.46,
+          "durationMin": 19,
+          "source": "estimate",
+          "fallbackReason": "estimate_requested",
+          "connectorM": 0.0
+        },
+        "totalWalkMin": 44,
+        "totalDistanceM": 3009.84
+      },
+      "routing": {
+        "outbound": {
+          "distanceM": 1841.25,
+          "durationMin": 27,
+          "source": "osm",
+          "fallbackReason": null,
+          "connectorM": 31.8
+        },
+        "toNextClass": {
+          "distanceM": 1403.27,
+          "durationMin": 21,
+          "source": "osm",
+          "fallbackReason": null,
+          "connectorM": 28.93
+        },
+        "totalWalkMin": 48,
+        "totalDistanceM": 3244.52
+      },
+      "deltaMinutes": 4,
+      "deltaDistanceM": 234.68,
+      "fullyOsm": true
+    },
+    {
+      "sourceId": "MA010120220807538442",
+      "name": "말바우먹거리",
+      "category": "한식",
+      "lat": 35.172155,
+      "lng": 126.920776,
+      "boundaryM": 814.0,
+      "baseline": {
+        "outbound": {
+          "distanceM": 1630.1,
+          "durationMin": 24,
+          "source": "estimate",
+          "fallbackReason": "estimate_requested",
+          "connectorM": 0.0
+        },
+        "toNextClass": {
+          "distanceM": 2089.57,
+          "durationMin": 30,
+          "source": "estimate",
+          "fallbackReason": "estimate_requested",
+          "connectorM": 0.0
+        },
+        "totalWalkMin": 54,
+        "totalDistanceM": 3719.67
+      },
+      "routing": {
+        "outbound": {
+          "distanceM": 1560.95,
+          "durationMin": 23,
+          "source": "osm",
+          "fallbackReason": null,
+          "connectorM": 19.1
+        },
+        "toNextClass": {
+          "distanceM": 2095.33,
+          "durationMin": 30,
+          "source": "osm",
+          "fallbackReason": null,
+          "connectorM": 16.24
+        },
+        "totalWalkMin": 53,
+        "totalDistanceM": 3656.28
+      },
+      "deltaMinutes": -1,
+      "deltaDistanceM": -63.39,
+      "fullyOsm": true
+    },
+    {
+      "sourceId": "MA010120220807578445",
+      "name": "케이티그룹희망나눔재단북광주재",
+      "category": "학식",
+      "lat": 35.164528,
+      "lng": 126.906701,
+      "boundaryM": 857.0,
+      "baseline": {
+        "outbound": {
+          "distanceM": 2001.28,
+          "durationMin": 29,
+          "source": "estimate",
+          "fallbackReason": "estimate_requested",
+          "connectorM": 0.0
+        },
+        "toNextClass": {
+          "distanceM": 1804.04,
+          "durationMin": 26,
+          "source": "estimate",
+          "fallbackReason": "estimate_requested",
+          "connectorM": 0.0
+        },
+        "totalWalkMin": 55,
+        "totalDistanceM": 3805.32
+      },
+      "routing": {
+        "outbound": {
+          "distanceM": 2042.7,
+          "durationMin": 30,
+          "source": "osm",
+          "fallbackReason": null,
+          "connectorM": 40.01
+        },
+        "toNextClass": {
+          "distanceM": 1939.09,
+          "durationMin": 28,
+          "source": "osm",
+          "fallbackReason": null,
+          "connectorM": 37.15
+        },
+        "totalWalkMin": 58,
+        "totalDistanceM": 3981.79
+      },
+      "deltaMinutes": 3,
+      "deltaDistanceM": 176.47,
+      "fullyOsm": true
+    },
+    {
+      "sourceId": "MA0101202303A0075501",
+      "name": "반달떡갈비",
+      "category": "고기",
+      "lat": 35.172264,
+      "lng": 126.921918,
+      "boundaryM": 907.0,
+      "baseline": {
+        "outbound": {
+          "distanceM": 1737.44,
+          "durationMin": 25,
+          "source": "estimate",
+          "fallbackReason": "estimate_requested",
+          "connectorM": 0.0
+        },
+        "toNextClass": {
+          "distanceM": 2212.99,
+          "durationMin": 32,
+          "source": "estimate",
+          "fallbackReason": "estimate_requested",
+          "connectorM": 0.0
+        },
+        "totalWalkMin": 57,
+        "totalDistanceM": 3950.43
+      },
+      "routing": {
+        "outbound": {
+          "distanceM": 1599.59,
+          "durationMin": 23,
+          "source": "osm",
+          "fallbackReason": null,
+          "connectorM": 19.07
+        },
+        "toNextClass": {
+          "distanceM": 2133.98,
+          "durationMin": 31,
+          "source": "osm",
+          "fallbackReason": null,
+          "connectorM": 16.2
+        },
+        "totalWalkMin": 54,
+        "totalDistanceM": 3733.57
+      },
+      "deltaMinutes": -3,
+      "deltaDistanceM": -216.86,
+      "fullyOsm": true
+    },
+    {
+      "sourceId": "MA010120220807519095",
+      "name": "전승규감자탕이야기",
+      "category": "국밥·찌개",
+      "lat": 35.187451,
+      "lng": 126.897386,
+      "boundaryM": 950.0,
+      "baseline": {
+        "outbound": {
+          "distanceM": 1926.09,
+          "durationMin": 28,
+          "source": "estimate",
+          "fallbackReason": "estimate_requested",
+          "connectorM": 0.0
+        },
+        "toNextClass": {
+          "distanceM": 1726.41,
+          "durationMin": 25,
+          "source": "estimate",
+          "fallbackReason": "estimate_requested",
+          "connectorM": 0.0
+        },
+        "totalWalkMin": 53,
+        "totalDistanceM": 3652.5
+      },
+      "routing": {
+        "outbound": {
+          "distanceM": 1967.17,
+          "durationMin": 29,
+          "source": "osm",
+          "fallbackReason": null,
+          "connectorM": 24.43
+        },
+        "toNextClass": {
+          "distanceM": 1740.23,
+          "durationMin": 25,
+          "source": "osm",
+          "fallbackReason": null,
+          "connectorM": 21.56
+        },
+        "totalWalkMin": 54,
+        "totalDistanceM": 3707.4
+      },
+      "deltaMinutes": 1,
+      "deltaDistanceM": 54.9,
+      "fullyOsm": true
+    },
+    {
+      "sourceId": "MA010120220813353083",
+      "name": "고흥어부네회수산",
+      "category": "일식",
+      "lat": 35.171724,
+      "lng": 126.92272,
+      "boundaryM": 996.0,
+      "baseline": {
+        "outbound": {
+          "distanceM": 1858.57,
+          "durationMin": 27,
+          "source": "estimate",
+          "fallbackReason": "estimate_requested",
+          "connectorM": 0.0
+        },
+        "toNextClass": {
+          "distanceM": 2327.15,
+          "durationMin": 34,
+          "source": "estimate",
+          "fallbackReason": "estimate_requested",
+          "connectorM": 0.0
+        },
+        "totalWalkMin": 61,
+        "totalDistanceM": 4185.72
+      },
+      "routing": {
+        "outbound": {
+          "distanceM": 1704.03,
+          "durationMin": 25,
+          "source": "osm",
+          "fallbackReason": null,
+          "connectorM": 21.2
+        },
+        "toNextClass": {
+          "distanceM": 2238.42,
+          "durationMin": 32,
+          "source": "osm",
+          "fallbackReason": null,
+          "connectorM": 18.33
+        },
+        "totalWalkMin": 57,
+        "totalDistanceM": 3942.45
+      },
+      "deltaMinutes": -4,
+      "deltaDistanceM": -243.27,
+      "fullyOsm": true
+    },
+    {
+      "sourceId": "MA010120220811499294",
+      "name": "남촌뷔페식당",
+      "category": "한식",
+      "lat": 35.165203,
+      "lng": 126.916535,
+      "boundaryM": 1050.0,
+      "baseline": {
+        "outbound": {
+          "distanceM": 2075.03,
+          "durationMin": 30,
+          "source": "estimate",
+          "fallbackReason": "estimate_requested",
+          "connectorM": 0.0
+        },
+        "toNextClass": {
+          "distanceM": 2235.96,
+          "durationMin": 32,
+          "source": "estimate",
+          "fallbackReason": "estimate_requested",
+          "connectorM": 0.0
+        },
+        "totalWalkMin": 62,
+        "totalDistanceM": 4310.99
+      },
+      "routing": {
+        "outbound": {
+          "distanceM": 1973.1,
+          "durationMin": 29,
+          "source": "osm",
+          "fallbackReason": null,
+          "connectorM": 23.07
+        },
+        "toNextClass": {
+          "distanceM": 2348.46,
+          "durationMin": 34,
+          "source": "osm",
+          "fallbackReason": null,
+          "connectorM": 20.2
+        },
+        "totalWalkMin": 63,
+        "totalDistanceM": 4321.56
+      },
+      "deltaMinutes": 1,
+      "deltaDistanceM": 10.57,
+      "fullyOsm": true
+    },
+    {
+      "sourceId": "MA010120220807606540",
+      "name": "큰뼈",
+      "category": "한식",
+      "lat": 35.185974,
+      "lng": 126.922201,
+      "boundaryM": 1124.0,
+      "baseline": {
+        "outbound": {
+          "distanceM": 1905.62,
+          "durationMin": 28,
+          "source": "estimate",
+          "fallbackReason": "estimate_requested",
+          "connectorM": 0.0
+        },
+        "toNextClass": {
+          "distanceM": 2521.55,
+          "durationMin": 37,
+          "source": "estimate",
+          "fallbackReason": "estimate_requested",
+          "connectorM": 0.0
+        },
+        "totalWalkMin": 65,
+        "totalDistanceM": 4427.17
+      },
+      "routing": {
+        "outbound": {
+          "distanceM": 2094.34,
+          "durationMin": 30,
+          "source": "osm",
+          "fallbackReason": null,
+          "connectorM": 22.34
+        },
+        "toNextClass": {
+          "distanceM": 2553.21,
+          "durationMin": 37,
+          "source": "osm",
+          "fallbackReason": null,
+          "connectorM": 19.47
+        },
+        "totalWalkMin": 67,
+        "totalDistanceM": 4647.55
+      },
+      "deltaMinutes": 2,
+      "deltaDistanceM": 220.38,
+      "fullyOsm": true
+    },
+    {
+      "sourceId": "MA010120220808005993",
+      "name": "장어나라",
+      "category": "한식",
+      "lat": 35.18792,
+      "lng": 126.921574,
+      "boundaryM": 1200.0,
+      "baseline": {
+        "outbound": {
+          "distanceM": 2029.18,
+          "durationMin": 29,
+          "source": "estimate",
+          "fallbackReason": "estimate_requested",
+          "connectorM": 0.0
+        },
+        "toNextClass": {
+          "distanceM": 2620.97,
+          "durationMin": 38,
+          "source": "estimate",
+          "fallbackReason": "estimate_requested",
+          "connectorM": 0.0
+        },
+        "totalWalkMin": 67,
+        "totalDistanceM": 4650.15
+      },
+      "routing": {
+        "outbound": {
+          "distanceM": 2095.82,
+          "durationMin": 30,
+          "source": "osm",
+          "fallbackReason": null,
+          "connectorM": 21.74
+        },
+        "toNextClass": {
+          "distanceM": 2554.68,
+          "durationMin": 37,
+          "source": "osm",
+          "fallbackReason": null,
+          "connectorM": 18.88
+        },
+        "totalWalkMin": 67,
+        "totalDistanceM": 4650.5
+      },
+      "deltaMinutes": 0,
+      "deltaDistanceM": 0.35,
+      "fullyOsm": true
+    }
+  ],
+  "manualOverrideExample": {
+    "input": {
+      "nextRoom": "공7-223",
+      "nextStart": null
+    },
+    "context": {
+      "date": "2026-11-11",
+      "start": "11:50",
+      "end": "13:30",
+      "requestedStart": "11:50",
+      "originSource": "timetable",
+      "destinationSource": "manual",
+      "origin": {
+        "code": "공7",
+        "name": "공과대 7호관",
+        "lat": 35.178227,
+        "lng": 126.9091507,
+        "coordinateType": "building_centroid"
+      },
+      "destination": {
+        "code": "공7",
+        "name": "공과대 7호관",
+        "lat": 35.178227,
+        "lng": 126.9091507,
+        "coordinateType": "building_centroid"
+      },
+      "warnings": []
+    },
+    "trip": {
+      "sourceId": "MA010120220806710701",
+      "name": "한솥도시락 전남대점",
+      "category": "한식",
+      "lat": 35.171897,
+      "lng": 126.900534,
+      "boundaryM": 0.0,
+      "baseline": {
+        "outbound": {
+          "distanceM": 1368.89,
+          "durationMin": 20,
+          "source": "estimate",
+          "fallbackReason": "estimate_requested",
+          "connectorM": 0.0
+        },
+        "toNextClass": {
+          "distanceM": 1368.89,
+          "durationMin": 20,
+          "source": "estimate",
+          "fallbackReason": "estimate_requested",
+          "connectorM": 0.0
+        },
+        "totalWalkMin": 40,
+        "totalDistanceM": 2737.78
+      },
+      "routing": {
+        "outbound": {
+          "distanceM": 1299.55,
+          "durationMin": 19,
+          "source": "osm",
+          "fallbackReason": null,
+          "connectorM": 10.5
+        },
+        "toNextClass": {
+          "distanceM": 1299.55,
+          "durationMin": 19,
+          "source": "osm",
+          "fallbackReason": null,
+          "connectorM": 10.5
+        },
+        "totalWalkMin": 38,
+        "totalDistanceM": 2599.1
+      },
+      "deltaMinutes": -2,
+      "deltaDistanceM": -138.68,
+      "fullyOsm": true
+    }
+  },
+  "sampleRankings": {
+    "timetable": {
+      "context": {
+        "date": "2026-11-11",
+        "start": "11:50",
+        "end": "13:30",
+        "requestedStart": "11:50",
+        "originSource": "timetable",
+        "destinationSource": "timetable",
+        "origin": {
+          "code": "공7",
+          "name": "공과대 7호관",
+          "lat": 35.178227,
+          "lng": 126.9091507,
+          "coordinateType": "building_centroid"
+        },
+        "destination": {
+          "code": "경영1",
+          "name": "경영대 1호관",
+          "lat": 35.1768165,
+          "lng": 126.9040362,
+          "coordinateType": "building_centroid"
+        },
+        "warnings": []
+      },
+      "sampleCount": 8,
+      "results": {
+        "baseline": {
+          "top": [
+            {
+              "placeId": "s_05",
+              "name": "샘플식당 05 · 포장 되는 분식",
+              "category": "분식",
+              "score": 0.638554,
+              "totalWalkMin": 15,
+              "needMin": 42,
+              "fit": "ok",
+              "legSources": [
+                "estimate",
+                "estimate"
+              ]
+            },
+            {
+              "placeId": "s_03",
+              "name": "샘플식당 03 · 일요일 휴무 중식",
+              "category": "중식",
+              "score": 0.63253,
+              "totalWalkMin": 16,
+              "needMin": 59,
+              "fit": "ok",
+              "legSources": [
+                "estimate",
+                "estimate"
+              ]
+            },
+            {
+              "placeId": "s_01",
+              "name": "샘플식당 01 · 평범한 한식",
+              "category": "한식",
+              "score": 0.60241,
+              "totalWalkMin": 21,
+              "needMin": 64,
+              "fit": "ok",
+              "legSources": [
+                "estimate",
+                "estimate"
+              ]
+            }
+          ],
+          "more": [
+            {
+              "placeId": "s_02",
+              "name": "샘플식당 02 · 브레이크 있는 일식",
+              "category": "일식",
+              "score": 0.578313,
+              "totalWalkMin": 25,
+              "needMin": 68,
+              "fit": "ok",
+              "legSources": [
+                "estimate",
+                "estimate"
+              ]
+            },
+            {
+              "placeId": "s_07",
+              "name": "샘플식당 07 · 먼 국밥집",
+              "category": "국밥·찌개",
+              "score": 0.427711,
+              "totalWalkMin": 47,
+              "needMin": 90,
+              "fit": "ok",
+              "legSources": [
+                "estimate",
+                "estimate"
+              ]
+            }
+          ],
+          "tight": [],
+          "cafeteria": [
+            {
+              "placeId": "s_08",
+              "name": "샘플 학생식당",
+              "category": "학식",
+              "score": 0.608434,
+              "totalWalkMin": 14,
+              "needMin": 49,
+              "fit": "ok",
+              "legSources": [
+                "estimate",
+                "estimate"
+              ]
+            }
+          ],
+          "excluded": {
+            "unavailable": 0,
+            "noInfo": 1,
+            "never": 0,
+            "filtered": 0,
+            "overBudget": 0,
+            "tooFar": 0,
+            "overTime": 1,
+            "closed": 0
+          }
+        },
+        "routing": {
+          "top": [
+            {
+              "placeId": "s_05",
+              "name": "샘플식당 05 · 포장 되는 분식",
+              "category": "분식",
+              "score": 0.614458,
+              "totalWalkMin": 19,
+              "needMin": 46,
+              "fit": "ok",
+              "legSources": [
+                "osm",
+                "osm"
+              ]
+            },
+            {
+              "placeId": "s_03",
+              "name": "샘플식당 03 · 일요일 휴무 중식",
+              "category": "중식",
+              "score": 0.614458,
+              "totalWalkMin": 19,
+              "needMin": 62,
+              "fit": "ok",
+              "legSources": [
+                "osm",
+                "osm"
+              ]
+            },
+            {
+              "placeId": "s_01",
+              "name": "샘플식당 01 · 평범한 한식",
+              "category": "한식",
+              "score": 0.596386,
+              "totalWalkMin": 22,
+              "needMin": 65,
+              "fit": "ok",
+              "legSources": [
+                "osm",
+                "osm"
+              ]
+            }
+          ],
+          "more": [
+            {
+              "placeId": "s_02",
+              "name": "샘플식당 02 · 브레이크 있는 일식",
+              "category": "일식",
+              "score": 0.572289,
+              "totalWalkMin": 26,
+              "needMin": 69,
+              "fit": "ok",
+              "legSources": [
+                "osm",
+                "osm"
+              ]
+            },
+            {
+              "placeId": "s_07",
+              "name": "샘플식당 07 · 먼 국밥집",
+              "category": "국밥·찌개",
+              "score": 0.403614,
+              "totalWalkMin": 49,
+              "needMin": 92,
+              "fit": "ok",
+              "legSources": [
+                "osm",
+                "osm"
+              ]
+            }
+          ],
+          "tight": [],
+          "cafeteria": [
+            {
+              "placeId": "s_08",
+              "name": "샘플 학생식당",
+              "category": "학식",
+              "score": 0.578313,
+              "totalWalkMin": 19,
+              "needMin": 54,
+              "fit": "ok",
+              "legSources": [
+                "osm",
+                "osm"
+              ]
+            }
+          ],
+          "excluded": {
+            "unavailable": 0,
+            "noInfo": 1,
+            "never": 0,
+            "filtered": 0,
+            "overBudget": 0,
+            "tooFar": 0,
+            "overTime": 1,
+            "closed": 0
+          }
+        }
+      }
+    },
+    "manualOverride": {
+      "context": {
+        "date": "2026-11-11",
+        "start": "11:50",
+        "end": "13:30",
+        "requestedStart": "11:50",
+        "originSource": "timetable",
+        "destinationSource": "manual",
+        "origin": {
+          "code": "공7",
+          "name": "공과대 7호관",
+          "lat": 35.178227,
+          "lng": 126.9091507,
+          "coordinateType": "building_centroid"
+        },
+        "destination": {
+          "code": "공7",
+          "name": "공과대 7호관",
+          "lat": 35.178227,
+          "lng": 126.9091507,
+          "coordinateType": "building_centroid"
+        },
+        "warnings": []
+      },
+      "sampleCount": 8,
+      "results": {
+        "baseline": {
+          "top": [
+            {
+              "placeId": "s_05",
+              "name": "샘플식당 05 · 포장 되는 분식",
+              "category": "분식",
+              "score": 0.680723,
+              "totalWalkMin": 8,
+              "needMin": 35,
+              "fit": "ok",
+              "legSources": [
+                "estimate",
+                "estimate"
+              ]
+            },
+            {
+              "placeId": "s_01",
+              "name": "샘플식당 01 · 평범한 한식",
+              "category": "한식",
+              "score": 0.656627,
+              "totalWalkMin": 12,
+              "needMin": 55,
+              "fit": "ok",
+              "legSources": [
+                "estimate",
+                "estimate"
+              ]
+            },
+            {
+              "placeId": "s_02",
+              "name": "샘플식당 02 · 브레이크 있는 일식",
+              "category": "일식",
+              "score": 0.63253,
+              "totalWalkMin": 16,
+              "needMin": 59,
+              "fit": "ok",
+              "legSources": [
+                "estimate",
+                "estimate"
+              ]
+            }
+          ],
+          "more": [
+            {
+              "placeId": "s_03",
+              "name": "샘플식당 03 · 일요일 휴무 중식",
+              "category": "중식",
+              "score": 0.608434,
+              "totalWalkMin": 20,
+              "needMin": 63,
+              "fit": "ok",
+              "legSources": [
+                "estimate",
+                "estimate"
+              ]
+            },
+            {
+              "placeId": "s_07",
+              "name": "샘플식당 07 · 먼 국밥집",
+              "category": "국밥·찌개",
+              "score": 0.343373,
+              "totalWalkMin": 54,
+              "needMin": 97,
+              "fit": "ok",
+              "legSources": [
+                "estimate",
+                "estimate"
+              ]
+            }
+          ],
+          "tight": [],
+          "cafeteria": [
+            {
+              "placeId": "s_08",
+              "name": "샘플 학생식당",
+              "category": "학식",
+              "score": 0.63253,
+              "totalWalkMin": 10,
+              "needMin": 45,
+              "fit": "ok",
+              "legSources": [
+                "estimate",
+                "estimate"
+              ]
+            }
+          ],
+          "excluded": {
+            "unavailable": 0,
+            "noInfo": 1,
+            "never": 0,
+            "filtered": 0,
+            "overBudget": 0,
+            "tooFar": 0,
+            "overTime": 0,
+            "closed": 1
+          }
+        },
+        "routing": {
+          "top": [
+            {
+              "placeId": "s_05",
+              "name": "샘플식당 05 · 포장 되는 분식",
+              "category": "분식",
+              "score": 0.668675,
+              "totalWalkMin": 10,
+              "needMin": 37,
+              "fit": "ok",
+              "legSources": [
+                "osm",
+                "osm"
+              ]
+            },
+            {
+              "placeId": "s_01",
+              "name": "샘플식당 01 · 평범한 한식",
+              "category": "한식",
+              "score": 0.656627,
+              "totalWalkMin": 12,
+              "needMin": 55,
+              "fit": "ok",
+              "legSources": [
+                "osm",
+                "osm"
+              ]
+            },
+            {
+              "placeId": "s_02",
+              "name": "샘플식당 02 · 브레이크 있는 일식",
+              "category": "일식",
+              "score": 0.63253,
+              "totalWalkMin": 16,
+              "needMin": 59,
+              "fit": "ok",
+              "legSources": [
+                "osm",
+                "osm"
+              ]
+            }
+          ],
+          "more": [
+            {
+              "placeId": "s_03",
+              "name": "샘플식당 03 · 일요일 휴무 중식",
+              "category": "중식",
+              "score": 0.608434,
+              "totalWalkMin": 20,
+              "needMin": 63,
+              "fit": "ok",
+              "legSources": [
+                "osm",
+                "osm"
+              ]
+            },
+            {
+              "placeId": "s_07",
+              "name": "샘플식당 07 · 먼 국밥집",
+              "category": "국밥·찌개",
+              "score": 0.391566,
+              "totalWalkMin": 50,
+              "needMin": 93,
+              "fit": "ok",
+              "legSources": [
+                "osm",
+                "osm"
+              ]
+            }
+          ],
+          "tight": [],
+          "cafeteria": [
+            {
+              "placeId": "s_08",
+              "name": "샘플 학생식당",
+              "category": "학식",
+              "score": 0.596386,
+              "totalWalkMin": 16,
+              "needMin": 51,
+              "fit": "ok",
+              "legSources": [
+                "osm",
+                "osm"
+              ]
+            }
+          ],
+          "excluded": {
+            "unavailable": 0,
+            "noInfo": 1,
+            "never": 0,
+            "filtered": 0,
+            "overBudget": 0,
+            "tooFar": 0,
+            "overTime": 0,
+            "closed": 1
+          }
+        }
+      }
+    }
+  },
+  "inputSha256": {
+    "data/settings.json": "e4dc79c694b2fdbc4a02832ae152c892bc0b597bb933bfeac8fca9f43ecbd3ef",
+    "data/buildings.json": "ef45f01dfc82c749e5bc16ff90490f67f69b8ceba560d6909027fe3ed739d04c",
+    "data/survey/candidates.csv": "13805ad2bc7a88a51bf48a5697bc58564d5ca868ef5366f0cdd019e0b39ee70a",
+    "data/routing/walk_network.json": "d384bfc81cf0f12e250c2ffc24dcc7685976ba587ed2b4d00491196e6cd9a563",
+    "data/samples/s_01.json": "de12c9a7d2c7070c71b3d6b9743228ddba5e70d8664dc705f54552bd8def15fe",
+    "data/samples/s_02.json": "cc44a79c5f5c8a6daa9a54294531f3c8ce4c0c69ebb9fb4fe67eaf89ee813c3e",
+    "data/samples/s_03.json": "e0ecf98e1cd0496019a4ae2df90cc6d1e783e631b0e7ad1204426d44bd76bc08",
+    "data/samples/s_04.json": "71010929b38de818493abd48be18024b034e4d0257025570e1cb2ad1d9878521",
+    "data/samples/s_05.json": "04abed4930530d4b69d31bda02123f341de43ab2620913e3e2f905b504faee0b",
+    "data/samples/s_06.json": "39b4a0102bb3958f145338438fb319bc8834b8038c6faa8ba999abd78fea65ba",
+    "data/samples/s_07.json": "45ed7589b99e4d0352d5a45b509f3a78550b42ce7d235ffe6b572baa77f8e389",
+    "data/samples/s_08.json": "07ea7ee449e015a123a663ee3511638ef2c774f919618d3b5c95b304df69dbe2"
+  }
+}

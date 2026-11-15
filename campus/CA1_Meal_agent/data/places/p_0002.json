@@ -1,0 +1,183 @@
+{
+  "version": 1,
+  "id": "p_0002",
+  "name": "놀부부대찌개 전대상대점",
+  "category": "국밥·찌개",
+  "lat": 35.1771432711677,
+  "lng": 126.901384342985,
+  "address": "전남광주 북구 설죽로202번길 72",
+  "source": "semas",
+  "sourceId": "MA010120220802989428",
+  "sourceStatus": "active",
+  "attrs": {
+    "status": "partial",
+    "menus": [
+      {
+        "name": "옛맛부대",
+        "price": 7500,
+        "main": true
+      },
+      {
+        "name": "놀부부대",
+        "price": 7900,
+        "main": true
+      },
+      {
+        "name": "치즈부대",
+        "price": 7900,
+        "main": true
+      },
+      {
+        "name": "김치부대",
+        "price": 7900,
+        "main": true
+      },
+      {
+        "name": "우삼겹부대",
+        "price": 8900,
+        "main": true
+      },
+      {
+        "name": "쭈곱새",
+        "price": 12000,
+        "main": true
+      }
+    ],
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금",
+          "토",
+          "일"
+        ],
+        "open": "11:00",
+        "close": "22:00"
+      }
+    ]
+  },
+  "research": {
+    "identityStatus": "matched",
+    "queries": [
+      "놀부부대찌개 전대상대점 설죽로202번길 72 메뉴 영업시간",
+      "\"놀부부대찌개\" \"상대점\"",
+      "\"놀부부대찌개\" \"설죽로202번길\""
+    ],
+    "sources": [
+      {
+        "id": "s1",
+        "url": "https://xn--hg4bni030c9qb.org/ew_detail.php?category_code_fk=A-1&num=3684&page=65&prim_code=CA167326&user_name=",
+        "title": "더 편한세상 놀부부대찌개 전대상대점",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "상호·주소 일치"
+      }
+    ],
+    "facts": {
+      "menus": {
+        "status": "partial",
+        "value": [],
+        "sourceIds": [
+          "s1"
+        ],
+        "note": "부대찌개 메뉴명과 주소는 확인되나 가격 미표시. 우치로100번길 15의 광주북구점은 다른 지점이므로 가격·시간을 가져오지 않음."
+      },
+      "hours": {
+        "status": "unconfirmed",
+        "value": [],
+        "sourceIds": [],
+        "note": "요일별 영업시간을 확인하지 못함."
+      }
+    },
+    "notes": [],
+    "checkedAt": "2026-11-11",
+    "method": "web",
+    "unknownFields": [
+      "menus",
+      "hours",
+      "mealType",
+      "takeout",
+      "verifiedAt",
+      "verifiedBy",
+      "break",
+      "lastOrder"
+    ]
+  },
+  "availability": {
+    "status": "listed",
+    "provider": "naver",
+    "checkedAt": "2026-11-11",
+    "sourceUrl": "https://pcmap.place.naver.com/place/37504654",
+    "naverPlaceId": "37504654",
+    "observedName": "놀부부대찌개 전대상대점",
+    "observedAddress": "전남광주 북구 설죽로202번길 72",
+    "district": "상대",
+    "addressVerified": true,
+    "nearby": true,
+    "reason": "공개 네이버 지도에서 동일 주소의 전남대 상대 식당으로 확인"
+  },
+  "menuObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/37504654/menu/list",
+    "checkedAt": "2026-11-11",
+    "priceContext": "in_store",
+    "menus": [
+      {
+        "name": "옛맛부대",
+        "price": 7500,
+        "main": true
+      },
+      {
+        "name": "놀부부대",
+        "price": 7900,
+        "main": true
+      },
+      {
+        "name": "치즈부대",
+        "price": 7900,
+        "main": true
+      },
+      {
+        "name": "김치부대",
+        "price": 7900,
+        "main": true
+      },
+      {
+        "name": "우삼겹부대",
+        "price": 8900,
+        "main": true
+      },
+      {
+        "name": "쭈곱새",
+        "price": 12000,
+        "main": true
+      }
+    ],
+    "note": "메뉴 상태: confirmed. 원본 관찰·좌표 출처는 적용 manifest에 보관합니다.",
+    "status": "confirmed"
+  },
+  "hoursObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/place/37504654",
+    "checkedAt": "2026-11-11",
+    "status": "confirmed",
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금",
+          "토",
+          "일"
+        ],
+        "open": "11:00",
+        "close": "22:00"
+      }
+    ],
+    "note": "매장 영업시간 관찰. 기존 attrs/research를 덮어쓰지 않습니다."
+  }
+}

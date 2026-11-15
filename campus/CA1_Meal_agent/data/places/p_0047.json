@@ -1,0 +1,176 @@
+{
+  "version": 1,
+  "id": "p_0047",
+  "name": "얌얌 전대상대점",
+  "category": "분식",
+  "lat": 35.1779204490375,
+  "lng": 126.903886418579,
+  "address": "전남광주 북구 설죽로214번길 115",
+  "source": "semas",
+  "sourceId": "MA010120220812923404",
+  "sourceStatus": "active",
+  "attrs": {
+    "status": "partial",
+    "menus": [
+      {
+        "name": "아프돈까스",
+        "price": 4500,
+        "main": true
+      },
+      {
+        "name": "왕돈까스",
+        "price": 6000,
+        "main": true
+      },
+      {
+        "name": "왕매콤돈까스",
+        "price": 7000,
+        "main": true
+      },
+      {
+        "name": "치즈돈까스",
+        "price": 5500,
+        "main": true
+      },
+      {
+        "name": "매콤돈까스",
+        "price": 5000,
+        "main": true
+      }
+    ]
+  },
+  "research": {
+    "identityStatus": "matched",
+    "queries": [
+      "\"얌얌\" \"설죽로214번길 115\" 메뉴 영업시간"
+    ],
+    "sources": [
+      {
+        "id": "s1",
+        "url": "https://www.diningcode.com/profile.php?rid=bZGwcOMRiTnw",
+        "title": "얌얌 전대상대점",
+        "type": "directory",
+        "addressMatch": true,
+        "note": "주소일치. 영업시간 확인필요 명시.",
+        "observedAt": "2026-11-11"
+      },
+      {
+        "id": "s2",
+        "url": "https://www.linkedmap.co.kr/explore/goodprice/jeonnam-gwangju/%EB%B6%81%EA%B5%AC/%EC%96%8C%EC%96%8C-%EC%A0%84%EB%8C%80%EC%83%81%EB%8C%80%EC%A0%90",
+        "title": "얌얌 착한가격업소",
+        "type": "directory",
+        "addressMatch": true,
+        "note": "지정 당시 대표메뉴 돈까스6,000원. 현행가격과 다를수있다는 안내.",
+        "observedAt": "2026-11-11"
+      }
+    ],
+    "facts": {
+      "menus": {
+        "status": "partial",
+        "value": [
+          {
+            "name": "왕돈까스",
+            "price": 6000,
+            "main": true
+          },
+          {
+            "name": "왕매콤돈까스",
+            "price": 7000,
+            "main": true
+          },
+          {
+            "name": "치즈돈까스",
+            "price": 5500,
+            "main": true
+          }
+        ],
+        "sourceIds": [
+          "s1"
+        ],
+        "note": "메뉴 목록의 갱신일 미표시. 후기·지정 가격과 메뉴명 대조가 필요하여 잠정 기록."
+      },
+      "hours": {
+        "status": "unconfirmed",
+        "sourceIds": [],
+        "note": "동일 지점의 요일별 영업시간·휴무를 확인하지 못함. 임의 시간 입력하지 않음."
+      }
+    },
+    "notes": [],
+    "checkedAt": "2026-11-11",
+    "method": "web",
+    "unknownFields": [
+      "menus",
+      "hours",
+      "mealType",
+      "takeout",
+      "verifiedAt",
+      "verifiedBy",
+      "break",
+      "lastOrder"
+    ]
+  },
+  "availability": {
+    "status": "listed",
+    "provider": "naver",
+    "checkedAt": "2026-11-11",
+    "sourceUrl": "https://pcmap.place.naver.com/place/37504432",
+    "naverPlaceId": "37504432",
+    "observedName": "얌얌 전대상대점",
+    "observedAddress": "전남광주 북구 설죽로214번길 115",
+    "district": "상대",
+    "addressVerified": true,
+    "nearby": true,
+    "reason": "공개 네이버 지도에서 동일 주소의 전남대 상대 식당으로 확인"
+  },
+  "menuObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/37504432/menu/list",
+    "checkedAt": "2026-11-11",
+    "priceContext": "in_store",
+    "menus": [
+      {
+        "name": "아프돈까스",
+        "price": 4500,
+        "main": true
+      },
+      {
+        "name": "왕돈까스",
+        "price": 6000,
+        "main": true
+      },
+      {
+        "name": "왕매콤돈까스",
+        "price": 7000,
+        "main": true
+      },
+      {
+        "name": "치즈돈까스",
+        "price": 5500,
+        "main": true
+      },
+      {
+        "name": "매콤돈까스",
+        "price": 5000,
+        "main": true
+      }
+    ],
+    "note": "메뉴 상태: confirmed. 원본 관찰·좌표 출처는 적용 manifest에 보관합니다.",
+    "status": "confirmed"
+  },
+  "hoursObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/place/37504432",
+    "checkedAt": "2026-11-11",
+    "status": "unconfirmed",
+    "hours": [],
+    "note": "매장 영업시간 관찰. 기존 attrs/research를 덮어쓰지 않습니다."
+  },
+  "followupReview": {
+    "checkedAt": "2026-11-12",
+    "reasons": [
+      "요일별 영업시간: 월~일 영업·휴무와 개점·마감 시간이 필요합니다. 브레이크·마지막 주문은 확인한 경우만 입력하세요."
+    ],
+    "sources": [
+      "https://pcmap.place.naver.com/restaurant/37504432/home",
+      "https://pcmap.place.naver.com/restaurant/37504432/menu/list"
+    ]
+  }
+}

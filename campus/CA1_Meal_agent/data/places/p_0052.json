@@ -1,0 +1,73 @@
+{
+  "version": 1,
+  "id": "p_0052",
+  "name": "기영이숯불두마리치킨 전남대점",
+  "category": "패스트푸드",
+  "lat": 35.177487,
+  "lng": 126.902581,
+  "address": "전남광주통합특별시 북구 설죽로202번길 93",
+  "source": "semas",
+  "sourceId": "MA010120220813739701",
+  "sourceStatus": "active",
+  "attrs": {
+    "status": "partial"
+  },
+  "research": {
+    "identityStatus": "matched",
+    "queries": [
+      "\"기영이숯불두마리치킨 전남대점\" 가격 영업시간",
+      "기영이 숯불두마리치킨 전남대점 메뉴 가격 영업시간",
+      "\"기영이\" \"전남대점\" site:diningcode.com",
+      "\"기영이\" \"전남대점\" \"숯불\" \"가격\""
+    ],
+    "sources": [
+      {
+        "id": "s1",
+        "url": "https://alf.purpleo.kr/article/20112",
+        "title": "기영이숯불두마리치킨 전남대점 상가정보",
+        "type": "directory",
+        "addressMatch": true,
+        "note": "상가업소번호·주소 일치. 가격·시간 미제공.",
+        "observedAt": "2026-11-11"
+      }
+    ],
+    "facts": {
+      "menus": {
+        "status": "unconfirmed",
+        "sourceIds": [],
+        "note": "동일 지점의 메뉴와 현행 가격을 확인하지 못함. 값은 생성하지 않음."
+      },
+      "hours": {
+        "status": "unconfirmed",
+        "sourceIds": [],
+        "note": "동일 지점의 요일별 영업시간·휴무를 확인하지 못함. 임의 시간 입력하지 않음."
+      }
+    },
+    "notes": [],
+    "checkedAt": "2026-11-11",
+    "method": "web",
+    "unknownFields": [
+      "menus",
+      "hours",
+      "mealType",
+      "takeout",
+      "verifiedAt",
+      "verifiedBy",
+      "break",
+      "lastOrder"
+    ]
+  },
+  "availability": {
+    "status": "excluded",
+    "provider": "naver",
+    "checkedAt": "2026-11-11",
+    "sourceUrl": "https://map.naver.com/p/search/%EC%A0%84%EB%82%A8%EB%8C%80%20%EC%9D%8C%EC%8B%9D%EC%A0%90",
+    "naverPlaceId": null,
+    "observedName": "",
+    "observedAddress": "",
+    "district": null,
+    "addressVerified": false,
+    "nearby": false,
+    "reason": "네이버 지도에서 확인한 네 식당가 명단에 포함되지 않아 제외"
+  }
+}

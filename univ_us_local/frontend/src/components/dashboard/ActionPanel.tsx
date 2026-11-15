@@ -9,6 +9,7 @@ import { fmtRelative } from "@/lib/dates";
 import type { AcademicStatus } from "@/lib/types";
 import { CHAT_EXAMPLES } from "@/lib/demo";
 import { navigateQuery } from "@/lib/useQueryState";
+import { attachmentWarning, hasSyncWarning, syncFailureText, syncRunResult } from "@/lib/eclassSync";
 
 // 왼쪽 컬럼 — 일정·할 일 등록 / 빠른 실행(원천별 동기화) / 확인 필요 / 대화 카드 (Frontend-Route 6-2 · 11-5 · 14-3).
 
@@ -27,6 +28,7 @@ function SyncRow({
   busyText,
   meta,
   error,
+  errorTone = "danger",
   onClick,
   disabled,
   demo,
@@ -36,6 +38,7 @@ function SyncRow({
   busyText: string;
   meta: string;
   error?: React.ReactNode;
+  errorTone?: "danger" | "warn";
   onClick: () => void;
   disabled?: boolean;
   demo?: boolean;
@@ -57,7 +60,7 @@ function SyncRow({
           </span>
         </span>
       </button>
-      {error && <p className="mt-1.5 flex items-start gap-1.5 px-1 text-[12px] font-medium text-danger-text">{error}</p>}
+      {error && <p className={`mt-1.5 flex items-start gap-1.5 px-1 text-[12px] font-medium ${errorTone === "warn" ? "text-warn-text" : "text-danger-text"}`}>{error}</p>}
     </div>
   );
 }
@@ -77,6 +80,7 @@ function academicMeta(a: AcademicStatus | undefined): string {
 export default function ActionPanel({ reviewCount, onNew }: { reviewCount: number; onNew: (kind: "event" | "todo") => void }) {
   const { status, syncing, error, startSync, academicSyncing, startAcademicSync, startLogin, loginRunning } = useAppData();
   const failed = status && !syncing && status.sync.exit_code !== null && status.sync.exit_code !== 0 && status.sync.exit_code !== 3;
+  const partial = !syncing && hasSyncWarning(status?.sync);
   const academic = status?.academic;
   const acFailed = (academic?.sources ?? []).filter((s) => s.enabled && (s.state === "failed" || s.state === "format_changed"));
   // 마지막 학사일정 수집에서 새로 찾아 바로 등록된 일정 (수집 중에는 셈이 바뀌므로 끝난 뒤에 보인다)
@@ -104,18 +108,19 @@ export default function ActionPanel({ reviewCount, onNew }: { reviewCount: numbe
             meta={
               status
                 ? status.eclass?.retry
-                  ? "네트워크 오류 — 재시도 대기 중"
+                  ? `${syncRunResult(status.sync).label} · 재시도 대기 중`
                   : `${fmtRelative(status.eclass?.lastOkAt ?? status.updated_at)} · 과제 ${status.counts.deadlines}건`
                 : "상태 확인 중"
             }
             disabled={!!error}
             onClick={startSync}
+            errorTone={partial ? "warn" : "danger"}
             error={
-              failed ? (
+              failed || partial ? (
                 <>
                   <TriangleAlert className="mt-px size-3.5 flex-none" aria-hidden />
                   <span>
-                    {status?.sync.exit_code === 2 ? (
+                    {partial ? attachmentWarning(status?.sync) : status?.sync.exit_code === 2 ? (
                       <>
                         로그인이 필요합니다 ·{" "}
                         <button type="button" className="underline" onClick={() => void startLogin()} disabled={loginRunning}>
@@ -124,7 +129,7 @@ export default function ActionPanel({ reviewCount, onNew }: { reviewCount: numbe
                       </>
                     ) : (
                       <>
-                        {status?.sync.exit_code === 4 ? "인터넷 연결 문제로 실패했습니다" : "마지막 동기화가 실패했습니다"} ·{" "}
+                        {syncFailureText(status?.sync)} ·{" "}
                         <Link href="/settings/sources" className="underline">
                           수집 원천
                         </Link>

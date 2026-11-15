@@ -101,7 +101,8 @@ def sync_state() -> dict:
     with _lock:
         mine = dict(_sync)
     retry = R.pending_retry()
-    base = {"retry": retry, "pid": None, "attempt": 1, "runSource": None, "error": None, "counts": None}
+    base = {"retry": retry, "pid": None, "attempt": 1, "runSource": None, "error": None, "counts": None,
+            "partial": False, "warnings": [], "errorKind": None}
     if mine["running"]:
         return {**base, **mine, "source": "button", "runSource": "button"}
     ext = R.live_lock()
@@ -114,7 +115,8 @@ def sync_state() -> dict:
         return {**base, "running": False, "started_at": last.get("started_at"), "finished_at": last.get("finished_at"),
                 "exit_code": last.get("exit_code"), "source": "button" if last.get("source") == "button" else "external",
                 "runSource": last.get("source"), "attempt": last.get("attempt") or 1, "error": last.get("error"),
-                "counts": last.get("counts"), "ledger": last.get("ledger")}
+                "counts": last.get("counts"), "ledger": last.get("ledger"),
+                "partial": last.get("partial", False), "warnings": last.get("warnings", []), "errorKind": last.get("errorKind")}
     return {**base, **mine, "source": "button" if mine["started_at"] else None, "runSource": "button" if mine["started_at"] else None}
 
 

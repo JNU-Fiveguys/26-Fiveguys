@@ -1,0 +1,51 @@
+details#map-details{margin-top:20px;padding-top:14px;border-top:1px solid var(--border)}
+details#map-details>summary{font-size:14px;font-weight:650;color:var(--text)}
+.route-map-toolbar{display:flex;justify-content:flex-end;gap:8px;flex-wrap:wrap;margin:12px 0 10px}
+.route-map-toolbar button{min-height:34px;padding:6px 11px;font-size:12px}
+#route-map{height:360px;min-width:0;width:100%;isolation:isolate;z-index:0;border:1px solid var(--border-strong);border-radius:12px;background:var(--surface-3);font-family:inherit}
+#route-map:focus-visible{outline:2px solid var(--primary);outline-offset:3px}
+#route-map .leaflet-control-zoom a{color:var(--primary);background:var(--surface);font-family:inherit}
+#route-map .leaflet-bar{border:1px solid var(--border-strong);box-shadow:var(--shadow-card)}
+#route-map .leaflet-control-attribution{padding:2px 5px;max-width:100%;font-size:10px;background:rgba(255,253,250,.95);color:var(--muted)}
+#route-map .leaflet-control-attribution a{color:var(--primary)}
+#route-map .route-stop-marker{display:grid;place-items:center;width:26px;height:26px;border:2px solid var(--surface);border-radius:50%;box-shadow:0 1px 5px #1f2b2544;background:var(--primary);color:#fff;font-family:inherit;font-weight:700;font-size:12px;line-height:1}
+#route-map .route-stop-meal{background:var(--sand-text)}
+#route-map .route-stop-destination{background:var(--info)}
+#route-map .route-pin-label{width:max-content;max-width:180px;white-space:nowrap;border:1px solid var(--border);border-radius:8px;padding:5px 8px;background:var(--surface);color:var(--text);font-size:11px;font-family:inherit;box-shadow:var(--shadow-card);text-align:center;line-height:1.4}
+#route-map .route-pin-label::before{border-top-color:var(--border)}
+#route-legend{display:grid;gap:10px;padding:13px 0 4px}
+.route-leg{display:flex;gap:9px;align-items:flex-start;font-size:12px;min-width:0}
+.route-leg-symbol{width:26px;margin-top:9px;flex:none;border-top:4px solid var(--primary);border-radius:2px}
+.route-leg-back .route-leg-symbol{border-color:var(--info)}
+.route-leg-estimate .route-leg-symbol{border-top-style:dashed}
+.route-leg strong{display:block;font-size:13px;font-weight:600;overflow-wrap:anywhere}
+.route-leg p{margin:2px 0 0;color:var(--faint);font-variant-numeric:tabular-nums}
+#route-map-status{margin:8px 0;font-size:12px;color:var(--faint)}
+#map-details[data-state="fallback"] #route-map-status,#map-details[data-state="partial"] #route-map-status{color:var(--warn-text)}
+#route-diagram{overflow:hidden;border:1px solid var(--border);border-radius:12px;background:var(--surface-2)}
+#route-diagram>svg{display:block;width:100%;height:auto;min-height:180px}
+.route-diagram-credit{text-align:right;font-size:10px;padding:3px 8px;margin:0;background:var(--surface)}
+.other-place-actions{display:flex;gap:6px;flex:none}
+.other-place-actions button{font-size:12px;padding:7px 9px}
+@media(max-width:850px){#route-map{height:320px}#route-map .route-pin-label{max-width:130px;font-size:10px}#other .other-place{flex-wrap:wrap}.other-place-actions{margin-left:auto}}
+/* 지도 다듬기 — 배경은 연하게, 경로·핀은 또렷하게 (길찾기 앱 느낌) */
+#route-map{background:#f4f3ef}
+#route-map .leaflet-tile-pane{filter:saturate(.45) brightness(1.07) contrast(.9)}
+#route-map .leaflet-control-zoom{border:0;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(31,43,37,.22)}
+#route-map .leaflet-control-zoom a{width:34px;height:34px;line-height:34px;font-size:18px;color:#2b332e;border-bottom:1px solid #ececec}
+#route-map .leaflet-control-zoom a:last-child{border-bottom:0}
+#route-map .leaflet-control-attribution{border-radius:6px 0 0 0;font-size:9px;opacity:.85}
+#route-map .route-pin-wrap{background:none;border:0;width:0!important;height:0!important}
+#route-map .route-pin{position:absolute;left:0;bottom:12px;transform:translateX(-50%);display:flex;align-items:center;gap:6px;padding:5px 10px 5px 6px;border-radius:999px;background:#fff;box-shadow:0 3px 10px rgba(31,43,37,.25);white-space:nowrap;font-family:inherit;line-height:1.2}
+#route-map .route-pin::after{content:"";position:absolute;left:50%;bottom:-6px;width:10px;height:10px;background:#fff;transform:translateX(-50%) rotate(45deg);box-shadow:3px 3px 4px rgba(31,43,37,.12)}
+#route-map .route-pin-role{padding:3px 7px;border-radius:999px;font-size:11px;font-weight:700;color:#fff;background:#33644d}
+#route-map .route-pin-meal .route-pin-role{background:#e0663a}
+#route-map .route-pin-destination .route-pin-role{background:#3b7fb0}
+#route-map .route-pin-name{position:relative;z-index:1;max-width:150px;overflow:hidden;text-overflow:ellipsis;font-size:12px;font-weight:700;color:#1f2b25}
+#route-map .route-pin-meal{z-index:2}
+#route-map .route-arrow{background:none;border:0}
+#route-map .route-arrow span{display:block;width:14px;height:14px;line-height:13px;text-align:center;font-size:15px;font-weight:900;color:#fff}
+@media(max-width:850px){#route-map .route-pin-name{max-width:100px;font-size:11px}}
+/* 다음 강의실 말풍선은 점 아래로 — 식당 말풍선과 겹치지 않게 */
+#route-map .route-pin-destination{bottom:auto;top:12px}
+#route-map .route-pin-destination::after{bottom:auto;top:-6px;box-shadow:-3px -3px 4px rgba(31,43,37,.08)}

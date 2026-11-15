@@ -1,0 +1,202 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MealSettings v1 — 시간 계산과 추천 점수 설정",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "walk",
+    "bufferMin",
+    "tightMarginMin",
+    "mealTypes",
+    "peaks",
+    "quickEatMaxMin",
+    "ranking"
+  ],
+  "properties": {
+    "_설명": {
+      "type": "string"
+    },
+    "walk": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "detourFactor",
+        "metersPerMin"
+      ],
+      "properties": {
+        "detourFactor": {
+          "$ref": "#/$defs/positiveNumber"
+        },
+        "metersPerMin": {
+          "$ref": "#/$defs/positiveNumber"
+        },
+        "maxSnapM": {
+          "$ref": "#/$defs/positiveNumber"
+        }
+      }
+    },
+    "bufferMin": {
+      "$ref": "#/$defs/minutes"
+    },
+    "tightMarginMin": {
+      "$ref": "#/$defs/minutes"
+    },
+    "quickEatMaxMin": {
+      "$ref": "#/$defs/minutes"
+    },
+    "mealTypes": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "학식",
+        "간단식",
+        "일반",
+        "고기·단체",
+        "카페"
+      ],
+      "properties": {
+        "학식": {
+          "$ref": "#/$defs/mealTimes"
+        },
+        "간단식": {
+          "$ref": "#/$defs/mealTimes"
+        },
+        "일반": {
+          "$ref": "#/$defs/mealTimes"
+        },
+        "고기·단체": {
+          "$ref": "#/$defs/mealTimes"
+        },
+        "카페": {
+          "$ref": "#/$defs/mealTimes"
+        }
+      }
+    },
+    "peaks": {
+      "type": "array",
+      "items": {
+        "type": "array",
+        "minItems": 2,
+        "maxItems": 2,
+        "items": {
+          "type": "string",
+          "pattern": "^([01][0-9]|2[0-3]):[0-5][0-9]$|^24:00$"
+        }
+      }
+    },
+    "ranking": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "weights",
+        "rainDistanceMultiplier",
+        "slackFullMin",
+        "distanceZeroMin",
+        "overBudgetOneBand",
+        "bonusNewPlace",
+        "penaltyRecent",
+        "bonusExamQuick",
+        "chipMinFactor"
+      ],
+      "properties": {
+        "_설명": {
+          "type": "string"
+        },
+        "weights": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "slack",
+            "budget",
+            "taste",
+            "distance",
+            "crowd"
+          ],
+          "properties": {
+            "slack": {
+              "$ref": "#/$defs/nonnegativeNumber"
+            },
+            "budget": {
+              "$ref": "#/$defs/nonnegativeNumber"
+            },
+            "taste": {
+              "$ref": "#/$defs/nonnegativeNumber"
+            },
+            "distance": {
+              "$ref": "#/$defs/nonnegativeNumber"
+            },
+            "crowd": {
+              "$ref": "#/$defs/nonnegativeNumber"
+            }
+          }
+        },
+        "rainDistanceMultiplier": {
+          "$ref": "#/$defs/positiveNumber"
+        },
+        "slackFullMin": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "distanceZeroMin": {
+          "description": "편도당 거리 점수 0 기준(분). 다음 건물이 있으면 2배를 전체 도보 기준으로 쓴다",
+          "type": "integer",
+          "minimum": 1
+        },
+        "overBudgetOneBand": {
+          "$ref": "#/$defs/factor"
+        },
+        "chipMinFactor": {
+          "$ref": "#/$defs/factor"
+        },
+        "bonusNewPlace": {
+          "$ref": "#/$defs/nonnegativeNumber"
+        },
+        "penaltyRecent": {
+          "$ref": "#/$defs/nonnegativeNumber"
+        },
+        "bonusExamQuick": {
+          "$ref": "#/$defs/nonnegativeNumber"
+        }
+      }
+    }
+  },
+  "$defs": {
+    "positiveNumber": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "nonnegativeNumber": {
+      "type": "number",
+      "minimum": 0
+    },
+    "minutes": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "factor": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "mealTimes": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "eat",
+        "wait",
+        "waitPeak"
+      ],
+      "properties": {
+        "eat": {
+          "$ref": "#/$defs/minutes"
+        },
+        "wait": {
+          "$ref": "#/$defs/minutes"
+        },
+        "waitPeak": {
+          "$ref": "#/$defs/minutes"
+        }
+      }
+    }
+  }
+}

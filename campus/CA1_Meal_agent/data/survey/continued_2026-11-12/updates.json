@@ -1,0 +1,2264 @@
+{
+  "version": 1,
+  "checkedAt": "2026-11-12",
+  "reviewed": 41,
+  "places": [
+    {
+      "id": "p_0127",
+      "naverPlaceId": "1037261717",
+      "name": "후토루 전대후문점",
+      "sources": [
+        "https://pcmap.place.naver.com/restaurant/1037261717/home",
+        "https://pcmap.place.naver.com/restaurant/1037261717/menu/list",
+        "https://blog.naver.com/kswze7/224337808590"
+      ],
+      "menuObservation": {
+        "sourceUrl": "https://blog.naver.com/kswze7/224337808590",
+        "placeSourceUrl": "https://pcmap.place.naver.com/restaurant/1037261717/home",
+        "sourceAddress": "전남광주 북구 호동로 6-3 1층 후토루",
+        "sourcePublishedAt": "2026-07-06",
+        "checkedAt": "2026-11-12",
+        "priceContext": "in_store",
+        "status": "confirmed",
+        "menus": [
+          {
+            "name": "지단후토마키",
+            "price": 8900,
+            "main": true
+          },
+          {
+            "name": "참치그린키토",
+            "price": 10500,
+            "main": true
+          },
+          {
+            "name": "크림파스타",
+            "price": 12900,
+            "main": true
+          }
+        ],
+        "note": "동일 지점·주소의 매장 방문 자료에서 읽히는 메뉴·가격만 반영. 게시 이후 변경 가능하며 현장 현재 가격 보증은 아님."
+      }
+    },
+    {
+      "id": "p_0014",
+      "naverPlaceId": "36894596",
+      "name": "카츠앤맘전대점",
+      "sources": [
+        "https://pcmap.place.naver.com/restaurant/36894596/home",
+        "https://pcmap.place.naver.com/restaurant/36894596/menu/list",
+        "https://blog.naver.com/ss0_rv/224356779893"
+      ],
+      "menuObservation": {
+        "sourceUrl": "https://blog.naver.com/ss0_rv/224356779893",
+        "placeSourceUrl": "https://pcmap.place.naver.com/restaurant/36894596/home",
+        "sourceAddress": "광주 북구 설죽로214번길 93",
+        "sourcePublishedAt": "2026-07-24",
+        "checkedAt": "2026-11-12",
+        "priceContext": "in_store",
+        "status": "confirmed",
+        "menus": [
+          {
+            "name": "옛날돈까스",
+            "price": 8500,
+            "main": true
+          },
+          {
+            "name": "고구마치즈돈까스",
+            "price": 11900,
+            "main": true
+          }
+        ],
+        "note": "동일 지점·주소의 매장 방문 자료에서 읽히는 메뉴·가격만 반영. 게시 이후 변경 가능하며 현장 현재 가격 보증은 아님. 매운 소스 추가500원은 기본 메뉴 가격에 합치지 않음."
+      }
+    },
+    {
+      "id": "p_0145",
+      "naverPlaceId": "1805335047",
+      "name": "찐한사골국밥",
+      "sources": [
+        "https://pcmap.place.naver.com/restaurant/1805335047/home",
+        "https://pcmap.place.naver.com/restaurant/1805335047/menu/list",
+        "https://place.map.kakao.com/616626742"
+      ],
+      "menuObservation": {
+        "status": "confirmed",
+        "priceContext": "in_store",
+        "checkedAt": "2026-11-12",
+        "sourceUrl": "https://place.map.kakao.com/616626742",
+        "placeSourceUrl": "https://pcmap.place.naver.com/restaurant/1805335047/home",
+        "sourceAddress": "전남광주통합특별시 북구 설죽로214번길 71 1층",
+        "menus": [
+          {
+            "name": "돼지국밥",
+            "price": 8500,
+            "main": true
+          },
+          {
+            "name": "순대국밥",
+            "price": 8000,
+            "main": true
+          },
+          {
+            "name": "섞어국밥",
+            "price": 9000,
+            "main": true
+          },
+          {
+            "name": "순대곱창전골(중)",
+            "price": 28000,
+            "main": false
+          },
+          {
+            "name": "순대곱창전골(대)",
+            "price": 36000,
+            "main": false
+          },
+          {
+            "name": "마늘수육(중)",
+            "price": 27000,
+            "main": false
+          },
+          {
+            "name": "마늘수육(대)",
+            "price": 39000,
+            "main": false
+          },
+          {
+            "name": "돼지순대국밥",
+            "price": 9000,
+            "main": true
+          },
+          {
+            "name": "얼큰국밥",
+            "price": 9000,
+            "main": true
+          },
+          {
+            "name": "사골떡만두국밥",
+            "price": 10000,
+            "main": true
+          },
+          {
+            "name": "모듬국밥",
+            "price": 10000,
+            "main": true
+          },
+          {
+            "name": "부대찌개",
+            "price": 10000,
+            "main": true
+          },
+          {
+            "name": "육개장",
+            "price": 10000,
+            "main": true
+          },
+          {
+            "name": "맛보기순대",
+            "price": 11000,
+            "main": false
+          },
+          {
+            "name": "맛보기수육",
+            "price": 13000,
+            "main": false
+          },
+          {
+            "name": "순대곱창볶음(중)",
+            "price": 28000,
+            "main": false
+          },
+          {
+            "name": "순대곱창볶음(대)",
+            "price": 36000,
+            "main": false
+          },
+          {
+            "name": "곱창볶음(중)",
+            "price": 28000,
+            "main": false
+          },
+          {
+            "name": "곱창볶음(대)",
+            "price": 36000,
+            "main": false
+          },
+          {
+            "name": "순대마늘수육(중)",
+            "price": 27000,
+            "main": false
+          },
+          {
+            "name": "순대마늘수육(대)",
+            "price": 39000,
+            "main": false
+          }
+        ],
+        "note": "같은 상호·도로명 건물번호의 카카오맵 메뉴 게시값. 배달 탭 가격과 구분해 수집. 게시값 확인이며 현장 현재 가격 확인은 아님."
+      }
+    },
+    {
+      "id": "p_0131",
+      "naverPlaceId": "1249369391",
+      "name": "명일삼계탕",
+      "sources": [
+        "https://pcmap.place.naver.com/restaurant/1249369391/home",
+        "https://pcmap.place.naver.com/restaurant/1249369391/menu/list",
+        "https://ldb-phinf.pstatic.net/20241209_271/17337112619410oNDs_JPEG/KakaoTalk_20241015_175415234.jpg"
+      ],
+      "menuObservation": {
+        "status": "confirmed",
+        "priceContext": "in_store",
+        "checkedAt": "2026-11-12",
+        "sourceUrl": "https://pcmap.place.naver.com/restaurant/1249369391/menu/list",
+        "menus": [
+          {
+            "name": "반계탕",
+            "price": 7900,
+            "main": true
+          },
+          {
+            "name": "삼계탕",
+            "price": 10900,
+            "main": true
+          },
+          {
+            "name": "전복삼계탕",
+            "price": 12900,
+            "main": true
+          }
+        ],
+        "note": "공개 매장 메뉴판에 읽히는 이름·가격만 반영. 공유 분량과 사이드 메뉴를 임의로 1인 식사로 환산하지 않음. 메뉴판: https://ldb-phinf.pstatic.net/20241209_271/17337112619410oNDs_JPEG/KakaoTalk_20241015_175415234.jpg"
+      }
+    },
+    {
+      "id": "p_0050",
+      "naverPlaceId": "37915784",
+      "name": "알촌 전남대점",
+      "sources": [
+        "https://pcmap.place.naver.com/restaurant/37915784/home",
+        "https://pcmap.place.naver.com/restaurant/37915784/menu/list",
+        "https://place.map.kakao.com/1320251809"
+      ],
+      "menuObservation": {
+        "status": "confirmed",
+        "priceContext": "in_store",
+        "checkedAt": "2026-11-12",
+        "sourceUrl": "https://place.map.kakao.com/1320251809",
+        "placeSourceUrl": "https://pcmap.place.naver.com/restaurant/37915784/home",
+        "sourceAddress": "전남광주통합특별시 북구 설죽로214번길 122 1층",
+        "menus": [
+          {
+            "name": "약매알밥",
+            "price": 4700,
+            "main": true
+          },
+          {
+            "name": "매콤알밥",
+            "price": 4700,
+            "main": true
+          },
+          {
+            "name": "갈릭알밥",
+            "price": 5100,
+            "main": true
+          },
+          {
+            "name": "순한알밥",
+            "price": 4300,
+            "main": true
+          },
+          {
+            "name": "진매알밥",
+            "price": 4800,
+            "main": true
+          },
+          {
+            "name": "카레알밥",
+            "price": 5100,
+            "main": true
+          },
+          {
+            "name": "짜장알밥",
+            "price": 5100,
+            "main": true
+          },
+          {
+            "name": "오밥",
+            "price": 5100,
+            "main": true
+          },
+          {
+            "name": "갈릭그릴드치킨알밥",
+            "price": 5700,
+            "main": true
+          },
+          {
+            "name": "갈리오밥",
+            "price": 5600,
+            "main": true
+          },
+          {
+            "name": "그릴드치킨알밥",
+            "price": 5200,
+            "main": true
+          },
+          {
+            "name": "불고기알밥",
+            "price": 5700,
+            "main": true
+          }
+        ],
+        "note": "같은 상호·도로명 건물번호의 카카오맵 메뉴 게시값. 배달 탭 가격과 구분해 수집. 게시값 확인이며 현장 현재 가격 확인은 아님."
+      }
+    },
+    {
+      "id": "p_0013",
+      "naverPlaceId": "13376550",
+      "name": "한솥도시락 전남대점",
+      "sources": [
+        "https://pcmap.place.naver.com/restaurant/13376550/home",
+        "https://pcmap.place.naver.com/restaurant/13376550/menu/list"
+      ],
+      "unconfirmedNotes": [
+        "2026-08 메뉴판을 확인했으나 본문에 한솥 메뉴 권장가격으로 표시되어 지점의 매장·포장 확정 가격으로 적용하지 않았습니다."
+      ]
+    },
+    {
+      "id": "p_0117",
+      "naverPlaceId": "37398013",
+      "name": "라즈인도요리 전대후문",
+      "sources": [
+        "https://pcmap.place.naver.com/restaurant/37398013/home",
+        "https://pcmap.place.naver.com/restaurant/37398013/menu/list",
+        "https://place.map.kakao.com/27432446"
+      ],
+      "menuObservation": {
+        "status": "confirmed",
+        "priceContext": "in_store",
+        "checkedAt": "2026-11-12",
+        "sourceUrl": "https://place.map.kakao.com/27432446",
+        "placeSourceUrl": "https://pcmap.place.naver.com/restaurant/37398013/home",
+        "sourceAddress": "전남광주통합특별시 북구 호동로 9-7",
+        "menus": [
+          {
+            "name": "버터치킨",
+            "price": 13000,
+            "main": false
+          },
+          {
+            "name": "팔락 파니르",
+            "price": 13000,
+            "main": false
+          },
+          {
+            "name": "파니르 버터 마살라",
+            "price": 13000,
+            "main": false
+          },
+          {
+            "name": "야채 비리야니",
+            "price": 12000,
+            "main": true
+          },
+          {
+            "name": "탄두리치킨 (반마리)",
+            "price": 12000,
+            "main": false
+          },
+          {
+            "name": "탈리",
+            "price": 11000,
+            "main": true
+          },
+          {
+            "name": "치킨티카",
+            "price": 12000,
+            "main": false
+          }
+        ],
+        "note": "같은 상호·도로명 건물번호의 카카오맵 메뉴 게시값. 배달 탭 가격과 구분해 수집. 게시값 확인이며 현장 현재 가격 확인은 아님."
+      }
+    },
+    {
+      "id": "p_0119",
+      "naverPlaceId": "37500690",
+      "name": "마마",
+      "sources": [
+        "https://pcmap.place.naver.com/restaurant/37500690/home",
+        "https://pcmap.place.naver.com/restaurant/37500690/menu/list"
+      ]
+    },
+    {
+      "id": "p_0024",
+      "naverPlaceId": "16178351",
+      "name": "무등골금호식당",
+      "sources": [
+        "https://pcmap.place.naver.com/restaurant/16178351/home",
+        "https://pcmap.place.naver.com/restaurant/16178351/menu/list"
+      ]
+    },
+    {
+      "id": "p_0033",
+      "naverPlaceId": "33894558",
+      "name": "봉구스밥버거 전남대상대점",
+      "sources": [
+        "https://pcmap.place.naver.com/restaurant/33894558/home",
+        "https://pcmap.place.naver.com/restaurant/33894558/menu/list"
+      ],
+      "unconfirmedNotes": [
+        "보조 지도에 영업시간이 있으나 요기요 제공으로 표시되어 매장 영업시간으로 확정하지 않았습니다."
+      ]
+    },
+    {
+      "id": "p_0023",
+      "naverPlaceId": "35438757",
+      "name": "뽀글이와둘둘이",
+      "sources": [
+        "https://pcmap.place.naver.com/restaurant/35438757/home",
+        "https://pcmap.place.naver.com/restaurant/35438757/menu/list",
+        "https://place.map.kakao.com/21362415"
+      ],
+      "hoursObservation": {
+        "sourceUrl": "https://place.map.kakao.com/21362415",
+        "checkedAt": "2026-11-12",
+        "status": "confirmed",
+        "hours": [
+          {
+            "days": [
+              "월",
+              "화",
+              "수",
+              "목",
+              "금",
+              "토"
+            ],
+            "open": "10:30",
+            "close": "20:00"
+          }
+        ],
+        "note": "동일 상호·도로명 건물번호의 카카오맵 영업정보. 매주 요일별 영업/휴무와 게시된 브레이크만 반영. 배달업체 제공 시간은 제외.",
+        "placeSourceUrl": "https://pcmap.place.naver.com/restaurant/35438757/home",
+        "sourceAddress": "전남광주통합특별시 북구 설죽로202번길 98 1층",
+        "hoursContext": "in_store"
+      }
+    },
+    {
+      "id": "p_0047",
+      "naverPlaceId": "37504432",
+      "name": "얌얌 전대상대점",
+      "sources": [
+        "https://pcmap.place.naver.com/restaurant/37504432/home",
+        "https://pcmap.place.naver.com/restaurant/37504432/menu/list"
+      ]
+    },
+    {
+      "id": "p_0039",
+      "naverPlaceId": "19610578",
+      "name": "가마솥옛날국밥",
+      "sources": [
+        "https://pcmap.place.naver.com/restaurant/19610578/home",
+        "https://pcmap.place.naver.com/restaurant/19610578/menu/list",
+        "https://place.map.kakao.com/21439387"
+      ],
+      "menuObservation": {
+        "status": "confirmed",
+        "priceContext": "in_store",
+        "checkedAt": "2026-11-12",
+        "sourceUrl": "https://place.map.kakao.com/21439387",
+        "placeSourceUrl": "https://pcmap.place.naver.com/restaurant/19610578/home",
+        "sourceAddress": "전남광주통합특별시 북구 설죽로214번길 119 1층",
+        "menus": [
+          {
+            "name": "내장국밥",
+            "price": 6000,
+            "main": true
+          },
+          {
+            "name": "콩나물국밥",
+            "price": 5500,
+            "main": true
+          },
+          {
+            "name": "철판돼지구이백반",
+            "price": 6000,
+            "main": true
+          },
+          {
+            "name": "모듬국밥",
+            "price": 6000,
+            "main": true
+          },
+          {
+            "name": "순대국밥",
+            "price": 6000,
+            "main": true
+          },
+          {
+            "name": "머리국밥",
+            "price": 6500,
+            "main": true
+          },
+          {
+            "name": "곱창전골 (2인이상)",
+            "price": 6500,
+            "main": false
+          },
+          {
+            "name": "소고기뚝배기",
+            "price": 6500,
+            "main": true
+          },
+          {
+            "name": "곰탕",
+            "price": 6000,
+            "main": true
+          },
+          {
+            "name": "뼈해장국",
+            "price": 6000,
+            "main": true
+          }
+        ],
+        "note": "같은 상호·도로명 건물번호의 카카오맵 메뉴 게시값. 배달 탭 가격과 구분해 수집. 게시값 확인이며 현장 현재 가격 확인은 아님."
+      },
+      "hoursObservation": {
+        "sourceUrl": "https://place.map.kakao.com/21439387",
+        "checkedAt": "2026-11-12",
+        "status": "confirmed",
+        "hours": [
+          {
+            "days": [
+              "월",
+              "화",
+              "수",
+              "목",
+              "금"
+            ],
+            "open": "09:30",
+            "close": "21:30"
+          }
+        ],
+        "note": "동일 상호·도로명 건물번호의 카카오맵 영업정보. 매주 요일별 영업/휴무와 게시된 브레이크만 반영. 배달업체 제공 시간은 제외.",
+        "placeSourceUrl": "https://pcmap.place.naver.com/restaurant/19610578/home",
+        "sourceAddress": "전남광주통합특별시 북구 설죽로214번길 119 1층",
+        "hoursContext": "in_store"
+      }
+    },
+    {
+      "id": "p_0132",
+      "naverPlaceId": "1328708142",
+      "name": "마라푸우 상대점",
+      "sources": [
+        "https://pcmap.place.naver.com/restaurant/1328708142/home",
+        "https://place.map.kakao.com/596883620"
+      ],
+      "menuObservation": {
+        "status": "unconfirmed",
+        "priceContext": "delivery",
+        "checkedAt": "2026-11-12",
+        "sourceUrl": "https://place.map.kakao.com/596883620",
+        "placeSourceUrl": "https://pcmap.place.naver.com/restaurant/1328708142/home",
+        "sourceAddress": "전남광주통합특별시 북구 설죽로202번길 90 1층",
+        "menus": [
+          {
+            "name": "중국식 셀프 마라탕",
+            "price": 2000,
+            "main": false
+          },
+          {
+            "name": "마라푸우 마라탕 1人",
+            "price": 14900,
+            "main": true
+          },
+          {
+            "name": "마라푸우 마라탕 1~2人",
+            "price": 18900,
+            "main": false
+          },
+          {
+            "name": "마라푸우 마라탕 2~3人",
+            "price": 28900,
+            "main": false
+          },
+          {
+            "name": "마라푸우 마라샹궈 1~2人",
+            "price": 19900,
+            "main": false
+          },
+          {
+            "name": "마라푸우 마라샹궈 2~3人",
+            "price": 29900,
+            "main": false
+          },
+          {
+            "name": "마라푸우 마라샹궈 1人",
+            "price": 16900,
+            "main": true
+          },
+          {
+            "name": "공기밥",
+            "price": 1500,
+            "main": false
+          },
+          {
+            "name": "딱:）한입 고추 튀김 5개",
+            "price": 3500,
+            "main": false
+          },
+          {
+            "name": "딱:） 한입 만두 튀김 10개",
+            "price": 3500,
+            "main": false
+          },
+          {
+            "name": "®꽉찬속:） 야끼만두 튀김 5개",
+            "price": 3500,
+            "main": false
+          },
+          {
+            "name": "야채볶음밥",
+            "price": 3500,
+            "main": false
+          },
+          {
+            "name": "꿔바로우+소스",
+            "price": 8000,
+            "main": false
+          },
+          {
+            "name": "❤New:） 멘보샤 6p＋칠리소스❤",
+            "price": 7000,
+            "main": false
+          },
+          {
+            "name": "중국전:） 수라전",
+            "price": 2500,
+            "main": false
+          },
+          {
+            "name": "사이다 355mL",
+            "price": 2000,
+            "main": false
+          },
+          {
+            "name": "팹시콜라 355mL",
+            "price": 2000,
+            "main": false
+          },
+          {
+            "name": "팹시콜라 1.25L",
+            "price": 3000,
+            "main": false
+          },
+          {
+            "name": "사이다 1.25L",
+            "price": 3000,
+            "main": false
+          },
+          {
+            "name": "빙홍차 500mL",
+            "price": 3000,
+            "main": false
+          },
+          {
+            "name": "차파이복숭아500mL",
+            "price": 3000,
+            "main": false
+          },
+          {
+            "name": "땅콩소스（즈마장）",
+            "price": 700,
+            "main": false
+          },
+          {
+            "name": "칠리소스 추가",
+            "price": 1000,
+            "main": false
+          }
+        ],
+        "note": "카카오맵 요기요 배달 탭의 게시값. 포장·매장 가격은 확인되지 않아 예산·점수·추천에 사용하지 않음."
+      },
+      "hoursObservation": {
+        "sourceUrl": "https://place.map.kakao.com/596883620",
+        "checkedAt": "2026-11-12",
+        "status": "confirmed",
+        "hours": [
+          {
+            "days": [
+              "월",
+              "화",
+              "수",
+              "목",
+              "금",
+              "토",
+              "일"
+            ],
+            "open": "10:00",
+            "close": "22:50"
+          }
+        ],
+        "note": "동일 상호·도로명 건물번호의 카카오맵 영업정보. 매주 요일별 영업/휴무와 게시된 브레이크만 반영. 배달업체 제공 시간은 제외.",
+        "placeSourceUrl": "https://pcmap.place.naver.com/restaurant/1328708142/home",
+        "sourceAddress": "전남광주통합특별시 북구 설죽로202번길 90 1층",
+        "hoursContext": "in_store"
+      }
+    },
+    {
+      "id": "p_0022",
+      "naverPlaceId": "1373248477",
+      "name": "미리내김밥",
+      "sources": [
+        "https://pcmap.place.naver.com/restaurant/1373248477/home",
+        "https://blog.naver.com/ummppocha/224426431216",
+        "https://postfiles.pstatic.net/MjAyNjA5MjhfMjU4/MDAxNzkwNTg4MzQ2MDUx.36X2FkSPQXEX_H2eroOLKqZIJHsxHAa9YPJzSa4-dwcg.GkVzd8pq0mJJbgRqRdw3scHVGJdBpb8V3-IdZbcA65Ig.JPEG/IMG%EF%BC%BF0872.jpg?type=w773"
+      ],
+      "menuObservation": {
+        "sourceUrl": "https://blog.naver.com/ummppocha/224426431216",
+        "placeSourceUrl": "https://pcmap.place.naver.com/restaurant/1373248477/home",
+        "sourceAddress": "광주 북구 설죽로214번길 121",
+        "sourcePublishedAt": "2026-09-29",
+        "checkedAt": "2026-11-12",
+        "priceContext": "in_store",
+        "status": "confirmed",
+        "menus": [
+          {
+            "name": "김밥",
+            "price": 3000,
+            "main": true
+          },
+          {
+            "name": "떡볶이",
+            "price": 3500,
+            "main": true
+          },
+          {
+            "name": "참치김밥",
+            "price": 4000,
+            "main": true
+          },
+          {
+            "name": "치즈김밥",
+            "price": 4000,
+            "main": true
+          },
+          {
+            "name": "김치김밥",
+            "price": 4000,
+            "main": true
+          },
+          {
+            "name": "땡초김밥",
+            "price": 4000,
+            "main": true
+          },
+          {
+            "name": "땡초참치김밥",
+            "price": 4500,
+            "main": true
+          },
+          {
+            "name": "김치참치김밥",
+            "price": 4500,
+            "main": true
+          },
+          {
+            "name": "땡초김치김밥",
+            "price": 4500,
+            "main": true
+          },
+          {
+            "name": "오뎅",
+            "price": 3500,
+            "main": false
+          },
+          {
+            "name": "공기",
+            "price": 1500,
+            "main": false
+          },
+          {
+            "name": "라면",
+            "price": 4000,
+            "main": true
+          },
+          {
+            "name": "치즈라면",
+            "price": 4500,
+            "main": true
+          },
+          {
+            "name": "만두라면",
+            "price": 4500,
+            "main": true
+          },
+          {
+            "name": "떡라면",
+            "price": 4500,
+            "main": true
+          },
+          {
+            "name": "김치라면",
+            "price": 4500,
+            "main": true
+          },
+          {
+            "name": "찐만두",
+            "price": 5000,
+            "main": true
+          },
+          {
+            "name": "쫄면",
+            "price": 6000,
+            "main": true
+          },
+          {
+            "name": "비빔밥",
+            "price": 5000,
+            "main": true
+          },
+          {
+            "name": "양푼참치비빔밥",
+            "price": 6000,
+            "main": true
+          },
+          {
+            "name": "오므라이스",
+            "price": 6500,
+            "main": true
+          },
+          {
+            "name": "참치볶음밥",
+            "price": 6500,
+            "main": true
+          },
+          {
+            "name": "김치볶음밥",
+            "price": 6500,
+            "main": true
+          },
+          {
+            "name": "떡만두국",
+            "price": 6000,
+            "main": true
+          },
+          {
+            "name": "만두국+공기",
+            "price": 6000,
+            "main": true
+          },
+          {
+            "name": "참치찌개",
+            "price": 6000,
+            "main": true
+          },
+          {
+            "name": "순두부찌개",
+            "price": 6000,
+            "main": true
+          },
+          {
+            "name": "잔치국수",
+            "price": 6000,
+            "main": true
+          },
+          {
+            "name": "비빔국수",
+            "price": 7000,
+            "main": true
+          },
+          {
+            "name": "감자탕(뼈X)",
+            "price": 6500,
+            "main": true
+          },
+          {
+            "name": "육개장",
+            "price": 6500,
+            "main": true
+          },
+          {
+            "name": "라볶이",
+            "price": 6000,
+            "main": true
+          },
+          {
+            "name": "치즈라볶이",
+            "price": 7000,
+            "main": true
+          },
+          {
+            "name": "음료수",
+            "price": 2000,
+            "main": false
+          }
+        ],
+        "note": "동일 지점·주소의 매장 방문 자료에서 읽히는 메뉴·가격만 반영. 게시 이후 변경 가능하며 현장 현재 가격 보증은 아님. 메뉴판: https://postfiles.pstatic.net/MjAyNjA5MjhfMjU4/MDAxNzkwNTg4MzQ2MDUx.36X2FkSPQXEX_H2eroOLKqZIJHsxHAa9YPJzSa4-dwcg.GkVzd8pq0mJJbgRqRdw3scHVGJdBpb8V3-IdZbcA65Ig.JPEG/IMG%EF%BC%BF0872.jpg?type=w773"
+      }
+    },
+    {
+      "id": "p_0129",
+      "naverPlaceId": "1131985085",
+      "name": "알아지즈 상대점",
+      "sources": [
+        "https://pcmap.place.naver.com/restaurant/1131985085/home",
+        "https://place.map.kakao.com/1303110363"
+      ],
+      "menuObservation": {
+        "status": "confirmed",
+        "priceContext": "in_store",
+        "checkedAt": "2026-11-12",
+        "sourceUrl": "https://place.map.kakao.com/1303110363",
+        "placeSourceUrl": "https://pcmap.place.naver.com/restaurant/1131985085/home",
+        "sourceAddress": "전남광주통합특별시 북구 설죽로202번길 49 1층",
+        "menus": [
+          {
+            "name": "MASTAVA",
+            "price": 10000,
+            "main": true
+          },
+          {
+            "name": "OSH",
+            "price": 11000,
+            "main": true
+          },
+          {
+            "name": "MANTI",
+            "price": 12000,
+            "main": false
+          },
+          {
+            "name": "HONIM",
+            "price": 11000,
+            "main": false
+          },
+          {
+            "name": "TABAKA",
+            "price": 11000,
+            "main": false
+          },
+          {
+            "name": "Achchiq gosht",
+            "price": 13000,
+            "main": false
+          },
+          {
+            "name": "Shashlik",
+            "price": 7000,
+            "main": false
+          }
+        ],
+        "note": "같은 상호·도로명 건물번호의 카카오맵 메뉴 게시값. 배달 탭 가격과 구분해 수집. 게시값 확인이며 현장 현재 가격 확인은 아님."
+      },
+      "hoursObservation": {
+        "sourceUrl": "https://place.map.kakao.com/1303110363",
+        "checkedAt": "2026-11-12",
+        "status": "confirmed",
+        "hours": [
+          {
+            "days": [
+              "월",
+              "화",
+              "수",
+              "목",
+              "금",
+              "토",
+              "일"
+            ],
+            "open": "10:00",
+            "close": "22:00"
+          }
+        ],
+        "note": "동일 상호·도로명 건물번호의 카카오맵 영업정보. 매주 요일별 영업/휴무와 게시된 브레이크만 반영. 배달업체 제공 시간은 제외.",
+        "placeSourceUrl": "https://pcmap.place.naver.com/restaurant/1131985085/home",
+        "sourceAddress": "전남광주통합특별시 북구 설죽로202번길 49 1층",
+        "hoursContext": "in_store"
+      }
+    },
+    {
+      "id": "p_0049",
+      "naverPlaceId": "1087889426",
+      "name": "엄마손중국식분식",
+      "sources": [
+        "https://pcmap.place.naver.com/restaurant/1087889426/home",
+        "https://place.map.kakao.com/449293113"
+      ],
+      "menuObservation": {
+        "status": "unconfirmed",
+        "priceContext": "delivery",
+        "checkedAt": "2026-11-12",
+        "sourceUrl": "https://place.map.kakao.com/449293113",
+        "placeSourceUrl": "https://pcmap.place.naver.com/restaurant/1087889426/home",
+        "sourceAddress": "전남광주통합특별시 북구 설죽로214번길 111 1층",
+        "menus": [
+          {
+            "name": "꿔바로우 锅包肉 2인분",
+            "price": 20000,
+            "main": false
+          },
+          {
+            "name": "류육단고기요리 溜肉段 2인분",
+            "price": 21000,
+            "main": false
+          },
+          {
+            "name": "오징어쯔란볶음 孜然鱿鱼 2인분",
+            "price": 18000,
+            "main": false
+          },
+          {
+            "name": "고추잡채 青椒肉丝配花卷 2인분",
+            "price": 17000,
+            "main": false
+          },
+          {
+            "name": "피망고기채볶음 青椒肉丝 2인분",
+            "price": 16000,
+            "main": false
+          },
+          {
+            "name": "마라뼈다귀 麻辣大骨头 2인분",
+            "price": 19000,
+            "main": false
+          },
+          {
+            "name": "돼지곱창볶음 溜肥腸 2인분",
+            "price": 20000,
+            "main": false
+          },
+          {
+            "name": "궁바우지딩 宫保鸡丁 2인분",
+            "price": 20000,
+            "main": false
+          },
+          {
+            "name": "제육쯔란볶음 孜然肉片 2인분",
+            "price": 19000,
+            "main": false
+          },
+          {
+            "name": "훙사오러우 红烧肉 2인분",
+            "price": 20000,
+            "main": false
+          },
+          {
+            "name": "삼색야채볶음 地三鲜 2인분",
+            "price": 17000,
+            "main": false
+          },
+          {
+            "name": "위샹러우쓰볶음 魚香肉絲 2인분",
+            "price": 17000,
+            "main": false
+          },
+          {
+            "name": "마파두부 麻婆豆腐 2인분",
+            "price": 15000,
+            "main": false
+          },
+          {
+            "name": "피망감자채볶음 青椒土豆丝 2인분",
+            "price": 15000,
+            "main": false
+          },
+          {
+            "name": "토마토계란볶음 番茄鸡蛋 2인분",
+            "price": 15000,
+            "main": false
+          },
+          {
+            "name": "쯔란제육볶음요리와 밥 孜然肉片盖饭 1인분",
+            "price": 8500,
+            "main": true
+          },
+          {
+            "name": "갈비찜덮밥 排骨肉盖浇饭 1인분",
+            "price": 9000,
+            "main": true
+          },
+          {
+            "name": "마라뼈다귀와 밥 麻辣大骨盖浇饭 1인분",
+            "price": 8000,
+            "main": true
+          },
+          {
+            "name": "홍사오러우덮밥 红烧肉盖浇饭 1인분",
+            "price": 9000,
+            "main": true
+          },
+          {
+            "name": "오이제육요리와 밥 溜肉片盖饭 1인분",
+            "price": 8500,
+            "main": true
+          },
+          {
+            "name": "궁바우지딩요리와 밥 宫保鸡丁盖饭 1인분",
+            "price": 9000,
+            "main": true
+          },
+          {
+            "name": "쯔란오징어볶음요리와 밥 孜然鱿鱼盖饭 1인분",
+            "price": 8500,
+            "main": true
+          },
+          {
+            "name": "위샹러우쓰덮밥 鱼香肉丝盖浇饭 1인분",
+            "price": 7500,
+            "main": true
+          },
+          {
+            "name": "닭고기카레덮밥 咖喱鸡肉盖浇饭 1인분",
+            "price": 8500,
+            "main": true
+          },
+          {
+            "name": "카스 韩国啤酒",
+            "price": 4000,
+            "main": false
+          },
+          {
+            "name": "참이슬 후레쉬 韩国烧酒",
+            "price": 4000,
+            "main": false
+          },
+          {
+            "name": "칭따오 青岛",
+            "price": 6000,
+            "main": false
+          },
+          {
+            "name": "설원 林海雪原250ml",
+            "price": 10000,
+            "main": false
+          },
+          {
+            "name": "연태고량주 烟台 500ml",
+            "price": 20000,
+            "main": false
+          },
+          {
+            "name": "설원 林海雪原500ml",
+            "price": 20000,
+            "main": false
+          }
+        ],
+        "note": "카카오맵 요기요 배달 탭의 게시값. 포장·매장 가격은 확인되지 않아 예산·점수·추천에 사용하지 않음."
+      },
+      "unconfirmedNotes": [
+        "보조 지도에 영업시간이 있으나 요기요 제공으로 표시되어 매장 영업시간으로 확정하지 않았습니다."
+      ]
+    },
+    {
+      "id": "p_0006",
+      "naverPlaceId": "1075860086",
+      "name": "한끼도시락",
+      "sources": [
+        "https://pcmap.place.naver.com/restaurant/1075860086/home"
+      ]
+    },
+    {
+      "id": "p_0017",
+      "naverPlaceId": "37501200",
+      "name": "전대분식",
+      "sources": [
+        "https://pcmap.place.naver.com/restaurant/37501200/home",
+        "https://pcmap.place.naver.com/restaurant/37501200/menu/list"
+      ]
+    },
+    {
+      "id": "p_0105",
+      "naverPlaceId": "16178952",
+      "name": "삼호반점",
+      "sources": [
+        "https://pcmap.place.naver.com/restaurant/16178952/home",
+        "https://pcmap.place.naver.com/restaurant/16178952/menu/list",
+        "https://place.map.kakao.com/10427755"
+      ],
+      "hoursObservation": {
+        "sourceUrl": "https://place.map.kakao.com/10427755",
+        "checkedAt": "2026-11-12",
+        "status": "confirmed",
+        "hours": [
+          {
+            "days": [
+              "월",
+              "화",
+              "수",
+              "목",
+              "금",
+              "토"
+            ],
+            "open": "11:00",
+            "close": "19:30"
+          }
+        ],
+        "note": "동일 상호·도로명 건물번호의 카카오맵 영업정보. 매주 요일별 영업/휴무와 게시된 브레이크만 반영. 배달업체 제공 시간은 제외.",
+        "placeSourceUrl": "https://pcmap.place.naver.com/restaurant/16178952/home",
+        "sourceAddress": "전남광주통합특별시 북구 용주로30번길 9 1층",
+        "hoursContext": "in_store"
+      }
+    },
+    {
+      "id": "p_0159",
+      "naverPlaceId": "2091246902",
+      "name": "꿈에그린분식",
+      "sources": [
+        "https://pcmap.place.naver.com/restaurant/2091246902/home",
+        "https://pcmap.place.naver.com/restaurant/2091246902/menu/list",
+        "https://ldb-phinf.pstatic.net/20251225_208/1766673295513uttHQ_JPEG/1000012253.jpg"
+      ],
+      "menuObservation": {
+        "status": "confirmed",
+        "priceContext": "in_store",
+        "checkedAt": "2026-11-12",
+        "sourceUrl": "https://pcmap.place.naver.com/restaurant/2091246902/menu/list",
+        "menus": [
+          {
+            "name": "왕호떡",
+            "price": 1500,
+            "main": false
+          },
+          {
+            "name": "아이스크림호떡",
+            "price": 3000,
+            "main": false
+          },
+          {
+            "name": "떡볶이",
+            "price": 5000,
+            "main": false
+          },
+          {
+            "name": "모듬순대",
+            "price": 6000,
+            "main": false
+          },
+          {
+            "name": "라면",
+            "price": 3500,
+            "main": true
+          },
+          {
+            "name": "떡라면",
+            "price": 4000,
+            "main": true
+          },
+          {
+            "name": "어묵",
+            "price": 700,
+            "main": false
+          },
+          {
+            "name": "어묵(3개)",
+            "price": 2000,
+            "main": false
+          },
+          {
+            "name": "물떡",
+            "price": 1000,
+            "main": false
+          },
+          {
+            "name": "새우튀김",
+            "price": 1500,
+            "main": false
+          },
+          {
+            "name": "오징어튀김",
+            "price": 1500,
+            "main": false
+          },
+          {
+            "name": "야채튀김",
+            "price": 1500,
+            "main": false
+          },
+          {
+            "name": "고구마튀김",
+            "price": 1500,
+            "main": false
+          },
+          {
+            "name": "고추튀김",
+            "price": 2000,
+            "main": false
+          },
+          {
+            "name": "모듬튀김(5개)",
+            "price": 7500,
+            "main": false
+          },
+          {
+            "name": "참치김치찌개",
+            "price": 6000,
+            "main": true
+          },
+          {
+            "name": "돼지김치찌개",
+            "price": 7000,
+            "main": true
+          },
+          {
+            "name": "된장찌개",
+            "price": 6000,
+            "main": true
+          },
+          {
+            "name": "음료수(콜라·사이다·환타)",
+            "price": 1500,
+            "main": false
+          },
+          {
+            "name": "공기",
+            "price": 1500,
+            "main": false
+          },
+          {
+            "name": "꿈에세트",
+            "price": 18000,
+            "main": false
+          },
+          {
+            "name": "그린세트",
+            "price": 14000,
+            "main": false
+          }
+        ],
+        "note": "공개 매장 메뉴판에 읽히는 이름·가격만 반영. 공유 분량과 사이드 메뉴를 임의로 1인 식사로 환산하지 않음. 메뉴판: https://ldb-phinf.pstatic.net/20251225_208/1766673295513uttHQ_JPEG/1000012253.jpg"
+      }
+    },
+    {
+      "id": "p_0113",
+      "naverPlaceId": "34706804",
+      "name": "나루터",
+      "sources": [
+        "https://pcmap.place.naver.com/restaurant/34706804/home",
+        "https://pcmap.place.naver.com/restaurant/34706804/menu/list"
+      ]
+    },
+    {
+      "id": "p_0142",
+      "naverPlaceId": "1697423048",
+      "name": "난타5000피자 전대용봉점",
+      "sources": [
+        "https://pcmap.place.naver.com/restaurant/1697423048/home",
+        "https://pcmap.place.naver.com/restaurant/1697423048/menu/list"
+      ],
+      "unconfirmedNotes": [
+        "보조 지도에 영업시간이 있으나 요기요 제공으로 표시되어 매장 영업시간으로 확정하지 않았습니다."
+      ]
+    },
+    {
+      "id": "p_0148",
+      "naverPlaceId": "1911743486",
+      "name": "뉴요커피자 본점",
+      "sources": [
+        "https://pcmap.place.naver.com/restaurant/1911743486/home",
+        "https://pcmap.place.naver.com/restaurant/1911743486/menu/list"
+      ]
+    },
+    {
+      "id": "p_0055",
+      "naverPlaceId": "1887196713",
+      "name": "왕손주먹구이",
+      "sources": [
+        "https://pcmap.place.naver.com/restaurant/1887196713/home",
+        "https://pcmap.place.naver.com/restaurant/1887196713/menu/list"
+      ]
+    },
+    {
+      "id": "p_0029",
+      "naverPlaceId": "37500825",
+      "name": "용봉골",
+      "sources": [
+        "https://pcmap.place.naver.com/restaurant/37500825/home",
+        "https://pcmap.place.naver.com/restaurant/37500825/menu/list"
+      ]
+    },
+    {
+      "id": "p_0056",
+      "naverPlaceId": "1346033389",
+      "name": "테트리스찜닭 전남대점",
+      "sources": [
+        "https://pcmap.place.naver.com/restaurant/1346033389/home",
+        "https://pcmap.place.naver.com/restaurant/1346033389/menu/list"
+      ]
+    },
+    {
+      "id": "p_0109",
+      "naverPlaceId": "21519977",
+      "name": "한우촌",
+      "sources": [
+        "https://pcmap.place.naver.com/restaurant/21519977/home",
+        "https://pcmap.place.naver.com/restaurant/21519977/menu/list",
+        "https://ldb-phinf.pstatic.net/20260415_36/17762253744555Nqsz_JPEG/1776225359382.jpg",
+        "https://place.map.kakao.com/15777781"
+      ],
+      "menuObservation": {
+        "status": "confirmed",
+        "priceContext": "in_store",
+        "checkedAt": "2026-11-12",
+        "sourceUrl": "https://pcmap.place.naver.com/restaurant/21519977/menu/list",
+        "menus": [
+          {
+            "name": "꽃살(180g)",
+            "price": 28000,
+            "main": true
+          },
+          {
+            "name": "갈비살(180g)",
+            "price": 28000,
+            "main": true
+          },
+          {
+            "name": "꽃등심(180g)",
+            "price": 30000,
+            "main": true
+          },
+          {
+            "name": "생고기(180g)",
+            "price": 24000,
+            "main": true
+          },
+          {
+            "name": "차돌박이(180g)",
+            "price": 18000,
+            "main": true
+          },
+          {
+            "name": "육회 소",
+            "price": 25000,
+            "main": false
+          },
+          {
+            "name": "육회 중",
+            "price": 35000,
+            "main": false
+          },
+          {
+            "name": "육회 대",
+            "price": 45000,
+            "main": false
+          },
+          {
+            "name": "생삼겹(180g)",
+            "price": 13000,
+            "main": true
+          },
+          {
+            "name": "대패삼겹(180g)",
+            "price": 13000,
+            "main": true
+          },
+          {
+            "name": "목살(180g)",
+            "price": 13000,
+            "main": true
+          },
+          {
+            "name": "주물럭 소",
+            "price": 20000,
+            "main": false
+          },
+          {
+            "name": "주물럭 중",
+            "price": 30000,
+            "main": false
+          },
+          {
+            "name": "주물럭 대",
+            "price": 40000,
+            "main": false
+          },
+          {
+            "name": "애호박찌개",
+            "price": 8000,
+            "main": true
+          },
+          {
+            "name": "김치찌개",
+            "price": 8000,
+            "main": true
+          },
+          {
+            "name": "갈비탕",
+            "price": 9000,
+            "main": true
+          },
+          {
+            "name": "생·익비빔밥",
+            "price": 10000,
+            "main": true
+          },
+          {
+            "name": "육개장",
+            "price": 9000,
+            "main": true
+          },
+          {
+            "name": "된장찌개",
+            "price": 8000,
+            "main": true
+          },
+          {
+            "name": "냉면",
+            "price": 7000,
+            "main": true
+          },
+          {
+            "name": "누룽지",
+            "price": 2000,
+            "main": false
+          },
+          {
+            "name": "음료수",
+            "price": 2000,
+            "main": false
+          }
+        ],
+        "note": "공개 매장 메뉴판에 읽히는 이름·가격만 반영. 공유 분량과 사이드 메뉴를 임의로 1인 식사로 환산하지 않음. 메뉴판: https://ldb-phinf.pstatic.net/20260415_36/17762253744555Nqsz_JPEG/1776225359382.jpg"
+      },
+      "hoursObservation": {
+        "sourceUrl": "https://place.map.kakao.com/15777781",
+        "checkedAt": "2026-11-12",
+        "status": "confirmed",
+        "hours": [
+          {
+            "days": [
+              "월",
+              "화",
+              "수",
+              "목",
+              "금",
+              "토"
+            ],
+            "open": "11:30",
+            "close": "21:30",
+            "break": {
+              "start": "14:00",
+              "end": "17:00"
+            }
+          }
+        ],
+        "note": "동일 상호·도로명 건물번호의 카카오맵 영업정보. 매주 요일별 영업/휴무와 게시된 브레이크만 반영. 배달업체 제공 시간은 제외.",
+        "placeSourceUrl": "https://pcmap.place.naver.com/restaurant/21519977/home",
+        "sourceAddress": "전남광주통합특별시 북구 용주로30번길 36",
+        "hoursContext": "in_store"
+      }
+    },
+    {
+      "id": "p_0038",
+      "naverPlaceId": "16173961",
+      "name": "난타5000피자 전대정문점",
+      "sources": [
+        "https://pcmap.place.naver.com/restaurant/16173961/home",
+        "https://pcmap.place.naver.com/restaurant/16173961/menu/list"
+      ]
+    },
+    {
+      "id": "p_0137",
+      "naverPlaceId": "1507113408",
+      "name": "로니의몬스터피자 전남대점",
+      "sources": [
+        "https://pcmap.place.naver.com/restaurant/1507113408/home",
+        "https://pcmap.place.naver.com/restaurant/1507113408/menu/list"
+      ],
+      "menuObservation": {
+        "sourceUrl": "https://pcmap.place.naver.com/restaurant/1507113408/menu/list",
+        "checkedAt": "2026-11-12",
+        "priceContext": "in_store",
+        "status": "confirmed",
+        "menus": [
+          {
+            "name": "몬스터 콘치즈피자 (R)",
+            "price": 18900,
+            "main": true
+          },
+          {
+            "name": "몬스터 콘치즈피자 (L)",
+            "price": 22900,
+            "main": true
+          },
+          {
+            "name": "몬스터 콘치즈피자 (18인치 M)",
+            "price": 31900,
+            "main": true
+          },
+          {
+            "name": "몬스터 콤비네이션 (R)",
+            "price": 19900,
+            "main": true
+          },
+          {
+            "name": "몬스터 콤비네이션 (L)",
+            "price": 23900,
+            "main": true
+          },
+          {
+            "name": "몬스터 콤비네이션 (18인치 M)",
+            "price": 33900,
+            "main": true
+          },
+          {
+            "name": "페퍼로니피자 (R)",
+            "price": 19900,
+            "main": true
+          },
+          {
+            "name": "페퍼로니피자 (L)",
+            "price": 23900,
+            "main": true
+          },
+          {
+            "name": "페퍼로니피자 (18인치 M)",
+            "price": 33900,
+            "main": true
+          },
+          {
+            "name": "스파이시 페퍼로니피자 (R)",
+            "price": 20900,
+            "main": true
+          },
+          {
+            "name": "스파이시 페퍼로니피자 (L)",
+            "price": 24900,
+            "main": true
+          },
+          {
+            "name": "스파이시 페퍼로니피자 (18인치 M)",
+            "price": 34900,
+            "main": true
+          },
+          {
+            "name": "불고기피자 (R)",
+            "price": 19900,
+            "main": true
+          },
+          {
+            "name": "불고기피자 (L)",
+            "price": 23900,
+            "main": true
+          },
+          {
+            "name": "불고기피자 (18인치 M)",
+            "price": 33900,
+            "main": true
+          },
+          {
+            "name": "스파이시 불고기피자 (R)",
+            "price": 20900,
+            "main": true
+          },
+          {
+            "name": "스파이시 불고기피자 (L)",
+            "price": 24900,
+            "main": true
+          },
+          {
+            "name": "스파이시 불고기피자 (18인치 M)",
+            "price": 34900,
+            "main": true
+          },
+          {
+            "name": "몬스터 하와이안피자 (R)",
+            "price": 19900,
+            "main": true
+          },
+          {
+            "name": "몬스터 하와이안피자 (L)",
+            "price": 23900,
+            "main": true
+          },
+          {
+            "name": "몬스터 하와이안피자 (18인치 M)",
+            "price": 33900,
+            "main": true
+          },
+          {
+            "name": "통고구마피자 (R)",
+            "price": 19900,
+            "main": true
+          },
+          {
+            "name": "통고구마피자 (L)",
+            "price": 23900,
+            "main": true
+          },
+          {
+            "name": "통고구마피자 (18인치 M)",
+            "price": 33900,
+            "main": true
+          },
+          {
+            "name": "베이컨 고구마피자 (R)",
+            "price": 19900,
+            "main": true
+          },
+          {
+            "name": "베이컨 고구마피자 (L)",
+            "price": 23900,
+            "main": true
+          },
+          {
+            "name": "베이컨 고구마피자 (18인치 M)",
+            "price": 33900,
+            "main": true
+          },
+          {
+            "name": "베이컨 체다후라이피자 (R)",
+            "price": 19900,
+            "main": true
+          },
+          {
+            "name": "베이컨 체다후라이피자 (L)",
+            "price": 23900,
+            "main": true
+          },
+          {
+            "name": "베이컨 체다후라이피자 (18인치 M)",
+            "price": 33900,
+            "main": true
+          },
+          {
+            "name": "체다베이컨피자 (R)",
+            "price": 19900,
+            "main": true
+          },
+          {
+            "name": "체다베이컨피자 (L)",
+            "price": 23900,
+            "main": true
+          },
+          {
+            "name": "체다베이컨피자 (18인치 M)",
+            "price": 33900,
+            "main": true
+          },
+          {
+            "name": "베이컨포테이토피자 (R)",
+            "price": 19900,
+            "main": true
+          },
+          {
+            "name": "베이컨포테이토피자 (L)",
+            "price": 23900,
+            "main": true
+          },
+          {
+            "name": "베이컨포테이토피자 (18인치 M)",
+            "price": 33900,
+            "main": true
+          },
+          {
+            "name": "바베큐 치킨피자 (R)",
+            "price": 19900,
+            "main": true
+          },
+          {
+            "name": "바베큐 치킨피자 (L)",
+            "price": 23900,
+            "main": true
+          },
+          {
+            "name": "바베큐 치킨피자 (18인치 M)",
+            "price": 33900,
+            "main": true
+          },
+          {
+            "name": "바삭바삭 포테이토피자 (R)",
+            "price": 20900,
+            "main": true
+          },
+          {
+            "name": "바삭바삭 포테이토피자 (L)",
+            "price": 24900,
+            "main": true
+          },
+          {
+            "name": "바삭바삭 포테이토피자 (18인치 M)",
+            "price": 34900,
+            "main": true
+          },
+          {
+            "name": "핫불닭 포테이토피자 (R)",
+            "price": 20900,
+            "main": true
+          },
+          {
+            "name": "핫불닭 포테이토피자 (L)",
+            "price": 24900,
+            "main": true
+          },
+          {
+            "name": "핫불닭 포테이토피자 (18인치 M)",
+            "price": 34900,
+            "main": true
+          },
+          {
+            "name": "불닭쉬림프피자 (R)",
+            "price": 21900,
+            "main": true
+          },
+          {
+            "name": "불닭쉬림프피자 (L)",
+            "price": 24900,
+            "main": true
+          },
+          {
+            "name": "불닭쉬림프피자 (18인치 M)",
+            "price": 34900,
+            "main": true
+          },
+          {
+            "name": "소불고기 청양마요피자 (R)",
+            "price": 20900,
+            "main": true
+          },
+          {
+            "name": "소불고기 청양마요피자 (L)",
+            "price": 24900,
+            "main": true
+          },
+          {
+            "name": "소불고기 청양마요피자 (18인치 M)",
+            "price": 34900,
+            "main": true
+          },
+          {
+            "name": "갈릭스테이크쉬림프피자 (R)",
+            "price": 21900,
+            "main": true
+          },
+          {
+            "name": "갈릭스테이크쉬림프피자 (L)",
+            "price": 25900,
+            "main": true
+          },
+          {
+            "name": "갈릭스테이크쉬림프피자 (18인치 M)",
+            "price": 35900,
+            "main": true
+          },
+          {
+            "name": "하와이안쉬림프피자 (R)",
+            "price": 21900,
+            "main": true
+          },
+          {
+            "name": "하와이안쉬림프피자 (L)",
+            "price": 25900,
+            "main": true
+          },
+          {
+            "name": "하와이안쉬림프피자 (18인치 M)",
+            "price": 35900,
+            "main": true
+          },
+          {
+            "name": "페퍼로니폭탄피자 (R)",
+            "price": 20900,
+            "main": true
+          },
+          {
+            "name": "페퍼로니폭탄피자 (L)",
+            "price": 24900,
+            "main": true
+          },
+          {
+            "name": "페퍼로니폭탄피자 (18인치 M)",
+            "price": 36900,
+            "main": true
+          },
+          {
+            "name": "치즈폭탄피자 (R)",
+            "price": 20900,
+            "main": true
+          },
+          {
+            "name": "치즈폭탄피자 (L)",
+            "price": 25900,
+            "main": true
+          },
+          {
+            "name": "치즈폭탄피자 (18인치 M)",
+            "price": 37900,
+            "main": true
+          },
+          {
+            "name": "갈릭 비프스테이크피자 (R)",
+            "price": 19900,
+            "main": true
+          },
+          {
+            "name": "갈릭 비프스테이크피자 (L)",
+            "price": 23900,
+            "main": true
+          },
+          {
+            "name": "갈릭 비프스테이크피자 (18인치 M)",
+            "price": 34900,
+            "main": true
+          },
+          {
+            "name": "갈릭 포크피자 (R)",
+            "price": 19900,
+            "main": true
+          },
+          {
+            "name": "갈릭 포크피자 (L)",
+            "price": 25900,
+            "main": true
+          },
+          {
+            "name": "갈릭 포크피자 (18인치 M)",
+            "price": 35900,
+            "main": true
+          },
+          {
+            "name": "할라 크림새우피자 (R)",
+            "price": 20900,
+            "main": true
+          },
+          {
+            "name": "할라 크림새우피자 (L)",
+            "price": 24900,
+            "main": true
+          },
+          {
+            "name": "할라 크림새우피자 (18인치 M)",
+            "price": 35900,
+            "main": true
+          },
+          {
+            "name": "4가지 몬스터피자 (R)",
+            "price": 23900,
+            "main": true
+          },
+          {
+            "name": "4가지 몬스터피자 (L)",
+            "price": 26900,
+            "main": true
+          },
+          {
+            "name": "4가지 몬스터피자 (18인치 M)",
+            "price": 36900,
+            "main": true
+          }
+        ],
+        "note": "매장 메뉴판의 사이즈별 게시 총액을 그대로 예산에 적용. 메뉴판: https://ldb-phinf.pstatic.net/20260605_84/17806302484445RHdu_JPEG/temp_picture.jpg"
+      }
+    },
+    {
+      "id": "p_0104",
+      "naverPlaceId": "16169662",
+      "name": "본가왕손반점",
+      "sources": [
+        "https://pcmap.place.naver.com/restaurant/16169662/home",
+        "https://pcmap.place.naver.com/restaurant/16169662/menu/list",
+        "https://place.map.kakao.com/9029197"
+      ],
+      "menuObservation": {
+        "status": "confirmed",
+        "priceContext": "in_store",
+        "checkedAt": "2026-11-12",
+        "sourceUrl": "https://place.map.kakao.com/9029197",
+        "placeSourceUrl": "https://pcmap.place.naver.com/restaurant/16169662/home",
+        "sourceAddress": "전남광주통합특별시 북구 자미로 68-6",
+        "menus": [
+          {
+            "name": "우동",
+            "price": 8000,
+            "main": true
+          },
+          {
+            "name": "짜장",
+            "price": 6000,
+            "main": true
+          },
+          {
+            "name": "간짜장",
+            "price": 8000,
+            "main": true
+          },
+          {
+            "name": "짬뽕",
+            "price": 8000,
+            "main": true
+          },
+          {
+            "name": "삼선짜장",
+            "price": 10000,
+            "main": true
+          },
+          {
+            "name": "삼선우동",
+            "price": 10000,
+            "main": true
+          },
+          {
+            "name": "삼선짬뽕",
+            "price": 10000,
+            "main": true
+          },
+          {
+            "name": "국밥",
+            "price": 8000,
+            "main": true
+          },
+          {
+            "name": "볶음밥",
+            "price": 8000,
+            "main": true
+          },
+          {
+            "name": "잡채밥",
+            "price": 9000,
+            "main": true
+          },
+          {
+            "name": "해물덮밥",
+            "price": 10000,
+            "main": true
+          },
+          {
+            "name": "잡채",
+            "price": 20000,
+            "main": false
+          },
+          {
+            "name": "탕수육(소)",
+            "price": 20000,
+            "main": false
+          },
+          {
+            "name": "탕수육(중)",
+            "price": 25000,
+            "main": false
+          },
+          {
+            "name": "탕수육(대)",
+            "price": 30000,
+            "main": false
+          },
+          {
+            "name": "양장피",
+            "price": 35000,
+            "main": false
+          },
+          {
+            "name": "깐풍기",
+            "price": 35000,
+            "main": false
+          },
+          {
+            "name": "삼선국밥",
+            "price": 10000,
+            "main": true
+          },
+          {
+            "name": "쟁반짜장(2인)",
+            "price": 18000,
+            "main": false
+          },
+          {
+            "name": "김치볶음밥",
+            "price": 9000,
+            "main": true
+          },
+          {
+            "name": "냉콩국수",
+            "price": 10000,
+            "main": true
+          }
+        ],
+        "note": "같은 상호·도로명 건물번호의 카카오맵 메뉴 게시값. 배달 탭 가격과 구분해 수집. 게시값 확인이며 현장 현재 가격 확인은 아님."
+      }
+    },
+    {
+      "id": "p_0101",
+      "naverPlaceId": "13570391",
+      "name": "초가왕족발",
+      "sources": [
+        "https://pcmap.place.naver.com/restaurant/13570391/home",
+        "https://pcmap.place.naver.com/restaurant/13570391/menu/list"
+      ]
+    },
+    {
+      "id": "p_0110",
+      "naverPlaceId": "21528523",
+      "name": "피자스쿨 광주전대정문점",
+      "sources": [
+        "https://pcmap.place.naver.com/restaurant/21528523/home",
+        "https://pcmap.place.naver.com/restaurant/21528523/menu/list"
+      ],
+      "hoursObservation": {
+        "sourceUrl": "https://pcmap.place.naver.com/restaurant/21528523/home",
+        "checkedAt": "2026-11-12",
+        "hoursContext": "in_store",
+        "status": "confirmed",
+        "hours": [
+          {
+            "days": [
+              "월",
+              "화",
+              "수",
+              "목",
+              "금"
+            ],
+            "open": "14:00",
+            "close": "22:30",
+            "lastOrder": "22:25"
+          },
+          {
+            "days": [
+              "토",
+              "일"
+            ],
+            "open": "12:00",
+            "close": "22:00",
+            "lastOrder": "21:55"
+          }
+        ],
+        "closedDates": [
+          "2026-11-12"
+        ],
+        "note": "공개 홈의 평일·주말 시간을 반영하고 목요일은 평일 운영시간 적용. 2026-11-12 임시휴무는 별도 날짜로 유지."
+      }
+    },
+    {
+      "id": "p_0157",
+      "naverPlaceId": "2071340968",
+      "name": "감쪽 전남대점",
+      "sources": [
+        "https://pcmap.place.naver.com/restaurant/2071340968/home",
+        "https://pcmap.place.naver.com/restaurant/2071340968/menu/list"
+      ]
+    },
+    {
+      "id": "p_0114",
+      "naverPlaceId": "35523968",
+      "name": "동대문엽기떡볶이 광주전남대점",
+      "sources": [
+        "https://pcmap.place.naver.com/restaurant/35523968/home",
+        "https://pcmap.place.naver.com/restaurant/35523968/menu/list"
+      ]
+    },
+    {
+      "id": "p_0108",
+      "naverPlaceId": "20369720",
+      "name": "동산회관",
+      "sources": [
+        "https://pcmap.place.naver.com/restaurant/20369720/home",
+        "https://pcmap.place.naver.com/restaurant/20369720/menu/list"
+      ]
+    },
+    {
+      "id": "p_0100",
+      "naverPlaceId": "85019125",
+      "name": "맥도날드 전남대DT점",
+      "sources": [
+        "https://pcmap.place.naver.com/restaurant/85019125/home",
+        "https://pcmap.place.naver.com/restaurant/85019125/menu/list"
+      ],
+      "unconfirmedNotes": [
+        "보조 지도 매장 메뉴에도 숫자 가격이 게시되지 않아 배달가·다른 지점 가격으로 대체하지 않았습니다."
+      ]
+    },
+    {
+      "id": "p_0116",
+      "naverPlaceId": "37346559",
+      "name": "버거킹 전남대후문점",
+      "sources": [
+        "https://pcmap.place.naver.com/restaurant/37346559/home",
+        "https://m.booking.naver.com/order/bizes/916853/items/5097110?theme=place&service-target=map-pc&refererCode=menutab&lang=ko&area=bmp"
+      ],
+      "unconfirmedNotes": [
+        "보조 지도 매장 메뉴에도 숫자 가격이 게시되지 않아 배달가·다른 지점 가격으로 대체하지 않았습니다."
+      ]
+    },
+    {
+      "id": "p_0147",
+      "naverPlaceId": "1879261018",
+      "name": "이런이궈마라탕 전남대점",
+      "sources": [
+        "https://pcmap.place.naver.com/restaurant/1879261018/home",
+        "https://pcmap.place.naver.com/restaurant/1879261018/menu/list"
+      ]
+    },
+    {
+      "id": "p_0138",
+      "naverPlaceId": "1520354551",
+      "name": "전대주먹구이",
+      "sources": [
+        "https://pcmap.place.naver.com/restaurant/1520354551/home",
+        "https://pcmap.place.naver.com/restaurant/1520354551/menu/list"
+      ],
+      "hoursObservation": {
+        "sourceUrl": "https://pcmap.place.naver.com/restaurant/1520354551/home",
+        "checkedAt": "2026-11-12",
+        "status": "confirmed",
+        "hours": [
+          {
+            "days": [
+              "월",
+              "화",
+              "수",
+              "목",
+              "금",
+              "토",
+              "일"
+            ],
+            "open": "16:00",
+            "close": "24:00"
+          },
+          {
+            "days": [
+              "월",
+              "화",
+              "수",
+              "목",
+              "금",
+              "토",
+              "일"
+            ],
+            "open": "00:00",
+            "close": "01:00",
+            "lastOrder": "00:00"
+          }
+        ],
+        "note": "매일16:00~익일01:00·마지막주문00:00. 자정 이후 구간은 다음 요일로 분리."
+      }
+    },
+    {
+      "id": "p_0102",
+      "naverPlaceId": "16154651",
+      "name": "쭉심 전대후문점",
+      "sources": [
+        "https://pcmap.place.naver.com/restaurant/16154651/home",
+        "https://pcmap.place.naver.com/restaurant/16154651/menu/list"
+      ],
+      "hoursObservation": {
+        "sourceUrl": "https://pcmap.place.naver.com/restaurant/16154651/home",
+        "checkedAt": "2026-11-12",
+        "status": "confirmed",
+        "hours": [
+          {
+            "days": [
+              "월",
+              "화",
+              "수",
+              "목",
+              "금",
+              "토",
+              "일"
+            ],
+            "open": "12:00",
+            "close": "24:00"
+          }
+        ],
+        "note": "요일별 영업·휴무를 공개 게시 내용에서 확인. 미게시 마지막 주문 시각은 추정하지 않음."
+      }
+    }
+  ]
+}

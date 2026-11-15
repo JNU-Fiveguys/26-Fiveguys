@@ -68,6 +68,7 @@ ALLOWED_EXT = {
     ".c", ".cpp", ".h", ".py", ".java", ".ipynb",
 }
 MAX_FILE_MB = 100               # 파일 하나당 최대 용량 — 대용량 미디어 차단
+ATTACHMENT_FAILURE_LIMIT = 3    # 한 실행에서 반복 첨부 실패는 여기까지만, 나머지는 다음 수집으로 보류
 
 # 파일 자료로 취급하는 활동 모듈 (/mod/<이름>/view.php)
 RESOURCE_MODULES = {"resource", "folder", "ubfile"}

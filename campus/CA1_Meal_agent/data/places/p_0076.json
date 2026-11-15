@@ -1,0 +1,433 @@
+{
+  "version": 1,
+  "id": "p_0076",
+  "name": "롤링파스타 광주전남대점",
+  "category": "양식",
+  "lat": 35.1758089522522,
+  "lng": 126.912726072445,
+  "address": "전남광주 북구 우치로 94 2층",
+  "source": "semas",
+  "sourceId": "MA0101202409A0226918",
+  "sourceStatus": "active",
+  "attrs": {
+    "status": "partial",
+    "menus": [
+      {
+        "name": "토마토 파스타",
+        "price": 7900,
+        "main": true
+      },
+      {
+        "name": "해물토마토파스타",
+        "price": 9900,
+        "main": true
+      },
+      {
+        "name": "까르보나라",
+        "price": 9500,
+        "main": true
+      }
+    ],
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금",
+          "토",
+          "일"
+        ],
+        "open": "11:00",
+        "close": "21:00",
+        "lastOrder": "20:30"
+      }
+    ]
+  },
+  "research": {
+    "identityStatus": "matched",
+    "queries": [
+      "\"롤링파스타\" \"전남대점\""
+    ],
+    "sources": [
+      {
+        "id": "s1",
+        "url": "https://www.diningcode.com/profile.php?rid=1z3j58L5jn9h",
+        "title": "롤링파스타 광주전남대점",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "상호와 도로명 주소를 대조함. URL을 직접 열어 주소와 본문을 확인함."
+      }
+    ],
+    "facts": {
+      "menus": {
+        "status": "confirmed",
+        "value": [
+          {
+            "name": "토마토 파스타",
+            "price": 7900,
+            "main": true
+          },
+          {
+            "name": "해물토마토파스타",
+            "price": 9900,
+            "main": true
+          },
+          {
+            "name": "까르보나라",
+            "price": 9500,
+            "main": true
+          }
+        ],
+        "sourceIds": [
+          "s1"
+        ],
+        "note": "주소가 일치하는 지점 페이지에 게시된 메뉴·가격. 실제 결제 가격은 현장 재확인 필요."
+      },
+      "hours": {
+        "status": "confirmed",
+        "value": [
+          {
+            "days": [
+              "월",
+              "화",
+              "수",
+              "목",
+              "금",
+              "토",
+              "일"
+            ],
+            "open": "11:00",
+            "close": "21:00",
+            "lastOrder": "20:30"
+          }
+        ],
+        "sourceIds": [
+          "s1"
+        ],
+        "note": "요일별 게시 영업시간 확인. 별도 휴일·임시 변경과 미게시 휴식시간은 확인되지 않음."
+      }
+    },
+    "notes": [],
+    "checkedAt": "2026-11-11",
+    "method": "web",
+    "unknownFields": [
+      "mealType",
+      "takeout",
+      "verifiedAt",
+      "verifiedBy",
+      "break"
+    ]
+  },
+  "availability": {
+    "status": "listed",
+    "provider": "naver",
+    "checkedAt": "2026-11-11",
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/1479336713/home",
+    "naverPlaceId": "1479336713",
+    "observedName": "롤링파스타 광주전남대점",
+    "observedAddress": "전남광주 북구 우치로 94 2층",
+    "district": "후문",
+    "addressVerified": true,
+    "nearby": true,
+    "reason": "공개 네이버 지도에서 동일 주소의 전남대 후문 식당으로 확인"
+  },
+  "menuObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/1479336713/menu",
+    "checkedAt": "2026-11-11",
+    "priceContext": "in_store",
+    "menus": [
+      {
+        "name": "치즈 오븐 라자냐",
+        "price": 13500,
+        "main": true
+      },
+      {
+        "name": "오븐 머쉬룸 크림뇨끼",
+        "price": 11500,
+        "main": true
+      },
+      {
+        "name": "감자치즈 포카치아",
+        "price": 3000,
+        "main": false
+      },
+      {
+        "name": "알리오 올리오",
+        "price": 7900,
+        "main": true
+      },
+      {
+        "name": "버터 갈릭 파스타",
+        "price": 7900,
+        "main": true
+      },
+      {
+        "name": "봉골레",
+        "price": 8900,
+        "main": true
+      },
+      {
+        "name": "씨푸드 오일 파스타",
+        "price": 8900,
+        "main": true
+      },
+      {
+        "name": "매운 우삼겹 오일파스타",
+        "price": 8900,
+        "main": true
+      },
+      {
+        "name": "청양 불고기 파스타",
+        "price": 9500,
+        "main": true
+      },
+      {
+        "name": "로제크림 쉬림프 파스타",
+        "price": 9500,
+        "main": true
+      },
+      {
+        "name": "토마토 파스타",
+        "price": 7900,
+        "main": true
+      },
+      {
+        "name": "해물토마토파스타",
+        "price": 9900,
+        "main": true
+      },
+      {
+        "name": "매운우삼겹토마토파스타",
+        "price": 9900,
+        "main": true
+      },
+      {
+        "name": "빼쉐파스타",
+        "price": 10900,
+        "main": true
+      },
+      {
+        "name": "까르보나라",
+        "price": 9500,
+        "main": true
+      },
+      {
+        "name": "매운 크림 파스타",
+        "price": 9500,
+        "main": true
+      },
+      {
+        "name": "불고기 크림 파스타",
+        "price": 9500,
+        "main": true
+      },
+      {
+        "name": "해물 크림 파스타",
+        "price": 9900,
+        "main": true
+      },
+      {
+        "name": "스테이크 크림 파스타",
+        "price": 10500,
+        "main": true
+      },
+      {
+        "name": "치즈듬뿍오븐파스타",
+        "price": 9500,
+        "main": true
+      },
+      {
+        "name": "우삼겹 도리아",
+        "price": 9500,
+        "main": true
+      },
+      {
+        "name": "베이컨김치도리아",
+        "price": 9500,
+        "main": true
+      },
+      {
+        "name": "쉬림프필라프",
+        "price": 9500,
+        "main": true
+      },
+      {
+        "name": "우삼겹필라프",
+        "price": 9500,
+        "main": true
+      },
+      {
+        "name": "불고기필라프",
+        "price": 9500,
+        "main": true
+      },
+      {
+        "name": "스테이크 필라프",
+        "price": 10500,
+        "main": true
+      },
+      {
+        "name": "쉬림프 토마토 리조또",
+        "price": 9500,
+        "main": true
+      },
+      {
+        "name": "베이컨크림리조또",
+        "price": 9500,
+        "main": true
+      },
+      {
+        "name": "롤링함박스테이크",
+        "price": 13900,
+        "main": true
+      },
+      {
+        "name": "찹스테이크",
+        "price": 15900,
+        "main": true
+      },
+      {
+        "name": "시그니처 포크 스테이크",
+        "price": 16900,
+        "main": true
+      },
+      {
+        "name": "마르게리따 S",
+        "price": 7800,
+        "main": false
+      },
+      {
+        "name": "마르게리따 M",
+        "price": 9300,
+        "main": false
+      },
+      {
+        "name": "고르곤졸라 S",
+        "price": 7800,
+        "main": false
+      },
+      {
+        "name": "고르곤졸라 M",
+        "price": 9300,
+        "main": false
+      },
+      {
+        "name": "그린 샐러드",
+        "price": 6000,
+        "main": false
+      },
+      {
+        "name": "리코타치즈샐러드",
+        "price": 7000,
+        "main": false
+      },
+      {
+        "name": "콘 스프",
+        "price": 3500,
+        "main": false
+      },
+      {
+        "name": "머쉬룸 스프",
+        "price": 3500,
+        "main": false
+      },
+      {
+        "name": "올리브브레드",
+        "price": 2000,
+        "main": false
+      },
+      {
+        "name": "갈릭스틱",
+        "price": 3900,
+        "main": false
+      },
+      {
+        "name": "티라미수",
+        "price": 3500,
+        "main": false
+      },
+      {
+        "name": "아이스 큐브 망고 치즈",
+        "price": 3500,
+        "main": false
+      },
+      {
+        "name": "체리 베리 에이드",
+        "price": 8000,
+        "main": false
+      },
+      {
+        "name": "레몬 망고 에이드",
+        "price": 8000,
+        "main": false
+      },
+      {
+        "name": "피치레몬 아이스티",
+        "price": 3500,
+        "main": false
+      },
+      {
+        "name": "체리코크",
+        "price": 3500,
+        "main": false
+      },
+      {
+        "name": "체리 와인 에이드",
+        "price": 4500,
+        "main": false
+      },
+      {
+        "name": "블루 레몬 에이드",
+        "price": 4000,
+        "main": false
+      },
+      {
+        "name": "에이드(복숭아,청포도,자몽)",
+        "price": 4000,
+        "main": false
+      },
+      {
+        "name": "한라봉감귤주스",
+        "price": 3500,
+        "main": false
+      },
+      {
+        "name": "콜라/사이다",
+        "price": 2000,
+        "main": false
+      },
+      {
+        "name": "레드와인 (잔)",
+        "price": 3900,
+        "main": false
+      },
+      {
+        "name": "화이트와인 (잔)",
+        "price": 3900,
+        "main": false
+      },
+      {
+        "name": "카베르네소비뇽(레드)",
+        "price": 19000,
+        "main": false
+      },
+      {
+        "name": "쇼비뇽블랑(화이트)",
+        "price": 19000,
+        "main": false
+      }
+    ],
+    "note": "메뉴 상태: confirmed. 원본 관찰·좌표 출처는 적용 manifest에 보관합니다.",
+    "status": "confirmed"
+  },
+  "hoursObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/1479336713/home",
+    "checkedAt": "2026-11-11",
+    "status": "unconfirmed",
+    "hours": [],
+    "note": "매장 영업시간 관찰. 기존 attrs/research를 덮어쓰지 않습니다."
+  }
+}

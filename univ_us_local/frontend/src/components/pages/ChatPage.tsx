@@ -53,26 +53,37 @@ export default function ChatPage() {
   const end = useRef<HTMLDivElement>(null);
   const sentQ = useRef(false);
   const history = useRef<{ role: "user" | "assistant"; content: string }[]>([]);
+  const request = useRef<AbortController | null>(null);
+  const pendingWarning = useRef<string | null>(null);
+  const awaitingWarning = msgs.some((m) => m.role === "assistant" && m.warn);
 
   useEffect(() => {
     assistantApi.settings().then(setSettings).catch(() => setSettings(null));
+    return () => request.current?.abort();
   }, []);
 
   const send = async (question: string, confirmPii = false) => {
-    if (busy || !question.trim()) return;
+    if (request.current || (!confirmPii && pendingWarning.current) || !question.trim()) return;
+    const controller = new AbortController();
+    request.current = controller;
+    if (confirmPii) pendingWarning.current = null;
     setBusy(true);
     setText("");
     const aid = `a${Date.now()}`;
-    if (!confirmPii) history.current.push({ role: "user", content: question });
     setMsgs((m) => [
       ...(confirmPii ? m.filter((x) => !(x.role === "assistant" && x.warn)) : [...m, { id: `u${Date.now()}`, role: "user" as const, text: question }]),
       { id: aid, role: "assistant", text: "", cards: [], materials: [], links: [], notices: [], pending: [] },
     ]);
-    const patch = (f: (a: Extract<Msg, { role: "assistant" }>) => Partial<Extract<Msg, { role: "assistant" }>>) =>
-      setMsgs((m) => m.map((x) => (x.id === aid && x.role === "assistant" ? { ...x, ...f(x) } : x)));
+    const patch = (f: (a: Extract<Msg, { role: "assistant" }>) => Partial<Extract<Msg, { role: "assistant" }>>) => {
+      if (!controller.signal.aborted)
+        setMsgs((m) => m.map((x) => (x.id === aid && x.role === "assistant" ? { ...x, ...f(x) } : x)));
+    };
     let answer = "";
+    let warned = false;
     try {
-      await assistantApi.chat(history.current.slice(-12), confirmPii, (e) => {
+      // A question awaiting privacy approval must never enter subsequent request history.
+      await assistantApi.chat([...history.current, { role: "user" as const, content: question }].slice(-12), confirmPii, (e) => {
+        if (controller.signal.aborted) return;
         if (e.event === "delta") {
           answer += e.data;
           patch(() => ({ text: answer }));
@@ -92,15 +103,25 @@ export default function ChatPage() {
         } else if (e.event === "consent") patch(() => ({ consent: { text: e.data.text, question } }));
         else if (e.event === "pending") patch((a) => ({ pending: [...a.pending, { ...e.data, state: "pending" as const }] }));
         else if (e.event === "error") patch(() => ({ error: e.data }));
-        else if (e.event === "warn") patch(() => ({ warn: { text: e.data.text, question } }));
+        else if (e.event === "warn") {
+          warned = true;
+          pendingWarning.current = aid;
+          patch(() => ({ warn: { text: e.data.text, question } }));
+        }
         else if (e.event === "mode") setSettings((s) => (s ? { ...s, configured: false } : s));
-      });
+      }, controller.signal);
     } catch (err) {
       patch(() => ({ error: err instanceof Error ? err.message : "답하지 못했습니다" }));
     }
     patch(() => ({ status: undefined }));
-    if (answer) history.current.push({ role: "assistant", content: answer });
-    setBusy(false);
+    if (!controller.signal.aborted && !warned) {
+      history.current.push({ role: "user", content: question });
+      if (answer) history.current.push({ role: "assistant", content: answer });
+    }
+    if (request.current === controller) {
+      request.current = null;
+      setBusy(false);
+    }
   };
 
   useEffect(() => {
@@ -108,7 +129,6 @@ export default function ChatPage() {
       sentQ.current = true;
       void send(q);
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [q]);
 
   useEffect(() => {
@@ -116,8 +136,12 @@ export default function ChatPage() {
   }, [msgs]);
 
   const clearChat = () => {
+    request.current?.abort();
+    request.current = null;
+    pendingWarning.current = null;
     history.current = [];
     setMsgs([]);
+    setBusy(false);
   };
 
   return (
@@ -162,21 +186,32 @@ export default function ChatPage() {
             <Message
               key={m.id}
               m={m}
+              busy={busy}
               onPending={(pid, state) =>
                 setMsgs((xs) =>
                   xs.map((x) => (x.id === m.id && x.role === "assistant" ? { ...x, pending: x.pending.map((p) => (p.id === pid ? { ...p, state } : p)) } : x)),
                 )
               }
               onConsent={async (agree, question) => {
-                setMsgs((xs) => xs.map((x) => (x.id === m.id && x.role === "assistant" ? { ...x, consent: undefined } : x)));
-                if (!agree) return;
-                await assistantApi.setConsent(true);
-                void send(question);
+                if (busy) return;
+                if (!agree) {
+                  setMsgs((xs) => xs.map((x) => (x.id === m.id && x.role === "assistant" ? { ...x, consent: undefined } : x)));
+                  return;
+                }
+                try {
+                  const result = await assistantApi.setConsent(true);
+                  setSettings((s) => s ? { ...s, materialsConsent: result.materials } : s);
+                  setMsgs((xs) => xs.map((x) => (x.id === m.id && x.role === "assistant" ? { ...x, consent: undefined } : x)));
+                  void send(question);
+                } catch (error) {
+                  setMsgs((xs) => xs.map((x) => (x.id === m.id && x.role === "assistant" ? { ...x, error: error instanceof Error ? error.message : "동의를 저장하지 못했습니다" } : x)));
+                }
               }}
               onWarn={(sendAnyway, question) => {
                 if (sendAnyway) void send(question, true);
                 else {
-                  history.current.pop();
+                  if (busy) return;
+                  pendingWarning.current = null;
                   setMsgs((xs) => xs.filter((x) => x.id !== m.id));
                 }
               }}
@@ -200,6 +235,7 @@ export default function ChatPage() {
             className="field min-h-[42px] flex-1 resize-none py-2.5"
             placeholder="예) 운영체제 5주차 강의자료에서 교착 상태 설명해 줘"
             value={text}
+            disabled={awaitingWarning}
             onChange={(e) => setText(e.target.value)}
             onKeyDown={(e) => {
               if (e.key === "Enter" && !e.shiftKey && !e.nativeEvent.isComposing) {
@@ -208,7 +244,7 @@ export default function ChatPage() {
               }
             }}
           />
-          <button type="submit" className="btn btn-primary btn-icon" aria-label="보내기" disabled={busy || !text.trim()}>
+          <button type="submit" className="btn btn-primary btn-icon" aria-label="보내기" disabled={busy || awaitingWarning || !text.trim()}>
             <Send aria-hidden />
           </button>
         </form>
@@ -219,11 +255,13 @@ export default function ChatPage() {
 
 function Message({
   m,
+  busy,
   onPending,
   onConsent,
   onWarn,
 }: {
   m: Msg;
+  busy: boolean;
   onPending: (id: string, state: "confirmed" | "canceled") => void;
   onConsent: (agree: boolean, question: string) => void;
   onWarn: (sendAnyway: boolean, question: string) => void;
@@ -238,10 +276,10 @@ function Message({
         <div className="rounded-2xl border border-border bg-surface p-4 text-[14px]">
           <p>{m.warn.text}</p>
           <div className="mt-3 flex gap-2">
-            <button type="button" className="btn btn-primary btn-sm" onClick={() => onWarn(false, m.warn!.question)}>
+            <button type="button" className="btn btn-primary btn-sm" disabled={busy} onClick={() => onWarn(false, m.warn!.question)}>
               보내지 않기
             </button>
-            <button type="button" className="btn btn-sm" onClick={() => onWarn(true, m.warn!.question)}>
+            <button type="button" className="btn btn-sm" disabled={busy} onClick={() => onWarn(true, m.warn!.question)}>
               그래도 보내기
             </button>
           </div>
@@ -307,10 +345,10 @@ function Message({
           <p>{m.consent.text}</p>
           <p className="mt-1 text-[12px] text-faint">한 번 동의하면 다시 묻지 않습니다. ‘AI 연결 설정’에서 언제든 끌 수 있습니다.</p>
           <div className="mt-3 flex justify-end gap-2">
-            <button type="button" className="btn btn-sm" onClick={() => onConsent(false, m.consent!.question)}>
+            <button type="button" className="btn btn-sm" disabled={busy} onClick={() => onConsent(false, m.consent!.question)}>
               보내지 않기
             </button>
-            <button type="button" className="btn btn-primary btn-sm" onClick={() => onConsent(true, m.consent!.question)}>
+            <button type="button" className="btn btn-primary btn-sm" disabled={busy} onClick={() => onConsent(true, m.consent!.question)}>
               동의하고 다시 묻기
             </button>
           </div>

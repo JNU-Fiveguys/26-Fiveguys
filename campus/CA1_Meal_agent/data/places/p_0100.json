@@ -1,0 +1,192 @@
+{
+  "version": 1,
+  "id": "p_0100",
+  "name": "맥도날드 전남대DT점",
+  "category": "패스트푸드",
+  "lat": 35.1794951729652,
+  "lng": 126.912272020331,
+  "address": "전남광주 북구 우치로 134",
+  "source": "semas",
+  "sourceId": "MA0106202401A0008612",
+  "sourceStatus": "active",
+  "attrs": {
+    "status": "partial",
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금",
+          "토",
+          "일"
+        ],
+        "open": "00:00",
+        "close": "24:00"
+      }
+    ]
+  },
+  "research": {
+    "identityStatus": "matched",
+    "queries": [
+      "\"맥도날드\" \"전남대DT점\"",
+      "\"맥도날드\" \"우치로 134\" 메뉴"
+    ],
+    "sources": [
+      {
+        "id": "s1",
+        "url": "https://www.diningcode.com/profile.php?rid=FpJqNZ9PzoWh",
+        "title": "맥도날드 전남대후문·DT점 매장 정보",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "상호와 도로명 주소를 대조함. URL을 직접 열어 주소와 본문을 확인함."
+      },
+      {
+        "id": "s2",
+        "url": "https://www.daangn.com/kr/local-profile/%EB%A7%A5%EB%8F%84%EB%82%A0%EB%93%9C-%EC%A0%84%EB%82%A8%EB%8C%80dt%EC%A0%90-gqbqw7ju3jd8/",
+        "title": "맥도날드 전남대DT점 동네업체 정보",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "상호와 도로명 주소를 대조함. 공개 검색결과에서 확인했으며 직접 본문은 조회하지 않음."
+      }
+    ],
+    "facts": {
+      "menus": {
+        "status": "partial",
+        "sourceIds": [
+          "s1",
+          "s2"
+        ],
+        "note": "빅맥 세트, 맥스파이시 상하이 버거 세트 등 메뉴명은 확인했으나 가격은 별도 문의로 표시. 지점 가격 미확인으로 정수 가격값은 넣지 않음. 특정 기간 후기의 신메뉴·맥런치 가격도 일반가격으로 사용하지 않음."
+      },
+      "hours": {
+        "status": "confirmed",
+        "value": [
+          {
+            "days": [
+              "월",
+              "화",
+              "수",
+              "목",
+              "금",
+              "토",
+              "일"
+            ],
+            "open": "00:00",
+            "close": "24:00"
+          }
+        ],
+        "sourceIds": [
+          "s1"
+        ],
+        "note": "같은 주소 주간 매장 정보에 매일 00:00~24:00 게시. 맥모닝/맥런치와 각 메뉴 제공시간은 별도."
+      }
+    },
+    "notes": [],
+    "checkedAt": "2026-11-11",
+    "method": "web",
+    "unknownFields": [
+      "menus",
+      "mealType",
+      "takeout",
+      "verifiedAt",
+      "verifiedBy",
+      "break",
+      "lastOrder"
+    ]
+  },
+  "availability": {
+    "status": "listed",
+    "provider": "naver",
+    "checkedAt": "2026-11-11",
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/85019125/home",
+    "naverPlaceId": "85019125",
+    "observedName": "맥도날드 전남대DT점",
+    "observedAddress": "전남광주 북구 우치로 134",
+    "district": "후문",
+    "addressVerified": true,
+    "nearby": true,
+    "reason": "공개 네이버 지도에서 동일 주소의 전남대 후문 식당으로 확인"
+  },
+  "menuObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/85019125/menu",
+    "checkedAt": "2026-11-11",
+    "priceContext": "in_store",
+    "menus": [
+      {
+        "name": "빅맥® 세트",
+        "price": null,
+        "priceText": "가격 변동",
+        "main": true
+      },
+      {
+        "name": "맥스파이시® 상하이 버거 세트",
+        "price": null,
+        "priceText": "가격 변동",
+        "main": true
+      },
+      {
+        "name": "1955 버거™ 세트",
+        "price": null,
+        "priceText": "가격 변동",
+        "main": true
+      },
+      {
+        "name": "불고기 버거 세트",
+        "price": null,
+        "priceText": "가격 변동",
+        "main": true
+      },
+      {
+        "name": "슈슈 버거 세트",
+        "price": null,
+        "priceText": "가격 변동",
+        "main": true
+      },
+      {
+        "name": "베이컨 토마토 디럭스 세트",
+        "price": null,
+        "priceText": "가격 변동",
+        "main": true
+      }
+    ],
+    "note": "메뉴 상태: confirmed. 원본 관찰·좌표 출처는 적용 manifest에 보관합니다.",
+    "status": "unconfirmed"
+  },
+  "hoursObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/85019125/home",
+    "checkedAt": "2026-11-12",
+    "status": "confirmed",
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금",
+          "토",
+          "일"
+        ],
+        "open": "00:00",
+        "close": "24:00"
+      }
+    ],
+    "note": "매장 영업시간 관찰. 기존 attrs/research를 덮어쓰지 않습니다."
+  },
+  "followupReview": {
+    "checkedAt": "2026-11-12",
+    "reasons": [
+      "식사 메뉴의 실제 가격: 주 식사 메뉴가 ‘가격 변동’으로 게시되어 실제 매장 가격이 필요합니다.",
+      "보조 지도 매장 메뉴에도 숫자 가격이 게시되지 않아 배달가·다른 지점 가격으로 대체하지 않았습니다."
+    ],
+    "sources": [
+      "https://pcmap.place.naver.com/restaurant/85019125/home",
+      "https://pcmap.place.naver.com/restaurant/85019125/menu/list",
+      "https://pcmap.place.naver.com/restaurant/85019125/menu"
+    ]
+  }
+}

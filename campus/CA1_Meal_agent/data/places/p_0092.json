@@ -1,0 +1,206 @@
+{
+  "version": 1,
+  "id": "p_0092",
+  "name": "다원식탁",
+  "category": "분식",
+  "lat": 35.1824135864954,
+  "lng": 126.909579093747,
+  "address": "전남광주 북구 우치로 176-1 1층",
+  "source": "semas",
+  "sourceId": "MA0101202602A0017313",
+  "sourceStatus": "active",
+  "attrs": {
+    "status": "partial",
+    "menus": [
+      {
+        "name": "김치찌개",
+        "price": 8000,
+        "main": true
+      },
+      {
+        "name": "제육백반",
+        "price": 9000,
+        "main": true
+      },
+      {
+        "name": "엄마김밥",
+        "price": 4000,
+        "main": true
+      },
+      {
+        "name": "참치김밥",
+        "price": 5000,
+        "main": true
+      }
+    ],
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금",
+          "토",
+          "일"
+        ],
+        "open": "09:00",
+        "close": "20:00"
+      }
+    ]
+  },
+  "research": {
+    "identityStatus": "matched",
+    "queries": [
+      "\"다원식탁\" \"우치로\""
+    ],
+    "sources": [
+      {
+        "id": "s1",
+        "url": "https://www.diningcode.com/profile.php?rid=a36n4fewAB8n",
+        "title": "다원식탁 매장 정보",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "상호와 도로명 주소를 대조함. URL을 직접 열어 주소와 본문을 확인함."
+      }
+    ],
+    "facts": {
+      "menus": {
+        "status": "confirmed",
+        "value": [
+          {
+            "name": "김치찌개",
+            "price": 8000,
+            "main": true
+          },
+          {
+            "name": "제육백반",
+            "price": 9000,
+            "main": true
+          },
+          {
+            "name": "엄마김밥",
+            "price": 4000,
+            "main": true
+          },
+          {
+            "name": "참치김밥",
+            "price": 5000,
+            "main": true
+          }
+        ],
+        "sourceIds": [
+          "s1"
+        ],
+        "note": "주소가 일치하는 지점 페이지에 게시된 메뉴·가격. 실제 결제 가격은 현장 재확인 필요."
+      },
+      "hours": {
+        "status": "confirmed",
+        "value": [
+          {
+            "days": [
+              "월",
+              "화",
+              "수",
+              "목",
+              "금",
+              "토",
+              "일"
+            ],
+            "open": "09:00",
+            "close": "20:00"
+          }
+        ],
+        "sourceIds": [
+          "s1"
+        ],
+        "note": "요일별 게시 영업시간 확인. 별도 휴일·임시 변경과 미게시 휴식시간은 확인되지 않음."
+      }
+    },
+    "notes": [],
+    "checkedAt": "2026-11-11",
+    "method": "web",
+    "unknownFields": [
+      "mealType",
+      "takeout",
+      "verifiedAt",
+      "verifiedBy",
+      "break",
+      "lastOrder"
+    ]
+  },
+  "availability": {
+    "status": "listed",
+    "provider": "naver",
+    "checkedAt": "2026-11-11",
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/1049481500/home?fromPanelNum=1&additionalHeight=76&timestamp=202611112349&locale=ko&svcName=map_pcv5&searchText=%EB%8B%A4%EC%9B%90%EC%8B%9D%ED%83%81%20%EC%A0%84%EB%82%A8%EB%8C%80",
+    "naverPlaceId": "1049481500",
+    "observedName": "다원식탁",
+    "observedAddress": "전남광주 북구 우치로 176-1 1층",
+    "district": "후문",
+    "addressVerified": true,
+    "nearby": true,
+    "reason": "공개 네이버 지도에서 동일 주소의 전남대 후문 식당으로 확인"
+  },
+  "menuObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/1049481500/menu?fromPanelNum=1&additionalHeight=76&timestamp=202611112349&locale=ko&svcName=map_pcv5&searchText=%EB%8B%A4%EC%9B%90%EC%8B%9D%ED%83%81%20%EC%A0%84%EB%82%A8%EB%8C%80",
+    "checkedAt": "2026-11-11",
+    "priceContext": "in_store",
+    "menus": [
+      {
+        "name": "엄마김밥",
+        "price": 4000,
+        "main": true
+      },
+      {
+        "name": "김치찌개",
+        "price": 8000,
+        "main": true
+      },
+      {
+        "name": "참치김밥",
+        "price": 5000,
+        "main": true
+      },
+      {
+        "name": "엄마라면",
+        "price": 4000,
+        "main": true
+      },
+      {
+        "name": "제육백반",
+        "price": 9000,
+        "main": true
+      },
+      {
+        "name": "떡국",
+        "price": 7000,
+        "main": true
+      }
+    ],
+    "note": "메뉴 상태: confirmed. 원본 관찰·좌표 출처는 적용 manifest에 보관합니다.",
+    "status": "confirmed"
+  },
+  "hoursObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/1049481500/home?fromPanelNum=1&additionalHeight=76&timestamp=202611112349&locale=ko&svcName=map_pcv5&searchText=%EB%8B%A4%EC%9B%90%EC%8B%9D%ED%83%81%20%EC%A0%84%EB%82%A8%EB%8C%80",
+    "checkedAt": "2026-11-11",
+    "status": "confirmed",
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금",
+          "토",
+          "일"
+        ],
+        "open": "09:00",
+        "close": "20:00"
+      }
+    ],
+    "note": "매장 영업시간 관찰. 기존 attrs/research를 덮어쓰지 않습니다."
+  }
+}

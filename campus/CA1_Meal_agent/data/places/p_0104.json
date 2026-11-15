@@ -1,0 +1,334 @@
+{
+  "version": 1,
+  "id": "p_0104",
+  "source": "team",
+  "sourceId": "naver:16169662",
+  "name": "본가왕손반점",
+  "address": "전남광주 북구 자미로 68-6",
+  "category": "중식",
+  "lat": 35.1719002731291,
+  "lng": 126.905013190729,
+  "sourceStatus": "active",
+  "availability": {
+    "status": "listed",
+    "provider": "naver",
+    "checkedAt": "2026-11-11",
+    "sourceUrl": "https://pcmap.place.naver.com/place/16169662",
+    "naverPlaceId": "16169662",
+    "observedName": "본가왕손반점",
+    "observedAddress": "전남광주 북구 자미로 68-6",
+    "district": "정문",
+    "addressVerified": true,
+    "nearby": true,
+    "reason": "공개 네이버 지도에서 동일 주소의 전남대 정문 식당으로 확인"
+  },
+  "menuObservation": {
+    "status": "confirmed",
+    "priceContext": "in_store",
+    "checkedAt": "2026-11-12",
+    "sourceUrl": "https://place.map.kakao.com/9029197",
+    "placeSourceUrl": "https://pcmap.place.naver.com/restaurant/16169662/home",
+    "sourceAddress": "전남광주통합특별시 북구 자미로 68-6",
+    "menus": [
+      {
+        "name": "우동",
+        "price": 8000,
+        "main": true
+      },
+      {
+        "name": "짜장",
+        "price": 6000,
+        "main": true
+      },
+      {
+        "name": "간짜장",
+        "price": 8000,
+        "main": true
+      },
+      {
+        "name": "짬뽕",
+        "price": 8000,
+        "main": true
+      },
+      {
+        "name": "삼선짜장",
+        "price": 10000,
+        "main": true
+      },
+      {
+        "name": "삼선우동",
+        "price": 10000,
+        "main": true
+      },
+      {
+        "name": "삼선짬뽕",
+        "price": 10000,
+        "main": true
+      },
+      {
+        "name": "국밥",
+        "price": 8000,
+        "main": true
+      },
+      {
+        "name": "볶음밥",
+        "price": 8000,
+        "main": true
+      },
+      {
+        "name": "잡채밥",
+        "price": 9000,
+        "main": true
+      },
+      {
+        "name": "해물덮밥",
+        "price": 10000,
+        "main": true
+      },
+      {
+        "name": "잡채",
+        "price": 20000,
+        "main": false
+      },
+      {
+        "name": "탕수육(소)",
+        "price": 20000,
+        "main": false
+      },
+      {
+        "name": "탕수육(중)",
+        "price": 25000,
+        "main": false
+      },
+      {
+        "name": "탕수육(대)",
+        "price": 30000,
+        "main": false
+      },
+      {
+        "name": "양장피",
+        "price": 35000,
+        "main": false
+      },
+      {
+        "name": "깐풍기",
+        "price": 35000,
+        "main": false
+      },
+      {
+        "name": "삼선국밥",
+        "price": 10000,
+        "main": true
+      },
+      {
+        "name": "쟁반짜장(2인)",
+        "price": 18000,
+        "main": false
+      },
+      {
+        "name": "김치볶음밥",
+        "price": 9000,
+        "main": true
+      },
+      {
+        "name": "냉콩국수",
+        "price": 10000,
+        "main": true
+      }
+    ],
+    "note": "같은 상호·도로명 건물번호의 카카오맵 메뉴 게시값. 배달 탭 가격과 구분해 수집. 게시값 확인이며 현장 현재 가격 확인은 아님."
+  },
+  "attrs": {
+    "status": "partial",
+    "menus": [
+      {
+        "name": "우동",
+        "price": 8000,
+        "main": true
+      },
+      {
+        "name": "짜장",
+        "price": 6000,
+        "main": true
+      },
+      {
+        "name": "간짜장",
+        "price": 8000,
+        "main": true
+      },
+      {
+        "name": "짬뽕",
+        "price": 8000,
+        "main": true
+      },
+      {
+        "name": "삼선짜장",
+        "price": 10000,
+        "main": true
+      },
+      {
+        "name": "삼선우동",
+        "price": 10000,
+        "main": true
+      },
+      {
+        "name": "삼선짬뽕",
+        "price": 10000,
+        "main": true
+      },
+      {
+        "name": "국밥",
+        "price": 8000,
+        "main": true
+      },
+      {
+        "name": "볶음밥",
+        "price": 8000,
+        "main": true
+      },
+      {
+        "name": "잡채밥",
+        "price": 9000,
+        "main": true
+      },
+      {
+        "name": "해물덮밥",
+        "price": 10000,
+        "main": true
+      },
+      {
+        "name": "잡채",
+        "price": 20000,
+        "main": false
+      },
+      {
+        "name": "탕수육(소)",
+        "price": 20000,
+        "main": false
+      },
+      {
+        "name": "탕수육(중)",
+        "price": 25000,
+        "main": false
+      },
+      {
+        "name": "탕수육(대)",
+        "price": 30000,
+        "main": false
+      },
+      {
+        "name": "양장피",
+        "price": 35000,
+        "main": false
+      },
+      {
+        "name": "깐풍기",
+        "price": 35000,
+        "main": false
+      },
+      {
+        "name": "삼선국밥",
+        "price": 10000,
+        "main": true
+      },
+      {
+        "name": "쟁반짜장(2인)",
+        "price": 18000,
+        "main": false
+      },
+      {
+        "name": "김치볶음밥",
+        "price": 9000,
+        "main": true
+      },
+      {
+        "name": "냉콩국수",
+        "price": 10000,
+        "main": true
+      }
+    ]
+  },
+  "hoursObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/place/16169662",
+    "checkedAt": "2026-11-11",
+    "status": "unconfirmed",
+    "hours": [],
+    "note": "매장 영업시간 관찰. 기존 attrs/research를 덮어쓰지 않습니다."
+  },
+  "research": {
+    "checkedAt": "2026-11-11",
+    "method": "web",
+    "identityStatus": "matched",
+    "queries": [
+      "본가왕손반점 전남광주 북구 자미로 68-6"
+    ],
+    "sources": [
+      {
+        "id": "naver-place",
+        "url": "https://pcmap.place.naver.com/place/16169662",
+        "title": "본가왕손반점 네이버 지도",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "같은 주소의 지점 확인. 지도 등록 확인은 실시간 영업 중 보증이 아님"
+      },
+      {
+        "id": "naver-menu",
+        "url": "https://pcmap.place.naver.com/restaurant/16169662/menu/list",
+        "title": "본가왕손반점 메뉴 탭",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "가격 맥락: delivery"
+      },
+      {
+        "id": "naver-hours",
+        "url": "https://pcmap.place.naver.com/place/16169662",
+        "title": "본가왕손반점 영업시간",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "게시된 요일별 영업시간. 미확인은 추정하지 않음"
+      }
+    ],
+    "facts": {
+      "menus": {
+        "status": "unconfirmed",
+        "sourceIds": [],
+        "note": "매장 기준 정보 미확인. 배달·가격 맥락 불명 자료는 확정하지 않습니다."
+      },
+      "hours": {
+        "status": "unconfirmed",
+        "sourceIds": [],
+        "note": "매장 기준 정보 미확인. 배달·가격 맥락 불명 자료는 확정하지 않습니다."
+      }
+    },
+    "unknownFields": [
+      "menus",
+      "hours",
+      "mealType",
+      "takeout",
+      "verifiedAt",
+      "verifiedBy",
+      "break",
+      "lastOrder"
+    ],
+    "notes": [
+      "배달 메뉴 가격; 매장 가격 미확인. 영업시간 미등록. 메뉴탭 전체펼침기준.",
+      "원본 전체관찰·사진/배달가격 구분은 front_more.json. 영업시간 원문: None",
+      "병합 입력: front_more2_normalized_manifest.json",
+      "공개 네이버 화면 관찰이며 현장 검증이 아닙니다."
+    ]
+  },
+  "followupReview": {
+    "checkedAt": "2026-11-12",
+    "reasons": [
+      "요일별 영업시간: 월~일 영업·휴무와 개점·마감 시간이 필요합니다. 브레이크·마지막 주문은 확인한 경우만 입력하세요."
+    ],
+    "sources": [
+      "https://pcmap.place.naver.com/restaurant/16169662/home",
+      "https://pcmap.place.naver.com/restaurant/16169662/menu/list",
+      "https://place.map.kakao.com/9029197"
+    ]
+  }
+}

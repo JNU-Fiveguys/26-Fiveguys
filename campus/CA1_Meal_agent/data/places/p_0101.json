@@ -1,0 +1,210 @@
+{
+  "version": 1,
+  "id": "p_0101",
+  "source": "team",
+  "sourceId": "naver:13570391",
+  "name": "초가왕족발",
+  "address": "전남광주 북구 자미로 38",
+  "category": "고기",
+  "lat": 35.1693304621487,
+  "lng": 126.903819688676,
+  "sourceStatus": "active",
+  "availability": {
+    "status": "listed",
+    "provider": "naver",
+    "checkedAt": "2026-11-11",
+    "sourceUrl": "https://pcmap.place.naver.com/place/13570391",
+    "naverPlaceId": "13570391",
+    "observedName": "초가왕족발",
+    "observedAddress": "전남광주 북구 자미로 38",
+    "district": "정문",
+    "addressVerified": true,
+    "nearby": true,
+    "reason": "공개 네이버 지도에서 동일 주소의 전남대 정문 식당으로 확인"
+  },
+  "menuObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/13570391/menu/list",
+    "checkedAt": "2026-11-12",
+    "priceContext": "in_store",
+    "menus": [
+      {
+        "name": "미니족(국내산)",
+        "price": 23000,
+        "main": false
+      },
+      {
+        "name": "앞다리(국내산)",
+        "price": 41000,
+        "main": true
+      },
+      {
+        "name": "뒷다리(국내산)",
+        "price": 37000,
+        "main": true
+      },
+      {
+        "name": "소주/맥주",
+        "price": 5000,
+        "main": false
+      },
+      {
+        "name": "공기밥",
+        "price": 1000,
+        "main": false
+      },
+      {
+        "name": "음료수",
+        "price": 2000,
+        "main": false
+      }
+    ],
+    "note": "공개 매장 메뉴판 이미지 대조. 사진 촬영일·현장 현재 가격을 보증하지 않음. 벽면 매장 메뉴판. 매주 일요일 쉼 표시도 확인. 족발 공유 분량을 임의로 1인 가격으로 환산하지 않음",
+    "status": "confirmed"
+  },
+  "attrs": {
+    "status": "partial",
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금",
+          "토"
+        ],
+        "open": "13:00",
+        "close": "24:00"
+      }
+    ],
+    "menus": [
+      {
+        "name": "미니족(국내산)",
+        "price": 23000,
+        "main": false
+      },
+      {
+        "name": "앞다리(국내산)",
+        "price": 41000,
+        "main": true
+      },
+      {
+        "name": "뒷다리(국내산)",
+        "price": 37000,
+        "main": true
+      },
+      {
+        "name": "소주/맥주",
+        "price": 5000,
+        "main": false
+      },
+      {
+        "name": "공기밥",
+        "price": 1000,
+        "main": false
+      },
+      {
+        "name": "음료수",
+        "price": 2000,
+        "main": false
+      }
+    ]
+  },
+  "hoursObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/place/13570391",
+    "checkedAt": "2026-11-12",
+    "status": "confirmed",
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금",
+          "토"
+        ],
+        "open": "13:00",
+        "close": "24:00"
+      }
+    ],
+    "note": "매장 영업시간 관찰. 기존 attrs/research를 덮어쓰지 않습니다."
+  },
+  "research": {
+    "checkedAt": "2026-11-11",
+    "method": "web",
+    "identityStatus": "matched",
+    "queries": [
+      "초가왕족발 전남광주 북구 자미로 38"
+    ],
+    "sources": [
+      {
+        "id": "naver-place",
+        "url": "https://pcmap.place.naver.com/place/13570391",
+        "title": "초가왕족발 네이버 지도",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "같은 주소의 지점 확인. 지도 등록 확인은 실시간 영업 중 보증이 아님"
+      },
+      {
+        "id": "naver-menu",
+        "url": "https://pcmap.place.naver.com/restaurant/13570391/menu/list",
+        "title": "초가왕족발 메뉴 탭",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "가격 맥락: delivery"
+      },
+      {
+        "id": "naver-hours",
+        "url": "https://pcmap.place.naver.com/place/13570391",
+        "title": "초가왕족발 영업시간",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "게시된 요일별 영업시간. 미확인은 추정하지 않음"
+      }
+    ],
+    "facts": {
+      "menus": {
+        "status": "unconfirmed",
+        "sourceIds": [],
+        "note": "매장 기준 정보 미확인. 배달·가격 맥락 불명 자료는 확정하지 않습니다."
+      },
+      "hours": {
+        "status": "unconfirmed",
+        "sourceIds": [],
+        "note": "매장 기준 정보 미확인. 배달·가격 맥락 불명 자료는 확정하지 않습니다."
+      }
+    },
+    "unknownFields": [
+      "menus",
+      "hours",
+      "mealType",
+      "takeout",
+      "verifiedAt",
+      "verifiedBy",
+      "break",
+      "lastOrder"
+    ],
+    "notes": [
+      "배달 메뉴 가격; 매장 가격 미확인. 미니족은 앞다리/뒷다리 주문 시에만 주문 가능.",
+      "영업시간 원문: 월~토13:00-24:00; 일 정기휴무",
+      "원문 메뉴 목록·분류는 front.json에 보존. main은 1인 식사 예산용 조사자 분류이며 공유 메뉴는 false로 보수적으로 표시.",
+      "병합 입력: front_normalized_manifest.json",
+      "공개 네이버 화면 관찰이며 현장 검증이 아닙니다."
+    ]
+  },
+  "followupReview": {
+    "checkedAt": "2026-11-12",
+    "reasons": [
+      "공개 매장 식사 가격과 요일별 영업시간을 연결하여 추천 대상으로 전환했습니다."
+    ],
+    "sources": [
+      "https://pcmap.place.naver.com/restaurant/13570391/home",
+      "https://pcmap.place.naver.com/restaurant/13570391/menu/list",
+      "https://ldb-phinf.pstatic.net/20260812_134/1786520786163s8j4h_JPEG/temp_picture.jpg"
+    ]
+  }
+}

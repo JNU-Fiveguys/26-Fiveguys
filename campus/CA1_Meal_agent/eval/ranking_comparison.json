@@ -1,0 +1,1114 @@
+{
+  "description": "합성 샘플 8곳: 현재 공통 판정하에서 이전 가중치·편도 점수 / 혼잡 가중치만 변경 / 현재 총 도보 점수 비교",
+  "assumptions": [
+    "현재 data/samples 파일을 수정하지 않고 읽는다. 실제 영업·혼잡·강의실 검증이 아니다.",
+    "기준일 2026-11-11(수), 출발 11:50, 다음 강의가 있으면 13:30.",
+    "좌석·혼밥 조건 없이 예산·취향·방문 이력 없음. 모든 변형에 같은 입력을 사용한다.",
+    "이전 가중치와 편도 거리 점수만 비교한다. 좌석·혼밥을 사용하던 과거 앱 전체 동작은 재현하지 않는다.",
+    "남서쪽 목적지는 비교용 가상 좌표이며 실명 강의실을 뜻하지 않는다.",
+    "도보는 직선거리×우회계수÷속도의 올림 추정치이며 실제 보행 경로가 아니다.",
+    "학식은 별도 목록으로 유지한다. 일반 식당 상위 3곳과 경쟁하지 않는다.",
+    "점수와 가중치는 출력 시에만 반올림한다. 순위는 반올림 전 점수로 결정한다."
+  ],
+  "variants": {
+    "before": {
+      "crowdRawWeight": 0.1,
+      "distanceFormula": "max(0, 1 - walkTo / distanceZeroMin)"
+    },
+    "crowdOnly": {
+      "crowdRawWeight": 0.03,
+      "distanceFormula": "max(0, 1 - walkTo / distanceZeroMin)"
+    },
+    "after": {
+      "crowdRawWeight": 0.03,
+      "distanceFormula": "max(0, 1 - (walkTo + walkBack) / (distanceZeroMin * (2 if dest is not None else 1)))"
+    }
+  },
+  "sampleValidationDate": "2026-11-11",
+  "sampleCount": 8,
+  "inputSha256": {
+    "eval/baseline_settings.json": "caf08143523ca5efcf606a0dcabbcb76db3dd569d26202b3ee589297a4a99462",
+    "data/settings.json": "e4dc79c694b2fdbc4a02832ae152c892bc0b597bb933bfeac8fca9f43ecbd3ef",
+    "data/samples/s_01.json": "de12c9a7d2c7070c71b3d6b9743228ddba5e70d8664dc705f54552bd8def15fe",
+    "data/samples/s_02.json": "cc44a79c5f5c8a6daa9a54294531f3c8ce4c0c69ebb9fb4fe67eaf89ee813c3e",
+    "data/samples/s_03.json": "e0ecf98e1cd0496019a4ae2df90cc6d1e783e631b0e7ad1204426d44bd76bc08",
+    "data/samples/s_04.json": "71010929b38de818493abd48be18024b034e4d0257025570e1cb2ad1d9878521",
+    "data/samples/s_05.json": "04abed4930530d4b69d31bda02123f341de43ab2620913e3e2f905b504faee0b",
+    "data/samples/s_06.json": "39b4a0102bb3958f145338438fb319bc8834b8038c6faa8ba999abd78fea65ba",
+    "data/samples/s_07.json": "45ed7589b99e4d0352d5a45b509f3a78550b42ce7d235ffe6b572baa77f8e389",
+    "data/samples/s_08.json": "07ea7ee449e015a123a663ee3511638ef2c774f919618d3b5c95b304df69dbe2"
+  },
+  "currentSettings": {
+    "_설명": "필요 시간 계산 기본값 (기능 정의서 CA1 5절). 모두 ⏳ 초기값 — 실측으로 고치고, 코드에는 박지 않는다 (CA1-R23)",
+    "walk": {
+      "detourFactor": 1.3,
+      "metersPerMin": 70,
+      "maxSnapM": 150
+    },
+    "bufferMin": 5,
+    "tightMarginMin": 5,
+    "mealTypes": {
+      "학식": {
+        "eat": 20,
+        "wait": 3,
+        "waitPeak": 10
+      },
+      "간단식": {
+        "eat": 15,
+        "wait": 2,
+        "waitPeak": 7
+      },
+      "일반": {
+        "eat": 30,
+        "wait": 3,
+        "waitPeak": 8
+      },
+      "고기·단체": {
+        "eat": 60,
+        "wait": 5,
+        "waitPeak": 10
+      },
+      "카페": {
+        "eat": 15,
+        "wait": 3,
+        "waitPeak": 5
+      }
+    },
+    "peaks": [
+      [
+        "11:50",
+        "12:30"
+      ],
+      [
+        "17:50",
+        "18:30"
+      ]
+    ],
+    "quickEatMaxMin": 15,
+    "ranking": {
+      "_설명": "순위 점수 = Σ 가중치 × 요소(0~1). 혼잡은 실측 전 보조 신호로 0.03, 평판은 미사용. distanceZeroMin은 편도당 기준: 다음 건물이 있으면 총 도보를 기준의 2배로 나눈다. 가중치는 합으로 다시 나눈다",
+      "weights": {
+        "slack": 0.2,
+        "budget": 0.2,
+        "taste": 0.25,
+        "distance": 0.15,
+        "crowd": 0.03
+      },
+      "rainDistanceMultiplier": 2.0,
+      "slackFullMin": 20,
+      "distanceZeroMin": 15,
+      "overBudgetOneBand": 0.4,
+      "bonusNewPlace": 0.05,
+      "penaltyRecent": 0.05,
+      "bonusExamQuick": 0.05,
+      "chipMinFactor": 0.5
+    }
+  },
+  "scenarios": [
+    {
+      "id": "same_building",
+      "label": "같은 건물로 복귀",
+      "context": {
+        "weekday": 2,
+        "start": "11:50",
+        "end": "13:30",
+        "origin": [
+          35.1765,
+          126.9095
+        ],
+        "dest": [
+          35.1765,
+          126.9095
+        ],
+        "rain": false,
+        "exam_period": false,
+        "on_date": null
+      },
+      "normalizedWeights": {
+        "before": {
+          "slack": 0.22222222,
+          "budget": 0.22222222,
+          "taste": 0.27777778,
+          "distance": 0.16666667,
+          "crowd": 0.11111111
+        },
+        "crowdOnly": {
+          "slack": 0.24096386,
+          "budget": 0.24096386,
+          "taste": 0.30120482,
+          "distance": 0.18072289,
+          "crowd": 0.03614458
+        },
+        "after": {
+          "slack": 0.24096386,
+          "budget": 0.24096386,
+          "taste": 0.30120482,
+          "distance": 0.18072289,
+          "crowd": 0.03614458
+        }
+      },
+      "ranking": {
+        "before": {
+          "top": [
+            "s_05",
+            "s_01",
+            "s_02"
+          ],
+          "more": [
+            "s_03",
+            "s_07"
+          ],
+          "tight": [],
+          "cafeteria": [
+            "s_08"
+          ]
+        },
+        "crowdOnly": {
+          "top": [
+            "s_05",
+            "s_01",
+            "s_02"
+          ],
+          "more": [
+            "s_03",
+            "s_07"
+          ],
+          "tight": [],
+          "cafeteria": [
+            "s_08"
+          ]
+        },
+        "after": {
+          "top": [
+            "s_05",
+            "s_01",
+            "s_02"
+          ],
+          "more": [
+            "s_03",
+            "s_07"
+          ],
+          "tight": [],
+          "cafeteria": [
+            "s_08"
+          ]
+        }
+      },
+      "excluded": {
+        "unavailable": 0,
+        "noInfo": 1,
+        "never": 0,
+        "filtered": 0,
+        "overBudget": 0,
+        "tooFar": 0,
+        "overTime": 0,
+        "closed": 1
+      },
+      "candidates": [
+        {
+          "placeId": "s_01",
+          "name": "샘플식당 01 · 평범한 한식",
+          "category": "한식",
+          "walkTo": 7,
+          "walkBack": 7,
+          "totalWalkMin": 14,
+          "needMin": 57,
+          "crowded": false,
+          "group": {
+            "before": "top",
+            "crowdOnly": "top",
+            "after": "top"
+          },
+          "score": {
+            "before": 0.672222,
+            "crowdOnly": 0.644578,
+            "after": 0.644578
+          },
+          "distanceFeature": {
+            "before": 0.533333,
+            "crowdOnly": 0.533333,
+            "after": 0.533333
+          }
+        },
+        {
+          "placeId": "s_02",
+          "name": "샘플식당 02 · 브레이크 있는 일식",
+          "category": "일식",
+          "walkTo": 8,
+          "walkBack": 8,
+          "totalWalkMin": 16,
+          "needMin": 59,
+          "crowded": false,
+          "group": {
+            "before": "top",
+            "crowdOnly": "top",
+            "after": "top"
+          },
+          "score": {
+            "before": 0.661111,
+            "crowdOnly": 0.63253,
+            "after": 0.63253
+          },
+          "distanceFeature": {
+            "before": 0.466667,
+            "crowdOnly": 0.466667,
+            "after": 0.466667
+          }
+        },
+        {
+          "placeId": "s_03",
+          "name": "샘플식당 03 · 일요일 휴무 중식",
+          "category": "중식",
+          "walkTo": 8,
+          "walkBack": 8,
+          "totalWalkMin": 16,
+          "needMin": 59,
+          "crowded": false,
+          "group": {
+            "before": "more",
+            "crowdOnly": "more",
+            "after": "more"
+          },
+          "score": {
+            "before": 0.661111,
+            "crowdOnly": 0.63253,
+            "after": 0.63253
+          },
+          "distanceFeature": {
+            "before": 0.466667,
+            "crowdOnly": 0.466667,
+            "after": 0.466667
+          }
+        },
+        {
+          "placeId": "s_05",
+          "name": "샘플식당 05 · 포장 되는 분식",
+          "category": "분식",
+          "walkTo": 2,
+          "walkBack": 2,
+          "totalWalkMin": 4,
+          "needMin": 31,
+          "crowded": false,
+          "group": {
+            "before": "top",
+            "crowdOnly": "top",
+            "after": "top"
+          },
+          "score": {
+            "before": 0.727778,
+            "crowdOnly": 0.704819,
+            "after": 0.704819
+          },
+          "distanceFeature": {
+            "before": 0.866667,
+            "crowdOnly": 0.866667,
+            "after": 0.866667
+          }
+        },
+        {
+          "placeId": "s_07",
+          "name": "샘플식당 07 · 먼 국밥집",
+          "category": "국밥·찌개",
+          "walkTo": 24,
+          "walkBack": 24,
+          "totalWalkMin": 48,
+          "needMin": 91,
+          "crowded": false,
+          "group": {
+            "before": "more",
+            "crowdOnly": "more",
+            "after": "more"
+          },
+          "score": {
+            "before": 0.461111,
+            "crowdOnly": 0.415663,
+            "after": 0.415663
+          },
+          "distanceFeature": {
+            "before": 0.0,
+            "crowdOnly": 0.0,
+            "after": 0.0
+          }
+        },
+        {
+          "placeId": "s_08",
+          "name": "샘플 학생식당",
+          "category": "학식",
+          "walkTo": 2,
+          "walkBack": 2,
+          "totalWalkMin": 4,
+          "needMin": 39,
+          "crowded": true,
+          "group": {
+            "before": "cafeteria",
+            "crowdOnly": "cafeteria",
+            "after": "cafeteria"
+          },
+          "score": {
+            "before": 0.616667,
+            "crowdOnly": 0.668675,
+            "after": 0.668675
+          },
+          "distanceFeature": {
+            "before": 0.866667,
+            "crowdOnly": 0.866667,
+            "after": 0.866667
+          }
+        }
+      ]
+    },
+    {
+      "id": "different_building",
+      "label": "남서쪽 가상 다음 건물로 이동",
+      "context": {
+        "weekday": 2,
+        "start": "11:50",
+        "end": "13:30",
+        "origin": [
+          35.1765,
+          126.9095
+        ],
+        "dest": [
+          35.174,
+          126.9055
+        ],
+        "rain": false,
+        "exam_period": false,
+        "on_date": null
+      },
+      "normalizedWeights": {
+        "before": {
+          "slack": 0.22222222,
+          "budget": 0.22222222,
+          "taste": 0.27777778,
+          "distance": 0.16666667,
+          "crowd": 0.11111111
+        },
+        "crowdOnly": {
+          "slack": 0.24096386,
+          "budget": 0.24096386,
+          "taste": 0.30120482,
+          "distance": 0.18072289,
+          "crowd": 0.03614458
+        },
+        "after": {
+          "slack": 0.24096386,
+          "budget": 0.24096386,
+          "taste": 0.30120482,
+          "distance": 0.18072289,
+          "crowd": 0.03614458
+        }
+      },
+      "ranking": {
+        "before": {
+          "top": [
+            "s_05",
+            "s_01",
+            "s_03"
+          ],
+          "more": [
+            "s_02",
+            "s_07"
+          ],
+          "tight": [],
+          "cafeteria": [
+            "s_08"
+          ]
+        },
+        "crowdOnly": {
+          "top": [
+            "s_05",
+            "s_01",
+            "s_03"
+          ],
+          "more": [
+            "s_02",
+            "s_07"
+          ],
+          "tight": [],
+          "cafeteria": [
+            "s_08"
+          ]
+        },
+        "after": {
+          "top": [
+            "s_03",
+            "s_05",
+            "s_01"
+          ],
+          "more": [
+            "s_02",
+            "s_07"
+          ],
+          "tight": [],
+          "cafeteria": [
+            "s_08"
+          ]
+        }
+      },
+      "excluded": {
+        "unavailable": 0,
+        "noInfo": 1,
+        "never": 0,
+        "filtered": 0,
+        "overBudget": 0,
+        "tooFar": 0,
+        "overTime": 1,
+        "closed": 0
+      },
+      "candidates": [
+        {
+          "placeId": "s_01",
+          "name": "샘플식당 01 · 평범한 한식",
+          "category": "한식",
+          "walkTo": 7,
+          "walkBack": 16,
+          "totalWalkMin": 23,
+          "needMin": 66,
+          "crowded": false,
+          "group": {
+            "before": "top",
+            "crowdOnly": "top",
+            "after": "top"
+          },
+          "score": {
+            "before": 0.672222,
+            "crowdOnly": 0.644578,
+            "after": 0.590361
+          },
+          "distanceFeature": {
+            "before": 0.533333,
+            "crowdOnly": 0.533333,
+            "after": 0.233333
+          }
+        },
+        {
+          "placeId": "s_02",
+          "name": "샘플식당 02 · 브레이크 있는 일식",
+          "category": "일식",
+          "walkTo": 8,
+          "walkBack": 17,
+          "totalWalkMin": 25,
+          "needMin": 68,
+          "crowded": false,
+          "group": {
+            "before": "more",
+            "crowdOnly": "more",
+            "after": "more"
+          },
+          "score": {
+            "before": 0.661111,
+            "crowdOnly": 0.63253,
+            "after": 0.578313
+          },
+          "distanceFeature": {
+            "before": 0.466667,
+            "crowdOnly": 0.466667,
+            "after": 0.166667
+          }
+        },
+        {
+          "placeId": "s_03",
+          "name": "샘플식당 03 · 일요일 휴무 중식",
+          "category": "중식",
+          "walkTo": 8,
+          "walkBack": 2,
+          "totalWalkMin": 10,
+          "needMin": 53,
+          "crowded": false,
+          "group": {
+            "before": "top",
+            "crowdOnly": "top",
+            "after": "top"
+          },
+          "score": {
+            "before": 0.661111,
+            "crowdOnly": 0.63253,
+            "after": 0.668675
+          },
+          "distanceFeature": {
+            "before": 0.466667,
+            "crowdOnly": 0.466667,
+            "after": 0.666667
+          }
+        },
+        {
+          "placeId": "s_05",
+          "name": "샘플식당 05 · 포장 되는 분식",
+          "category": "분식",
+          "walkTo": 2,
+          "walkBack": 11,
+          "totalWalkMin": 13,
+          "needMin": 40,
+          "crowded": false,
+          "group": {
+            "before": "top",
+            "crowdOnly": "top",
+            "after": "top"
+          },
+          "score": {
+            "before": 0.727778,
+            "crowdOnly": 0.704819,
+            "after": 0.650602
+          },
+          "distanceFeature": {
+            "before": 0.866667,
+            "crowdOnly": 0.866667,
+            "after": 0.566667
+          }
+        },
+        {
+          "placeId": "s_07",
+          "name": "샘플식당 07 · 먼 국밥집",
+          "category": "국밥·찌개",
+          "walkTo": 24,
+          "walkBack": 16,
+          "totalWalkMin": 40,
+          "needMin": 83,
+          "crowded": false,
+          "group": {
+            "before": "more",
+            "crowdOnly": "more",
+            "after": "more"
+          },
+          "score": {
+            "before": 0.55,
+            "crowdOnly": 0.512048,
+            "after": 0.512048
+          },
+          "distanceFeature": {
+            "before": 0.0,
+            "crowdOnly": 0.0,
+            "after": 0.0
+          }
+        },
+        {
+          "placeId": "s_08",
+          "name": "샘플 학생식당",
+          "category": "학식",
+          "walkTo": 2,
+          "walkBack": 8,
+          "totalWalkMin": 10,
+          "needMin": 45,
+          "crowded": true,
+          "group": {
+            "before": "cafeteria",
+            "crowdOnly": "cafeteria",
+            "after": "cafeteria"
+          },
+          "score": {
+            "before": 0.616667,
+            "crowdOnly": 0.668675,
+            "after": 0.63253
+          },
+          "distanceFeature": {
+            "before": 0.866667,
+            "crowdOnly": 0.866667,
+            "after": 0.666667
+          }
+        }
+      ]
+    },
+    {
+      "id": "different_building_rain",
+      "label": "남서쪽 가상 다음 건물로 이동 · 비",
+      "context": {
+        "weekday": 2,
+        "start": "11:50",
+        "end": "13:30",
+        "origin": [
+          35.1765,
+          126.9095
+        ],
+        "dest": [
+          35.174,
+          126.9055
+        ],
+        "rain": true,
+        "exam_period": false,
+        "on_date": null
+      },
+      "normalizedWeights": {
+        "before": {
+          "slack": 0.19047619,
+          "budget": 0.19047619,
+          "taste": 0.23809524,
+          "distance": 0.28571429,
+          "crowd": 0.0952381
+        },
+        "crowdOnly": {
+          "slack": 0.20408163,
+          "budget": 0.20408163,
+          "taste": 0.25510204,
+          "distance": 0.30612245,
+          "crowd": 0.03061224
+        },
+        "after": {
+          "slack": 0.20408163,
+          "budget": 0.20408163,
+          "taste": 0.25510204,
+          "distance": 0.30612245,
+          "crowd": 0.03061224
+        }
+      },
+      "ranking": {
+        "before": {
+          "top": [
+            "s_05",
+            "s_01",
+            "s_03"
+          ],
+          "more": [
+            "s_02",
+            "s_07"
+          ],
+          "tight": [],
+          "cafeteria": [
+            "s_08"
+          ]
+        },
+        "crowdOnly": {
+          "top": [
+            "s_05",
+            "s_01",
+            "s_03"
+          ],
+          "more": [
+            "s_02",
+            "s_07"
+          ],
+          "tight": [],
+          "cafeteria": [
+            "s_08"
+          ]
+        },
+        "after": {
+          "top": [
+            "s_03",
+            "s_05",
+            "s_01"
+          ],
+          "more": [
+            "s_02",
+            "s_07"
+          ],
+          "tight": [],
+          "cafeteria": [
+            "s_08"
+          ]
+        }
+      },
+      "excluded": {
+        "unavailable": 0,
+        "noInfo": 1,
+        "never": 0,
+        "filtered": 0,
+        "overBudget": 0,
+        "tooFar": 0,
+        "overTime": 1,
+        "closed": 0
+      },
+      "candidates": [
+        {
+          "placeId": "s_01",
+          "name": "샘플식당 01 · 평범한 한식",
+          "category": "한식",
+          "walkTo": 7,
+          "walkBack": 16,
+          "totalWalkMin": 23,
+          "needMin": 66,
+          "crowded": false,
+          "group": {
+            "before": "top",
+            "crowdOnly": "top",
+            "after": "top"
+          },
+          "score": {
+            "before": 0.652381,
+            "crowdOnly": 0.627551,
+            "after": 0.535714
+          },
+          "distanceFeature": {
+            "before": 0.533333,
+            "crowdOnly": 0.533333,
+            "after": 0.233333
+          }
+        },
+        {
+          "placeId": "s_02",
+          "name": "샘플식당 02 · 브레이크 있는 일식",
+          "category": "일식",
+          "walkTo": 8,
+          "walkBack": 17,
+          "totalWalkMin": 25,
+          "needMin": 68,
+          "crowded": false,
+          "group": {
+            "before": "more",
+            "crowdOnly": "more",
+            "after": "more"
+          },
+          "score": {
+            "before": 0.633333,
+            "crowdOnly": 0.607143,
+            "after": 0.515306
+          },
+          "distanceFeature": {
+            "before": 0.466667,
+            "crowdOnly": 0.466667,
+            "after": 0.166667
+          }
+        },
+        {
+          "placeId": "s_03",
+          "name": "샘플식당 03 · 일요일 휴무 중식",
+          "category": "중식",
+          "walkTo": 8,
+          "walkBack": 2,
+          "totalWalkMin": 10,
+          "needMin": 53,
+          "crowded": false,
+          "group": {
+            "before": "top",
+            "crowdOnly": "top",
+            "after": "top"
+          },
+          "score": {
+            "before": 0.633333,
+            "crowdOnly": 0.607143,
+            "after": 0.668367
+          },
+          "distanceFeature": {
+            "before": 0.466667,
+            "crowdOnly": 0.466667,
+            "after": 0.666667
+          }
+        },
+        {
+          "placeId": "s_05",
+          "name": "샘플식당 05 · 포장 되는 분식",
+          "category": "분식",
+          "walkTo": 2,
+          "walkBack": 11,
+          "totalWalkMin": 13,
+          "needMin": 40,
+          "crowded": false,
+          "group": {
+            "before": "top",
+            "crowdOnly": "top",
+            "after": "top"
+          },
+          "score": {
+            "before": 0.747619,
+            "crowdOnly": 0.729592,
+            "after": 0.637755
+          },
+          "distanceFeature": {
+            "before": 0.866667,
+            "crowdOnly": 0.866667,
+            "after": 0.566667
+          }
+        },
+        {
+          "placeId": "s_07",
+          "name": "샘플식당 07 · 먼 국밥집",
+          "category": "국밥·찌개",
+          "walkTo": 24,
+          "walkBack": 16,
+          "totalWalkMin": 40,
+          "needMin": 83,
+          "crowded": false,
+          "group": {
+            "before": "more",
+            "crowdOnly": "more",
+            "after": "more"
+          },
+          "score": {
+            "before": 0.471429,
+            "crowdOnly": 0.433673,
+            "after": 0.433673
+          },
+          "distanceFeature": {
+            "before": 0.0,
+            "crowdOnly": 0.0,
+            "after": 0.0
+          }
+        },
+        {
+          "placeId": "s_08",
+          "name": "샘플 학생식당",
+          "category": "학식",
+          "walkTo": 2,
+          "walkBack": 8,
+          "totalWalkMin": 10,
+          "needMin": 45,
+          "crowded": true,
+          "group": {
+            "before": "cafeteria",
+            "crowdOnly": "cafeteria",
+            "after": "cafeteria"
+          },
+          "score": {
+            "before": 0.652381,
+            "crowdOnly": 0.69898,
+            "after": 0.637755
+          },
+          "distanceFeature": {
+            "before": 0.866667,
+            "crowdOnly": 0.866667,
+            "after": 0.666667
+          }
+        }
+      ]
+    },
+    {
+      "id": "no_next_class",
+      "label": "다음 강의 없음",
+      "context": {
+        "weekday": 2,
+        "start": "11:50",
+        "end": null,
+        "origin": [
+          35.1765,
+          126.9095
+        ],
+        "dest": null,
+        "rain": false,
+        "exam_period": false,
+        "on_date": null
+      },
+      "normalizedWeights": {
+        "before": {
+          "slack": 0.22222222,
+          "budget": 0.22222222,
+          "taste": 0.27777778,
+          "distance": 0.16666667,
+          "crowd": 0.11111111
+        },
+        "crowdOnly": {
+          "slack": 0.24096386,
+          "budget": 0.24096386,
+          "taste": 0.30120482,
+          "distance": 0.18072289,
+          "crowd": 0.03614458
+        },
+        "after": {
+          "slack": 0.24096386,
+          "budget": 0.24096386,
+          "taste": 0.30120482,
+          "distance": 0.18072289,
+          "crowd": 0.03614458
+        }
+      },
+      "ranking": {
+        "before": {
+          "top": [
+            "s_05",
+            "s_01",
+            "s_02"
+          ],
+          "more": [
+            "s_03",
+            "s_07"
+          ],
+          "tight": [],
+          "cafeteria": [
+            "s_08"
+          ]
+        },
+        "crowdOnly": {
+          "top": [
+            "s_05",
+            "s_01",
+            "s_02"
+          ],
+          "more": [
+            "s_03",
+            "s_07"
+          ],
+          "tight": [],
+          "cafeteria": [
+            "s_08"
+          ]
+        },
+        "after": {
+          "top": [
+            "s_05",
+            "s_01",
+            "s_02"
+          ],
+          "more": [
+            "s_03",
+            "s_07"
+          ],
+          "tight": [],
+          "cafeteria": [
+            "s_08"
+          ]
+        }
+      },
+      "excluded": {
+        "unavailable": 0,
+        "noInfo": 1,
+        "never": 0,
+        "filtered": 0,
+        "overBudget": 0,
+        "tooFar": 0,
+        "overTime": 0,
+        "closed": 1
+      },
+      "candidates": [
+        {
+          "placeId": "s_01",
+          "name": "샘플식당 01 · 평범한 한식",
+          "category": "한식",
+          "walkTo": 7,
+          "walkBack": 0,
+          "totalWalkMin": 7,
+          "needMin": 45,
+          "crowded": false,
+          "group": {
+            "before": "top",
+            "crowdOnly": "top",
+            "after": "top"
+          },
+          "score": {
+            "before": 0.672222,
+            "crowdOnly": 0.644578,
+            "after": 0.644578
+          },
+          "distanceFeature": {
+            "before": 0.533333,
+            "crowdOnly": 0.533333,
+            "after": 0.533333
+          }
+        },
+        {
+          "placeId": "s_02",
+          "name": "샘플식당 02 · 브레이크 있는 일식",
+          "category": "일식",
+          "walkTo": 8,
+          "walkBack": 0,
+          "totalWalkMin": 8,
+          "needMin": 46,
+          "crowded": false,
+          "group": {
+            "before": "top",
+            "crowdOnly": "top",
+            "after": "top"
+          },
+          "score": {
+            "before": 0.661111,
+            "crowdOnly": 0.63253,
+            "after": 0.63253
+          },
+          "distanceFeature": {
+            "before": 0.466667,
+            "crowdOnly": 0.466667,
+            "after": 0.466667
+          }
+        },
+        {
+          "placeId": "s_03",
+          "name": "샘플식당 03 · 일요일 휴무 중식",
+          "category": "중식",
+          "walkTo": 8,
+          "walkBack": 0,
+          "totalWalkMin": 8,
+          "needMin": 46,
+          "crowded": false,
+          "group": {
+            "before": "more",
+            "crowdOnly": "more",
+            "after": "more"
+          },
+          "score": {
+            "before": 0.661111,
+            "crowdOnly": 0.63253,
+            "after": 0.63253
+          },
+          "distanceFeature": {
+            "before": 0.466667,
+            "crowdOnly": 0.466667,
+            "after": 0.466667
+          }
+        },
+        {
+          "placeId": "s_05",
+          "name": "샘플식당 05 · 포장 되는 분식",
+          "category": "분식",
+          "walkTo": 2,
+          "walkBack": 0,
+          "totalWalkMin": 2,
+          "needMin": 24,
+          "crowded": false,
+          "group": {
+            "before": "top",
+            "crowdOnly": "top",
+            "after": "top"
+          },
+          "score": {
+            "before": 0.727778,
+            "crowdOnly": 0.704819,
+            "after": 0.704819
+          },
+          "distanceFeature": {
+            "before": 0.866667,
+            "crowdOnly": 0.866667,
+            "after": 0.866667
+          }
+        },
+        {
+          "placeId": "s_07",
+          "name": "샘플식당 07 · 먼 국밥집",
+          "category": "국밥·찌개",
+          "walkTo": 24,
+          "walkBack": 0,
+          "totalWalkMin": 24,
+          "needMin": 62,
+          "crowded": false,
+          "group": {
+            "before": "more",
+            "crowdOnly": "more",
+            "after": "more"
+          },
+          "score": {
+            "before": 0.583333,
+            "crowdOnly": 0.548193,
+            "after": 0.548193
+          },
+          "distanceFeature": {
+            "before": 0.0,
+            "crowdOnly": 0.0,
+            "after": 0.0
+          }
+        },
+        {
+          "placeId": "s_08",
+          "name": "샘플 학생식당",
+          "category": "학식",
+          "walkTo": 2,
+          "walkBack": 0,
+          "totalWalkMin": 2,
+          "needMin": 32,
+          "crowded": true,
+          "group": {
+            "before": "cafeteria",
+            "crowdOnly": "cafeteria",
+            "after": "cafeteria"
+          },
+          "score": {
+            "before": 0.616667,
+            "crowdOnly": 0.668675,
+            "after": 0.668675
+          },
+          "distanceFeature": {
+            "before": 0.866667,
+            "crowdOnly": 0.866667,
+            "after": 0.866667
+          }
+        }
+      ]
+    }
+  ]
+}

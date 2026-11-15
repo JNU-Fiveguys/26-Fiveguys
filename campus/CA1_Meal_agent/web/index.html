@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f8f4f0">
+  <title>공강 식사 추천 · 유니버스</title>
+  <link rel="stylesheet" href="assets/leaflet/leaflet.css">
+  <link rel="stylesheet" href="assets/route-map.css">
+  <style>
+    /* Existing Univ-Us v3 tokens: frontend/DESIGN.md and src/app/globals.css. */
+    @font-face{font-family:"Pretendard Variable";font-style:normal;font-weight:45 920;font-display:swap;src:url('assets/PretendardVariable.woff2') format('woff2')}
+    :root{color-scheme:light;--bg:#f8f4f0;--surface:#fffdfa;--surface-2:#faf6f1;--surface-3:#f2ebe3;--border:#e7dfd5;--border-strong:#d4c8b9;--text:#1f2b25;--muted:#4b524d;--faint:#646b66;--primary:#33644d;--primary-hover:#2b5441;--primary-soft:#e9f0ec;--on-primary:#fbf8f3;--sand:#cbaf94;--sand-text:#7a5c40;--warn-soft:#faf1d9;--warn-text:#8a5d00;--danger-soft:#fbeceb;--danger-text:#9f2f2d;--info:#3b7fb0;--shadow-card:0 1px 2px rgba(74,58,38,.05);--shadow-lift:0 10px 28px -14px rgba(74,58,38,.28),0 2px 6px -2px rgba(74,58,38,.08);--inner-hi:inset 0 1px 0 rgba(255,255,255,.7)}
+    *{box-sizing:border-box}html{scroll-padding-top:92px;-webkit-text-size-adjust:100%}body{margin:0;min-height:100dvh;background:radial-gradient(1100px 520px at 12% -12%,rgba(203,175,148,.34),transparent 70%),var(--bg);background-attachment:fixed;color:var(--text);font:16px/1.55 "Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;-webkit-font-smoothing:antialiased;word-break:keep-all;overflow-wrap:anywhere}
+    body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.04;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+    :focus-visible{outline:2px solid var(--primary);outline-offset:3px}a{color:var(--primary)}button,input,select,summary{touch-action:manipulation}button,input,select{font:inherit;max-width:100%}.skip{position:fixed;top:-70px;left:16px;z-index:100;background:var(--primary);color:var(--on-primary);padding:10px 16px;border-radius:10px}.skip:focus{top:16px}
+    .app-header{position:sticky;top:0;z-index:20;padding:12px 20px 8px}.header-island{height:56px;max-width:1560px;margin:auto;padding:0 16px;display:flex;align-items:center;gap:12px;border:1px solid var(--border);border-radius:22px;background:color-mix(in srgb,var(--surface) 85%,transparent);backdrop-filter:blur(16px);box-shadow:var(--shadow-lift),var(--inner-hi)}.brand{display:flex;gap:10px;align-items:center;color:var(--text);text-decoration:none}.brand strong{font-size:17px;font-weight:800;letter-spacing:-.03em}.brand-sub{font-size:12px;font-weight:650;color:var(--sand-text);letter-spacing:.03em}.header-context{margin-left:auto;font-size:13px;color:var(--muted);display:flex;align-items:center;gap:8px}.header-context::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--primary)}
+    main{max-width:1200px;margin:0 auto;padding:28px 40px 64px}.page-header{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:24px}.page-icon{width:40px;height:40px;display:grid;place-items:center;border-radius:16px;background:var(--primary-soft);color:var(--primary);flex:none}.page-icon svg{width:21px;height:21px;stroke-width:1.75}.page-title{flex:1;min-width:200px}h1,h2,h3{text-wrap:balance}h1{font-size:28px;line-height:1.25;letter-spacing:-.035em;margin:0;font-weight:700}h2{font-size:16px;font-weight:700;letter-spacing:-.02em;margin:0}h3{font-size:17px;font-weight:700;margin:0 0 6px}p{margin:7px 0}.lead{font-size:14px;color:var(--muted);margin:5px 0 0}.page-meta{font-size:13px;background:var(--primary-soft);color:var(--primary);padding:6px 10px;border-radius:999px;font-weight:650}
+    .layout{display:grid;grid-template-columns:310px minmax(0,1fr);gap:20px;align-items:start}.panel{min-width:0;padding:20px;background:var(--surface);border:1px solid var(--border);border-radius:16px;box-shadow:var(--shadow-card),var(--inner-hi)}.section-head{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:14px}.section-head .small{margin:0}.form-section+.form-section{padding-top:16px;margin-top:18px;border-top:1px solid var(--border)}
+    label{display:block;font-size:13px;font-weight:600;margin:13px 0 5px}input,select{border-radius:10px}input:not([type=checkbox]),select{width:100%;padding:9px 10px;border:1px solid var(--border-strong);background:var(--surface);color:var(--text);font-size:14px;min-height:40px}input:focus,select:focus{outline:0;border-color:var(--primary);box-shadow:0 0 0 3px rgba(51,100,77,.14)}input[type=checkbox]{accent-color:var(--primary);width:16px;height:16px;flex:none}
+    button{border-radius:10px;padding:9px 13px;border:1px solid var(--border-strong);background:var(--surface);color:var(--text);font-size:13px;font-weight:600;cursor:pointer;min-height:38px;transition:background .15s,border-color .15s,transform .15s}button:hover{background:var(--surface-2);border-color:var(--primary)}button:active:not(:disabled){transform:translateY(1px)}button.primary{background:var(--primary);color:var(--on-primary);border-color:var(--primary);box-shadow:var(--inner-hi);font-weight:700}button.primary:hover{background:var(--primary-hover)}#submit{width:100%;margin-top:18px;min-height:44px;font-size:14px}button:disabled{opacity:.5;cursor:default}.text-button{padding:3px 7px;min-height:28px;border-color:transparent;background:transparent;color:var(--primary)}.small{font-size:12px;color:var(--faint)}.row{display:flex;gap:8px}.row>*{flex:1;min-width:0}.check{display:flex;align-items:center;gap:8px;font-weight:400;margin:12px 0}.subtle-details{font-size:13px;color:var(--muted)}.subtle-details>summary{font-weight:600;padding:5px 0}.subtle-details[open]>summary{margin-bottom:10px}
+    .notice{background:var(--warn-soft);color:var(--warn-text);border:1px solid color-mix(in srgb,var(--warn-text) 22%,transparent);padding:11px 13px;border-radius:10px;font-size:13px;margin:12px 0}.error{color:var(--danger-text);background:var(--danger-soft);padding:12px;border-radius:10px;font-size:14px;white-space:pre-line}.card{padding:18px;background:var(--surface);border:1px solid var(--border);border-radius:16px;margin-top:12px;box-shadow:var(--shadow-card)}.card:first-child{margin-top:0}.card-heading{display:flex;align-items:flex-start;gap:10px;justify-content:space-between}.number{color:var(--primary);font-size:12px;font-weight:700;margin-bottom:5px}.price{font-variant-numeric:tabular-nums;font-size:17px;font-weight:750;white-space:nowrap}.price-caption{font-size:11px;color:var(--faint);text-align:right;font-weight:400;display:block}.metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:15px 0 12px;padding:12px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);font-size:12px;color:var(--faint)}.metrics strong{font-size:21px;line-height:1.25;font-weight:700;color:var(--text);font-variant-numeric:tabular-nums;display:block;margin-bottom:3px}.card-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.card-actions button{flex:1}.chips{font-size:12px;color:var(--primary)}.badge{background:var(--primary-soft);padding:3px 8px;border-radius:999px;display:inline-block;margin:2px 4px 2px 0;font-weight:600}.tablewrap{overflow-x:auto;min-width:0}
+    table{border-collapse:collapse;width:100%;font-size:13px;margin:12px 0}th,td{padding:11px 8px;text-align:left;border-bottom:1px solid var(--border);white-space:nowrap}th{color:var(--muted);font-weight:600;font-size:12px}.empty{padding:58px 20px;text-align:center;color:var(--faint);font-size:14px;background:var(--surface-2);border:1px dashed var(--border-strong);border-radius:12px}.empty strong{display:block;color:var(--muted);margin-bottom:6px}.catalog-panel{margin-top:24px}.catalog-footer{display:flex;align-items:center;justify-content:flex-end;gap:8px;margin-top:10px}.catalog-footer span{margin-right:auto}.catalog-footer button{min-width:64px}#place-detail{border-top:1px solid var(--border);padding-top:22px;margin-top:20px}#place-detail h3:not(:first-child){font-size:15px;margin-top:22px}#context{font-size:13px;color:var(--muted);padding:10px 12px;border-radius:10px;background:var(--surface-3);margin:0 0 14px}#other h3{font-size:14px;margin-top:18px}#other .other-place{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px solid var(--border)}.developer-tools{border-top:1px solid var(--border);margin-top:18px;padding-top:10px}.comparison-tools{border-top:1px solid var(--border);margin-top:20px;padding-top:10px}footer{font-size:11px;color:var(--faint);margin-top:24px;line-height:1.7}details{margin:10px 0}summary{cursor:pointer}pre{font-size:12px;white-space:pre-wrap;word-break:break-word}
+    [hidden]{display:none!important}@media(max-width:850px){main{padding:22px 16px 40px}.app-header{padding:12px 12px 8px}.layout{grid-template-columns:1fr}.page-meta{margin-left:52px}.page-header{gap:10px}.page-title{min-width:calc(100% - 54px)}h1{font-size:24px}.panel{padding:18px}.header-island{padding:0 12px}.brand-sub{display:none}.form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 12px}.form-grid .full{grid-column:1/-1}.empty{padding:36px 16px}}@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+
+  </style>
+  <link rel="stylesheet" href="assets/meal-form.css">
+  <link rel="stylesheet" href="assets/meal-workspace.css">
+</head>
+<body>
+<a class="skip" href="#main">본문으로 건너뛰기</a>
+<header class="app-header"><div class="header-island">
+  <a class="brand" href="#main" aria-label="유니버스 공강 식사 추천">
+    <svg viewBox="0 0 100 100" width="32" height="32" aria-hidden="true"><rect width="100" height="100" rx="23" fill="#fbf8f3" stroke="#d8ccbc" stroke-width="4"/><circle cx="24.8" cy="24.8" r="16.5" fill="#e6d6c2"/><polyline points="24.8,24.8 27.2,51.2 36.8,70.4 59.6,75.2 71.6,58.4 75.2,27.2" fill="none" stroke="#b89a7b" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/><g fill="#33644d"><circle cx="24.8" cy="24.8" r="10.4"/><circle cx="27.2" cy="51.2" r="6.2"/><circle cx="36.8" cy="70.4" r="7.6"/><circle cx="59.6" cy="75.2" r="6.2"/><circle cx="71.6" cy="58.4" r="7.6"/><circle cx="75.2" cy="27.2" r="8.3"/></g></svg>
+    <strong>유니버스</strong><span class="brand-sub" translate="no">Univ-Us</span>
+  </a><span class="header-context">캠퍼스 · 식사</span>
+</div></header>
+<main id="main">
+  <header class="page-header"><span class="page-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M4 3v6a3 3 0 0 0 6 0V3M7 3v18M20 21V3c-4 2-5 5-5 9h5"/></svg></span><div class="page-title"><h1>공강 식사 추천</h1><p class="lead">다음 수업 전에 다녀올 수 있는 식당을 찾아보세요.</p></div><span id="ready-count" class="page-meta">식당 확인 중</span></header>
+  <p class="small" style="text-align:right;margin-top:-8px"><a href="survey">식당 정보 직접 입력 ↗</a></p>
+  <div class="workspace-tabs" role="tablist" aria-label="식사 추천 화면"><button id="recommend-tab" role="tab" aria-selected="true" aria-controls="recommend-panel" type="button">식사 추천</button><button id="browse-tab" role="tab" aria-selected="false" aria-controls="browse-panel" tabindex="-1" type="button">식당 둘러보기</button></div>
+  <div class="layout" id="recommend-panel" role="tabpanel" aria-labelledby="recommend-tab">
+    <section class="panel"><div class="section-head"><h2>시간과 이동 장소</h2></div>
+      <form id="meal-form">
+        <div class="form-section form-grid">
+        <div class="full time-field"><div class="field-heading"><label for="at">출발시간</label><button id="time-now" class="text-button" type="button">지금</button></div>
+          <div class="time-row"><input id="at" type="time" required step="60" aria-describedby="date-selection-note"><button id="calendar-toggle" class="calendar-toggle" type="button" aria-label="출발 날짜 선택" aria-haspopup="dialog" aria-expanded="false" aria-controls="meal-calendar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M7 3v4m10-4v4M3 11h18m-11 4h3"/></svg><span>날짜</span></button></div>
+          <input id="meal-date" type="hidden"><p id="date-selection-note" class="field-help" hidden></p>
+          <div id="meal-calendar" class="meal-calendar" role="dialog" aria-label="출발 날짜 선택" hidden>
+            <div class="calendar-heading"><button id="calendar-prev" type="button" aria-label="이전 달">‹</button><h3 id="calendar-month" aria-live="polite"></h3><button id="calendar-next" type="button" aria-label="다음 달">›</button></div>
+            <div class="calendar-weekdays" aria-hidden="true"><span>일</span><span>월</span><span>화</span><span>수</span><span>목</span><span>금</span><span>토</span></div>
+            <div id="calendar-days" class="calendar-days" role="group" aria-labelledby="calendar-month"></div>
+            <div class="calendar-footer"><button id="calendar-today" class="text-button" type="button">오늘</button><button id="calendar-close" class="text-button" type="button">닫기</button></div>
+          </div>
+        </div>
+        <div class="full">
+        <label for="origin">출발 건물</label><input id="origin" list="buildings" placeholder="시간표 확인 중…" aria-describedby="origin-help" autocomplete="off"><p id="origin-help" class="field-help" aria-live="polite"></p><p id="building-status" class="small" hidden></p>
+        </div><div class="full">
+        <label for="next-mode">다음 강의실</label>
+        <select id="next-mode">
+          <option value="auto">시간표에서 자동 선택</option>
+          <option value="manual">직접 입력</option>
+          <option value="none">다음 수업 없음</option>
+        </select>
+        </div><div id="manual-fields" class="full" hidden>
+          <label for="next-room">다음 강의실</label><input id="next-room" list="buildings" placeholder="예: 공과대 7호관 223">
+          <label for="next-start">다음 수업 시작 시각</label><input id="next-start" type="time"><p id="next-start-help" class="small">비워두면 학사 시간표의 다음 수업 시각을 사용합니다.</p>
+        </div>
+        <datalist id="buildings"></datalist>
+        <div id="academic-notice" class="notice full" hidden><p id="academic-message" role="status"></p><div class="notice-actions"><button id="academic-retry" class="text-button" type="button">다시 확인</button><button id="academic-manual" class="text-button" type="button">직접 입력하기</button></div></div>
+        </div>
+        <div class="form-section budget-section"><div class="section-head"><h2>식사 예산</h2><span class="small">1인 기준</span></div>
+          <div class="budget-range"><div><label for="budget-min">최소 금액 (원)</label><input id="budget-min" type="number" inputmode="numeric" min="0" step="1" placeholder="최소 · 제한 없음" aria-describedby="budget-error"></div><span class="range-separator" aria-hidden="true">~</span><div><label for="budget-max">최대 금액 (원)</label><input id="budget-max" type="number" inputmode="numeric" min="0" step="1" placeholder="최대 · 제한 없음" aria-describedby="budget-error"></div></div>
+          <div class="budget-presets" role="group" aria-label="예산 빠른 선택"><button type="button" data-budget="," aria-pressed="true">전체</button><button type="button" data-budget="5000,10000" aria-pressed="false">5천~1만원</button><button type="button" data-budget="10000,15000" aria-pressed="false">1만~1.5만원</button></div>
+          <p id="budget-error" class="field-error" role="alert" hidden></p>
+          <label class="check weather-option"><input id="rain" type="checkbox">비 오는 날 · 가까운 곳 우선</label>
+        </div>
+        <button class="primary" id="submit" type="submit">식당 추천받기</button>
+        <p class="small">메뉴·가격과 영업시간이 확인된 식당에서 추천합니다.</p>
+      </form>
+    </section>
+    <section class="panel" aria-live="polite"><div class="section-head"><h2>이번 공강에 갈 수 있는 곳</h2><p class="small">가격과 이동 시간을 한눈에 비교하세요.</p></div>
+      <div id="status" class="empty"><strong>이번 공강, 어디서 먹을까요?</strong>시간과 예산을 정하고 추천받아 보세요.<br>다음 수업까지의 이동 시간도 함께 확인합니다.</div>
+      <div id="results" hidden><p id="context"></p><div id="warnings"></div><div id="cards"></div>
+        <div id="other" aria-label="다른 선택지"></div>
+      </div>
+    </section>
+  </div>
+  <section class="panel catalog-panel" id="browse-panel" role="tabpanel" aria-labelledby="browse-tab" hidden>
+    <div class="section-head"><h2 id="catalog-title">추천 대상 식당</h2><button id="catalog-toggle" class="text-button" type="button">전체 식당 보기</button></div>
+    <p id="catalog-counts" class="small" aria-live="polite">식당 목록을 확인하고 있습니다…</p>
+    <form id="catalog-search" class="row">
+      <input id="catalog-query" aria-label="식당 이름·종류·주소 검색" placeholder="식당 이름·종류·주소 검색" maxlength="120">
+      <button type="submit" style="flex:0 0 auto">검색</button>
+    </form>
+    <div id="catalog-items" class="tablewrap"></div>
+    <div class="catalog-footer"><span id="catalog-page" class="small"></span><button type="button" id="catalog-prev" disabled>이전</button><button type="button" id="catalog-next" disabled>다음</button></div>
+
+  </section>
+  <footer>보행망: <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noreferrer">© OpenStreetMap contributors · ODbL</a><br>건물 중심·식당 좌표에서 보행망까지는 연결 거리를 추정합니다. 실내 이동·신호 대기·실시간 통제는 포함하지 않습니다.</footer>
+</main>
+<dialog id="map-details" class="place-dialog route-dialog" aria-labelledby="route-map-summary"><div class="dialog-heading"><h2 id="route-map-summary">이동 경로</h2><button id="route-close" type="button" aria-label="이동 경로 닫기">닫기 ✕</button></div><div class="route-dialog-body"><p id="route-trip" class="route-trip"></p><div class="route-map-toolbar"><button id="route-fit" type="button" hidden>전체 경로 보기</button><button id="route-retry" type="button" hidden>지도 다시 불러오기</button></div>
+          <div id="route-map" role="region" aria-label="식당과 다음 강의실까지의 이동 경로 지도" aria-describedby="route-map-status route-legend"></div>
+          <div id="route-diagram" hidden></div>
+          <p id="route-map-status" role="status"></p>
+          <div id="route-legend"></div>
+          <p id="route-context-note" class="small" hidden></p>
+          <p class="small">초록: 식당까지 · 파랑: 다음 강의실까지. 점선은 직선거리 추정입니다.</p><div class="route-dialog-actions"><button id="route-to-detail" type="button">메뉴·영업시간</button><button id="route-done" class="primary" type="button">닫기</button></div></div></dialog>
+<dialog id="place-dialog" class="place-dialog" aria-labelledby="detail-title"><div class="dialog-heading"><h2 id="detail-title">메뉴·영업시간</h2><button id="detail-close" type="button" aria-label="식당 상세 닫기">닫기 ✕</button></div><div id="place-detail" aria-live="polite"></div></dialog>
+<script src="assets/leaflet/leaflet.js"></script>
+<script src="assets/route-map.js"></script>
+<script src="assets/meal-form.js"></script>
+<script src="assets/building-picker.js"></script>
+<script src="assets/time-picker.js"></script>
+<script src="assets/select-picker.js"></script>
+<script src="assets/meal-loader.js"></script>
+<script>
+  const $=id=>document.getElementById(id); let busy=false;
+  const routeView=window.MealRouteMap.create(); let routeContext=null;
+  const toast=msg=>{let box=$('toast');if(!box){box=el('div',undefined,'toast');box.id='toast';box.setAttribute('role','status');box.setAttribute('aria-live','polite');document.body.append(box);}box.textContent=msg;box.classList.remove('show');void box.offsetWidth;box.classList.add('show');clearTimeout(box._t);box._t=setTimeout(()=>box.classList.remove('show'),3500);};
+  const el=(tag,text,cls)=>{const n=document.createElement(tag);if(text!==undefined)n.textContent=text;if(cls)n.className=cls;return n;};
+  const mealForm=window.MealForm.create({isBusy:()=>busy});
+  const autoTimetable=()=>mealForm.autoTimetable();
+  const refreshAcademic=()=>mealForm.refresh();
+  fetch('v1/buildings').then(r=>r.json()).then(d=>{for(const b of d.buildings){const o=el('option');o.value=b.name;o.dataset.search=[b.code,...(b.aliases||[])].join(' ');$('buildings').append(o);}}).catch(()=>{$('building-status').hidden=false;$('building-status').textContent='건물 목록을 읽지 못했습니다. 위도,경도를 직접 입력할 수 있습니다.';});
+  let catalogOffset=0,catalogQuery='',catalogRequest=0,catalogReady=true;
+  const researchLabel=s=>({confirmed:'웹 게시값 확인',partial:'부분 자료',conflict:'정보 상충',unconfirmed:'미확인'}[s]||'미확인');
+  const fieldLabel=k=>({menus:'메뉴·가격',hours:'요일별 영업시간',mealType:'식사 유형',takeout:'포장 여부',verifiedAt:'현장 검증일',verifiedBy:'현장 확인자',break:'브레이크 타임',lastOrder:'라스트오더'}[k]||k);
+  const registrationLabel=p=>p.availability?({listed:'네이버 등록 확인',excluded:'후보 제외',unconfirmed:'등록 미확인',closed:'폐업 표시 확인'}[p.availability.status]||'등록 미확인'):'등록 재확인 전';
+  function observedMenuLabel(p){
+    const timed=(p.menuObservation?.menus||[]).filter(m=>m.main&&m.orderWindow&&Number.isFinite(m.price)&&m.price>0&&(!m.priceContext||m.priceContext==='in_store'));
+    if(p.priceSource?.priceContext==='in_store'&&timed.length){const prices=timed.map(m=>m.price);return `${Math.min(...prices).toLocaleString()}~${Math.max(...prices).toLocaleString()}원 · 시간대별`;}
+    if(Number.isFinite(p.repPrice)&&p.priceSource){return `${p.repPrice.toLocaleString()}원 · ${p.priceSource.priceContext==='in_store'?'매장 적용':'기존 저장 기준'}`;}
+    const m=p.menuObservation;if(!m)return researchLabel(p.research?.menus);
+    if(!m.menus?.length)return '메뉴 미확인';
+    if(!m.menus.some(item=>Number.isFinite(item.price)))return '가격 미확인';
+    return m.priceContext==='delivery'?'배달 가격 관찰':m.priceContext==='in_store'?'매장 가격 관찰':'가격 구분 미확인';
+  }
+  const DAY_ORDER='월화수목금토일';
+  const daysText=days=>{const idx=[...new Set(days)].map(d=>DAY_ORDER.indexOf(d)).filter(i=>i>=0).sort((a,b)=>a-b);if(idx.length===7)return '매일';const runs=[];for(const i of idx){const last=runs.at(-1);if(last&&i===last[1]+1)last[1]=i;else runs.push([i,i]);}return runs.map(([a,b])=>b-a>=2?`${DAY_ORDER[a]}–${DAY_ORDER[b]}`:b>a?`${DAY_ORDER[a]}·${DAY_ORDER[b]}`:DAY_ORDER[a]).join('·');};
+  // 확인된 영업시간만 실제 시각으로 보여 준다(관찰 확인값 → 기존 조사 확인값). 없으면 '-'
+  const confirmedHours=p=>{const h=p.hoursObservation;if(h?.status==='confirmed'&&h.hours?.length)return h.hours;const f=p.research?.facts?.hours;if(f?.status==='confirmed'&&f.value?.length)return f.value;return p.attrs?.hours?.length?p.attrs.hours:null;};
+  const observedHoursLabel=p=>{const hours=confirmedHours(p);return hours?hours.map(x=>`${daysText(x.days)} ${x.open}–${x.close}`+(x.break?` (휴게 ${x.break.start}–${x.break.end})`:'')).join(' / '):'-';};
+  function appendSource(box,url,label,checkedAt){
+    if(!url)return;const row=el('p'),a=el('a',label);a.href=url;a.target='_blank';a.rel='noreferrer';row.append(a);if(checkedAt)row.append(el('span',` · ${checkedAt} 확인`,'small'));box.append(row);
+  }
+  function appendMenuRows(box,menus,observationContext){
+    for(const item of menus){
+      const price=Number.isFinite(item.price)?item.price.toLocaleString()+'원':'가격 미확인'+(item.priceText?' · '+item.priceText:'');
+      const context=observationContext?(item.priceContext||observationContext):null;
+      const note=context==='delivery'?' · 배달 가격(추천 미적용)':context==='unknown'?' · 가격 구분 미확인':context==='in_store'?' · 매장 가격':'';
+      box.append(el('p',`${item.name} · ${price}${note}${item.orderWindow?' · 주문 '+item.orderWindow.start+'–'+item.orderWindow.end:''}`));
+    }
+  }
+  function appendEffectiveMenus(box,p,compact=false){
+    if(!Array.isArray(p.effectiveMenus))return;
+    const store=p.priceSource?.priceContext==='in_store',menus=p.effectiveMenus;
+    if(!menus.length){if(!compact)box.append(el('p','추천에 적용할 메뉴 가격이 확인되지 않았습니다.','small'));return;}
+    box.append(el(compact?'p':'h3',store?'추천 적용 매장 가격':'추천 적용 메뉴 · 기존 저장 기준',compact?'badge':undefined));
+    const limit=compact?2:6;
+    appendMenuRows(box,menus.slice(0,limit));
+    if(menus.length>limit){const details=el('details');details.className='subtle-details';details.append(el('summary',`적용 메뉴 ${menus.length-limit}개 더 보기`));appendMenuRows(details,menus.slice(limit));box.append(details);}
+    if(p.priceSource?.sourceUrl)appendSource(box,p.priceSource.sourceUrl,'적용 가격 출처',p.priceSource.checkedAt);
+    if(!compact)box.append(el('p',store?'매장 가격만 예산 필터와 추천 가격 계산에 적용합니다.':'기존에 저장된 메뉴 가격을 적용합니다. 최신 공개 매장 가격 확인과는 구분됩니다.','small'));
+  }
+  function appendHours(box,hours){
+    for(const item of hours||[])box.append(el('p',`${item.days.join('·')} ${item.open}–${item.close}`+(item.break?` · 휴게 ${item.break.start}–${item.break.end}`:'')+(item.lastOrder?` · 마지막 주문 ${item.lastOrder}`:'')));
+  }
+  function appendNaverObservations(box,p){
+    const a=p.availability,m=p.menuObservation,h=p.hoursObservation;
+    if(a){
+      box.append(el('span',[a.district?`${a.district} 식당가`:'',registrationLabel(p)].filter(Boolean).join(' · '),'badge'));
+      box.append(el('p','지도 등록 확인과 메뉴·영업시간 확인은 별개입니다. 현재 시각의 영업 여부를 보장하지 않습니다.','small'));
+      if(a.reason)box.append(el('p',a.reason,'small'));
+      appendSource(box,a.sourceUrl,'네이버 지도 등록 정보',a.checkedAt);
+    }
+    if(m){
+      const provider=m.sourceUrl?.startsWith('https://place.map.kakao.com/')?'카카오맵':'네이버';
+      const observation=el('details');observation.className='subtle-details';observation.append(el('summary',`${provider} 메뉴 원문·참고 가격 보기`));box.append(observation);
+      const priceNotes={in_store:'매장 메뉴 게시 가격',delivery:'배달 메뉴 가격 · 매장 가격은 미확인',unknown:'가격 구분 미확인 · 매장/배달 가격 여부를 확인하지 못했습니다.'};
+      observation.append(el('p',priceNotes[m.priceContext]||priceNotes.unknown,m.priceContext==='in_store'?'small':'notice'));
+      observation.append(el('p','배달 가격은 참고 기록이며, 매장 가격과 함께 있으면 매장 가격만 추천에 적용합니다.','small'));
+      appendSource(observation,m.sourceUrl,`${provider} 메뉴 원문`,m.checkedAt);
+      const menus=Array.isArray(m.menus)?m.menus:[];
+      if(!menus.length)observation.append(el('p','메뉴 탭에서 확인된 메뉴·가격이 없습니다.','small'));
+      appendMenuRows(observation,menus,m.priceContext||'unknown');
+      if(m.note)observation.append(el('p',m.note,'small'));
+    }
+    if(h){
+      const provider=h.sourceUrl?.startsWith('https://place.map.kakao.com/')?'카카오맵':'네이버';
+      box.append(el('h3',`${provider} 영업시간 · ${h.status==='confirmed'?'게시값 확인':'미확인'}`));
+      appendSource(box,h.sourceUrl,`${provider} 영업시간 원문`,h.checkedAt);
+      if(h.status==='confirmed')appendHours(box,h.hours);
+      else{
+        box.append(el('p','최신 요일별 영업시간을 확인하지 못했습니다.','small'));
+        if(h.hours?.length){const details=el('details');details.className='subtle-details';details.append(el('summary','확정하지 않은 시간 관찰값 보기'));appendHours(details,h.hours);box.append(details);}
+      }
+      for(const rule of h.monthlyClosed||[])box.append(el('p',`매달 ${rule.weeks.join('·')}번째 ${rule.day}요일 휴무`,'notice'));
+      if(h.closedDates?.length)box.append(el('p','날짜별 휴무: '+h.closedDates.join(', '),'notice'));
+      if(h.note)box.append(el('p',h.note,'small'));
+    }
+  }
+  function selectWorkspace(browse){
+    $('recommend-panel').hidden=browse;$('browse-panel').hidden=!browse;
+    for(const [id,selected] of [['recommend-tab',!browse],['browse-tab',browse]]){const b=$(id);b.setAttribute('aria-selected',String(selected));b.tabIndex=selected?0:-1;}
+  }
+  for(const [id,browse] of [['recommend-tab',false],['browse-tab',true]]){
+    $(id).addEventListener('click',()=>selectWorkspace(browse));
+    $(id).addEventListener('keydown',e=>{if(!['ArrowLeft','ArrowRight','Home','End'].includes(e.key))return;e.preventDefault();const next=e.key==='Home'?false:e.key==='End'?true:!browse;selectWorkspace(next);$(next?'browse-tab':'recommend-tab').focus();});
+  }
+  $('detail-close').addEventListener('click',()=>$('place-dialog').close());
+  $('place-dialog').addEventListener('click',e=>{if(e.target===$('place-dialog')){const r=e.target.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)e.target.close();}});
+  $('place-dialog').addEventListener('close',()=>{detailRequest++;});
+  let detailRequest=0;
+  async function showPlace(id){
+    const token=++detailRequest,box=$('place-detail');if(!$('place-dialog').open)$('place-dialog').showModal();box.scrollTop=0;$('place-dialog').scrollTop=0;box.hidden=false;box.replaceChildren(el('p','조사 내용을 불러오고 있습니다…'));
+    try{const response=await fetch('v1/meal/places/'+encodeURIComponent(id)),p=await response.json();if(token!==detailRequest)return;if(!response.ok)throw Error(p.detail||'조사 내용을 읽지 못했습니다.');
+      // 사용자에게는 실제 정보만 보여 준다: 이름 · 주소 · 메뉴와 가격 · 영업시간 · 휴무 (출처·확인일·조사 기록은 표시하지 않음)
+      box.replaceChildren(el('h3',p.name));if(p.address)box.append(el('p',p.address,'small'));
+      const attrs=p.attrs||{},facts=p.research?.facts||{},h=p.hoursObservation;
+      const menus=(Array.isArray(p.effectiveMenus)&&p.effectiveMenus.length?p.effectiveMenus:null)||(attrs.menus?.length?attrs.menus:null)||(facts.menus?.status==='confirmed'?facts.menus.value:null)||[];
+      const hours=(h?.status==='confirmed'&&h.hours?.length?h.hours:null)||(attrs.hours?.length?attrs.hours:null)||(facts.hours?.status==='confirmed'?facts.hours.value:null)||[];
+      box.append(el('h3','메뉴'));
+      if(menus.length){appendMenuRows(box,menus.slice(0,8));if(menus.length>8){const more=el('details');more.className='subtle-details';more.append(el('summary',`메뉴 ${menus.length-8}개 더 보기`));appendMenuRows(more,menus.slice(8));box.append(more);}}
+      else box.append(el('p','메뉴 정보가 없습니다.','small'));
+      box.append(el('h3','영업시간'));
+      if(hours.length)appendHours(box,hours);else box.append(el('p','영업시간 정보가 없습니다.','small'));
+      for(const rule of h?.monthlyClosed||[])box.append(el('p',`매달 ${rule.weeks.join('·')}번째 ${rule.day}요일 휴무`));
+      if(h?.closedDates?.length)box.append(el('p','휴무일: '+h.closedDates.join(', ')));
+    }catch(e){if(token===detailRequest)box.replaceChildren(el('p',e.message,'error'));}
+  }
+  async function loadCatalog(){
+    const token=++catalogRequest;$('catalog-prev').disabled=true;$('catalog-next').disabled=true;
+    try{const params={query:catalogQuery,offset:catalogOffset,limit:10};if(catalogReady)params.ready='true';const response=await fetch('v1/meal/places?'+new URLSearchParams(params));const data=await response.json();if(token!==catalogRequest)return;if(!response.ok)throw Error(typeof data.detail==='string'?data.detail:'식당 목록을 불러오지 못했습니다.');
+      const c=data.counts;$('ready-count').textContent=`추천 준비 ${c.ready.toLocaleString()}곳`;$('catalog-title').textContent=catalogReady?'추천 대상 식당':'전체 후보 식당';$('catalog-toggle').textContent=catalogReady?`전체 ${c.active}곳 보기`:'추천 대상만 보기';
+      $('catalog-counts').textContent=catalogReady?`메뉴·가격과 영업시간이 준비된 ${c.ready}곳입니다. 지도 등록 확인은 각 식당의 별도 기록이며, 추천 결과는 출발시간과 이동 조건에 따라 달라집니다.`:`현재 후보 ${c.active}곳 · 추천 준비 ${c.ready}곳. 네이버 메뉴 관찰과 기존 조사값을 구분해 표시합니다.`;
+      const table=el('table'),head=el('tr');['식당','식당가','종류','주소','메뉴·가격','영업시간','조사 내용'].forEach(t=>head.append(el('th',t)));table.append(head);
+      for(const p of data.items){const tr=el('tr');[p.name,p.availability?.district||'미분류',p.category,p.address||'주소 없음',observedMenuLabel(p),observedHoursLabel(p)].forEach(t=>tr.append(el('td',t)));const cell=el('td'),btn=el('button','메뉴·영업시간');btn.type='button';btn.addEventListener('click',()=>showPlace(p.id));cell.append(btn);tr.append(cell);table.append(tr);}
+      $('catalog-items').replaceChildren(data.items.length?table:el('p','검색 조건에 맞는 실제 식당이 없습니다.','small'));
+      $('catalog-page').textContent=data.total?`${data.offset+1}–${data.offset+data.items.length} / ${data.total}곳`:'0곳';$('catalog-prev').disabled=data.offset===0;$('catalog-next').disabled=data.offset+data.limit>=data.total;
+    }catch(e){if(token===catalogRequest){$('catalog-counts').textContent=e.message;$('ready-count').textContent='식당 목록 확인 필요';}}
+  }
+  $('catalog-search').addEventListener('submit',e=>{e.preventDefault();catalogQuery=$('catalog-query').value.trim();catalogOffset=0;loadCatalog();});
+  $('catalog-prev').addEventListener('click',()=>{catalogOffset=Math.max(0,catalogOffset-10);loadCatalog();});
+  $('catalog-next').addEventListener('click',()=>{catalogOffset+=10;loadCatalog();});
+  $('catalog-toggle').addEventListener('click',()=>{catalogReady=!catalogReady;catalogOffset=0;loadCatalog();});
+  loadCatalog();
+  async function api(payload){const r=await fetch('v1/meal/recommend',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});const d=await r.json();if(!r.ok)throw Error(typeof d.detail==='string'?d.detail:'입력한 날짜·시각·위치를 확인하세요.');return d;}
+  const sourceLabel=r=>!r?'없음':r.source==='osm'?'OSM 보행길':'직선 추정';
+  function routeText(c){const a=c.walkRoutes.to,b=c.walkRoutes.back;return `식당까지 ${a?.durationMin??0}분 (${sourceLabel(a)})`+(b?` · 다음 강의실 ${b.durationMin}분 (${sourceLabel(b)})`:'');}
+  function render(now){
+    routeView.reset();window.MealLoader.stop();$('status').removeAttribute('aria-busy');$('results').hidden=false;$('status').hidden=true;const ctx=now.context;routeContext=ctx;
+    mealForm.acceptSummary(now.academic);
+    const destinationLabel=ctx.destinationSource==='online'?'온라인 수업 · 건물 이동 없음':ctx.destination?.name||(ctx.end?'다음 일정 · 위치 미지정':'다음 수업 없음');
+    const selectionLabel=ctx.destinationSource==='manual'?'직접 지정':ctx.destinationSource==='online'||ctx.destinationSource.startsWith('timetable')?'시간표 자동 선택':'';
+    $('context').textContent=`${ctx.date} ${ctx.start} · ${ctx.origin.name} → 식사 → ${destinationLabel}${ctx.end?' ('+ctx.end+')':''}`;
+    const passing=now.warnings.filter(w=>w.startsWith('수업 중이므로'));passing.forEach(w=>toast(w));const hidden=w=>w.startsWith('식사 소요 시간이 따로 확인되지 않은');$('warnings').replaceChildren(...now.warnings.filter(w=>!passing.includes(w)&&!hidden(w)).map(w=>el('div',w,'notice')));$('cards').replaceChildren();
+    now.candidates.forEach((c,i)=>{
+      const box=el('article',undefined,'card'),heading=el('div',undefined,'card-heading'),name=el('div');
+      name.append(el('div',`추천 ${i+1} · ${c.category}`,'number'),el('h3',c.name));heading.append(name);
+      if(c.repPrice!==null&&c.repPrice!==undefined){const price=el('div',c.repPrice.toLocaleString()+'원','price');price.append(el('span',c.priceSource?.priceContext==='in_store'?'매장 메뉴 기준':'기존 저장 메뉴 기준','price-caption'));heading.append(price);}box.append(heading);
+      const menuPreview=el('div',undefined,'card-menus');for(const m of (c.effectiveMenus||[]).slice(0,2))menuPreview.append(el('p',`${m.name} · ${m.price.toLocaleString()}원`));box.append(menuPreview);
+      const metrics=el('div',undefined,'metrics');for(const [v,label] of [[c.totalWalkMin+'분','전체 도보'],[c.needMin+'분','식사·이동'],[c.slackMin===null?'—':c.slackMin+'분','수업 전 여유']]){const m=el('div');m.append(el('strong',v),el('span',label));metrics.append(m);}box.append(metrics,el('p',routeText(c),'small'));
+
+      const chips=el('div',undefined,'chips');c.reasons.forEach(r=>chips.append(el('span',r.text,'badge')));box.append(chips);
+      const actions=el('div',undefined,'card-actions'),route=el('button','이동 경로 보기'),info=el('button','메뉴·영업시간');route.type=info.type='button';route.addEventListener('click',()=>drawRoute(c));info.addEventListener('click',async()=>{await showPlace(c.placeId);});actions.append(route,info);box.append(actions);$('cards').append(box);
+    });
+    if(!now.candidates.length)$('cards').append(el('p','현재 조건에서 여유 있게 다녀올 수 있는 일반 식당이 없습니다.','empty'));
+    $('other').replaceChildren();for(const [key,label] of [['more','다른 선택지'],['cafeteria','학식'],['tight','시간이 빠듯한 곳']]){const items=now[key];if(!items.length)continue;
+
+const group=el('section',undefined,'other-group'),head=el('div',undefined,'other-head'),title=el('h3',label),count=el('span',`${items.length}곳`,'other-count');title.append(count);
+const pager=el('div',undefined,'other-pager'),prev=el('button','‹','pager-btn'),next=el('button','›','pager-btn'),info=el('span','','other-page-info');prev.type=next.type='button';prev.setAttribute('aria-label',`${label} 이전 5곳`);next.setAttribute('aria-label',`${label} 다음 5곳`);pager.append(prev,info,next);head.append(title,pager);
+const grid=el('div',undefined,'other-grid');
+const won=n=>n?`${Number(n).toLocaleString('ko-KR')}원`:'';
+const makeCard=(c,rank)=>{const card=el('article',undefined,'mini');
+ if(key==='more')card.append(el('span',`${rank}위`,'mini-rank'));
+ const name=el('strong',c.name,'mini-name');name.title=c.name;
+ const meta=el('p',[c.category,c.priceLabel||won(c.repPrice)||'가격 미확인'].filter(Boolean).join(' · '),'mini-meta');
+ const stats=el('p',undefined,'mini-stats');stats.append(el('span',`도보 ${c.totalWalkMin}분`));if(c.slackMin!=null)stats.append(el('span',`여유 ${c.slackMin}분`,c.slackMin<10?'mini-slack tight':'mini-slack'));
+ const actions=el('div',undefined,'mini-actions'),route=el('button','경로'),detail=el('button','상세');route.type=detail.type='button';
+ route.addEventListener('click',()=>drawRoute(c));detail.addEventListener('click',async()=>{await showPlace(c.placeId);});actions.append(route,detail);
+ card.append(name,meta,stats,actions);return card;};
+// 모든 카드를 가로 한 줄로 두고 한 화면(넓은 화면 5칸)씩 스냅 — 좌우 스크롤·스와이프·버튼 모두 같은 스크롤을 움직인다
+grid.replaceChildren(...items.map((c,i)=>makeCard(c,i+4)));grid.tabIndex=0;grid.setAttribute('aria-label',`${label} 목록 · 좌우로 넘겨 보기`);
+const step=()=>{const card=grid.firstElementChild;if(!card)return{per:1,w:grid.clientWidth};const gap=parseFloat(getComputedStyle(grid).columnGap)||0,w=card.getBoundingClientRect().width+gap;return{per:Math.max(1,Math.round((grid.clientWidth+gap)/w)),w};};
+const update=()=>{const {per,w}=step(),pages=Math.ceil(items.length/per),page=Math.min(pages-1,Math.round(grid.scrollLeft/(w*per)));info.textContent=`${page+1} / ${pages}`;prev.disabled=grid.scrollLeft<=2;next.disabled=grid.scrollLeft+grid.clientWidth>=grid.scrollWidth-2;pager.hidden=pages<2;};
+const go=dir=>{const {per,w}=step(),pages=Math.ceil(items.length/per),page=Math.round(grid.scrollLeft/(w*per)),target=Math.max(0,Math.min(pages-1,page+dir));grid.scrollTo({left:Math.min(target*w*per,grid.scrollWidth-grid.clientWidth),behavior:'smooth'});};
+prev.addEventListener('click',()=>go(-1));next.addEventListener('click',()=>go(1));
+grid.addEventListener('scroll',()=>requestAnimationFrame(update),{passive:true});grid.addEventListener('scrollend',update);
+grid.addEventListener('keydown',e=>{if(e.key==='ArrowRight'){e.preventDefault();go(1);}else if(e.key==='ArrowLeft'){e.preventDefault();go(-1);}});
+if('ResizeObserver' in window)new ResizeObserver(update).observe(grid);
+group.append(head,grid);$('other').append(group);requestAnimationFrame(update);}
+  }
+  let routeCandidate=null;
+  function drawRoute(c){routeCandidate=c;routeView.show(c,routeContext);$('route-map-summary').textContent=c.name;const won=n=>n?`${Number(n).toLocaleString('ko-KR')}원`:'';$('route-trip').textContent=[[c.category,c.priceLabel||won(c.repPrice)].filter(Boolean).join(' · '),`도보 ${c.totalWalkMin}분`,c.slackMin!=null?`여유 ${c.slackMin}분`:'',c.leaveBy?`${c.leaveBy}까지 식당에서 나오기`:''].filter(Boolean).join('  ·  ');const online=routeContext?.destinationSource==='online';$('route-context-note').hidden=!online;$('route-context-note').textContent=online?`${routeContext.end} 온라인 수업 시작 · 다음 건물로 이동하지 않고 식당까지의 경로만 표시합니다.`:'';}
+  $('route-close').addEventListener('click',()=>$('map-details').close());
+  $('route-done').addEventListener('click',()=>$('map-details').close());
+  $('route-to-detail').addEventListener('click',async()=>{const c=routeCandidate;$('map-details').close();if(c)await showPlace(c.placeId);});
+  $('map-details').addEventListener('click',e=>{if(e.target===$('map-details')){const r=e.target.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)e.target.close();}});
+  $('meal-form').addEventListener('submit',async e=>{e.preventDefault();if(busy||!$('meal-form').reportValidity())return;busy=true;routeView.reset();routeContext=null;$('submit').disabled=true;$('status').hidden=false;window.MealLoader.show($('status'));$('results').hidden=true;
+    try{const mode=$('next-mode').value,payload={at:mealForm.selectedAt(),autoTimetable:autoTimetable(),origin:$('origin').value.trim()||null,nextRoom:mode==='manual'?$('next-room').value.trim():null,nextStart:mode==='manual'?$('next-start').value||null:null,noNextClass:mode==='none',rain:$('rain').checked,includeSamples:false,...mealForm.budget()};const current=await api({...payload,routeMode:'osm'});render(current);}catch(e){window.MealLoader.stop();$('status').removeAttribute('aria-busy');$('status').className='error';$('status').textContent=e.message;if(autoTimetable())refreshAcademic();}finally{busy=false;$('submit').disabled=false;}
+  });
+</script></body></html>

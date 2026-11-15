@@ -1,0 +1,597 @@
+{
+  "version": 1,
+  "id": "p_0136",
+  "source": "team",
+  "sourceId": "naver:1477045231",
+  "name": "산카쿠 : 라멘&오니기리 전대본점",
+  "address": "전남광주 북구 용봉로138번길 24 1층",
+  "category": "일식",
+  "lat": 35.1722293694816,
+  "lng": 126.911083292482,
+  "sourceStatus": "active",
+  "availability": {
+    "status": "listed",
+    "provider": "naver",
+    "checkedAt": "2026-11-11",
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/1477045231/home",
+    "naverPlaceId": "1477045231",
+    "observedName": "산카쿠 : 라멘&오니기리 전대본점",
+    "observedAddress": "전남광주 북구 용봉로138번길 24 1층",
+    "district": "후문",
+    "addressVerified": true,
+    "nearby": true,
+    "reason": "공개 네이버 지도에서 동일 주소의 전남대 후문 식당으로 확인"
+  },
+  "menuObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/1477045231/menu/list",
+    "checkedAt": "2026-11-11",
+    "priceContext": "in_store",
+    "menus": [
+      {
+        "name": "[특선] 트러플 오리 쇼유라멘",
+        "price": 14500,
+        "main": true
+      },
+      {
+        "name": "[拉麺] 라멘&오니기리 정식",
+        "price": 11900,
+        "main": true
+      },
+      {
+        "name": "[饂飩] 우동&오니기리 정식",
+        "price": 11900,
+        "main": true
+      },
+      {
+        "name": "[冷拉麺] 히야시츄카 [냉라멘]",
+        "price": 11900,
+        "main": true
+      },
+      {
+        "name": "오리 쇼유라멘",
+        "price": 12500,
+        "main": true
+      },
+      {
+        "name": "[看板] 돈코츠라멘",
+        "price": 9900,
+        "main": true
+      },
+      {
+        "name": "[解酲] 들깨 해장라멘",
+        "price": 10900,
+        "main": true
+      },
+      {
+        "name": "[辛] 카라이 돈코츠라멘",
+        "price": 10500,
+        "main": true
+      },
+      {
+        "name": "[味噌] 미소라멘",
+        "price": 9900,
+        "main": true
+      },
+      {
+        "name": "얼큰 해장우동",
+        "price": 10500,
+        "main": true
+      },
+      {
+        "name": "모둠 우동",
+        "price": 9900,
+        "main": true
+      },
+      {
+        "name": "구운연어+송어알 오니기리",
+        "price": 5900,
+        "main": true
+      },
+      {
+        "name": "노른자장+구운연어 오니기리",
+        "price": 5300,
+        "main": true
+      },
+      {
+        "name": "노른자장+고기소보로 오니기리",
+        "price": 5300,
+        "main": true
+      },
+      {
+        "name": "명란+타카나 오니기리",
+        "price": 4900,
+        "main": true
+      },
+      {
+        "name": "명란+크림치즈 오니기리",
+        "price": 4900,
+        "main": true
+      },
+      {
+        "name": "구운연어 오니기리",
+        "price": 4900,
+        "main": true
+      },
+      {
+        "name": "고기소보로+타카나 오니기리",
+        "price": 4900,
+        "main": true
+      },
+      {
+        "name": "오카카+크림치즈 오니기리",
+        "price": 4300,
+        "main": true
+      },
+      {
+        "name": "참치마요+타카나 오니기리",
+        "price": 4300,
+        "main": true
+      },
+      {
+        "name": "명란 오니기리",
+        "price": 3900,
+        "main": true
+      },
+      {
+        "name": "크림치즈 오니기리",
+        "price": 3700,
+        "main": true
+      },
+      {
+        "name": "참치마요 오니기리",
+        "price": 3700,
+        "main": true
+      },
+      {
+        "name": "오말랭이 오니기리",
+        "price": 2900,
+        "main": true
+      },
+      {
+        "name": "타카나 오니기리",
+        "price": 2900,
+        "main": true
+      },
+      {
+        "name": "오카카 오니기리",
+        "price": 2900,
+        "main": true
+      },
+      {
+        "name": "[鶏唐揚] 수제 가라야게",
+        "price": 5900,
+        "main": false
+      },
+      {
+        "name": "[蛸焼] 오사카 타코야끼",
+        "price": 4900,
+        "main": false
+      },
+      {
+        "name": "[무료] 자두샤베트",
+        "price": 0,
+        "main": false
+      }
+    ],
+    "note": "메뉴 상태: confirmed. 원본 관찰·좌표 출처는 적용 manifest에 보관합니다.",
+    "status": "confirmed"
+  },
+  "attrs": {
+    "status": "partial",
+    "menus": [
+      {
+        "name": "[특선] 트러플 오리 쇼유라멘",
+        "price": 14500,
+        "main": true
+      },
+      {
+        "name": "[拉麺] 라멘&오니기리 정식",
+        "price": 11900,
+        "main": true
+      },
+      {
+        "name": "[饂飩] 우동&오니기리 정식",
+        "price": 11900,
+        "main": true
+      },
+      {
+        "name": "[冷拉麺] 히야시츄카 [냉라멘]",
+        "price": 11900,
+        "main": true
+      },
+      {
+        "name": "오리 쇼유라멘",
+        "price": 12500,
+        "main": true
+      },
+      {
+        "name": "[看板] 돈코츠라멘",
+        "price": 9900,
+        "main": true
+      },
+      {
+        "name": "[解酲] 들깨 해장라멘",
+        "price": 10900,
+        "main": true
+      },
+      {
+        "name": "[辛] 카라이 돈코츠라멘",
+        "price": 10500,
+        "main": true
+      },
+      {
+        "name": "[味噌] 미소라멘",
+        "price": 9900,
+        "main": true
+      },
+      {
+        "name": "얼큰 해장우동",
+        "price": 10500,
+        "main": true
+      },
+      {
+        "name": "모둠 우동",
+        "price": 9900,
+        "main": true
+      },
+      {
+        "name": "구운연어+송어알 오니기리",
+        "price": 5900,
+        "main": true
+      },
+      {
+        "name": "노른자장+구운연어 오니기리",
+        "price": 5300,
+        "main": true
+      },
+      {
+        "name": "노른자장+고기소보로 오니기리",
+        "price": 5300,
+        "main": true
+      },
+      {
+        "name": "명란+타카나 오니기리",
+        "price": 4900,
+        "main": true
+      },
+      {
+        "name": "명란+크림치즈 오니기리",
+        "price": 4900,
+        "main": true
+      },
+      {
+        "name": "구운연어 오니기리",
+        "price": 4900,
+        "main": true
+      },
+      {
+        "name": "고기소보로+타카나 오니기리",
+        "price": 4900,
+        "main": true
+      },
+      {
+        "name": "오카카+크림치즈 오니기리",
+        "price": 4300,
+        "main": true
+      },
+      {
+        "name": "참치마요+타카나 오니기리",
+        "price": 4300,
+        "main": true
+      },
+      {
+        "name": "명란 오니기리",
+        "price": 3900,
+        "main": true
+      },
+      {
+        "name": "크림치즈 오니기리",
+        "price": 3700,
+        "main": true
+      },
+      {
+        "name": "참치마요 오니기리",
+        "price": 3700,
+        "main": true
+      },
+      {
+        "name": "오말랭이 오니기리",
+        "price": 2900,
+        "main": true
+      },
+      {
+        "name": "타카나 오니기리",
+        "price": 2900,
+        "main": true
+      },
+      {
+        "name": "오카카 오니기리",
+        "price": 2900,
+        "main": true
+      },
+      {
+        "name": "[鶏唐揚] 수제 가라야게",
+        "price": 5900,
+        "main": false
+      },
+      {
+        "name": "[蛸焼] 오사카 타코야끼",
+        "price": 4900,
+        "main": false
+      }
+    ],
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금",
+          "토",
+          "일"
+        ],
+        "open": "11:00",
+        "close": "20:30",
+        "break": {
+          "start": "15:00",
+          "end": "17:00"
+        },
+        "lastOrder": "20:00"
+      }
+    ]
+  },
+  "hoursObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/1477045231/home",
+    "checkedAt": "2026-11-11",
+    "status": "confirmed",
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금",
+          "토",
+          "일"
+        ],
+        "open": "11:00",
+        "close": "20:30",
+        "break": {
+          "start": "15:00",
+          "end": "17:00"
+        },
+        "lastOrder": "20:00"
+      }
+    ],
+    "note": "매장 영업시간 관찰. 기존 attrs/research를 덮어쓰지 않습니다."
+  },
+  "research": {
+    "checkedAt": "2026-11-11",
+    "method": "web",
+    "identityStatus": "matched",
+    "queries": [
+      "산카쿠 : 라멘&오니기리 전대본점 전남광주 북구 용봉로138번길 24 1층"
+    ],
+    "sources": [
+      {
+        "id": "naver-place",
+        "url": "https://pcmap.place.naver.com/restaurant/1477045231/home",
+        "title": "산카쿠 : 라멘&오니기리 전대본점 네이버 지도",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "같은 주소의 지점 확인. 지도 등록 확인은 실시간 영업 중 보증이 아님"
+      },
+      {
+        "id": "naver-menu",
+        "url": "https://pcmap.place.naver.com/restaurant/1477045231/menu/list",
+        "title": "산카쿠 : 라멘&오니기리 전대본점 메뉴 탭",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "가격 맥락: in_store"
+      },
+      {
+        "id": "naver-hours",
+        "url": "https://pcmap.place.naver.com/restaurant/1477045231/home",
+        "title": "산카쿠 : 라멘&오니기리 전대본점 영업시간",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "게시된 요일별 영업시간. 미확인은 추정하지 않음"
+      }
+    ],
+    "facts": {
+      "menus": {
+        "status": "confirmed",
+        "sourceIds": [
+          "naver-menu"
+        ],
+        "note": "매장 게시값을 확인했습니다.",
+        "value": [
+          {
+            "name": "[특선] 트러플 오리 쇼유라멘",
+            "price": 14500,
+            "main": true
+          },
+          {
+            "name": "[拉麺] 라멘&오니기리 정식",
+            "price": 11900,
+            "main": true
+          },
+          {
+            "name": "[饂飩] 우동&오니기리 정식",
+            "price": 11900,
+            "main": true
+          },
+          {
+            "name": "[冷拉麺] 히야시츄카 [냉라멘]",
+            "price": 11900,
+            "main": true
+          },
+          {
+            "name": "오리 쇼유라멘",
+            "price": 12500,
+            "main": true
+          },
+          {
+            "name": "[看板] 돈코츠라멘",
+            "price": 9900,
+            "main": true
+          },
+          {
+            "name": "[解酲] 들깨 해장라멘",
+            "price": 10900,
+            "main": true
+          },
+          {
+            "name": "[辛] 카라이 돈코츠라멘",
+            "price": 10500,
+            "main": true
+          },
+          {
+            "name": "[味噌] 미소라멘",
+            "price": 9900,
+            "main": true
+          },
+          {
+            "name": "얼큰 해장우동",
+            "price": 10500,
+            "main": true
+          },
+          {
+            "name": "모둠 우동",
+            "price": 9900,
+            "main": true
+          },
+          {
+            "name": "구운연어+송어알 오니기리",
+            "price": 5900,
+            "main": true
+          },
+          {
+            "name": "노른자장+구운연어 오니기리",
+            "price": 5300,
+            "main": true
+          },
+          {
+            "name": "노른자장+고기소보로 오니기리",
+            "price": 5300,
+            "main": true
+          },
+          {
+            "name": "명란+타카나 오니기리",
+            "price": 4900,
+            "main": true
+          },
+          {
+            "name": "명란+크림치즈 오니기리",
+            "price": 4900,
+            "main": true
+          },
+          {
+            "name": "구운연어 오니기리",
+            "price": 4900,
+            "main": true
+          },
+          {
+            "name": "고기소보로+타카나 오니기리",
+            "price": 4900,
+            "main": true
+          },
+          {
+            "name": "오카카+크림치즈 오니기리",
+            "price": 4300,
+            "main": true
+          },
+          {
+            "name": "참치마요+타카나 오니기리",
+            "price": 4300,
+            "main": true
+          },
+          {
+            "name": "명란 오니기리",
+            "price": 3900,
+            "main": true
+          },
+          {
+            "name": "크림치즈 오니기리",
+            "price": 3700,
+            "main": true
+          },
+          {
+            "name": "참치마요 오니기리",
+            "price": 3700,
+            "main": true
+          },
+          {
+            "name": "오말랭이 오니기리",
+            "price": 2900,
+            "main": true
+          },
+          {
+            "name": "타카나 오니기리",
+            "price": 2900,
+            "main": true
+          },
+          {
+            "name": "오카카 오니기리",
+            "price": 2900,
+            "main": true
+          },
+          {
+            "name": "[鶏唐揚] 수제 가라야게",
+            "price": 5900,
+            "main": false
+          },
+          {
+            "name": "[蛸焼] 오사카 타코야끼",
+            "price": 4900,
+            "main": false
+          }
+        ]
+      },
+      "hours": {
+        "status": "confirmed",
+        "sourceIds": [
+          "naver-hours"
+        ],
+        "note": "매장 게시값을 확인했습니다.",
+        "value": [
+          {
+            "days": [
+              "월",
+              "화",
+              "수",
+              "목",
+              "금",
+              "토",
+              "일"
+            ],
+            "open": "11:00",
+            "close": "20:30",
+            "break": {
+              "start": "15:00",
+              "end": "17:00"
+            },
+            "lastOrder": "20:00"
+          }
+        ]
+      }
+    },
+    "unknownFields": [
+      "mealType",
+      "takeout",
+      "verifiedAt",
+      "verifiedBy"
+    ],
+    "notes": [
+      "메뉴 최근 업데이트26.10.03 표시. 후문 도보약5분 안내.",
+      "음료·주류·후식·곁들임·다인분 공유 메뉴는 원문 메뉴 전체에 보존하되 1인 식사 가격 계산 main=false로 분류했다.",
+      "병합 입력: rear_batch2_manifest.json",
+      "공개 네이버 화면 관찰이며 현장 검증이 아닙니다."
+    ]
+  }
+}

@@ -20,6 +20,7 @@ from pathlib import Path
 from typing import Any, Optional
 
 from . import config as C
+from .atomic import write_text as atomic_write_text
 
 SOURCES = ("schedule", "catchup", "retry", "button", "manual")
 
@@ -36,10 +37,7 @@ def read_json(path: Path, default: Any) -> Any:
 
 
 def write_json(path: Path, obj: Any) -> None:
-    path.parent.mkdir(parents=True, exist_ok=True)
-    tmp = path.with_suffix(path.suffix + ".tmp")
-    tmp.write_text(json.dumps(obj, ensure_ascii=False, indent=2), encoding="utf-8")
-    tmp.replace(path)
+    atomic_write_text(path, json.dumps(obj, ensure_ascii=False, indent=2))
 
 
 # ---------------------------------------------------------------- 프로세스
@@ -115,9 +113,7 @@ def append_run(record: dict) -> None:
         pass
     lines.append(json.dumps(record, ensure_ascii=False))
     lines = [l for l in lines if l.strip()][-C.RUNS_KEEP:]
-    tmp = C.RUNS_FILE.with_suffix(".tmp")
-    tmp.write_text("\n".join(lines) + "\n", encoding="utf-8")
-    tmp.replace(C.RUNS_FILE)
+    atomic_write_text(C.RUNS_FILE, "\n".join(lines) + "\n")
     write_json(C.LAST_RUN_FILE, record)
 
 

@@ -1,0 +1,439 @@
+{
+  "version": 1,
+  "id": "p_0068",
+  "name": "후토후토",
+  "category": "한식",
+  "lat": 35.1757007895029,
+  "lng": 126.912726188042,
+  "address": "전남광주 북구 우치로 92-1 1층 후토후토",
+  "source": "semas",
+  "sourceId": "MA0101202406A0018049",
+  "sourceStatus": "active",
+  "attrs": {
+    "status": "partial",
+    "menus": [
+      {
+        "name": "생연어 후토마키",
+        "price": 14900,
+        "main": true
+      },
+      {
+        "name": "1인세트",
+        "price": 13500,
+        "main": true
+      },
+      {
+        "name": "연어 부빔밥",
+        "price": 12500,
+        "main": true
+      }
+    ],
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금"
+        ],
+        "open": "09:00",
+        "close": "21:00",
+        "lastOrder": "20:30"
+      },
+      {
+        "days": [
+          "토",
+          "일"
+        ],
+        "open": "10:00",
+        "close": "21:00",
+        "lastOrder": "20:30"
+      }
+    ]
+  },
+  "research": {
+    "identityStatus": "matched",
+    "queries": [
+      "후토후토 전남대 우치로 92-1 메뉴 가격 영업시간"
+    ],
+    "sources": [
+      {
+        "id": "s1",
+        "url": "https://www.diningcode.com/profile.php?rid=z53BjK0VVM7M",
+        "title": "후토후토 매장 정보",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "상호와 도로명 주소를 대조함. URL을 직접 열어 주소와 본문을 확인함."
+      }
+    ],
+    "facts": {
+      "menus": {
+        "status": "confirmed",
+        "value": [
+          {
+            "name": "생연어 후토마키",
+            "price": 14900,
+            "main": true
+          },
+          {
+            "name": "1인세트",
+            "price": 13500,
+            "main": true
+          },
+          {
+            "name": "연어 부빔밥",
+            "price": 12500,
+            "main": true
+          }
+        ],
+        "sourceIds": [
+          "s1"
+        ],
+        "note": "주소가 일치하는 지점 페이지에 게시된 메뉴·가격. 실제 결제 가격은 현장 재확인 필요."
+      },
+      "hours": {
+        "status": "confirmed",
+        "value": [
+          {
+            "days": [
+              "월",
+              "화",
+              "수",
+              "목",
+              "금"
+            ],
+            "open": "09:00",
+            "close": "21:00",
+            "lastOrder": "20:30"
+          },
+          {
+            "days": [
+              "토",
+              "일"
+            ],
+            "open": "10:00",
+            "close": "21:00",
+            "lastOrder": "20:30"
+          }
+        ],
+        "sourceIds": [
+          "s1"
+        ],
+        "note": "요일별 게시 영업시간 확인. 별도 휴일·임시 변경과 미게시 휴식시간은 확인되지 않음."
+      }
+    },
+    "notes": [],
+    "checkedAt": "2026-11-11",
+    "method": "web",
+    "unknownFields": [
+      "mealType",
+      "takeout",
+      "verifiedAt",
+      "verifiedBy",
+      "break"
+    ]
+  },
+  "availability": {
+    "status": "listed",
+    "provider": "naver",
+    "checkedAt": "2026-11-11",
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/1097668196/home",
+    "naverPlaceId": "1097668196",
+    "observedName": "후토후토",
+    "observedAddress": "전남광주 북구 우치로 92-1 1층 후토후토",
+    "district": "후문",
+    "addressVerified": true,
+    "nearby": true,
+    "reason": "공개 네이버 지도에서 동일 주소의 전남대 후문 식당으로 확인"
+  },
+  "menuObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/1097668196/menu",
+    "checkedAt": "2026-11-11",
+    "priceContext": "delivery",
+    "menus": [
+      {
+        "name": "[당일 손질 숙성] 생연어 후토마키",
+        "price": 14900,
+        "main": true
+      },
+      {
+        "name": "[믿고먹는 맛] 고소참치 후토마키 김밥",
+        "price": 12000,
+        "main": true
+      },
+      {
+        "name": "((신상메뉴 추천))국물 떡볶이",
+        "price": 7500,
+        "main": true
+      },
+      {
+        "name": "[통으로들어간 ]치킨 후토마키 김밥",
+        "price": 11900,
+        "main": true
+      },
+      {
+        "name": "[파스타 전문 매장 맛] 매콤 새우 크림 파스타",
+        "price": 13000,
+        "main": true
+      },
+      {
+        "name": "[파스타 전문 매장 맛] 매콤 베이컨 크림파스타",
+        "price": 13000,
+        "main": true
+      },
+      {
+        "name": "[하루 한정] 연어 깍두기",
+        "price": 23900,
+        "main": false
+      },
+      {
+        "name": "[하루한정] 육회 후토마키",
+        "price": 14900,
+        "main": true
+      },
+      {
+        "name": "[당일 손질 숙성] 특 생연어 후토마키",
+        "price": 17900,
+        "main": true
+      },
+      {
+        "name": "[치즈러버들 원픽] 치즈덮은 후토마키",
+        "price": 14900,
+        "main": true
+      },
+      {
+        "name": "[스트레스 해소 직빵] 불닭 후토마키",
+        "price": 11900,
+        "main": true
+      },
+      {
+        "name": "[기력회복 만땅] 장어 후토마키",
+        "price": 15900,
+        "main": true
+      },
+      {
+        "name": "[부드러움의끝] 크래미 후토마키",
+        "price": 10500,
+        "main": true
+      },
+      {
+        "name": "[살이 찔 수가 없어] 생연어 그린 키토마키",
+        "price": 15500,
+        "main": true
+      },
+      {
+        "name": "[다이어트 최고] 고소 참치 그린키토마키",
+        "price": 13000,
+        "main": true
+      },
+      {
+        "name": "[칼로리와 영양까지] 장어 그린 키토마키",
+        "price": 16500,
+        "main": true
+      },
+      {
+        "name": "[식단관리] 크래미 그린 키토마키",
+        "price": 10900,
+        "main": true
+      },
+      {
+        "name": "[꾸준한 인기] 치킨 그린 키토마키",
+        "price": 13000,
+        "main": true
+      },
+      {
+        "name": "[식단관리 최고] 메밀 소바마키",
+        "price": 10500,
+        "main": true
+      },
+      {
+        "name": "[맛과건강 한번에] 연어 소바마키",
+        "price": 15400,
+        "main": true
+      },
+      {
+        "name": "[건강 영양 한번에] 장어 소바마키",
+        "price": 15500,
+        "main": true
+      },
+      {
+        "name": "[혼밥 최고] 1인세트",
+        "price": 13500,
+        "main": true
+      },
+      {
+        "name": "[실속 세트] 후토 A세트",
+        "price": 33900,
+        "main": false
+      },
+      {
+        "name": "[맛과 가성비 최고] 후토 B세트",
+        "price": 34900,
+        "main": false
+      },
+      {
+        "name": "연어 부빔밥",
+        "price": 12500,
+        "main": true
+      },
+      {
+        "name": "육회 부빔밥",
+        "price": 11500,
+        "main": true
+      },
+      {
+        "name": "불닭부빔밥",
+        "price": 10000,
+        "main": true
+      },
+      {
+        "name": "참치 부빔밥",
+        "price": 10500,
+        "main": true
+      },
+      {
+        "name": "크래미 부빔밥",
+        "price": 10000,
+        "main": true
+      },
+      {
+        "name": "장어 부빔밥",
+        "price": 13500,
+        "main": true
+      },
+      {
+        "name": "[양과 가성비 갑] 우동",
+        "price": 7900,
+        "main": true
+      },
+      {
+        "name": "[해장 직빵] 매콤우동",
+        "price": 8900,
+        "main": true
+      },
+      {
+        "name": "[생각보다 맛 있잖아] 장어우동",
+        "price": 13500,
+        "main": true
+      },
+      {
+        "name": "[매콤 새콤] 쫄면",
+        "price": 8500,
+        "main": true
+      },
+      {
+        "name": "후토 돈까스",
+        "price": 13000,
+        "main": true
+      },
+      {
+        "name": "후토 통 치즈까스",
+        "price": 14000,
+        "main": true
+      },
+      {
+        "name": "로제 국물떡볶이",
+        "price": 8500,
+        "main": true
+      },
+      {
+        "name": "새우튀김 4개",
+        "price": 5000,
+        "main": false
+      },
+      {
+        "name": "해쉬 브라운(2개)",
+        "price": 3000,
+        "main": false
+      },
+      {
+        "name": "감자치즈폭탄",
+        "price": 7500,
+        "main": false
+      },
+      {
+        "name": "감자폭탄",
+        "price": 5500,
+        "main": false
+      },
+      {
+        "name": "타코야끼 8알",
+        "price": 8900,
+        "main": false
+      },
+      {
+        "name": "교자만두 튀김 5개",
+        "price": 5000,
+        "main": false
+      },
+      {
+        "name": "치즈볼 4개",
+        "price": 5000,
+        "main": false
+      },
+      {
+        "name": "크리스피 순살 가라아게",
+        "price": 8500,
+        "main": false
+      },
+      {
+        "name": "두바이 쫀득 쿠키",
+        "price": 7000,
+        "main": false
+      },
+      {
+        "name": "펩시콜라(355ml)",
+        "price": 2000,
+        "main": false
+      },
+      {
+        "name": "펩시제로",
+        "price": 2500,
+        "main": false
+      },
+      {
+        "name": "칠성사이다",
+        "price": 2000,
+        "main": false
+      },
+      {
+        "name": "칠성 사이다 제로",
+        "price": 2500,
+        "main": false
+      }
+    ],
+    "note": "메뉴 상태: confirmed. 원본 관찰·좌표 출처는 적용 manifest에 보관합니다.",
+    "status": "unconfirmed"
+  },
+  "hoursObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/1097668196/home",
+    "checkedAt": "2026-11-11",
+    "status": "confirmed",
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금"
+        ],
+        "open": "09:00",
+        "close": "21:00",
+        "lastOrder": "20:30"
+      },
+      {
+        "days": [
+          "토",
+          "일"
+        ],
+        "open": "10:00",
+        "close": "21:00",
+        "lastOrder": "20:30"
+      }
+    ],
+    "note": "매장 영업시간 관찰. 기존 attrs/research를 덮어쓰지 않습니다."
+  }
+}

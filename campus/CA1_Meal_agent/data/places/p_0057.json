@@ -1,0 +1,198 @@
+{
+  "version": 1,
+  "id": "p_0057",
+  "name": "통큰쭈꾸미",
+  "category": "한식",
+  "lat": 35.1778835099213,
+  "lng": 126.902777671176,
+  "address": "광주 북구 설죽로214번길 93",
+  "source": "semas",
+  "sourceId": "MA010120220814330167",
+  "sourceStatus": "active",
+  "attrs": {
+    "status": "partial",
+    "menus": [
+      {
+        "name": "쭈꾸미철판",
+        "price": 13000,
+        "main": false
+      },
+      {
+        "name": "쭈꾸미철판삼겹",
+        "price": 13000,
+        "main": false
+      },
+      {
+        "name": "쭈꾸미철판새우",
+        "price": 13000,
+        "main": false
+      },
+      {
+        "name": "쭈꾸미비빔밥",
+        "price": 9000,
+        "main": true
+      },
+      {
+        "name": "제육볶음",
+        "price": 8000,
+        "main": true
+      },
+      {
+        "name": "우렁된장찌개",
+        "price": 8000,
+        "main": true
+      },
+      {
+        "name": "산채비빔밥",
+        "price": 8000,
+        "main": true
+      }
+    ],
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금",
+          "토",
+          "일"
+        ],
+        "open": "11:00",
+        "close": "21:30"
+      }
+    ]
+  },
+  "research": {
+    "identityStatus": "matched",
+    "queries": [
+      "\"통큰쭈꾸미\" \"설죽로\" 메뉴 영업시간",
+      "통큰쭈꾸미 전남대 메뉴 가격",
+      "\"통큰쭈꾸미\" \"설죽로214번길\" \"원\""
+    ],
+    "sources": [
+      {
+        "id": "s1",
+        "url": "https://place.udanax.org/place.php?id=1255509&placeName=%ED%86%B5%ED%81%B0%EC%AD%88%EA%BE%B8%EB%AF%B8",
+        "title": "통큰쭈꾸미 용봉동",
+        "type": "directory",
+        "addressMatch": true,
+        "note": "동주소와 11시개점 일부안내. 일반적인자동설명은증거에서제외.",
+        "observedAt": "2026-11-11"
+      }
+    ],
+    "facts": {
+      "menus": {
+        "status": "unconfirmed",
+        "sourceIds": [],
+        "note": "동일 지점의 메뉴와 현행 가격을 확인하지 못함. 값은 생성하지 않음."
+      },
+      "hours": {
+        "status": "partial",
+        "sourceIds": [
+          "s1"
+        ],
+        "note": "11:00개점만확인. 마감·요일·휴무미확인."
+      }
+    },
+    "notes": [],
+    "checkedAt": "2026-11-11",
+    "method": "web",
+    "unknownFields": [
+      "menus",
+      "hours",
+      "mealType",
+      "takeout",
+      "verifiedAt",
+      "verifiedBy",
+      "break",
+      "lastOrder"
+    ]
+  },
+  "availability": {
+    "status": "listed",
+    "provider": "naver",
+    "checkedAt": "2026-11-11",
+    "sourceUrl": "https://pcmap.place.naver.com/place/1799793789",
+    "naverPlaceId": "1799793789",
+    "observedName": "통큰쭈꾸미",
+    "observedAddress": "광주 북구 설죽로214번길 93",
+    "district": "상대",
+    "addressVerified": true,
+    "nearby": true,
+    "reason": "공개 네이버 지도에서 동일 주소의 전남대 상대 식당으로 확인"
+  },
+  "menuObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/1799793789/menu/list",
+    "checkedAt": "2026-11-11",
+    "priceContext": "in_store",
+    "menus": [
+      {
+        "name": "쭈꾸미철판",
+        "price": 13000,
+        "main": false,
+        "priceContext": "in_store"
+      },
+      {
+        "name": "쭈꾸미철판삼겹",
+        "price": 13000,
+        "main": false,
+        "priceContext": "in_store"
+      },
+      {
+        "name": "쭈꾸미철판새우",
+        "price": 13000,
+        "main": false,
+        "priceContext": "in_store"
+      },
+      {
+        "name": "쭈꾸미비빔밥",
+        "price": 9000,
+        "main": true,
+        "priceContext": "in_store"
+      },
+      {
+        "name": "제육볶음",
+        "price": 8000,
+        "main": true,
+        "priceContext": "in_store"
+      },
+      {
+        "name": "우렁된장찌개",
+        "price": 8000,
+        "main": true,
+        "priceContext": "in_store"
+      },
+      {
+        "name": "산채비빔밥",
+        "price": 8000,
+        "main": true,
+        "priceContext": "in_store"
+      }
+    ],
+    "note": "메뉴 상태: confirmed. 원본 관찰·좌표 출처는 적용 manifest에 보관합니다.",
+    "status": "confirmed"
+  },
+  "hoursObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/place/1799793789",
+    "checkedAt": "2026-11-11",
+    "status": "confirmed",
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금",
+          "토",
+          "일"
+        ],
+        "open": "11:00",
+        "close": "21:30"
+      }
+    ],
+    "note": "매장 영업시간 관찰. 기존 attrs/research를 덮어쓰지 않습니다."
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "id": "s_04",
+  "name": "샘플식당 04 · 저녁 고기집",
+  "category": "고기",
+  "lat": 35.18,
+  "lng": 126.915,
+  "address": "샘플 주소 (가짜 데이터)",
+  "source": "sample",
+  "attrs": {
+    "mealType": "고기·단체",
+    "takeout": false,
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금",
+          "토",
+          "일"
+        ],
+        "open": "17:00",
+        "close": "23:00"
+      }
+    ],
+    "menus": [
+      {
+        "name": "삼겹살 1인분",
+        "price": 14000,
+        "main": true
+      },
+      {
+        "name": "된장찌개",
+        "price": 3000,
+        "main": false
+      }
+    ],
+    "note": "저녁만 영업 · 단체 가능 — '시험 끝나고 5명이서 고기' 확인용",
+    "verifiedAt": "2026-11-11",
+    "verifiedBy": "sample"
+  }
+}

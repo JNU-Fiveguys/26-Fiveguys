@@ -1,0 +1,232 @@
+{
+  "version": 1,
+  "id": "p_0011",
+  "name": "다원",
+  "category": "한식",
+  "lat": 35.1774598110356,
+  "lng": 126.902701329156,
+  "address": "광주 북구 설죽로202번길 98",
+  "source": "semas",
+  "sourceId": "MA010120220805930968",
+  "sourceStatus": "active",
+  "attrs": {
+    "status": "partial",
+    "menus": [
+      {
+        "name": "김치찌개",
+        "price": 5500,
+        "main": true
+      },
+      {
+        "name": "순두부찌개",
+        "price": 5500,
+        "main": true
+      },
+      {
+        "name": "뚝배기불고기",
+        "price": 5500,
+        "main": true
+      }
+    ],
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금",
+          "토"
+        ],
+        "open": "09:00",
+        "close": "21:00"
+      }
+    ]
+  },
+  "research": {
+    "identityStatus": "matched",
+    "queries": [
+      "\"다원\" \"설죽로202번길 98\" 메뉴"
+    ],
+    "sources": [
+      {
+        "id": "s1",
+        "url": "https://best.wjsevin.com/shop/3930",
+        "title": "다원 착한가격맵",
+        "type": "public_data",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "2026-06-30 공공데이터 기반 가격. 현재 현장가격은 미확인"
+      },
+      {
+        "id": "s2",
+        "url": "https://www.diningcode.com/profile.php?rid=ysy8ZRoUZUsV",
+        "title": "다원 매장정보",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "상호·주소 일치"
+      }
+    ],
+    "facts": {
+      "menus": {
+        "status": "confirmed",
+        "value": [
+          {
+            "name": "김치찌개",
+            "price": 5500,
+            "main": true
+          },
+          {
+            "name": "순두부찌개",
+            "price": 5500,
+            "main": true
+          },
+          {
+            "name": "뚝배기불고기",
+            "price": 5500,
+            "main": true
+          }
+        ],
+        "sourceIds": [
+          "s2"
+        ],
+        "note": "주소가 일치하는 매장정보 본문의 메뉴표에 게시된 가격. 김치찌개·순두부찌개는 2026-06-30 공공데이터 재게시 가격과도 일치."
+      },
+      "hours": {
+        "status": "confirmed",
+        "value": [
+          {
+            "days": [
+              "월",
+              "화",
+              "수",
+              "목",
+              "금",
+              "토"
+            ],
+            "open": "09:00",
+            "close": "21:00"
+          }
+        ],
+        "sourceIds": [
+          "s2"
+        ],
+        "note": "매장 정보 월~토09:00~21:00·일휴무. 브레이크·라스트오더 미확인."
+      }
+    },
+    "notes": [],
+    "checkedAt": "2026-11-11",
+    "method": "web",
+    "unknownFields": [
+      "mealType",
+      "takeout",
+      "verifiedAt",
+      "verifiedBy",
+      "break",
+      "lastOrder"
+    ]
+  },
+  "availability": {
+    "status": "listed",
+    "provider": "naver",
+    "checkedAt": "2026-11-11",
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/1725008967/home",
+    "naverPlaceId": "1725008967",
+    "observedName": "다원",
+    "observedAddress": "광주 북구 설죽로202번길 98",
+    "district": "상대",
+    "addressVerified": true,
+    "nearby": true,
+    "reason": "공개 네이버 지도에서 동일 주소의 전남대 상대 식당으로 확인"
+  },
+  "menuObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/1725008967/menu/list",
+    "checkedAt": "2026-11-11",
+    "priceContext": "in_store",
+    "menus": [
+      {
+        "name": "뚝배기불고기",
+        "price": 5500,
+        "main": true,
+        "priceContext": "in_store"
+      },
+      {
+        "name": "된장찌개",
+        "price": 5500,
+        "main": true,
+        "priceContext": "in_store"
+      },
+      {
+        "name": "순두부찌개",
+        "price": 5500,
+        "main": true,
+        "priceContext": "in_store"
+      },
+      {
+        "name": "야채비빔밥",
+        "price": 5000,
+        "main": true,
+        "priceContext": "in_store"
+      },
+      {
+        "name": "참치비빔밥",
+        "price": 5500,
+        "main": true,
+        "priceContext": "in_store"
+      },
+      {
+        "name": "뼈해장국",
+        "price": 5500,
+        "main": true,
+        "priceContext": "in_store"
+      },
+      {
+        "name": "콩나물해장국",
+        "price": 4000,
+        "main": true,
+        "priceContext": "in_store"
+      },
+      {
+        "name": "애호박찌개",
+        "price": 5500,
+        "main": true,
+        "priceContext": "in_store"
+      },
+      {
+        "name": "김치찌개",
+        "price": 5500,
+        "main": true,
+        "priceContext": "in_store"
+      },
+      {
+        "name": "참치찌개",
+        "price": 5500,
+        "main": true,
+        "priceContext": "in_store"
+      }
+    ],
+    "note": "메뉴 상태: confirmed. 원본 관찰·좌표 출처는 적용 manifest에 보관합니다.",
+    "status": "confirmed"
+  },
+  "hoursObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/1725008967/home",
+    "checkedAt": "2026-11-11",
+    "status": "confirmed",
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금",
+          "토"
+        ],
+        "open": "09:00",
+        "close": "21:00"
+      }
+    ],
+    "note": "매장 영업시간 관찰. 기존 attrs/research를 덮어쓰지 않습니다."
+  }
+}

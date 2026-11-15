@@ -1,0 +1,104 @@
+{
+  "version": 1,
+  "id": "p_0006",
+  "name": "한끼도시락",
+  "category": "한식",
+  "lat": 35.1780562510865,
+  "lng": 126.904643751141,
+  "address": "광주 북구 설죽로214번길 129",
+  "source": "semas",
+  "sourceId": "MA010120220804854669",
+  "sourceStatus": "active",
+  "attrs": {
+    "status": "partial"
+  },
+  "research": {
+    "identityStatus": "matched",
+    "queries": [
+      "\"한끼도시락\" \"전대\" 메뉴 영업시간",
+      "\"한끼도시락\" \"용봉동\"",
+      "\"한끼도시락\" \"설죽로\"",
+      "\"한끼도시락\" \"전남대\"",
+      "\"한끼도시락\" \"전대\""
+    ],
+    "sources": [
+      {
+        "id": "s1",
+        "url": "https://www.diningcode.com/list.dc?query=%EA%B4%91%EC%A3%BC%EC%9A%A9%EB%B4%89%EB%8F%99+%EC%A0%9C%EC%9C%A1",
+        "title": "다이닝코드 한끼도시락 주소 목록",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "상호·주소 일치"
+      }
+    ],
+    "facts": {
+      "menus": {
+        "status": "partial",
+        "value": [],
+        "sourceIds": [
+          "s1"
+        ],
+        "note": "덮밥·제육 메뉴 분류와 주소만 확인, 가격 미확인."
+      },
+      "hours": {
+        "status": "unconfirmed",
+        "value": [],
+        "sourceIds": [],
+        "note": "요일별 영업시간을 확인하지 못함."
+      }
+    },
+    "notes": [],
+    "checkedAt": "2026-11-11",
+    "method": "web",
+    "unknownFields": [
+      "menus",
+      "hours",
+      "mealType",
+      "takeout",
+      "verifiedAt",
+      "verifiedBy",
+      "break",
+      "lastOrder"
+    ]
+  },
+  "availability": {
+    "status": "listed",
+    "provider": "naver",
+    "checkedAt": "2026-11-11",
+    "sourceUrl": "https://pcmap.place.naver.com/place/1075860086",
+    "naverPlaceId": "1075860086",
+    "observedName": "한끼도시락",
+    "observedAddress": "광주 북구 설죽로214번길 129",
+    "district": "상대",
+    "addressVerified": true,
+    "nearby": true,
+    "reason": "공개 네이버 지도에서 동일 주소의 전남대 상대 식당으로 확인"
+  },
+  "menuObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/place/1075860086",
+    "checkedAt": "2026-11-12",
+    "priceContext": "unknown",
+    "menus": [],
+    "note": "공개 플레이스에서 메뉴·주문 연결을 확인하지 못했습니다. 매장 메뉴·가격은 미확인입니다.",
+    "status": "unconfirmed"
+  },
+  "hoursObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/place/1075860086",
+    "checkedAt": "2026-11-11",
+    "status": "unconfirmed",
+    "hours": [],
+    "note": "매장 영업시간 관찰. 기존 attrs/research를 덮어쓰지 않습니다."
+  },
+  "followupReview": {
+    "checkedAt": "2026-11-12",
+    "reasons": [
+      "매장 메뉴·가격: 배달 가격 또는 가격 구분이 불명확한 자료만 있어 매장 가격을 확인해야 합니다.",
+      "요일별 영업시간: 월~일 영업·휴무와 개점·마감 시간이 필요합니다. 브레이크·마지막 주문은 확인한 경우만 입력하세요."
+    ],
+    "sources": [
+      "https://pcmap.place.naver.com/restaurant/1075860086/home",
+      "https://pcmap.place.naver.com/place/1075860086"
+    ]
+  }
+}

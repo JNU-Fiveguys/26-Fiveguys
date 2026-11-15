@@ -1,0 +1,360 @@
+{
+  "version": 1,
+  "id": "p_0082",
+  "name": "최정담",
+  "category": "한식",
+  "lat": 35.1749528138628,
+  "lng": 126.912935564369,
+  "address": "전남광주 북구 우치로 86-4 1층",
+  "source": "semas",
+  "sourceId": "MA0101202505A0093078",
+  "sourceStatus": "active",
+  "attrs": {
+    "status": "partial",
+    "menus": [
+      {
+        "name": "꼬막비빔밥 정식",
+        "price": 12000,
+        "main": true
+      },
+      {
+        "name": "제육볶음 정식",
+        "price": 12000,
+        "main": true
+      },
+      {
+        "name": "뚝불 정식",
+        "price": 12000,
+        "main": true
+      },
+      {
+        "name": "돔베 정식",
+        "price": 12000,
+        "main": true
+      },
+      {
+        "name": "매운 갈비 김치찜 정식",
+        "price": 12000,
+        "main": true
+      },
+      {
+        "name": "해물볶음 정식",
+        "price": 12000,
+        "main": true
+      },
+      {
+        "name": "삼치 김치찜 정식",
+        "price": 12000,
+        "main": true
+      },
+      {
+        "name": "삼치구이 정식",
+        "price": 12000,
+        "main": true
+      },
+      {
+        "name": "육회비빔밥 정식",
+        "price": 12000,
+        "main": true
+      },
+      {
+        "name": "익힘비빔밥 정식",
+        "price": 12000,
+        "main": true
+      },
+      {
+        "name": "순살 간장 게장 비빔밥 정식",
+        "price": 12000,
+        "main": true
+      },
+      {
+        "name": "순살 양념 게장 비빔밥 정식",
+        "price": 12000,
+        "main": true
+      },
+      {
+        "name": "참치야채비빔밥 정식",
+        "price": 9000,
+        "main": true
+      },
+      {
+        "name": "닭강정",
+        "price": 4000,
+        "main": false
+      },
+      {
+        "name": "스팸구이",
+        "price": 4000,
+        "main": false
+      },
+      {
+        "name": "계란말이",
+        "price": 4000,
+        "main": false
+      },
+      {
+        "name": "명란젓",
+        "price": 3000,
+        "main": false
+      },
+      {
+        "name": "계란후라이 3개",
+        "price": 2000,
+        "main": false
+      },
+      {
+        "name": "공깃밥",
+        "price": 1000,
+        "main": false
+      }
+    ],
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금"
+        ],
+        "open": "11:00",
+        "close": "21:00",
+        "lastOrder": "20:30",
+        "break": {
+          "start": "15:00",
+          "end": "17:00"
+        }
+      },
+      {
+        "days": [
+          "토"
+        ],
+        "open": "11:00",
+        "close": "15:00",
+        "lastOrder": "14:30"
+      }
+    ]
+  },
+  "research": {
+    "identityStatus": "matched",
+    "queries": [
+      "\"최정담\" \"우치로\""
+    ],
+    "sources": [
+      {
+        "id": "s1",
+        "url": "https://www.tabling.co.kr/place/6911772abf02ec70c950091f",
+        "title": "테이블링 최정담",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "주소가 일치하는 공개 검색결과 본문을 확인. URL을 직접 열었으나 403으로 본문 조회 불가. 접근을 우회하지 않음."
+      }
+    ],
+    "facts": {
+      "menus": {
+        "status": "partial",
+        "value": [
+          {
+            "name": "제육볶음 정식",
+            "price": 12000,
+            "main": true
+          },
+          {
+            "name": "뚝불 정식",
+            "price": 12000,
+            "main": true
+          },
+          {
+            "name": "돔베 정식",
+            "price": 12000,
+            "main": true
+          }
+        ],
+        "sourceIds": [
+          "s1"
+        ],
+        "note": "주소가 일치하는 지점 페이지에 게시된 메뉴·가격. 실제 결제 가격은 현장 재확인 필요. 공개 검색결과에서 확인했으나 직접 본문 조회는 403으로 현행 확인 보류."
+      },
+      "hours": {
+        "status": "partial",
+        "sourceIds": [
+          "s1"
+        ],
+        "note": "월~금11~21시(휴식15~17),토11~15시,일휴무 게시. 마지막주문시각 미확인. 공개 검색결과만 확인. 직접 본문 조회는 403이어서 최신 일정 확정 보류."
+      }
+    },
+    "notes": [],
+    "checkedAt": "2026-11-11",
+    "method": "web",
+    "unknownFields": [
+      "menus",
+      "hours",
+      "mealType",
+      "takeout",
+      "verifiedAt",
+      "verifiedBy",
+      "break",
+      "lastOrder"
+    ]
+  },
+  "availability": {
+    "status": "listed",
+    "provider": "naver",
+    "checkedAt": "2026-11-11",
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/2097797421/home",
+    "naverPlaceId": "2097797421",
+    "observedName": "최정담",
+    "observedAddress": "전남광주 북구 우치로 86-4 1층",
+    "district": "후문",
+    "addressVerified": true,
+    "nearby": true,
+    "reason": "공개 네이버 지도에서 동일 주소의 전남대 후문 식당으로 확인"
+  },
+  "menuObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/2097797421/menu",
+    "checkedAt": "2026-11-11",
+    "priceContext": "in_store",
+    "menus": [
+      {
+        "name": "꼬막비빔밥 정식",
+        "price": 12000,
+        "main": true
+      },
+      {
+        "name": "제육볶음 정식",
+        "price": 12000,
+        "main": true
+      },
+      {
+        "name": "뚝불 정식",
+        "price": 12000,
+        "main": true
+      },
+      {
+        "name": "돔베 정식",
+        "price": 12000,
+        "main": true
+      },
+      {
+        "name": "매운 갈비 김치찜 정식",
+        "price": 12000,
+        "main": true
+      },
+      {
+        "name": "해물볶음 정식",
+        "price": 12000,
+        "main": true
+      },
+      {
+        "name": "삼치 김치찜 정식",
+        "price": 12000,
+        "main": true
+      },
+      {
+        "name": "삼치구이 정식",
+        "price": 12000,
+        "main": true
+      },
+      {
+        "name": "육회비빔밥 정식",
+        "price": 12000,
+        "main": true
+      },
+      {
+        "name": "익힘비빔밥 정식",
+        "price": 12000,
+        "main": true
+      },
+      {
+        "name": "순살 간장 게장 비빔밥 정식",
+        "price": 12000,
+        "main": true
+      },
+      {
+        "name": "순살 양념 게장 비빔밥 정식",
+        "price": 12000,
+        "main": true
+      },
+      {
+        "name": "참치야채비빔밥 정식",
+        "price": 9000,
+        "main": true
+      },
+      {
+        "name": "닭강정",
+        "price": 4000,
+        "main": false
+      },
+      {
+        "name": "스팸구이",
+        "price": 4000,
+        "main": false
+      },
+      {
+        "name": "계란말이",
+        "price": 4000,
+        "main": false
+      },
+      {
+        "name": "명란젓",
+        "price": 3000,
+        "main": false
+      },
+      {
+        "name": "계란후라이 3개",
+        "price": 2000,
+        "main": false
+      },
+      {
+        "name": "공깃밥",
+        "price": 1000,
+        "main": false
+      }
+    ],
+    "note": "메뉴 상태: confirmed. 원본 관찰·좌표 출처는 적용 manifest에 보관합니다.",
+    "status": "confirmed"
+  },
+  "hoursObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/2097797421/home",
+    "checkedAt": "2026-11-12",
+    "status": "confirmed",
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금"
+        ],
+        "open": "11:00",
+        "close": "21:00",
+        "lastOrder": "20:30",
+        "break": {
+          "start": "15:00",
+          "end": "17:00"
+        }
+      },
+      {
+        "days": [
+          "토"
+        ],
+        "open": "11:00",
+        "close": "15:00",
+        "lastOrder": "14:30"
+      }
+    ],
+    "note": "매장 영업시간 관찰. 기존 attrs/research를 덮어쓰지 않습니다."
+  },
+  "followupReview": {
+    "checkedAt": "2026-11-12",
+    "reasons": [
+      "확인된 매장 식사 가격과 요일별 영업시간을 연결하여 추천 대상으로 전환했습니다."
+    ],
+    "sources": [
+      "https://pcmap.place.naver.com/restaurant/2097797421/home",
+      "https://pcmap.place.naver.com/restaurant/2097797421/menu"
+    ]
+  }
+}

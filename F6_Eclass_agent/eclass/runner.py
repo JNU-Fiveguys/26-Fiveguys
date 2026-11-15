@@ -49,9 +49,11 @@ def run_once(source: str, attempt: int = 1, dry_run: bool = False, courses: Opti
         from . import collect                  # playwright · bs4 — 수집 프로세스에서만
         res = collect.run(dry_run=dry_run, courses_only=courses, only=only)
         code, counts, error, full = res.code, res.counts, res.error, res.full
+        partial, warnings, error_kind = res.partial, res.warnings, res.error_kind
     except Exception as e:                      # noqa: BLE001 — 무엇이 터져도 이력은 남긴다
         traceback.print_exc()
         code, counts, error, full = C.EXIT_ERROR, {}, f"{type(e).__name__}: {str(e)[:200]}", False
+        partial, warnings, error_kind = False, [], None
     ledger = None
     if code == C.EXIT_OK and not dry_run:
         try:
@@ -73,7 +75,8 @@ def run_once(source: str, attempt: int = 1, dry_run: bool = False, courses: Opti
         except Exception:                       # noqa: BLE001
             traceback.print_exc()
     rec.update(finished_at=datetime.now().isoformat(timespec="seconds"), duration_s=round(time.monotonic() - t0, 1),
-               exit_code=code, counts=counts, error=error, ledger=ledger)
+               exit_code=code, counts=counts, error=error, ledger=ledger,
+               partial=partial, warnings=warnings, errorKind=error_kind)
     R.release_lock(rec)
     print(f"-- 수집 끝: 코드 {code}{f' ({error})' if error else ''} · {rec['duration_s']}초")
     return rec

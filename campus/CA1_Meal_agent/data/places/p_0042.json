@@ -1,0 +1,71 @@
+{
+  "version": 1,
+  "id": "p_0042",
+  "name": "봉구스밥버거전남대 후문점",
+  "category": "분식",
+  "lat": 35.175097,
+  "lng": 126.912935,
+  "address": "전남광주통합특별시 북구 우치로 86",
+  "source": "semas",
+  "sourceId": "MA010120220809762743",
+  "sourceStatus": "active",
+  "attrs": {
+    "status": "partial"
+  },
+  "research": {
+    "identityStatus": "matched",
+    "queries": [
+      "\"봉구스밥버거\" \"우치로 86\" 메뉴 영업시간",
+      "\"봉구스밥버거 전남대후문점\" \"영업시간\""
+    ],
+    "sources": [
+      {
+        "id": "s1",
+        "url": "https://www.bongousse.com/StoreSearch.asp",
+        "title": "봉구스밥버거 공식 매장검색",
+        "type": "official",
+        "addressMatch": true,
+        "note": "전남대후문점(광주), 우치로86, 전화062-269-5094 확인. 지점 메뉴가격·시간 미제공.",
+        "observedAt": "2026-11-11"
+      }
+    ],
+    "facts": {
+      "menus": {
+        "status": "unconfirmed",
+        "sourceIds": [],
+        "note": "동일 지점의 메뉴와 현행 가격을 확인하지 못함. 값은 생성하지 않음."
+      },
+      "hours": {
+        "status": "unconfirmed",
+        "sourceIds": [],
+        "note": "동일 지점의 요일별 영업시간·휴무를 확인하지 못함. 임의 시간 입력하지 않음."
+      }
+    },
+    "notes": [],
+    "checkedAt": "2026-11-11",
+    "method": "web",
+    "unknownFields": [
+      "menus",
+      "hours",
+      "mealType",
+      "takeout",
+      "verifiedAt",
+      "verifiedBy",
+      "break",
+      "lastOrder"
+    ]
+  },
+  "availability": {
+    "status": "excluded",
+    "provider": "naver",
+    "checkedAt": "2026-11-11",
+    "sourceUrl": "https://map.naver.com/p/search/%EC%A0%84%EB%82%A8%EB%8C%80%20%EC%9D%8C%EC%8B%9D%EC%A0%90",
+    "naverPlaceId": null,
+    "observedName": "",
+    "observedAddress": "",
+    "district": null,
+    "addressVerified": false,
+    "nearby": false,
+    "reason": "네이버 지도에서 확인한 네 식당가 명단에 포함되지 않아 제외"
+  }
+}

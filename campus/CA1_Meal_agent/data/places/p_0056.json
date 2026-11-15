@@ -1,0 +1,230 @@
+{
+  "version": 1,
+  "id": "p_0056",
+  "name": "테트리스찜닭 전남대점",
+  "category": "한식",
+  "lat": 35.1807059070943,
+  "lng": 126.904223473372,
+  "address": "전남광주 북구 용주로30번길 64",
+  "source": "semas",
+  "sourceId": "MA010120220814048485",
+  "sourceStatus": "active",
+  "attrs": {
+    "status": "partial",
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금",
+          "토",
+          "일"
+        ],
+        "open": "00:00",
+        "close": "02:00"
+      },
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금",
+          "토",
+          "일"
+        ],
+        "open": "12:00",
+        "close": "24:00"
+      }
+    ],
+    "menus": [
+      {
+        "name": "까만찜닭",
+        "price": 24000,
+        "main": true
+      },
+      {
+        "name": "하얀찜닭",
+        "price": 23000,
+        "main": true
+      },
+      {
+        "name": "빨간찜닭",
+        "price": 24000,
+        "main": true
+      },
+      {
+        "name": "까만찜닭(순살)",
+        "price": 25000,
+        "main": true
+      },
+      {
+        "name": "하얀찜닭(순살)",
+        "price": 28000,
+        "main": true
+      },
+      {
+        "name": "빨간찜닭(순살)",
+        "price": 25000,
+        "main": true
+      }
+    ]
+  },
+  "research": {
+    "identityStatus": "matched",
+    "queries": [
+      "\"테트리스찜닭 전남대점\" 메뉴 영업시간"
+    ],
+    "sources": [
+      {
+        "id": "s1",
+        "url": "https://www.diningcode.com/profile.php?rid=rkWUHOut1TxY",
+        "title": "테트리스찜닭 전남대점",
+        "type": "directory",
+        "addressMatch": true,
+        "note": "주소일치 및 지점메뉴게시. 자정넘김시간으로구조화보류.",
+        "observedAt": "2026-11-11"
+      }
+    ],
+    "facts": {
+      "menus": {
+        "status": "partial",
+        "value": [
+          {
+            "name": "까만 찜닭 닭다리순살 반마리",
+            "price": 22000,
+            "main": true
+          },
+          {
+            "name": "까만 찜닭 닭다리순살 한마리",
+            "price": 26000,
+            "main": true
+          }
+        ],
+        "sourceIds": [
+          "s1"
+        ],
+        "note": "게시 메뉴가격. 공유메뉴이며 배달중심 정보라 1인 매장식사 기준과 차이 확인필요."
+      },
+      "hours": {
+        "status": "partial",
+        "sourceIds": [
+          "s1"
+        ],
+        "note": "12:00~다음날02:00 게시. 요일별표 전체확인안됨 및 자정넘김 현행스키마미지원."
+      }
+    },
+    "notes": [],
+    "checkedAt": "2026-11-11",
+    "method": "web",
+    "unknownFields": [
+      "menus",
+      "hours",
+      "mealType",
+      "takeout",
+      "verifiedAt",
+      "verifiedBy",
+      "break",
+      "lastOrder"
+    ]
+  },
+  "availability": {
+    "status": "listed",
+    "provider": "naver",
+    "checkedAt": "2026-11-11",
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/1346033389/home",
+    "naverPlaceId": "1346033389",
+    "observedName": "테트리스찜닭 전남대점",
+    "observedAddress": "전남광주 북구 용주로30번길 64",
+    "district": "예대",
+    "addressVerified": true,
+    "nearby": true,
+    "reason": "공개 네이버 지도에서 동일 주소의 전남대 예대 식당으로 확인"
+  },
+  "menuObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/1346033389/menu",
+    "checkedAt": "2026-11-11",
+    "priceContext": "in_store",
+    "menus": [
+      {
+        "name": "까만찜닭",
+        "price": 24000,
+        "main": true
+      },
+      {
+        "name": "하얀찜닭",
+        "price": 23000,
+        "main": true
+      },
+      {
+        "name": "빨간찜닭",
+        "price": 24000,
+        "main": true
+      },
+      {
+        "name": "까만찜닭(순살)",
+        "price": 25000,
+        "main": true
+      },
+      {
+        "name": "하얀찜닭(순살)",
+        "price": 28000,
+        "main": true
+      },
+      {
+        "name": "빨간찜닭(순살)",
+        "price": 25000,
+        "main": true
+      }
+    ],
+    "note": "메뉴 상태: confirmed. 원본 관찰·좌표 출처는 적용 manifest에 보관합니다.",
+    "status": "confirmed"
+  },
+  "hoursObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/1346033389/home",
+    "checkedAt": "2026-11-12",
+    "status": "confirmed",
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금",
+          "토",
+          "일"
+        ],
+        "open": "00:00",
+        "close": "02:00"
+      },
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금",
+          "토",
+          "일"
+        ],
+        "open": "12:00",
+        "close": "24:00"
+      }
+    ],
+    "note": "매장 영업시간 관찰. 기존 attrs/research를 덮어쓰지 않습니다."
+  },
+  "followupReview": {
+    "checkedAt": "2026-11-12",
+    "reasons": [
+      "공개 매장 식사 가격과 요일별 영업시간을 연결하여 추천 대상으로 전환했습니다."
+    ],
+    "sources": [
+      "https://pcmap.place.naver.com/restaurant/1346033389/home",
+      "https://pcmap.place.naver.com/restaurant/1346033389/menu/list",
+      "https://pcmap.place.naver.com/restaurant/1346033389/menu"
+    ]
+  }
+}

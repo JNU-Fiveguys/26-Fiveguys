@@ -1,0 +1,191 @@
+{
+  "version": 1,
+  "id": "p_0043",
+  "name": "도스마스 전남대점",
+  "category": "양식",
+  "lat": 35.1777032564047,
+  "lng": 126.902799842001,
+  "address": "광주 북구 설죽로214번길 94",
+  "source": "semas",
+  "sourceId": "MA010120220810120709",
+  "sourceStatus": "active",
+  "attrs": {
+    "status": "partial",
+    "menus": [
+      {
+        "name": "닭고기 부리또",
+        "price": 5500,
+        "main": true
+      },
+      {
+        "name": "섞어서부리또",
+        "price": 6000,
+        "main": true
+      },
+      {
+        "name": "소고기부리또",
+        "price": 6500,
+        "main": true
+      }
+    ],
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금",
+          "토"
+        ],
+        "open": "09:30",
+        "close": "20:30"
+      }
+    ]
+  },
+  "research": {
+    "identityStatus": "matched",
+    "queries": [
+      "\"도스마스\" \"설죽로214번길 94\" 메뉴 영업시간"
+    ],
+    "sources": [
+      {
+        "id": "s1",
+        "url": "https://www.tabling.co.kr/place/677ccad966de5f06987c1b25",
+        "title": "도스마스 전남대점",
+        "type": "directory",
+        "addressMatch": true,
+        "note": "검색 색인에 주소·메뉴·요일시간 확인. 본문 open은 cache miss.",
+        "observedAt": "2026-11-11"
+      },
+      {
+        "id": "s2",
+        "url": "https://www.diningcode.com/profile.php?rid=61f5if07WPsH",
+        "title": "도스마스 전남대점",
+        "type": "directory",
+        "addressMatch": true,
+        "note": "영업시간09:30~20:30가 테이블링08:30~21:00와 상충. 본문 메뉴 이름·가격을 직접 대조함.",
+        "observedAt": "2026-11-11"
+      }
+    ],
+    "facts": {
+      "menus": {
+        "status": "confirmed",
+        "value": [
+          {
+            "name": "닭고기 부리또",
+            "price": 5500,
+            "main": true
+          },
+          {
+            "name": "섞어서부리또",
+            "price": 6000,
+            "main": true
+          },
+          {
+            "name": "소고기부리또",
+            "price": 6500,
+            "main": true
+          }
+        ],
+        "sourceIds": [
+          "s1",
+          "s2"
+        ],
+        "note": "동일 지점의 테이블링 검색색인 및 다이닝코드 본문에서 같은 메뉴가격 확인. 현장검증 아님."
+      },
+      "hours": {
+        "status": "conflict",
+        "sourceIds": [
+          "s1",
+          "s2"
+        ],
+        "note": "일요일휴무 공통. 월~토08:30~21:00 또는09:30~20:30로 안내되어 영업시간 확정 보류."
+      }
+    },
+    "notes": [],
+    "checkedAt": "2026-11-11",
+    "method": "web",
+    "unknownFields": [
+      "hours",
+      "mealType",
+      "takeout",
+      "verifiedAt",
+      "verifiedBy",
+      "break",
+      "lastOrder"
+    ]
+  },
+  "availability": {
+    "status": "listed",
+    "provider": "naver",
+    "checkedAt": "2026-11-11",
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/38275184/home",
+    "naverPlaceId": "38275184",
+    "observedName": "도스마스 전남대점",
+    "observedAddress": "광주 북구 설죽로214번길 94",
+    "district": "상대",
+    "addressVerified": true,
+    "nearby": true,
+    "reason": "공개 네이버 지도에서 동일 주소의 전남대 상대 식당으로 확인"
+  },
+  "menuObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/38275184/menu/list",
+    "checkedAt": "2026-11-11",
+    "priceContext": "in_store",
+    "menus": [
+      {
+        "name": "섞어서부리또",
+        "price": 6000,
+        "main": true,
+        "priceContext": "in_store"
+      },
+      {
+        "name": "소고기부리또",
+        "price": 6500,
+        "main": true,
+        "priceContext": "in_store"
+      },
+      {
+        "name": "닭고기 부리또",
+        "price": 5500,
+        "main": true,
+        "priceContext": "in_store"
+      },
+      {
+        "name": "닭고기부리또+음료수",
+        "price": 7000,
+        "main": true,
+        "priceContext": "in_store"
+      },
+      {
+        "name": "소고기부리또+소다+음료수",
+        "price": 8000,
+        "main": true,
+        "priceContext": "in_store"
+      }
+    ],
+    "note": "메뉴 상태: confirmed. 원본 관찰·좌표 출처는 적용 manifest에 보관합니다.",
+    "status": "confirmed"
+  },
+  "hoursObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/38275184/home",
+    "checkedAt": "2026-11-11",
+    "status": "confirmed",
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금",
+          "토"
+        ],
+        "open": "09:30",
+        "close": "20:30"
+      }
+    ],
+    "note": "매장 영업시간 관찰. 기존 attrs/research를 덮어쓰지 않습니다."
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "_description": "개발 시연용 합성 시간표. 실제 사용자 시간표가 아닙니다. F3 attendance/summary와 같은 회차 형식입니다.",
+  "semester": {"id": "2026-2", "start": "2026-09-01", "end": "2026-12-21"},
+  "courses": [
+    {"excluded": false, "sessions": [{"date": "2026-11-11", "start": "09:00", "end": "11:50", "room": "공7-223", "state": "scheduled", "kind": "regular"}]},
+    {"excluded": false, "sessions": [{"date": "2026-11-11", "start": "13:30", "end": "14:45", "room": "경영대학1호관", "state": "scheduled", "kind": "regular"}]}
+  ]
+}

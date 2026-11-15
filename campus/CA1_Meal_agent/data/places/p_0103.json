@@ -1,0 +1,650 @@
+{
+  "version": 1,
+  "id": "p_0103",
+  "source": "team",
+  "sourceId": "naver:16168509",
+  "name": "대왕김밥전대정문",
+  "address": "전남광주 북구 자미로 55",
+  "category": "분식",
+  "lat": 35.1709621269488,
+  "lng": 126.904081220015,
+  "sourceStatus": "active",
+  "availability": {
+    "status": "listed",
+    "provider": "naver",
+    "checkedAt": "2026-11-11",
+    "sourceUrl": "https://pcmap.place.naver.com/place/16168509",
+    "naverPlaceId": "16168509",
+    "observedName": "대왕김밥전대정문",
+    "observedAddress": "전남광주 북구 자미로 55",
+    "district": "정문",
+    "addressVerified": true,
+    "nearby": true,
+    "reason": "공개 네이버 지도에서 동일 주소의 전남대 정문 식당으로 확인"
+  },
+  "menuObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/16168509/menu/list",
+    "checkedAt": "2026-11-11",
+    "priceContext": "in_store",
+    "menus": [
+      {
+        "name": "새우튀김김초밥",
+        "price": 5000,
+        "main": true
+      },
+      {
+        "name": "캘리포니아롤",
+        "price": 5000,
+        "main": true
+      },
+      {
+        "name": "알김초밥",
+        "price": null,
+        "main": true
+      },
+      {
+        "name": "새우튀김3마리",
+        "price": 2500,
+        "main": false
+      },
+      {
+        "name": "새우튀김2마리",
+        "price": 2000,
+        "main": false
+      },
+      {
+        "name": "김치김밥",
+        "price": 4000,
+        "main": true
+      },
+      {
+        "name": "참치김밥",
+        "price": 4000,
+        "main": true
+      },
+      {
+        "name": "치즈김밥",
+        "price": 4000,
+        "main": true
+      },
+      {
+        "name": "김밥",
+        "price": 3500,
+        "main": true
+      },
+      {
+        "name": "찐만두",
+        "price": 5500,
+        "main": false
+      },
+      {
+        "name": "우동",
+        "price": 5000,
+        "main": true
+      },
+      {
+        "name": "볶음우동",
+        "price": 6000,
+        "main": true
+      },
+      {
+        "name": "짬뽕우동",
+        "price": 6000,
+        "main": true
+      },
+      {
+        "name": "라면",
+        "price": 4000,
+        "main": true
+      },
+      {
+        "name": "떡라면",
+        "price": 4500,
+        "main": true
+      },
+      {
+        "name": "만두라면",
+        "price": null,
+        "main": true
+      },
+      {
+        "name": "치즈라면",
+        "price": 4500,
+        "main": true
+      },
+      {
+        "name": "만두국",
+        "price": 6000,
+        "main": true
+      },
+      {
+        "name": "떡만두국",
+        "price": null,
+        "main": true
+      },
+      {
+        "name": "떡국",
+        "price": 6000,
+        "main": true
+      },
+      {
+        "name": "쫄면",
+        "price": 6000,
+        "main": true
+      },
+      {
+        "name": "떡볶이",
+        "price": 4500,
+        "main": true
+      },
+      {
+        "name": "라볶이",
+        "price": 5500,
+        "main": true
+      },
+      {
+        "name": "알밥",
+        "price": 6000,
+        "main": true
+      },
+      {
+        "name": "제육덮밥",
+        "price": 7000,
+        "main": true
+      },
+      {
+        "name": "소고기덮밥",
+        "price": 7000,
+        "main": true
+      },
+      {
+        "name": "볶음밥",
+        "price": 7000,
+        "main": true
+      },
+      {
+        "name": "김치볶음밥",
+        "price": 7000,
+        "main": true
+      },
+      {
+        "name": "양판비빔밥",
+        "price": 7000,
+        "main": true
+      },
+      {
+        "name": "돌솥비빔밥",
+        "price": 7000,
+        "main": true
+      },
+      {
+        "name": "김치찌개",
+        "price": 7000,
+        "main": true
+      },
+      {
+        "name": "육개장",
+        "price": 7000,
+        "main": true
+      },
+      {
+        "name": "돈가스 (공기밥포함)",
+        "price": 7500,
+        "main": true
+      },
+      {
+        "name": "오뎅",
+        "price": 4000,
+        "main": false
+      }
+    ],
+    "note": "메뉴 상태: confirmed. 원본 관찰·좌표 출처는 적용 manifest에 보관합니다.",
+    "status": "confirmed"
+  },
+  "attrs": {
+    "status": "partial",
+    "menus": [
+      {
+        "name": "새우튀김김초밥",
+        "price": 5000,
+        "main": true
+      },
+      {
+        "name": "캘리포니아롤",
+        "price": 5000,
+        "main": true
+      },
+      {
+        "name": "새우튀김3마리",
+        "price": 2500,
+        "main": false
+      },
+      {
+        "name": "새우튀김2마리",
+        "price": 2000,
+        "main": false
+      },
+      {
+        "name": "김치김밥",
+        "price": 4000,
+        "main": true
+      },
+      {
+        "name": "참치김밥",
+        "price": 4000,
+        "main": true
+      },
+      {
+        "name": "치즈김밥",
+        "price": 4000,
+        "main": true
+      },
+      {
+        "name": "김밥",
+        "price": 3500,
+        "main": true
+      },
+      {
+        "name": "찐만두",
+        "price": 5500,
+        "main": false
+      },
+      {
+        "name": "우동",
+        "price": 5000,
+        "main": true
+      },
+      {
+        "name": "볶음우동",
+        "price": 6000,
+        "main": true
+      },
+      {
+        "name": "짬뽕우동",
+        "price": 6000,
+        "main": true
+      },
+      {
+        "name": "라면",
+        "price": 4000,
+        "main": true
+      },
+      {
+        "name": "떡라면",
+        "price": 4500,
+        "main": true
+      },
+      {
+        "name": "치즈라면",
+        "price": 4500,
+        "main": true
+      },
+      {
+        "name": "만두국",
+        "price": 6000,
+        "main": true
+      },
+      {
+        "name": "떡국",
+        "price": 6000,
+        "main": true
+      },
+      {
+        "name": "쫄면",
+        "price": 6000,
+        "main": true
+      },
+      {
+        "name": "떡볶이",
+        "price": 4500,
+        "main": true
+      },
+      {
+        "name": "라볶이",
+        "price": 5500,
+        "main": true
+      },
+      {
+        "name": "알밥",
+        "price": 6000,
+        "main": true
+      },
+      {
+        "name": "제육덮밥",
+        "price": 7000,
+        "main": true
+      },
+      {
+        "name": "소고기덮밥",
+        "price": 7000,
+        "main": true
+      },
+      {
+        "name": "볶음밥",
+        "price": 7000,
+        "main": true
+      },
+      {
+        "name": "김치볶음밥",
+        "price": 7000,
+        "main": true
+      },
+      {
+        "name": "양판비빔밥",
+        "price": 7000,
+        "main": true
+      },
+      {
+        "name": "돌솥비빔밥",
+        "price": 7000,
+        "main": true
+      },
+      {
+        "name": "김치찌개",
+        "price": 7000,
+        "main": true
+      },
+      {
+        "name": "육개장",
+        "price": 7000,
+        "main": true
+      },
+      {
+        "name": "돈가스 (공기밥포함)",
+        "price": 7500,
+        "main": true
+      },
+      {
+        "name": "오뎅",
+        "price": 4000,
+        "main": false
+      }
+    ],
+    "hours": [
+      {
+        "days": [
+          "화",
+          "수",
+          "목",
+          "금",
+          "토",
+          "일"
+        ],
+        "open": "09:00",
+        "close": "22:00",
+        "lastOrder": "21:30",
+        "break": {
+          "start": "14:30",
+          "end": "15:00"
+        }
+      }
+    ]
+  },
+  "hoursObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/place/16168509",
+    "checkedAt": "2026-11-11",
+    "status": "confirmed",
+    "hours": [
+      {
+        "days": [
+          "화",
+          "수",
+          "목",
+          "금",
+          "토",
+          "일"
+        ],
+        "open": "09:00",
+        "close": "22:00",
+        "lastOrder": "21:30",
+        "break": {
+          "start": "14:30",
+          "end": "15:00"
+        }
+      }
+    ],
+    "note": "매장 영업시간 관찰. 기존 attrs/research를 덮어쓰지 않습니다."
+  },
+  "research": {
+    "checkedAt": "2026-11-11",
+    "method": "web",
+    "identityStatus": "matched",
+    "queries": [
+      "대왕김밥전대정문 전남광주 북구 자미로 55"
+    ],
+    "sources": [
+      {
+        "id": "naver-place",
+        "url": "https://pcmap.place.naver.com/place/16168509",
+        "title": "대왕김밥전대정문 네이버 지도",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "같은 주소의 지점 확인. 지도 등록 확인은 실시간 영업 중 보증이 아님"
+      },
+      {
+        "id": "naver-menu",
+        "url": "https://pcmap.place.naver.com/restaurant/16168509/menu/list",
+        "title": "대왕김밥전대정문 메뉴 탭",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "가격 맥락: in_store"
+      },
+      {
+        "id": "naver-hours",
+        "url": "https://pcmap.place.naver.com/place/16168509",
+        "title": "대왕김밥전대정문 영업시간",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "게시된 요일별 영업시간. 미확인은 추정하지 않음"
+      }
+    ],
+    "facts": {
+      "menus": {
+        "status": "confirmed",
+        "sourceIds": [
+          "naver-menu"
+        ],
+        "note": "매장 게시값을 확인했습니다.",
+        "value": [
+          {
+            "name": "새우튀김김초밥",
+            "price": 5000,
+            "main": true
+          },
+          {
+            "name": "캘리포니아롤",
+            "price": 5000,
+            "main": true
+          },
+          {
+            "name": "새우튀김3마리",
+            "price": 2500,
+            "main": false
+          },
+          {
+            "name": "새우튀김2마리",
+            "price": 2000,
+            "main": false
+          },
+          {
+            "name": "김치김밥",
+            "price": 4000,
+            "main": true
+          },
+          {
+            "name": "참치김밥",
+            "price": 4000,
+            "main": true
+          },
+          {
+            "name": "치즈김밥",
+            "price": 4000,
+            "main": true
+          },
+          {
+            "name": "김밥",
+            "price": 3500,
+            "main": true
+          },
+          {
+            "name": "찐만두",
+            "price": 5500,
+            "main": false
+          },
+          {
+            "name": "우동",
+            "price": 5000,
+            "main": true
+          },
+          {
+            "name": "볶음우동",
+            "price": 6000,
+            "main": true
+          },
+          {
+            "name": "짬뽕우동",
+            "price": 6000,
+            "main": true
+          },
+          {
+            "name": "라면",
+            "price": 4000,
+            "main": true
+          },
+          {
+            "name": "떡라면",
+            "price": 4500,
+            "main": true
+          },
+          {
+            "name": "치즈라면",
+            "price": 4500,
+            "main": true
+          },
+          {
+            "name": "만두국",
+            "price": 6000,
+            "main": true
+          },
+          {
+            "name": "떡국",
+            "price": 6000,
+            "main": true
+          },
+          {
+            "name": "쫄면",
+            "price": 6000,
+            "main": true
+          },
+          {
+            "name": "떡볶이",
+            "price": 4500,
+            "main": true
+          },
+          {
+            "name": "라볶이",
+            "price": 5500,
+            "main": true
+          },
+          {
+            "name": "알밥",
+            "price": 6000,
+            "main": true
+          },
+          {
+            "name": "제육덮밥",
+            "price": 7000,
+            "main": true
+          },
+          {
+            "name": "소고기덮밥",
+            "price": 7000,
+            "main": true
+          },
+          {
+            "name": "볶음밥",
+            "price": 7000,
+            "main": true
+          },
+          {
+            "name": "김치볶음밥",
+            "price": 7000,
+            "main": true
+          },
+          {
+            "name": "양판비빔밥",
+            "price": 7000,
+            "main": true
+          },
+          {
+            "name": "돌솥비빔밥",
+            "price": 7000,
+            "main": true
+          },
+          {
+            "name": "김치찌개",
+            "price": 7000,
+            "main": true
+          },
+          {
+            "name": "육개장",
+            "price": 7000,
+            "main": true
+          },
+          {
+            "name": "돈가스 (공기밥포함)",
+            "price": 7500,
+            "main": true
+          },
+          {
+            "name": "오뎅",
+            "price": 4000,
+            "main": false
+          }
+        ]
+      },
+      "hours": {
+        "status": "confirmed",
+        "sourceIds": [
+          "naver-hours"
+        ],
+        "note": "매장 게시값을 확인했습니다.",
+        "value": [
+          {
+            "days": [
+              "화",
+              "수",
+              "목",
+              "금",
+              "토",
+              "일"
+            ],
+            "open": "09:00",
+            "close": "22:00",
+            "lastOrder": "21:30",
+            "break": {
+              "start": "14:30",
+              "end": "15:00"
+            }
+          }
+        ]
+      }
+    },
+    "unknownFields": [
+      "mealType",
+      "takeout",
+      "verifiedAt",
+      "verifiedBy"
+    ],
+    "notes": [
+      "메뉴 게시 업데이트 24.02.15; 가격 변동 3개는 null.",
+      "영업시간 원문: 화~일 09:00-22:00; 브레이크 14:30-15:00; 라스트오더 21:30; 월 정기휴무",
+      "원문 메뉴 목록·분류는 front.json에 보존. main은 1인 식사 예산용 조사자 분류이며 공유 메뉴는 false로 보수적으로 표시.",
+      "병합 입력: front_normalized_manifest.json",
+      "공개 네이버 화면 관찰이며 현장 검증이 아닙니다."
+    ]
+  }
+}

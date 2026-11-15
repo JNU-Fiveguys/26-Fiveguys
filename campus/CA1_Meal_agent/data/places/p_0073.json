@@ -1,0 +1,83 @@
+{
+  "version": 1,
+  "id": "p_0073",
+  "name": "씨앤비 광주지점",
+  "category": "한식",
+  "lat": 35.173879,
+  "lng": 126.911147,
+  "address": "전남광주통합특별시 북구 용봉로 77",
+  "source": "semas",
+  "sourceId": "MA0101202406A0571142",
+  "sourceStatus": "active",
+  "attrs": {
+    "status": "partial"
+  },
+  "research": {
+    "identityStatus": "matched",
+    "queries": [
+      "\"씨앤비\" \"전남대학교\" 식당"
+    ],
+    "sources": [
+      {
+        "id": "s1",
+        "url": "https://www.diningcode.com/profile.php?rid=x78Dtv6WUFdK",
+        "title": "씨앤비 광주지점/전남대 햇들마루",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "상호와 도로명 주소를 대조함. 공개 검색결과에서 확인했으며 직접 본문은 조회하지 않음."
+      }
+    ],
+    "facts": {
+      "menus": {
+        "status": "partial",
+        "value": [
+          {
+            "name": "중식·석식 식권",
+            "price": 5500,
+            "main": true
+          }
+        ],
+        "sourceIds": [
+          "s1"
+        ],
+        "note": "후기에 기록된 5,500원 식권. 현재 가격·날짜별 식단·학생 할인 자격 미확인."
+      },
+      "hours": {
+        "status": "partial",
+        "sourceIds": [
+          "s1"
+        ],
+        "note": "2025년 후기: 월~금 조식08:00~09:00, 중식11:30~13:30, 석식17:30~19:00. 2026학기·방학 운영과 현재시간 미확인."
+      }
+    },
+    "notes": [
+      "씨앤비 광주지점은 햇들마루로 소개됨. 학생 천원의 아침밥은 자격·지원기간 조건이 있어 일반가격으로 사용하지 않음."
+    ],
+    "checkedAt": "2026-11-11",
+    "method": "web",
+    "unknownFields": [
+      "menus",
+      "hours",
+      "mealType",
+      "takeout",
+      "verifiedAt",
+      "verifiedBy",
+      "break",
+      "lastOrder"
+    ]
+  },
+  "availability": {
+    "status": "excluded",
+    "provider": "naver",
+    "checkedAt": "2026-11-11",
+    "sourceUrl": "https://map.naver.com/p/search/%EC%A0%84%EB%82%A8%EB%8C%80%20%EC%9D%8C%EC%8B%9D%EC%A0%90",
+    "naverPlaceId": null,
+    "observedName": "",
+    "observedAddress": "",
+    "district": null,
+    "addressVerified": false,
+    "nearby": false,
+    "reason": "네이버 지도에서 확인한 네 식당가 명단에 포함되지 않아 제외"
+  }
+}

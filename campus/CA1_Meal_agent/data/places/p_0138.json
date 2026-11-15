@@ -1,0 +1,262 @@
+{
+  "version": 1,
+  "id": "p_0138",
+  "source": "team",
+  "sourceId": "naver:1520354551",
+  "name": "전대주먹구이",
+  "address": "전남광주 북구 호동로 20 1층",
+  "category": "고기",
+  "lat": 35.1749450422824,
+  "lng": 126.914681032299,
+  "sourceStatus": "active",
+  "availability": {
+    "status": "listed",
+    "provider": "naver",
+    "checkedAt": "2026-11-11",
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/1520354551/home",
+    "naverPlaceId": "1520354551",
+    "observedName": "전대주먹구이",
+    "observedAddress": "전남광주 북구 호동로 20 1층",
+    "district": "후문",
+    "addressVerified": true,
+    "nearby": true,
+    "reason": "공개 네이버 지도에서 동일 주소의 전남대 후문 식당으로 확인"
+  },
+  "menuObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/1520354551/menu",
+    "checkedAt": "2026-11-11",
+    "priceContext": "in_store",
+    "menus": [
+      {
+        "name": "국내산 생삼겹살",
+        "price": 13900,
+        "main": true
+      },
+      {
+        "name": "주먹구이",
+        "price": 9900,
+        "main": true
+      },
+      {
+        "name": "막창",
+        "price": 11900,
+        "main": true
+      },
+      {
+        "name": "꼬들살",
+        "price": 12900,
+        "main": true
+      },
+      {
+        "name": "삼겹살",
+        "price": 9900,
+        "main": true
+      },
+      {
+        "name": "국내산 오겹살",
+        "price": 13900,
+        "main": true
+      },
+      {
+        "name": "국내산 낙엽살",
+        "price": 11900,
+        "main": true
+      },
+      {
+        "name": "국내산 오돌뼈",
+        "price": 12900,
+        "main": true
+      }
+    ],
+    "note": "메뉴 상태: confirmed. 원본 관찰·좌표 출처는 적용 manifest에 보관합니다.",
+    "status": "confirmed"
+  },
+  "attrs": {
+    "status": "partial",
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금",
+          "토",
+          "일"
+        ],
+        "open": "16:00",
+        "close": "24:00"
+      },
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금",
+          "토",
+          "일"
+        ],
+        "open": "00:00",
+        "close": "01:00",
+        "lastOrder": "00:00"
+      }
+    ],
+    "menus": [
+      {
+        "name": "국내산 생삼겹살",
+        "price": 13900,
+        "main": true
+      },
+      {
+        "name": "주먹구이",
+        "price": 9900,
+        "main": true
+      },
+      {
+        "name": "막창",
+        "price": 11900,
+        "main": true
+      },
+      {
+        "name": "꼬들살",
+        "price": 12900,
+        "main": true
+      },
+      {
+        "name": "삼겹살",
+        "price": 9900,
+        "main": true
+      },
+      {
+        "name": "국내산 오겹살",
+        "price": 13900,
+        "main": true
+      },
+      {
+        "name": "국내산 낙엽살",
+        "price": 11900,
+        "main": true
+      },
+      {
+        "name": "국내산 오돌뼈",
+        "price": 12900,
+        "main": true
+      }
+    ]
+  },
+  "hoursObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/1520354551/home",
+    "checkedAt": "2026-11-12",
+    "status": "confirmed",
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금",
+          "토",
+          "일"
+        ],
+        "open": "16:00",
+        "close": "24:00"
+      },
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금",
+          "토",
+          "일"
+        ],
+        "open": "00:00",
+        "close": "01:00",
+        "lastOrder": "00:00"
+      }
+    ],
+    "note": "매일16:00~익일01:00·마지막주문00:00. 자정 이후 구간은 다음 요일로 분리."
+  },
+  "research": {
+    "checkedAt": "2026-11-11",
+    "method": "web",
+    "identityStatus": "matched",
+    "queries": [
+      "전대주먹구이 전남광주 북구 호동로 20 1층"
+    ],
+    "sources": [
+      {
+        "id": "naver-place",
+        "url": "https://pcmap.place.naver.com/restaurant/1520354551/home",
+        "title": "전대주먹구이 네이버 지도",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "같은 주소의 지점 확인. 지도 등록 확인은 실시간 영업 중 보증이 아님"
+      },
+      {
+        "id": "naver-menu",
+        "url": "https://pcmap.place.naver.com/restaurant/1520354551/menu",
+        "title": "전대주먹구이 메뉴 탭",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "가격 맥락: in_store"
+      },
+      {
+        "id": "naver-hours",
+        "url": "https://pcmap.place.naver.com/restaurant/1520354551/home",
+        "title": "전대주먹구이 영업시간",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "게시된 요일별 영업시간. 미확인은 추정하지 않음"
+      }
+    ],
+    "facts": {
+      "menus": {
+        "status": "unconfirmed",
+        "sourceIds": [],
+        "note": "매장 기준 정보 미확인. 배달·가격 맥락 불명 자료는 확정하지 않습니다."
+      },
+      "hours": {
+        "status": "unconfirmed",
+        "sourceIds": [],
+        "note": "매장 기준 정보 미확인. 배달·가격 맥락 불명 자료는 확정하지 않습니다."
+      }
+    },
+    "unknownFields": [
+      "menus",
+      "hours",
+      "mealType",
+      "takeout",
+      "verifiedAt",
+      "verifiedBy",
+      "break",
+      "lastOrder"
+    ],
+    "notes": [
+      "네이버 공개 지도 상세·메뉴 탭 직접 확인.",
+      "네이버 표시 업종: 육류,고기요리",
+      "전체 메뉴 탭에 보인 메뉴명·가격·가격 미확인 원문을 누락 없이 보존. 1인 식사로 확인하기 어려운 고기 단위·후식·공유세트·어린이·점심 한정은 일반 예산 대표 메뉴에서 제외.",
+      "학교 해당 식당가 출입구에서 OSM 도보 10분 이내 검증 후 최종 적용 예정.",
+      "원문은 매일 16:00–익일01:00, 라스트오더00:00. 현재 주간 시간 스키마가 자정 분리 구간의 시작과 같은 라스트오더를 허용하지 않아 hours=[]로 보류. 시각을 임의 변경하지 않았으며 원문 hoursRaw를 보존.",
+      "병합 입력: rear_batch8_manifest.json",
+      "공개 네이버 화면 관찰이며 현장 검증이 아닙니다."
+    ]
+  },
+  "followupReview": {
+    "checkedAt": "2026-11-12",
+    "reasons": [
+      "공개 매장 식사 가격과 요일별 영업시간을 연결하여 추천 대상으로 전환했습니다."
+    ],
+    "sources": [
+      "https://pcmap.place.naver.com/restaurant/1520354551/home",
+      "https://pcmap.place.naver.com/restaurant/1520354551/menu/list",
+      "https://pcmap.place.naver.com/restaurant/1520354551/menu"
+    ]
+  }
+}

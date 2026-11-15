@@ -22,6 +22,7 @@
 from __future__ import annotations
 
 import json
+import hashlib
 import re
 import sys
 import time
@@ -34,6 +35,7 @@ from urllib.parse import parse_qs, unquote, urljoin, urlparse
 from bs4 import BeautifulSoup
 
 from . import config as C
+from .atomic import write_text as atomic_write_text
 
 MOD_RE = re.compile(r"/mod/([a-z0-9_]+)/view\.php\?id=(\d+)")
 UNSAFE_CHARS = re.compile(r'[\\/:*?"<>|\r\n\t]+')
@@ -58,9 +60,25 @@ class NetworkError(Exception):
     pass
 
 
+class SkippedAttachment(Exception):
+    """미디어/허용 용량 초과 등 다시 요청해도 내려받지 않을 파일."""
+
+
 def is_network_error(e: BaseException) -> bool:
     msg = f"{type(e).__name__}: {e}"
     return isinstance(e, (NetworkError, ConnectionError, TimeoutError)) or any(h.lower() in msg.lower() for h in NETWORK_HINTS)
+
+
+def network_error_kind(e: BaseException) -> str:
+    """오류 원문에는 요청 URL이 포함될 수 있으므로 UI에는 종류만 전달한다."""
+    msg = f"{type(e).__name__}: {e}".lower()
+    return "timeout" if any(x in msg for x in ("timeout", "timed out", "etimedout", "err_timed_out")) else "network"
+
+
+def attachment_error_reason(e: BaseException) -> str:
+    if is_network_error(e):
+        return network_error_kind(e)
+    return "unavailable"
 
 
 # ---------------------------------------------------------------- 유틸
@@ -212,6 +230,8 @@ class Client:
         self._throttle()
         r = self.req.fetch(url, method="HEAD")
         self._check_session(r.url)
+        if r.status >= 400:
+            raise RuntimeError("첨부파일 정보 요청 실패")
         return dict(r.headers)
 
     def resolve(self, url: str, hops: int = 5):
@@ -426,14 +446,12 @@ def load_manifest() -> dict:
         m.update(json.loads(C.MANIFEST_FILE.read_text(encoding="utf-8")))
     m.setdefault("files", {})
     m.setdefault("posts", {})
+    m.setdefault("pending_files", {})
     return m
 
 
 def save_json(path: Path, obj):
-    path.parent.mkdir(parents=True, exist_ok=True)
-    tmp = path.with_suffix(path.suffix + ".tmp")
-    tmp.write_text(json.dumps(obj, ensure_ascii=False, indent=2), encoding="utf-8")
-    tmp.replace(path)               # 대시보드가 읽는 도중에 반쯤 쓴 파일을 보지 않게
+    atomic_write_text(path, json.dumps(obj, ensure_ascii=False, indent=2))
 
 
 def uploaded_at(headers: dict) -> str | None:
@@ -453,18 +471,20 @@ def uploaded_at(headers: dict) -> str | None:
 def download(c: Client, url: str, dest: Path) -> tuple[int, str | None]:
     """파일을 받는다 → (크기, 올린 시각)."""
     r = c.get(url)
+    if r.status >= 400:
+        raise RuntimeError("첨부파일 응답 오류")
     ct = r.headers.get("content-type", "")
     if ct.startswith("text/html"):
         raise RuntimeError("HTML 응답 (파일 아님)")
     if ct.startswith(("video/", "audio/")):
-        raise RuntimeError(f"미디어 응답 스킵: {ct}")
+        raise SkippedAttachment("미디어 응답")
     limit = C.MAX_FILE_MB * 1024 * 1024
     cl = r.headers.get("content-length")
     if cl and int(cl) > limit:
-        raise RuntimeError(f"용량 초과 {int(cl) // 1024 // 1024}MB")
+        raise SkippedAttachment("허용 용량 초과")
     body = r.body()
     if len(body) > limit:
-        raise RuntimeError(f"용량 초과 {len(body) // 1024 // 1024}MB")
+        raise SkippedAttachment("허용 용량 초과")
     dest.parent.mkdir(parents=True, exist_ok=True)
     dest.write_bytes(body)
     return len(body), uploaded_at(r.headers)
@@ -480,6 +500,10 @@ class Sync:
         self.quizzes: list[dict] = []
         self.videos: list[dict] = []
         self.courses_index: list[dict] = []
+        self.manifest.setdefault("pending_files", {})
+        self._attachment_attempts: set[tuple[str, str]] = set()
+        self._active_course_ids: set[str] | None = None
+        self._selected_parts: set[str] = set(ALL_PARTS)
 
     def save_manifest(self):
         save_json(C.MANIFEST_FILE, self.manifest)
@@ -491,6 +515,88 @@ class Sync:
         print(f"   ! {what}: {e}")
         self.stats["error"] += 1
 
+    def _defer_file(self, url: str, dest: Path, meta: dict, operation: str, reason: str) -> None:
+        """재시도 정보는 기존 비공개 manifest에만 보관하고 URL·파일명은 로그에 쓰지 않는다."""
+        key = file_key(url)
+        previous = self.manifest["pending_files"].get(key, {})
+        self.manifest["pending_files"][key] = {
+            "url": url, "path": rel_path(dest), "meta": meta, "operation": operation,
+            "reason": reason, "attempts": previous.get("attempts", 0) + (reason != "deferred"),
+        }
+        self.save_manifest()
+
+    def _attachment_failed(self, url: str, dest: Path, meta: dict, operation: str, e: Exception) -> None:
+        if isinstance(e, SessionExpired):
+            raise e
+        if isinstance(e, SkippedAttachment):
+            self.stats["attachment_skipped"] += 1
+            self.manifest["pending_files"].pop(file_key(url), None)
+            # 정책상 받지 않는 파일은 완료한 파일처럼 다음 실행에서 다시 요청하지 않는다.
+            self.manifest.setdefault("skipped_files", {})[file_key(url)] = {"reason": "unsupported"}
+            self.save_manifest()
+            return
+        self.stats["attachment_failed"] += 1
+        reason = attachment_error_reason(e)
+        self._defer_file(url, dest, meta, operation, reason)
+        label = {"timeout": "요청 시간 초과", "network": "서버 연결 오류", "unavailable": "파일 요청 실패"}[reason]
+        print(f"   ! 첨부파일 {label} — 다음 동기화에서 다시 시도합니다.")
+
+    def _may_attempt_file(self, url: str, dest: Path, meta: dict, operation: str) -> bool:
+        attempt = (file_key(url), operation)
+        if attempt in self._attachment_attempts:
+            return False
+        self._attachment_attempts.add(attempt)
+        # 같은 실행에서 첨부 서버의 반복 실패가 핵심 정보 저장을 오래 막지 않게 한다.
+        if self.stats["attachment_failed"] >= C.ATTACHMENT_FAILURE_LIMIT:
+            self._defer_file(url, dest, meta, operation, "deferred")
+            return False
+        return True
+
+    def retry_pending_files(self, courses: list[dict], only: set[str]) -> None:
+        """이미 저장되어 건너뛴 게시글의 첨부도 다음 수집 때 다시 받는다."""
+        if self.dry:
+            return
+        course_ids = {c["id"] for c in courses}
+        self._active_course_ids, self._selected_parts = course_ids, only
+        for pending in sorted(list(self.manifest["pending_files"].values()), key=lambda p: p.get("attempts", 0)):
+            meta = pending["meta"]
+            if meta.get("course_id") not in course_ids:
+                continue
+            part = meta.get("part", "boards" if "post" in meta else "files")
+            if part not in only:
+                continue
+            # manifest의 상대경로도 수집 data/ 밖으로 나갈 수 없도록 검증한다.
+            dest = abs_path(pending["path"]).resolve()
+            if not dest.is_relative_to(C.DATA_DIR.resolve()):
+                continue
+            self.fetch_file(pending["url"], dest, meta)
+        self._refresh_post_attachments()
+
+    def _refresh_post_attachments(self) -> None:
+        """재시도 성공한 첨부 경로를 기존 글에도 연결한다 (글 본문 재요청 없음)."""
+        changed = False
+        for post in self.manifest["posts"].values():
+            keys = post.get("attachment_keys")
+            if not keys:
+                continue
+            attached = [self.manifest["files"][key]["path"] for key in keys
+                        if key in self.manifest["files"] and abs_path(self.manifest["files"][key]["path"]).exists()]
+            if attached == post.get("attachments", []):
+                continue
+            md_path = abs_path(post["path"]).resolve()
+            if not md_path.is_relative_to(C.DATA_DIR.resolve()) or not md_path.exists():
+                continue
+            text = md_path.read_text(encoding="utf-8")
+            before, marker, body = text.partition("## 본문\n")
+            if marker:
+                before = before.partition("## 첨부\n")[0].rstrip()
+                section = "\n\n## 첨부\n" + "\n".join(f"- {Path(p).name}  (`{p}`)" for p in attached) if attached else ""
+                md_path.write_text(before + section + "\n\n" + marker + body, encoding="utf-8")
+            post["attachments"] = attached
+            changed = True
+        if changed:
+            self.save_manifest()
+
     # -- 파일 하나 ------------------------------------------------------
     def fetch_file(self, url: str, dest: Path, meta: dict) -> str | None:
         """허용 확장자면 내려받고 data 부모 기준 상대경로를 돌려준다. 이미 있으면 그 경로."""
@@ -498,26 +604,40 @@ class Sync:
             self.stats["skip_ext"] += 1
             return None
         key = file_key(url)
+        if key in self.manifest.get("skipped_files", {}):
+            self.stats["attachment_skipped"] += 1
+            return None
         entry = self.manifest["files"].get(key)
         if entry and abs_path(entry["path"]).exists():
             self.stats["exists"] += 1
             if "uploaded_at" not in entry and not self.dry:
                 self._backfill_uploaded(entry)
+            elif not self.dry and self.manifest["pending_files"].pop(key, None) is not None:
+                self.save_manifest()
             return entry["path"]
+        # 서로 다른 파일 URL이 같은 파일명을 써도 앞서 받은 파일을 덮어쓰지 않는다.
+        occupied = any(k != key and e.get("path") and abs_path(e["path"]).resolve() == dest.resolve()
+                       for group in ("files", "pending_files") for k, e in self.manifest[group].items())
+        if occupied:
+            suffix = hashlib.sha256(key.encode("utf-8")).hexdigest()[:12]
+            dest = dest.with_name(f"{dest.stem}_{suffix}{dest.suffix}")
         rel = dest.relative_to(C.DATA_DIR)
         if self.dry:
             print(f"   + {rel}")
             self.stats["planned"] += 1
             return None
+        if not self._may_attempt_file(url, dest, meta, "download"):
+            return None
         try:
             size, uploaded = download(self.c, url, dest)
         except Exception as e:
-            self._soft(dest.name, e)
+            self._attachment_failed(url, dest, meta, "download", e)
             return None
         self.manifest["files"][key] = {
             "url": url, "path": rel_path(dest), "size": size,
             "downloaded_at": datetime.now().isoformat(timespec="seconds"), "uploaded_at": uploaded, **meta,
         }
+        self.manifest["pending_files"].pop(key, None)
         self.save_manifest()
         self.stats["downloaded"] += 1
         print(f"   v {rel} ({size // 1024} KB)")
@@ -525,11 +645,16 @@ class Sync:
 
     def _backfill_uploaded(self, entry: dict) -> None:
         """올린 시각을 모르는 예전에 받은 파일 — 본문 없이 머리(HEAD)만 한 번 물어 Last-Modified 를 적는다(파일마다 한 번)."""
+        url, dest = entry["url"], abs_path(entry["path"])
+        meta = {k: v for k, v in entry.items() if k not in {"url", "path", "size", "downloaded_at", "uploaded_at"}}
+        if not self._may_attempt_file(url, dest, meta, "metadata"):
+            return
         try:
             entry["uploaded_at"] = uploaded_at(self.c.head(entry["url"]))
         except Exception as e:
-            self._soft(f"{Path(entry['path']).name} 올린 시각", e)
+            self._attachment_failed(url, dest, meta, "metadata", e)
             return
+        self.manifest["pending_files"].pop(file_key(url), None)
         self.save_manifest()
         self.stats["uploaded_backfill"] += 1
 
@@ -541,7 +666,7 @@ class Sync:
             self._soft(act["name"], e)
             return
         cdir = C.DATA_DIR / sanitize(course["name"]) / sanitize(act["name"])
-        meta = {"course_id": course["id"], "course": course["name"], "cmid": act["cmid"], "activity": act["name"]}
+        meta = {"course_id": course["id"], "course": course["name"], "cmid": act["cmid"], "activity": act["name"], "part": "files"}
         for u in urls:
             self.fetch_file(u, cdir / filename_of(u), meta)
 
@@ -574,7 +699,7 @@ class Sync:
             post = self.parse_article(asoup)
             md_path = bdir / f"{posted or 'nodate'}_{sanitize(title, 60)}.md"
             meta = {"course_id": course["id"], "course": course["name"], "cmid": act["cmid"],
-                    "activity": act["name"], "post": title}
+                    "activity": act["name"], "post": title, "part": "boards"}
             attached = [p for u in post["attachments"] if (p := self.fetch_file(u, bdir / filename_of(u), meta))]
             lines = [f"# {post['title'] or title}", "",
                      f"- 과목: {course['name']}", f"- 게시판: {act['name']}",
@@ -587,6 +712,7 @@ class Sync:
             self.manifest["posts"][key] = {
                 "url": href, "path": rel_path(md_path), "title": title, "date": post["date"] or posted,
                 "attachments": attached, "fetched_at": datetime.now().isoformat(timespec="seconds"), **meta,
+                "attachment_keys": [file_key(u) for u in post["attachments"] if ext_of(u) in C.ALLOWED_EXT],
             }
             self.save_manifest()
             self.stats["post_saved"] += 1
@@ -622,7 +748,7 @@ class Sync:
         intro = soup.select_one("#intro")
         status = parse_assignment_status(soup)
         adir = C.DATA_DIR / sanitize(course["name"]) / "과제"
-        meta = {"course_id": course["id"], "course": course["name"], "cmid": act["cmid"], "activity": act["name"]}
+        meta = {"course_id": course["id"], "course": course["name"], "cmid": act["cmid"], "activity": act["name"], "part": "assign"}
         attached = []
         if intro is not None:
             attached = [p for u in extract_pluginfiles(intro) if (p := self.fetch_file(u, adir / filename_of(u), meta))]
@@ -779,6 +905,9 @@ class Result:
     counts: dict = field(default_factory=dict)
     error: str | None = None
     full: bool = False              # 전체 과목·과제·마감을 봤다 → 원장이 '사라진 과제'를 판정해도 된다 (F6-R23)
+    partial: bool = False
+    warnings: list[str] = field(default_factory=list)
+    error_kind: str | None = None
 
 
 def _c3_login():
@@ -844,6 +973,9 @@ def run(dry_run: bool = False, courses_only: list[str] | None = None, only: set[
             if courses_only:
                 courses = [x for x in courses if x["id"] in courses_only]
 
+            # 이전 실패 중 시도 횟수가 적은 파일부터 처리해 특정 파일이 뒤의 대기를 독점하지 않게 한다.
+            s.retry_pending_files(courses, only)
+
             for course in courses:
                 print(f"\n== [{course['id']}] {course['name']}")
                 acts = find_activities(c, course)
@@ -884,21 +1016,26 @@ def run(dry_run: bool = False, courses_only: list[str] | None = None, only: set[
                 print(f"\n== 마감 일정 {len(items)}건 -> data/deadlines.md")
                 for i in items[:10]:
                     print(f"   {i['due']}  {i['course'][:18]:18s} {i['type']:6s} {i['name'][:40]}  {i['status']}")
+            s.retry_pending_files(courses, only)
             req.dispose()
     except SessionExpired:
         print("\n수집 도중 세션이 만료되었습니다. 다음 실행에서 자동 재인증을 시도합니다.")
         return Result(C.EXIT_LOGIN, _counts(s, c), error="수집 도중 세션 만료")
     except Exception as e:                                  # noqa: BLE001
         if is_network_error(e):
-            print(f"\n네트워크 오류: {str(e)[:200]}")
-            return Result(C.EXIT_NETWORK, _counts(s, c), error=f"네트워크 오류 — {str(e)[:120]}")
+            kind = network_error_kind(e)
+            message = "e클래스 요청 시간이 초과되었습니다." if kind == "timeout" else "e클래스 서버 연결 요청에 실패했습니다."
+            print(f"\n{message}")
+            return Result(C.EXIT_NETWORK, _counts(s, c), error=message, error_kind=kind)
         raise
 
     counts = _counts(s, c)
     counts["deadlines"] = len(items)
     print("\n완료:", ", ".join(f"{k}={v}" for k, v in sorted(s.stats.items())) or "변경 없음", f"(요청 {c.requests}회)")
-    full = not courses_only and {"assign", "deadlines"} <= only
-    return Result(C.EXIT_OK, counts, full=full)
+    full = not courses_only and {"assign", "deadlines"} <= only and not s.stats["error"]
+    pending = counts["attachmentPending"]
+    warnings = [f"과목·과제 정보는 저장했습니다. 첨부파일 {pending}건은 다음 동기화에서 다시 시도합니다."] if pending else []
+    return Result(C.EXIT_OK, counts, full=full, partial=bool(pending), warnings=warnings)
 
 
 def _counts(s: Sync | None, c: Client | None) -> dict:
@@ -907,4 +1044,9 @@ def _counts(s: Sync | None, c: Client | None) -> dict:
     return {"courses": len(s.courses_index), "assignments": len(s.assignments), "quizzes": len(s.quizzes),
             "videos": len(s.videos),
             "files": s.stats.get("downloaded", 0), "posts": s.stats.get("post_saved", 0),
-            "errors": s.stats.get("error", 0), "requests": c.requests if c else 0}
+            "errors": s.stats.get("error", 0), "requests": c.requests if c else 0,
+            "attachmentFailures": s.stats.get("attachment_failed", 0),
+            "attachmentPending": sum(1 for p in s.manifest["pending_files"].values()
+                                     if (s._active_course_ids is None or p["meta"].get("course_id") in s._active_course_ids)
+                                     and p["meta"].get("part", "boards" if "post" in p["meta"] else "files") in s._selected_parts),
+            "attachmentSkipped": s.stats.get("attachment_skipped", 0)}

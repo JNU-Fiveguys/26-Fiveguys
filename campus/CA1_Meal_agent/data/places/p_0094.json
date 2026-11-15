@@ -1,0 +1,107 @@
+{
+  "version": 1,
+  "id": "p_0094",
+  "name": "왓더버거 전남대점",
+  "category": "패스트푸드",
+  "lat": 35.175295,
+  "lng": 126.91276,
+  "address": "전남광주통합특별시 북구 우치로 88-1",
+  "source": "semas",
+  "sourceId": "MA0101202603A0006680",
+  "sourceStatus": "active",
+  "attrs": {
+    "status": "partial",
+    "menus": [
+      {
+        "name": "직화 통새우버거 세트",
+        "price": 12300,
+        "main": true
+      },
+      {
+        "name": "통다리살 치킨버거 세트",
+        "price": 10500,
+        "main": true
+      }
+    ]
+  },
+  "research": {
+    "identityStatus": "matched",
+    "queries": [
+      "\"왓더버거\" \"전남대점\""
+    ],
+    "sources": [
+      {
+        "id": "s1",
+        "url": "https://www.diningcode.com/profile.php?rid=nJamRgUxkOEW",
+        "title": "왓더버거 전남대점 메뉴·영업정보",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "상호와 도로명 주소를 대조함. URL을 직접 열어 주소와 본문을 확인함."
+      },
+      {
+        "id": "s2",
+        "url": "https://www.daangn.com/kr/local-profile/%EC%99%93%EB%8D%94%EB%B2%84%EA%B1%B0-%EC%A0%84%EB%82%A8%EB%8C%80%EC%A0%90-mora2iqqrjrn/",
+        "title": "왓더버거 전남대점 사업자 동네업체 페이지",
+        "type": "official",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "사업자 활동·매장 공지가 있는 동일 주소 공개 검색결과. 마지막 수정 2026-10-08. 직접 열기는 캐시 오류로 본문 재접속 불가."
+      }
+    ],
+    "facts": {
+      "menus": {
+        "status": "confirmed",
+        "value": [
+          {
+            "name": "직화 통새우버거 세트",
+            "price": 12300,
+            "main": true
+          },
+          {
+            "name": "통다리살 치킨버거 세트",
+            "price": 10500,
+            "main": true
+          }
+        ],
+        "sourceIds": [
+          "s1"
+        ],
+        "note": "주소가 일치하는 지점 페이지에 게시된 메뉴·가격. 실제 결제 가격은 현장 재확인 필요."
+      },
+      "hours": {
+        "status": "conflict",
+        "sourceIds": [
+          "s1",
+          "s2"
+        ],
+        "note": "사업자 페이지는 연중무휴 10:30~23:20, 다이닝코드 주간 정보는 10:30~다음 날 00:00, 후기에는 02:00 종료도 있음. 실제 매장·배달별 마감시간 확인 필요."
+      }
+    },
+    "notes": [],
+    "checkedAt": "2026-11-11",
+    "method": "web",
+    "unknownFields": [
+      "hours",
+      "mealType",
+      "takeout",
+      "verifiedAt",
+      "verifiedBy",
+      "break",
+      "lastOrder"
+    ]
+  },
+  "availability": {
+    "status": "excluded",
+    "provider": "naver",
+    "checkedAt": "2026-11-11",
+    "sourceUrl": "https://map.naver.com/p/search/%EC%A0%84%EB%82%A8%EB%8C%80%20%EC%9D%8C%EC%8B%9D%EC%A0%90",
+    "naverPlaceId": null,
+    "observedName": "",
+    "observedAddress": "",
+    "district": null,
+    "addressVerified": false,
+    "nearby": false,
+    "reason": "네이버 지도에서 확인한 네 식당가 명단에 포함되지 않아 제외"
+  }
+}

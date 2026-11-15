@@ -1,0 +1,67 @@
+{
+  "version": 1,
+  "id": "p_0007",
+  "name": "오모야",
+  "category": "한식",
+  "lat": 35.177912,
+  "lng": 126.904369,
+  "address": "전남광주통합특별시 북구 설죽로214번길 123",
+  "source": "semas",
+  "sourceId": "MA010120220805004652",
+  "sourceStatus": "active",
+  "attrs": {
+    "status": "partial"
+  },
+  "research": {
+    "identityStatus": "not_found",
+    "queries": [
+      "\"오모야\" \"설죽로\" 메뉴 영업시간",
+      "\"오모야\" \"전대\"",
+      "\"오모야\" \"용봉동\"",
+      "\"오모야\" 광주 메뉴"
+    ],
+    "sources": [],
+    "facts": {
+      "menus": {
+        "status": "unconfirmed",
+        "value": [],
+        "sourceIds": [],
+        "note": "매장별 메뉴·가격을 확인하지 못함."
+      },
+      "hours": {
+        "status": "unconfirmed",
+        "value": [],
+        "sourceIds": [],
+        "note": "요일별 영업시간을 확인하지 못함."
+      }
+    },
+    "notes": [
+      "검색에 서울·송탄·광주 동구의 다른 오모야가 등장해 채택하지 않음."
+    ],
+    "checkedAt": "2026-11-11",
+    "method": "web",
+    "unknownFields": [
+      "menus",
+      "hours",
+      "mealType",
+      "takeout",
+      "verifiedAt",
+      "verifiedBy",
+      "break",
+      "lastOrder"
+    ]
+  },
+  "availability": {
+    "status": "excluded",
+    "provider": "naver",
+    "checkedAt": "2026-11-11",
+    "sourceUrl": "https://map.naver.com/p/search/%EC%A0%84%EB%82%A8%EB%8C%80%20%EC%9D%8C%EC%8B%9D%EC%A0%90",
+    "naverPlaceId": null,
+    "observedName": "",
+    "observedAddress": "",
+    "district": null,
+    "addressVerified": false,
+    "nearby": false,
+    "reason": "네이버 지도에서 확인한 네 식당가 명단에 포함되지 않아 제외"
+  }
+}

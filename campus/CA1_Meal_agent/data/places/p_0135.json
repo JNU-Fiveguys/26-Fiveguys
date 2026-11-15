@@ -1,0 +1,702 @@
+{
+  "version": 1,
+  "id": "p_0135",
+  "source": "team",
+  "sourceId": "naver:1429688748",
+  "name": "마왕족발 광주전대상대점",
+  "address": "전남광주 북구 설죽로202번길 63",
+  "category": "고기",
+  "lat": 35.1772511024816,
+  "lng": 126.900978025193,
+  "sourceStatus": "active",
+  "availability": {
+    "status": "listed",
+    "provider": "naver",
+    "checkedAt": "2026-11-11",
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/1429688748/home",
+    "naverPlaceId": "1429688748",
+    "observedName": "마왕족발 광주전대상대점",
+    "observedAddress": "전남광주 북구 설죽로202번길 63",
+    "district": "상대",
+    "addressVerified": true,
+    "nearby": true,
+    "reason": "공개 네이버 지도에서 동일 주소의 전남대 상대 식당으로 확인"
+  },
+  "menuObservation": {
+    "sourceUrl": "https://m.booking.naver.com/order/bizes/912779/items/5085761?theme=place&service-target=map-pc&refererCode=menutab&lang=ko&area=bmp",
+    "checkedAt": "2026-11-12",
+    "priceContext": "in_store",
+    "status": "confirmed",
+    "menus": [
+      {
+        "name": "마왕통구이(중)",
+        "price": 42000,
+        "main": false,
+        "priceText": "42,000원"
+      },
+      {
+        "name": "마왕보쌈구이(중)",
+        "price": 42000,
+        "main": false,
+        "priceText": "42,000원"
+      },
+      {
+        "name": "반반세트(중)",
+        "price": 50000,
+        "main": false,
+        "priceText": "50,000원"
+      },
+      {
+        "name": "마왕세트(중)",
+        "price": 48000,
+        "main": false,
+        "priceText": "48,000원"
+      },
+      {
+        "name": "마왕통구이(소)",
+        "price": 36000,
+        "main": false,
+        "priceText": "36,000원"
+      },
+      {
+        "name": "마왕통구이(대)",
+        "price": 47000,
+        "main": false,
+        "priceText": "47,000원"
+      },
+      {
+        "name": "마왕보쌈구이(소)",
+        "price": 36000,
+        "main": false,
+        "priceText": "36,000원"
+      },
+      {
+        "name": "마왕보쌈구이(대)",
+        "price": 47000,
+        "main": false,
+        "priceText": "47,000원"
+      },
+      {
+        "name": "바삭소금구이 (소)",
+        "price": 35000,
+        "main": false,
+        "priceText": "35,000원"
+      },
+      {
+        "name": "바삭소금구이 (중)",
+        "price": 41000,
+        "main": false,
+        "priceText": "41,000원"
+      },
+      {
+        "name": "바삭소금구이(대)",
+        "price": 46000,
+        "main": false,
+        "priceText": "46,000원"
+      },
+      {
+        "name": "불족발(소)",
+        "price": 36000,
+        "main": false,
+        "priceText": "36,000원"
+      },
+      {
+        "name": "불족발(중)",
+        "price": 43000,
+        "main": false,
+        "priceText": "43,000원"
+      },
+      {
+        "name": "불족발(대)",
+        "price": 48000,
+        "main": false,
+        "priceText": "48,000원"
+      },
+      {
+        "name": "불보쌈(소)",
+        "price": 36000,
+        "main": false,
+        "priceText": "36,000원"
+      },
+      {
+        "name": "불보쌈(중)",
+        "price": 43000,
+        "main": false,
+        "priceText": "43,000원"
+      },
+      {
+        "name": "불보쌈(대)",
+        "price": 48000,
+        "main": false,
+        "priceText": "48,000원"
+      },
+      {
+        "name": "갈릭족발(소)",
+        "price": 36000,
+        "main": false,
+        "priceText": "36,000원"
+      },
+      {
+        "name": "갈릭족발(중)",
+        "price": 43000,
+        "main": false,
+        "priceText": "43,000원"
+      },
+      {
+        "name": "갈릭족발(대)",
+        "price": 48000,
+        "main": false,
+        "priceText": "48,000원"
+      },
+      {
+        "name": "당면 냉채족발(소)",
+        "price": 26000,
+        "main": false,
+        "priceText": "26,000원"
+      },
+      {
+        "name": "당면 냉채족발(중)",
+        "price": 40000,
+        "main": false,
+        "priceText": "40,000원"
+      },
+      {
+        "name": "당면 냉채족발(대)",
+        "price": 45000,
+        "main": false,
+        "priceText": "45,000원"
+      },
+      {
+        "name": "미니족구이(소)",
+        "price": 29000,
+        "main": false,
+        "priceText": "29,000원"
+      },
+      {
+        "name": "미니족구이(중)",
+        "price": 34000,
+        "main": false,
+        "priceText": "34,000원"
+      },
+      {
+        "name": "미니족구이(대)",
+        "price": 38000,
+        "main": false,
+        "priceText": "38,000원"
+      },
+      {
+        "name": "천사세트(중)",
+        "price": 47000,
+        "main": false,
+        "priceText": "47,000원"
+      },
+      {
+        "name": "천사세트(대)",
+        "price": 51000,
+        "main": false,
+        "priceText": "51,000원"
+      },
+      {
+        "name": "마왕세트(소)",
+        "price": 42000,
+        "main": false,
+        "priceText": "42,000원"
+      },
+      {
+        "name": "마왕세트(대)",
+        "price": 53000,
+        "main": false,
+        "priceText": "53,000원"
+      },
+      {
+        "name": "악마세트(중)",
+        "price": 47000,
+        "main": false,
+        "priceText": "47,000원"
+      },
+      {
+        "name": "악마세트(대)",
+        "price": 51000,
+        "main": false,
+        "priceText": "51,000원"
+      },
+      {
+        "name": "반반세트(대)",
+        "price": 60000,
+        "main": false,
+        "priceText": "60,000원"
+      },
+      {
+        "name": "패밀리세트",
+        "price": 68000,
+        "main": false,
+        "priceText": "68,000원"
+      },
+      {
+        "name": "쭈꾸미 볶음",
+        "price": 12000,
+        "main": false,
+        "priceText": "12,000원"
+      },
+      {
+        "name": "바삭바삭 감자전&김치전",
+        "price": 7000,
+        "main": false,
+        "priceText": "7,000원"
+      },
+      {
+        "name": "쟁반국수(2인)",
+        "price": 14000,
+        "main": false,
+        "priceText": "14,000원"
+      },
+      {
+        "name": "쟁반국수(1인)",
+        "price": 8000,
+        "main": true,
+        "priceText": "8,000원"
+      },
+      {
+        "name": "족발볶음밥(1인)",
+        "price": 8000,
+        "main": true,
+        "priceText": "8,000원"
+      },
+      {
+        "name": "족발볶음밥(2인)",
+        "price": 14000,
+        "main": false,
+        "priceText": "14,000원"
+      },
+      {
+        "name": "비빔국수(1인)",
+        "price": 8000,
+        "main": true,
+        "priceText": "8,000원"
+      },
+      {
+        "name": "비빔국수(2인)",
+        "price": 14000,
+        "main": false,
+        "priceText": "14,000원"
+      },
+      {
+        "name": "마왕국수(1인)",
+        "price": 8000,
+        "main": true,
+        "priceText": "8,000원"
+      },
+      {
+        "name": "마왕국수(2인)",
+        "price": 14000,
+        "main": false,
+        "priceText": "14,000원"
+      },
+      {
+        "name": "열무국수",
+        "price": 8000,
+        "main": false,
+        "priceText": "8,000원"
+      },
+      {
+        "name": "핫마요소스",
+        "price": 1000,
+        "main": false,
+        "priceText": "1,000원"
+      },
+      {
+        "name": "핫블랙소스",
+        "price": 1000,
+        "main": false,
+        "priceText": "1,000원"
+      },
+      {
+        "name": "쌈추가",
+        "price": 1000,
+        "main": false,
+        "priceText": "1,000원"
+      },
+      {
+        "name": "반찬추가",
+        "price": 2000,
+        "main": false,
+        "priceText": "2,000원"
+      },
+      {
+        "name": "당면추가",
+        "price": 2000,
+        "main": false,
+        "priceText": "2,000원"
+      }
+    ],
+    "placeSourceUrl": "https://pcmap.place.naver.com/restaurant/1429688748/home"
+  },
+  "attrs": {
+    "status": "partial",
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금",
+          "토",
+          "일"
+        ],
+        "open": "16:00",
+        "close": "24:00"
+      }
+    ],
+    "menus": [
+      {
+        "name": "마왕통구이(중)",
+        "price": 42000,
+        "main": false
+      },
+      {
+        "name": "마왕보쌈구이(중)",
+        "price": 42000,
+        "main": false
+      },
+      {
+        "name": "반반세트(중)",
+        "price": 50000,
+        "main": false
+      },
+      {
+        "name": "마왕세트(중)",
+        "price": 48000,
+        "main": false
+      },
+      {
+        "name": "마왕통구이(소)",
+        "price": 36000,
+        "main": false
+      },
+      {
+        "name": "마왕통구이(대)",
+        "price": 47000,
+        "main": false
+      },
+      {
+        "name": "마왕보쌈구이(소)",
+        "price": 36000,
+        "main": false
+      },
+      {
+        "name": "마왕보쌈구이(대)",
+        "price": 47000,
+        "main": false
+      },
+      {
+        "name": "바삭소금구이 (소)",
+        "price": 35000,
+        "main": false
+      },
+      {
+        "name": "바삭소금구이 (중)",
+        "price": 41000,
+        "main": false
+      },
+      {
+        "name": "바삭소금구이(대)",
+        "price": 46000,
+        "main": false
+      },
+      {
+        "name": "불족발(소)",
+        "price": 36000,
+        "main": false
+      },
+      {
+        "name": "불족발(중)",
+        "price": 43000,
+        "main": false
+      },
+      {
+        "name": "불족발(대)",
+        "price": 48000,
+        "main": false
+      },
+      {
+        "name": "불보쌈(소)",
+        "price": 36000,
+        "main": false
+      },
+      {
+        "name": "불보쌈(중)",
+        "price": 43000,
+        "main": false
+      },
+      {
+        "name": "불보쌈(대)",
+        "price": 48000,
+        "main": false
+      },
+      {
+        "name": "갈릭족발(소)",
+        "price": 36000,
+        "main": false
+      },
+      {
+        "name": "갈릭족발(중)",
+        "price": 43000,
+        "main": false
+      },
+      {
+        "name": "갈릭족발(대)",
+        "price": 48000,
+        "main": false
+      },
+      {
+        "name": "당면 냉채족발(소)",
+        "price": 26000,
+        "main": false
+      },
+      {
+        "name": "당면 냉채족발(중)",
+        "price": 40000,
+        "main": false
+      },
+      {
+        "name": "당면 냉채족발(대)",
+        "price": 45000,
+        "main": false
+      },
+      {
+        "name": "미니족구이(소)",
+        "price": 29000,
+        "main": false
+      },
+      {
+        "name": "미니족구이(중)",
+        "price": 34000,
+        "main": false
+      },
+      {
+        "name": "미니족구이(대)",
+        "price": 38000,
+        "main": false
+      },
+      {
+        "name": "천사세트(중)",
+        "price": 47000,
+        "main": false
+      },
+      {
+        "name": "천사세트(대)",
+        "price": 51000,
+        "main": false
+      },
+      {
+        "name": "마왕세트(소)",
+        "price": 42000,
+        "main": false
+      },
+      {
+        "name": "마왕세트(대)",
+        "price": 53000,
+        "main": false
+      },
+      {
+        "name": "악마세트(중)",
+        "price": 47000,
+        "main": false
+      },
+      {
+        "name": "악마세트(대)",
+        "price": 51000,
+        "main": false
+      },
+      {
+        "name": "반반세트(대)",
+        "price": 60000,
+        "main": false
+      },
+      {
+        "name": "패밀리세트",
+        "price": 68000,
+        "main": false
+      },
+      {
+        "name": "쭈꾸미 볶음",
+        "price": 12000,
+        "main": false
+      },
+      {
+        "name": "바삭바삭 감자전&김치전",
+        "price": 7000,
+        "main": false
+      },
+      {
+        "name": "쟁반국수(2인)",
+        "price": 14000,
+        "main": false
+      },
+      {
+        "name": "쟁반국수(1인)",
+        "price": 8000,
+        "main": true
+      },
+      {
+        "name": "족발볶음밥(1인)",
+        "price": 8000,
+        "main": true
+      },
+      {
+        "name": "족발볶음밥(2인)",
+        "price": 14000,
+        "main": false
+      },
+      {
+        "name": "비빔국수(1인)",
+        "price": 8000,
+        "main": true
+      },
+      {
+        "name": "비빔국수(2인)",
+        "price": 14000,
+        "main": false
+      },
+      {
+        "name": "마왕국수(1인)",
+        "price": 8000,
+        "main": true
+      },
+      {
+        "name": "마왕국수(2인)",
+        "price": 14000,
+        "main": false
+      },
+      {
+        "name": "열무국수",
+        "price": 8000,
+        "main": false
+      },
+      {
+        "name": "핫마요소스",
+        "price": 1000,
+        "main": false
+      },
+      {
+        "name": "핫블랙소스",
+        "price": 1000,
+        "main": false
+      },
+      {
+        "name": "쌈추가",
+        "price": 1000,
+        "main": false
+      },
+      {
+        "name": "반찬추가",
+        "price": 2000,
+        "main": false
+      },
+      {
+        "name": "당면추가",
+        "price": 2000,
+        "main": false
+      }
+    ]
+  },
+  "hoursObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/1429688748/home",
+    "checkedAt": "2026-11-12",
+    "status": "confirmed",
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금",
+          "토",
+          "일"
+        ],
+        "open": "16:00",
+        "close": "24:00"
+      }
+    ],
+    "note": "매장 영업시간 관찰. 기존 attrs/research를 덮어쓰지 않습니다."
+  },
+  "research": {
+    "checkedAt": "2026-11-11",
+    "method": "web",
+    "identityStatus": "matched",
+    "queries": [
+      "마왕족발 광주전대상대점 전남광주 북구 설죽로202번길 63"
+    ],
+    "sources": [
+      {
+        "id": "naver-place",
+        "url": "https://pcmap.place.naver.com/restaurant/1429688748/home",
+        "title": "마왕족발 광주전대상대점 네이버 지도",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "같은 주소의 지점 확인. 지도 등록 확인은 실시간 영업 중 보증이 아님"
+      },
+      {
+        "id": "naver-menu",
+        "url": "https://pcmap.place.naver.com/restaurant/1429688748/home",
+        "title": "마왕족발 광주전대상대점 메뉴 탭",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "가격 맥락: unknown"
+      },
+      {
+        "id": "naver-hours",
+        "url": "https://pcmap.place.naver.com/restaurant/1429688748/home",
+        "title": "마왕족발 광주전대상대점 영업시간",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "게시된 요일별 영업시간. 미확인은 추정하지 않음"
+      }
+    ],
+    "facts": {
+      "menus": {
+        "status": "unconfirmed",
+        "sourceIds": [],
+        "note": "매장 기준 정보 미확인. 배달·가격 맥락 불명 자료는 확정하지 않습니다."
+      },
+      "hours": {
+        "status": "unconfirmed",
+        "sourceIds": [],
+        "note": "매장 기준 정보 미확인. 배달·가격 맥락 불명 자료는 확정하지 않습니다."
+      }
+    },
+    "unknownFields": [
+      "menus",
+      "hours",
+      "mealType",
+      "takeout",
+      "verifiedAt",
+      "verifiedBy",
+      "break",
+      "lastOrder"
+    ],
+    "notes": [
+      "메뉴 링크가 Naver Booking 주문 페이지. 동일 출처의 자동 승인 검토 거부에 따라 주문 페이지 미관찰.",
+      "영업시간 원문: 매일16:00-24:00",
+      "원본 관찰은 front_sangdae_more.json. main은 1인 식사 예산용 분류이며 공유 피자는 false로 보수적으로 표시.",
+      "주문 페이지 미관찰. 공개 메뉴URL미확인으로 출처는 장소홈을 가리키며 메뉴확인 근거가 아님.",
+      "병합 입력: front_more_normalized_manifest.json",
+      "공개 네이버 화면 관찰이며 현장 검증이 아닙니다."
+    ]
+  },
+  "followupReview": {
+    "checkedAt": "2026-11-12",
+    "reasons": [
+      "확인된 매장 식사 가격과 요일별 영업시간을 연결하여 추천 대상으로 전환했습니다."
+    ],
+    "sources": [
+      "https://pcmap.place.naver.com/restaurant/1429688748/home",
+      "https://m.booking.naver.com/order/bizes/912779/items/5085761?theme=place&service-target=map-pc&refererCode=menutab&lang=ko&area=bmp"
+    ]
+  }
+}
