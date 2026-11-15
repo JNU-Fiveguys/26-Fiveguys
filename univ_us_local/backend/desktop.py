@@ -173,7 +173,8 @@ def self_check() -> int:
 
 
 def serve(a: argparse.Namespace) -> int:
-    root = Path(a.data_root) if a.data_root else appdata.default_root()
+    # 재시도한 첨부 경로는 resolve()를 거친다. 모든 기능에 같은 정규 경로를 전달한다.
+    root = (Path(a.data_root) if a.data_root else appdata.default_root()).resolve()
     root.mkdir(parents=True, exist_ok=True)
     if a.dev:
         # 개발 모드는 설치된 앱과 같은 작업 이름(UnivUs-F1-…·UnivUs-F6-…)을 쓰므로 예약 실행을 건드리지 않는다

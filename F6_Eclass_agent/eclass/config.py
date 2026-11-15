@@ -28,8 +28,8 @@ if str(C0_AGENT_DIR) not in sys.path:
 from osenv import FROZEN, browsers_dir, module_cmd, pid_alive, task_command  # noqa: E402,F401 — pid_alive 는 runs
 
 # data/ 아래 경로는 manifest·assignments 에 'data\\<과목>\\…' 처럼 ROOT 기준 상대경로로 적힌다 (F3 공지 휴강이 같은 규칙으로 읽는다).
-DATA_DIR = Path(os.environ.get("F6_DATA_DIR") or ROOT / "data")
-STATE_DIR = Path(os.environ.get("F6_STATE_DIR") or ROOT / "state")
+DATA_DIR = Path(os.environ.get("F6_DATA_DIR") or ROOT / "data").resolve()
+STATE_DIR = Path(os.environ.get("F6_STATE_DIR") or ROOT / "state").resolve()
 MANIFEST_FILE = DATA_DIR / "manifest.json"          # 내려받은 파일·글 목록 (재실행 시 건너뛰기, F6-R06)
 COURSES_FILE = DATA_DIR / "courses.json"            # 과목·활동 목록 (F3 과목 목록이 이것을 쓴다)
 ASSIGNMENTS_FILE = DATA_DIR / "assignments.json"    # 과제 전체 (설명·첨부·제출/채점 상태)

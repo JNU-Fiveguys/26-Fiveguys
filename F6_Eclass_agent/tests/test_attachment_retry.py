@@ -74,6 +74,59 @@ def sync(req, manifest=None):
     return collect.Sync(collect.Client(req), manifest or collect.load_manifest(), False)
 
 
+@pytest.fixture
+def aliased_data(isolated, monkeypatch):
+    launcher = isolated.parent / "launcher"
+    launcher.mkdir()
+    data = launcher / ".." / "data"
+    monkeypatch.setattr(C, "DATA_DIR", data)
+    return data
+
+
+def test_pending_attachment_recovers_with_parent_segments_in_data_dir(aliased_data, isolated):
+    failed = sync(Requests(fail=True))
+    failed.fetch_file(FILE, aliased_data / "handout.pdf", META)
+    queued = collect.load_manifest()["pending_files"][collect.file_key(FILE)]
+    assert queued["path"] == str(isolated.relative_to(isolated.parent) / "handout.pdf")
+
+    recovered = sync(Requests())
+    recovered.retry_pending_files([COURSE], {"assign"})
+
+    assert recovered.c.req.gets == [FILE]
+    assert not recovered.manifest["pending_files"]
+    assert (isolated / "handout.pdf").read_bytes() == FILE.encode()
+    assert recovered.manifest["files"][collect.file_key(FILE)]["path"] == queued["path"]
+
+
+def test_aliased_and_canonical_destinations_keep_different_attachments(aliased_data, isolated):
+    first_url = "https://sel.jnu.ac.kr/pluginfile.php/1/shared.pdf"
+    second_url = "https://sel.jnu.ac.kr/pluginfile.php/2/shared.pdf"
+    failed = sync(Requests(fail=True))
+    failed.fetch_file(first_url, aliased_data / "shared.pdf", META)
+    recovered = sync(Requests())
+    second = recovered.fetch_file(second_url, isolated / "shared.pdf", META)
+    recovered.retry_pending_files([COURSE], {"assign"})
+    first = recovered.manifest["files"][collect.file_key(first_url)]["path"]
+
+    assert first != second
+    assert collect.abs_path(first).read_bytes() == first_url.encode()
+    assert collect.abs_path(second).read_bytes() == second_url.encode()
+
+
+def test_pending_attachment_outside_aliased_data_dir_is_not_downloaded(aliased_data, isolated):
+    outside = isolated.parent / "outside.pdf"
+    s = sync(Requests())
+    s.manifest["pending_files"][collect.file_key(FILE)] = {
+        "url": FILE, "path": "data/../outside.pdf", "meta": META,
+        "operation": "download", "attempts": 1,
+    }
+
+    s.retry_pending_files([COURSE], {"assign"})
+
+    assert not s.c.req.gets and not outside.exists()
+    assert collect.file_key(FILE) in s.manifest["pending_files"]
+
+
 def test_timeout_is_queued_once_without_private_error_output(isolated, capsys):
     req = Requests(fail=True)
     s = sync(req)

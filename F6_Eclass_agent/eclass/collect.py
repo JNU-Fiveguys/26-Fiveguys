@@ -112,7 +112,7 @@ def filename_of(url: str) -> str:
 
 def rel_path(p: Path) -> str:
     """manifest·assignments 에 적는 경로 — data 폴더의 부모 기준 ('data\\<과목>\\…')."""
-    return str(p.relative_to(C.DATA_DIR.parent))
+    return str(p.resolve().relative_to(C.DATA_DIR.resolve().parent))
 
 
 def abs_path(rel: str) -> Path:
@@ -616,12 +616,13 @@ class Sync:
                 self.save_manifest()
             return entry["path"]
         # 서로 다른 파일 URL이 같은 파일명을 써도 앞서 받은 파일을 덮어쓰지 않는다.
-        occupied = any(k != key and e.get("path") and abs_path(e["path"]).resolve() == dest.resolve()
+        dest = dest.resolve()
+        occupied = any(k != key and e.get("path") and abs_path(e["path"]).resolve() == dest
                        for group in ("files", "pending_files") for k, e in self.manifest[group].items())
         if occupied:
             suffix = hashlib.sha256(key.encode("utf-8")).hexdigest()[:12]
             dest = dest.with_name(f"{dest.stem}_{suffix}{dest.suffix}")
-        rel = dest.relative_to(C.DATA_DIR)
+        rel = dest.relative_to(C.DATA_DIR.resolve())
         if self.dry:
             print(f"   + {rel}")
             self.stats["planned"] += 1
