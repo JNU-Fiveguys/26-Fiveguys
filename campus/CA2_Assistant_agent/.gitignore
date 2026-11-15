@@ -1,0 +1,5 @@
+# 비밀 값 · 내 PC 데이터 (campus/README 코드 규칙 5)
+.env
+data/
+__pycache__/
+.pytest_cache/
