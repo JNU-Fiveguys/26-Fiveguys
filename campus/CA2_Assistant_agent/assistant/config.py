@@ -34,11 +34,12 @@ def _env(name: str, default: str = "") -> str:
 
 DATA_DIR = Path(_env("CA2_DATA_DIR") or ROOT / "data")
 
-# ── LLM 슬롯 (OpenAI 호환 chat/completions) ──
+# ── LLM 슬롯 (OpenAI Responses / 그 밖의 OpenAI 호환 chat/completions) ──
 LLM_BASE_URL = _env("LLM_MAIN_BASE_URL").rstrip("/")
 LLM_API_KEY = _env("LLM_MAIN_API_KEY")
 LLM_MODEL = _env("LLM_MAIN_MODEL")
 LLM_TIMEOUT = float(_env("LLM_MAIN_TIMEOUT", "30"))       # 초 — 전체 응답 ⏳8초(12절)는 대화 쪽이 따로 잰다
+OPENAI_MAX_OUTPUT_TOKENS = int(_env("CA2_OPENAI_MAX_OUTPUT_TOKENS", "4096"))  # 추론+출력 합계, 요청 한 번의 상한
 
 # ── 임베딩 슬롯 — 주소·키를 비우면 LLM_MAIN_* 것을 쓴다 ──
 EMBED_BASE_URL = (_env("LLM_EMBED_BASE_URL") or LLM_BASE_URL).rstrip("/")

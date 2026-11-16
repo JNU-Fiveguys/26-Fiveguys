@@ -1,4 +1,4 @@
-"""LLM 호출 — OpenAI 호환 chat/completions · embeddings 를 표준 라이브러리(urllib)로.
+"""LLM 호출 — OpenAI Responses / 호환 chat/completions · embeddings (urllib).
 연결 정보(주소·키·모델)는 settings.slot() — 화면에서 저장한 설정이 먼저, 없으면 .env 의 LLM_MAIN_*. 임베딩은 LLM_EMBED_*.
 
     chat(messages, tools)      한 번에 받기 → assistant 메시지 {role, content, tool_calls?}
@@ -16,6 +16,7 @@ import json
 import urllib.error
 import urllib.request
 from typing import Any, Iterator, Optional
+from urllib.parse import urlsplit
 
 from . import config as C
 from . import settings as S
@@ -42,14 +43,106 @@ def _post(url: str, key: str, body: dict, timeout: float):
 
 
 def _prepare(slot: Optional[S.Slot], messages: list[Message], tools: Optional[list[dict]], temperature: float,
-             max_tokens: int) -> tuple[S.Slot, dict]:
+             max_tokens: Optional[int]) -> tuple[S.Slot, dict]:
     slot = slot or S.slot()
     if not slot.ready:
         raise LLMError("LLM 이 연결되지 않았습니다 — 설정에서 API 키를 넣어 주세요")
+    if max_tokens is None:
+        max_tokens = C.OPENAI_MAX_OUTPUT_TOKENS if _uses_responses(slot) else 800
+    if _uses_responses(slot):
+        return slot, _responses_body(slot, messages, tools, max_tokens)
     body: dict[str, Any] = {"model": slot.model, "messages": messages, "temperature": temperature, "max_tokens": max_tokens}
     if tools:
         body["tools"] = tools
     return slot, body
+
+
+def _uses_responses(slot: S.Slot) -> bool:
+    # Route by API provider, never by model name. Custom OpenAI-compatible
+    # endpoints retain their existing Chat Completions contract.
+    return urlsplit(slot.base_url).hostname == "api.openai.com"
+
+
+def _responses_body(slot: S.Slot, messages: list[Message], tools: Optional[list[dict]], max_tokens: int) -> dict:
+    items: list[dict] = []
+    for msg in messages:
+        if msg.get("_responses_output"):
+            # Preserve encrypted reasoning, phase and call IDs within a tool turn.
+            # These items are kept in memory only, never sent to the UI or saved.
+            items.extend(msg["_responses_output"])
+        elif msg.get("role") == "tool":
+            items.append({"type": "function_call_output", "call_id": msg["tool_call_id"], "output": msg.get("content") or ""})
+        else:
+            if msg.get("content") or not msg.get("tool_calls"):
+                items.append({"role": msg["role"], "content": msg.get("content") or ""})
+            for call in msg.get("tool_calls") or []:
+                fn = call["function"]
+                items.append({"type": "function_call", "call_id": call["id"], "name": fn["name"],
+                              "arguments": fn["arguments"]})
+    # Use the model's defaults for optional sampling/reasoning settings. Sending
+    # temperature or forcing a reasoning effort would require model-name rules.
+    body: dict[str, Any] = {"model": slot.model, "input": items, "max_output_tokens": max_tokens,
+                            "store": False, "include": ["reasoning.encrypted_content"]}
+    if tools:
+        body["tools"] = [{"type": "function", **t["function"], "strict": t["function"].get("strict", False)} for t in tools]
+    return body
+
+
+def _response_message(response: dict) -> Message:
+    if response.get("status") == "failed" or response.get("error"):
+        err = response.get("error") or {}
+        raise LLMError(f"AI 응답 오류 — {str(err.get('message') or '응답을 만들지 못했습니다')[:200]}")
+    if response.get("status") == "incomplete":
+        if (response.get("incomplete_details") or {}).get("reason") == "max_output_tokens":
+            raise LLMError("AI 응답이 토큰 상한에 도달했습니다. 질문을 짧게 나누거나 CA2_OPENAI_MAX_OUTPUT_TOKENS 설정을 확인해 주세요.")
+        raise LLMError("AI 응답이 완료되지 않았습니다. 다시 시도해 주세요.")
+    if response.get("status") != "completed":
+        raise LLMError("AI 응답이 완료되지 않았습니다. 다시 시도해 주세요.")
+    output = response["output"]
+    text: list[str] = []
+    calls: list[dict] = []
+    for item in output:
+        if item.get("type") == "message":
+            for part in item.get("content") or []:
+                if part.get("type") == "output_text":
+                    text.append(part["text"])
+                elif part.get("type") == "refusal":
+                    text.append(part["refusal"])
+        elif item.get("type") == "function_call":
+            if item.get("status") not in (None, "completed"):
+                raise LLMError("AI 도구 호출이 완료되지 않았습니다. 다시 시도해 주세요.")
+            calls.append({"id": item["call_id"], "type": "function", "function": {
+                "name": item["name"], "arguments": item["arguments"]}})
+    if not text and not calls:
+        raise LLMError("AI가 답변이나 도구 호출을 반환하지 않았습니다.")
+    msg: Message = {"role": "assistant", "content": "".join(text), "_responses_output": output}
+    if calls:
+        msg["tool_calls"] = calls
+    return msg
+
+
+def _response_stream(response) -> Iterator[tuple[str, Any]]:
+    for raw in response:
+        line = raw.decode("utf-8").strip()
+        if not line.startswith("data:"):
+            continue
+        payload = line[5:].strip()
+        if payload == "[DONE]":
+            break
+        event = json.loads(payload)
+        kind = event.get("type")
+        if kind in ("response.output_text.delta", "response.refusal.delta"):
+            yield "delta", event.get("delta") or ""
+        elif kind == "response.completed":
+            yield "message", _response_message(event["response"])
+            return
+        elif kind in ("response.failed", "response.incomplete"):
+            _response_message(event["response"])
+            raise LLMError("AI 응답이 완료되지 않았습니다.")
+        elif kind == "error":
+            raise LLMError(f"AI 응답 오류 — {str(event.get('message') or '응답을 읽지 못했습니다')[:200]}")
+    # Never execute partially streamed function arguments after a disconnect.
+    raise LLMError("AI 응답 수신이 완료되기 전에 연결이 끊겼습니다. 다시 시도해 주세요.")
 
 
 def _detail(e: urllib.error.HTTPError) -> str:
@@ -108,24 +201,31 @@ def _merge_call(calls: list[dict], tc: dict) -> None:
 
 
 def chat(messages: list[Message], tools: Optional[list[dict]] = None, temperature: float = 0.2,
-         max_tokens: int = 800, slot: Optional[S.Slot] = None) -> Message:
+         max_tokens: Optional[int] = None, slot: Optional[S.Slot] = None) -> Message:
     slot, body = _prepare(slot, messages, tools, temperature, max_tokens)
     try:
-        with _post(f"{slot.base_url}/chat/completions", slot.api_key, body, C.LLM_TIMEOUT) as r:
+        endpoint = "responses" if _uses_responses(slot) else "chat/completions"
+        with _post(f"{slot.base_url}/{endpoint}", slot.api_key, body, C.LLM_TIMEOUT) as r:
             data = json.loads(r.read().decode("utf-8"))
+        if _uses_responses(slot):
+            return _response_message(data)
         return _clean(data["choices"][0]["message"])
     except _ERRORS as e:
         raise LLMError(_why(e)) from e
 
 
 def stream(messages: list[Message], tools: Optional[list[dict]] = None, temperature: float = 0.2,
-           max_tokens: int = 800, slot: Optional[S.Slot] = None) -> Iterator[tuple[str, Any]]:
+           max_tokens: Optional[int] = None, slot: Optional[S.Slot] = None) -> Iterator[tuple[str, Any]]:
     slot, body = _prepare(slot, messages, tools, temperature, max_tokens)
     body["stream"] = True
     text: list[str] = []
     calls: list[dict] = []                               # 도구 호출은 조각으로 온다 — 이름·인자를 이어 붙인다 (_merge_call)
     try:
-        with _post(f"{slot.base_url}/chat/completions", slot.api_key, body, C.LLM_TIMEOUT) as r:
+        endpoint = "responses" if _uses_responses(slot) else "chat/completions"
+        with _post(f"{slot.base_url}/{endpoint}", slot.api_key, body, C.LLM_TIMEOUT) as r:
+            if _uses_responses(slot):
+                yield from _response_stream(r)
+                return
             for raw in r:
                 line = raw.decode("utf-8").strip()
                 if not line.startswith("data:"):
@@ -179,13 +279,17 @@ _PING = [{"type": "function", "function": {"name": "ping", "description": "연�
 def probe(slot: Optional[S.Slot] = None) -> dict:
     """연결 시험 {ok, tools, error} — 도구를 붙여 한 번 부르고, 도구를 못 받는 모델이면 도구 없이 한 번 더."""
     ask = [{"role": "user", "content": "연결 시험입니다. ping 도구를 호출하세요."}]
+    slot = slot or S.slot()
+    # Responses counts reasoning as well as visible output. The legacy probe's
+    # 16/64-token caps can reject a working reasoning model before it can answer.
+    budget = C.OPENAI_MAX_OUTPUT_TOKENS if _uses_responses(slot) else None
     try:
-        msg = chat(ask, tools=_PING, max_tokens=64, slot=slot)
+        msg = chat(ask, tools=_PING, max_tokens=budget if budget is not None else 64, slot=slot)
         return {"ok": True, "tools": bool(msg.get("tool_calls")), "error": None}
     except LLMError:
         pass
     try:
-        chat(ask, max_tokens=16, slot=slot)
+        chat(ask, max_tokens=budget if budget is not None else 16, slot=slot)
         return {"ok": True, "tools": False, "error": None}
     except LLMError as e:
         return {"ok": False, "tools": False, "error": str(e)}

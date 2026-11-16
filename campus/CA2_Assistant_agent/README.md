@@ -60,3 +60,14 @@ cd campus/CA2_Assistant_agent
   이 폴더는 학사 코드를 import 하지 않는다(방향은 학사 → CA2 뿐). 정의서의 '학사 질문은 답하지 않는다'(CA2-R30)와 달라진 점이다.
 - 강의자료 본문은 사용자가 **동의한 뒤에만** AI 로 보낸다(`settings.consent`, 학사 요구사항 F4-R40). 내 PC 모델(Ollama)이면 동의 없이도 밖으로 나가지 않는다.
 - `.env` 의 `LLM_MAIN_*` 도 여전히 읽는다(개발용). 화면에서 저장한 설정이 먼저다.
+
+## OpenAI 연결 방식
+
+- `https://api.openai.com/v1`은 모델명 분기 없이 `/responses`를 공통으로 사용한다. 설정에서 Responses API의 텍스트·함수 호출 지원 모델을 선택한다. `/models` 목록에 나온다고 모든 모델이 대화·도구 호출을 지원하는 것은 아니다.
+- `temperature`와 `reasoning.effort`는 보내지 않고 모델 기본값을 사용한다. `max_output_tokens`는 추론과 출력의 합계 상한이며, `CA2_OPENAI_MAX_OUTPUT_TOKENS`로 설정한다(기본 4096, 연결 시험에도 적용). 직접 `max_tokens` 인자를 전달한 호출은 그 상한을 그대로 따른다. 실제 생성량에 따라 과금되며, 모델에 따라 추론 시간과 사용량은 달라진다.
+- 함수 정의·실행 결과·스트리밍 응답을 기존 에이전트 인터페이스로 변환한다. 응답 완료를 확인한 뒤에만 도구를 실행하며, 실패·중단·토큰 상한 도달·빈 응답은 오류로 처리한다.
+- `store: false`로 요청하고, 도구 실행에 필요한 출력 항목(암호화된 추론 상태·phase·call ID)은 같은 턴의 메모리에서만 이어 보낸다. UI나 로컬 대화 기록에는 넣지 않는다. API 키는 기존 OS 암호 저장소를 사용한다.
+- Gemini·Ollama·K-EXAONE·사용자 지정 주소는 기존 `/chat/completions` 형식과 옵션을 유지한다. 지원되지 않는 모델을 다른 모델로 자동 교체하지 않는다.
+- 회귀 테스트는 실제 키 없이 로컬 가짜 HTTP 서버로 연결 시험·스트리밍·도구 실행 왕복·중단 처리를 검증한다. 실제 모델별 연결과 응답 품질은 별도 확인이 필요하다.
+
+참고: [Responses 마이그레이션](https://developers.openai.com/api/docs/guides/migrate-to-responses), [추론 모델의 출력 토큰 상한](https://developers.openai.com/api/docs/guides/reasoning).

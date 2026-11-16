@@ -1,5 +1,7 @@
 """CA1 화면을 앱 세션 안에서 열고, 시간표와 입력 초안을 올바른 저장소에 연결한다."""
 import importlib
+import io
+import json
 import sys
 from html.parser import HTMLParser
 from pathlib import Path
@@ -129,3 +131,51 @@ def test_survey_drafts_stay_in_app_data_and_public_seeds_do_not_change(desktop_a
     assert client.post("/api/meal/v1/meal/survey/p_0013", json={"expectedRevision": 0}).status_code == 409
     page = client.get("/api/meal/survey")
     assert '<base href="/api/meal/">' in page.text
+
+
+def test_responses_schedule_and_assignments_through_desktop_api(desktop_app, client, monkeypatch):
+    """가짜 Responses 응답으로 실제 일정·과제 도구와 성적 제외를 검증한다."""
+    from app import assistant as bridge
+    from assistant import llm, settings as S
+
+    monkeypatch.setattr(S, "slot", lambda: S.Slot("https://api.openai.com/v1", "fake-key", "gpt-6.1-sol", "test"))
+    lookups = []
+
+    def academic_api(path, **params):
+        lookups.append(path)
+        if path == "/api/events":
+            return [{"title": "중간 발표", "start": "2026-11-19T11:00:00", "grade": "private-grade"}]
+        assert path == "/api/priority"
+        return {"items": [{"title": "보고서 제출", "due": "2026-11-20T23:59:00", "score": "private-score"}],
+                "counts": {"pending": 1}}
+
+    monkeypatch.setattr(bridge, "_api", academic_api)
+    calls = [{"type": "function_call", "id": "fc_" + name, "call_id": "call_" + name,
+              "name": name, "arguments": "{}", "status": "completed"}
+             for name in ("get_schedule", "get_assignments")]
+    answer = "11월 19일 11시에 중간 발표, 20일 23:59까지 보고서 제출입니다."
+    requests = []
+
+    def fake_post(url, key, body, timeout):
+        assert url == "https://api.openai.com/v1/responses" and key == "fake-key"
+        requests.append(body)
+        if len(requests) == 1:
+            events = [{"type": "response.completed", "response": {"status": "completed", "output": calls}}]
+        else:
+            assert len(requests) == 2
+            events = [{"type": "response.output_text.delta", "delta": answer},
+                      {"type": "response.completed", "response": {"status": "completed", "output": [
+                          {"type": "message", "role": "assistant", "content": [{"type": "output_text", "text": answer}]}]}}]
+        return io.BytesIO("".join("data: " + json.dumps(e) + "\n\n" for e in events).encode())
+
+    monkeypatch.setattr(llm, "_post", fake_post)
+    response = client.post("/api/assistant/v1/agent/chat", json={"messages": [
+        {"role": "user", "content": "다가오는 일정과 과제 알려줘"}]})
+    assert response.status_code == 200 and "event: error" not in response.text, response.text
+    assert answer in response.text and "event: done" in response.text
+    assert lookups == ["/api/events", "/api/priority"]
+    outputs = [i for i in requests[1]["input"] if i.get("type") == "function_call_output"]
+    assert [i["call_id"] for i in outputs] == ["call_get_schedule", "call_get_assignments"]
+    assert "중간 발표" in outputs[0]["output"] and "보고서 제출" in outputs[1]["output"]
+    assert "private-grade" not in json.dumps(requests) and "private-score" not in json.dumps(requests)
+    assert '"href": "/assignments"' in response.text
