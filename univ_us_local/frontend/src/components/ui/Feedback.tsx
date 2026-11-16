@@ -56,9 +56,9 @@ export function DemoNotice({ what = "이 화면" }: { what?: string }) {
   );
 }
 
-export type SyncTone = "ok" | "running" | "retry" | "login" | "failed";
+export type SyncTone = "ok" | "running" | "retry" | "login" | "partial" | "failed";
 
-/** 동기화 상태 띠 — 정상(숨김) / 진행 중 / 로그인 필요(노랑) / 실패(빨강) */
+/** 동기화 상태 띠 — 정상(숨김) / 진행 중 / 로그인·일부 확인(노랑) / 실패(빨강) */
 export function SyncBanner({ state, children, action }: { state: SyncTone; children: ReactNode; action?: ReactNode }) {
   if (state === "ok") return null;
   if (state === "running" || state === "retry")
@@ -68,7 +68,7 @@ export function SyncBanner({ state, children, action }: { state: SyncTone; child
       </Banner>
     );
   return (
-    <Banner tone={state === "login" ? "warn" : "danger"} action={action}>
+    <Banner tone={state === "login" || state === "partial" ? "warn" : "danger"} action={action}>
       {children}
     </Banner>
   );

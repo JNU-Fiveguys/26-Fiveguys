@@ -10,6 +10,7 @@
 #   **.env(LLM 키 등 비밀)**.
 import ast
 import os
+import ssl
 from pathlib import Path
 
 from PyInstaller.utils.hooks import collect_all, collect_submodules
@@ -19,21 +20,31 @@ AGENTS = ["C0_Platform_agent", "C1_Calendar_agent", "C2_Profile_agent", "C3_Logi
           "F2_Graduation_agent", "F3_Attendance_agent", "F4_Textbook_agent", "F5_Test_agent", "F6_Eclass_agent",
           "F7_Task_agent", "F8_Plan_agent", "F11_Scholarship_agent", "F12_Activity_agent"]
 TREES = [(REPO / a, f"univus/{a}") for a in AGENTS] + [
+    (REPO / "campus" / "CA1_Meal_agent", "univus/campus/CA1_Meal_agent"),    # CA1 공강 식사 추천(meal · directory)
+    (REPO / "campus" / "CA2_Assistant_agent", "univus/campus/CA2_Assistant_agent"),    # CA2 캠퍼스 생활 Q&A·대화
     (REPO / "univ_us_local" / "backend" / "app", "univus/univ_us_local/backend/app"),
     (REPO / "univ_us_local" / "frontend" / "out", "univus/univ_us_local/frontend/out"),
 ]
-SKIP_DIRS = {"data", "state", ".venv", "tests", "__pycache__", "node_modules", ".pytest_cache", "pw-browsers"}
+SKIP_DIRS = {"data", "state", ".venv", ".local", "tests", "__pycache__", "node_modules", ".pytest_cache", "pw-browsers"}
 SKIP_FILES = {".env", ".gitignore"}
 SKIP_SUFFIX = {".cmd", ".command", ".ps1", ".pyc", ".lnk", ".log", ".db"}
 KEEP_FILES = {"register-task.ps1",                         # F1·F6 예약 켜기가 앱 안에서도 이 스크립트를 부른다 (-Command 로 앱 실행 파일)
               "ocr_win.ps1"}                               # F11·F12 수집기의 Windows 내장 OCR (osenv/ocr.py 가 -File 로)
 
 datas, sources = [], []
+# Managed Python runtimes may load a certificate distrust policy beside ssl.py.
+# Keep that policy in the frozen runtime; never bypass certificate verification.
+ssl_policy = Path(ssl.__file__).with_name("codex-rejected-cas.pem")
+if ssl_policy.is_file():
+    datas.append((str(ssl_policy), "."))
 for src, dest in TREES:
     if not src.exists():
         raise SystemExit(f"없음: {src} (frontend/out 이면 npm run build 먼저)")
     for dirpath, dirnames, filenames in os.walk(src):
         dirnames[:] = [d for d in dirnames if d not in SKIP_DIRS]
+        if src == REPO / "campus" / "CA1_Meal_agent" and Path(dirpath) == src:
+            dirnames[:] = [d for d in dirnames if d in {"meal", "directory"}]
+            filenames = []  # 조사 문서·스크립트는 설치 앱에서 사용하지 않는다.
         for f in filenames:
             p = Path(dirpath) / f
             if f not in KEEP_FILES and (f in SKIP_FILES or p.suffix in SKIP_SUFFIX):
@@ -41,6 +52,17 @@ for src, dest in TREES:
             datas.append((str(p), str(Path(dest) / p.parent.relative_to(src))))
             if p.suffix == ".py":
                 sources.append(p)
+
+# CA1 추천에 필요한 공개 자료만 명시적으로 포함한다(식당 조사 양식 · 좌표 · 길/바탕 지도). 원천 CSV·키·백업본은 넣지 않는다.
+meal_root = REPO / "campus" / "CA1_Meal_agent"
+meal_seed_patterns = ("data/survey.csv", "data/places.candidates.json", "data/places.extra.json",
+                      "data/osm/walk.raw.json", "data/osm/basemap.json")
+for pattern in meal_seed_patterns:
+    seeds = sorted(meal_root.glob(pattern))
+    if not seeds:
+        raise SystemExit(f"CA1 공개 자료 없음: {pattern}")
+    for path in seeds:
+        datas.append((str(path), str(Path("univus/campus/CA1_Meal_agent") / path.parent.relative_to(meal_root))))
 
 # 기능 폴더 안의 패키지 이름(osenv·eclass·login·bachelor …) — 원본 파일로 쓰므로 PYZ 에 넣지 않는다.
 # osenv 도 마찬가지다: PYZ 에 넣으면 진입점이 import 한 모듈(__init__·appdata)만 들어가고 그것이 원본보다 먼저 잡혀서,

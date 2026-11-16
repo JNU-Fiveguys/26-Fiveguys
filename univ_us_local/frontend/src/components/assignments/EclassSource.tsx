@@ -12,6 +12,7 @@ import { LoginCredsButton } from "./LoginCreds";
 import { api } from "@/lib/api";
 import { RUN_SOURCE_LABEL, fmtDuration, runResult, type EclassSource, type RunRecord } from "@/lib/assignments";
 import { fmtRelative, fmtShortStamp, fmtTime, parseLocal } from "@/lib/dates";
+import { attachmentWarning, hasSyncWarning, redactSyncDetails, syncFailureText } from "@/lib/eclassSync";
 
 // /settings/sources 의 e클래스 행 (F6-S08 · Frontend-Route 11-6) — 주기 · 예약 작업 · 마지막 성공 · 학교 로그인 · 최근 실행.
 
@@ -37,7 +38,7 @@ function countsText(r: RunRecord): string {
 }
 
 function RunLine({ r }: { r: RunRecord }) {
-  const res = runResult(r.exit_code);
+  const res = runResult(r);
   const src = r.source ? RUN_SOURCE_LABEL[r.source] ?? r.source : "";
   return (
     <li className="flex flex-wrap items-center gap-x-3 gap-y-1 py-1">
@@ -49,7 +50,8 @@ function RunLine({ r }: { r: RunRecord }) {
         {r.dryRun && " · 미리보기"}
       </span>
       <span className="num text-muted">{fmtDuration(r.duration_s)}</span>
-      <span className="min-w-0 flex-1 truncate text-muted">{r.exit_code === 0 ? countsText(r) : r.error ?? ""}</span>
+      <span className="min-w-0 flex-1 text-muted">{r.exit_code === 0 ? countsText(r) : r.exit_code === 3 || r.exit_code === null ? "" : syncFailureText(r)}</span>
+      {hasSyncWarning(r) && <span className="w-full text-[12px] text-warn-text">{attachmentWarning(r)}</span>}
     </li>
   );
 }
@@ -112,7 +114,7 @@ export function EclassSourceSection() {
 
       <Row
         label="주기"
-        hint={src ? `${src.slots.map((s) => s.slice(0, 2)).join("·")}시 · 다음 ${fmtTime(parseLocal(src.nextSlot))} · 놓치면 켜질 때 한 번 따라잡기 · 네트워크 오류는 5·15·45분 뒤 다시` : "불러오는 중"}
+        hint={src ? `${src.slots.map((s) => s.slice(0, 2)).join("·")}시 · 다음 ${fmtTime(parseLocal(src.nextSlot))} · 놓치면 켜질 때 한 번 따라잡기 · 요청 실패는 5·15·45분 뒤 다시` : "불러오는 중"}
       >
         <select
           className="field field-sm w-auto"
@@ -216,7 +218,7 @@ export function EclassSourceSection() {
         {src && src.log.length > 0 && (
           <details className="mt-3">
             <summary className="cursor-pointer text-[13px] font-semibold text-muted">자세히 — sync.log 끝부분</summary>
-            <pre className="thin-scroll mt-2 max-h-48 overflow-auto rounded-lg bg-surface-2 p-3 text-[12px] leading-relaxed whitespace-pre-wrap">{src.log.join("\n")}</pre>
+            <pre className="thin-scroll mt-2 max-h-48 overflow-auto rounded-lg bg-surface-2 p-3 text-[12px] leading-relaxed whitespace-pre-wrap">{src.log.map(redactSyncDetails).join("\n")}</pre>
           </details>
         )}
       </div>

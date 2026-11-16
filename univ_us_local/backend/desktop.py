@@ -150,6 +150,7 @@ def self_check() -> int:
     os.environ.update(F1_TASKS="off", F6_TASKS="off", F11_AUTOSYNC="off", F12_AUTOSYNC="off", UNIVUS_NO_BROWSER_INSTALL="1")
     appdata.apply(Path(tempfile.mkdtemp(prefix="univus-check-")))
     roots = [d for d in sorted(BUNDLE.iterdir()) if d.is_dir() and (d.name[:1] in "CF") and d.name.endswith("_agent")]
+    roots.extend(d for d in sorted((BUNDLE / "campus").glob("CA*_agent")) if d.is_dir())
     roots.append(BACKEND_DIR)
     names: list[str] = []
     for root in roots:
@@ -164,6 +165,15 @@ def self_check() -> int:
             importlib.import_module(name)
         except Exception:                                # noqa: BLE001 — 하나라도 실패하면 모아서 알린다
             failed.append((name, traceback.format_exc(limit=1).strip().splitlines()[-1]))
+    # Importing ssl alone does not read its certificate policy data. Exercise
+    # context creation so a missing frozen-runtime PEM fails the build check.
+    try:
+        import ssl
+        tls = ssl.create_default_context()
+        if tls.verify_mode != ssl.CERT_REQUIRED or not tls.check_hostname:
+            raise RuntimeError("HTTPS certificate verification must remain enabled")
+    except Exception:
+        failed.append(("ssl.create_default_context", traceback.format_exc(limit=1).strip().splitlines()[-1]))
     for name, err in failed:
         print(f"self-check 실패: {name}: {err}", file=sys.stderr)
     print(f"self-check: 모듈 {len(names)}개 · 실패 {len(failed)}", file=sys.stderr, flush=True)
@@ -171,7 +181,8 @@ def self_check() -> int:
 
 
 def serve(a: argparse.Namespace) -> int:
-    root = Path(a.data_root) if a.data_root else appdata.default_root()
+    # 재시도한 첨부 경로는 resolve()를 거친다. 모든 기능에 같은 정규 경로를 전달한다.
+    root = (Path(a.data_root) if a.data_root else appdata.default_root()).resolve()
     root.mkdir(parents=True, exist_ok=True)
     if a.dev:
         # 개발 모드는 설치된 앱과 같은 작업 이름(UnivUs-F1-…·UnivUs-F6-…)을 쓰므로 예약 실행을 건드리지 않는다

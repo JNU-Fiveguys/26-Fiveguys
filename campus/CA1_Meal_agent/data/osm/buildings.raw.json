@@ -1,0 +1,6398 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-11-13T06:56:48Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "way",
+  "id": 105127780,
+  "center": {
+    "lat": 35.1750857,
+    "lon": 126.9120740
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "5",
+    "name": "체육관",
+    "name:en": "Gymnasium",
+    "name:ko": "체육관"
+  }
+},
+{
+  "type": "way",
+  "id": 105127781,
+  "center": {
+    "lat": 35.1736202,
+    "lon": 126.9097189
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "4",
+    "name": "치전원 기초교육관",
+    "name:en": "School of Dentistry Basic Dental Education Building",
+    "name:ko": "치전원 기초교육관"
+  }
+},
+{
+  "type": "way",
+  "id": 270541743,
+  "center": {
+    "lat": 35.1729228,
+    "lon": 126.9011246
+  },
+  "tags": {
+    "building": "school",
+    "description": "전남대학교 사범대학 부설고등학교 체육관(용봉관)",
+    "name": "체육관",
+    "name:en": "Gymnasium",
+    "name:ko": "체육관"
+  }
+},
+{
+  "type": "way",
+  "id": 270541744,
+  "center": {
+    "lat": 35.1734559,
+    "lon": 126.9020476
+  },
+  "tags": {
+    "alt_name": "전남사대부고",
+    "building": "school",
+    "building:levels": "4",
+    "name": "부설고",
+    "name:en": "Chonnam National University High School",
+    "name:ko": "부설고",
+    "official_name": "전남대학교사범대학부설고등학교"
+  }
+},
+{
+  "type": "way",
+  "id": 270541745,
+  "center": {
+    "lat": 35.1726187,
+    "lon": 126.9032776
+  },
+  "tags": {
+    "alt_name": "전남사대부중",
+    "building": "school",
+    "building:levels": "4",
+    "name": "부설중",
+    "name:en": "Chonnam National University Middle School",
+    "name:ko": "부설중",
+    "official_name": "전남대학교사범대학부설중학교"
+  }
+},
+{
+  "type": "way",
+  "id": 270549104,
+  "center": {
+    "lat": 35.1769749,
+    "lon": 126.9058908
+  },
+  "tags": {
+    "amenity": "library",
+    "building": "university",
+    "building:levels": "5",
+    "name": "중앙도서관",
+    "name:en": "Central Library",
+    "name:ja": "中央図書館",
+    "name:ko": "중앙도서관"
+  }
+},
+{
+  "type": "way",
+  "id": 270550646,
+  "center": {
+    "lat": 35.1740132,
+    "lon": 126.9111625
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "4",
+    "name": "생활과학대학",
+    "name:en": "College of Human Ecology",
+    "name:ko": "생활과학대학"
+  }
+},
+{
+  "type": "way",
+  "id": 271056106,
+  "center": {
+    "lat": 35.1773980,
+    "lon": 126.9046361
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "4",
+    "name": "인문대 1호관",
+    "name:ko": "인문대 1호관"
+  }
+},
+{
+  "type": "way",
+  "id": 271056107,
+  "center": {
+    "lat": 35.1768573,
+    "lon": 126.9049104
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "5",
+    "name": "인문대 3호관",
+    "name:en": "College of Humanities 3",
+    "name:ja": "人文学部3号館",
+    "name:ko": "인문대 3호관"
+  }
+},
+{
+  "type": "way",
+  "id": 271056455,
+  "center": {
+    "lat": 35.1796926,
+    "lon": 126.9064427
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "5",
+    "height": "15",
+    "name": "AI융합대학",
+    "name:en": "College of Artificial Intelligence Convergence",
+    "name:ko": "AI융합대학"
+  }
+},
+{
+  "type": "way",
+  "id": 271056555,
+  "center": {
+    "lat": 35.1808860,
+    "lon": 126.9066602
+  },
+  "tags": {
+    "building": "university",
+    "name": "예술대 조형관",
+    "name:en": "Molding Hall",
+    "name:ko": "예술대 조형관"
+  }
+},
+{
+  "type": "way",
+  "id": 277766285,
+  "center": {
+    "lat": 35.1743647,
+    "lon": 126.9032847
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "5",
+    "name": "법전원 프라임홀",
+    "name:en": "Prime Hall",
+    "name:ko": "법전원 프라임홀"
+  }
+},
+{
+  "type": "way",
+  "id": 277766289,
+  "center": {
+    "lat": 35.1741399,
+    "lon": 126.9027069
+  },
+  "tags": {
+    "addr:street": "용봉로",
+    "alt_name": "법학전문대학원 2호관",
+    "building": "university",
+    "building:levels": "7",
+    "description": "전남대학교 법학전문대학원 2호관(금호관)",
+    "name": "법전원 2호관",
+    "name:en": "Law School 2",
+    "name:ko": "법전원 2호관",
+    "official_name": "전남대학교 법학전문대학원 2호관"
+  }
+},
+{
+  "type": "way",
+  "id": 277766292,
+  "center": {
+    "lat": 35.1763843,
+    "lon": 126.9027530
+  },
+  "tags": {
+    "building": "university",
+    "name": "농생대 3호관",
+    "name:en": "College of Agriculture and Life Science 3",
+    "name:ko": "농생대 3호관"
+  }
+},
+{
+  "type": "way",
+  "id": 277766293,
+  "center": {
+    "lat": 35.1765294,
+    "lon": 126.9015750
+  },
+  "tags": {
+    "building": "university",
+    "name": "농생대 2호관",
+    "name:en": "College of Agriculture and Life Science 2",
+    "name:ko": "농생대 2호관"
+  }
+},
+{
+  "type": "way",
+  "id": 277766294,
+  "center": {
+    "lat": 35.1760211,
+    "lon": 126.9003954
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "4",
+    "name": "농생대 1호관",
+    "name:en": "College of Agriculture and Life Science 1",
+    "name:ko": "농생대 1호관"
+  }
+},
+{
+  "type": "way",
+  "id": 277766295,
+  "center": {
+    "lat": 35.1758063,
+    "lon": 126.9013692
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "4",
+    "name": "농생대 4호관",
+    "name:ko": "농생대 4호관"
+  }
+},
+{
+  "type": "way",
+  "id": 277766413,
+  "center": {
+    "lat": 35.1768227,
+    "lon": 126.9075768
+  },
+  "tags": {
+    "building": "university",
+    "name": "제1학생마루",
+    "name:en": "Student Maru 1",
+    "name:ko": "제1학생마루"
+  }
+},
+{
+  "type": "way",
+  "id": 277767025,
+  "center": {
+    "lat": 35.1758764,
+    "lon": 126.9084285
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "4",
+    "name": "대학본부",
+    "name:en": "University Administration",
+    "name:ko": "대학본부"
+  }
+},
+{
+  "type": "way",
+  "id": 277767349,
+  "center": {
+    "lat": 35.1762434,
+    "lon": 126.9096138
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "4",
+    "name": "자연과학대학 4호관",
+    "name:en": "College of Natural Sciences 4",
+    "name:ja": "自然科学学部4号館",
+    "name:ko": "자연과학대학 4호관"
+  }
+},
+{
+  "type": "way",
+  "id": 277767350,
+  "center": {
+    "lat": 35.1765462,
+    "lon": 126.9104619
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "4",
+    "name": "자연과학대학 3호관",
+    "name:ko": "자연과학대학 3호관"
+  }
+},
+{
+  "type": "way",
+  "id": 277767691,
+  "center": {
+    "lat": 35.1740872,
+    "lon": 126.9016751
+  },
+  "tags": {
+    "alt_name": "수의과대학 2호관",
+    "building": "university",
+    "description": "전남대학교 수의과대학 2호관",
+    "name": "수의대 2호관",
+    "name:en": "College of Veterinary Medicine 2",
+    "name:ko": "수의대 2호관"
+  }
+},
+{
+  "type": "way",
+  "id": 277767969,
+  "center": {
+    "lat": 35.1778805,
+    "lon": 126.9095671
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "4",
+    "name": "사범대 과학교육관",
+    "name:en": "Science Education Building",
+    "name:ko": "사범대 과학교육관"
+  }
+},
+{
+  "type": "way",
+  "id": 277767971,
+  "center": {
+    "lat": 35.1764965,
+    "lon": 126.9115336
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "4",
+    "name": "약학대 2호관",
+    "name:en": "College of Pharmacy 2",
+    "name:ko": "약학대 2호관"
+  }
+},
+{
+  "type": "way",
+  "id": 277767972,
+  "center": {
+    "lat": 35.1768783,
+    "lon": 126.9113816
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "4",
+    "name": "약학대 1호관",
+    "name:en": "College of Pharmacy 1",
+    "name:ko": "약학대 1호관"
+  }
+},
+{
+  "type": "way",
+  "id": 277767973,
+  "center": {
+    "lat": 35.1771127,
+    "lon": 126.9110823
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "4",
+    "name": "연암고익배홀",
+    "name:en": "Yeonam Koh Ik-Bae Hall",
+    "name:ko": "연암고익배홀"
+  }
+},
+{
+  "type": "way",
+  "id": 290374299,
+  "center": {
+    "lat": 35.1787790,
+    "lon": 126.9077741
+  },
+  "tags": {
+    "building": "university",
+    "name": "정보화본부",
+    "name:en": "Computing Center",
+    "name:ko": "정보화본부"
+  }
+},
+{
+  "type": "way",
+  "id": 290374303,
+  "center": {
+    "lat": 35.1761310,
+    "lon": 126.9073400
+  },
+  "tags": {
+    "building": "university",
+    "name": "민주마루",
+    "name:en": "Minju Maru",
+    "name:ko": "민주마루"
+  }
+},
+{
+  "type": "way",
+  "id": 290374304,
+  "center": {
+    "lat": 35.1753740,
+    "lon": 126.9119955
+  },
+  "tags": {
+    "addr:city": "광주광역시",
+    "addr:district": "북구",
+    "addr:housenumber": "91",
+    "addr:postcode": "61187",
+    "addr:street": "우치로",
+    "building": "yes",
+    "building:levels": "6",
+    "leisure": "fitness_centre",
+    "name": "전남대스포츠센터",
+    "name:en": "Chonnam National University Sports Center",
+    "name:ko": "전남대스포츠센터",
+    "operator": "Chonnam National University Sports Center",
+    "phone": "+82 62 530 2582",
+    "sport": "multi;golf;fitness;athletics",
+    "website": "https://sports.jnu.ac.kr/sports/index.do"
+  }
+},
+{
+  "type": "way",
+  "id": 290470533,
+  "center": {
+    "lat": 35.1775732,
+    "lon": 126.9119172
+  },
+  "tags": {
+    "building": "commercial",
+    "name": "서남해안황칠협동조합",
+    "name:en": "Southwestern Coastal Dendropanax Cooperative",
+    "name:ko": "서남해안황칠협동조합",
+    "shop": "outpost"
+  }
+},
+{
+  "type": "way",
+  "id": 290680706,
+  "center": {
+    "lat": 35.1759463,
+    "lon": 126.9064557
+  },
+  "tags": {
+    "building": "university",
+    "name": "용봉관",
+    "name:en": "Yongbong Hall",
+    "name:ko": "용봉관"
+  }
+},
+{
+  "type": "way",
+  "id": 311216990,
+  "center": {
+    "lat": 35.1800480,
+    "lon": 126.9104742
+  },
+  "tags": {
+    "building": "university",
+    "name": "산학협력공학관",
+    "name:en": "Industry-Academy Cooperation Building",
+    "name:ko": "산학협력공학관"
+  }
+},
+{
+  "type": "way",
+  "id": 468281954,
+  "center": {
+    "lat": 35.1780381,
+    "lon": 126.9151144
+  },
+  "tags": {
+    "building": "yes",
+    "name": "드림하이빌",
+    "name:ko": "드림하이빌"
+  }
+},
+{
+  "type": "way",
+  "id": 468289019,
+  "center": {
+    "lat": 35.1778224,
+    "lon": 126.9157807
+  },
+  "tags": {
+    "building": "yes",
+    "name": "GS25 전남대원룸촌점",
+    "name:ko": "GS25 전남대원룸촌점"
+  }
+},
+{
+  "type": "way",
+  "id": 468289021,
+  "center": {
+    "lat": 35.1743202,
+    "lon": 126.9120845
+  },
+  "tags": {
+    "addr:city": "광주광역시",
+    "addr:district": "북구",
+    "addr:housenumber": "77",
+    "addr:postcode": "61187",
+    "addr:street": "우치로",
+    "building": "office",
+    "building:levels": "4",
+    "government": "administrative",
+    "name": "북구청",
+    "name:en": "Buk-gu District Office",
+    "name:ja": "北区役所",
+    "name:ko": "북구청",
+    "office": "government",
+    "phone": "+82 62 410 8000",
+    "website": "https://bukgu.gwangju.kr/index.es?sid=a1"
+  }
+},
+{
+  "type": "way",
+  "id": 468636281,
+  "center": {
+    "lat": 35.1846715,
+    "lon": 126.9055792
+  },
+  "tags": {
+    "addr:housenumber": "219",
+    "addr:postcode": "61120",
+    "addr:street": "우치로 (Uchiro)",
+    "amenity": "place_of_worship",
+    "building": "yes",
+    "denomination": "christian",
+    "name": "중앙장로교회",
+    "name:ko": "중앙장로교회",
+    "religion": "christian"
+  }
+},
+{
+  "type": "way",
+  "id": 468928992,
+  "center": {
+    "lat": 35.1688333,
+    "lon": 126.9027119
+  },
+  "tags": {
+    "addr:city": "광주광역시",
+    "addr:district": "북구",
+    "addr:housenumber": "170",
+    "addr:postcode": "61224",
+    "addr:street": "서암대로",
+    "amenity": "place_of_worship",
+    "building": "yes",
+    "building:levels": "6",
+    "name": "용봉빌딩 교회",
+    "name:ko": "용봉빌딩 교회"
+  }
+},
+{
+  "type": "way",
+  "id": 469043590,
+  "center": {
+    "lat": 35.1702845,
+    "lon": 126.8993856
+  },
+  "tags": {
+    "building": "industrial",
+    "name": "세차장",
+    "name:ko": "세차장"
+  }
+},
+{
+  "type": "way",
+  "id": 469044635,
+  "center": {
+    "lat": 35.1704651,
+    "lon": 126.8990775
+  },
+  "tags": {
+    "building": "commercial",
+    "name": "카센터",
+    "name:ko": "카센터"
+  }
+},
+{
+  "type": "way",
+  "id": 471667198,
+  "center": {
+    "lat": 35.1852250,
+    "lon": 126.8927661
+  },
+  "tags": {
+    "building": "apartments",
+    "name": "103"
+  }
+},
+{
+  "type": "way",
+  "id": 471667199,
+  "center": {
+    "lat": 35.1851803,
+    "lon": 126.8936235
+  },
+  "tags": {
+    "building": "apartments",
+    "name": "105"
+  }
+},
+{
+  "type": "way",
+  "id": 471667200,
+  "center": {
+    "lat": 35.1857630,
+    "lon": 126.8928217
+  },
+  "tags": {
+    "building": "apartments",
+    "name": "101"
+  }
+},
+{
+  "type": "way",
+  "id": 471667201,
+  "center": {
+    "lat": 35.1857677,
+    "lon": 126.8936106
+  },
+  "tags": {
+    "building": "apartments",
+    "name": "102"
+  }
+},
+{
+  "type": "way",
+  "id": 471988221,
+  "center": {
+    "lat": 35.1851256,
+    "lon": 126.8941846
+  },
+  "tags": {
+    "amenity": "place_of_worship",
+    "building": "yes",
+    "denomination": "protestant",
+    "name": "참빛교회",
+    "name:ko": "참빛교회",
+    "religion": "christian"
+  }
+},
+{
+  "type": "way",
+  "id": 471988861,
+  "center": {
+    "lat": 35.1857281,
+    "lon": 126.8966729
+  },
+  "tags": {
+    "building": "apartments",
+    "building:levels": "21",
+    "name": "102",
+    "name:ko": "102"
+  }
+},
+{
+  "type": "way",
+  "id": 471988862,
+  "center": {
+    "lat": 35.1850474,
+    "lon": 126.8967517
+  },
+  "tags": {
+    "building": "apartments",
+    "building:levels": "21",
+    "name": "101",
+    "name:ko": "101"
+  }
+},
+{
+  "type": "way",
+  "id": 472066726,
+  "center": {
+    "lat": 35.1836001,
+    "lon": 126.8930700
+  },
+  "tags": {
+    "building": "church",
+    "name": "한마음장로교회",
+    "name:ko": "한마음장로교회"
+  }
+},
+{
+  "type": "way",
+  "id": 488279340,
+  "center": {
+    "lat": 35.1683674,
+    "lon": 126.9132060
+  },
+  "tags": {
+    "addr:housenumber": "112",
+    "addr:street": "서양로",
+    "building": "apartments",
+    "name": "중흥맨션",
+    "name:ko": "중흥맨션"
+  }
+},
+{
+  "type": "way",
+  "id": 489694401,
+  "center": {
+    "lat": 35.1846109,
+    "lon": 126.9033891
+  },
+  "tags": {
+    "building": "apartments",
+    "name": "무등파크맨션",
+    "name:ko": "무등파크맨션"
+  }
+},
+{
+  "type": "way",
+  "id": 489694402,
+  "center": {
+    "lat": 35.1846817,
+    "lon": 126.9046079
+  },
+  "tags": {
+    "building": "apartments",
+    "building:levels": "20",
+    "name": "오치공간아파트"
+  }
+},
+{
+  "type": "way",
+  "id": 489735991,
+  "center": {
+    "lat": 35.1703208,
+    "lon": 126.9048832
+  },
+  "tags": {
+    "building": "apartments",
+    "name": "신안동모아타운아파트",
+    "name:ko": "신안동모아타운아파트"
+  }
+},
+{
+  "type": "way",
+  "id": 489990894,
+  "center": {
+    "lat": 35.1844696,
+    "lon": 126.9105125
+  },
+  "tags": {
+    "building": "apartments",
+    "name": "101"
+  }
+},
+{
+  "type": "way",
+  "id": 489990895,
+  "center": {
+    "lat": 35.1847347,
+    "lon": 126.9108231
+  },
+  "tags": {
+    "building": "apartments",
+    "name": "102"
+  }
+},
+{
+  "type": "way",
+  "id": 489990896,
+  "center": {
+    "lat": 35.1844139,
+    "lon": 126.9120817
+  },
+  "tags": {
+    "building": "apartments",
+    "name": "101"
+  }
+},
+{
+  "type": "way",
+  "id": 489990897,
+  "center": {
+    "lat": 35.1848707,
+    "lon": 126.9122583
+  },
+  "tags": {
+    "building": "apartments",
+    "name": "102"
+  }
+},
+{
+  "type": "way",
+  "id": 489990898,
+  "center": {
+    "lat": 35.1824266,
+    "lon": 126.9016034
+  },
+  "tags": {
+    "building": "apartments",
+    "building:levels": "12",
+    "name": "대화아파트",
+    "name:ko": "대화아파트"
+  }
+},
+{
+  "type": "way",
+  "id": 489990917,
+  "center": {
+    "lat": 35.1825839,
+    "lon": 126.9025226
+  },
+  "tags": {
+    "building": "apartments",
+    "name": "용봉동투인맨션",
+    "name:ko": "용봉동투인맨션"
+  }
+},
+{
+  "type": "way",
+  "id": 489990919,
+  "center": {
+    "lat": 35.1819790,
+    "lon": 126.9140370
+  },
+  "tags": {
+    "building": "apartments",
+    "name": "이원빌라"
+  }
+},
+{
+  "type": "way",
+  "id": 490825996,
+  "center": {
+    "lat": 35.1784122,
+    "lon": 126.9003094
+  },
+  "tags": {
+    "building": "apartments",
+    "building:levels": "20",
+    "height": "60",
+    "name": "용봉우미아파트",
+    "name:ko": "용봉우미아파트"
+  }
+},
+{
+  "type": "way",
+  "id": 490828362,
+  "center": {
+    "lat": 35.1699304,
+    "lon": 126.9031105
+  },
+  "tags": {
+    "building": "apartments",
+    "name": "1동",
+    "name:ko": "1동"
+  }
+},
+{
+  "type": "way",
+  "id": 490828363,
+  "center": {
+    "lat": 35.1704187,
+    "lon": 126.9033549
+  },
+  "tags": {
+    "building": "apartments",
+    "name": "2동",
+    "name:ko": "2동"
+  }
+},
+{
+  "type": "way",
+  "id": 490828364,
+  "center": {
+    "lat": 35.1686492,
+    "lon": 126.9054551
+  },
+  "tags": {
+    "building": "apartments",
+    "name": "105",
+    "name:ko": "105"
+  }
+},
+{
+  "type": "way",
+  "id": 490828365,
+  "center": {
+    "lat": 35.1691169,
+    "lon": 126.9056391
+  },
+  "tags": {
+    "building": "apartments",
+    "name": "103",
+    "name:ko": "103"
+  }
+},
+{
+  "type": "way",
+  "id": 490828366,
+  "center": {
+    "lat": 35.1696051,
+    "lon": 126.9058222
+  },
+  "tags": {
+    "building": "apartments",
+    "name": "102",
+    "name:ko": "102"
+  }
+},
+{
+  "type": "way",
+  "id": 490828367,
+  "center": {
+    "lat": 35.1700746,
+    "lon": 126.9060142
+  },
+  "tags": {
+    "building": "apartments",
+    "name": "101",
+    "name:ko": "101"
+  }
+},
+{
+  "type": "way",
+  "id": 490828368,
+  "center": {
+    "lat": 35.1697819,
+    "lon": 126.9070163
+  },
+  "tags": {
+    "building": "apartments",
+    "name": "108",
+    "name:ko": "108"
+  }
+},
+{
+  "type": "way",
+  "id": 490828369,
+  "center": {
+    "lat": 35.1693283,
+    "lon": 126.9068239
+  },
+  "tags": {
+    "building": "apartments",
+    "name": "107",
+    "name:ko": "107"
+  }
+},
+{
+  "type": "way",
+  "id": 490828370,
+  "center": {
+    "lat": 35.1688621,
+    "lon": 126.9066510
+  },
+  "tags": {
+    "building": "apartments",
+    "name": "106",
+    "name:ko": "106"
+  }
+},
+{
+  "type": "way",
+  "id": 490828373,
+  "center": {
+    "lat": 35.1813272,
+    "lon": 126.8964368
+  },
+  "tags": {
+    "building": "apartments",
+    "name": "302",
+    "name:ko": "302"
+  }
+},
+{
+  "type": "way",
+  "id": 490828374,
+  "center": {
+    "lat": 35.1818198,
+    "lon": 126.8963488
+  },
+  "tags": {
+    "building": "apartments",
+    "name": "303",
+    "name:ko": "303"
+  }
+},
+{
+  "type": "way",
+  "id": 490828375,
+  "center": {
+    "lat": 35.1808304,
+    "lon": 126.8963217
+  },
+  "tags": {
+    "building": "apartments",
+    "name": "301",
+    "name:ko": "301"
+  }
+},
+{
+  "type": "way",
+  "id": 490828376,
+  "center": {
+    "lat": 35.1833584,
+    "lon": 126.8962569
+  },
+  "tags": {
+    "amenity": "restaurant",
+    "building": "yes",
+    "delivery": "no",
+    "name": "빛고을홍어마당",
+    "name:ko": "빛고을홍어마당",
+    "takeaway": "no"
+  }
+},
+{
+  "type": "way",
+  "id": 490828378,
+  "center": {
+    "lat": 35.1724829,
+    "lon": 126.8958286
+  },
+  "tags": {
+    "building": "apartments",
+    "name": "남양파크맨션",
+    "name:ko": "남양파크맨션"
+  }
+},
+{
+  "type": "way",
+  "id": 498970617,
+  "center": {
+    "lat": 35.1824351,
+    "lon": 126.8942075
+  },
+  "tags": {
+    "amenity": "place_of_worship",
+    "building": "yes",
+    "name": "대순진리회 광주지부",
+    "name:ko": "대순진리회 광주지부",
+    "religion": "buddhist"
+  }
+},
+{
+  "type": "way",
+  "id": 502508814,
+  "center": {
+    "lat": 35.1819049,
+    "lon": 126.9087409
+  },
+  "tags": {
+    "building": "apartments",
+    "building:levels": "12",
+    "name": "용봉대신아파트"
+  }
+},
+{
+  "type": "way",
+  "id": 535847766,
+  "center": {
+    "lat": 35.1805060,
+    "lon": 126.9178887
+  },
+  "tags": {
+    "building": "apartments",
+    "name": "106",
+    "name:ko": "106"
+  }
+},
+{
+  "type": "way",
+  "id": 535847767,
+  "center": {
+    "lat": 35.1809219,
+    "lon": 126.9171615
+  },
+  "tags": {
+    "building": "apartments",
+    "name": "107",
+    "name:ko": "107"
+  }
+},
+{
+  "type": "way",
+  "id": 535847768,
+  "center": {
+    "lat": 35.1813478,
+    "lon": 126.9173873
+  },
+  "tags": {
+    "building": "apartments",
+    "name": "103",
+    "name:ko": "103"
+  }
+},
+{
+  "type": "way",
+  "id": 535847769,
+  "center": {
+    "lat": 35.1809767,
+    "lon": 126.9181783
+  },
+  "tags": {
+    "building": "apartments",
+    "name": "105",
+    "name:ko": "105"
+  }
+},
+{
+  "type": "way",
+  "id": 535847770,
+  "center": {
+    "lat": 35.1817377,
+    "lon": 126.9175322
+  },
+  "tags": {
+    "building": "apartments",
+    "name": "102"
+  }
+},
+{
+  "type": "way",
+  "id": 535847771,
+  "center": {
+    "lat": 35.1815600,
+    "lon": 126.9183900
+  },
+  "tags": {
+    "building": "apartments",
+    "name": "101"
+  }
+},
+{
+  "type": "way",
+  "id": 543211660,
+  "center": {
+    "lat": 35.1800086,
+    "lon": 126.9177873
+  },
+  "tags": {
+    "building": "apartments",
+    "name": "103",
+    "name:ko": "103"
+  }
+},
+{
+  "type": "way",
+  "id": 543211661,
+  "center": {
+    "lat": 35.1793803,
+    "lon": 126.9175500
+  },
+  "tags": {
+    "building": "apartments",
+    "name": "102",
+    "name:ko": "102"
+  }
+},
+{
+  "type": "way",
+  "id": 543211662,
+  "center": {
+    "lat": 35.1795929,
+    "lon": 126.9167258
+  },
+  "tags": {
+    "building": "apartments",
+    "name": "101",
+    "name:ko": "101"
+  }
+},
+{
+  "type": "way",
+  "id": 543211663,
+  "center": {
+    "lat": 35.1802293,
+    "lon": 126.9169183
+  },
+  "tags": {
+    "building": "apartments",
+    "name": "104",
+    "name:ko": "104"
+  }
+},
+{
+  "type": "way",
+  "id": 543211664,
+  "center": {
+    "lat": 35.1809453,
+    "lon": 126.9163096
+  },
+  "tags": {
+    "building": "apartments",
+    "name": "106",
+    "name:ko": "106"
+  }
+},
+{
+  "type": "way",
+  "id": 543211665,
+  "center": {
+    "lat": 35.1814371,
+    "lon": 126.9164812
+  },
+  "tags": {
+    "building": "apartments",
+    "name": "107",
+    "name:ko": "107"
+  }
+},
+{
+  "type": "way",
+  "id": 543211666,
+  "center": {
+    "lat": 35.1818898,
+    "lon": 126.9166546
+  },
+  "tags": {
+    "building": "apartments",
+    "name": "108"
+  }
+},
+{
+  "type": "way",
+  "id": 543211669,
+  "center": {
+    "lat": 35.1804326,
+    "lon": 126.9162432
+  },
+  "tags": {
+    "building": "apartments",
+    "name": "105",
+    "name:ko": "105"
+  }
+},
+{
+  "type": "way",
+  "id": 636232832,
+  "center": {
+    "lat": 35.1686445,
+    "lon": 126.9003620
+  },
+  "tags": {
+    "building": "school",
+    "name": "용봉초등학교병설유치원",
+    "name:ko": "용봉초등학교병설유치원"
+  }
+},
+{
+  "type": "way",
+  "id": 636473427,
+  "center": {
+    "lat": 35.1857228,
+    "lon": 126.8947327
+  },
+  "tags": {
+    "building": "apartments",
+    "name": "101"
+  }
+},
+{
+  "type": "way",
+  "id": 636473428,
+  "center": {
+    "lat": 35.1857147,
+    "lon": 126.8954287
+  },
+  "tags": {
+    "building": "apartments",
+    "name": "102"
+  }
+},
+{
+  "type": "way",
+  "id": 636473430,
+  "center": {
+    "lat": 35.1854582,
+    "lon": 126.8959825
+  },
+  "tags": {
+    "building": "apartments",
+    "name": "103"
+  }
+},
+{
+  "type": "way",
+  "id": 636473431,
+  "center": {
+    "lat": 35.1851282,
+    "lon": 126.8954785
+  },
+  "tags": {
+    "building": "apartments",
+    "name": "105"
+  }
+},
+{
+  "type": "way",
+  "id": 636473432,
+  "center": {
+    "lat": 35.1851106,
+    "lon": 126.8947529
+  },
+  "tags": {
+    "building": "apartments",
+    "name": "104"
+  }
+},
+{
+  "type": "way",
+  "id": 640425694,
+  "center": {
+    "lat": 35.1690234,
+    "lon": 126.8994197
+  },
+  "tags": {
+    "amenity": "social_facility",
+    "building": "yes",
+    "name": "효드림요양병원",
+    "name:ko": "효드림요양병원"
+  }
+},
+{
+  "type": "way",
+  "id": 667143410,
+  "center": {
+    "lat": 35.1797269,
+    "lon": 126.9085869
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "5",
+    "name": "공과대 6호관",
+    "name:en": "College of Engineering 6",
+    "name:ko": "공과대 6호관"
+  }
+},
+{
+  "type": "way",
+  "id": 695811891,
+  "center": {
+    "lat": 35.1774355,
+    "lon": 126.9130373
+  },
+  "tags": {
+    "building": "commercial",
+    "name": "샤브향"
+  }
+},
+{
+  "type": "way",
+  "id": 695811896,
+  "center": {
+    "lat": 35.1767333,
+    "lon": 126.8954667
+  },
+  "tags": {
+    "building": "commercial",
+    "name": "모아빌딩"
+  }
+},
+{
+  "type": "way",
+  "id": 712169920,
+  "center": {
+    "lat": 35.1831492,
+    "lon": 126.9183219
+  },
+  "tags": {
+    "building": "apartments",
+    "name": "301"
+  }
+},
+{
+  "type": "way",
+  "id": 899920862,
+  "center": {
+    "lat": 35.1702624,
+    "lon": 126.8960971
+  },
+  "tags": {
+    "amenity": "place_of_worship",
+    "building": "church",
+    "denomination": "protestant",
+    "name": "신안교회",
+    "religion": "christian"
+  }
+},
+{
+  "type": "way",
+  "id": 899920863,
+  "center": {
+    "lat": 35.1711078,
+    "lon": 126.8972631
+  },
+  "tags": {
+    "building": "residential",
+    "name": "한진맨션"
+  }
+},
+{
+  "type": "way",
+  "id": 899920864,
+  "center": {
+    "lat": 35.1713103,
+    "lon": 126.8974181
+  },
+  "tags": {
+    "building": "residential",
+    "name": "갤러리존"
+  }
+},
+{
+  "type": "way",
+  "id": 971356854,
+  "center": {
+    "lat": 35.1784450,
+    "lon": 126.9046307
+  },
+  "tags": {
+    "building": "yes",
+    "building:levels": "21",
+    "height": "65",
+    "name": "bd"
+  }
+},
+{
+  "type": "way",
+  "id": 971359016,
+  "center": {
+    "lat": 35.1791282,
+    "lon": 126.9046209
+  },
+  "tags": {
+    "building": "yes",
+    "building:levels": "21",
+    "height": "65",
+    "name": "ap"
+  }
+},
+{
+  "type": "way",
+  "id": 971359017,
+  "center": {
+    "lat": 35.1790757,
+    "lon": 126.9032000
+  },
+  "tags": {
+    "building": "yes",
+    "building:levels": "21",
+    "height": "65",
+    "name": "ap"
+  }
+},
+{
+  "type": "way",
+  "id": 971359018,
+  "center": {
+    "lat": 35.1793348,
+    "lon": 126.9038707
+  },
+  "tags": {
+    "building": "house",
+    "building:levels": "21",
+    "height": "65",
+    "name": "ap"
+  }
+},
+{
+  "type": "way",
+  "id": 971359019,
+  "center": {
+    "lat": 35.1795743,
+    "lon": 126.9033184
+  },
+  "tags": {
+    "building": "yes",
+    "building:levels": "21",
+    "height": "65",
+    "name": "ap"
+  }
+},
+{
+  "type": "way",
+  "id": 971359020,
+  "center": {
+    "lat": 35.1797359,
+    "lon": 126.9037623
+  },
+  "tags": {
+    "building": "yes",
+    "building:levels": "21",
+    "height": "64",
+    "name": "ap"
+  }
+},
+{
+  "type": "way",
+  "id": 971359021,
+  "center": {
+    "lat": 35.1799363,
+    "lon": 126.9042485
+  },
+  "tags": {
+    "building": "yes",
+    "building:levels": "21",
+    "height": "64",
+    "name": "ap"
+  }
+},
+{
+  "type": "way",
+  "id": 971359022,
+  "center": {
+    "lat": 35.1802823,
+    "lon": 126.9041347
+  },
+  "tags": {
+    "building": "yes",
+    "building:levels": "21",
+    "height": "64",
+    "name": "ap"
+  }
+},
+{
+  "type": "way",
+  "id": 971360702,
+  "center": {
+    "lat": 35.1786834,
+    "lon": 126.9012541
+  },
+  "tags": {
+    "building": "yes",
+    "building:levels": "19",
+    "height": "60",
+    "name": "ap"
+  }
+},
+{
+  "type": "way",
+  "id": 971360703,
+  "center": {
+    "lat": 35.1785469,
+    "lon": 126.9022798
+  },
+  "tags": {
+    "building": "yes",
+    "building:levels": "15",
+    "height": "45",
+    "name": "ap"
+  }
+},
+{
+  "type": "way",
+  "id": 971360704,
+  "center": {
+    "lat": 35.1786623,
+    "lon": 126.9017907
+  },
+  "tags": {
+    "building": "yes",
+    "building:levels": "20",
+    "height": "60",
+    "name": "ap"
+  }
+},
+{
+  "type": "way",
+  "id": 971360705,
+  "center": {
+    "lat": 35.1792273,
+    "lon": 126.9014044
+  },
+  "tags": {
+    "building": "yes",
+    "building:levels": "15",
+    "height": "45",
+    "name": "ap"
+  }
+},
+{
+  "type": "way",
+  "id": 971360706,
+  "center": {
+    "lat": 35.1792708,
+    "lon": 126.9016917
+  },
+  "tags": {
+    "building": "yes",
+    "building:levels": "20",
+    "height": "60",
+    "name": "ap"
+  }
+},
+{
+  "type": "way",
+  "id": 971360707,
+  "center": {
+    "lat": 35.1801851,
+    "lon": 126.9036693
+  },
+  "tags": {
+    "building": "yes",
+    "building:levels": "20",
+    "height": "64",
+    "name": "ap"
+  }
+},
+{
+  "type": "way",
+  "id": 971365874,
+  "center": {
+    "lat": 35.1799310,
+    "lon": 126.9123052
+  },
+  "tags": {
+    "building": "yes",
+    "building:levels": "10",
+    "height": "30",
+    "name": "bd"
+  }
+},
+{
+  "type": "way",
+  "id": 971365875,
+  "center": {
+    "lat": 35.1799442,
+    "lon": 126.9126432
+  },
+  "tags": {
+    "building": "yes",
+    "building:levels": "9",
+    "height": "27",
+    "name": "bd"
+  }
+},
+{
+  "type": "way",
+  "id": 971365876,
+  "center": {
+    "lat": 35.1799591,
+    "lon": 126.9128009
+  },
+  "tags": {
+    "building": "yes",
+    "building:levels": "9",
+    "height": "27",
+    "name": "bd"
+  }
+},
+{
+  "type": "way",
+  "id": 971365878,
+  "center": {
+    "lat": 35.1795146,
+    "lon": 126.9122627
+  },
+  "tags": {
+    "building": "yes",
+    "building:levels": "3",
+    "height": "10",
+    "name": "bd"
+  }
+},
+{
+  "type": "way",
+  "id": 971365879,
+  "center": {
+    "lat": 35.1790418,
+    "lon": 126.9122861
+  },
+  "tags": {
+    "amenity": "place_of_worship",
+    "building": "yes",
+    "building:levels": "6",
+    "height": "18",
+    "name": "늘푸른교회"
+  }
+},
+{
+  "type": "way",
+  "id": 971365880,
+  "center": {
+    "lat": 35.1788640,
+    "lon": 126.9123094
+  },
+  "tags": {
+    "building": "yes",
+    "building:levels": "6",
+    "height": "18",
+    "name": "bd"
+  }
+},
+{
+  "type": "way",
+  "id": 971365883,
+  "center": {
+    "lat": 35.1820471,
+    "lon": 126.9122131
+  },
+  "tags": {
+    "building": "apartments",
+    "building:levels": "6",
+    "height": "18",
+    "name": "ap"
+  }
+},
+{
+  "type": "way",
+  "id": 971365884,
+  "center": {
+    "lat": 35.1818498,
+    "lon": 126.9120918
+  },
+  "tags": {
+    "building": "apartments",
+    "building:levels": "6",
+    "height": "18",
+    "name": "ap"
+  }
+},
+{
+  "type": "way",
+  "id": 971365885,
+  "center": {
+    "lat": 35.1816403,
+    "lon": 126.9119961
+  },
+  "tags": {
+    "building": "apartments",
+    "building:levels": "6",
+    "height": "18",
+    "name": "ap"
+  }
+},
+{
+  "type": "way",
+  "id": 971365886,
+  "center": {
+    "lat": 35.1805209,
+    "lon": 126.9128026
+  },
+  "tags": {
+    "building": "yes",
+    "building:levels": "8",
+    "height": "25",
+    "name": "bd"
+  }
+},
+{
+  "type": "way",
+  "id": 971365887,
+  "center": {
+    "lat": 35.1806212,
+    "lon": 126.9125265
+  },
+  "tags": {
+    "building": "yes",
+    "building:levels": "8",
+    "height": "24",
+    "name": "bd"
+  }
+},
+{
+  "type": "way",
+  "id": 971370797,
+  "center": {
+    "lat": 35.1726897,
+    "lon": 126.8973980
+  },
+  "tags": {
+    "building": "apartments",
+    "building:levels": "15",
+    "height": "45",
+    "name": "103"
+  }
+},
+{
+  "type": "way",
+  "id": 971370798,
+  "center": {
+    "lat": 35.1731442,
+    "lon": 126.8973962
+  },
+  "tags": {
+    "building": "apartments",
+    "building:levels": "15",
+    "height": "45",
+    "name": "102"
+  }
+},
+{
+  "type": "way",
+  "id": 971370799,
+  "center": {
+    "lat": 35.1736356,
+    "lon": 126.8972207
+  },
+  "tags": {
+    "building": "apartments",
+    "building:levels": "15",
+    "height": "45",
+    "name": "101"
+  }
+},
+{
+  "type": "way",
+  "id": 971370800,
+  "center": {
+    "lat": 35.1729651,
+    "lon": 126.8968587
+  },
+  "tags": {
+    "building": "apartments",
+    "building:levels": "15",
+    "height": "45",
+    "name": "104"
+  }
+},
+{
+  "type": "way",
+  "id": 971370801,
+  "center": {
+    "lat": 35.1734084,
+    "lon": 126.8965486
+  },
+  "tags": {
+    "building": "apartments",
+    "building:levels": "15",
+    "height": "45",
+    "name": "105"
+  }
+},
+{
+  "type": "way",
+  "id": 971370802,
+  "center": {
+    "lat": 35.1743596,
+    "lon": 126.9011799
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "4",
+    "height": "12",
+    "name": "동물병원",
+    "name:en": "Animal Hospital",
+    "name:ko": "동물병원",
+    "start_date": "2021-06-01"
+  }
+},
+{
+  "type": "way",
+  "id": 971370803,
+  "center": {
+    "lat": 35.1746445,
+    "lon": 126.9005929
+  },
+  "tags": {
+    "alt_name": "농업생명과학대학 5호관",
+    "building": "university",
+    "building:levels": "5",
+    "description": "전남대학교 농업생명과학대학 5호관(산학협력관)",
+    "height": "15",
+    "name": "농생대 5호관",
+    "name:en": "College of Agriculture and Life Sciences 5",
+    "name:ko": "농생대 5호관"
+  }
+},
+{
+  "type": "way",
+  "id": 971370804,
+  "center": {
+    "lat": 35.1747047,
+    "lon": 126.9000865
+  },
+  "tags": {
+    "alt_name": "농업실습교육원",
+    "building": "university",
+    "building:levels": "4",
+    "description": "전남대학교 농업실습교육원",
+    "height": "12",
+    "name": "농업실습교육원",
+    "name:en": "Institute of Agricultural Practice Education",
+    "name:ko": "농업실습교육원",
+    "official_name": "전남대학교 농업실습교육원",
+    "website": "https://agrobio.jnu.ac.kr/agrobio/index.do"
+  }
+},
+{
+  "type": "way",
+  "id": 971370805,
+  "center": {
+    "lat": 35.1749406,
+    "lon": 126.9000522
+  },
+  "tags": {
+    "alt_name": "농업전문창업보육센터",
+    "building": "university",
+    "building:levels": "5",
+    "description": "전남대학교 농업전문창업보육센터(산학협력4호관)",
+    "height": "15",
+    "name": "농업전문창업보육센터",
+    "name:en": "Agribusiness Incubation Center",
+    "name:ko": "농업전문창업보육센터",
+    "official_name": "전남대학교 농업전문창업보육센터",
+    "website": "http://startup.jnu.ac.kr/"
+  }
+},
+{
+  "type": "way",
+  "id": 971494581,
+  "center": {
+    "lat": 35.1723669,
+    "lon": 126.9101013
+  },
+  "tags": {
+    "building": "yes",
+    "building:levels": "6",
+    "name": "bd"
+  }
+},
+{
+  "type": "way",
+  "id": 989813934,
+  "center": {
+    "lat": 35.1695045,
+    "lon": 126.9180928
+  },
+  "tags": {
+    "addr:housenumber": "109",
+    "building": "apartments",
+    "layer": "1",
+    "name": "109"
+  }
+},
+{
+  "type": "way",
+  "id": 989813935,
+  "center": {
+    "lat": 35.1686788,
+    "lon": 126.9182459
+  },
+  "tags": {
+    "building": "apartments",
+    "name": "105동"
+  }
+},
+{
+  "type": "way",
+  "id": 989813936,
+  "center": {
+    "lat": 35.1688877,
+    "lon": 126.9176838
+  },
+  "tags": {
+    "addr:housenumber": "106",
+    "addr:street": "106동",
+    "building": "apartments",
+    "layer": "1",
+    "name": "106"
+  }
+},
+{
+  "type": "way",
+  "id": 989813941,
+  "center": {
+    "lat": 35.1696804,
+    "lon": 126.9175174
+  },
+  "tags": {
+    "building": "apartments",
+    "name": "108동"
+  }
+},
+{
+  "type": "way",
+  "id": 989813942,
+  "center": {
+    "lat": 35.1691183,
+    "lon": 126.9171568
+  },
+  "tags": {
+    "building": "apartments",
+    "layer": "1",
+    "name": "107동"
+  }
+},
+{
+  "type": "way",
+  "id": 989813943,
+  "center": {
+    "lat": 35.1703503,
+    "lon": 126.9177524
+  },
+  "tags": {
+    "building": "apartments",
+    "name": "117"
+  }
+},
+{
+  "type": "way",
+  "id": 993969149,
+  "center": {
+    "lat": 35.1847364,
+    "lon": 126.9159953
+  },
+  "tags": {
+    "amenity": "arts_centre",
+    "building": "yes",
+    "name": "북구문화의집"
+  }
+},
+{
+  "type": "way",
+  "id": 1037465035,
+  "center": {
+    "lat": 35.1727621,
+    "lon": 126.9116631
+  },
+  "tags": {
+    "amenity": "parking",
+    "building": "yes",
+    "name": "효죽공영주차장",
+    "name:en": "Hyojuk Public Parking Lot",
+    "name:ko": "효죽공영주차장",
+    "parking": "multi-storey"
+  }
+},
+{
+  "type": "way",
+  "id": 1047192527,
+  "center": {
+    "lat": 35.1830797,
+    "lon": 126.9077403
+  },
+  "tags": {
+    "building": "church",
+    "name": "신천지교회"
+  }
+},
+{
+  "type": "way",
+  "id": 1047192528,
+  "center": {
+    "lat": 35.1830639,
+    "lon": 126.9065685
+  },
+  "tags": {
+    "addr:housenumber": "201",
+    "addr:postcode": "61179",
+    "addr:street": "우치로 (Uchiro)",
+    "building": "public",
+    "name": "도로교통공단 광주전남지부",
+    "name:ko": "도로교통공단 광주전남지부",
+    "opening_hours": "09:00-18:00"
+  }
+},
+{
+  "type": "way",
+  "id": 1107695806,
+  "center": {
+    "lat": 35.1727962,
+    "lon": 126.8980941
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "5",
+    "description": "전남대학교 농업생명과학대학 6호관 (전남대학교 친환경농업연구소)",
+    "name": "농생대 6호관",
+    "name:en": "College of Agriculture and Life Sciences 6",
+    "name:ko": "농생대 6호관",
+    "short_name": "농생대 6호관"
+  }
+},
+{
+  "type": "way",
+  "id": 1107793925,
+  "center": {
+    "lat": 35.1723426,
+    "lon": 126.9005299
+  },
+  "tags": {
+    "addr:city": "광주광역시",
+    "addr:district": "북구",
+    "addr:housenumber": "33",
+    "addr:postcode": "61186",
+    "addr:street": "용봉로",
+    "alt_name": "치전원 임상교육관",
+    "alt_name:en": "Clinical Dental Education Building",
+    "building": "university",
+    "building:levels": "10",
+    "description": "전남대학교 치의학전문대학원 1호관(임상교육관)",
+    "name": "치전원 1호관 (임상교육관)",
+    "name:en": "School of Dentistry 1",
+    "name:ko": "치전원 1호관 (임상교육관)"
+  }
+},
+{
+  "type": "way",
+  "id": 1107793926,
+  "center": {
+    "lat": 35.1723780,
+    "lon": 126.9011090
+  },
+  "tags": {
+    "alt_name": "치전원 교육연구관",
+    "alt_name:en": "Dental Education and Research Building",
+    "building": "university",
+    "building:levels": "7",
+    "description": "전남대학교 치의학전문대학원 3호관(교육연구관)",
+    "name": "치전원 3호관 (교육연구관)",
+    "name:en": "School of Dentistry 3",
+    "name:ko": "치전원 3호관 (교육연구관)"
+  }
+},
+{
+  "type": "way",
+  "id": 1107803983,
+  "center": {
+    "lat": 35.1721177,
+    "lon": 126.9027586
+  },
+  "tags": {
+    "building": "school",
+    "description": "전남대학교 사범대학 부설중학교 급식실",
+    "name": "급식실",
+    "name:en": "Cafeteria",
+    "name:ko": "급식실"
+  }
+},
+{
+  "type": "way",
+  "id": 1110340363,
+  "center": {
+    "lat": 35.1733868,
+    "lon": 126.8997138
+  },
+  "tags": {
+    "building": "university",
+    "name": "수목원 관리동",
+    "name:en": "Arboretum Management Building",
+    "name:ko": "수목원 관리동"
+  }
+},
+{
+  "type": "way",
+  "id": 1110375517,
+  "center": {
+    "lat": 35.1755979,
+    "lon": 126.8989277
+  },
+  "tags": {
+    "building": "university",
+    "name": "특수동물사",
+    "name:en": "Animal Breeding",
+    "name:ko": "특수동물사"
+  }
+},
+{
+  "type": "way",
+  "id": 1110375521,
+  "center": {
+    "lat": 35.1754470,
+    "lon": 126.8985480
+  },
+  "tags": {
+    "building": "university",
+    "name": "동물사육장",
+    "name:en": "Animal Breeding",
+    "name:ko": "동물사육장"
+  }
+},
+{
+  "type": "way",
+  "id": 1110523027,
+  "center": {
+    "lat": 35.1739592,
+    "lon": 126.9006426
+  },
+  "tags": {
+    "alt_name": "수의과대학 1호관",
+    "building": "university",
+    "description": "전남대학교 수의과대학 1호관",
+    "name": "수의대 1호관",
+    "name:en": "College of Veterinary Medicine 1",
+    "name:ko": "수의대 1호관"
+  }
+},
+{
+  "type": "way",
+  "id": 1110523045,
+  "center": {
+    "lat": 35.1736587,
+    "lon": 126.9011460
+  },
+  "tags": {
+    "building": "university",
+    "name": "실험동물사",
+    "name:en": "Experimental Animal House",
+    "name:ko": "실험동물사"
+  }
+},
+{
+  "type": "way",
+  "id": 1110523046,
+  "center": {
+    "lat": 35.1735120,
+    "lon": 126.9009386
+  },
+  "tags": {
+    "building": "university",
+    "name": "생체재료개발센터",
+    "name:en": "Biomaterial R&BD Center",
+    "name:ko": "생체재료개발센터",
+    "website": "http://bmccro.com/main/"
+  }
+},
+{
+  "type": "way",
+  "id": 1120751457,
+  "center": {
+    "lat": 35.1764362,
+    "lon": 126.8993045
+  },
+  "tags": {
+    "alt_name": "이룰학사",
+    "building": "dormitory",
+    "building:levels": "7",
+    "description": "전남대학교 생활관 7호관 (이룰학사)",
+    "name": "생활관 7호관 이룰학사",
+    "name:en": "Residence Hall 7",
+    "name:ko": "생활관 7호관 이룰학사",
+    "website": "https://dormitory.jnu.ac.kr/Main.aspx"
+  }
+},
+{
+  "type": "way",
+  "id": 1120751458,
+  "center": {
+    "lat": 35.1763459,
+    "lon": 126.8998795
+  },
+  "tags": {
+    "building": "dormitory",
+    "description": "전남대학교 생활관 8호관 (한울학사)",
+    "name": "생활관 8호관 한울학사",
+    "name:en": "Residence Hall 8",
+    "name:ko": "생활관 8호관 한울학사",
+    "website": "https://dormitory.jnu.ac.kr/Main.aspx"
+  }
+},
+{
+  "type": "way",
+  "id": 1120922148,
+  "center": {
+    "lat": 35.1689520,
+    "lon": 126.9100935
+  },
+  "tags": {
+    "addr:housenumber": "82-5",
+    "addr:postcode": "61218",
+    "addr:street": "서양로",
+    "amenity": "place_of_worship",
+    "building": "yes",
+    "building:levels": "3",
+    "denomination": "won",
+    "name": "원불교 중흥교당",
+    "religion": "buddhist"
+  }
+},
+{
+  "type": "way",
+  "id": 1120922162,
+  "center": {
+    "lat": 35.1692677,
+    "lon": 126.9094506
+  },
+  "tags": {
+    "addr:housenumber": "78",
+    "addr:postcode": "61218",
+    "addr:street": "서양로",
+    "amenity": "childcare",
+    "building": "yes",
+    "name": "한마음어린이집"
+  }
+},
+{
+  "type": "way",
+  "id": 1120956383,
+  "center": {
+    "lat": 35.1751715,
+    "lon": 126.9039775
+  },
+  "tags": {
+    "building": "university",
+    "name": "사회과학대학",
+    "name:en": "College of Social Sciences",
+    "name:ko": "사회과학대학",
+    "website": "https://socsci.jnu.ac.kr/socsci/index.do"
+  }
+},
+{
+  "type": "way",
+  "id": 1120956384,
+  "center": {
+    "lat": 35.1751111,
+    "lon": 126.9037911
+  },
+  "tags": {
+    "building": "university",
+    "name": "사회과학대학별관",
+    "name:en": "College of Social Sciences",
+    "name:ko": "사회과학대학별관",
+    "website": "https://socsci.jnu.ac.kr/socsci/index.do"
+  }
+},
+{
+  "type": "way",
+  "id": 1120956385,
+  "center": {
+    "lat": 35.1767184,
+    "lon": 126.9057211
+  },
+  "tags": {
+    "amenity": "library",
+    "building": "university",
+    "name": "정보마루",
+    "name:en": "Jeongbo Maru",
+    "name:ko": "정보마루",
+    "website": "http://lib.jnu.ac.kr/"
+  }
+},
+{
+  "type": "way",
+  "id": 1125131708,
+  "center": {
+    "lat": 35.1766690,
+    "lon": 126.9036156
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "5",
+    "name": "경영대 2호관",
+    "name:en": "College of Administration 2",
+    "name:ko": "경영대 2호관",
+    "start_date": "1985"
+  }
+},
+{
+  "type": "way",
+  "id": 1125131712,
+  "center": {
+    "lat": 35.1766834,
+    "lon": 126.9038924
+  },
+  "tags": {
+    "building": "warehouse",
+    "building:levels": "1",
+    "name": "경영대 창고",
+    "name:ko": "경영대 창고",
+    "start_date": "1981"
+  }
+},
+{
+  "type": "way",
+  "id": 1125131715,
+  "center": {
+    "lat": 35.1766832,
+    "lon": 126.9039926
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "5",
+    "name": "경영대 1호관",
+    "name:en": "College of Administration 1",
+    "name:ko": "경영대 1호관",
+    "start_date": "1999"
+  }
+},
+{
+  "type": "way",
+  "id": 1125131723,
+  "center": {
+    "lat": 35.1771456,
+    "lon": 126.9031892
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "9",
+    "name": "진리관",
+    "name:en": "Jinri Building",
+    "name:ko": "진리관"
+  }
+},
+{
+  "type": "way",
+  "id": 1125136653,
+  "center": {
+    "lat": 35.1779915,
+    "lon": 126.9051728
+  },
+  "tags": {
+    "building": "university",
+    "name": "인문대 2호관",
+    "name:en": "College of Humanities 2",
+    "name:ko": "인문대 2호관"
+  }
+},
+{
+  "type": "way",
+  "id": 1125136664,
+  "center": {
+    "lat": 35.1778162,
+    "lon": 126.9058046
+  },
+  "tags": {
+    "building": "university",
+    "name": "사범대 1호관",
+    "name:en": "College of Education 1",
+    "name:ko": "사범대 1호관"
+  }
+},
+{
+  "type": "way",
+  "id": 1125165972,
+  "center": {
+    "lat": 35.1794773,
+    "lon": 126.9054729
+  },
+  "tags": {
+    "building": "university",
+    "name": "예술대 1호관",
+    "name:en": "College of Arts 1",
+    "name:ko": "예술대 1호관"
+  }
+},
+{
+  "type": "way",
+  "id": 1125166003,
+  "center": {
+    "lat": 35.1800385,
+    "lon": 126.9053008
+  },
+  "tags": {
+    "building": "university",
+    "name": "예술대 3호관",
+    "name:en": "College of Arts 3",
+    "name:ko": "예술대 3호관"
+  }
+},
+{
+  "type": "way",
+  "id": 1125314697,
+  "center": {
+    "lat": 35.1780393,
+    "lon": 126.9068541
+  },
+  "tags": {
+    "amenity": "library",
+    "building": "yes",
+    "name": "도서관 별관",
+    "name:en": "Library Annex",
+    "name:ko": "도서관 별관"
+  }
+},
+{
+  "type": "way",
+  "id": 1125314698,
+  "center": {
+    "lat": 35.1783597,
+    "lon": 126.9068494
+  },
+  "tags": {
+    "amenity": "library",
+    "building": "yes",
+    "name": "도서관 열람실",
+    "name:en": "Library Reading Room",
+    "name:ko": "도서관 열람실"
+  }
+},
+{
+  "type": "way",
+  "id": 1125454139,
+  "center": {
+    "lat": 35.1804092,
+    "lon": 126.9063622
+  },
+  "tags": {
+    "building": "university",
+    "name": "예술대 2호관",
+    "name:en": "Culture of Arts 2",
+    "name:ko": "예술대 2호관"
+  }
+},
+{
+  "type": "way",
+  "id": 1125454150,
+  "center": {
+    "lat": 35.1806889,
+    "lon": 126.9050271
+  },
+  "tags": {
+    "building": "dormitory",
+    "name": "생활관 9B동 예향학사",
+    "name:en": "Residence Hall 9B",
+    "name:ko": "생활관 9B동 예향학사"
+  }
+},
+{
+  "type": "way",
+  "id": 1125454151,
+  "center": {
+    "lat": 35.1808153,
+    "lon": 126.9059247
+  },
+  "tags": {
+    "building": "dormitory",
+    "name": "생활관 9C동 예향학사",
+    "name:en": "Residence Hall 9C",
+    "name:ko": "생활관 9C동 예향학사"
+  }
+},
+{
+  "type": "way",
+  "id": 1125454152,
+  "center": {
+    "lat": 35.1811086,
+    "lon": 126.9049904
+  },
+  "tags": {
+    "building": "dormitory",
+    "name": "생활관 9A동 예향학사",
+    "name:en": "Residence Hall 9A",
+    "name:ko": "생활관 9A동 예향학사"
+  }
+},
+{
+  "type": "way",
+  "id": 1125454153,
+  "center": {
+    "lat": 35.1812281,
+    "lon": 126.9059033
+  },
+  "tags": {
+    "building": "dormitory",
+    "layer": "1",
+    "name": "생활관 9D동 예향학사",
+    "name:en": "Residence Hall 9D",
+    "name:ko": "생활관 9D동 예향학사"
+  }
+},
+{
+  "type": "way",
+  "id": 1125454154,
+  "center": {
+    "lat": 35.1810585,
+    "lon": 126.9054620
+  },
+  "tags": {
+    "building": "university",
+    "name": "예향학사",
+    "name:en": "Residence Hall 9",
+    "name:ko": "예향학사"
+  }
+},
+{
+  "type": "way",
+  "id": 1125468821,
+  "center": {
+    "lat": 35.1806439,
+    "lon": 126.9067852
+  },
+  "tags": {
+    "building": "university",
+    "name": "예술대 조소관",
+    "name:en": "Sculpture Hall",
+    "name:ko": "예술대 조소관"
+  }
+},
+{
+  "type": "way",
+  "id": 1125468826,
+  "center": {
+    "lat": 35.1809326,
+    "lon": 126.9072175
+  },
+  "tags": {
+    "building": "university",
+    "name": "산학협력관3",
+    "name:en": "Industry-Academy Cooperation Center 3",
+    "name:ko": "산학협력관3"
+  }
+},
+{
+  "type": "way",
+  "id": 1125468831,
+  "center": {
+    "lat": 35.1812601,
+    "lon": 126.9071245
+  },
+  "tags": {
+    "building": "university",
+    "name": "전남대 정비센터",
+    "name:en": "Car Repair Center",
+    "name:ko": "전남대 정비센터",
+    "shop": "car_repair"
+  }
+},
+{
+  "type": "way",
+  "id": 1125468846,
+  "center": {
+    "lat": 35.1814313,
+    "lon": 126.9076492
+  },
+  "tags": {
+    "building": "university",
+    "name": "산학협력관2",
+    "name:en": "Industry-Academy Cooperation Center 2",
+    "name:ko": "산학협력관2"
+  }
+},
+{
+  "type": "way",
+  "id": 1125468849,
+  "center": {
+    "lat": 35.1814226,
+    "lon": 126.9083191
+  },
+  "tags": {
+    "building": "university",
+    "name": "만들마루",
+    "name:en": "Maker Space",
+    "name:ko": "만들마루",
+    "website": "http://mandulmaru.net/"
+  }
+},
+{
+  "type": "way",
+  "id": 1125468855,
+  "center": {
+    "lat": 35.1791286,
+    "lon": 126.9070256
+  },
+  "tags": {
+    "building": "university",
+    "name": "미래교육관",
+    "name:en": "Future Education Building",
+    "name:ko": "미래교육관"
+  }
+},
+{
+  "type": "way",
+  "id": 1125468860,
+  "center": {
+    "lat": 35.1792619,
+    "lon": 126.9073296
+  },
+  "tags": {
+    "building": "yes",
+    "military": "office",
+    "name": "105학군단",
+    "name:en": "Reserve Officers Training Course 105",
+    "name:ko": "105학군단"
+  }
+},
+{
+  "type": "way",
+  "id": 1125468861,
+  "center": {
+    "lat": 35.1794061,
+    "lon": 126.9076983
+  },
+  "tags": {
+    "building": "university",
+    "name": "창조관",
+    "name:en": "Changjo Building",
+    "name:ko": "창조관"
+  }
+},
+{
+  "type": "way",
+  "id": 1125468871,
+  "center": {
+    "lat": 35.1788827,
+    "lon": 126.9068567
+  },
+  "tags": {
+    "building": "university",
+    "name": "민주역사기념관",
+    "name:en": "Democratic History Memorial Hall",
+    "name:ko": "민주역사기념관"
+  }
+},
+{
+  "type": "way",
+  "id": 1125471453,
+  "center": {
+    "lat": 35.1788556,
+    "lon": 126.9084105
+  },
+  "tags": {
+    "building": "university",
+    "name": "공과대 2호관 별관",
+    "name:en": "College of Engineering 2 Annex",
+    "name:ko": "공과대 2호관 별관"
+  }
+},
+{
+  "type": "way",
+  "id": 1125471462,
+  "center": {
+    "lat": 35.1792754,
+    "lon": 126.9083177
+  },
+  "tags": {
+    "building": "university",
+    "name": "공과대 음향실험실",
+    "name:en": "Acoustical Laboratory",
+    "name:ko": "공과대 음향실험실"
+  }
+},
+{
+  "type": "way",
+  "id": 1125544293,
+  "center": {
+    "lat": 35.1814718,
+    "lon": 126.9092287
+  },
+  "tags": {
+    "building": "university",
+    "name": "G&R허브",
+    "name:en": "Global & Research Hub",
+    "name:ko": "G&R허브"
+  }
+},
+{
+  "type": "way",
+  "id": 1126683657,
+  "center": {
+    "lat": 35.1802112,
+    "lon": 126.9094468
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "1",
+    "name": "자동차교육실습동",
+    "name:en": "Automobile Practice Building",
+    "name:ko": "자동차교육실습동"
+  }
+},
+{
+  "type": "way",
+  "id": 1126683658,
+  "center": {
+    "lat": 35.1802670,
+    "lon": 126.9097461
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "2",
+    "name": "공과대 엔진실습동",
+    "name:en": "Engine Test Laboratory",
+    "name:ko": "공과대 엔진실습동"
+  }
+},
+{
+  "type": "way",
+  "id": 1126683660,
+  "center": {
+    "lat": 35.1799625,
+    "lon": 126.9097383
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "4",
+    "name": "공과대 중량실험동",
+    "name:en": "Mechanical Engineering Research Building",
+    "name:ko": "공과대 중량실험동"
+  }
+},
+{
+  "type": "way",
+  "id": 1126709171,
+  "center": {
+    "lat": 35.1792279,
+    "lon": 126.9085417
+  },
+  "tags": {
+    "building": "university",
+    "name": "바이오하우징 실험주택",
+    "name:en": "Biohousing Test House",
+    "name:ko": "바이오하우징 실험주택"
+  }
+},
+{
+  "type": "way",
+  "id": 1126709172,
+  "center": {
+    "lat": 35.1794157,
+    "lon": 126.9090540
+  },
+  "tags": {
+    "building": "university",
+    "name": "바이오하우징 실험동",
+    "name:en": "Biohousing Laboratory",
+    "name:ko": "바이오하우징 실험동"
+  }
+},
+{
+  "type": "way",
+  "id": 1126709187,
+  "center": {
+    "lat": 35.1796857,
+    "lon": 126.9101460
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "6",
+    "name": "공과대 자동차공학관",
+    "name:en": "Automotive Engineering Building",
+    "name:ko": "공과대 자동차공학관"
+  }
+},
+{
+  "type": "way",
+  "id": 1127759924,
+  "center": {
+    "lat": 35.1808369,
+    "lon": 126.9109332
+  },
+  "tags": {
+    "building": "university",
+    "name": "생활관 관리동",
+    "name:en": "Residence Hall Office",
+    "name:ko": "생활관 관리동"
+  }
+},
+{
+  "type": "way",
+  "id": 1128214491,
+  "center": {
+    "lat": 35.1805205,
+    "lon": 126.9111867
+  },
+  "tags": {
+    "building": "dormitory",
+    "name": "생활관 5호관 정아학사",
+    "name:en": "Residence Hall 5",
+    "name:ko": "생활관 5호관 정아학사"
+  }
+},
+{
+  "type": "way",
+  "id": 1128214492,
+  "center": {
+    "lat": 35.1802163,
+    "lon": 126.9113029
+  },
+  "tags": {
+    "building": "dormitory",
+    "name": "생활관 6호관 보람학사",
+    "name:en": "Residence Hall 6",
+    "name:ko": "생활관 6호관 보람학사"
+  }
+},
+{
+  "type": "way",
+  "id": 1128214504,
+  "center": {
+    "lat": 35.1796764,
+    "lon": 126.9114546
+  },
+  "tags": {
+    "building": "university",
+    "name": "파워플랜트",
+    "name:en": "Power Plant",
+    "name:ko": "파워플랜트"
+  }
+},
+{
+  "type": "way",
+  "id": 1131138757,
+  "center": {
+    "lat": 35.1785991,
+    "lon": 126.9089870
+  },
+  "tags": {
+    "building": "university",
+    "name": "공과대 4호관",
+    "name:en": "College of Engineering 4",
+    "name:ko": "공과대 4호관"
+  }
+},
+{
+  "type": "way",
+  "id": 1131138758,
+  "center": {
+    "lat": 35.1782709,
+    "lon": 126.9092738
+  },
+  "tags": {
+    "building": "university",
+    "name": "공과대 7호관",
+    "name:en": "College of Engineering 7",
+    "name:ko": "공과대 7호관"
+  }
+},
+{
+  "type": "way",
+  "id": 1131867320,
+  "center": {
+    "lat": 35.1773106,
+    "lon": 126.9095300
+  },
+  "tags": {
+    "building": "university",
+    "name": "자연과학대학 1호관",
+    "name:en": "College of Natural Sciences 1",
+    "name:ko": "자연과학대학 1호관"
+  }
+},
+{
+  "type": "way",
+  "id": 1131867341,
+  "center": {
+    "lat": 35.1766077,
+    "lon": 126.9093103
+  },
+  "tags": {
+    "building": "university",
+    "name": "한국기초과학지원연구원 광주센터",
+    "name:en": "Korea Basic Science Institute Gwangju Center",
+    "name:ko": "한국기초과학지원연구원 광주센터",
+    "office": "research"
+  }
+},
+{
+  "type": "way",
+  "id": 1131867349,
+  "center": {
+    "lat": 35.1768790,
+    "lon": 126.9100112
+  },
+  "tags": {
+    "building": "university",
+    "name": "자연과학대학 2호관",
+    "name:en": "College of Natural Sciences 2",
+    "name:ko": "자연과학대학 2호관"
+  }
+},
+{
+  "type": "way",
+  "id": 1132685241,
+  "center": {
+    "lat": 35.1853364,
+    "lon": 126.9152012
+  },
+  "tags": {
+    "addr:housenumber": "31",
+    "addr:street": "서하로316번길",
+    "amenity": "place_of_worship",
+    "building": "church",
+    "name": "광주애양교회",
+    "name:ko": "광주애양교회",
+    "religion": "christian"
+  }
+},
+{
+  "type": "way",
+  "id": 1132919970,
+  "center": {
+    "lat": 35.1752137,
+    "lon": 126.9111064
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "4",
+    "name": "용봉문화관",
+    "name:en": "Yongbong Culture Hall",
+    "name:ko": "용봉문화관",
+    "opening_hours": "Mo-Fr 10:00-17:00",
+    "operator:type": "university",
+    "phone": "+82 62 530 3583"
+  }
+},
+{
+  "type": "way",
+  "id": 1132919979,
+  "center": {
+    "lat": 35.1736442,
+    "lon": 126.9103992
+  },
+  "tags": {
+    "building": "yes",
+    "name": "어린이집",
+    "name:en": "Nursery Home",
+    "name:ko": "어린이집",
+    "website": "https://kidshome.jnu.ac.kr/sites/kidshome/index.do"
+  }
+},
+{
+  "type": "way",
+  "id": 1132920001,
+  "center": {
+    "lat": 35.1731088,
+    "lon": 126.9093979
+  },
+  "tags": {
+    "building": "yes",
+    "name": "한국공룡연구센터",
+    "name:en": "Korea Dinosaur Research Center",
+    "name:ko": "한국공룡연구센터",
+    "office": "research",
+    "phone": "+82 62 530 0577",
+    "website": "http://dinorc.jnu.ac.kr/index.htm#"
+  }
+},
+{
+  "type": "way",
+  "id": 1132920002,
+  "center": {
+    "lat": 35.1731458,
+    "lon": 126.9095219
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "3",
+    "name": "연구실안전관리센터",
+    "name:en": "Laboratory Safety Management Center",
+    "name:ko": "연구실안전관리센터"
+  }
+},
+{
+  "type": "way",
+  "id": 1132920003,
+  "center": {
+    "lat": 35.1731736,
+    "lon": 126.9096967
+  },
+  "tags": {
+    "building": "university",
+    "name": "석면환경센터",
+    "name:en": "Center for Asbetos and Environment",
+    "name:ko": "석면환경센터"
+  }
+},
+{
+  "type": "way",
+  "id": 1132920008,
+  "center": {
+    "lat": 35.1746156,
+    "lon": 126.9116873
+  },
+  "tags": {
+    "building": "university",
+    "name": "사범대 체육교육관",
+    "name:en": "Physical Education Building",
+    "name:ko": "사범대 체육교육관"
+  }
+},
+{
+  "type": "way",
+  "id": 1132920027,
+  "center": {
+    "lat": 35.1749989,
+    "lon": 126.9124299
+  },
+  "tags": {
+    "building": "commercial",
+    "building:levels": "2",
+    "name": "산학협력브랜드숍",
+    "name:en": "Campus Lifestyle Selectshop",
+    "name:ko": "산학협력브랜드숍",
+    "operator": "주식회사 제이앤유글로벌",
+    "phone": "+82 62 530 0222",
+    "website": "https://smartstore.naver.com/everythingisokay_shop"
+  }
+},
+{
+  "type": "way",
+  "id": 1132920035,
+  "center": {
+    "lat": 35.1759249,
+    "lon": 126.9096579
+  },
+  "tags": {
+    "building": "university",
+    "name": "용지관 A동",
+    "name:en": "Yongji Hall A",
+    "name:ko": "용지관 A동"
+  }
+},
+{
+  "type": "way",
+  "id": 1132920036,
+  "center": {
+    "lat": 35.1754973,
+    "lon": 126.9095737
+  },
+  "tags": {
+    "building": "university",
+    "name": "용지관 C동",
+    "name:en": "Yongji Hall C",
+    "name:ko": "용지관 C동"
+  }
+},
+{
+  "type": "way",
+  "id": 1132920037,
+  "center": {
+    "lat": 35.1757978,
+    "lon": 126.9099320
+  },
+  "tags": {
+    "building": "university",
+    "name": "용지관 B동",
+    "name:en": "Yongji Hall B",
+    "name:ko": "용지관 B동"
+  }
+},
+{
+  "type": "way",
+  "id": 1132925642,
+  "center": {
+    "lat": 35.1759826,
+    "lon": 126.9104662
+  },
+  "tags": {
+    "building": "university",
+    "name": "공동실험실습관",
+    "name:en": "Center forResearch Facilities",
+    "name:ja": "共同実験実習館",
+    "name:ko": "공동실험실습관"
+  }
+},
+{
+  "type": "way",
+  "id": 1132925644,
+  "center": {
+    "lat": 35.1759148,
+    "lon": 126.9109052
+  },
+  "tags": {
+    "building": "university",
+    "name": "자연대 5호관",
+    "name:en": "College of Natural Sciences 5",
+    "name:ko": "자연대 5호관"
+  }
+},
+{
+  "type": "way",
+  "id": 1132925645,
+  "center": {
+    "lat": 35.1761824,
+    "lon": 126.9110315
+  },
+  "tags": {
+    "building": "university",
+    "name": "기초과학특성화관",
+    "name:en": "Basic Science Specialization Building",
+    "name:ko": "기초과학특성화관"
+  }
+},
+{
+  "type": "way",
+  "id": 1133066117,
+  "center": {
+    "lat": 35.1736987,
+    "lon": 126.9116255
+  },
+  "tags": {
+    "addr:city": "광주광역시",
+    "addr:district": "북구",
+    "addr:housenumber": "77",
+    "addr:postcode": "61187",
+    "addr:street": "우치로",
+    "building": "yes",
+    "government": "administrative",
+    "name": "북구청 별관",
+    "office": "government"
+  }
+},
+{
+  "type": "way",
+  "id": 1133066129,
+  "center": {
+    "lat": 35.1734259,
+    "lon": 126.9110243
+  },
+  "tags": {
+    "addr:city": "광주광역시",
+    "addr:district": "북구",
+    "addr:housenumber": "77",
+    "addr:postcode": "61187",
+    "addr:street": "우치로",
+    "building": "yes",
+    "government": "public_service",
+    "name": "북구청 복지누리동",
+    "name:en": "Bukgu Office Welfare Hall",
+    "name:ko": "북구청 복지누리동",
+    "office": "government"
+  }
+},
+{
+  "type": "way",
+  "id": 1133066130,
+  "center": {
+    "lat": 35.1735353,
+    "lon": 126.9113224
+  },
+  "tags": {
+    "addr:city": "광주광역시",
+    "addr:district": "북구",
+    "addr:housenumber": "135",
+    "addr:postcode": "61187",
+    "addr:street": "용봉로",
+    "building": "yes",
+    "fax": "+82 505 058 2517",
+    "government": "government",
+    "name": "북구선거관리위원회",
+    "name:en": "Bukgu National Election Commission",
+    "name:ko": "북구선거관리위원회",
+    "office": "government",
+    "operator": "광주광역시선거관리위원회",
+    "phone": "+82 62 526 1390",
+    "website": "https://gj.nec.go.kr/gj/bbs/B0000265/list.do?menuNo=600057"
+  }
+},
+{
+  "type": "way",
+  "id": 1133066131,
+  "center": {
+    "lat": 35.1730778,
+    "lon": 126.9102507
+  },
+  "tags": {
+    "amenity": "parking",
+    "building": "yes",
+    "name": "북구청 민원인주차장",
+    "name:en": "Bukgu District Office Parking Lot",
+    "name:ko": "북구청 민원인주차장",
+    "operator": "북구",
+    "operator:type": "government",
+    "parking": "multi-storey"
+  }
+},
+{
+  "type": "way",
+  "id": 1133066133,
+  "center": {
+    "lat": 35.1727409,
+    "lon": 126.9089340
+  },
+  "tags": {
+    "addr:city": "광주광역시",
+    "addr:district": "북구",
+    "addr:housenumber": "111",
+    "addr:postcode": "61187",
+    "addr:street": "용봉로",
+    "building": "yes",
+    "name": "광주상수도 북부요금센터",
+    "name:en": "Gwangju Metropolitan Waterworks Fare Center North",
+    "name:ko": "광주상수도 북부요금센터",
+    "office": "water_utility"
+  }
+},
+{
+  "type": "way",
+  "id": 1133066138,
+  "center": {
+    "lat": 35.1727544,
+    "lon": 126.9083078
+  },
+  "tags": {
+    "addr:city": "광주광역시",
+    "addr:district": "북구",
+    "addr:housenumber": "105",
+    "addr:postcode": "61187",
+    "addr:street": "용봉로",
+    "amenity": "community_centre",
+    "baby_feeding": "room",
+    "building": "yes",
+    "name": "북구행복어울림센터",
+    "name:en": "Bukgu Community Center",
+    "name:ko": "북구행복어울림센터",
+    "opening_hours": "Mo-Fr 09:00-18:00",
+    "start_date": "2022-01-12",
+    "website": "https://gbfmc.or.kr/menu.es?mid=a10403010000"
+  }
+},
+{
+  "type": "way",
+  "id": 1133070869,
+  "center": {
+    "lat": 35.1733705,
+    "lon": 126.9121365
+  },
+  "tags": {
+    "addr:city": "광주광역시",
+    "addr:district": "북구",
+    "addr:housenumber": "65",
+    "addr:postcode": "61217",
+    "addr:street": "우치로",
+    "baby_feeding": "room",
+    "building": "yes",
+    "building:levels": "5",
+    "government": "healthcare",
+    "name": "북구보건소",
+    "name:en": "Bukgu Public Health Center",
+    "name:ko": "북구보건소",
+    "office": "government",
+    "opening_hours": "Mo-Fr 09:00-18:00",
+    "phone": "+82 62 410 8119",
+    "website": "https://bukgu.gwangju.kr/health/"
+  }
+},
+{
+  "type": "way",
+  "id": 1133080171,
+  "center": {
+    "lat": 35.1742152,
+    "lon": 126.9129847
+  },
+  "tags": {
+    "addr:city": "광주광역시",
+    "addr:district": "북구",
+    "addr:housenumber": "76",
+    "addr:postcode": "61190",
+    "addr:street": "우치로",
+    "building": "commercial",
+    "building:levels": "4",
+    "name": "도원빌딩",
+    "name:en": "Dowon Building",
+    "name:ko": "도원빌딩"
+  }
+},
+{
+  "type": "way",
+  "id": 1133080174,
+  "center": {
+    "lat": 35.1740707,
+    "lon": 126.9131642
+  },
+  "tags": {
+    "addr:city": "광주광역시",
+    "addr:district": "북구",
+    "addr:housenumber": "4-8",
+    "addr:postcode": "61190",
+    "addr:street": "호동로",
+    "amenity": "restaurant",
+    "branch": "전대점",
+    "building": "commercial",
+    "cuisine": "chinese",
+    "delivery": "yes",
+    "name": "착한중식당",
+    "name:en": "Friendly Cuisine",
+    "name:ko": "착한중식당",
+    "phone": "+82 10 4378 3400"
+  }
+},
+{
+  "type": "way",
+  "id": 1133095833,
+  "center": {
+    "lat": 35.1743039,
+    "lon": 126.9132644
+  },
+  "tags": {
+    "addr:city": "광주광역시",
+    "addr:district": "북구",
+    "addr:housenumber": "4-3",
+    "addr:postcode": "61190",
+    "addr:street": "호동로",
+    "building": "commercial",
+    "name": "우리디자인",
+    "name:en": "Uri Design",
+    "name:ko": "우리디자인",
+    "shop": "copyshop"
+  }
+},
+{
+  "type": "way",
+  "id": 1133095836,
+  "center": {
+    "lat": 35.1738675,
+    "lon": 126.9135087
+  },
+  "tags": {
+    "addr:city": "광주광역시",
+    "addr:district": "북구",
+    "addr:housenumber": "1-6",
+    "addr:postcode": "61190",
+    "addr:street": "서방로",
+    "amenity": "restaurant",
+    "building": "commercial",
+    "cuisine": "asian",
+    "name": "태홍회관",
+    "name:en": "Taehong Center",
+    "name:ko": "태홍회관",
+    "phone": "+82 62 261 9289"
+  }
+},
+{
+  "type": "way",
+  "id": 1133095839,
+  "center": {
+    "lat": 35.1741567,
+    "lon": 126.9134614
+  },
+  "tags": {
+    "addr:city": "광주광역시",
+    "addr:district": "북구",
+    "addr:housenumber": "6-6",
+    "addr:postcode": "61190",
+    "addr:street": "호동로",
+    "building": "commercial",
+    "fax": "+82 62 266 6613",
+    "name": "국제직업전문학교",
+    "name:en": "Kukje Career School",
+    "name:ko": "국제직업전문학교",
+    "office": "employment_agency",
+    "phone": "+82 62 266 6617",
+    "website": "http://www.kjca.co.kr/?site=jeonnam"
+  }
+},
+{
+  "type": "way",
+  "id": 1133119852,
+  "center": {
+    "lat": 35.1736661,
+    "lon": 126.9138622
+  },
+  "tags": {
+    "addr:city": "광주광역시",
+    "addr:district": "북구",
+    "addr:housenumber": "7",
+    "addr:postcode": "61190",
+    "addr:street": "서방로",
+    "brand": "송미모텔",
+    "building": "commercial",
+    "name": "송미모텔",
+    "name:en": "Songmi Motel",
+    "name:ko": "송미모텔",
+    "tourism": "motel"
+  }
+},
+{
+  "type": "way",
+  "id": 1133467983,
+  "center": {
+    "lat": 35.1739257,
+    "lon": 126.9138373
+  },
+  "tags": {
+    "addr:city": "광주광역시",
+    "addr:district": "북구",
+    "addr:housenumber": "8-10",
+    "addr:postcode": "61190",
+    "addr:street": "호동로",
+    "amenity": "prep_school",
+    "building": "commercial",
+    "name": "광주한빛고시학원",
+    "name:en": "Gwangju Hanbit Exam Academy",
+    "name:ko": "광주한빛고시학원"
+  }
+},
+{
+  "type": "way",
+  "id": 1133467986,
+  "center": {
+    "lat": 35.1742323,
+    "lon": 126.9138588
+  },
+  "tags": {
+    "addr:city": "광주광역시",
+    "addr:district": "북구",
+    "addr:housenumber": "6-11",
+    "addr:postcode": "61190",
+    "addr:street": "호동로",
+    "amenity": "prep_school",
+    "branch": "광주캠퍼스",
+    "building": "commercial",
+    "name": "윌비스경찰학원",
+    "name:en": "Willbes Police Academy",
+    "name:ko": "윌비스 경찰학원",
+    "phone": "+82 62 514 4560",
+    "website": "https://police.willbes.net/pass/campus/show/code/605006"
+  }
+},
+{
+  "type": "way",
+  "id": 1133467996,
+  "center": {
+    "lat": 35.1743402,
+    "lon": 126.9139422
+  },
+  "tags": {
+    "addr:city": "광주광역시",
+    "addr:district": "북구",
+    "addr:housenumber": "10-10",
+    "addr:postcode": "61190",
+    "addr:street": "호동로",
+    "building": "residential",
+    "name": "뭉치원룸"
+  }
+},
+{
+  "type": "way",
+  "id": 1133467997,
+  "center": {
+    "lat": 35.1744110,
+    "lon": 126.9138518
+  },
+  "tags": {
+    "addr:city": "광주광역시",
+    "addr:district": "북구",
+    "addr:housenumber": "10-8",
+    "addr:postcode": "61190",
+    "addr:street": "호동로",
+    "building": "residential",
+    "name": "세진원룸",
+    "name:en": "Sejin Oneroom",
+    "name:ko": "세진원룸"
+  }
+},
+{
+  "type": "way",
+  "id": 1134687360,
+  "center": {
+    "lat": 35.1749488,
+    "lon": 126.9144800
+  },
+  "tags": {
+    "addr:housenumber": "18",
+    "addr:postcode": "61190",
+    "addr:street": "호동로",
+    "amenity": "cafe",
+    "branch": "광주전남대점",
+    "brand": "커피스미스",
+    "brand:en": "Coffeesmith",
+    "brand:ko": "커피스미스",
+    "brand:wikidata": "Q120998545",
+    "building": "commercial",
+    "building:levels": "4",
+    "cuisine": "coffee_shop",
+    "name": "커피스미스",
+    "name:en": "Coffeesmith",
+    "name:ko": "커피스미스",
+    "phone": "+82 70 7585 7568",
+    "takeaway": "yes",
+    "website": "https://www.instagram.com/coffeesmith.jnd/"
+  }
+},
+{
+  "type": "way",
+  "id": 1135122957,
+  "center": {
+    "lat": 35.1737933,
+    "lon": 126.9142779
+  },
+  "tags": {
+    "addr:housenumber": "8",
+    "addr:postcode": "61190",
+    "addr:street": "서방로9번길",
+    "building": "commercial",
+    "building:levels": "3",
+    "name": "삼호빌딩",
+    "name:en": "Samho Building",
+    "name:ko": "삼호빌딩"
+  }
+},
+{
+  "type": "way",
+  "id": 1135122959,
+  "center": {
+    "lat": 35.1738335,
+    "lon": 126.9144290
+  },
+  "tags": {
+    "addr:housenumber": "10-8",
+    "addr:postcode": "61190",
+    "addr:street": "서방로9번길",
+    "building": "apartments",
+    "building:levels": "4",
+    "name": "엘리트고시텔",
+    "name:en": "Elite Residence",
+    "name:ko": "엘리트고시텔"
+  }
+},
+{
+  "type": "way",
+  "id": 1135122960,
+  "center": {
+    "lat": 35.1738118,
+    "lon": 126.9145546
+  },
+  "tags": {
+    "addr:housenumber": "10-12",
+    "addr:postcode": "61190",
+    "addr:street": "서방로9번길",
+    "building": "apartments",
+    "building:levels": "4",
+    "name": "퍼스트고시텔",
+    "name:en": "First Residence",
+    "name:ko": "퍼스트고시텔"
+  }
+},
+{
+  "type": "way",
+  "id": 1135122961,
+  "center": {
+    "lat": 35.1737880,
+    "lon": 126.9146971
+  },
+  "tags": {
+    "addr:housenumber": "10-18",
+    "addr:postcode": "61190",
+    "addr:street": "서방로9번길",
+    "building": "apartments",
+    "name": "올패스고시텔",
+    "name:en": "Allpass Residence",
+    "name:ko": "올패스고시텔"
+  }
+},
+{
+  "type": "way",
+  "id": 1135122962,
+  "center": {
+    "lat": 35.1737656,
+    "lon": 126.9148227
+  },
+  "tags": {
+    "addr:housenumber": "9-9",
+    "addr:postcode": "61190",
+    "addr:street": "서방로19번길",
+    "building": "apartments",
+    "name": "신세계고시텔",
+    "name:en": "Sinsegye Residence",
+    "name:ko": "신세계고시텔"
+  }
+},
+{
+  "type": "way",
+  "id": 1135122963,
+  "center": {
+    "lat": 35.1737437,
+    "lon": 126.9149480
+  },
+  "tags": {
+    "addr:housenumber": "9-7",
+    "addr:postcode": "61190",
+    "addr:street": "서방로19번길",
+    "building": "apartments",
+    "name": "서울고시텔",
+    "name:en": "Seoul Residence",
+    "name:ko": "서울고시텔"
+  }
+},
+{
+  "type": "way",
+  "id": 1135122964,
+  "center": {
+    "lat": 35.1737197,
+    "lon": 126.9151039
+  },
+  "tags": {
+    "addr:housenumber": "9-5",
+    "addr:postcode": "61190",
+    "addr:street": "서방로19번길",
+    "building": "apartments",
+    "name": "베스트하우스",
+    "name:en": "Best House",
+    "name:ko": "베스트하우스"
+  }
+},
+{
+  "type": "way",
+  "id": 1135122965,
+  "center": {
+    "lat": 35.1737379,
+    "lon": 126.9152789
+  },
+  "tags": {
+    "addr:housenumber": "9-1",
+    "addr:postcode": "61190",
+    "addr:street": "서방로19번길",
+    "building": "apartments",
+    "name": "현대고시빌",
+    "name:en": "Hyeondae Residence",
+    "name:ko": "현대고시빌"
+  }
+},
+{
+  "type": "way",
+  "id": 1135122970,
+  "center": {
+    "lat": 35.1736622,
+    "lon": 126.9145356
+  },
+  "tags": {
+    "addr:housenumber": "11-1",
+    "addr:postcode": "61190",
+    "addr:street": "서방로",
+    "building": "apartments",
+    "name": "탑고시텔",
+    "name:en": "Top Residence",
+    "name:ko": "탑고시텔"
+  }
+},
+{
+  "type": "way",
+  "id": 1135443558,
+  "center": {
+    "lat": 35.1741743,
+    "lon": 126.9143744
+  },
+  "tags": {
+    "addr:housenumber": "16",
+    "addr:postcode": "61190",
+    "addr:street": "서방로9번길",
+    "branch": "전남대점",
+    "building": "commercial",
+    "building:levels": "2",
+    "name": "이철헤어커커",
+    "name:en": "Lee Chul Hair Kerker",
+    "name:ko": "이철헤어커커",
+    "opening_hours": "Mo-Su 10:00-21:00",
+    "operator": "Lee Chul Hair Kerker",
+    "phone": "+82 62 227 2326",
+    "shop": "hairdresser",
+    "unisex": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 1135443565,
+  "center": {
+    "lat": 35.1740176,
+    "lon": 126.9146450
+  },
+  "tags": {
+    "addr:housenumber": "9-13",
+    "addr:postcode": "61190",
+    "addr:street": "서방로9번길",
+    "amenity": "cafe",
+    "building": "residential",
+    "name": "더스누즈버튼",
+    "name:en": "The Snooze Button",
+    "name:ko": "더스누즈버튼",
+    "opening_hours": "Mo-Su 11:00-22:30",
+    "phone": "+82 62 266 1240"
+  }
+},
+{
+  "type": "way",
+  "id": 1135443568,
+  "center": {
+    "lat": 35.1740005,
+    "lon": 126.9149254
+  },
+  "tags": {
+    "addr:housenumber": "9-10",
+    "addr:postcode": "61190",
+    "addr:street": "서방로19번길",
+    "building": "apartments",
+    "name": "래미안고시텔",
+    "name:en": "Raemian Residence",
+    "name:ko": "래미안고시텔"
+  }
+},
+{
+  "type": "way",
+  "id": 1135443569,
+  "center": {
+    "lat": 35.1739785,
+    "lon": 126.9150593
+  },
+  "tags": {
+    "addr:housenumber": "9-8",
+    "addr:postcode": "61190",
+    "addr:street": "서방로19번길",
+    "building": "apartments",
+    "name": "하버드고시텔",
+    "name:en": "Harvard Residence",
+    "name:ko": "하버드고시텔"
+  }
+},
+{
+  "type": "way",
+  "id": 1135443576,
+  "center": {
+    "lat": 35.1743014,
+    "lon": 126.9145865
+  },
+  "tags": {
+    "addr:housenumber": "69",
+    "addr:postcode": "61190",
+    "addr:street": "중문로9번길",
+    "building": "apartments",
+    "building:levels": "4",
+    "name": "힐링하우스",
+    "name:en": "Healing House",
+    "name:ko": "힐링하우스"
+  }
+},
+{
+  "type": "way",
+  "id": 1135443577,
+  "center": {
+    "lat": 35.1743126,
+    "lon": 126.9147976
+  },
+  "tags": {
+    "addr:housenumber": "67",
+    "addr:postcode": "61190",
+    "addr:street": "중문로9번길",
+    "building": "apartments",
+    "name": "하늘마루",
+    "name:en": "Haneulmaru",
+    "name:ko": "하늘마루"
+  }
+},
+{
+  "type": "way",
+  "id": 1135443579,
+  "center": {
+    "lat": 35.1741923,
+    "lon": 126.9151777
+  },
+  "tags": {
+    "addr:housenumber": "59",
+    "addr:postcode": "61190",
+    "addr:street": "중문로9번길",
+    "amenity": "prep_school",
+    "building": "commercial",
+    "name": "유일독서실",
+    "name:en": "Yuil Study Center",
+    "name:ko": "유일독서실",
+    "phone": "+82 62 266 7485"
+  }
+},
+{
+  "type": "way",
+  "id": 1135443581,
+  "center": {
+    "lat": 35.1739151,
+    "lon": 126.9152124
+  },
+  "tags": {
+    "addr:housenumber": "9-4",
+    "addr:postcode": "61190",
+    "addr:street": "서방로19번길",
+    "amenity": "cafe",
+    "building": "residential",
+    "name": "다이브 인 커피",
+    "name:en": "Dive In Coffee",
+    "name:ko": "다이브 인 커피",
+    "opening_hours": "Mo-Su 12:00-23:30",
+    "phone": "+82 62 266 5305"
+  }
+},
+{
+  "type": "way",
+  "id": 1135443583,
+  "center": {
+    "lat": 35.1740427,
+    "lon": 126.9153922
+  },
+  "tags": {
+    "addr:housenumber": "15",
+    "addr:postcode": "61190",
+    "addr:street": "서방로19번길",
+    "building": "apartments",
+    "name": "행운하우스",
+    "name:en": "Forturne House",
+    "name:ko": "행운하우스"
+  }
+},
+{
+  "type": "way",
+  "id": 1135912922,
+  "center": {
+    "lat": 35.1748025,
+    "lon": 126.9144314
+  },
+  "tags": {
+    "addr:housenumber": "30",
+    "addr:postcode": "61190",
+    "addr:street": "서방로9번길",
+    "amenity": "cafe",
+    "branch": "광주북구청점",
+    "brand": "스타벅스",
+    "brand:en": "Starbucks",
+    "brand:ko": "스타벅스",
+    "brand:wikidata": "Q37158",
+    "building": "commercial",
+    "cuisine": "coffee_shop",
+    "internet_access": "wlan",
+    "internet_access:fee": "customers",
+    "name": "스타벅스",
+    "name:en": "Starbucks",
+    "name:ko": "스타벅스",
+    "phone": "+82 1522 3232",
+    "takeaway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 1135912924,
+  "center": {
+    "lat": 35.1747249,
+    "lon": 126.9146662
+  },
+  "tags": {
+    "addr:housenumber": "30-6",
+    "addr:postcode": "61190",
+    "addr:street": "서방로9번길",
+    "building": "apartments",
+    "name": "베스트빌",
+    "name:en": "Best Vill",
+    "name:ko": "베스트빌"
+  }
+},
+{
+  "type": "way",
+  "id": 1135912925,
+  "center": {
+    "lat": 35.1747029,
+    "lon": 126.9148219
+  },
+  "tags": {
+    "addr:housenumber": "30-8",
+    "addr:postcode": "61190",
+    "addr:street": "서방로9번길",
+    "building": "apartments",
+    "name": "베스트타운",
+    "name:en": "Best Town",
+    "name:ko": "베스트타운"
+  }
+},
+{
+  "type": "way",
+  "id": 1135912926,
+  "center": {
+    "lat": 35.1746770,
+    "lon": 126.9149610
+  },
+  "tags": {
+    "addr:housenumber": "30-12",
+    "addr:postcode": "61190",
+    "addr:street": "서방로9번길",
+    "building": "apartments",
+    "name": "해피고시텔",
+    "name:en": "Happy Residence",
+    "name:ko": "해피고시텔"
+  }
+},
+{
+  "type": "way",
+  "id": 1135912927,
+  "center": {
+    "lat": 35.1746640,
+    "lon": 126.9150994
+  },
+  "tags": {
+    "addr:housenumber": "31-11",
+    "addr:postcode": "61190",
+    "addr:street": "서방로19번길",
+    "building": "apartments",
+    "name": "루이하우스",
+    "name:en": "Louie House",
+    "name:ko": "루이하우스"
+  }
+},
+{
+  "type": "way",
+  "id": 1135912929,
+  "center": {
+    "lat": 35.1746726,
+    "lon": 126.9152269
+  },
+  "tags": {
+    "addr:housenumber": "31-9",
+    "addr:postcode": "61190",
+    "addr:street": "서방로19번길",
+    "building": "apartments",
+    "name": "행복빌",
+    "name:en": "Happy Vill",
+    "name:ko": "행복빌"
+  }
+},
+{
+  "type": "way",
+  "id": 1135912930,
+  "center": {
+    "lat": 35.1746165,
+    "lon": 126.9155255
+  },
+  "tags": {
+    "addr:housenumber": "31-1",
+    "addr:postcode": "61190",
+    "addr:street": "서방로19번길",
+    "building": "apartments",
+    "name": "성안빌",
+    "name:en": "Seongan Vill",
+    "name:ko": "성안빌"
+  }
+},
+{
+  "type": "way",
+  "id": 1135912932,
+  "center": {
+    "lat": 35.1744904,
+    "lon": 126.9147914
+  },
+  "tags": {
+    "addr:housenumber": "68-4",
+    "addr:postcode": "61190",
+    "addr:street": "중문로9번길",
+    "building": "apartments",
+    "name": "드림하우스",
+    "name:en": "Dream House",
+    "name:ko": "드림하우스"
+  }
+},
+{
+  "type": "way",
+  "id": 1135912933,
+  "center": {
+    "lat": 35.1744670,
+    "lon": 126.9149354
+  },
+  "tags": {
+    "addr:housenumber": "64",
+    "addr:postcode": "61190",
+    "addr:street": "중문로9번길",
+    "building": "apartments",
+    "name": "위너스빌",
+    "name:en": "Winners Vill",
+    "name:ko": "위너스빌"
+  }
+},
+{
+  "type": "way",
+  "id": 1135916476,
+  "center": {
+    "lat": 35.1748792,
+    "lon": 126.9153030
+  },
+  "tags": {
+    "addr:housenumber": "26-1",
+    "addr:postcode": "61190",
+    "addr:street": "호동로",
+    "amenity": "cafe",
+    "building": "commercial",
+    "building:levels": "4",
+    "name": "카페아빌라",
+    "name:en": "Cafe Avilla",
+    "name:ko": "카페아빌라",
+    "opening_hours": "Mo-Su 09:30-22:00",
+    "phone": "+82 62 268 1194",
+    "website": "https://www.instagram.com/cafe.avilla/"
+  }
+},
+{
+  "type": "way",
+  "id": 1135978821,
+  "center": {
+    "lat": 35.1734644,
+    "lon": 126.9154927
+  },
+  "tags": {
+    "addr:housenumber": "4",
+    "addr:postcode": "61190",
+    "addr:street": "서방로19번길",
+    "building": "apartments",
+    "building:levels": "4",
+    "name": "솔로몬고시텔",
+    "name:en": "Solomon Residence",
+    "name:ko": "솔로몬고시텔"
+  }
+},
+{
+  "type": "way",
+  "id": 1135978822,
+  "center": {
+    "lat": 35.1735585,
+    "lon": 126.9155163
+  },
+  "tags": {
+    "addr:housenumber": "6",
+    "addr:postcode": "61190",
+    "addr:street": "서방로19번길",
+    "building": "apartments",
+    "building:levels": "4",
+    "name": "스마트하우스",
+    "name:en": "The Smart House",
+    "name:ko": "스마트하우스"
+  }
+},
+{
+  "type": "way",
+  "id": 1135978823,
+  "center": {
+    "lat": 35.1736870,
+    "lon": 126.9155495
+  },
+  "tags": {
+    "branch": "전대고시촌점",
+    "brand": "세븐일레븐",
+    "brand:en": "7-Eleven",
+    "brand:ko": "세븐일레븐",
+    "brand:wikidata": "Q259340",
+    "building": "commercial",
+    "name": "세븐일레븐",
+    "name:en": "7-Eleven",
+    "name:ko": "세븐일레븐",
+    "opening_hours": "24/7",
+    "shop": "convenience"
+  }
+},
+{
+  "type": "way",
+  "id": 1135978825,
+  "center": {
+    "lat": 35.1734935,
+    "lon": 126.9156918
+  },
+  "tags": {
+    "addr:housenumber": "23-5",
+    "addr:postcode": "61190",
+    "addr:street": "서방로",
+    "building": "apartments",
+    "name": "대박미니텔",
+    "name:en": "D'Park Minitel",
+    "name:ko": "대박미니텔"
+  }
+},
+{
+  "type": "way",
+  "id": 1135978833,
+  "center": {
+    "lat": 35.1732971,
+    "lon": 126.9158257
+  },
+  "tags": {
+    "addr:housenumber": "25",
+    "addr:postcode": "61190",
+    "addr:street": "서방로",
+    "building": "yes",
+    "building:levels": "1",
+    "leisure": "amusement_arcade",
+    "name": "브라운노래방오락실",
+    "name:en": "Brown Arcade",
+    "name:ko": "브라운노래방오락실",
+    "opening_hours": "Mo-Su 09:40-01:30"
+  }
+},
+{
+  "type": "way",
+  "id": 1135978837,
+  "center": {
+    "lat": 35.1734859,
+    "lon": 126.9158714
+  },
+  "tags": {
+    "addr:housenumber": "23-4",
+    "addr:postcode": "61190",
+    "addr:street": "서방로",
+    "building": "apartments",
+    "name": "희성고시텔",
+    "name:en": "Heeseong Residence",
+    "name:ko": "희성고시텔"
+  }
+},
+{
+  "type": "way",
+  "id": 1135978839,
+  "center": {
+    "lat": 35.1735517,
+    "lon": 126.9160211
+  },
+  "tags": {
+    "addr:housenumber": "9-7",
+    "addr:postcode": "61190",
+    "addr:street": "서방로31번길",
+    "building": "apartments",
+    "building:levels": "6",
+    "name": "빛고을고시텔",
+    "name:en": "Bitgoeul Residence",
+    "name:ko": "빛고을고시텔"
+  }
+},
+{
+  "type": "way",
+  "id": 1135978840,
+  "center": {
+    "lat": 35.1736283,
+    "lon": 126.9158912
+  },
+  "tags": {
+    "addr:housenumber": "23-10",
+    "addr:postcode": "61190",
+    "addr:street": "서방로",
+    "building": "apartments",
+    "building:flats": "4",
+    "name": "호암빌",
+    "name:en": "Hoam Vill",
+    "name:ko": "호암빌"
+  }
+},
+{
+  "type": "way",
+  "id": 1135978842,
+  "center": {
+    "lat": 35.1735069,
+    "lon": 126.9161965
+  },
+  "tags": {
+    "addr:housenumber": "9-5",
+    "addr:postcode": "61190",
+    "addr:street": "서방로31번길",
+    "building": "apartments",
+    "building:levels": "8",
+    "name": "대박고시텔",
+    "name:en": "D'Park Residence",
+    "name:ko": "대박고시텔"
+  }
+},
+{
+  "type": "way",
+  "id": 1135978843,
+  "center": {
+    "lat": 35.1734894,
+    "lon": 126.9163437
+  },
+  "tags": {
+    "addr:housenumber": "9-3",
+    "addr:postcode": "61190",
+    "addr:street": "서방로31번길",
+    "building": "apartments",
+    "building:levels": "4",
+    "name": "더청담",
+    "name:en": "The Chungdam",
+    "name:ko": "더청담"
+  }
+},
+{
+  "type": "way",
+  "id": 1135978845,
+  "center": {
+    "lat": 35.1733448,
+    "lon": 126.9163932
+  },
+  "tags": {
+    "addr:housenumber": "3",
+    "addr:street": "서방로31번길",
+    "building": "apartments",
+    "building:levels": "4",
+    "name": "비전고시텔",
+    "name:en": "Vision Residence",
+    "name:ko": "비전고시텔"
+  }
+},
+{
+  "type": "way",
+  "id": 1135978847,
+  "center": {
+    "lat": 35.1735268,
+    "lon": 126.9164825
+  },
+  "tags": {
+    "addr:housenumber": "9",
+    "addr:street": "서방로31번길",
+    "building": "apartments",
+    "building:levels": "4",
+    "name": "승리고시텔",
+    "name:en": "Victory Residence",
+    "name:ko": "승리고시텔"
+  }
+},
+{
+  "type": "way",
+  "id": 1135985156,
+  "center": {
+    "lat": 35.1738874,
+    "lon": 126.9155895
+  },
+  "tags": {
+    "addr:housenumber": "14",
+    "addr:postcode": "61190",
+    "addr:street": "서방로19번길",
+    "building": "apartments",
+    "building:levels": "4",
+    "name": "시우담고시텔",
+    "name:en": "Siudam Residence",
+    "name:ko": "시우담고시텔"
+  }
+},
+{
+  "type": "way",
+  "id": 1135985157,
+  "center": {
+    "lat": 35.1738782,
+    "lon": 126.9157206
+  },
+  "tags": {
+    "addr:housenumber": "10-3",
+    "addr:postcode": "61190",
+    "addr:street": "서방로19번길",
+    "building": "apartments",
+    "name": "인성고시텔",
+    "name:en": "Inseong Residence",
+    "name:ko": "인성고시텔"
+  }
+},
+{
+  "type": "way",
+  "id": 1135985158,
+  "center": {
+    "lat": 35.1738524,
+    "lon": 126.9158658
+  },
+  "tags": {
+    "addr:housenumber": "10-7",
+    "addr:postcode": "61190",
+    "addr:street": "서방로19번길",
+    "building": "apartments",
+    "name": "스타하우스",
+    "name:en": "Star House",
+    "name:ko": "스타하우스"
+  }
+},
+{
+  "type": "way",
+  "id": 1135985159,
+  "center": {
+    "lat": 35.1738403,
+    "lon": 126.9159845
+  },
+  "tags": {
+    "addr:housenumber": "10-11",
+    "addr:postcode": "61190",
+    "addr:street": "서방로19번길",
+    "building": "apartments",
+    "name": "아이린빌",
+    "name:en": "Irene Vill",
+    "name:ko": "아이린빌"
+  }
+},
+{
+  "type": "way",
+  "id": 1135985160,
+  "center": {
+    "lat": 35.1740943,
+    "lon": 126.9156424
+  },
+  "tags": {
+    "addr:housenumber": "20",
+    "addr:postcode": "61190",
+    "addr:street": "서방로19번길",
+    "building": "apartments",
+    "building:flats": "4",
+    "building:levels": "4",
+    "name": "아카데미텔",
+    "name:en": "Academy Tel",
+    "name:ko": "아카데미텔"
+  }
+},
+{
+  "type": "way",
+  "id": 1135985163,
+  "center": {
+    "lat": 35.1740818,
+    "lon": 126.9160260
+  },
+  "tags": {
+    "addr:housenumber": "41",
+    "addr:postcode": "61190",
+    "addr:street": "중문로9번길",
+    "building": "apartments",
+    "building:levels": "4",
+    "name": "썬샤인",
+    "name:en": "Sunshine",
+    "name:ko": "썬샤인"
+  }
+},
+{
+  "type": "way",
+  "id": 1135985164,
+  "center": {
+    "lat": 35.1739001,
+    "lon": 126.9163167
+  },
+  "tags": {
+    "addr:housenumber": "39",
+    "addr:postcode": "61190",
+    "addr:street": "중문로9번길",
+    "amenity": "marketplace",
+    "building": "retail",
+    "name": "동부시장",
+    "name:en": "Dongbu Market",
+    "name:ko": "동부시장",
+    "operator": "동부시장상인회",
+    "phone": "+82 62 264 3430"
+  }
+},
+{
+  "type": "way",
+  "id": 1136405716,
+  "center": {
+    "lat": 35.1743313,
+    "lon": 126.9156800
+  },
+  "tags": {
+    "addr:housenumber": "52",
+    "addr:postcode": "61190",
+    "addr:street": "중문로9번길",
+    "building": "apartments",
+    "building:levels": "4",
+    "name": "허브하우스",
+    "name:en": "Herb House",
+    "name:ko": "허브하우스"
+  }
+},
+{
+  "type": "way",
+  "id": 1136405721,
+  "center": {
+    "lat": 35.1745557,
+    "lon": 126.9158909
+  },
+  "tags": {
+    "addr:housenumber": "32-6",
+    "addr:postcode": "61190",
+    "addr:street": "서방로19번길",
+    "building": "apartments",
+    "building:levels": "4",
+    "name": "나우스",
+    "name:en": "Naus",
+    "name:ko": "나우스"
+  }
+},
+{
+  "type": "way",
+  "id": 1136405723,
+  "center": {
+    "lat": 35.1744866,
+    "lon": 126.9160229
+  },
+  "tags": {
+    "addr:housenumber": "32-8",
+    "addr:postcode": "61190",
+    "addr:street": "서방로19번길",
+    "building": "apartments",
+    "building:levels": "4",
+    "name": "그린나래",
+    "name:en": "Green Narae",
+    "name:ko": "그린나래"
+  }
+},
+{
+  "type": "way",
+  "id": 1136405724,
+  "center": {
+    "lat": 35.1745076,
+    "lon": 126.9162291
+  },
+  "tags": {
+    "addr:housenumber": "32-10",
+    "addr:postcode": "61190",
+    "addr:street": "서방로19번길",
+    "building": "apartments",
+    "building:levels": "4",
+    "name": "비전타운",
+    "name:en": "Vision Town",
+    "name:ko": "비전타운"
+  }
+},
+{
+  "type": "way",
+  "id": 1136405726,
+  "center": {
+    "lat": 35.1742707,
+    "lon": 126.9162415
+  },
+  "tags": {
+    "addr:housenumber": "40-3",
+    "addr:postcode": "61190",
+    "addr:street": "중문로9번길",
+    "building": "apartments",
+    "building:levels": "4",
+    "name": "제우스",
+    "name:en": "Zeus",
+    "name:ko": "제우스"
+  }
+},
+{
+  "type": "way",
+  "id": 1136405731,
+  "center": {
+    "lat": 35.1744249,
+    "lon": 126.9164195
+  },
+  "tags": {
+    "addr:housenumber": "31-5",
+    "addr:postcode": "61190",
+    "addr:street": "서방로31번길",
+    "building": "apartments",
+    "building:levels": "4",
+    "name": "편한세상",
+    "name:en": "Pyeonhansesang",
+    "name:ko": "편한세상"
+  }
+},
+{
+  "type": "way",
+  "id": 1136405732,
+  "center": {
+    "lat": 35.1742391,
+    "lon": 126.9163593
+  },
+  "tags": {
+    "addr:housenumber": "38",
+    "addr:postcode": "61190",
+    "addr:street": "중문로9번길",
+    "building": "apartments",
+    "building:levels": "4",
+    "name": "성균관고시텔",
+    "name:en": "Seonggyungwan Residence",
+    "name:ko": "성균관고시텔"
+  }
+},
+{
+  "type": "way",
+  "id": 1136405733,
+  "center": {
+    "lat": 35.1741890,
+    "lon": 126.9164862
+  },
+  "tags": {
+    "addr:housenumber": "36",
+    "addr:postcode": "61190",
+    "addr:street": "중문로9번길",
+    "building": "apartments",
+    "building:levels": "4",
+    "name": "세종고시텔",
+    "name:en": "Sejong Residence",
+    "name:ko": "세종고시텔"
+  }
+},
+{
+  "type": "way",
+  "id": 1136405735,
+  "center": {
+    "lat": 35.1742862,
+    "lon": 126.9166661
+  },
+  "tags": {
+    "addr:housenumber": "25",
+    "addr:postcode": "61190",
+    "addr:street": "서방로31번길",
+    "building": "apartments",
+    "building:levels": "4",
+    "name": "하이원",
+    "name:en": "Haiwon",
+    "name:ko": "하이원"
+  }
+},
+{
+  "type": "way",
+  "id": 1136405745,
+  "center": {
+    "lat": 35.1748534,
+    "lon": 126.9157839
+  },
+  "tags": {
+    "addr:housenumber": "36",
+    "addr:postcode": "61190",
+    "addr:street": "서방로19번길",
+    "amenity": "cafe",
+    "building": "commercial",
+    "building:levels": "3",
+    "name": "카페온리",
+    "name:en": "Cafe Onry",
+    "name:ko": "카페온리",
+    "outdoor_seating": "yes",
+    "phone": "+82 1522 5213",
+    "website": "http://cafeonry.com/default/"
+  }
+},
+{
+  "type": "way",
+  "id": 1136405746,
+  "center": {
+    "lat": 35.1748455,
+    "lon": 126.9158772
+  },
+  "tags": {
+    "addr:housenumber": "32",
+    "addr:postcode": "61190",
+    "addr:street": "호동로",
+    "building": "apartments",
+    "building:levels": "3",
+    "name": "빛가람",
+    "name:en": "Bitgaram",
+    "name:ko": "빛가람"
+  }
+},
+{
+  "type": "way",
+  "id": 1136405748,
+  "center": {
+    "lat": 35.1748375,
+    "lon": 126.9162222
+  },
+  "tags": {
+    "addr:housenumber": "32-2",
+    "addr:postcode": "61190",
+    "addr:street": "호동로",
+    "branch": "광주점",
+    "brand": "Kawasaki",
+    "brand:wikidata": "Q6379855",
+    "building": "yes",
+    "building:levels": "3",
+    "name": "가와사키",
+    "name:ko": "가와사키",
+    "phone": "+82 62 710 5600",
+    "shop": "motorcycle",
+    "website": "https://www.kawasaki-plaza-korea.com/"
+  }
+},
+{
+  "type": "way",
+  "id": 1136405749,
+  "center": {
+    "lat": 35.1749579,
+    "lon": 126.9163371
+  },
+  "tags": {
+    "addr:housenumber": "34-2",
+    "addr:postcode": "61190",
+    "addr:street": "호동로",
+    "amenity": "restaurant",
+    "branch": "광주전남대점",
+    "building": "yes",
+    "name": "동대문엽기떡볶이",
+    "name:en": "Dongdaemun Yupduk",
+    "name:ko": "동대문엽기떡볶이",
+    "opening_hours": "Mo-Su 11:00-22:00",
+    "phone": "+82 62 257 8592"
+  }
+},
+{
+  "type": "way",
+  "id": 1136405751,
+  "center": {
+    "lat": 35.1747091,
+    "lon": 126.9160176
+  },
+  "tags": {
+    "addr:housenumber": "32-5",
+    "addr:postcode": "61190",
+    "addr:street": "서방로19번길",
+    "building": "apartments",
+    "building:levels": "4",
+    "name": "이룸채",
+    "name:en": "Irumchae",
+    "name:ko": "이룸채"
+  }
+},
+{
+  "type": "way",
+  "id": 1136405752,
+  "center": {
+    "lat": 35.1746879,
+    "lon": 126.9162940
+  },
+  "tags": {
+    "addr:housenumber": "31-12",
+    "addr:postcode": "61190",
+    "addr:street": "서방로31번길",
+    "building": "apartments",
+    "building:levels": "4",
+    "name": "바이올렛",
+    "name:en": "Violet",
+    "name:ko": "바이올렛"
+  }
+},
+{
+  "type": "way",
+  "id": 1136405753,
+  "center": {
+    "lat": 35.1746659,
+    "lon": 126.9164293
+  },
+  "tags": {
+    "addr:housenumber": "31-8",
+    "addr:postcode": "61190",
+    "addr:street": "서방로31번길",
+    "building": "apartments",
+    "building:levels": "4",
+    "name": "블리빌",
+    "name:en": "Beullibil",
+    "name:ko": "블리빌"
+  }
+},
+{
+  "type": "way",
+  "id": 1136405754,
+  "center": {
+    "lat": 35.1748975,
+    "lon": 126.9164954
+  },
+  "tags": {
+    "building": "apartments",
+    "name": "라비앙로즈",
+    "name:en": "La vie en rose",
+    "name:ko": "라비앙로즈"
+  }
+},
+{
+  "type": "way",
+  "id": 1136405757,
+  "center": {
+    "lat": 35.1746971,
+    "lon": 126.9167449
+  },
+  "tags": {
+    "addr:housenumber": "33",
+    "addr:postcode": "61190",
+    "addr:street": "서방로31번길",
+    "building": "yes",
+    "building:levels": "1",
+    "craft": "key_cutter",
+    "name": "오복열쇠",
+    "name:en": "Obok Keys",
+    "name:ko": "오복열쇠"
+  }
+},
+{
+  "type": "way",
+  "id": 1136405759,
+  "center": {
+    "lat": 35.1748505,
+    "lon": 126.9166430
+  },
+  "tags": {
+    "addr:housenumber": "6",
+    "addr:postcode": "61190",
+    "addr:street": "호동로34번길",
+    "building": "apartments",
+    "building:levels": "4",
+    "name": "하늘채",
+    "name:en": "Haneulchae",
+    "name:ko": "하늘채"
+  }
+},
+{
+  "type": "way",
+  "id": 1136405760,
+  "center": {
+    "lat": 35.1748214,
+    "lon": 126.9167868
+  },
+  "tags": {
+    "addr:housenumber": "37",
+    "addr:postcode": "61190",
+    "addr:street": "서방로31번길",
+    "building": "apartments",
+    "building:levels": "4",
+    "name": "행복한집",
+    "name:en": "Happy House",
+    "name:ko": "행복한집"
+  }
+},
+{
+  "type": "way",
+  "id": 1136452572,
+  "center": {
+    "lat": 35.1746268,
+    "lon": 126.9129391
+  },
+  "tags": {
+    "addr:housenumber": "80",
+    "addr:postcode": "61189",
+    "addr:street": "우치로",
+    "building": "commercial",
+    "building:levels": "8",
+    "name": "용봉빌딩",
+    "name:en": "Yongbong Building",
+    "name:ko": "용봉빌딩"
+  }
+},
+{
+  "type": "way",
+  "id": 1137214861,
+  "center": {
+    "lat": 35.1754280,
+    "lon": 126.9127692
+  },
+  "tags": {
+    "addr:housenumber": "90",
+    "addr:postcode": "61189",
+    "addr:street": "우치로",
+    "amenity": "cafe",
+    "branch": "광주전남대점",
+    "brand": "Hollys",
+    "brand:wikidata": "Q12624386",
+    "building": "commercial",
+    "building:levels": "4",
+    "cuisine": "coffee_shop",
+    "internet_access": "wlan",
+    "name": "Hollys",
+    "name:en": "Hollys",
+    "name:ko": "할리스",
+    "opening_hours": "Mo-Su 10:00-22:00",
+    "outdoor_seating": "no",
+    "phone": "+82 62 251 1966",
+    "takeaway": "yes",
+    "website": "https://www.hollys.co.kr/"
+  }
+},
+{
+  "type": "way",
+  "id": 1145844147,
+  "center": {
+    "lat": 35.1753764,
+    "lon": 126.9147905
+  },
+  "tags": {
+    "addr:housenumber": "19-6",
+    "addr:postcode": "61189",
+    "addr:street": "호동로",
+    "building": "apartments",
+    "building:levels": "3",
+    "name": "선양빌"
+  }
+},
+{
+  "type": "way",
+  "id": 1145844148,
+  "center": {
+    "lat": 35.1754682,
+    "lon": 126.9147406
+  },
+  "tags": {
+    "addr:housenumber": "19-8",
+    "addr:postcode": "61189",
+    "addr:street": "호동로",
+    "building": "apartments",
+    "building:levels": "3",
+    "name": "우주룸",
+    "name:en": "Uju Room",
+    "name:ko": "우주룸"
+  }
+},
+{
+  "type": "way",
+  "id": 1145844150,
+  "center": {
+    "lat": 35.1756559,
+    "lon": 126.9146277
+  },
+  "tags": {
+    "addr:housenumber": "19-14",
+    "addr:postcode": "61189",
+    "addr:street": "호동로",
+    "building": "commercial",
+    "building:levels": "2",
+    "name": "지은상가",
+    "name:en": "Jieun Arcade",
+    "name:ko": "지은상가"
+  }
+},
+{
+  "type": "way",
+  "id": 1145844159,
+  "center": {
+    "lat": 35.1755343,
+    "lon": 126.9148546
+  },
+  "tags": {
+    "addr:housenumber": "37-10",
+    "addr:postcode": "61189",
+    "addr:street": "호동로43번길",
+    "building": "apartments",
+    "building:levels": "3",
+    "name": "양곡독서실",
+    "name:en": "Yanggok Study Room",
+    "name:ko": "양곡독서실"
+  }
+},
+{
+  "type": "way",
+  "id": 1145850510,
+  "center": {
+    "lat": 35.1752610,
+    "lon": 126.9151949
+  },
+  "tags": {
+    "addr:housenumber": "21-4",
+    "addr:postcode": "61189",
+    "addr:street": "호동로",
+    "building": "apartments",
+    "building:levels": "3",
+    "name": "EG원룸",
+    "name:en": "EG Oneroom",
+    "name:ko": "EG원룸"
+  }
+},
+{
+  "type": "way",
+  "id": 1145850511,
+  "center": {
+    "lat": 35.1753422,
+    "lon": 126.9152499
+  },
+  "tags": {
+    "addr:housenumber": "21-8",
+    "addr:postcode": "61189",
+    "addr:street": "호동로",
+    "building": "apartments",
+    "building:levels": "4",
+    "name": "스마일고시텔",
+    "name:en": "Smile Residence",
+    "name:ko": "스마일고시텔"
+  }
+},
+{
+  "type": "way",
+  "id": 1145850512,
+  "center": {
+    "lat": 35.1754410,
+    "lon": 126.9152912
+  },
+  "tags": {
+    "addr:housenumber": "21-10",
+    "addr:postcode": "61189",
+    "addr:street": "호동로",
+    "building": "apartments",
+    "building:levels": "5",
+    "name": "프라임고시텔",
+    "name:en": "Prime Residence",
+    "name:ko": "프라임고시텔"
+  }
+},
+{
+  "type": "way",
+  "id": 1145850514,
+  "center": {
+    "lat": 35.1756012,
+    "lon": 126.9150196
+  },
+  "tags": {
+    "addr:housenumber": "21-11",
+    "addr:postcode": "61189",
+    "addr:street": "호동로",
+    "building": "apartments",
+    "building:levels": "4",
+    "name": "다이아",
+    "name:en": "Dia",
+    "name:ko": "다이아"
+  }
+},
+{
+  "type": "way",
+  "id": 1145850516,
+  "center": {
+    "lat": 35.1758318,
+    "lon": 126.9149164
+  },
+  "tags": {
+    "addr:housenumber": "37-5",
+    "addr:postcode": "61189",
+    "addr:street": "호동로43번길",
+    "branch": "2호점",
+    "building": "apartments",
+    "building:levels": "4",
+    "name": "이엘하우스",
+    "name:en": "Yiel House",
+    "name:ko": "이엘하우스"
+  }
+},
+{
+  "type": "way",
+  "id": 1146473480,
+  "center": {
+    "lat": 35.1759998,
+    "lon": 126.9151429
+  },
+  "tags": {
+    "addr:housenumber": "29",
+    "addr:postcode": "61189",
+    "addr:street": "호동로43번길",
+    "building": "apartments",
+    "building:levels": "4",
+    "name": "서암빌",
+    "name:en": "Seoam Vill",
+    "name:ko": "서암빌"
+  }
+},
+{
+  "type": "way",
+  "id": 1146473481,
+  "center": {
+    "lat": 35.1758424,
+    "lon": 126.9151000
+  },
+  "tags": {
+    "addr:housenumber": "27-6",
+    "addr:postcode": "61189",
+    "addr:street": "호동로43번길",
+    "building": "apartments",
+    "building:levels": "4",
+    "name": "채움빌",
+    "name:en": "Chaeum Vill",
+    "name:ko": "채움빌"
+  }
+},
+{
+  "type": "way",
+  "id": 1146473482,
+  "center": {
+    "lat": 35.1756985,
+    "lon": 126.9151253
+  },
+  "tags": {
+    "addr:housenumber": "27-10",
+    "addr:postcode": "61189",
+    "addr:street": "호동로43번길",
+    "building": "apartments",
+    "building:levels": "4",
+    "name": "뉴카운티",
+    "name:en": "New County",
+    "name:ko": "뉴카운티"
+  }
+},
+{
+  "type": "way",
+  "id": 1146473483,
+  "center": {
+    "lat": 35.1755396,
+    "lon": 126.9153180
+  },
+  "tags": {
+    "addr:housenumber": "21-12",
+    "addr:postcode": "61189",
+    "addr:street": "호동로",
+    "building": "apartments",
+    "name": "채움하우스",
+    "name:en": "The Cheum",
+    "name:ko": "채움하우스"
+  }
+},
+{
+  "type": "way",
+  "id": 1146473484,
+  "center": {
+    "lat": 35.1756421,
+    "lon": 126.9153526
+  },
+  "tags": {
+    "addr:housenumber": "27-9",
+    "addr:postcode": "61189",
+    "addr:street": "호동로43번길",
+    "building": "apartments",
+    "building:levels": "3",
+    "name": "예진빌",
+    "name:en": "Yejin Vill",
+    "name:ko": "예진빌"
+  }
+},
+{
+  "type": "way",
+  "id": 1146473485,
+  "center": {
+    "lat": 35.1757416,
+    "lon": 126.9153925
+  },
+  "tags": {
+    "addr:housenumber": "27-7",
+    "addr:postcode": "61189",
+    "addr:street": "호동로43번길",
+    "building": "apartments",
+    "building:levels": "4",
+    "name": "e편한고시텔",
+    "name:en": "e-Pyeonhan Residence",
+    "name:ko": "e편한고시텔"
+  }
+},
+{
+  "type": "way",
+  "id": 1146473486,
+  "center": {
+    "lat": 35.1758627,
+    "lon": 126.9153785
+  },
+  "tags": {
+    "addr:housenumber": "27-3",
+    "addr:postcode": "61189",
+    "addr:street": "호동로43번길",
+    "branch": "1호점",
+    "building": "apartments",
+    "building:levels": "4",
+    "name": "이엘하우스",
+    "name:en": "Yiel House",
+    "name:ko": "이엘하우스"
+  }
+},
+{
+  "type": "way",
+  "id": 1146473490,
+  "center": {
+    "lat": 35.1758962,
+    "lon": 126.9155287
+  },
+  "tags": {
+    "addr:housenumber": "21",
+    "addr:postcode": "61189",
+    "addr:street": "호동로43번길",
+    "building": "apartments",
+    "building:levels": "5",
+    "name": "화인고시텔",
+    "name:en": "Hwain Residence",
+    "name:ko": "화인고시텔"
+  }
+},
+{
+  "type": "way",
+  "id": 1146473492,
+  "center": {
+    "lat": 35.1759315,
+    "lon": 126.9157611
+  },
+  "tags": {
+    "addr:housenumber": "17",
+    "addr:postcode": "61189",
+    "addr:street": "호동로43번길",
+    "building": "apartments",
+    "building:levels": "4",
+    "name": "빛담채",
+    "name:en": "Bitdamchae",
+    "name:ko": "빛담채"
+  }
+},
+{
+  "type": "way",
+  "id": 1146473494,
+  "center": {
+    "lat": 35.1758849,
+    "lon": 126.9159963
+  },
+  "tags": {
+    "addr:housenumber": "13",
+    "addr:postcode": "61189",
+    "addr:street": "호동로43번길",
+    "building": "apartments",
+    "building:levels": "4",
+    "name": "에이스",
+    "name:en": "Ace",
+    "name:ko": "에이스"
+  }
+},
+{
+  "type": "way",
+  "id": 1146473497,
+  "center": {
+    "lat": 35.1757773,
+    "lon": 126.9158068
+  },
+  "tags": {
+    "addr:housenumber": "25-16",
+    "addr:postcode": "61189",
+    "addr:street": "호동로",
+    "building": "apartments",
+    "building:levels": "4",
+    "name": "이루다원룸텔",
+    "name:en": "Iruda Oneroomtel",
+    "name:ko": "이루다원룸텔"
+  }
+},
+{
+  "type": "way",
+  "id": 1146473498,
+  "center": {
+    "lat": 35.1756507,
+    "lon": 126.9158918
+  },
+  "tags": {
+    "addr:housenumber": "11-8",
+    "addr:postcode": "61189",
+    "addr:street": "호동로43번길",
+    "building": "apartments",
+    "building:levels": "4",
+    "name": "지니하우스",
+    "name:en": "Jini House",
+    "name:ko": "지니하우스"
+  }
+},
+{
+  "type": "way",
+  "id": 1146473499,
+  "center": {
+    "lat": 35.1756479,
+    "lon": 126.9157589
+  },
+  "tags": {
+    "addr:housenumber": "25-14",
+    "addr:postcode": "61189",
+    "addr:street": "호동로",
+    "building": "apartments",
+    "building:levels": "3",
+    "name": "그린원룸",
+    "name:en": "Green Oneroom",
+    "name:ko": "그린원룸"
+  }
+},
+{
+  "type": "way",
+  "id": 1146473500,
+  "center": {
+    "lat": 35.1755232,
+    "lon": 126.9157727
+  },
+  "tags": {
+    "addr:housenumber": "25-12",
+    "addr:postcode": "61189",
+    "addr:street": "호동로",
+    "building": "apartments",
+    "building:levels": "4",
+    "name": "에벤에셀 미니텔",
+    "name:en": "Ebenesel Minitel",
+    "name:ko": "에벤에셀 미니텔"
+  }
+},
+{
+  "type": "way",
+  "id": 1146473501,
+  "center": {
+    "lat": 35.1754206,
+    "lon": 126.9157405
+  },
+  "tags": {
+    "addr:housenumber": "25-10",
+    "addr:postcode": "61189",
+    "addr:street": "호동로",
+    "building": "apartments",
+    "building:levels": "4",
+    "name": "공감스테이",
+    "name:en": "Gong-gam Stay",
+    "name:ko": "공감스테이"
+  }
+},
+{
+  "type": "way",
+  "id": 1146473502,
+  "center": {
+    "lat": 35.1752652,
+    "lon": 126.9157299
+  },
+  "tags": {
+    "addr:housenumber": "29-3",
+    "addr:postcode": "61189",
+    "addr:street": "호동로",
+    "building": "apartments",
+    "building:levels": "3",
+    "name": "도레미하우스",
+    "name:en": "Doremi House",
+    "name:ko": "도레미하우스"
+  }
+},
+{
+  "type": "way",
+  "id": 1146473504,
+  "center": {
+    "lat": 35.1751643,
+    "lon": 126.9155350
+  },
+  "tags": {
+    "addr:housenumber": "29",
+    "addr:postcode": "61189",
+    "addr:street": "호동로",
+    "building": "apartments",
+    "building:levels": "4",
+    "name": "진송고시텔",
+    "name:en": "Jinsong Residence",
+    "name:ko": "진송고시텔"
+  }
+},
+{
+  "type": "way",
+  "id": 1146473505,
+  "center": {
+    "lat": 35.1753047,
+    "lon": 126.9156095
+  },
+  "tags": {
+    "addr:housenumber": "25-6",
+    "addr:postcode": "61189",
+    "addr:street": "호동로",
+    "building": "apartments",
+    "building:levels": "4",
+    "name": "코지하우스",
+    "name:en": "The Cozy",
+    "name:ko": "코지하우스"
+  }
+},
+{
+  "type": "way",
+  "id": 1146473507,
+  "center": {
+    "lat": 35.1753420,
+    "lon": 126.9154268
+  },
+  "tags": {
+    "addr:housenumber": "25-5",
+    "addr:postcode": "61189",
+    "addr:street": "호동로",
+    "building": "apartments",
+    "building:levels": "4",
+    "name": "사과나무하우스",
+    "name:en": "Apple Tree House",
+    "name:ko": "사과나무하우스"
+  }
+},
+{
+  "type": "way",
+  "id": 1146473509,
+  "center": {
+    "lat": 35.1756403,
+    "lon": 126.9155602
+  },
+  "tags": {
+    "addr:housenumber": "25-11",
+    "addr:postcode": "61189",
+    "addr:street": "호동로",
+    "building": "apartments",
+    "building:levels": "4",
+    "name": "골든벨고시텔",
+    "name:en": "Golden Bell Residence",
+    "name:ko": "골든벨고시텔"
+  }
+},
+{
+  "type": "way",
+  "id": 1146513696,
+  "center": {
+    "lat": 35.1752581,
+    "lon": 126.9160495
+  },
+  "tags": {
+    "addr:housenumber": "33",
+    "addr:postcode": "61189",
+    "addr:street": "호동로",
+    "building": "yes",
+    "name": "다원식자재마트",
+    "name:en": "Dawon Supermarket",
+    "name:ko": "다원식자재마트",
+    "opening_hours": "24/7",
+    "phone": "+82 62 264 6488",
+    "shop": "supermarket"
+  }
+},
+{
+  "type": "way",
+  "id": 1146513715,
+  "center": {
+    "lat": 35.1757977,
+    "lon": 126.9162660
+  },
+  "tags": {
+    "addr:housenumber": "7",
+    "addr:postcode": "61189",
+    "addr:street": "호동로43번길",
+    "building": "apartments",
+    "building:levels": "4",
+    "name": "우주빌",
+    "name:en": "Uju Vill",
+    "name:ko": "우주빌"
+  }
+},
+{
+  "type": "way",
+  "id": 1146513716,
+  "center": {
+    "lat": 35.1757614,
+    "lon": 126.9163703
+  },
+  "tags": {
+    "addr:housenumber": "5",
+    "addr:postcode": "61189",
+    "addr:street": "호동로43번길",
+    "building": "apartments",
+    "name": "베아누",
+    "name:en": "Beanu",
+    "name:ko": "베아누"
+  }
+},
+{
+  "type": "way",
+  "id": 1146513717,
+  "center": {
+    "lat": 35.1756535,
+    "lon": 126.9164856
+  },
+  "tags": {
+    "addr:housenumber": "41",
+    "addr:postcode": "61189",
+    "addr:street": "호동로",
+    "building": "apartments",
+    "building:levels": "4",
+    "name": "도담빌",
+    "name:en": "Dodam Vill",
+    "name:ko": "도담빌"
+  }
+},
+{
+  "type": "way",
+  "id": 1151215326,
+  "center": {
+    "lat": 35.1757495,
+    "lon": 126.9142322
+  },
+  "tags": {
+    "addr:housenumber": "13",
+    "addr:postcode": "61189",
+    "addr:street": "호동로15번길",
+    "amenity": "restaurant",
+    "branch": "광주전남대점",
+    "building": "commercial",
+    "building:levels": "2",
+    "cuisine": "italian",
+    "name": "로니로티",
+    "name:en": "Lonnie Lottie",
+    "name:ko": "로니로티",
+    "opening_hours": "Mo-Su 11:30-15:00,16:30-21:50",
+    "phone": "+82 62 267 0203"
+  }
+},
+{
+  "type": "way",
+  "id": 1151215327,
+  "center": {
+    "lat": 35.1759547,
+    "lon": 126.9140786
+  },
+  "tags": {
+    "addr:housenumber": "49",
+    "addr:postcode": "61189",
+    "addr:street": "호동로43번길",
+    "amenity": "cafe",
+    "building": "yes",
+    "building:levels": "2",
+    "name": "커피샘터",
+    "name:en": "Coffee Saemteo",
+    "name:ko": "커피샘터"
+  }
+},
+{
+  "type": "way",
+  "id": 1151215332,
+  "center": {
+    "lat": 35.1759754,
+    "lon": 126.9142298
+  },
+  "tags": {
+    "addr:housenumber": "45",
+    "addr:postcode": "61189",
+    "addr:street": "호동로43번길",
+    "amenity": "restaurant",
+    "building": "commercial",
+    "building:levels": "4",
+    "cuisine": "chinese",
+    "name": "차이나궁",
+    "name:en": "China Gung",
+    "name:ko": "차이나궁",
+    "opening_hours": "Mo-Su 00:00-02:00,11:30-24:00",
+    "phone": "+82 62 251 0153"
+  }
+},
+{
+  "type": "way",
+  "id": 1160199342,
+  "center": {
+    "lat": 35.1803470,
+    "lon": 126.9031571
+  },
+  "tags": {
+    "building": "apartments",
+    "building:levels": "8",
+    "name": "명보아파트"
+  }
+},
+{
+  "type": "way",
+  "id": 1162374540,
+  "center": {
+    "lat": 35.1761040,
+    "lon": 126.9135549
+  },
+  "tags": {
+    "addr:housenumber": "60",
+    "addr:postcode": "61189",
+    "addr:street": "호동로43번길",
+    "amenity": "cafe",
+    "branch": "전대점",
+    "building": "commercial",
+    "building:levels": "2",
+    "name": "풀덤",
+    "name:en": "Fulldom",
+    "name:ko": "풀덤",
+    "opening_hours": "Mo-Th 00:00-07:00,09:00-24:00; Fr 00:00-07:00,09:00-21:00; Sa 09:00-21:00; Su 09:00-24:00",
+    "phone": "+82 62 268 9911"
+  }
+},
+{
+  "type": "way",
+  "id": 1162374543,
+  "center": {
+    "lat": 35.1762843,
+    "lon": 126.9134819
+  },
+  "tags": {
+    "addr:housenumber": "18-1",
+    "addr:postcode": "61189",
+    "addr:street": "우치로100번길",
+    "amenity": "cafe",
+    "building": "commercial",
+    "building:levels": "1",
+    "name": "토시코시커피",
+    "name:en": "Tossi Cosi Coffee",
+    "name:ko": "토시코시커피",
+    "opening_hours": "Mo-Sa 12:00-20:00"
+  }
+},
+{
+  "type": "way",
+  "id": 1162374551,
+  "center": {
+    "lat": 35.1763434,
+    "lon": 126.9139206
+  },
+  "tags": {
+    "addr:housenumber": "26",
+    "addr:postcode": "61189",
+    "addr:street": "우치로100번길",
+    "amenity": "social_facility",
+    "building": "yes",
+    "building:levels": "2",
+    "name": "용흥경로당",
+    "name:en": "Yongheung Senior Hall",
+    "name:ko": "용흥경로당",
+    "social_facility": "group_home",
+    "social_facility:for": "senior"
+  }
+},
+{
+  "type": "way",
+  "id": 1163398300,
+  "center": {
+    "lat": 35.1850263,
+    "lon": 126.9110381
+  },
+  "tags": {
+    "building": "apartments",
+    "building:levels": "10",
+    "name": "혁신타운아파트"
+  }
+},
+{
+  "type": "way",
+  "id": 1163555551,
+  "center": {
+    "lat": 35.1761434,
+    "lon": 126.9155226
+  },
+  "tags": {
+    "addr:housenumber": "24",
+    "addr:postcode": "61189",
+    "addr:street": "호동로43번길",
+    "building": "apartments",
+    "building:levels": "4",
+    "name": "지니빌",
+    "name:en": "Jini Vill",
+    "name:ko": "지니빌"
+  }
+},
+{
+  "type": "way",
+  "id": 1163555558,
+  "center": {
+    "lat": 35.1762612,
+    "lon": 126.9156741
+  },
+  "tags": {
+    "addr:housenumber": "72",
+    "addr:postcode": "61189",
+    "addr:street": "면앙로32번길",
+    "building": "apartments",
+    "building:levels": "4",
+    "name": "템푸스",
+    "name:en": "Tempus",
+    "name:ko": "템푸스"
+  }
+},
+{
+  "type": "way",
+  "id": 1163555559,
+  "center": {
+    "lat": 35.1763803,
+    "lon": 126.9156488
+  },
+  "tags": {
+    "addr:housenumber": "70",
+    "addr:postcode": "61189",
+    "addr:street": "면앙로32번길",
+    "building": "apartments",
+    "name": "파라다이스빌",
+    "name:en": "Paradise Vill",
+    "name:ko": "파라다이스빌"
+  }
+},
+{
+  "type": "way",
+  "id": 1163555561,
+  "center": {
+    "lat": 35.1764663,
+    "lon": 126.9154976
+  },
+  "tags": {
+    "addr:housenumber": "56",
+    "addr:postcode": "61189",
+    "addr:street": "우치로100번길",
+    "building": "apartments",
+    "building:levels": "4",
+    "name": "해뜨는집",
+    "name:en": "Haetteuneunjip",
+    "name:ko": "해뜨는집"
+  }
+},
+{
+  "type": "way",
+  "id": 1163555562,
+  "center": {
+    "lat": 35.1764596,
+    "lon": 126.9153243
+  },
+  "tags": {
+    "addr:housenumber": "52",
+    "addr:postcode": "61189",
+    "addr:street": "우치로100번길",
+    "building": "apartments",
+    "name": "홈타운",
+    "name:en": "Hometown",
+    "name:ko": "홈타운"
+  }
+},
+{
+  "type": "way",
+  "id": 1163555563,
+  "center": {
+    "lat": 35.1764347,
+    "lon": 126.9151685
+  },
+  "tags": {
+    "addr:housenumber": "50",
+    "addr:postcode": "61189",
+    "addr:street": "우치로100번길",
+    "building": "commercial",
+    "building:levels": "5",
+    "name": "유니버시티빌딩",
+    "name:en": "University Building",
+    "name:ko": "유니버시티빌딩"
+  }
+},
+{
+  "type": "way",
+  "id": 1163555566,
+  "center": {
+    "lat": 35.1764806,
+    "lon": 126.9149619
+  },
+  "tags": {
+    "addr:housenumber": "46",
+    "addr:postcode": "61189",
+    "addr:street": "우치로100번길",
+    "building": "apartments",
+    "building:levels": "3",
+    "name": "삼부빌라",
+    "name:en": "Sambu Villa",
+    "name:ko": "삼부빌라"
+  }
+},
+{
+  "type": "way",
+  "id": 1163555567,
+  "center": {
+    "lat": 35.1764223,
+    "lon": 126.9148448
+  },
+  "tags": {
+    "addr:housenumber": "42",
+    "addr:postcode": "61189",
+    "addr:street": "우치로100번길",
+    "building": "apartments",
+    "building:levels": "4",
+    "name": "새시대원룸",
+    "name:en": "Saesidae Oneroom",
+    "name:ko": "새시대원룸"
+  }
+},
+{
+  "type": "way",
+  "id": 1165369550,
+  "center": {
+    "lat": 35.1761394,
+    "lon": 126.9159392
+  },
+  "tags": {
+    "addr:housenumber": "75",
+    "addr:postcode": "61189",
+    "addr:street": "면앙로32번길",
+    "building": "apartments",
+    "building:levels": "4",
+    "name": "트리하우스",
+    "name:en": "Tree House",
+    "name:ko": "트리하우스"
+  }
+},
+{
+  "type": "way",
+  "id": 1165369551,
+  "center": {
+    "lat": 35.1762417,
+    "lon": 126.9159329
+  },
+  "tags": {
+    "addr:housenumber": "73",
+    "addr:postcode": "61189",
+    "addr:street": "면앙로32번길",
+    "building": "apartments",
+    "building:levels": "4",
+    "name": "명품빌라",
+    "name:en": "Myeongpum Villa",
+    "name:ko": "명품빌라"
+  }
+},
+{
+  "type": "way",
+  "id": 1165369553,
+  "center": {
+    "lat": 35.1762274,
+    "lon": 126.9162736
+  },
+  "tags": {
+    "addr:housenumber": "71-8",
+    "addr:postcode": "61189",
+    "addr:street": "면앙로32번길",
+    "building": "apartments",
+    "name": "행운빌",
+    "name:en": "Haengun Vill",
+    "name:ko": "행운빌"
+  }
+},
+{
+  "type": "way",
+  "id": 1165369554,
+  "center": {
+    "lat": 35.1759675,
+    "lon": 126.9166276
+  },
+  "tags": {
+    "addr:housenumber": "45",
+    "addr:postcode": "61189",
+    "addr:street": "호동로",
+    "building": "apartments",
+    "building:levels": "5",
+    "name": "2동",
+    "name:en": "Building 2",
+    "name:ko": "2동"
+  }
+},
+{
+  "type": "way",
+  "id": 1165369555,
+  "center": {
+    "lat": 35.1761830,
+    "lon": 126.9167082
+  },
+  "tags": {
+    "addr:housenumber": "45",
+    "addr:postcode": "61189",
+    "addr:street": "호동로",
+    "building": "apartments",
+    "building:levels": "5",
+    "name": "1동",
+    "name:en": "Building 1",
+    "name:ko": "1동"
+  }
+},
+{
+  "type": "way",
+  "id": 1189573868,
+  "center": {
+    "lat": 35.1853937,
+    "lon": 126.8978509
+  },
+  "tags": {
+    "addr:housenumber": "289-5",
+    "addr:street": "설죽로",
+    "amenity": "pharmacy",
+    "building": "yes",
+    "healthcare": "pharmacy",
+    "name": "용봉금호약국",
+    "name:en": "Yongbong Geumho Pharmacy",
+    "name:ko": "용봉금호약국"
+  }
+},
+{
+  "type": "way",
+  "id": 1198086518,
+  "center": {
+    "lat": 35.1851530,
+    "lon": 126.8982213
+  },
+  "tags": {
+    "amenity": "fast_food",
+    "brand": "맥도날드",
+    "brand:en": "McDonald's",
+    "brand:ko": "맥도날드",
+    "brand:wikidata": "Q38076",
+    "building": "yes",
+    "cuisine": "burger",
+    "name": "맥도날드",
+    "name:en": "McDonald's",
+    "name:ko": "맥도날드",
+    "takeaway": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 1198086520,
+  "center": {
+    "lat": 35.1858719,
+    "lon": 126.8978503
+  },
+  "tags": {
+    "addr:housenumber": "291",
+    "addr:street": "설죽로",
+    "building": "hospital",
+    "name": "2동",
+    "name:en": "Ward 2",
+    "name:ko": "2동"
+  }
+},
+{
+  "type": "way",
+  "id": 1198086521,
+  "center": {
+    "lat": 35.1857115,
+    "lon": 126.8979985
+  },
+  "tags": {
+    "addr:housenumber": "291",
+    "addr:street": "설죽로",
+    "building": "hospital",
+    "name": "1동",
+    "name:en": "Ward 1",
+    "name:ko": "1동"
+  }
+},
+{
+  "type": "way",
+  "id": 1232171424,
+  "center": {
+    "lat": 35.1832081,
+    "lon": 126.9174102
+  },
+  "tags": {
+    "building": "civic",
+    "name": "근린공원토지공사비",
+    "tourism": "museum"
+  }
+},
+{
+  "type": "way",
+  "id": 1286716553,
+  "center": {
+    "lat": 35.1692503,
+    "lon": 126.9140759
+  },
+  "tags": {
+    "building": "public",
+    "name": "중흥동행정복지센터"
+  }
+},
+{
+  "type": "way",
+  "id": 1286716555,
+  "center": {
+    "lat": 35.1689882,
+    "lon": 126.9134603
+  },
+  "tags": {
+    "addr:housenumber": "111",
+    "addr:street": "서양로",
+    "building": "public",
+    "name": "광주광역시동부교육지원청"
+  }
+},
+{
+  "type": "way",
+  "id": 1286716558,
+  "center": {
+    "lat": 35.1698332,
+    "lon": 126.9141736
+  },
+  "tags": {
+    "amenity": "library",
+    "building": "public",
+    "internet_access": "wlan",
+    "name": "중흥도서관"
+  }
+},
+{
+  "type": "way",
+  "id": 1286716562,
+  "center": {
+    "lat": 35.1701937,
+    "lon": 126.9126176
+  },
+  "tags": {
+    "building": "kindergarten",
+    "name": "효동초병설유치원"
+  }
+},
+{
+  "type": "way",
+  "id": 1286794515,
+  "center": {
+    "lat": 35.1711590,
+    "lon": 126.9039133
+  },
+  "tags": {
+    "addr:housenumber": "62-9",
+    "addr:postcode": "61220",
+    "addr:street": "용봉로",
+    "building": "apartments",
+    "name": "상아탑고시룸"
+  }
+},
+{
+  "type": "way",
+  "id": 1286794516,
+  "center": {
+    "lat": 35.1710461,
+    "lon": 126.9038219
+  },
+  "tags": {
+    "addr:housenumber": "62-11",
+    "addr:street": "용봉로",
+    "building": "apartments",
+    "name": "뉴캐슬"
+  }
+},
+{
+  "type": "way",
+  "id": 1286794520,
+  "center": {
+    "lat": 35.1713256,
+    "lon": 126.9038657
+  },
+  "tags": {
+    "addr:housenumber": "62-7",
+    "addr:postcode": "61220",
+    "addr:street": "용봉로",
+    "building": "apartments",
+    "name": "하우시스"
+  }
+},
+{
+  "type": "way",
+  "id": 1306351493,
+  "center": {
+    "lat": 35.1707233,
+    "lon": 126.9036533
+  },
+  "tags": {
+    "addr:housenumber": "20",
+    "addr:postcode": "61220",
+    "addr:street": "서양로",
+    "building": "apartments",
+    "name": "굿마인드오피스텔"
+  }
+},
+{
+  "type": "way",
+  "id": 1341370645,
+  "center": {
+    "lat": 35.1806751,
+    "lon": 126.9043310
+  },
+  "tags": {
+    "building": "cafe",
+    "building:levels": "2",
+    "name": "B.right"
+  }
+},
+{
+  "type": "way",
+  "id": 1364741310,
+  "center": {
+    "lat": 35.1687263,
+    "lon": 126.8974654
+  },
+  "tags": {
+    "building": "apartments",
+    "name": "중도다이아빌아파트"
+  }
+},
+{
+  "type": "way",
+  "id": 1368600489,
+  "center": {
+    "lat": 35.1784157,
+    "lon": 126.9029282
+  },
+  "tags": {
+    "building": "yes",
+    "building:levels": "8",
+    "name": "고운아파트"
+  }
+},
+{
+  "type": "way",
+  "id": 1373557471,
+  "center": {
+    "lat": 35.1679640,
+    "lon": 126.9162611
+  },
+  "tags": {
+    "building": "yes",
+    "layer": "1",
+    "name": "엠마트",
+    "shop": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 1374309306,
+  "center": {
+    "lat": 35.1789876,
+    "lon": 126.9071267
+  },
+  "tags": {
+    "amenity": "community_centre",
+    "building": "yes",
+    "community_centre": "cultural_centre",
+    "name": "주한독일문화원"
+  }
+},
+{
+  "type": "way",
+  "id": 1374312494,
+  "center": {
+    "lat": 35.1726110,
+    "lon": 126.9171674
+  },
+  "tags": {
+    "building": "church",
+    "name": "운광교회"
+  }
+},
+{
+  "type": "way",
+  "id": 1374378330,
+  "center": {
+    "lat": 35.1723198,
+    "lon": 126.9157384
+  },
+  "tags": {
+    "amenity": "restaurant",
+    "building": "yes",
+    "cuisine": "chinese",
+    "name": "보배반점"
+  }
+},
+{
+  "type": "way",
+  "id": 1374639818,
+  "center": {
+    "lat": 35.1729028,
+    "lon": 126.9108590
+  },
+  "tags": {
+    "building": "yes",
+    "name": "다이소",
+    "shop": "general"
+  }
+},
+{
+  "type": "way",
+  "id": 1374648014,
+  "center": {
+    "lat": 35.1683551,
+    "lon": 126.9173734
+  },
+  "tags": {
+    "building": "church",
+    "layer": "1",
+    "name": "중흥교회 교육관"
+  }
+},
+{
+  "type": "way",
+  "id": 1375201077,
+  "center": {
+    "lat": 35.1813083,
+    "lon": 126.9105289
+  },
+  "tags": {
+    "building": "dormitory",
+    "name": "청아관",
+    "smoking": "no"
+  }
+},
+{
+  "type": "way",
+  "id": 1376379107,
+  "center": {
+    "lat": 35.1685161,
+    "lon": 126.9138138
+  },
+  "tags": {
+    "amenity": "bank",
+    "brand": "MG새마을금고",
+    "brand:ko": "MG새마을금고",
+    "brand:wikidata": "Q12600614",
+    "building": "yes",
+    "name": "MG새마을금고",
+    "name:ko": "MG새마을금고"
+  }
+},
+{
+  "type": "way",
+  "id": 1377370199,
+  "center": {
+    "lat": 35.1726627,
+    "lon": 126.9111417
+  },
+  "tags": {
+    "amenity": "parking",
+    "building": "yes",
+    "name": "효죽2주차장",
+    "operator": "북구청",
+    "parking": "multi-storey"
+  }
+},
+{
+  "type": "way",
+  "id": 1377370217,
+  "center": {
+    "lat": 35.1716298,
+    "lon": 126.9113726
+  },
+  "tags": {
+    "building": "church",
+    "name": "충광교회"
+  }
+},
+{
+  "type": "way",
+  "id": 1377370218,
+  "center": {
+    "lat": 35.1717155,
+    "lon": 126.9116011
+  },
+  "tags": {
+    "building": "church",
+    "name": "교회 교육관"
+  }
+},
+{
+  "type": "way",
+  "id": 1377951163,
+  "center": {
+    "lat": 35.1774096,
+    "lon": 126.9128047
+  },
+  "tags": {
+    "amenity": "prep_school",
+    "building": "yes",
+    "name": "박문각"
+  }
+},
+{
+  "type": "way",
+  "id": 1377951173,
+  "center": {
+    "lat": 35.1768471,
+    "lon": 126.9136122
+  },
+  "tags": {
+    "building": "commercial",
+    "name": "이츠밤비",
+    "shop": "clothes"
+  }
+},
+{
+  "type": "way",
+  "id": 1382047749,
+  "center": {
+    "lat": 35.1682243,
+    "lon": 126.9177449
+  },
+  "tags": {
+    "building": "yes",
+    "name": "어린이집"
+  }
+},
+{
+  "type": "way",
+  "id": 1549535892,
+  "center": {
+    "lat": 35.1790695,
+    "lon": 126.9067514
+  },
+  "tags": {
+    "amenity": "cafe",
+    "building": "yes",
+    "name": "나인틴52"
+  }
+},
+{
+  "type": "relation",
+  "id": 3690972,
+  "center": {
+    "lat": 35.1740167,
+    "lon": 126.9034560
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "6",
+    "name": "법전원 1호관",
+    "name:en": "Law School 1",
+    "name:ko": "법전원 1호관",
+    "type": "multipolygon"
+  }
+},
+{
+  "type": "relation",
+  "id": 3690973,
+  "center": {
+    "lat": 35.1747454,
+    "lon": 126.9028526
+  },
+  "tags": {
+    "building": "university",
+    "name": "제2학생마루",
+    "name:en": "Student Hall 2",
+    "name:ko": "제2학생마루",
+    "type": "multipolygon"
+  }
+},
+{
+  "type": "relation",
+  "id": 6990268,
+  "center": {
+    "lat": 35.1789510,
+    "lon": 126.9106255
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "4",
+    "name": "공과대 3호관",
+    "name:en": "College of Engineering 3",
+    "name:ko": "공과대 3호관",
+    "type": "multipolygon"
+  }
+},
+{
+  "type": "relation",
+  "id": 6990678,
+  "center": {
+    "lat": 35.1780505,
+    "lon": 126.9109739
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "4",
+    "name": "공과대 5호관",
+    "name:en": "College of Engineering 5",
+    "name:ko": "공과대 5호관",
+    "type": "multipolygon"
+  }
+},
+{
+  "type": "relation",
+  "id": 12363166,
+  "center": {
+    "lat": 35.1838210,
+    "lon": 126.9175579
+  },
+  "tags": {
+    "amenity": "social_facility",
+    "building": "yes",
+    "name": "북구노인복지센터",
+    "social_facility": "nursing_home",
+    "social_facility:for": "senior",
+    "type": "building"
+  }
+},
+{
+  "type": "relation",
+  "id": 12363168,
+  "center": {
+    "lat": 35.1849875,
+    "lon": 126.9167096
+  },
+  "tags": {
+    "amenity": "events_venue",
+    "building": "yes",
+    "name": "북구청소년수련관",
+    "type": "building"
+  }
+},
+{
+  "type": "relation",
+  "id": 15052204,
+  "center": {
+    "lat": 35.1787402,
+    "lon": 126.9057905
+  },
+  "tags": {
+    "building": "university",
+    "building:levels": "10",
+    "name": "교육융합관",
+    "name:en": "Education Convergence Building",
+    "name:ko": "교육융합관",
+    "type": "multipolygon"
+  }
+},
+{
+  "type": "relation",
+  "id": 15057693,
+  "center": {
+    "lat": 35.1792710,
+    "lon": 126.9088469
+  },
+  "tags": {
+    "building": "university",
+    "name": "공과대 2호관",
+    "name:en": "College of Engineering 2",
+    "name:ko": "공과대 2호관",
+    "type": "multipolygon"
+  }
+}
+
+  ]
+}

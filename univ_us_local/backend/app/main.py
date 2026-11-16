@@ -17,7 +17,7 @@ from fastapi.middleware.trustedhost import TrustedHostMiddleware
 from fastapi.responses import HTMLResponse, JSONResponse, RedirectResponse
 from fastapi.staticfiles import StaticFiles
 
-from . import academic, activity, attendance, briefing, calendar_events, exams, graduation, materials, placement, priority, scholarship
+from . import academic, activity, assistant, attendance, briefing, calendar_events, exams, graduation, materials, placement, priority, scholarship
 from . import config as C
 from . import eclass_data, login_creds, meal, student_profile
 
@@ -222,6 +222,11 @@ if (_f12_router := activity.router()) is not None:
 # · 알림 센터의 안 읽은 알림)을 모아 하루 한 번 스냅샷을 만든다. 오늘 일정·마감은 /api/events 와 같은 합치기에서 읽는다.
 if (_c4_router := briefing.router(lambda start, end: calendar_events.collect(CALENDAR_SOURCES, start, end))) is not None:
     app.include_router(_c4_router)
+
+# CA2 캠퍼스 생활 Q&A·에이전트 대화 — /api/assistant/v1/* (campus/CA2_Assistant_agent/assistant/api.py)
+# 사용자가 넣은 AI API 키(OS 암호 저장소)로 대화한다. 내 일정·과제·시험·출결·졸업 학점·강의자료 도구를 붙여 그 결과로만 답한다(성적 제외).
+if (_ca2_router := assistant.router()) is not None:
+    app.include_router(_ca2_router, prefix="/api/assistant")
 
 # CA1 공강 식사 추천 — /api/meal/ui(화면) · recommend · schedule · places (campus/CA1_Meal_agent/meal/preview.py)
 # 시간표는 F3 출결(위에서 붙인 attendance 와 같은 데이터)을 CA1 이 직접 읽는다. 화면 오른쪽 아래 전룡(MealLauncher)이 /api/meal/ui 를 창으로 연다.

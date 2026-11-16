@@ -30,6 +30,7 @@ import { api } from "@/lib/api";
 import type { AppNotification, NotificationList } from "@/lib/types";
 import { SETTINGS } from "@/lib/features";
 import { fmtRelative, parseLocal } from "@/lib/dates";
+import { hasSyncWarning } from "@/lib/eclassSync";
 
 // 헤더 — 로고 · 알림 · 일정 추가 · 설정. 메뉴 링크(GNB)는 두지 않는다(Frontend-Route 3절, 전역 결정 G4).
 
@@ -77,7 +78,7 @@ export default function Header() {
                 ) : (
                   <>
                     <span
-                      className={`size-2 rounded-full ${status.eclass?.warn ? "bg-danger" : status.sync.exit_code === 0 || status.sync.exit_code === null || status.sync.exit_code === 3 ? "bg-ok" : "bg-warn"}`}
+                      className={`size-2 rounded-full ${hasSyncWarning(status.sync) ? "bg-warn" : status.eclass?.warn ? "bg-danger" : status.sync.exit_code === 0 || status.sync.exit_code === null || status.sync.exit_code === 3 ? "bg-ok" : "bg-warn"}`}
                       aria-hidden
                     />
                     수집 {fmtRelative(status.eclass?.lastOkAt ?? status.updated_at)}

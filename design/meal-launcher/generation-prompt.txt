@@ -1,0 +1,16 @@
+Tool: built-in image_gen (transparent_background=true)
+Use case: identity-preserve mascot pose edit.
+Asset: Jeonryong mascot for the Univ-Us circular floating meal recommendation launcher.
+
+Create ONE transparent-background PNG asset of the EXACT Jeonryong (전룡이), Chonnam National University mascot, in the supplied two references. Image 1 is the primary canonical character design and identity reference. Image 2 is the supporting 3D mascot reference for volume only.
+
+Preserve the mascot identity very strictly: pale mint green huge rounded head, two thin upright yellow antler-like horns with tiny outward branches, side pointed green ears, two green eyebrow spots, very large black oval eyes with white gleams, small black oval nose, tiny cheerful w-shaped closed smile, round medium-green cheek patches, very short mint green body, dark forest-green varsity jacket with white sleeves and cuffs, cream collar, small white buttons and exactly one white letter C on the chest, mint little feet and tail.
+
+Change ONLY the pose: stand facing camera, both arms raised outward at cheek level, visibly gripping ONE simple metal spoon in one hand and ONE simple metal four-tined fork in the other hand, utensils upright and fully visible. Cheerful ready-to-eat pose, closed-mouth smile, no food, no chef hat, no new outfit.
+
+Use crisp clean flat 2D cartoon sticker illustration faithful to image 1, smooth dark outlines, subtle soft dimensional shading at most; do not turn this into a generic dragon. Intended usage is inside a small 76-pixel circular floating food recommender button, so silhouette, both utensils and face must remain recognizable.
+
+Composition: centered mascot on a square transparent canvas, entire head, horns, ears, utensils and small body fully inside a centered circular safe zone, roomy transparent margin at corners, no circle drawn, no background, no frame, no text except the jacket C, no watermark. True transparency, clean alpha edges. Preserve original proportions and all defining details.
+
+Saved original: jeonryong-spoon-fork.png
+Delivery encoding: jeonryong-spoon-fork.webp, lossless WebP with the same image size. Alpha and every visible pixel verified identical to the generated PNG. RGB differences exist only in fully transparent pixels.

@@ -1,2 +1,16 @@
-# 내려받은 상가정보 원천 CSV 와 만들어진 후보·조사 양식 (크고, 버전마다 바뀜 — 공유는 팀 드라이브로)
-data/
+# data/ 는 기본으로 올리지 않는다(상가정보 원천 CSV · 키 파일 · 백업본).
+# 추천에 꼭 필요한 파일만 올린다 — 받은 사람도 바로 추천·지도가 나오게.
+data/*
+!data/survey.csv
+!data/places.candidates.json
+!data/places.extra.json
+!data/pr4_places.json
+!data/osm/
+data/osm/*
+!data/osm/basemap.json
+!data/osm/walk.raw.json
+!data/osm/base.raw.json
+!data/osm/buildings.raw.json
+# 키는 절대 올리지 않는다
+*.key
+.env

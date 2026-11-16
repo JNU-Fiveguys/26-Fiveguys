@@ -98,11 +98,19 @@ def test_wait_for_f11_lock():
     assert collect.wait_for_peer(sleep=slept.append) is False      # 잠금이 없으면 바로
 
 
-def test_api_flow(profile):
+def test_api_flow(profile, monkeypatch):
     from fastapi import FastAPI
     from fastapi.testclient import TestClient
     from activity import api
-    from conftest import FakeCalendar, add_notice
+    from conftest import TODAY, FakeCalendar, add_notice
+
+    class FixedDate(service.date):
+        @classmethod
+        def today(cls):
+            return TODAY
+
+    # API는 날짜 인자가 없으므로 예시 공지의 모집 기간 안으로 테스트 시계만 고정한다.
+    monkeypatch.setattr(service, "date", FixedDate)
     cal = FakeCalendar()
     app = FastAPI()
     app.include_router(api.build_router(lambda: profile, cal.add, cal.remove, lambda: {"careerGoal": "장학 재료"}))
