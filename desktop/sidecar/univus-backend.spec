@@ -10,6 +10,7 @@
 #   **.env(LLM 키 등 비밀)**.
 import ast
 import os
+import ssl
 from pathlib import Path
 
 from PyInstaller.utils.hooks import collect_all, collect_submodules
@@ -31,6 +32,11 @@ KEEP_FILES = {"register-task.ps1",                         # F1·F6 예약 켜�
               "ocr_win.ps1"}                               # F11·F12 수집기의 Windows 내장 OCR (osenv/ocr.py 가 -File 로)
 
 datas, sources = [], []
+# Managed Python runtimes may load a certificate distrust policy beside ssl.py.
+# Keep that policy in the frozen runtime; never bypass certificate verification.
+ssl_policy = Path(ssl.__file__).with_name("codex-rejected-cas.pem")
+if ssl_policy.is_file():
+    datas.append((str(ssl_policy), "."))
 for src, dest in TREES:
     if not src.exists():
         raise SystemExit(f"없음: {src} (frontend/out 이면 npm run build 먼저)")

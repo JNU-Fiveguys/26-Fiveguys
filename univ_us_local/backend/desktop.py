@@ -165,6 +165,15 @@ def self_check() -> int:
             importlib.import_module(name)
         except Exception:                                # noqa: BLE001 — 하나라도 실패하면 모아서 알린다
             failed.append((name, traceback.format_exc(limit=1).strip().splitlines()[-1]))
+    # Importing ssl alone does not read its certificate policy data. Exercise
+    # context creation so a missing frozen-runtime PEM fails the build check.
+    try:
+        import ssl
+        tls = ssl.create_default_context()
+        if tls.verify_mode != ssl.CERT_REQUIRED or not tls.check_hostname:
+            raise RuntimeError("HTTPS certificate verification must remain enabled")
+    except Exception:
+        failed.append(("ssl.create_default_context", traceback.format_exc(limit=1).strip().splitlines()[-1]))
     for name, err in failed:
         print(f"self-check 실패: {name}: {err}", file=sys.stderr)
     print(f"self-check: 모듈 {len(names)}개 · 실패 {len(failed)}", file=sys.stderr, flush=True)
