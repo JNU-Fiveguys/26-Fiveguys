@@ -204,43 +204,12 @@
         for (const [control, label] of [[zoomIn, '지도 확대'], [zoomOut, '지도 축소']]) {
           if (control) { control.title = label; control.setAttribute('aria-label', label); }
         }
-        let loaded = 0, cycleLoaded = 0, cycleFailed = 0;
-        // Only visible map tiles are requested. Keep browser referrer and caching defaults.
-        const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-          maxZoom: 19, updateWhenIdle: true, keepBuffer: 0,
-          attribution: '<a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">© OpenStreetMap contributors</a>'
+        instance.attributionControl.addAttribution('<a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">© OpenStreetMap contributors</a>');
+        window.MealBasemap.draw(instance, () => map === instance && token === revision).then(() => {
+          if (map === instance && token === revision) setState('map', '보행길 지도 · 끌어서 이동하고 + / − 버튼으로 확대·축소하세요.');
+        }).catch(() => {
+          if (map === instance && token === revision) fallback(routes, stops);
         });
-        tiles.on('loading', () => {
-          if (map !== instance) return;
-          cycleLoaded = cycleFailed = 0;
-          clearTimeout(timeout);
-          timeout = setTimeout(() => {
-            if (map !== instance) return;
-            if (!loaded) fallback(routes, stops);
-            else setState('partial', '일부 지도 배경을 불러오지 못했습니다. 경로와 도보 시간은 그대로 표시합니다.');
-          }, 10000);
-        });
-        tiles.on('tileload', () => {
-          if (map !== instance) return;
-          loaded += 1; cycleLoaded += 1;
-          if (!cycleFailed) setState('map', isDialog ? '지도를 끌어 이동하고, 마우스 휠이나 + / − 버튼으로 확대·축소할 수 있습니다.' : '지도를 끌어 이동하거나 + / − 버튼으로 확대·축소할 수 있습니다.');
-        });
-        tiles.on('tileerror', () => { if (map === instance) cycleFailed += 1; });
-        tiles.on('load', () => {
-          if (map !== instance) return;
-          clearTimeout(timeout);
-          if (!loaded && cycleFailed) {
-            // Leaflet still touches its map after firing this event. Dispose only
-            // once its tile callback finishes, and never dispose a newer selection.
-            queueMicrotask(() => {
-              if (map === instance && token === revision) fallback(routes, stops);
-            });
-            return;
-          }
-          if (cycleFailed) setState('partial', '일부 지도 배경을 불러오지 못했습니다. 경로와 도보 시간은 그대로 표시합니다.');
-          else if (cycleLoaded || loaded) setState('map', isDialog ? '지도를 끌어 이동하고, 마우스 휠이나 + / − 버튼으로 확대·축소할 수 있습니다.' : '지도를 끌어 이동하거나 + / − 버튼으로 확대·축소할 수 있습니다.');
-        });
-        tiles.addTo(instance);
         for (const route of routes) {
           // An estimate is not a pedestrian road: preserve its dashed presentation.
           L.polyline(route.path, {color: '#ffffff', weight: 11, opacity: 1, interactive: false,

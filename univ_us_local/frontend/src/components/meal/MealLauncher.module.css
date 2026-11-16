@@ -22,9 +22,9 @@
 .dialog {
   position: fixed;
   inset: 0;
-  width: min(1280px, calc(100vw - 40px));
+  width: min(1600px, calc(100vw - 24px));
   max-width: none;
-  height: min(960px, calc(100dvh - 40px));
+  height: calc(100dvh - 24px);
   max-height: none;
   margin: auto;
   padding: 0;

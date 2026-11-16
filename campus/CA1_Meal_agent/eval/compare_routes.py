@@ -8,7 +8,6 @@ from __future__ import annotations
 
 import argparse
 import csv
-import hashlib
 import json
 import statistics
 import sys
@@ -17,6 +16,7 @@ from datetime import datetime
 from pathlib import Path
 
 from meal.settings import SETTINGS_PATH, Settings, load_settings
+from .input_digest import text_sha256
 
 ROOT = Path(__file__).resolve().parent.parent
 REPORT_PATH = ROOT / "eval" / "route_comparison.json"
@@ -96,7 +96,7 @@ def summarize(trips: list[dict]) -> dict:
 
 
 def _hash(path: Path) -> str:
-    return hashlib.sha256(path.read_bytes()).hexdigest()
+    return text_sha256(path)
 
 
 def demo_attendance() -> dict:

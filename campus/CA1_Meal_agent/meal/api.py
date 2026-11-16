@@ -20,7 +20,7 @@ from fastapi.responses import FileResponse, HTMLResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, ConfigDict, Field, model_validator
 
-from . import academic, service, survey
+from . import academic, service, survey, timeline
 from .ranking import Filters
 from .timetable import SEOUL, TimetableError, load_buildings, resolve_context
 
@@ -82,6 +82,7 @@ class MealRequest(BaseModel):
         return self
 
 
+@app.get("/ui", include_in_schema=False)
 @app.get("/", include_in_schema=False)
 def home(request: Request):
     return _page("index.html", request)
@@ -169,6 +170,26 @@ def timetable_status(request: Request, date_value: str | None = Query(None, alia
     except TimetableError as exc:
         summary["originHint"] = str(exc)
     return summary
+
+
+@app.get("/v1/meal/timeline")
+def meal_timeline(request: Request, date_value: date = Query(alias="date")):
+    if getattr(request.app.state, "public", PUBLIC):
+        return {"date": date_value.isoformat(), "status": "unavailable", "classes": [], "slots": [],
+                "start": "09:00", "end": "20:00", "warnings": [PUBLIC_TIMETABLE_MESSAGE]}
+    reader = getattr(request.app.state, "timetable_reader", None) or academic.read_timetable
+    try:
+        return timeline.daily_timeline(reader(date_value), date_value)
+    except ValueError as exc:
+        raise HTTPException(422, detail=str(exc)) from exc
+
+
+@app.get("/v1/meal/basemap", include_in_schema=False)
+def meal_basemap():
+    path = ROOT / "data" / "osm" / "basemap.json"
+    if not path.is_file():
+        raise HTTPException(503, detail="지도 자료를 찾지 못했습니다. 앱을 업데이트해 주세요.")
+    return FileResponse(path, media_type="application/json")
 
 
 @app.post("/v1/meal/recommend")

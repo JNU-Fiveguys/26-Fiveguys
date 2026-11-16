@@ -122,6 +122,7 @@ window.MealForm = {
     }
     async function refresh() {
       const token = ++requestToken;
+      document.dispatchEvent(new CustomEvent('meal:datechange', {detail: {date: selectedDate(), automatic: useAcademic}}));
       if (!useAcademic) {loading = false; preview = null; currentHint = '건물 이름을 입력하세요.'; originHelp(currentHint); showSummary({status: 'manual'}); return;}
       if (!$('at').value) {loading = false; preview = null; currentHint = '출발시간을 선택하세요.'; originHelp(currentHint); $('academic-retry').disabled = false; return;}
       loading = true; preview = null; currentHint = '직전 수업 건물을 확인하고 있습니다…';
@@ -196,6 +197,16 @@ window.MealForm = {
     setNow(); updateMode(); updateBudget(); refresh();
     return {
       selectedAt, selectedDate, refresh,
+      chooseSlot: async slot => {
+        if (isBusy() || !slot.enabled) return;
+        useAcademic = true;
+        $('at').value = slot.start; $('origin').value = '';
+        $('next-room').value = ''; $('next-start').value = ''; $('next-mode').value = 'auto';
+        $('next-mode').dispatchEvent(new Event('change'));
+        const requestedAt = selectedAt();
+        updateMode(); await refresh();
+        if (!isBusy() && requestedAt === selectedAt() && useAcademic) $('meal-form').requestSubmit();
+      },
       autoTimetable: () => useAcademic,
       budget: () => ({budgetMin: $('budget-min').value === '' ? null : Number($('budget-min').value), budgetMax: $('budget-max').value === '' ? null : Number($('budget-max').value)}),
       acceptSummary: summary => {if (useAcademic && summary?.date === selectedDate()) showSummary(summary);}

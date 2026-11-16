@@ -65,7 +65,8 @@ def test_meal_ui_and_assets_share_the_desktop_session(desktop_app, client):
     main, _ = desktop_app
     guest = TestClient(main.app, base_url="http://127.0.0.1:8020")
     try:
-        for path in ("/api/meal/", "/api/meal/assets/meal-form.js", "/api/meal/v1/meal/places"):
+        for path in ("/api/meal/", "/api/meal/assets/meal-form.js", "/api/meal/v1/meal/places",
+                     "/api/meal/v1/meal/timeline?date=2026-11-16", "/api/meal/v1/meal/basemap"):
             assert guest.get(path).status_code == 403
     finally:
         guest.close()
@@ -107,6 +108,10 @@ def test_recommendation_uses_the_f3_exporter_without_a_cli(desktop_app, client, 
     assert response.status_code == 200 and response.json()["status"] == "ready"
     assert response.json()["dataMode"] == "app"
     assert "blocks" not in response.json()
+    timeline = client.get("/api/meal/v1/meal/timeline?date=2026-11-11")
+    assert timeline.status_code == 200
+    assert timeline.json()["slots"][0]["start"] == "11:50"
+    assert timeline.json()["slots"][0]["end"] == "13:30"
     response = client.post("/api/meal/v1/meal/recommend", headers={"Origin": "http://127.0.0.1:3000"},
                            json={"at": "2026-11-11T11:50:00+09:00", "routeMode": "estimate"})
     assert response.status_code == 200, response.text

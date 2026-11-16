@@ -11,7 +11,6 @@ from __future__ import annotations
 
 import argparse
 import copy
-import hashlib
 import json
 import math
 import sys
@@ -26,6 +25,7 @@ from meal.ranking import (
 )
 from meal.settings import SETTINGS_PATH, Settings, to_hhmm, to_min
 from meal.routing import EstimateRouter
+from .input_digest import text_sha256
 
 EVAL_DIR = Path(__file__).resolve().parent
 BASELINE_PATH = EVAL_DIR / "baseline_settings.json"
@@ -165,9 +165,9 @@ def build_comparison() -> dict:
         "sampleValidationDate": VALIDATION_DATE.isoformat(),
         "sampleCount": len(checked.places),
         "inputSha256": {
-            "eval/baseline_settings.json": hashlib.sha256(BASELINE_PATH.read_bytes()).hexdigest(),
-            "data/settings.json": hashlib.sha256(SETTINGS_PATH.read_bytes()).hexdigest(),
-            **{f"data/samples/{path.name}": hashlib.sha256(path.read_bytes()).hexdigest()
+            "eval/baseline_settings.json": text_sha256(BASELINE_PATH),
+            "data/settings.json": text_sha256(SETTINGS_PATH),
+            **{f"data/samples/{path.name}": text_sha256(path)
                for path in sorted(SAMPLES_DIR.glob("*.json"))},
         },
         "currentSettings": current_data,

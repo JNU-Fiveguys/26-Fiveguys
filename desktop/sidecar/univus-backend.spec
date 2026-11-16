@@ -56,7 +56,7 @@ for src, dest in TREES:
 # CA1 공개 런타임 seed만 명시적으로 포함한다. 개인 입력·조사 원본·DB는 포함하지 않는다.
 meal_root = REPO / "campus" / "CA1_Meal_agent"
 meal_seed_patterns = ("data/places/*.json", "data/samples/*.json", "data/schema/*.json",
-                      "data/buildings.json", "data/settings.json", "data/routing/walk_network.json",
+                      "data/buildings.json", "data/settings.json", "data/routing/walk_network.json", "data/osm/basemap.json",
                       "data/examples/attendance_summary.json")
 for pattern in meal_seed_patterns:
     seeds = sorted(meal_root.glob(pattern))

@@ -25,6 +25,7 @@
   </style>
   <link rel="stylesheet" href="assets/meal-form.css">
   <link rel="stylesheet" href="assets/meal-workspace.css">
+  <link rel="stylesheet" href="assets/meal-experience.css">
 </head>
 <body>
 <a class="skip" href="#main">본문으로 건너뛰기</a>
@@ -39,6 +40,12 @@
   <p class="small" style="text-align:right;margin-top:-8px"><a href="survey">식당 정보 직접 입력 ↗</a></p>
   <div class="workspace-tabs" role="tablist" aria-label="식사 추천 화면"><button id="recommend-tab" role="tab" aria-selected="true" aria-controls="recommend-panel" type="button">식사 추천</button><button id="browse-tab" role="tab" aria-selected="false" aria-controls="browse-panel" tabindex="-1" type="button">식당 둘러보기</button></div>
   <div class="layout" id="recommend-panel" role="tabpanel" aria-labelledby="recommend-tab">
+  <section id="meal-timeline" class="panel meal-timeline" aria-label="선택한 날짜의 시간표" hidden>
+    <h2>시간표에서 공강 고르기</h2><p id="timeline-status" class="small" role="status"></p>
+    <div id="timeline-track" class="timeline-track" role="group" aria-label="09시부터 20시까지 시간표"></div>
+    <div class="timeline-hours" aria-hidden="true"><span>09시</span><span>12시</span><span>15시</span><span>18시</span><span>20시</span></div>
+    <div id="timeline-slots" class="timeline-slots" role="group" aria-label="추천 가능한 공강"></div>
+  </section>
     <section class="panel"><div class="section-head"><h2>시간과 이동 장소</h2></div>
       <form id="meal-form">
         <div class="form-section form-grid">
@@ -80,7 +87,11 @@
     </section>
     <section class="panel" aria-live="polite"><div class="section-head"><h2>이번 공강에 갈 수 있는 곳</h2><p class="small">가격과 이동 시간을 한눈에 비교하세요.</p></div>
       <div id="status" class="empty"><strong>이번 공강, 어디서 먹을까요?</strong>시간과 예산을 정하고 추천받아 보세요.<br>다음 수업까지의 이동 시간도 함께 확인합니다.</div>
-      <div id="results" hidden><p id="context"></p><div id="warnings"></div><div id="cards"></div>
+      <div id="results" hidden><p id="context"></p><div id="warnings"></div>
+        <div class="recommendation-workspace"><div class="deck-workspace">
+          <div id="deck-controls" class="deck-controls" hidden><button id="deck-prev" type="button">← 이전 식당</button><span id="deck-count" role="status"></span><button id="deck-next" type="button">다음 식당 →</button></div>
+          <div id="cards" tabindex="0" aria-label="추천 식당 · 좌우 키로 넘기기"></div>
+        </div><aside id="recommendation-map-panel" hidden><div id="recommendation-map" role="region" aria-label="추천 식당 지도"></div><p id="recommendation-map-status" role="status"></p></aside></div>
         <div id="other" aria-label="다른 선택지"></div>
       </div>
     </section>
@@ -107,6 +118,8 @@
           <p class="small">초록: 식당까지 · 파랑: 다음 강의실까지. 점선은 직선거리 추정입니다.</p><div class="route-dialog-actions"><button id="route-to-detail" type="button">메뉴·영업시간</button><button id="route-done" class="primary" type="button">닫기</button></div></div></dialog>
 <dialog id="place-dialog" class="place-dialog" aria-labelledby="detail-title"><div class="dialog-heading"><h2 id="detail-title">메뉴·영업시간</h2><button id="detail-close" type="button" aria-label="식당 상세 닫기">닫기 ✕</button></div><div id="place-detail" aria-live="polite"></div></dialog>
 <script src="assets/leaflet/leaflet.js"></script>
+<script src="assets/meal-basemap.js"></script>
+<script src="assets/meal-experience.js"></script>
 <script src="assets/route-map.js"></script>
 <script src="assets/meal-form.js"></script>
 <script src="assets/building-picker.js"></script>
@@ -118,6 +131,7 @@
   const routeView=window.MealRouteMap.create(); let routeContext=null;
   const toast=msg=>{let box=$('toast');if(!box){box=el('div',undefined,'toast');box.id='toast';box.setAttribute('role','status');box.setAttribute('aria-live','polite');document.body.append(box);}box.textContent=msg;box.classList.remove('show');void box.offsetWidth;box.classList.add('show');clearTimeout(box._t);box._t=setTimeout(()=>box.classList.remove('show'),3500);};
   const el=(tag,text,cls)=>{const n=document.createElement(tag);if(text!==undefined)n.textContent=text;if(cls)n.className=cls;return n;};
+  const mealExperience=window.MealExperience.create({onSlot:slot=>mealForm.chooseSlot(slot),isBusy:()=>busy});
   const mealForm=window.MealForm.create({isBusy:()=>busy});
   const autoTimetable=()=>mealForm.autoTimetable();
   const refreshAcademic=()=>mealForm.refresh();
@@ -265,6 +279,7 @@
       const actions=el('div',undefined,'card-actions'),route=el('button','이동 경로 보기'),info=el('button','메뉴·영업시간');route.type=info.type='button';route.addEventListener('click',()=>drawRoute(c));info.addEventListener('click',async()=>{await showPlace(c.placeId);});actions.append(route,info);box.append(actions);$('cards').append(box);
     });
     if(!now.candidates.length)$('cards').append(el('p','현재 조건에서 여유 있게 다녀올 수 있는 일반 식당이 없습니다.','empty'));
+    mealExperience.render(now.candidates,ctx);
     $('other').replaceChildren();for(const [key,label] of [['more','다른 선택지'],['cafeteria','학식'],['tight','시간이 빠듯한 곳']]){const items=now[key];if(!items.length)continue;
 
 const group=el('section',undefined,'other-group'),head=el('div',undefined,'other-head'),title=el('h3',label),count=el('span',`${items.length}곳`,'other-count');title.append(count);
