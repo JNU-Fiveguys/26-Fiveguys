@@ -20,7 +20,7 @@ AGENTS = ["C0_Platform_agent", "C1_Calendar_agent", "C2_Profile_agent", "C3_Logi
           "F2_Graduation_agent", "F3_Attendance_agent", "F4_Textbook_agent", "F5_Test_agent", "F6_Eclass_agent",
           "F7_Task_agent", "F8_Plan_agent", "F11_Scholarship_agent", "F12_Activity_agent"]
 TREES = [(REPO / a, f"univus/{a}") for a in AGENTS] + [
-    (REPO / "campus" / "CA1_Meal_agent", "univus/campus/CA1_Meal_agent"),    # CA1 공강 식사 추천(meal · directory)
+    (REPO / "campus" / "CA1_Meal_agent", "univus/campus/CA1_Meal_agent"),    # CA1 코드·기존 화면
     (REPO / "campus" / "CA2_Assistant_agent", "univus/campus/CA2_Assistant_agent"),    # CA2 캠퍼스 생활 Q&A·대화
     (REPO / "univ_us_local" / "backend" / "app", "univus/univ_us_local/backend/app"),
     (REPO / "univ_us_local" / "frontend" / "out", "univus/univ_us_local/frontend/out"),
@@ -43,8 +43,8 @@ for src, dest in TREES:
     for dirpath, dirnames, filenames in os.walk(src):
         dirnames[:] = [d for d in dirnames if d not in SKIP_DIRS]
         if src == REPO / "campus" / "CA1_Meal_agent" and Path(dirpath) == src:
-            dirnames[:] = [d for d in dirnames if d in {"meal", "directory"}]
-            filenames = []  # 조사 문서·스크립트는 설치 앱에서 사용하지 않는다.
+            dirnames[:] = [d for d in dirnames if d in {"meal", "web"}]
+            filenames = []  # 런처·조사 문서·평가 스크립트는 설치 앱에서 사용하지 않는다.
         for f in filenames:
             p = Path(dirpath) / f
             if f not in KEEP_FILES and (f in SKIP_FILES or p.suffix in SKIP_SUFFIX):
@@ -53,10 +53,11 @@ for src, dest in TREES:
             if p.suffix == ".py":
                 sources.append(p)
 
-# CA1 추천에 필요한 공개 자료만 명시적으로 포함한다(식당 조사 양식 · 좌표 · 길/바탕 지도). 원천 CSV·키·백업본은 넣지 않는다.
+# CA1 공개 런타임 seed만 명시적으로 포함한다. 개인 입력·조사 원본·DB는 포함하지 않는다.
 meal_root = REPO / "campus" / "CA1_Meal_agent"
-meal_seed_patterns = ("data/survey.csv", "data/places.candidates.json", "data/places.extra.json",
-                      "data/osm/walk.raw.json", "data/osm/basemap.json")
+meal_seed_patterns = ("data/places/*.json", "data/samples/*.json", "data/schema/*.json",
+                      "data/buildings.json", "data/settings.json", "data/routing/walk_network.json", "data/osm/basemap.json",
+                      "data/examples/attendance_summary.json")
 for pattern in meal_seed_patterns:
     seeds = sorted(meal_root.glob(pattern))
     if not seeds:

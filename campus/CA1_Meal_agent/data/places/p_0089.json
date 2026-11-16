@@ -1,0 +1,462 @@
+{
+  "version": 1,
+  "id": "p_0089",
+  "name": "쉐프공방",
+  "category": "양식",
+  "lat": 35.1759981895838,
+  "lng": 126.912660002948,
+  "address": "전남광주 북구 우치로 96 2층 쉐프공방",
+  "source": "semas",
+  "sourceId": "MA0101202601A0047748",
+  "sourceStatus": "active",
+  "attrs": {
+    "status": "partial",
+    "menus": [
+      {
+        "name": "투움바 파스타",
+        "price": 9500,
+        "main": true
+      },
+      {
+        "name": "토마토 파스타",
+        "price": 9500,
+        "main": true
+      },
+      {
+        "name": "우삼겹 필라프",
+        "price": 10800,
+        "main": true
+      }
+    ],
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금",
+          "토"
+        ],
+        "open": "11:00",
+        "close": "21:00",
+        "break": {
+          "start": "15:00",
+          "end": "17:00"
+        },
+        "lastOrder": "20:10"
+      }
+    ]
+  },
+  "research": {
+    "identityStatus": "matched",
+    "queries": [
+      "\"쉐프공방\" \"우치로\" 메뉴"
+    ],
+    "sources": [
+      {
+        "id": "s1",
+        "url": "https://www.diningcode.com/profile.php?rid=V7wilMSZiFZv",
+        "title": "쉐프공방 매장 정보",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "상호와 도로명 주소를 대조함. URL을 직접 열어 주소와 본문을 확인함."
+      }
+    ],
+    "facts": {
+      "menus": {
+        "status": "confirmed",
+        "value": [
+          {
+            "name": "투움바 파스타",
+            "price": 9500,
+            "main": true
+          },
+          {
+            "name": "토마토 파스타",
+            "price": 9500,
+            "main": true
+          },
+          {
+            "name": "우삼겹 필라프",
+            "price": 10800,
+            "main": true
+          }
+        ],
+        "sourceIds": [
+          "s1"
+        ],
+        "note": "주소가 일치하는 지점 페이지에 게시된 메뉴·가격. 실제 결제 가격은 현장 재확인 필요."
+      },
+      "hours": {
+        "status": "confirmed",
+        "value": [
+          {
+            "days": [
+              "월",
+              "화",
+              "수",
+              "목",
+              "금",
+              "토"
+            ],
+            "open": "11:00",
+            "close": "21:00",
+            "break": {
+              "start": "15:00",
+              "end": "17:00"
+            },
+            "lastOrder": "20:10"
+          }
+        ],
+        "sourceIds": [
+          "s1"
+        ],
+        "note": "지점 주간 영업정보: 월~토 11:00~21:00, 휴식 15:00~17:00, 마지막 주문 20:10. 일요일 휴무."
+      }
+    },
+    "notes": [],
+    "checkedAt": "2026-11-11",
+    "method": "web",
+    "unknownFields": [
+      "mealType",
+      "takeout",
+      "verifiedAt",
+      "verifiedBy"
+    ]
+  },
+  "availability": {
+    "status": "listed",
+    "provider": "naver",
+    "checkedAt": "2026-11-11",
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/1916473280/home?fromPanelNum=1&additionalHeight=76&timestamp=202611112349&locale=ko&svcName=map_pcv5&searchText=%EC%89%90%ED%94%84%EA%B3%B5%EB%B0%A9%20%EC%A0%84%EB%82%A8%EB%8C%80",
+    "naverPlaceId": "1916473280",
+    "observedName": "쉐프공방",
+    "observedAddress": "전남광주 북구 우치로 96 2층 쉐프공방",
+    "district": "후문",
+    "addressVerified": true,
+    "nearby": true,
+    "reason": "공개 네이버 지도에서 동일 주소의 전남대 후문 식당으로 확인"
+  },
+  "menuObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/1916473280/menu?fromPanelNum=1&additionalHeight=76&timestamp=202611112349&locale=ko&svcName=map_pcv5&searchText=%EC%89%90%ED%94%84%EA%B3%B5%EB%B0%A9%20%EC%A0%84%EB%82%A8%EB%8C%80",
+    "checkedAt": "2026-11-11",
+    "priceContext": "in_store",
+    "menus": [
+      {
+        "name": "투움바 쉬림프 파스타",
+        "price": 11300,
+        "main": true
+      },
+      {
+        "name": "우삼겹 필라프",
+        "price": 10800,
+        "main": true
+      },
+      {
+        "name": "치킨텐더 샐러드",
+        "price": 9800,
+        "main": false
+      },
+      {
+        "name": "루꼴라 피자 ( S )",
+        "price": 13500,
+        "main": false
+      },
+      {
+        "name": "고르곤졸라 피자 ( M )",
+        "price": 8900,
+        "main": false
+      },
+      {
+        "name": "투움바 파스타",
+        "price": 9500,
+        "main": true
+      },
+      {
+        "name": "투움바 베이컨 파스타",
+        "price": 11300,
+        "main": true
+      },
+      {
+        "name": "투움바 우삼겹 파스타",
+        "price": 13300,
+        "main": true
+      },
+      {
+        "name": "로제 파스타",
+        "price": 9500,
+        "main": true
+      },
+      {
+        "name": "로제 쉬림프 파스타",
+        "price": 11300,
+        "main": true
+      },
+      {
+        "name": "로제 베이컨 파스타",
+        "price": 11300,
+        "main": true
+      },
+      {
+        "name": "로제 우삼겹 파스타",
+        "price": 13300,
+        "main": true
+      },
+      {
+        "name": "까르보나라",
+        "price": 9500,
+        "main": true
+      },
+      {
+        "name": "까르보나라 쉬림프",
+        "price": 11300,
+        "main": true
+      },
+      {
+        "name": "까르보나라 베이컨",
+        "price": 11300,
+        "main": true
+      },
+      {
+        "name": "까르보나라 우삼겹",
+        "price": 13300,
+        "main": true
+      },
+      {
+        "name": "오일 쉬림프 파스타",
+        "price": 11300,
+        "main": true
+      },
+      {
+        "name": "오일 우삼겹 파스타",
+        "price": 13300,
+        "main": true
+      },
+      {
+        "name": "토마토 파스타",
+        "price": 9500,
+        "main": true
+      },
+      {
+        "name": "토마토 쉬림프 파스타",
+        "price": 11300,
+        "main": true
+      },
+      {
+        "name": "토마토 베이컨 파스타",
+        "price": 11300,
+        "main": true
+      },
+      {
+        "name": "토마토 우삼겹 파스타",
+        "price": 13300,
+        "main": true
+      },
+      {
+        "name": "짬뽕 해산물 파스타",
+        "price": 12300,
+        "main": true
+      },
+      {
+        "name": "짬뽕 우삼겹 파스타",
+        "price": 13800,
+        "main": true
+      },
+      {
+        "name": "바질 크림 파스타",
+        "price": 10300,
+        "main": true
+      },
+      {
+        "name": "바질크림 쉬림프 파스타",
+        "price": 11800,
+        "main": true
+      },
+      {
+        "name": "바질크림 베이컨 파스타",
+        "price": 11800,
+        "main": true
+      },
+      {
+        "name": "바질크림 우삼겹 파스타",
+        "price": 13800,
+        "main": true
+      },
+      {
+        "name": "청양크림 쉬림프 파스타",
+        "price": 11800,
+        "main": true
+      },
+      {
+        "name": "청양크림 우삼겹 파스타",
+        "price": 13800,
+        "main": true
+      },
+      {
+        "name": "목살 필라프",
+        "price": 10800,
+        "main": true
+      },
+      {
+        "name": "쉬림프 필라프",
+        "price": 10800,
+        "main": true
+      },
+      {
+        "name": "삼겹살 김치 필라프",
+        "price": 10800,
+        "main": true
+      },
+      {
+        "name": "김치 베이컨 필라프",
+        "price": 10800,
+        "main": true
+      },
+      {
+        "name": "크림 김치 볶음밥",
+        "price": 10800,
+        "main": true
+      },
+      {
+        "name": "스팸 베이컨 김치 필라프",
+        "price": 11300,
+        "main": true
+      },
+      {
+        "name": "스팸 베이컨 필라프",
+        "price": 11300,
+        "main": true
+      },
+      {
+        "name": "치킨 텐더",
+        "price": 9800,
+        "main": false
+      },
+      {
+        "name": "가라아게",
+        "price": 9800,
+        "main": false
+      },
+      {
+        "name": "부라타치즈 샐러드",
+        "price": 9500,
+        "main": false
+      },
+      {
+        "name": "리코타치즈 샐러드",
+        "price": 7800,
+        "main": false
+      },
+      {
+        "name": "그린 샐러드",
+        "price": 6500,
+        "main": false
+      },
+      {
+        "name": "페퍼로니 피자 ( M )",
+        "price": 9800,
+        "main": false
+      },
+      {
+        "name": "반반 피자 (고르곤졸라+페퍼로니)",
+        "price": 9800,
+        "main": false
+      },
+      {
+        "name": "포테이토 피자 ( S )",
+        "price": 13500,
+        "main": false
+      },
+      {
+        "name": "레몬 에이드",
+        "price": 3500,
+        "main": false
+      },
+      {
+        "name": "자몽에이드",
+        "price": 3500,
+        "main": false
+      },
+      {
+        "name": "청포도 에이드",
+        "price": 3500,
+        "main": false
+      },
+      {
+        "name": "참이슬",
+        "price": 3500,
+        "main": false
+      },
+      {
+        "name": "진로",
+        "price": 3500,
+        "main": false
+      },
+      {
+        "name": "새로",
+        "price": 3500,
+        "main": false
+      },
+      {
+        "name": "카스 맥주",
+        "price": 4000,
+        "main": false
+      },
+      {
+        "name": "테라 맥주",
+        "price": 4000,
+        "main": false
+      },
+      {
+        "name": "버드와이저",
+        "price": 4000,
+        "main": false
+      },
+      {
+        "name": "오렌지주스",
+        "price": 2000,
+        "main": false
+      }
+    ],
+    "note": "메뉴 상태: confirmed. 원본 관찰·좌표 출처는 적용 manifest에 보관합니다.",
+    "status": "confirmed"
+  },
+  "hoursObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/1916473280/home?fromPanelNum=1&additionalHeight=76&timestamp=202611112349&locale=ko&svcName=map_pcv5&searchText=%EC%89%90%ED%94%84%EA%B3%B5%EB%B0%A9%20%EC%A0%84%EB%82%A8%EB%8C%80",
+    "checkedAt": "2026-11-11",
+    "status": "confirmed",
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금",
+          "토"
+        ],
+        "open": "11:00",
+        "close": "21:00",
+        "break": {
+          "start": "15:00",
+          "end": "17:00"
+        },
+        "lastOrder": "20:10"
+      },
+      {
+        "days": [
+          "일"
+        ],
+        "open": "11:00",
+        "close": "15:00",
+        "lastOrder": "14:10"
+      }
+    ],
+    "note": "매장 영업시간 관찰. 기존 attrs/research를 덮어쓰지 않습니다.",
+    "closedDates": [
+      "2026-11-19"
+    ]
+  }
+}

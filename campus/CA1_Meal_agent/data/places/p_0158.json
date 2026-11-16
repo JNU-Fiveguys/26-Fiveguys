@@ -1,0 +1,245 @@
+{
+  "version": 1,
+  "id": "p_0158",
+  "source": "team",
+  "sourceId": "naver:2079438672",
+  "name": "삼향집",
+  "address": "전남광주 북구 용주로30번길 36 1층",
+  "category": "한식",
+  "lat": 35.1806777559145,
+  "lng": 126.902829236478,
+  "sourceStatus": "active",
+  "availability": {
+    "status": "listed",
+    "provider": "naver",
+    "checkedAt": "2026-11-11",
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/2079438672/home?fromPanelNum=1&additionalHeight=76&timestamp=202611112338&locale=ko&svcName=map_pcv5&searchText=%EC%82%BC%ED%96%A5%EC%A7%91%20%EC%9A%A9%EB%B4%89%EB%8F%99",
+    "naverPlaceId": "2079438672",
+    "observedName": "삼향집",
+    "observedAddress": "전남광주 북구 용주로30번길 36 1층",
+    "district": "예대",
+    "addressVerified": true,
+    "nearby": true,
+    "reason": "공개 네이버 지도에서 동일 주소의 전남대 예대 식당으로 확인"
+  },
+  "menuObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/2079438672/menu/list",
+    "checkedAt": "2026-11-12",
+    "priceContext": "in_store",
+    "menus": [
+      {
+        "name": "곰탕",
+        "price": 11000,
+        "main": true
+      },
+      {
+        "name": "뚝배기 소불고기",
+        "price": 10000,
+        "main": true
+      },
+      {
+        "name": "제육볶음 (2인 표시)",
+        "price": 10000,
+        "main": false
+      },
+      {
+        "name": "만두",
+        "price": 5000,
+        "main": false
+      },
+      {
+        "name": "수육",
+        "price": 35000,
+        "main": false
+      },
+      {
+        "name": "소주",
+        "price": 4000,
+        "main": false
+      },
+      {
+        "name": "맥주",
+        "price": 4000,
+        "main": false
+      },
+      {
+        "name": "음료수",
+        "price": 2000,
+        "main": false
+      }
+    ],
+    "note": "공개 매장 메뉴판 이미지 대조. 사진 촬영일·현장 현재 가격을 보증하지 않음. ",
+    "status": "confirmed"
+  },
+  "attrs": {
+    "status": "partial",
+    "menus": [
+      {
+        "name": "곰탕",
+        "price": 11000,
+        "main": true
+      },
+      {
+        "name": "뚝배기 소불고기",
+        "price": 10000,
+        "main": true
+      },
+      {
+        "name": "제육볶음 (2인 표시)",
+        "price": 10000,
+        "main": false
+      },
+      {
+        "name": "만두",
+        "price": 5000,
+        "main": false
+      },
+      {
+        "name": "수육",
+        "price": 35000,
+        "main": false
+      },
+      {
+        "name": "소주",
+        "price": 4000,
+        "main": false
+      },
+      {
+        "name": "맥주",
+        "price": 4000,
+        "main": false
+      },
+      {
+        "name": "음료수",
+        "price": 2000,
+        "main": false
+      }
+    ],
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금",
+          "토"
+        ],
+        "open": "10:00",
+        "close": "21:00",
+        "break": {
+          "start": "15:00",
+          "end": "17:00"
+        },
+        "lastOrder": "20:30"
+      }
+    ]
+  },
+  "hoursObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/2079438672/home?fromPanelNum=1&additionalHeight=76&timestamp=202611112338&locale=ko&svcName=map_pcv5&searchText=%EC%82%BC%ED%96%A5%EC%A7%91%20%EC%9A%A9%EB%B4%89%EB%8F%99",
+    "checkedAt": "2026-11-12",
+    "status": "confirmed",
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금",
+          "토"
+        ],
+        "open": "10:00",
+        "close": "21:00",
+        "break": {
+          "start": "15:00",
+          "end": "17:00"
+        },
+        "lastOrder": "20:30"
+      }
+    ],
+    "note": "매장 영업시간 관찰. 기존 attrs/research를 덮어쓰지 않습니다."
+  },
+  "research": {
+    "checkedAt": "2026-11-11",
+    "method": "web",
+    "identityStatus": "matched",
+    "queries": [
+      "삼향집 전남광주 북구 용주로30번길 36 1층"
+    ],
+    "sources": [
+      {
+        "id": "naver-place",
+        "url": "https://pcmap.place.naver.com/restaurant/2079438672/home?fromPanelNum=1&additionalHeight=76&timestamp=202611112338&locale=ko&svcName=map_pcv5&searchText=%EC%82%BC%ED%96%A5%EC%A7%91%20%EC%9A%A9%EB%B4%89%EB%8F%99",
+        "title": "삼향집 네이버 지도",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "같은 주소의 지점 확인. 지도 등록 확인은 실시간 영업 중 보증이 아님"
+      },
+      {
+        "id": "naver-menu",
+        "url": "https://pcmap.place.naver.com/restaurant/2079438672/menu?fromPanelNum=1&additionalHeight=76&timestamp=202611112338&locale=ko&svcName=map_pcv5&searchText=%EC%82%BC%ED%96%A5%EC%A7%91%20%EC%9A%A9%EB%B4%89%EB%8F%99",
+        "title": "삼향집 메뉴 탭",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "가격 맥락: delivery"
+      },
+      {
+        "id": "naver-hours",
+        "url": "https://pcmap.place.naver.com/restaurant/2079438672/home?fromPanelNum=1&additionalHeight=76&timestamp=202611112338&locale=ko&svcName=map_pcv5&searchText=%EC%82%BC%ED%96%A5%EC%A7%91%20%EC%9A%A9%EB%B4%89%EB%8F%99",
+        "title": "삼향집 영업시간",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "게시된 요일별 영업시간. 미확인은 추정하지 않음"
+      }
+    ],
+    "facts": {
+      "menus": {
+        "status": "unconfirmed",
+        "sourceIds": [],
+        "note": "매장 기준 정보 미확인. 배달·가격 맥락 불명 자료는 확정하지 않습니다."
+      },
+      "hours": {
+        "status": "unconfirmed",
+        "sourceIds": [],
+        "note": "매장 기준 정보 미확인. 배달·가격 맥락 불명 자료는 확정하지 않습니다."
+      }
+    },
+    "unknownFields": [
+      "menus",
+      "hours",
+      "mealType",
+      "takeout",
+      "verifiedAt",
+      "verifiedBy",
+      "break",
+      "lastOrder"
+    ],
+    "notes": [
+      "네이버 공개 지도 상세·메뉴 탭 직접 확인.",
+      "공개 메뉴에서 배달 가격만 확인됨. 매장 가격으로 적용하지 않으며 추천 예산 계산에도 사용하지 않음.",
+      "매주 일요일 정기휴무. 영업시간 배열에는 월~토만 포함.",
+      "메뉴 탭에 게시된 전체 텍스트 메뉴 기준. 메뉴판 이미지 전체와 대조한 것은 아님.",
+      "원문 메뉴명·가격은 모두 보존. 가격 변동은 price=null 및 priceText로 기록.",
+      "학교 출입구에서 실제 도보 10분 이내 여부는 별도 경로 감사 대상이며 이 파일에서 거리나 소요시간을 추정하지 않음.",
+      "원문 영업시간은 rear_art_batch6.json에 보관. 미게시 영업시간·브레이크·라스트오더는 임의로 채우지 않음.",
+      "병합 입력: rear_art_batch6_manifest.json",
+      "공개 네이버 화면 관찰이며 현장 검증이 아닙니다."
+    ]
+  },
+  "followupReview": {
+    "checkedAt": "2026-11-12",
+    "reasons": [
+      "확인된 매장 식사 가격과 요일별 영업시간을 연결하여 추천 대상으로 전환했습니다."
+    ],
+    "sources": [
+      "https://pcmap.place.naver.com/restaurant/2079438672/home",
+      "https://pcmap.place.naver.com/restaurant/2079438672/menu/list",
+      "https://pcmap.place.naver.com/restaurant/2079438672/home?fromPanelNum=1&additionalHeight=76&timestamp=202611112338&locale=ko&svcName=map_pcv5&searchText=%EC%82%BC%ED%96%A5%EC%A7%91%20%EC%9A%A9%EB%B4%89%EB%8F%99",
+      "https://ldb-phinf.pstatic.net/20260905_140/1788594362203Hsjfx_JPEG/IMG_4512.jpg"
+    ]
+  }
+}

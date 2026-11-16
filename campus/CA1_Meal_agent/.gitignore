@@ -1,16 +1,10 @@
-# data/ 는 기본으로 올리지 않는다(상가정보 원천 CSV · 키 파일 · 백업본).
-# 추천에 꼭 필요한 파일만 올린다 — 받은 사람도 바로 추천·지도가 나오게.
-data/*
-!data/survey.csv
-!data/places.candidates.json
-!data/places.extra.json
-!data/pr4_places.json
-!data/osm/
-data/osm/*
-!data/osm/basemap.json
-!data/osm/walk.raw.json
-!data/osm/base.raw.json
-!data/osm/buildings.raw.json
-# 키는 절대 올리지 않는다
-*.key
+# 공공데이터 원본 (크고 자주 바뀜 — 가공 결과만 커밋)
+data/raw/
+# 개인 제보·입력은 로컬에만 보관
+data/survey/user_entries/
+# 비밀 값
 .env
+.venv/
+.local/
+__pycache__/
+.pytest_cache/

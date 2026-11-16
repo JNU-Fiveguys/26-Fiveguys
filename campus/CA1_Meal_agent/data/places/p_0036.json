@@ -1,0 +1,86 @@
+{
+  "version": 1,
+  "id": "p_0036",
+  "name": "스피드반점",
+  "category": "중식",
+  "lat": 35.178702,
+  "lng": 126.912262,
+  "address": "전남광주통합특별시 북구 우치로 126",
+  "source": "semas",
+  "sourceId": "MA010120220807599365",
+  "sourceStatus": "active",
+  "attrs": {
+    "status": "partial"
+  },
+  "research": {
+    "identityStatus": "matched",
+    "queries": [
+      "\"스피드반점\" \"우치로\" 메뉴 영업시간"
+    ],
+    "sources": [
+      {
+        "id": "s1",
+        "url": "https://www.diningcode.com/profile.php?rid=Sg6spxZQcjHG",
+        "title": "스피드반점",
+        "type": "directory",
+        "addressMatch": true,
+        "note": "주소 일치. 후기의 영업시간 10:00~19:30/11:00~20:00 상충.",
+        "observedAt": "2026-11-11"
+      }
+    ],
+    "facts": {
+      "menus": {
+        "status": "partial",
+        "value": [
+          {
+            "name": "짜장면",
+            "price": 4000,
+            "main": true
+          },
+          {
+            "name": "미니 탕수육",
+            "price": 6000,
+            "main": false
+          }
+        ],
+        "sourceIds": [
+          "s1"
+        ],
+        "note": "후기에서 확인한 가격. 현행 매장 메뉴판 확인 필요."
+      },
+      "hours": {
+        "status": "conflict",
+        "sourceIds": [
+          "s1"
+        ],
+        "note": "정기휴무 토요일은 공통이나 10:00~19:30(LO19:00)와 11:00~20:00 안내가 상충함."
+      }
+    },
+    "notes": [],
+    "checkedAt": "2026-11-11",
+    "method": "web",
+    "unknownFields": [
+      "menus",
+      "hours",
+      "mealType",
+      "takeout",
+      "verifiedAt",
+      "verifiedBy",
+      "break",
+      "lastOrder"
+    ]
+  },
+  "availability": {
+    "status": "excluded",
+    "provider": "naver",
+    "checkedAt": "2026-11-11",
+    "sourceUrl": "https://map.naver.com/p/search/%EC%A0%84%EB%82%A8%EB%8C%80%20%EC%9D%8C%EC%8B%9D%EC%A0%90",
+    "naverPlaceId": null,
+    "observedName": "",
+    "observedAddress": "",
+    "district": null,
+    "addressVerified": false,
+    "nearby": false,
+    "reason": "네이버 지도에서 확인한 네 식당가 명단에 포함되지 않아 제외"
+  }
+}

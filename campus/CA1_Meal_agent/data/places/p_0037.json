@@ -1,0 +1,72 @@
+{
+  "version": 1,
+  "id": "p_0037",
+  "name": "신미",
+  "category": "학식",
+  "lat": 35.171897,
+  "lng": 126.900534,
+  "address": "전남광주통합특별시 북구 용봉로 33",
+  "source": "semas",
+  "sourceId": "MA010120220807667524",
+  "sourceStatus": "active",
+  "attrs": {
+    "status": "partial"
+  },
+  "research": {
+    "identityStatus": "matched",
+    "queries": [
+      "\"신미\" \"용봉로 33\" 메뉴"
+    ],
+    "sources": [
+      {
+        "id": "s1",
+        "url": "https://opengo.kr/5601fb120e887edf2cd8bdc4",
+        "title": "(주)신미 인허가 정보",
+        "type": "directory",
+        "addressMatch": true,
+        "note": "전남대 치과병원 10층 위탁급식영업. 메뉴·시간 미제공.",
+        "observedAt": "2026-11-11"
+      }
+    ],
+    "facts": {
+      "menus": {
+        "status": "unconfirmed",
+        "sourceIds": [],
+        "note": "동일 지점의 메뉴와 현행 가격을 확인하지 못함. 값은 생성하지 않음."
+      },
+      "hours": {
+        "status": "unconfirmed",
+        "sourceIds": [],
+        "note": "동일 지점의 요일별 영업시간·휴무를 확인하지 못함. 임의 시간 입력하지 않음."
+      }
+    },
+    "notes": [
+      "기관 구내식당 업체로 확인. 일반 학생 이용 가능 여부 미확인."
+    ],
+    "checkedAt": "2026-11-11",
+    "method": "web",
+    "unknownFields": [
+      "menus",
+      "hours",
+      "mealType",
+      "takeout",
+      "verifiedAt",
+      "verifiedBy",
+      "break",
+      "lastOrder"
+    ]
+  },
+  "availability": {
+    "status": "excluded",
+    "provider": "naver",
+    "checkedAt": "2026-11-11",
+    "sourceUrl": "https://map.naver.com/p/search/%EC%A0%84%EB%82%A8%EB%8C%80%20%EC%9D%8C%EC%8B%9D%EC%A0%90",
+    "naverPlaceId": null,
+    "observedName": "",
+    "observedAddress": "",
+    "district": null,
+    "addressVerified": false,
+    "nearby": false,
+    "reason": "네이버 지도에서 확인한 네 식당가 명단에 포함되지 않아 제외"
+  }
+}

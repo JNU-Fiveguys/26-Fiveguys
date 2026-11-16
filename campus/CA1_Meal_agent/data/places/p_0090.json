@@ -1,0 +1,107 @@
+{
+  "version": 1,
+  "id": "p_0090",
+  "name": "파인애플프로젝트",
+  "category": "한식",
+  "lat": 35.177243,
+  "lng": 126.902416,
+  "address": "전남광주통합특별시 북구 설죽로202번길 90",
+  "source": "semas",
+  "sourceId": "MA0101202602A0003917",
+  "sourceStatus": "active",
+  "attrs": {
+    "status": "partial",
+    "menus": [
+      {
+        "name": "새우보울 (1~2인분)",
+        "price": 12700,
+        "main": true
+      },
+      {
+        "name": "닭다리살보울 (1~2인분)",
+        "price": 10700,
+        "main": true
+      },
+      {
+        "name": "베이식샐러드보울 (1~2인분)",
+        "price": 7900,
+        "main": true
+      }
+    ]
+  },
+  "research": {
+    "identityStatus": "matched",
+    "queries": [
+      "\"파인애플프로젝트\" 메뉴 영업시간"
+    ],
+    "sources": [
+      {
+        "id": "s1",
+        "url": "https://www.diningcode.com/profile.php?rid=mg4JDzpDMGze",
+        "title": "파인애플프로젝트 매장 정보",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "상호와 도로명 주소를 대조함. URL을 직접 열어 주소와 본문을 확인함."
+      }
+    ],
+    "facts": {
+      "menus": {
+        "status": "confirmed",
+        "value": [
+          {
+            "name": "새우보울 (1~2인분)",
+            "price": 12700,
+            "main": true
+          },
+          {
+            "name": "닭다리살보울 (1~2인분)",
+            "price": 10700,
+            "main": true
+          },
+          {
+            "name": "베이식샐러드보울 (1~2인분)",
+            "price": 7900,
+            "main": true
+          }
+        ],
+        "sourceIds": [
+          "s1"
+        ],
+        "note": "현재 지점 메뉴란 가격. 1~2인분 표기를 유지했으며 샐러드팩/보울과 리뷰 이벤트 가격을 구분함."
+      },
+      "hours": {
+        "status": "conflict",
+        "sourceIds": [
+          "s1"
+        ],
+        "note": "현재 주간 정보는 월~금 10:00~20:00·토 11:00~20:00·일 휴무. 같은 페이지 후기에는 화~금 10:00~20:00·토/일/월 휴무 및 평일 10:30 시작 등이 함께 있어 최신 정기 일정 재확인 필요."
+      }
+    },
+    "notes": [],
+    "checkedAt": "2026-11-11",
+    "method": "web",
+    "unknownFields": [
+      "hours",
+      "mealType",
+      "takeout",
+      "verifiedAt",
+      "verifiedBy",
+      "break",
+      "lastOrder"
+    ]
+  },
+  "availability": {
+    "status": "excluded",
+    "provider": "naver",
+    "checkedAt": "2026-11-11",
+    "sourceUrl": "https://map.naver.com/p/search/%EC%A0%84%EB%82%A8%EB%8C%80%20%EC%9D%8C%EC%8B%9D%EC%A0%90",
+    "naverPlaceId": null,
+    "observedName": "",
+    "observedAddress": "",
+    "district": null,
+    "addressVerified": false,
+    "nearby": false,
+    "reason": "네이버 지도에서 확인한 네 식당가 명단에 포함되지 않아 제외"
+  }
+}

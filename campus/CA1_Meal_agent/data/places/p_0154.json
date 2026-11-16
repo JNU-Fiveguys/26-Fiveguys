@@ -1,0 +1,196 @@
+{
+  "version": 1,
+  "id": "p_0154",
+  "source": "team",
+  "sourceId": "naver:2022595457",
+  "name": "푸다회전훠궈 전대점",
+  "address": "전남광주 북구 우치로90번길 7-7 1층",
+  "category": "중식",
+  "lat": 35.1758812345186,
+  "lng": 126.9129675081,
+  "sourceStatus": "active",
+  "availability": {
+    "status": "listed",
+    "provider": "naver",
+    "checkedAt": "2026-11-11",
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/2022595457/home?fromPanelNum=1&additionalHeight=76&timestamp=202611112345&locale=ko&svcName=map_pcv5&searchText=%ED%91%B8%EB%8B%A4%ED%9A%8C%EC%A0%84%ED%9B%A0%EA%B6%88%20%EC%A0%84%EB%8C%80%EC%A0%90",
+    "naverPlaceId": "2022595457",
+    "observedName": "푸다회전훠궈 전대점",
+    "observedAddress": "전남광주 북구 우치로90번길 7-7 1층",
+    "district": "후문",
+    "addressVerified": true,
+    "nearby": true,
+    "reason": "공개 네이버 지도에서 동일 주소의 전남대 후문 식당으로 확인"
+  },
+  "menuObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/2022595457/menu/list",
+    "checkedAt": "2026-11-12",
+    "priceContext": "in_store",
+    "menus": [
+      {
+        "name": "회전훠궈-점심",
+        "price": 19900,
+        "main": true,
+        "priceText": "19,900원",
+        "orderWindow": {
+          "start": "11:00",
+          "end": "15:00"
+        }
+      },
+      {
+        "name": "회전훠궈-저녁",
+        "price": 22900,
+        "main": true,
+        "priceText": "22,900원",
+        "orderWindow": {
+          "start": "15:00",
+          "end": "20:00"
+        }
+      },
+      {
+        "name": "회전훠궈-어린이",
+        "price": 12900,
+        "main": false,
+        "priceText": "12,900원"
+      }
+    ],
+    "note": "공개 매장 메뉴 게시값 재확인. 곱빼기·세트 설명의 숫자를 기본 가격에 합치지 않음.",
+    "status": "confirmed"
+  },
+  "attrs": {
+    "status": "partial",
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금",
+          "토",
+          "일"
+        ],
+        "open": "11:00",
+        "close": "21:00",
+        "lastOrder": "20:00"
+      }
+    ]
+  },
+  "hoursObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/2022595457/home?fromPanelNum=1&additionalHeight=76&timestamp=202611112345&locale=ko&svcName=map_pcv5&searchText=%ED%91%B8%EB%8B%A4%ED%9A%8C%EC%A0%84%ED%9B%A0%EA%B6%88%20%EC%A0%84%EB%8C%80%EC%A0%90",
+    "checkedAt": "2026-11-12",
+    "status": "confirmed",
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금",
+          "토",
+          "일"
+        ],
+        "open": "11:00",
+        "close": "21:00",
+        "lastOrder": "20:00"
+      }
+    ],
+    "note": "매장 영업시간 관찰. 기존 attrs/research를 덮어쓰지 않습니다."
+  },
+  "research": {
+    "checkedAt": "2026-11-11",
+    "method": "web",
+    "identityStatus": "matched",
+    "queries": [
+      "푸다회전훠궈 전대점 전남광주 북구 우치로90번길 7-7 1층"
+    ],
+    "sources": [
+      {
+        "id": "naver-place",
+        "url": "https://pcmap.place.naver.com/restaurant/2022595457/home?fromPanelNum=1&additionalHeight=76&timestamp=202611112345&locale=ko&svcName=map_pcv5&searchText=%ED%91%B8%EB%8B%A4%ED%9A%8C%EC%A0%84%ED%9B%A0%EA%B6%88%20%EC%A0%84%EB%8C%80%EC%A0%90",
+        "title": "푸다회전훠궈 전대점 네이버 지도",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "같은 주소의 지점 확인. 지도 등록 확인은 실시간 영업 중 보증이 아님"
+      },
+      {
+        "id": "naver-menu",
+        "url": "https://pcmap.place.naver.com/restaurant/2022595457/menu?fromPanelNum=1&additionalHeight=76&timestamp=202611112345&locale=ko&svcName=map_pcv5&searchText=%ED%91%B8%EB%8B%A4%ED%9A%8C%EC%A0%84%ED%9B%A0%EA%B6%88%20%EC%A0%84%EB%8C%80%EC%A0%90",
+        "title": "푸다회전훠궈 전대점 메뉴 탭",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "가격 맥락: in_store"
+      },
+      {
+        "id": "naver-hours",
+        "url": "https://pcmap.place.naver.com/restaurant/2022595457/home?fromPanelNum=1&additionalHeight=76&timestamp=202611112345&locale=ko&svcName=map_pcv5&searchText=%ED%91%B8%EB%8B%A4%ED%9A%8C%EC%A0%84%ED%9B%A0%EA%B6%88%20%EC%A0%84%EB%8C%80%EC%A0%90",
+        "title": "푸다회전훠궈 전대점 영업시간",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "게시된 요일별 영업시간. 미확인은 추정하지 않음"
+      }
+    ],
+    "facts": {
+      "menus": {
+        "status": "unconfirmed",
+        "sourceIds": [],
+        "note": "매장 기준 정보 미확인. 배달·가격 맥락 불명 자료는 확정하지 않습니다."
+      },
+      "hours": {
+        "status": "confirmed",
+        "sourceIds": [
+          "naver-hours"
+        ],
+        "note": "매장 게시값을 확인했습니다.",
+        "value": [
+          {
+            "days": [
+              "월",
+              "화",
+              "수",
+              "목",
+              "금",
+              "토",
+              "일"
+            ],
+            "open": "11:00",
+            "close": "21:00",
+            "lastOrder": "20:00"
+          }
+        ]
+      }
+    },
+    "unknownFields": [
+      "menus",
+      "mealType",
+      "takeout",
+      "verifiedAt",
+      "verifiedBy",
+      "break"
+    ],
+    "notes": [
+      "네이버 공개 지도 상세·메뉴 탭 직접 확인.",
+      "점심·저녁별 가격이 다르지만 가격 적용 시간 경계가 미확인이고 현재 메뉴 스키마에 시간별 가격 제약이 없어 두 항목 모두 main=false. 어린이 가격도 성인 대표 식사에서 제외. 세 가격 원문은 모두 보존.",
+      "전체 공개 메뉴 탭의 메뉴명·가격을 보존. 가격 범위·변동은 price=null 및 priceText로 보관.",
+      "출입구에서 실제 도보 10분 이내 여부는 별도 OSM 경로 감사 대기. 이 파일의 주소 좌표 일치가 거리 통과를 의미하지 않음.",
+      "영업시간 원문은 rear_batch7.json에 보존. 확인되지 않은 브레이크·라스트오더는 생성하지 않음.",
+      "병합 입력: rear_batch7_manifest.json",
+      "공개 네이버 화면 관찰이며 현장 검증이 아닙니다."
+    ]
+  },
+  "followupReview": {
+    "checkedAt": "2026-11-12",
+    "reasons": [
+      "확인된 매장 식사 가격과 요일별 영업시간을 연결하여 추천 대상으로 전환했습니다."
+    ],
+    "sources": [
+      "https://pcmap.place.naver.com/restaurant/2022595457/home",
+      "https://pcmap.place.naver.com/restaurant/2022595457/menu/list",
+      "https://pcmap.place.naver.com/restaurant/2022595457/home?fromPanelNum=1&additionalHeight=76&timestamp=202611112345&locale=ko&svcName=map_pcv5&searchText=%ED%91%B8%EB%8B%A4%ED%9A%8C%EC%A0%84%ED%9B%A0%EA%B6%88%20%EC%A0%84%EB%8C%80%EC%A0%90"
+    ]
+  }
+}

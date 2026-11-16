@@ -1,0 +1,261 @@
+{
+  "version": 1,
+  "id": "p_0096",
+  "name": "신사장국밥",
+  "category": "한식",
+  "lat": 35.1777306398886,
+  "lng": 126.903227955576,
+  "address": "전남광주 북구 설죽로214번길 100 1층",
+  "source": "semas",
+  "sourceId": "MA0101202607A0077054",
+  "sourceStatus": "active",
+  "attrs": {
+    "status": "partial",
+    "menus": [
+      {
+        "name": "수육듬뿍국밥",
+        "price": 10000,
+        "main": true
+      },
+      {
+        "name": "산더미고기국밥",
+        "price": 10000,
+        "main": true
+      },
+      {
+        "name": "수육듬뿍국밥(특)",
+        "price": 13000,
+        "main": true
+      },
+      {
+        "name": "산더미고기국밥(특)",
+        "price": 13000,
+        "main": true
+      },
+      {
+        "name": "보쌈 소",
+        "price": 28000,
+        "main": false
+      },
+      {
+        "name": "보쌈 중",
+        "price": 39000,
+        "main": false
+      },
+      {
+        "name": "보쌈 대",
+        "price": 48000,
+        "main": false
+      },
+      {
+        "name": "수육물밀면",
+        "price": 10000,
+        "main": true
+      },
+      {
+        "name": "수육비빔밀면",
+        "price": 10000,
+        "main": true
+      },
+      {
+        "name": "공기밥",
+        "price": 1000,
+        "main": false
+      },
+      {
+        "name": "음료",
+        "price": 2000,
+        "main": false
+      },
+      {
+        "name": "소주/맥주",
+        "price": 4000,
+        "main": false
+      }
+    ],
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금"
+        ],
+        "open": "11:00",
+        "close": "15:00",
+        "lastOrder": "13:50"
+      }
+    ]
+  },
+  "research": {
+    "identityStatus": "matched",
+    "queries": [
+      "\"신사장국밥밀면\"",
+      "\"신사장\" \"국밥\" \"광주\""
+    ],
+    "sources": [
+      {
+        "id": "s1",
+        "url": "https://dining.ayo.pe.kr/restaurant/ddb864ee914653d66af77ef8b0768b86",
+        "title": "신사장국밥밀면 인허가 재게시 정보",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "상호와 도로명 주소를 대조함. 공개 검색결과에서 확인했으며 직접 본문은 조회하지 않음."
+      }
+    ],
+    "facts": {
+      "menus": {
+        "status": "unconfirmed",
+        "sourceIds": [],
+        "note": "주소가 일치하는 매장의 메뉴·가격을 확인하지 못함."
+      },
+      "hours": {
+        "status": "unconfirmed",
+        "sourceIds": [],
+        "note": "요일별 영업시간·휴무를 확인하지 못함."
+      }
+    },
+    "notes": [
+      "상호와 주소는 일치. 인허가 기록에는 실제 메뉴·가격·영업시간이 없음."
+    ],
+    "checkedAt": "2026-11-11",
+    "method": "web",
+    "unknownFields": [
+      "menus",
+      "hours",
+      "mealType",
+      "takeout",
+      "verifiedAt",
+      "verifiedBy",
+      "break",
+      "lastOrder"
+    ]
+  },
+  "availability": {
+    "status": "listed",
+    "provider": "naver",
+    "checkedAt": "2026-11-11",
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/2015557853/home?fromPanelNum=1&additionalHeight=76&timestamp=202611112345&locale=ko&svcName=map_pcv5&searchText=%EC%8B%A0%EC%82%AC%EC%9E%A5%EA%B5%AD%EB%B0%A5%20%EC%A0%84%EB%82%A8%EB%8C%80",
+    "naverPlaceId": "2015557853",
+    "observedName": "신사장국밥",
+    "observedAddress": "전남광주 북구 설죽로214번길 100 1층",
+    "district": "상대",
+    "addressVerified": true,
+    "nearby": true,
+    "reason": "공개 네이버 지도에서 동일 주소의 전남대 상대 식당으로 확인"
+  },
+  "menuObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/2015557853/menu/list",
+    "checkedAt": "2026-11-12",
+    "priceContext": "in_store",
+    "menus": [
+      {
+        "name": "수육듬뿍국밥",
+        "price": 10000,
+        "main": true,
+        "priceText": "10,000원"
+      },
+      {
+        "name": "산더미고기국밥",
+        "price": 10000,
+        "main": true,
+        "priceText": "10,000원"
+      },
+      {
+        "name": "수육듬뿍국밥(특)",
+        "price": 13000,
+        "main": true,
+        "priceText": "13,000원"
+      },
+      {
+        "name": "산더미고기국밥(특)",
+        "price": 13000,
+        "main": true,
+        "priceText": "13,000원"
+      },
+      {
+        "name": "보쌈 소",
+        "price": 28000,
+        "main": false,
+        "priceText": "28,000원"
+      },
+      {
+        "name": "보쌈 중",
+        "price": 39000,
+        "main": false,
+        "priceText": "39,000원"
+      },
+      {
+        "name": "보쌈 대",
+        "price": 48000,
+        "main": false,
+        "priceText": "48,000원"
+      },
+      {
+        "name": "수육물밀면",
+        "price": 10000,
+        "main": true,
+        "priceText": "10,000원"
+      },
+      {
+        "name": "수육비빔밀면",
+        "price": 10000,
+        "main": true,
+        "priceText": "10,000원"
+      },
+      {
+        "name": "공기밥",
+        "price": 1000,
+        "main": false,
+        "priceText": "1,000원"
+      },
+      {
+        "name": "음료",
+        "price": 2000,
+        "main": false,
+        "priceText": "2,000원"
+      },
+      {
+        "name": "소주/맥주",
+        "price": 4000,
+        "main": false,
+        "priceText": "4,000원"
+      }
+    ],
+    "note": "공개 매장 메뉴 게시값 재확인. 곱빼기·세트 설명의 숫자를 기본 가격에 합치지 않음.",
+    "status": "confirmed"
+  },
+  "hoursObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/2015557853/home?fromPanelNum=1&additionalHeight=76&timestamp=202611112345&locale=ko&svcName=map_pcv5&searchText=%EC%8B%A0%EC%82%AC%EC%9E%A5%EA%B5%AD%EB%B0%A5%20%EC%A0%84%EB%82%A8%EB%8C%80",
+    "checkedAt": "2026-11-12",
+    "status": "confirmed",
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금"
+        ],
+        "open": "11:00",
+        "close": "15:00",
+        "lastOrder": "13:50"
+      }
+    ],
+    "note": "매장 영업시간 관찰. 기존 attrs/research를 덮어쓰지 않습니다."
+  },
+  "followupReview": {
+    "checkedAt": "2026-11-12",
+    "reasons": [
+      "확인된 매장 식사 가격과 요일별 영업시간을 연결하여 추천 대상으로 전환했습니다."
+    ],
+    "sources": [
+      "https://pcmap.place.naver.com/restaurant/2015557853/home",
+      "https://pcmap.place.naver.com/restaurant/2015557853/menu/list",
+      "https://pcmap.place.naver.com/restaurant/2015557853/home?fromPanelNum=1&additionalHeight=76&timestamp=202611112345&locale=ko&svcName=map_pcv5&searchText=%EC%8B%A0%EC%82%AC%EC%9E%A5%EA%B5%AD%EB%B0%A5%20%EC%A0%84%EB%82%A8%EB%8C%80"
+    ]
+  }
+}

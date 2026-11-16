@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "id": "s_02",
+  "name": "샘플식당 02 · 브레이크 있는 일식",
+  "category": "일식",
+  "lat": 35.1785,
+  "lng": 126.9135,
+  "address": "샘플 주소 (가짜 데이터)",
+  "source": "sample",
+  "attrs": {
+    "mealType": "일반",
+    "takeout": false,
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금"
+        ],
+        "open": "11:00",
+        "close": "21:00",
+        "lastOrder": "20:30",
+        "break": {
+          "start": "15:00",
+          "end": "17:00"
+        }
+      }
+    ],
+    "menus": [
+      {
+        "name": "돈카츠",
+        "price": 9000,
+        "main": true
+      },
+      {
+        "name": "규동",
+        "price": 8500,
+        "main": true
+      }
+    ],
+    "note": "15:00~17:00 브레이크 — 15:30 추천에 나오면 안 된다. 주말 휴무",
+    "verifiedAt": "2026-11-11",
+    "verifiedBy": "sample"
+  }
+}

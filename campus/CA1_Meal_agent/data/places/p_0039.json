@@ -1,0 +1,234 @@
+{
+  "version": 1,
+  "id": "p_0039",
+  "name": "가마솥옛날국밥",
+  "category": "국밥·찌개",
+  "lat": 35.1778756421353,
+  "lng": 126.904215815118,
+  "address": "광주 북구 설죽로214번길 119",
+  "source": "semas",
+  "sourceId": "MA010120220808410540",
+  "sourceStatus": "active",
+  "attrs": {
+    "status": "partial",
+    "menus": [
+      {
+        "name": "내장국밥",
+        "price": 6000,
+        "main": true
+      },
+      {
+        "name": "콩나물국밥",
+        "price": 5500,
+        "main": true
+      },
+      {
+        "name": "철판돼지구이백반",
+        "price": 6000,
+        "main": true
+      },
+      {
+        "name": "모듬국밥",
+        "price": 6000,
+        "main": true
+      },
+      {
+        "name": "순대국밥",
+        "price": 6000,
+        "main": true
+      },
+      {
+        "name": "머리국밥",
+        "price": 6500,
+        "main": true
+      },
+      {
+        "name": "곱창전골 (2인이상)",
+        "price": 6500,
+        "main": false
+      },
+      {
+        "name": "소고기뚝배기",
+        "price": 6500,
+        "main": true
+      },
+      {
+        "name": "곰탕",
+        "price": 6000,
+        "main": true
+      },
+      {
+        "name": "뼈해장국",
+        "price": 6000,
+        "main": true
+      }
+    ],
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금"
+        ],
+        "open": "09:30",
+        "close": "21:30"
+      }
+    ]
+  },
+  "research": {
+    "identityStatus": "matched",
+    "queries": [
+      "\"가마솥옛날국밥\" \"설죽로\" 메뉴 영업시간"
+    ],
+    "sources": [
+      {
+        "id": "s1",
+        "url": "https://www.diningcode.com/profile.php?rid=ainZZUTpIDJA",
+        "title": "가마솥 옛날국밥",
+        "type": "directory",
+        "addressMatch": true,
+        "note": "매장 메뉴가격과 2025년 후기 가격이 달라 재확인 필요.",
+        "observedAt": "2026-11-11"
+      }
+    ],
+    "facts": {
+      "menus": {
+        "status": "conflict",
+        "value": [],
+        "sourceIds": [
+          "s1"
+        ],
+        "note": "게시 메뉴 머리국밥9,500·순대국밥8,500원, 2025-08-05 후기 국밥6,000원. 현장/배달 가격 차이 가능성 있어 확정하지 않음."
+      },
+      "hours": {
+        "status": "partial",
+        "sourceIds": [
+          "s1"
+        ],
+        "note": "2025-08-05 후기 10:00~20:00, 휴식15:00~17:00, LO19:30. 현재 요일별 영업·휴무 미확인."
+      }
+    },
+    "notes": [],
+    "checkedAt": "2026-11-11",
+    "method": "web",
+    "unknownFields": [
+      "menus",
+      "hours",
+      "mealType",
+      "takeout",
+      "verifiedAt",
+      "verifiedBy",
+      "break",
+      "lastOrder"
+    ]
+  },
+  "availability": {
+    "status": "listed",
+    "provider": "naver",
+    "checkedAt": "2026-11-11",
+    "sourceUrl": "https://pcmap.place.naver.com/place/19610578",
+    "naverPlaceId": "19610578",
+    "observedName": "가마솥옛날국밥",
+    "observedAddress": "광주 북구 설죽로214번길 119",
+    "district": "상대",
+    "addressVerified": true,
+    "nearby": true,
+    "reason": "공개 네이버 지도에서 동일 주소의 전남대 상대 식당으로 확인"
+  },
+  "menuObservation": {
+    "status": "confirmed",
+    "priceContext": "in_store",
+    "checkedAt": "2026-11-12",
+    "sourceUrl": "https://place.map.kakao.com/21439387",
+    "placeSourceUrl": "https://pcmap.place.naver.com/restaurant/19610578/home",
+    "sourceAddress": "전남광주통합특별시 북구 설죽로214번길 119 1층",
+    "menus": [
+      {
+        "name": "내장국밥",
+        "price": 6000,
+        "main": true
+      },
+      {
+        "name": "콩나물국밥",
+        "price": 5500,
+        "main": true
+      },
+      {
+        "name": "철판돼지구이백반",
+        "price": 6000,
+        "main": true
+      },
+      {
+        "name": "모듬국밥",
+        "price": 6000,
+        "main": true
+      },
+      {
+        "name": "순대국밥",
+        "price": 6000,
+        "main": true
+      },
+      {
+        "name": "머리국밥",
+        "price": 6500,
+        "main": true
+      },
+      {
+        "name": "곱창전골 (2인이상)",
+        "price": 6500,
+        "main": false
+      },
+      {
+        "name": "소고기뚝배기",
+        "price": 6500,
+        "main": true
+      },
+      {
+        "name": "곰탕",
+        "price": 6000,
+        "main": true
+      },
+      {
+        "name": "뼈해장국",
+        "price": 6000,
+        "main": true
+      }
+    ],
+    "note": "같은 상호·도로명 건물번호의 카카오맵 메뉴 게시값. 배달 탭 가격과 구분해 수집. 게시값 확인이며 현장 현재 가격 확인은 아님."
+  },
+  "hoursObservation": {
+    "sourceUrl": "https://place.map.kakao.com/21439387",
+    "checkedAt": "2026-11-12",
+    "status": "confirmed",
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금"
+        ],
+        "open": "09:30",
+        "close": "21:30"
+      }
+    ],
+    "note": "동일 상호·도로명 건물번호의 카카오맵 영업정보. 매주 요일별 영업/휴무와 게시된 브레이크만 반영. 배달업체 제공 시간은 제외.",
+    "placeSourceUrl": "https://pcmap.place.naver.com/restaurant/19610578/home",
+    "sourceAddress": "전남광주통합특별시 북구 설죽로214번길 119 1층",
+    "hoursContext": "in_store"
+  },
+  "followupReview": {
+    "checkedAt": "2026-11-12",
+    "reasons": [
+      "공개 매장 식사 가격과 요일별 영업시간을 연결하여 추천 대상으로 전환했습니다."
+    ],
+    "sources": [
+      "https://pcmap.place.naver.com/restaurant/19610578/home",
+      "https://pcmap.place.naver.com/restaurant/19610578/menu/list",
+      "https://place.map.kakao.com/21439387"
+    ]
+  }
+}

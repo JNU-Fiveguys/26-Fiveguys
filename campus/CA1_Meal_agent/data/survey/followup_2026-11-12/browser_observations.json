@@ -1,0 +1,2025 @@
+{
+  "version": 1,
+  "checkedAt": "2026-11-12",
+  "homes": [
+    {
+      "nid": "37501200",
+      "name": "전대분식",
+      "url": "https://pcmap.place.naver.com/restaurant/37501200/home",
+      "hours": "영업시간 미게시"
+    },
+    {
+      "nid": "35438757",
+      "name": "뽀글이와둘둘이",
+      "url": "https://pcmap.place.naver.com/restaurant/35438757/home",
+      "hours": "영업시간 미게시"
+    },
+    {
+      "nid": "16178351",
+      "name": "무등골금호식당",
+      "url": "https://pcmap.place.naver.com/restaurant/16178351/home",
+      "hours": "영업시간 미게시"
+    },
+    {
+      "nid": "37500825",
+      "name": "용봉골",
+      "url": "https://pcmap.place.naver.com/restaurant/37500825/home",
+      "hours": "영업시간 미게시"
+    },
+    {
+      "nid": "33894558",
+      "name": "봉구스밥버거",
+      "url": "https://pcmap.place.naver.com/restaurant/33894558/home",
+      "hours": "generic: 영업시간 정보 수정\n  - text: 영업시간 수정 제안하기\n  - button \"추가\":\n    - generic: 추가\n"
+    },
+    {
+      "nid": "37504432",
+      "name": "얌얌",
+      "url": "https://pcmap.place.naver.com/restaurant/37504432/home",
+      "hours": "generic: 영업시간 정보 수정\n  - text: 영업시간 수정 제안하기\n  - button \"추가\":\n    - generic: 추가\n"
+    },
+    {
+      "nid": "2097797421",
+      "name": "최정담",
+      "url": "https://pcmap.place.naver.com/restaurant/2097797421/home",
+      "hours": "영업 종료 11시 0분에 영업 시작 목 11:00 - 21:00 15:00 - 17:00 브레이크타임 20:30 라스트오더 금 11:00 - 21:00 15:00 - 17:00 브레이크타임 20:30 라스트오더 토 11:00 - 15:00 14:30 라스트오더 일 정기휴무 (매주 일요일) 월 11:00 - 21:00 15:00 - 17:00 브레이크타임 20:30 라스트오더 화 11:00 - 21:00 15:00 - 17:00 브레이크타임 20:30 라스트오더 수 11:00 - 21:00 15:00 - 17:00 브레이크타임 20:30 라스트오더 접기"
+    },
+    {
+      "nid": "16178952",
+      "name": "삼호반점",
+      "url": "https://pcmap.place.naver.com/restaurant/16178952/home",
+      "hours": "generic: 영업시간 정보 수정\n  - text: 영업시간 수정 제안하기\n  - button \"추가\":\n    - generic: 추가\n"
+    },
+    {
+      "nid": "37127492",
+      "name": "전대별식",
+      "url": "https://pcmap.place.naver.com/restaurant/37127492/home",
+      "hours": "영업 종료 11시 30분에 영업 시작 목 11:30 - 21:40 15:00 - 17:00 브레이크타임 21:00 라스트오더 금 11:30 - 21:40 15:00 - 17:00 브레이크타임 21:00 라스트오더 토 11:30 - 21:40 15:00 - 17:00 브레이크타임 21:00 라스트오더 일 정기휴무 (매주 일요일) 월 11:30 - 21:40 15:00 - 17:00 브레이크타임 21:00 라스트오더 화 11:30 - 21:40 15:00 - 17:00 브레이크타임 21:00 라스트오더 수 11:30 - 21:40 15:00 - 17:00 브레이크타임 21:00 라스트오더 접기"
+    },
+    {
+      "nid": "38735624",
+      "name": "예향정",
+      "url": "https://pcmap.place.naver.com/restaurant/38735624/home",
+      "hours": "영업 종료 10시 0분에 영업 시작 목 10:00 - 21:30 21:00 라스트오더 금 10:00 - 21:30 21:00 라스트오더 토 10:00 - 21:30 21:00 라스트오더 일 10:00 - 21:30 21:00 라스트오더 월 10:00 - 21:30 21:00 라스트오더 화 10:00 - 21:30 21:00 라스트오더 수 10:00 - 21:30 21:00 라스트오더 접기"
+    },
+    {
+      "nid": "1219930187",
+      "name": "안탈야케밥",
+      "url": "https://pcmap.place.naver.com/restaurant/1219930187/home",
+      "hours": "generic: 영업시간\n  - button \"영업 중 다음 날 10시 30분에 라스트오더 수 11:00 - 다음 날 11:00 10:30 라스트오더 목 11:00 - 다음 날 11:00 10:30 라스트오더 금 11:00 - 다음 날 11:00 10:30 라스트오더 토 11:00 - 다음 날 11:00 10:30 라스트오더 일 11:00 - 다음 날 11:00 10:30 라스트오더 월 11:00 - 다음 날 11:00 10:30 라스트오더 화 정기휴무 (매주 화요일) 접기\" [expanded] [active]:\n    - emphasis: 영업 중\n    - time: 다음 날 10:30에 라스트오더\n    - generic: 다음 날 10시 30분에 라스트오더\n    - generic: 수\n    - text: 11:00 - 다음 날 11:00\n    - text: 10:30 라스트오더\n    - generic: 목\n    - text: 11:00 - 다음 날 11:00\n    - text: 10:30 라스트오더\n    - generic: 금\n    - text: 11:00 - 다음 날 11:00\n    - text: 10:30 라스트오더\n    - generic: 토\n    - text: 11:00 - 다음 날 11:00\n    - text: 10:30 라스트오더\n    - generic: 일\n    - text: 11:00 - 다음 날 11:00\n    - text: 10:30 라스트오더\n    - generic: 월\n    - text: 11:00 - 다음 날 11:00\n    - text: 10:30 라스트오더\n    - generic: 화\n    - generic: 정기휴무 (매주 화요일)\n    - generic: 접기\n  - button \"영업시간 수정 제안하기\"\n"
+    },
+    {
+      "nid": "1992635726",
+      "name": "마피아떡볶이",
+      "url": "https://pcmap.place.naver.com/restaurant/1992635726/home",
+      "hours": "generic: 영업시간\n  - button \"영업 중 다음 날 3시 0분에 영업 종료 수 17:00 - 다음 날 03:00 목 17:00 - 다음 날 03:00 금 17:00 - 다음 날 03:00 토 정기휴무 (매주 토요일) 일 17:00 - 다음 날 03:00 월 17:00 - 다음 날 03:00 화 17:00 - 다음 날 03:00 접기\" [expanded] [active]:\n    - emphasis: 영업 중\n    - time: 다음 날 03:00에 영업 종료\n    - generic: 다음 날 3시 0분에 영업 종료\n    - generic: 수\n    - generic: 17:00 - 다음 날 03:00\n    - generic: 목\n    - generic: 17:00 - 다음 날 03:00\n    - generic: 금\n    - generic: 17:00 - 다음 날 03:00\n    - generic: 토\n    - generic: 정기휴무 (매주 토요일)\n    - generic: 일\n    - generic: 17:00 - 다음 날 03:00\n    - generic: 월\n    - generic: 17:00 - 다음 날 03:00\n    - generic: 화\n    - generic: 17:00 - 다음 날 03:00\n    - generic: 접기\n  - button \"영업시간 수정 제안하기\"\n"
+    },
+    {
+      "nid": "1865452317",
+      "name": "소코아",
+      "url": "https://pcmap.place.naver.com/restaurant/1865452317/home",
+      "hours": "영업 종료 11시 30분에 영업 시작 목 11:30 - 21:00 20:30 라스트오더 금 11:30 - 21:00 20:30 라스트오더 토 11:30 - 21:00 20:30 라스트오더 일 11:30 - 21:00 20:30 라스트오더 월 11:30 - 21:00 20:30 라스트오더 화 11:30 - 21:00 20:30 라스트오더 수 11:30 - 21:00 20:30 라스트오더 매달 2, 4번째 월요일 정기 휴무 접기"
+    },
+    {
+      "nid": "1941363668",
+      "name": "정동",
+      "url": "https://pcmap.place.naver.com/restaurant/1941363668/home",
+      "hours": "영업 종료 11시 0분에 영업 시작 목 11:00 - 20:30 15:00 - 16:30 브레이크타임 20:00 라스트오더 금 11:00 - 20:30 15:00 - 16:30 브레이크타임 20:00 라스트오더 토 11:00 - 20:30 15:00 - 16:30 브레이크타임 20:00 라스트오더 일 11:00 - 20:30 15:00 - 16:30 브레이크타임 20:00 라스트오더 월 11:00 - 20:30 15:00 - 16:30 브레이크타임 20:00 라스트오더 화 11:00 - 20:30 15:00 - 16:30 브레이크타임 20:00 라스트오더 수 11:00 - 20:30 15:00 - 16:30 브레이크타임 20:00 라스트오더 접기"
+    },
+    {
+      "nid": "21528523",
+      "name": "피자스쿨",
+      "url": "https://pcmap.place.naver.com/restaurant/21528523/home",
+      "hours": "generic: 영업시간\n  - button \"오늘 휴무 11/12 휴무 펼쳐보기\":\n    - emphasis: 오늘 휴무\n    - time: 11/12 휴무\n    - generic: 11/12 휴무\n    - generic: 펼쳐보기\n"
+    },
+    {
+      "nid": "37500690",
+      "name": "마마",
+      "url": "https://pcmap.place.naver.com/restaurant/37500690/home",
+      "hours": "generic: 영업시간 정보 수정\n  - text: 영업시간 수정 제안하기\n  - button \"추가\":\n    - generic: 추가\n  - button \"사장님, 플레이스를 무료로 직접 관리하세요! 권한 받기\":\n    - text: 사장님, 플레이스를\n    - emphasis: 무료로 직접 관리하세요!\n    - text: 권한 받기\n- contentinfo:\n  - button \"이용약관\"\n  - button \"고객센터\"\n  - button \"리뷰운영정책\"\n  - button \"신고센터\"\n  - button \"네이버\":\n    - generic: 네이버"
+    },
+    {
+      "nid": "1373248477",
+      "name": "미리내김밥",
+      "url": "https://pcmap.place.naver.com/restaurant/1373248477/home",
+      "hours": "generic: 영업시간 정보 수정\n  - text: 영업시간 수정 제안하기\n  - button \"추가\":\n    - generic: 추가\n"
+    },
+    {
+      "nid": "1075860086",
+      "name": "한끼도시락",
+      "url": "https://pcmap.place.naver.com/restaurant/1075860086/home",
+      "hours": "generic: 영업시간 정보 수정\n  - text: 영업시간 수정 제안하기\n  - button \"추가\":\n    - generic: 추가\n  - button \"사장님, 플레이스를 무료로 직접 관리하세요! 권한 받기\":\n    - text: 사장님, 플레이스를\n    - emphasis: 무료로 직접 관리하세요!\n    - text: 권한 받기\n- contentinfo:\n  - button \"이용약관\"\n  - button \"고객센터\"\n  - button \"리뷰운영정책\"\n  - button \"신고센터\"\n  - button \"네이버\":\n    - generic: 네이버"
+    },
+    {
+      "nid": "1087889426",
+      "name": "엄마손중국식분식",
+      "url": "https://pcmap.place.naver.com/restaurant/1087889426/home",
+      "hours": "generic: 영업시간 정보 수정\n  - text: 영업시간 수정 제안하기\n  - button \"추가\":\n    - generic: 추가\n  - button \"사장님, 플레이스를 무료로 직접 관리하세요! 권한 받기\":\n    - text: 사장님, 플레이스를\n    - emphasis: 무료로 직접 관리하세요!\n    - text: 권한 받기\n- contentinfo:\n  - button \"이용약관\"\n  - button \"고객센터\"\n  - button \"리뷰운영정책\"\n  - button \"신고센터\"\n  - button \"네이버\":\n    - generic: 네이버"
+    },
+    {
+      "nid": "13376550",
+      "name": "한솥도시락",
+      "url": "https://pcmap.place.naver.com/restaurant/13376550/home",
+      "hours": "영업 종료 9시 30분에 영업 시작 매일 09:30 - 20:00 접기"
+    },
+    {
+      "nid": "36894596",
+      "name": "카츠앤맘",
+      "url": "https://pcmap.place.naver.com/restaurant/36894596/home",
+      "hours": "영업 종료 11시 0분에 영업 시작 목 11:00 - 20:30 금 11:00 - 20:30 토 11:00 - 20:00 일 11:00 - 20:00 월 11:00 - 20:30 화 11:00 - 20:30 수 11:00 - 20:30 접기"
+    },
+    {
+      "nid": "37915784",
+      "name": "알촌",
+      "url": "https://pcmap.place.naver.com/restaurant/37915784/home",
+      "hours": "영업 종료 11시 0분에 영업 시작 목 11:00 - 19:30 14:30 - 17:00 브레이크타임 19:25 라스트오더 금 11:00 - 14:30 14:25 라스트오더 토 정기휴무 (매주 토요일) 일 정기휴무 (매주 일요일) 월 11:00 - 19:30 14:30 - 17:00 브레이크타임 19:25 라스트오더 화 11:00 - 19:30 14:30 - 17:00 브레이크타임 19:25 라스트오더 수 11:00 - 19:30 14:30 - 17:00 브레이크타임 19:25 라스트오더 접기"
+    },
+    {
+      "nid": "1805335047",
+      "name": "찐한사골국밥",
+      "url": "https://pcmap.place.naver.com/restaurant/1805335047/home",
+      "hours": "영업 종료 10시 30분에 영업 시작 목 10:30 - 24:00 15:30 - 16:30 브레이크타임 금 10:30 - 24:00 14:00 - 18:00 브레이크타임 토 10:30 - 24:00 15:30 - 16:30 브레이크타임 일 10:30 - 24:00 15:30 - 16:30 브레이크타임 월 10:30 - 24:00 14:00 - 18:00 브레이크타임 화 10:30 - 24:00 15:30 - 16:30 브레이크타임 수 10:30 - 24:00 14:00 - 18:00 브레이크타임 접기"
+    },
+    {
+      "nid": "1037261717",
+      "name": "후토루",
+      "url": "https://pcmap.place.naver.com/restaurant/1037261717/home",
+      "hours": "영업 종료 11시 30분에 영업 시작 목 11:30 - 20:00 금 11:30 - 20:00 토 11:30 - 20:00 일 11:30 - 20:00 월 11:30 - 20:00 화 11:30 - 20:00 수 11:30 - 20:00 접기"
+    },
+    {
+      "nid": "2079438672",
+      "name": "삼향집",
+      "url": "https://pcmap.place.naver.com/restaurant/2079438672/home",
+      "hours": "영업 종료 10시 0분에 영업 시작 목 10:00 - 21:00 15:00 - 17:00 브레이크타임 20:30 라스트오더 금 10:00 - 21:00 15:00 - 17:00 브레이크타임 20:30 라스트오더 토 10:00 - 21:00 15:00 - 17:00 브레이크타임 20:30 라스트오더 일 정기휴무 (매주 일요일) 월 10:00 - 21:00 15:00 - 17:00 브레이크타임 20:30 라스트오더 화 10:00 - 21:00 15:00 - 17:00 브레이크타임 20:30 라스트오더 수 10:00 - 21:00 15:00 - 17:00 브레이크타임 20:30 라스트오더 접기"
+    },
+    {
+      "nid": "1249369391",
+      "name": "명일삼계탕",
+      "url": "https://pcmap.place.naver.com/restaurant/1249369391/home",
+      "hours": "영업 종료 9시 30분에 영업 시작 매일 09:30 - 22:30 21:50 라스트오더 접기"
+    },
+    {
+      "nid": "1887196713",
+      "name": "왕손주먹구이",
+      "url": "https://pcmap.place.naver.com/restaurant/1887196713/home",
+      "hours": "영업 종료 15시 0분에 영업 시작 목 15:00 - 24:00 23:00 라스트오더 금 15:00 - 24:00 23:00 라스트오더 토 15:00 - 24:00 23:00 라스트오더 일 정기휴무 (매주 일요일) 월 15:00 - 24:00 23:00 라스트오더 화 15:00 - 24:00 23:00 라스트오더 수 15:00 - 24:00 23:00 라스트오더 접기"
+    },
+    {
+      "nid": "1346033389",
+      "name": "테트리스찜닭",
+      "url": "https://pcmap.place.naver.com/restaurant/1346033389/home",
+      "hours": "영업 중 다음 날 2시 0분에 영업 종료 매일 12:00 - 다음 날 02:00 접기"
+    },
+    {
+      "nid": "2015557853",
+      "name": "신사장국밥",
+      "url": "https://pcmap.place.naver.com/restaurant/2015557853/home",
+      "hours": "영업 종료 11시 0분에 영업 시작 목 11:00 - 15:00 13:50 라스트오더 금 11:00 - 15:00 13:50 라스트오더 토 정기휴무 (매주 토요일) 일 정기휴무 (매주 일요일) 월 11:00 - 15:00 13:50 라스트오더 화 11:00 - 15:00 13:50 라스트오더 수 11:00 - 15:00 13:50 라스트오더 접기"
+    },
+    {
+      "nid": "85019125",
+      "name": "맥도날드",
+      "url": "https://pcmap.place.naver.com/restaurant/85019125/home",
+      "hours": "24시간 영업 연중무휴 매일 00:00 - 24:00 접기"
+    },
+    {
+      "nid": "13570391",
+      "name": "초가왕족발",
+      "url": "https://pcmap.place.naver.com/restaurant/13570391/home",
+      "hours": "영업 종료 13시 0분에 영업 시작 목 13:00 - 24:00 금 13:00 - 24:00 토 13:00 - 24:00 일 정기휴무 (매주 일요일) 월 13:00 - 24:00 화 13:00 - 24:00 수 13:00 - 24:00 접기"
+    },
+    {
+      "nid": "16154651",
+      "name": "쭉심",
+      "url": "https://pcmap.place.naver.com/restaurant/16154651/home",
+      "hours": "generic: 영업시간\n  - button \"영업 종료 12시 0분에 영업 시작 펼쳐보기\":\n    - emphasis: 영업 종료\n    - time: 12:00에 영업 시작\n    - generic: 12시 0분에 영업 시작\n    - generic: 펼쳐보기\n"
+    },
+    {
+      "nid": "16169662",
+      "name": "본가왕손반점",
+      "url": "https://pcmap.place.naver.com/restaurant/16169662/home",
+      "hours": "generic: 영업시간 정보 수정\n  - text: 영업시간 수정 제안하기\n  - button \"추가\":\n    - generic: 추가\n"
+    },
+    {
+      "nid": "20369720",
+      "name": "동산회관",
+      "url": "https://pcmap.place.naver.com/restaurant/20369720/home",
+      "hours": "영업 종료 11시 0분에 영업 시작 목 11:00 - 21:30 15:00 - 17:00 브레이크타임 20:20 라스트오더 금 11:00 - 21:30 15:00 - 17:00 브레이크타임 20:20 라스트오더 토 11:00 - 21:30 15:00 - 17:00 브레이크타임 20:20 라스트오더 일 11:00 - 21:30 15:00 - 17:00 브레이크타임 20:20 라스트오더 월 정기휴무 (매주 월요일) 화 11:00 - 21:30 15:00 - 17:00 브레이크타임 20:20 라스트오더 수 11:00 - 21:30 15:00 - 17:00 브레이크타임 20:20 라스트오더 접기"
+    },
+    {
+      "nid": "21519977",
+      "name": "한우촌",
+      "url": "https://pcmap.place.naver.com/restaurant/21519977/home",
+      "hours": "generic: 영업시간 정보 수정\n  - text: 영업시간 수정 제안하기\n  - button \"추가\":\n    - generic: 추가\n"
+    },
+    {
+      "nid": "33741131",
+      "name": "국수나무",
+      "url": "https://pcmap.place.naver.com/restaurant/33741131/home",
+      "hours": "영업 종료 10시 30분에 영업 시작 목 10:30 - 20:30 금 10:30 - 20:30 토 정기휴무 (매주 토요일) 일 10:30 - 20:30 월 10:30 - 20:30 화 10:30 - 20:30 수 10:30 - 20:30 접기"
+    },
+    {
+      "nid": "34706804",
+      "name": "나루터",
+      "url": "https://pcmap.place.naver.com/restaurant/34706804/home",
+      "hours": "generic: 영업시간 정보 수정\n  - text: 영업시간 수정 제안하기\n  - button \"추가\":\n    - generic: 추가\n"
+    },
+    {
+      "nid": "37346559",
+      "name": "버거킹",
+      "url": "https://pcmap.place.naver.com/restaurant/37346559/home",
+      "hours": "24시간 영업 연중무휴 매일 00:00 - 24:00 접기"
+    },
+    {
+      "nid": "16173961",
+      "name": "난타5000정문",
+      "url": "https://pcmap.place.naver.com/restaurant/16173961/home",
+      "hours": "generic: 영업시간 정보 수정\n  - text: 영업시간 수정 제안하기\n  - button \"추가\":\n    - generic: 추가\n"
+    },
+    {
+      "nid": "19610578",
+      "name": "가마솥옛날국밥",
+      "url": "https://pcmap.place.naver.com/restaurant/19610578/home",
+      "hours": "generic: 영업시간 정보 수정\n  - text: 영업시간 수정 제안하기\n  - button \"추가\":\n    - generic: 추가\n"
+    },
+    {
+      "nid": "35523968",
+      "name": "동대문엽기떡볶이",
+      "url": "https://pcmap.place.naver.com/restaurant/35523968/home",
+      "hours": "generic: 영업시간\n  - 'button \"영업 종료 10시 30분에 영업 시작 목 10:30 - 22:30 금 10:30 - 22:30 토 10:30 - 22:30 일 10:30 - 22:30 월 정기휴무 (매주 월요일) 화 10:30 - 22:30 수 10:30 - 22:30 - 홀 마감 : 21:30 접기\" [expanded] [active]':\n    - emphasis: 영업 종료\n    - time: 10:30에 영업 시작\n    - generic: 10시 30분에 영업 시작\n    - generic: 목\n    - generic: 10:30 - 22:30\n    - generic: 금\n    - generic: 10:30 - 22:30\n    - generic: 토\n    - generic: 10:30 - 22:30\n    - generic: 일\n    - generic: 10:30 - 22:30\n    - generic: 월\n    - generic: 정기휴무 (매주 월요일)\n    - generic: 화\n    - generic: 10:30 - 22:30\n    - generic: 수\n    - generic: 10:30 - 22:30\n    - generic: \"- 홀 마감 : 21:30\"\n    - generic: 접기\n  - button \"영업시간 수정 제안하기\"\n"
+    },
+    {
+      "nid": "37398013",
+      "name": "라즈인도",
+      "url": "https://pcmap.place.naver.com/restaurant/37398013/home",
+      "hours": "영업 종료 11시 30분에 영업 시작 목 11:30 - 21:00 15:00 - 17:00 브레이크타임 14:00, 20:00 라스트오더 금 11:30 - 21:00 15:00 - 17:00 브레이크타임 14:00, 20:00 라스트오더 토 11:30 - 21:00 15:00 - 17:00 브레이크타임 14:00, 20:00 라스트오더 일 11:30 - 21:00 15:00 - 17:00 브레이크타임 14:00, 20:00 라스트오더 월 11:30 - 21:00 15:00 - 17:00 브레이크타임 14:00, 20:00 라스트오더 화 11:30 - 21:00 15:00 - 17:00 브레이크타임 14:00, 20:00 라스트오더 수 11:30 - 21:00 15:00 - 17:00 브레이크타임 14:00, 20:00 라스트오더 - 10월 12(월) 순천 송광사 행사로 쉽니다 접기"
+    },
+    {
+      "nid": "38710685",
+      "name": "깨순이김밥",
+      "url": "https://pcmap.place.naver.com/restaurant/38710685/home",
+      "hours": "영업 종료 8시 0분에 영업 시작 목 08:00 - 21:00 20:25 라스트오더 금 08:00 - 21:00 20:25 라스트오더 토 08:00 - 21:00 20:25 라스트오더 일 08:00 - 21:00 20:25 라스트오더 월 08:00 - 21:00 20:25 라스트오더 화 08:00 - 21:00 20:25 라스트오더 수 08:00 - 21:00 20:25 라스트오더 접기"
+    },
+    {
+      "nid": "1131985085",
+      "name": "알아지즈",
+      "url": "https://pcmap.place.naver.com/restaurant/1131985085/home",
+      "hours": "generic: 영업시간 정보 수정\n  - text: 영업시간 수정 제안하기\n  - button \"추가\":\n    - generic: 추가\n"
+    },
+    {
+      "nid": "1328708142",
+      "name": "마라푸우",
+      "url": "https://pcmap.place.naver.com/restaurant/1328708142/home",
+      "hours": "generic: 영업시간 정보 수정\n  - text: 영업시간 수정 제안하기\n  - button \"추가\":\n    - generic: 추가\n  - button \"사장님, 플레이스를 무료로 직접 관리하세요! 권한 받기\":\n    - text: 사장님, 플레이스를\n    - emphasis: 무료로 직접 관리하세요!\n    - text: 권한 받기\n- contentinfo:\n  - button \"이용약관\"\n  - button \"고객센터\"\n  - button \"리뷰운영정책\"\n  - button \"신고센터\"\n  - button \"네이버\":\n    - generic: 네이버"
+    },
+    {
+      "nid": "1378290309",
+      "name": "도야짬뽕",
+      "url": "https://pcmap.place.naver.com/restaurant/1378290309/home",
+      "hours": "영업 종료 10시 0분에 영업 시작 목 10:00 - 21:00 14:50 - 16:00 브레이크타임 20:30 라스트오더 금 10:00 - 21:00 14:50 - 16:00 브레이크타임 20:30 라스트오더 토 10:00 - 21:00 14:50 - 16:00 브레이크타임 20:30 라스트오더 일 10:00 - 21:00 14:50 - 16:00 브레이크타임 20:30 라스트오더 월 10:00 - 21:00 14:50 - 16:00 브레이크타임 20:30 라스트오더 화 10:00 - 21:00 14:50 - 16:00 브레이크타임 20:30 라스트오더 수 10:00 - 21:00 14:50 - 16:00 브레이크타임 20:30 라스트오더 접기"
+    },
+    {
+      "nid": "1429688748",
+      "name": "마왕족발",
+      "url": "https://pcmap.place.naver.com/restaurant/1429688748/home",
+      "hours": "영업 종료 16시 0분에 영업 시작 매일 16:00 - 24:00 접기"
+    },
+    {
+      "nid": "1507113408",
+      "name": "로니의몬스터피자",
+      "url": "https://pcmap.place.naver.com/restaurant/1507113408/home",
+      "hours": "영업 종료 10시 30분에 영업 시작 매일 10:30 - 23:45 접기"
+    },
+    {
+      "nid": "1520354551",
+      "name": "전대주먹구이",
+      "url": "https://pcmap.place.naver.com/restaurant/1520354551/home",
+      "hours": "영업 중 다음 날 0시 0분에 라스트오더 매일 16:00 - 다음 날 01:00 00:00 라스트오더 접기"
+    },
+    {
+      "nid": "1697423048",
+      "name": "난타5000용봉",
+      "url": "https://pcmap.place.naver.com/restaurant/1697423048/home",
+      "hours": "generic: 영업시간 정보 수정\n  - text: 영업시간 수정 제안하기\n  - button \"추가\":\n    - generic: 추가\n"
+    },
+    {
+      "nid": "1879261018",
+      "name": "이런이궈",
+      "url": "https://pcmap.place.naver.com/restaurant/1879261018/home",
+      "hours": "영업 종료 10시 40분에 영업 시작 목 10:40 - 22:00 금 10:40 - 22:00 토 10:40 - 22:00 일 10:40 - 22:00 월 10:40 - 22:00 화 10:40 - 22:00 수 10:40 - 22:00 접기"
+    },
+    {
+      "nid": "1911743486",
+      "name": "뉴요커피자",
+      "url": "https://pcmap.place.naver.com/restaurant/1911743486/home",
+      "hours": "영업 중 다음 날 2시 0분에 영업 종료 매일 09:30 - 다음 날 02:00 접기"
+    },
+    {
+      "nid": "2022595457",
+      "name": "푸다회전훠궈",
+      "url": "https://pcmap.place.naver.com/restaurant/2022595457/home",
+      "hours": "영업 종료 11시 0분에 영업 시작 목 11:00 - 21:00 20:00 라스트오더 금 11:00 - 21:00 20:00 라스트오더 토 11:00 - 21:00 20:00 라스트오더 일 11:00 - 21:00 20:00 라스트오더 월 11:00 - 21:00 20:00 라스트오더 화 11:00 - 21:00 20:00 라스트오더 수 11:00 - 21:00 20:00 라스트오더 접기"
+    },
+    {
+      "nid": "2071340968",
+      "name": "감쪽",
+      "url": "https://pcmap.place.naver.com/restaurant/2071340968/booking",
+      "hours": "영업시간 게시 없음"
+    },
+    {
+      "nid": "2091246902",
+      "name": "꿈에그린분식",
+      "url": "https://pcmap.place.naver.com/restaurant/2091246902/home",
+      "hours": "영업 종료 10시 0분에 영업 시작 매일 10:00 - 22:00 접기"
+    }
+  ],
+  "menus": [
+    {
+      "nid": "36894596",
+      "name": "카츠앤맘",
+      "url": "https://pcmap.place.naver.com/restaurant/36894596/menu/list",
+      "images": [
+        {
+          "alt": "메뉴판 0",
+          "src": "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=f320_320&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20190523_168%2F1558592645783VEX20_JPEG%2FKEgRwQlogi0tOKShYj93TChs.jpg"
+        },
+        {
+          "alt": "메뉴판 1",
+          "src": "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=f320_320&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20190523_158%2F1558592663356yqHER_JPEG%2F4quxwN-AvtizzoPabQDLUXqz.jpg"
+        },
+        {
+          "alt": "메뉴판 2",
+          "src": "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=f320_320&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20210313_39%2F1615645532569At2ng_JPEG%2FZ8_2oTkH2HiVrhsKoglREjiD.jpeg.jpg"
+        },
+        {
+          "alt": "메뉴판 3",
+          "src": "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=f320_320&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20210313_259%2F16156455445167GXuh_JPEG%2Fs5Oc_Mj-FEIcwcTgNNydjWY_.jpeg.jpg"
+        },
+        {
+          "alt": "메뉴판 4",
+          "src": "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=f320_320&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20210313_258%2F1615645550557lJhOx_JPEG%2FhVL0oQpG1yVUJVUli3Tjqo_I.jpeg.jpg"
+        }
+      ],
+      "description": "배달 메뉴 표시",
+      "snippet": "    - generic: 냉메밀+치즈돈가스\n      - generic: (냉메밀+치즈돈가스+샐러드+반찬+소스+와사비따로포장)\n      - emphasis: 14,900\n      - text: 원\n  - button \"펼쳐서 더보기\":\n    - text: 펼쳐서 더보기\n  - heading \"사이드메뉴\" [level=2]:\n    - generic: 사이드메뉴\n  - list:\n    - button \"튀김추가 (고구마고로케+미니잡채+새우튀김)3개 2,000원\":\n      - generic: 튀김추가\n      - generic: (고구마고로케+미니잡채+새우튀김)3개\n      - emphasis: 2,000\n      - text: 원\n    - button \"공기밥 1,000원\":\n      - generic: 공기밥\n      - emphasis: 1,000\n      - text: 원\n    - button \"해쉬브라운 ( 2P) 2,500원\":\n      - generic: 해쉬브라운 ( 2P)\n      - emphasis: 2,500\n      - text: 원\n    - button \"왕새우튀김 (2P) 3,000원\":\n      - generic: 왕새우튀김 (2P)\n      - emphasis: 3,000\n      - text: 원\n  - heading \"음료\" [level=2]:\n    - generic: 음료\n  - list:\n    - button \"콜라(500ml) 2,000원\":\n      - generic: 콜라(500ml)\n      - emphasis: 2,000\n      - text: 원\n    - button \"사이다(500ml) 2,000원\":\n      - generic: 사이다(500ml)\n      - emphasis: 2,000\n      - text: 원\n    - button \"환타파인(500ml) 2,000원\":\n      - generic: 환타파인(500ml)\n      - emphasis: 2,000\n      - text: 원\n    - button \"팹시콜라(245ml) 1,000원\":\n      - generic: 팹시콜라(245ml)\n      - emphasis: 1,000\n      - text: 원\n    - button \"제로팹시라임(355ml) 1,500원\":\n      - generic: 제로팹시라임(355ml)\n      - emphasis: 1,500\n      - text: 원\n  - heading \"메뉴판 이미지로 보기5\" [level=2]:\n    - text: 메뉴판 이미지로 보기\n    - emphasis: \"5\"\n  - list:\n    - button \"메뉴판 0\":\n      - img \"메뉴판 0\"\n    - button \"메뉴판 1\":\n      - img \"메뉴판 1\"\n    - button \"메뉴판 2\":\n      - img \"메뉴판 2\"\n    - button \"메뉴판 3\":\n      - img \"메뉴판 3\"\n    - button \"메뉴판 4\":\n      - img \"메뉴판 4\"\n  - heading \"원산지 접기\" [level=2]:\n    - generic: 원산지\n    - button \"접기\" [expanded]:\n      - generic: 접기\n  - generic: 등심(국내산), 쌀(국내산), 김치(중국산)\n- contentinfo:\n  - button \"이용약관\"\n  - button \"고객센터\"\n  - button \"리뷰운영정책\"\n  - button \"신고센터\"\n  - button \"네이버\":\n    - generic: 네이버"
+    },
+    {
+      "nid": "37915784",
+      "name": "알촌",
+      "url": "https://pcmap.place.naver.com/restaurant/37915784/menu/list",
+      "images": [
+        {
+          "alt": "메뉴판 0",
+          "src": "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=f320_320&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20160525_3%2F1464162380732DgL7R_JPEG%2F176470504368032_2.jpeg"
+        },
+        {
+          "alt": "메뉴판 1",
+          "src": "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=f320_320&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20160525_143%2F1464162380928VoSFy_JPEG%2F176470504368032_3.jpeg"
+        },
+        {
+          "alt": "메뉴판 2",
+          "src": "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=f320_320&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20160525_76%2F1464162381242aEeEF_JPEG%2F176470504368032_4.jpeg"
+        },
+        {
+          "alt": "메뉴판 3",
+          "src": "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=f320_320&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20160525_124%2F1464162381482Uc5Q2_JPEG%2F176470504368032_5.jpeg"
+        },
+        {
+          "alt": "메뉴판 4",
+          "src": "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=f320_320&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20160525_203%2F1464162381736P3WNd_JPEG%2F176470504368032_6.jpeg"
+        },
+        {
+          "alt": "메뉴판 5",
+          "src": "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=f320_320&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20160525_96%2F1464162381988FSDfK_JPEG%2F176470504368032_7.jpeg"
+        },
+        {
+          "alt": "메뉴판 6",
+          "src": "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=f320_320&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20160525_210%2F1464162382238U5rtI_JPEG%2F176470504368032_8.jpeg"
+        },
+        {
+          "alt": "메뉴판 7",
+          "src": "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=f320_320&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20160525_279%2F1464162382467EJ0KA_JPEG%2F176470504368032_9.jpeg"
+        }
+      ],
+      "description": "배달 메뉴 표시",
+      "snippet": "tton \"대표 치즈메뉴 매콤치즈알밥 / 치즈오밥(+300원) 선택 가능 6,800원\":\n      - generic: 대표\n      - generic: 치즈메뉴\n      - generic: 매콤치즈알밥 / 치즈오밥(+300원) 선택 가능\n      - emphasis: 6,800\n      - text: 원\n    - button \"대표 갈릭메뉴 갈릭알밥 / 갈릭치즈알밥(+500원) / 갈릭오밥(+500원) 선택 가능 6,600원\":\n      - generic: 대표\n      - generic: 갈릭메뉴\n      - generic: 갈릭알밥 / 갈릭치즈알밥(+500원) / 갈릭오밥(+500원) 선택 가능\n      - emphasis: 6,600\n      - text: 원\n    - button \"대표 스페셜메뉴 카레알밥 / 짜장알밥 / 오밥 선택 가능 6,600원\":\n      - generic: 대표\n      - generic: 스페셜메뉴\n      - generic: 카레알밥 / 짜장알밥 / 오밥 선택 가능\n      - emphasis: 6,600\n      - text: 원\n    - button \"마라알밥 7,000원\":\n      - generic: 마라알밥\n      - emphasis: 7,000\n      - text: 원\n  - button \"펼쳐서 더보기\":\n    - text: 펼쳐서 더보기\n  - heading \"음료\" [level=2]:\n    - generic: 음료\n  - list:\n    - button \"콜라(245ml) 1,200원\":\n      - generic: 콜라(245ml)\n      - emphasis: 1,200\n      - text: 원\n    - button \"사이다(245ml) 1,200원\":\n      - generic: 사이다(245ml)\n      - emphasis: 1,200\n      - text: 원\n    - button \"제로콜라 1,200원\":\n      - generic: 제로콜라\n      - emphasis: 1,200\n      - text: 원\n  - heading \"메뉴판 이미지로 보기8\" [level=2]:\n    - text: 메뉴판 이미지로 보기\n    - emphasis: \"8\"\n  - list:\n    - button \"메뉴판 0\":\n      - img \"메뉴판 0\"\n    - button \"메뉴판 1\":\n      - img \"메뉴판 1\"\n    - button \"메뉴판 2\":\n      - img \"메뉴판 2\"\n    - button \"메뉴판 3\":\n      - img \"메뉴판 3\"\n    - button \"메뉴판 4\":\n      - img \"메뉴판 4\"\n    - button \"메뉴판 5\":\n      - img \"메뉴판 5\"\n    - button \"메뉴판 6\":\n      - img \"메뉴판 6\"\n    - button \"메뉴판 7\":\n      - img \"메뉴판 7\"\n  - heading \"원산지 접기\" [level=2]:\n    - generic: 원산지\n    - button \"접기\" [expanded]:\n      - generic: 접기\n  - generic: 쌀 (국내산) 소고기 (미국산) 돼지고기(국내산) 카놀라유(캐나다산)오징어(페루산) 계란(국내산) 단무지(국내산) 상추(국내산)김(국내산) 날치알(페루산)\n- contentinfo:\n  - button \"이용약관\"\n  - button \"고객센터\"\n  - button \"리뷰운영정책\"\n  - button \"신고센터\"\n  - button \"네이버\":\n    - generic: 네이버"
+    },
+    {
+      "nid": "1805335047",
+      "name": "찐한사골국밥",
+      "url": "https://pcmap.place.naver.com/restaurant/1805335047/menu/list",
+      "images": [
+        {
+          "alt": "메뉴판 0",
+          "src": "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=f320_320&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20230606_169%2F1686044387863SEOnG_JPEG%2FKakaoTalk_20230606_183918145.jpg"
+        }
+      ],
+      "description": "배달 메뉴 표시",
+      "snippet": "+찰순대+백순대+사골국물+무말랭이+쌈장+상추+고추 39,000원\":\n      - generic: 순대 & 마늘수육(대)\n      - generic: 마늘수육+찰순대+백순대+사골국물+무말랭이+쌈장+상추+고추\n      - emphasis: 39,000\n      - text: 원\n    - button \"대표 [No.1 인기] [맛보기순대](1~2인분) 찰순대+백순대 11,000원\":\n      - generic: 대표\n      - generic: \"[No.1 인기] [맛보기순대](1~2인분)\"\n      - generic: 찰순대+백순대\n      - emphasis: 11,000\n      - text: 원\n    - button \"대표 [No.1 대표] [맛보기수육](1~2인분) 수육+무말랭이+쌈장+상추+고추 13,000원\":\n      - generic: 대표\n      - generic: \"[No.1 대표] [맛보기수육](1~2인분)\"\n      - generic: 수육+무말랭이+쌈장+상추+고추\n      - emphasis: 13,000\n      - text: 원\n  - button \"펼쳐서 더보기\":\n    - text: 펼쳐서 더보기\n  - heading \"음료메뉴\" [level=2]:\n    - generic: 음료메뉴\n  - list:\n    - button \"콜라 500ml 2,000원\":\n      - generic: 콜라\n      - generic: 500ml\n      - emphasis: 2,000\n      - text: 원\n    - button \"코카콜라(제로) 500ml 2,000원\":\n      - generic: 코카콜라(제로)\n      - generic: 500ml\n      - emphasis: 2,000\n      - text: 원\n    - button \"스프라이트 500ml 2,000원\":\n      - generic: 스프라이트\n      - generic: 500ml\n      - emphasis: 2,000\n      - text: 원\n    - button \"환타 500ml 2,000원\":\n      - generic: 환타\n      - generic: 500ml\n      - emphasis: 2,000\n      - text: 원\n    - button \"광동 헛개차 500ml 2,500원\":\n      - generic: 광동 헛개차\n      - generic: 500ml\n      - emphasis: 2,500\n      - text: 원\n  - heading \"메뉴판 이미지로 보기1\" [level=2]:\n    - text: 메뉴판 이미지로 보기\n    - emphasis: \"1\"\n  - list:\n    - button \"메뉴판 0\":\n      - img \"메뉴판 0\"\n  - heading \"원산지 접기\" [level=2]:\n    - generic: 원산지\n    - button \"접기\" [expanded]:\n      - generic: 접기\n  - generic: 쌀 (국내산), 돈사골(국내산), 우사골(국내산), 오겹살(오스트리아산), 목전지(국내산),내장류(국내산), 배추김치(중국산), 깍두기(국내산), 부대찌개 햄 & 소세지 닭고기 국내산, 돼지고기 국내산,덴마크산, 강낭콩 이탈리아산 / 스위트콘 태국산 / 육개장 소고기 호주산 / 삼계탕 닭고기 국내산\n- contentinfo:\n  - button \"이용약관\"\n  - button \"고객센터\"\n  - button \"리뷰운영정책\"\n  - button \"신고센터\"\n  - button \"네이버\":\n    - generic: 네이버"
+    },
+    {
+      "nid": "1037261717",
+      "name": "후토루",
+      "url": "https://pcmap.place.naver.com/restaurant/1037261717/menu/list",
+      "images": [
+        {
+          "alt": "메뉴판 0",
+          "src": "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=f320_320&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20220713_22%2F165770086191405oiJ_JPEG%2FD60A7C36-923B-4BF0-B3B1-ECB90A3E62F4.jpeg"
+        },
+        {
+          "alt": "메뉴판 1",
+          "src": "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=f320_320&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20220713_13%2F1657700858153XS9h1_JPEG%2F26762135-1580-4743-B98C-A8067308EBA6.jpeg"
+        },
+        {
+          "alt": "메뉴판 2",
+          "src": "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=f320_320&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20220713_171%2F16577008510913iTrH_JPEG%2F6595D384-8161-4DBA-8688-A0F4F93BBE50.jpeg"
+        }
+      ],
+      "description": "배달 메뉴 표시",
+      "snippet": "할 통살 치킨이 들어간 텐더 그린 키토 10,500원\":\n      - generic: 텐더 그린 키토\n      - generic: 칠리 마요 포함) 남녀노소 좋아할 통살 치킨이 들어간 텐더 그린 키토\n      - emphasis: 10,500\n      - text: 원\n    - button \"참치 그린 키토 와사비 마요 포함) 담백한 참치와 알싸~한 청양고추는 환상의 콤비 매콤한 참치 그린 키토 10,500원\":\n      - generic: 참치 그린 키토\n      - generic: 와사비 마요 포함) 담백한 참치와 알싸~한 청양고추는 환상의 콤비 매콤한 참치 그린 키토\n      - emphasis: 10,500\n      - text: 원\n  - heading \"식사류\" [level=2]:\n    - generic: 식사류\n  - list:\n    - button \"직접만든 치즈 돈가스 직접만든 겉바속촉 통 모짜렐라 치즈 돈까스 10,900원\":\n      - generic: 직접만든 치즈 돈가스\n      - generic: 직접만든 겉바속촉 통 모짜렐라 치즈 돈까스\n      - emphasis: 10,900\n      - text: 원\n    - button \"크림파스타 꾸덕꾸덕한 크림 맛이 일품인 매콤한 크림 파스타 피클+계란노른자 12,900원\":\n      - generic: 크림파스타\n      - generic: 꾸덕꾸덕한 크림 맛이 일품인 매콤한 크림 파스타 피클+계란노른자\n      - emphasis: 12,900\n      - text: 원\n    - button \"국물떡볶이 매콤달콤한 특제 소스로 만든 기본 떡볶이 쫄깃한 떡과 깊은 양념 맛이 중독됩니다 6,500원\":\n      - generic: 국물떡볶이\n      - generic: 매콤달콤한 특제 소스로 만든 기본 떡볶이 쫄깃한 떡과 깊은 양념 맛이 중독됩니다\n      - emphasis: 6,500\n      - text: 원\n  - heading \"음료\" [level=2]:\n    - generic: 음료\n  - list:\n    - button \"사이다 2,500원\":\n      - generic: 사이다\n      - emphasis: 2,500\n      - text: 원\n    - button \"콜라 2,500원\":\n      - generic: 콜라\n      - emphasis: 2,500\n      - text: 원\n    - button \"제로콜라 2,500원\":\n      - generic: 제로콜라\n      - emphasis: 2,500\n      - text: 원\n  - heading \"메뉴판 이미지로 보기3\" [level=2]:\n    - text: 메뉴판 이미지로 보기\n    - emphasis: \"3\"\n  - list:\n    - button \"메뉴판 0\":\n      - img \"메뉴판 0\"\n    - button \"메뉴판 1\":\n      - img \"메뉴판 1\"\n    - button \"메뉴판 2\":\n      - img \"메뉴판 2\"\n  - heading \"원산지 접기\" [level=2]:\n    - generic: 원산지\n    - button \"접기\" [expanded]:\n      - generic: 접기\n  - generic: 김(국내산) 계란(국내산) 야채(국내산) 쌀(국내산) 연어(노루웨이산)\n- contentinfo:\n  - button \"이용약관\"\n  - button \"고객센터\"\n  - button \"리뷰운영정책\"\n  - button \"신고센터\"\n  - button \"네이버\":\n    - generic: 네이버"
+    },
+    {
+      "nid": "2079438672",
+      "name": "삼향집",
+      "url": "https://pcmap.place.naver.com/restaurant/2079438672/menu/list",
+      "images": [
+        {
+          "alt": "메뉴판 0",
+          "src": "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=f320_320&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20260905_140%2F1788594362203Hsjfx_JPEG%2FIMG_4512.jpg"
+        }
+      ],
+      "description": "배달 메뉴 표시",
+      "snippet": "대표 수육+곰탕 1인 세트 수육+곰탕 + 공기밥 + 반찬 3종+ 소스 18,500원\":\n      - generic: 대표\n      - generic: 수육+곰탕 1인 세트\n      - generic: 수육+곰탕 + 공기밥 + 반찬 3종+ 소스\n      - emphasis: 18,500\n      - text: 원\n    - button \"대표 즉석 제육볶음 1인 세트 즉석 제육볶음 + 공기밥 + 따뜻한 국물 + 반찬 3종+쌈야채(쌈장) 16,500원\":\n      - generic: 대표\n      - generic: 즉석 제육볶음 1인 세트\n      - generic: 즉석 제육볶음 + 공기밥 + 따뜻한 국물 + 반찬 3종+쌈야채(쌈장)\n      - emphasis: 16,500\n      - text: 원\n  - heading \"[곁들임 메뉴]\" [level=2]:\n    - generic: \"[곁들임 메뉴]\"\n  - list:\n    - button \"찐만두 4P 6,000원\":\n      - generic: 찐만두 4P\n      - emphasis: 6,000\n      - text: 원\n    - button \"물만두 12P 6,000원\":\n      - generic: 물만두 12P\n      - emphasis: 6,000\n      - text: 원\n    - button \"계란후라이 1개 1,000원\":\n      - generic: 계란후라이 1개\n      - emphasis: 1,000\n      - text: 원\n    - button \"깍두기 2,000원\":\n      - generic: 깍두기\n      - emphasis: 2,000\n      - text: 원\n    - button \"오징어젓갈 2,000원\":\n      - generic: 오징어젓갈\n      - emphasis: 2,000\n      - text: 원\n  - button \"펼쳐서 더보기\":\n    - text: 펼쳐서 더보기\n  - heading \"[음료]\" [level=2]:\n    - generic: \"[음료]\"\n  - list:\n    - button \"코카콜라(355ml) 2,000원\":\n      - generic: 코카콜라(355ml)\n      - emphasis: 2,000\n      - text: 원\n    - button \"환타파인맛(355ml) 2,000원\":\n      - generic: 환타파인맛(355ml)\n      - emphasis: 2,000\n      - text: 원\n    - button \"칠성사이다(355ml) 2,000원\":\n      - generic: 칠성사이다(355ml)\n      - emphasis: 2,000\n      - text: 원\n  - heading \"메뉴판 이미지로 보기1\" [level=2]:\n    - text: 메뉴판 이미지로 보기\n    - emphasis: \"1\"\n  - list:\n    - button \"메뉴판 0\":\n      - img \"메뉴판 0\"\n  - heading \"원산지 접기\" [level=2]:\n    - generic: 원산지\n    - button \"접기\" [expanded]:\n      - generic: 접기\n  - generic: 소고기(곰탕/수육:국내산) 불고기(호주산) 돼지고기(국내산) 쌀(국내산) 배추김치(국내산) 고춧가루(국내산)\n- contentinfo:\n  - button \"이용약관\"\n  - button \"고객센터\"\n  - button \"리뷰운영정책\"\n  - button \"신고센터\"\n  - button \"네이버\":\n    - generic: 네이버"
+    },
+    {
+      "nid": "1879261018",
+      "name": "이런이궈",
+      "url": "https://pcmap.place.naver.com/restaurant/1879261018/menu/list",
+      "images": [
+        {
+          "alt": "메뉴판 0",
+          "src": "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=f320_320&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20230630_162%2F1688092123597PrOV1_JPEG%2Fi_636fd41f0f4f.jpeg"
+        }
+      ],
+      "description": "배달 메뉴 표시",
+      "snippet": "(5~6인분)\"\n      - generic: 맛(맑은탕 / 순한맛 / 중간맛 / 매운맛 / 강한맛) 선택가능\n      - emphasis: 32,000\n      - text: 원\n    - button \"대표 [ 중독적인 ] 마라샹궈(볶음요리)(2인분) 맛(중간맛 / 매운맛) 선택가능 20,000원\":\n      - generic: 대표\n      - generic: \"[ 중독적인 ] 마라샹궈(볶음요리)(2인분)\"\n      - generic: 맛(중간맛 / 매운맛) 선택가능\n      - emphasis: 20,000\n      - text: 원\n  - button \"펼쳐서 더보기\":\n    - text: 펼쳐서 더보기\n  - heading \"[ 혹시 부족하다면 ] 추가메뉴\" [level=2]:\n    - generic: \"[ 혹시 부족하다면 ] 추가메뉴\"\n  - list:\n    - button \"땅콩소스 500원\":\n      - generic: 땅콩소스\n      - emphasis: \"500\"\n      - text: 원\n    - button \"간장소스 500원\":\n      - generic: 간장소스\n      - emphasis: \"500\"\n      - text: 원\n    - button \"공기밥 1,000원\":\n      - generic: 공기밥\n      - emphasis: 1,000\n      - text: 원\n    - button \"라면사리 2,000원\":\n      - generic: 라면사리\n      - emphasis: 2,000\n      - text: 원\n  - heading \"[ 시원하게 함께 즐기는 ] 음료메뉴\" [level=2]:\n    - generic: \"[ 시원하게 함께 즐기는 ] 음료메뉴\"\n  - list:\n    - button \"콜라(캔) 2,000원\":\n      - generic: 콜라(캔)\n      - emphasis: 2,000\n      - text: 원\n    - button \"환타 파인맛(캔) 2,000원\":\n      - generic: 환타 파인맛(캔)\n      - emphasis: 2,000\n      - text: 원\n    - button \"빙홍차(중국식 레몬홍차) 3,000원\":\n      - generic: 빙홍차(중국식 레몬홍차)\n      - emphasis: 3,000\n      - text: 원\n    - button \"빙탕설리(중국식 갈아만든배음료) 3,000원\":\n      - generic: 빙탕설리(중국식 갈아만든배음료)\n      - emphasis: 3,000\n      - text: 원\n  - heading \"메뉴판 이미지로 보기1\" [level=2]:\n    - text: 메뉴판 이미지로 보기\n    - emphasis: \"1\"\n  - list:\n    - button \"메뉴판 0\":\n      - img \"메뉴판 0\"\n  - heading \"원산지 접기\" [level=2]:\n    - generic: 원산지\n    - button \"접기\" [expanded]:\n      - generic: 접기\n  - generic: 쌀(국내산) 고춧가루(중국산) 소고기(미국산) 양고기(호주산) 비엔나(국내산)피쉬볼(중국산) 돈등심(국내산)돼지삼겹(독일산) 솔방울오징어(중국산)햄(국내산)푸주(중국산)두부피(중국산)건두부(중국산)옥수수면(중국산)\n- contentinfo:\n  - button \"이용약관\"\n  - button \"고객센터\"\n  - button \"리뷰운영정책\"\n  - button \"신고센터\"\n  - button \"네이버\":\n    - generic: 네이버"
+    },
+    {
+      "nid": "1249369391",
+      "name": "명일삼계탕",
+      "url": "https://pcmap.place.naver.com/restaurant/1249369391/menu/list",
+      "images": [
+        {
+          "alt": "메뉴판 0",
+          "src": "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=f320_320&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20241209_271%2F17337112619410oNDs_JPEG%2FKakaoTalk_20241015_175415234.jpg"
+        }
+      ],
+      "description": "배달 메뉴 표시",
+      "snippet": "+반찬] 15,900원\":\n      - generic: 반계탕+전복2미\n      - generic: \"&&&실속형 구성입니다&&& [반계탕+전복2미+반찬]\"\n      - emphasis: 15,900\n      - text: 원\n    - button \"반계탕+전복 2미+찰밥 &&&실속형 구성입니다&&& [반계탕+전복2미+찰밥+반찬] 16,300원\":\n      - generic: 반계탕+전복 2미+찰밥\n      - generic: \"&&&실속형 구성입니다&&& [반계탕+전복2미+찰밥+반찬]\"\n      - emphasis: 16,300\n      - text: 원\n    - button \"대표 삼계탕 삼계탕(뱃속 찰밥)+반찬 16,600원\":\n      - generic: 대표\n      - generic: 삼계탕\n      - generic: 삼계탕(뱃속 찰밥)+반찬\n      - emphasis: 16,600\n      - text: 원\n  - button \"펼쳐서 더보기\":\n    - text: 펼쳐서 더보기\n  - heading \"추가메뉴\" [level=2]:\n    - generic: 추가메뉴\n  - list:\n    - button \"찰밥 1,500원\":\n      - generic: 찰밥\n      - emphasis: 1,500\n      - text: 원\n    - button \"깍두기 1,000원\":\n      - generic: 깍두기\n      - emphasis: 1,000\n      - text: 원\n  - heading \"주류메뉴\" [level=2]:\n    - generic: 주류메뉴\n  - list:\n    - button \"제로 펩시(500ml) 2,000원\":\n      - generic: 제로 펩시(500ml)\n      - emphasis: 2,000\n      - text: 원\n    - button \"칠성사이다(500ml) 2,000원\":\n      - generic: 칠성사이다(500ml)\n      - emphasis: 2,000\n      - text: 원\n    - button \"펩시콜라(500ml) 2,000원\":\n      - generic: 펩시콜라(500ml)\n      - emphasis: 2,000\n      - text: 원\n    - button \"펩시콜라(1.25L) 2,500원\":\n      - generic: 펩시콜라(1.25L)\n      - emphasis: 2,500\n      - text: 원\n    - button \"코카콜라(500ml) 2,000원\":\n      - generic: 코카콜라(500ml)\n      - emphasis: 2,000\n      - text: 원\n  - button \"펼쳐서 더보기\":\n    - text: 펼쳐서 더보기\n  - heading \"메뉴판 이미지로 보기1\" [level=2]:\n    - text: 메뉴판 이미지로 보기\n    - emphasis: \"1\"\n  - list:\n    - button \"메뉴판 0\":\n      - img \"메뉴판 0\"\n  - heading \"원산지 접기\" [level=2]:\n    - generic: 원산지\n    - button \"접기\" [expanded]:\n      - generic: 접기\n  - generic: 닭(국내산), 찹쌀(국내산),쌀(국내산), 무우(국내산), 고추가루(중국산)\n- contentinfo:\n  - button \"이용약관\"\n  - button \"고객센터\"\n  - button \"리뷰운영정책\"\n  - button \"신고센터\"\n  - button \"네이버\":\n    - generic: 네이버"
+    },
+    {
+      "nid": "37398013",
+      "name": "라즈인도",
+      "url": "https://pcmap.place.naver.com/restaurant/37398013/menu/list",
+      "images": [
+        {
+          "alt": "메뉴판 0",
+          "src": "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=f320_320&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20180601_33%2F1527828702891llHCl_JPEG%2FglRKEmxpbUJzODpxWHHY8szm.jpg"
+        },
+        {
+          "alt": "메뉴판 1",
+          "src": "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=f320_320&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20180601_198%2F1527828708538I6ehk_JPEG%2FFc7ujVbR8LtZCp0q1xzU5f8D.jpg"
+        },
+        {
+          "alt": "메뉴판 2",
+          "src": "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=f320_320&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20180601_124%2F15278287140718OFfv_JPEG%2F873T0AJ9zS6dniYwBVKLD5ow.jpg"
+        }
+      ],
+      "description": "배달 메뉴 표시",
+      "snippet": "저트\" [level=2]:\n    - generic: Drinks & Dessert 음료 & 디저트\n  - list:\n    - button \"칠리 파니르 Chilli Paneer(20000) 생 양파 피망과 매일 우유로 만든 수제 치즈를 이용해서 볶아만든 중국 인도식 볶음요리 입니다 20,000원\":\n      - generic: 칠리 파니르 Chilli Paneer(20000)\n      - generic: 생 양파 피망과 매일 우유로 만든 수제 치즈를 이용해서 볶아만든 중국 인도식 볶음요리 입니다\n      - emphasis: 20,000\n      - text: 원\n    - button \"Sweet Lassi 350ml 설탕이 조금 들어갑니다 4,000원\":\n      - generic: Sweet Lassi 350ml\n      - generic: 설탕이 조금 들어갑니다\n      - emphasis: 4,000\n      - text: 원\n    - button \"Plain Lassi 350 무설탕 플레인 라씨 라씨는 짜고 맵고 달고 쓰고등 모든 맛을 중화 시킴 물을 좀 넣어 드셔도 좋습니다 4,000원\":\n      - generic: Plain Lassi 350 무설탕 플레인 라씨\n      - generic: 라씨는 짜고 맵고 달고 쓰고등 모든 맛을 중화 시킴 물을 좀 넣어 드셔도 좋습니다\n      - emphasis: 4,000\n      - text: 원\n    - button \"감귤 한라봉 라씨 Tangerine lassi350ml(착즙 감귤 한라봉 라씨) 착즙 감귤 한라봉 사용 350ml 건강 챙기는 라즈 되겠습니다 5,000원\":\n      - generic: 감귤 한라봉 라씨 Tangerine lassi350ml(착즙 감귤 한라봉 라씨)\n      - generic: 착즙 감귤 한라봉 사용 350ml 건강 챙기는 라즈 되겠습니다\n      - emphasis: 5,000\n      - text: 원\n    - button \"굴랍자문 디저트 Gulab Jamun 2 pieces 2조각으로 양이 많지 않습니다 우유가루를 뭉쳐서 튀겨낸후 시럽에 묻혀내서 달달합니다 3,000원\":\n      - generic: 굴랍자문 디저트 Gulab Jamun 2 pieces\n      - generic: 2조각으로 양이 많지 않습니다 우유가루를 뭉쳐서 튀겨낸후 시럽에 묻혀내서 달달합니다\n      - emphasis: 3,000\n      - text: 원\n  - heading \"메뉴판 이미지로 보기3\" [level=2]:\n    - text: 메뉴판 이미지로 보기\n    - emphasis: \"3\"\n  - list:\n    - button \"메뉴판 0\":\n      - img \"메뉴판 0\"\n    - button \"메뉴판 1\":\n      - img \"메뉴판 1\"\n    - button \"메뉴판 2\":\n      - img \"메뉴판 2\"\n  - heading \"원산지 접기\" [level=2]:\n    - generic: 원산지\n    - button \"접기\" [expanded]:\n      - generic: 접기\n  - generic: 소고기( 호주산 ), 뼈있는 치킨( 국산), 순살 (브라질), 양고기(호주,뉴질랜드) 고춧가루(베트남,중국) 밀가루(인도,호주) 쌀(국산) 인도쌀(인도),향신료(인도,파키스탄,방글라데시,네팔)\n- contentinfo:\n  - button \"이용약관\"\n  - button \"고객센터\"\n  - button \"리뷰운영정책\"\n  - button \"신고센터\"\n  - button \"네이버\":\n    - generic: 네이버"
+    },
+    {
+      "nid": "13570391",
+      "name": "초가왕족발",
+      "url": "https://pcmap.place.naver.com/restaurant/13570391/menu/list",
+      "images": [
+        {
+          "alt": "메뉴판 0",
+          "src": "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=f320_320&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20260812_134%2F1786520786163s8j4h_JPEG%2Ftemp_picture.jpg"
+        }
+      ],
+      "description": "배달 메뉴 표시",
+      "snippet": " \"정보\":\n      - generic: 정보\n  - generic: 배달\n  - text: 우리 매장은\n  - strong: 배달 주문\n  - text: 이 가능합니다\n  - heading \"대표메뉴\" [level=2]:\n    - generic: 대표메뉴\n  - list:\n    - button \"대표 앞다리(국내산) 41,000원\":\n      - generic: 대표\n      - generic: 앞다리(국내산)\n      - emphasis: 41,000\n      - text: 원\n    - button \"대표 뒷다리(국내산) 37,000원\":\n      - generic: 대표\n      - generic: 뒷다리(국내산)\n      - emphasis: 37,000\n      - text: 원\n  - heading \"족발메뉴\" [level=2]:\n    - generic: 족발메뉴\n  - list:\n    - button \"대표 앞다리(국내산) 41,000원\":\n      - generic: 대표\n      - generic: 앞다리(국내산)\n      - emphasis: 41,000\n      - text: 원\n    - button \"대표 뒷다리(국내산) 37,000원\":\n      - generic: 대표\n      - generic: 뒷다리(국내산)\n      - emphasis: 37,000\n      - text: 원\n    - button \"미니족 &앞다리, 뒷다리 주문시에만 주문 가능& 초장,양파,새우젓 23,000원\":\n      - generic: 미니족\n      - generic: \"&앞다리, 뒷다리 주문시에만 주문 가능& 초장,양파,새우젓\"\n      - emphasis: 23,000\n      - text: 원\n    - button \"(양념추가시)기본양념셋트 5,000원\":\n      - generic: (양념추가시)기본양념셋트\n      - emphasis: 5,000\n      - text: 원\n  - heading \"사이드메뉴\" [level=2]:\n    - generic: 사이드메뉴\n  - list:\n    - button \"공기 1,000원\":\n      - generic: 공기\n      - emphasis: 1,000\n      - text: 원\n    - button \"음료수 2,000원\":\n      - generic: 음료수\n      - emphasis: 2,000\n      - text: 원\n    - button \"콜라(PT) 3,000원\":\n      - generic: 콜라(PT)\n      - emphasis: 3,000\n      - text: 원\n    - button \"킨사이다(PT) 3,000원\":\n      - generic: 킨사이다(PT)\n      - emphasis: 3,000\n      - text: 원\n  - heading \"메뉴판 이미지로 보기1\" [level=2]:\n    - text: 메뉴판 이미지로 보기\n    - emphasis: \"1\"\n  - list:\n    - button \"메뉴판 0\":\n      - img \"메뉴판 0\"\n  - heading \"원산지 접기\" [level=2]:\n    - generic: 원산지\n    - button \"접기\" [expanded]:\n      - generic: 접기\n  - generic: 족발(국내산)\n- contentinfo:\n  - button \"이용약관\"\n  - button \"고객센터\"\n  - button \"리뷰운영정책\"\n  - button \"신고센터\"\n  - button \"네이버\":\n    - generic: 네이버"
+    },
+    {
+      "nid": "16169662",
+      "name": "본가왕손반점",
+      "url": "https://pcmap.place.naver.com/restaurant/16169662/menu/list",
+      "images": [],
+      "description": "배달 메뉴 표시",
+      "snippet": "text: 원\n    - button \"볶음밥 8,000원\":\n      - generic: 볶음밥\n      - emphasis: 8,000\n      - text: 원\n    - button \"짜장밥 8,000원\":\n      - generic: 짜장밥\n      - emphasis: 8,000\n      - text: 원\n    - button \"잡채밥 9,000원\":\n      - generic: 잡채밥\n      - emphasis: 9,000\n      - text: 원\n    - button \"김치볶음밥 9,000원\":\n      - generic: 김치볶음밥\n      - emphasis: 9,000\n      - text: 원\n  - button \"펼쳐서 더보기\":\n    - text: 펼쳐서 더보기\n  - heading \"요리류\" [level=2]:\n    - generic: 요리류\n  - list:\n    - button \"대표 탕수육(小) 22,000원\":\n      - generic: 대표\n      - generic: 탕수육(小)\n      - emphasis: 22,000\n      - text: 원\n    - button \"대표 탕수육(中) 27,000원\":\n      - generic: 대표\n      - generic: 탕수육(中)\n      - emphasis: 27,000\n      - text: 원\n    - button \"대표 탕수육(大) 32,000원\":\n      - generic: 대표\n      - generic: 탕수육(大)\n      - emphasis: 32,000\n      - text: 원\n    - button \"잡채 22,000원\":\n      - generic: 잡채\n      - emphasis: 22,000\n      - text: 원\n    - button \"고추잡채 35,000원\":\n      - generic: 고추잡채\n      - emphasis: 35,000\n      - text: 원\n  - button \"펼쳐서 더보기\":\n    - text: 펼쳐서 더보기\n  - heading \"음료/공기밥\" [level=2]:\n    - generic: 음료/공기밥\n  - list:\n    - button \"콜라 2,000원\":\n      - generic: 콜라\n      - emphasis: 2,000\n      - text: 원\n    - button \"사이다 2,000원\":\n      - generic: 사이다\n      - emphasis: 2,000\n      - text: 원\n    - button \"공기밥 1,000원\":\n      - generic: 공기밥\n      - emphasis: 1,000\n      - text: 원\n    - button \"짬뽕국물 1,000원\":\n      - generic: 짬뽕국물\n      - emphasis: 1,000\n      - text: 원\n  - heading \"원산지 접기\" [level=2]:\n    - generic: 원산지\n    - button \"접기\" [expanded]:\n      - generic: 접기\n  - generic: 쌀(국내산) 돼지고기(국내산) 오징어(중국산) 홍합(국내산) 쭈꾸미(베트남산) 당면(중국산) 밀가루(호주산) 깐새우(중국산) 콩(중국산) 닭(국내산) 배추(중국산) 고추가루(중국산)\n- contentinfo:\n  - button \"이용약관\"\n  - button \"고객센터\"\n  - button \"리뷰운영정책\"\n  - button \"신고센터\"\n  - button \"네이버\":\n    - generic: 네이버"
+    },
+    {
+      "nid": "19610578",
+      "name": "가마솥옛날국밥",
+      "url": "https://pcmap.place.naver.com/restaurant/19610578/menu/list",
+      "images": [
+        {
+          "alt": "메뉴판 0",
+          "src": "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=f320_320&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20180508_94%2F1525776244485ApgKV_JPEG%2FT2U10ImY9DyOpJsXGRKH6lQQ.jpg"
+        }
+      ],
+      "description": "배달 메뉴 표시",
+      "snippet": "물국 (공기포함)\n      - emphasis: 35,000\n      - text: 원\n    - button \"대표 모듬국밥 김치 깍두기 양파 쌈장 고추(공기포함) 9,000원\":\n      - generic: 대표\n      - generic: 모듬국밥\n      - generic: 김치 깍두기 양파 쌈장 고추(공기포함)\n      - emphasis: 9,000\n      - text: 원\n  - button \"펼쳐서 더보기\":\n    - text: 펼쳐서 더보기\n  - heading \"음료\" [level=2]:\n    - generic: 음료\n  - list:\n    - button \"콜라(500ml) 2,000원\":\n      - generic: 콜라(500ml)\n      - emphasis: 2,000\n      - text: 원\n    - button \"스프라이트(500ml) 2,000원\":\n      - generic: 스프라이트(500ml)\n      - emphasis: 2,000\n      - text: 원\n    - button \"환타(파인애플맛)(500ml) 2,000원\":\n      - generic: 환타(파인애플맛)(500ml)\n      - emphasis: 2,000\n      - text: 원\n  - heading \"사이드 메뉴\" [level=2]:\n    - generic: 사이드 메뉴\n  - list:\n    - button \"순대한접시 반찬x 6,000원\":\n      - generic: 순대한접시\n      - generic: 반찬x\n      - emphasis: 6,000\n      - text: 원\n    - button \"모듬순대(찰순대+머리고기수육) 반찬x 16,000원\":\n      - generic: 모듬순대(찰순대+머리고기수육)\n      - generic: 반찬x\n      - emphasis: 16,000\n      - text: 원\n    - button \"머리고기 수육 공기 미포함 반찬x 16,000원\":\n      - generic: 머리고기 수육\n      - generic: 공기 미포함 반찬x\n      - emphasis: 16,000\n      - text: 원\n    - button \"공기밥 1,000원\":\n      - generic: 공기밥\n      - emphasis: 1,000\n      - text: 원\n    - button \"갈비만두(8개) 반찬x 6,500원\":\n      - generic: 갈비만두(8개)\n      - generic: 반찬x\n      - emphasis: 6,500\n      - text: 원\n  - button \"펼쳐서 더보기\":\n    - text: 펼쳐서 더보기\n  - heading \"메뉴판 이미지로 보기1\" [level=2]:\n    - text: 메뉴판 이미지로 보기\n    - emphasis: \"1\"\n  - list:\n    - button \"메뉴판 0\":\n      - img \"메뉴판 0\"\n  - heading \"원산지 접기\" [level=2]:\n    - generic: 원산지\n    - button \"접기\" [expanded]:\n      - generic: 접기\n  - generic: 돼지고기(국내산)국밥부속(국내산)등뼈(칠레산)쌀(국내산)배추김치(중국산)무(국내산)고추가루(중국)소고기(호주산)삼겹수육(스페인)\n- contentinfo:\n  - button \"이용약관\"\n  - button \"고객센터\"\n  - button \"리뷰운영정책\"\n  - button \"신고센터\"\n  - button \"네이버\":\n    - generic: 네이버"
+    },
+    {
+      "nid": "1507113408",
+      "name": "로니의몬스터피자",
+      "url": "https://pcmap.place.naver.com/restaurant/1507113408/menu/list",
+      "images": [
+        {
+          "alt": "메뉴판 0",
+          "src": "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=f320_320&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20260605_84%2F17806302484445RHdu_JPEG%2Ftemp_picture.jpg"
+        }
+      ],
+      "description": "배달 메뉴 표시",
+      "snippet": "  - emphasis: 6,800\n      - text: 원\n  - button \"펼쳐서 더보기\":\n    - text: 펼쳐서 더보기\n  - heading \"음료\" [level=2]:\n    - generic: 음료\n  - list:\n    - button \"펩시콜라 500 2,000원\":\n      - generic: 펩시콜라 500\n      - emphasis: 2,000\n      - text: 원\n    - button \"칠성사이다 500 2,000원\":\n      - generic: 칠성사이다 500\n      - emphasis: 2,000\n      - text: 원\n    - button \"펩시콜라 1.25 3,000원\":\n      - generic: 펩시콜라 1.25\n      - emphasis: 3,000\n      - text: 원\n    - button \"칠성사이다1.25 3,000원\":\n      - generic: 칠성사이다1.25\n      - emphasis: 3,000\n      - text: 원\n    - button \"펩시제로500 2,500원\":\n      - generic: 펩시제로500\n      - emphasis: 2,500\n      - text: 원\n  - button \"펼쳐서 더보기\":\n    - text: 펼쳐서 더보기\n  - heading \"소스류\" [level=2]:\n    - generic: 소스류\n  - list:\n    - button \"갈릭소스 500원\":\n      - generic: 갈릭소스\n      - emphasis: \"500\"\n      - text: 원\n    - button \"요거트소스 500원\":\n      - generic: 요거트소스\n      - emphasis: \"500\"\n      - text: 원\n    - button \"청양 마요 소스 500원\":\n      - generic: 청양 마요 소스\n      - emphasis: \"500\"\n      - text: 원\n    - button \"피클 500원\":\n      - generic: 피클\n      - emphasis: \"500\"\n      - text: 원\n    - button \"핫소스 100원\":\n      - generic: 핫소스\n      - emphasis: \"100\"\n      - text: 원\n  - button \"펼쳐서 더보기\":\n    - text: 펼쳐서 더보기\n  - heading \"메뉴판 이미지로 보기1\" [level=2]:\n    - text: 메뉴판 이미지로 보기\n    - emphasis: \"1\"\n  - list:\n    - button \"메뉴판 0\":\n      - img \"메뉴판 0\"\n  - heading \"원산지 접기\" [level=2]:\n    - generic: 원산지\n    - button \"접기\" [expanded]:\n      - generic: 접기\n  - generic: 베이컨(돼지고기:벨기에,오스트리아,스페인) 불고기프리미엄(소고기:호주산) 새우링(새우:베트남) 칵테일새우(새우:베트남) 치킨바베큐탑핑(닭고기:국산) 훈제치킨(닭고기:국산) 스모크햄((돼지고기:국산,미국,벨기에.스페인) 불갈비스테이크(소고기:호주산) 소시지(돼지고기:미국,벨기에,스페인) 페퍼로니(닭고기:국산) 버팔로윙(닭고기:태국) 버팔로스틱(닭고기:태국) 치킨텐더(닭고기:태국)\n- contentinfo:\n  - button \"이용약관\"\n  - button \"고객센터\"\n  - button \"리뷰운영정책\"\n  - button \"신고센터\"\n  - button \"네이버\":\n    - generic: 네이버"
+    },
+    {
+      "nid": "35523968",
+      "name": "동대문엽기떡볶이",
+      "url": "https://pcmap.place.naver.com/restaurant/35523968/menu/list",
+      "images": [
+        {
+          "alt": "메뉴판 0",
+          "src": "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=f320_320&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20261103_50%2F1793667390539KmHgx_JPEG%2Fedited-1793667387536-0.jpg"
+        }
+      ],
+      "description": "배달 메뉴 표시",
+      "snippet": " 기본 제공\n      - emphasis: 16,000\n      - text: 원\n    - button \"국물무뼈닭발 엽기핫불소스 1개, 콘마요 기본 제공 17,000원\":\n      - generic: 국물무뼈닭발\n      - generic: 엽기핫불소스 1개, 콘마요 기본 제공\n      - emphasis: 17,000\n      - text: 원\n  - heading \"밀키트\" [level=2]:\n    - generic: 밀키트\n  - list:\n    - button \"엽떡밀키트 [2개 묶음] 제품입니다. 18,000원\":\n      - generic: 엽떡밀키트\n      - generic: \"[2개 묶음] 제품입니다.\"\n      - emphasis: 18,000\n      - text: 원\n  - heading \"사이드\" [level=2]:\n    - generic: 사이드\n  - list:\n    - button \"참치마요밥 3,500원\":\n      - generic: 참치마요밥\n      - emphasis: 3,500\n      - text: 원\n    - button \"주먹김밥(셀프) 2,000원\":\n      - generic: 주먹김밥(셀프)\n      - emphasis: 2,000\n      - text: 원\n    - button \"계란찜 2,000원\":\n      - generic: 계란찜\n      - emphasis: 2,000\n      - text: 원\n    - button \"계란야채죽 5,000원\":\n      - generic: 계란야채죽\n      - emphasis: 5,000\n      - text: 원\n    - button \"순대 소금과 내장 미제공 3,000원\":\n      - generic: 순대\n      - generic: 소금과 내장 미제공\n      - emphasis: 3,000\n      - text: 원\n  - button \"펼쳐서 더보기\":\n    - text: 펼쳐서 더보기\n  - heading \"음료\" [level=2]:\n    - generic: 음료\n  - list:\n    - button \"음료(유산균)450ml 1,000원\":\n      - generic: 음료(유산균)450ml\n      - emphasis: 1,000\n      - text: 원\n  - heading \"메뉴판 이미지로 보기1\" [level=2]:\n    - text: 메뉴판 이미지로 보기\n    - emphasis: \"1\"\n  - list:\n    - button \"메뉴판 0\":\n      - img \"메뉴판 0\"\n  - heading \"원산지 접기\" [level=2]:\n    - generic: 원산지\n    - button \"접기\" [expanded]:\n      - generic: 접기\n  - generic: \"숯불통뼈닭발(닭고기 : 국내산) 숯불무뼈닭발(닭고기 : 국내산) 국물통뼈닭발(닭고기 : 국내산) 국물무뼈닭발(닭고기 : 국내산) 계란야채죽(쌀 : 국내산) 꿔바로우(돼지고기 : 국내산) 엽봉(닭고기 : 태국산, 덴마크산) 엽떡밀키트 : 햄(닭고기 : 국내산 / 돼지고기 : 국내산) 햄(닭고기 : 국내산 / 돼지고기 : 국내산) 베이컨(돼지고기 : 외국산) 우삼겹(쇠고기 : 미국산) 참치마요밥(참치 : 원양산) 엽기닭볶음탕(닭고기 : 국내산) 모든 밥류(쌀 : 국내산)\"\n- contentinfo:\n  - button \"이용약관\"\n  - button \"고객센터\"\n  - button \"리뷰운영정책\"\n  - button \"신고센터\"\n  - button \"네이버\":\n    - generic: 네이버"
+    },
+    {
+      "nid": "1075860086",
+      "name": "한끼도시락",
+      "url": "https://pcmap.place.naver.com/restaurant/1075860086/home",
+      "images": [],
+      "description": "공개 메뉴 확인",
+      "snippet": "- banner:\n  - button \"이전 페이지\":\n    - generic: 이전 페이지\n  - heading \"한끼도시락\" [level=1]\n  - button \"페이지 닫기\":\n    - generic: 페이지 닫기\n- main:\n  - generic: 한끼도시락\n  - text: 도시락,컵밥\n  - button \"리뷰 40\"\n  - list:\n    - button \"뾰로로룽룽\":\n      - generic: 뾰로로룽룽\n    - button \"만족하면재방문\":\n      - generic: 만족하면재방문\n    - button \"만족하면재방문\":\n      - generic: 만족하면재방문\n    - button \"만족하면재방문\":\n      - generic: 만족하면재방문\n    - button \"hmmnyanya\":\n      - generic: hmmnyanya\n    - button \"미소의 세상 스페셜편\":\n      - generic: 미소의 세상 스페셜편\n    - button \"냐밍스\":\n      - generic: 냐밍스\n    - button \"HY222\":\n      - generic: HY222\n    - button \"작은별21\":\n      - generic: 작은별21\n    - button \"시나공62\":\n      - generic: 시나공62\n    - button \"더보기\":\n      - text: 더보기\n  - button \"출발\"\n  - button \"도착\"\n  - button \"거리뷰\":\n    - text: 거리뷰\n  - link \"공유\":\n    - /url: \"#\"\n    - text: 공유\n  - tablist:\n    - tab \"홈\" [selected]:\n      - generic: 홈\n    - tab \"리뷰\":\n      - generic: 리뷰\n    - tab \"사진\":\n      - generic: 사진\n  - strong:\n    - generic: 주소\n  - button \"전남광주 북구 설죽로214번길 129 (용봉 동)\":\n    - text: 전남광주 북구 설죽로214번길 129 (용봉 동)\n  - strong:\n    - generic: 영업시간 정보 수정\n  - text: 영업시간 수정 제안하기\n  - button \"추가\":\n    - generic: 추가\n  - button \"사장님, 플레이스를 무료로 직접 관리하세요! 권한 받기\":\n    - text: 사장님, 플레이스를\n    - emphasis: 무료로 직접 관리하세요!\n    - text: 권한 받기\n- contentinfo:\n  - button \"이용약관\"\n  - button \"고객센터\"\n  - button \"리뷰운영정책\"\n  - button \"신고센터\"\n  - button \"네이버\":\n    - generic: 네이버"
+    },
+    {
+      "nid": "1373248477",
+      "name": "미리내김밥",
+      "url": "https://pcmap.place.naver.com/restaurant/1373248477/home",
+      "images": [],
+      "description": "공개 메뉴 확인",
+      "snippet": "- banner:\n  - button \"이전 페이지\":\n    - generic: 이전 페이지\n  - heading \"미리내김밥\" [level=1]\n  - button \"페이지 닫기\":\n    - generic: 페이지 닫기\n- main:\n  - generic: 미리내김밥\n  - text: 김밥\n  - button \"리뷰 46\"\n  - list:\n    - button \"궁예11\":\n      - generic: 궁예11\n    - button \"오곰돌휘\":\n      - generic: 오곰돌휘\n    - button \"미소의 세상 스페셜편\":\n      - generic: 미소의 세상 스페셜편\n    - button \"꼬맹이1240\":\n      - generic: 꼬맹이1240\n    - button \"까랑\":\n      - generic: 까랑\n    - button \"더보기\":\n      - text: 더보기\n  - button \"출발\"\n  - button \"도착\"\n  - button \"거리뷰\":\n    - text: 거리뷰\n  - link \"공유\":\n    - /url: \"#\"\n    - text: 공유\n  - button \"알림받기\":\n    - text: 알림받기\n  - tablist:\n    - tab \"홈\" [selected]:\n      - generic: 홈\n    - tab \"리뷰\":\n      - generic: 리뷰\n    - tab \"사진\":\n      - generic: 사진\n  - strong:\n    - generic: 주소\n  - button \"전남광주 북구 설죽로214번길 121\":\n    - text: 전남광주 북구 설죽로214번길 121\n  - strong:\n    - generic: 영업시간 정보 수정\n  - text: 영업시간 수정 제안하기\n  - button \"추가\":\n    - generic: 추가\n  - strong:\n    - generic: 전화번호\n  - text: 062-522-2410\n  - button \"복사\"\n- contentinfo:\n  - button \"이용약관\"\n  - button \"고객센터\"\n  - button \"리뷰운영정책\"\n  - button \"신고센터\"\n  - button \"네이버\":\n    - generic: 네이버"
+    },
+    {
+      "nid": "1087889426",
+      "name": "엄마손중국식분식",
+      "url": "https://pcmap.place.naver.com/restaurant/1087889426/home",
+      "images": [],
+      "description": "공개 메뉴 확인",
+      "snippet": "- banner:\n  - button \"이전 페이지\":\n    - generic: 이전 페이지\n  - heading \"엄마손중국식분식\" [level=1]\n  - button \"페이지 닫기\":\n    - generic: 페이지 닫기\n- main:\n  - generic: 엄마손중국식분식\n  - text: 종합분식\n  - button \"리뷰 43\"\n  - list:\n    - button \"음식·음료\":\n      - generic: 음식·음료\n    - button \"막순이\":\n      - generic: 막순이\n    - button \"the****\":\n      - generic: the****\n    - button \"라꾸라꾸\":\n      - generic: 라꾸라꾸\n    - button \"이건민56\":\n      - generic: 이건민56\n    - button \"궁예11\":\n      - generic: 궁예11\n    - button \"더보기\":\n      - text: 더보기\n  - button \"출발\"\n  - button \"도착\"\n  - button \"거리뷰\":\n    - text: 거리뷰\n  - link \"공유\":\n    - /url: \"#\"\n    - text: 공유\n  - tablist:\n    - tab \"홈\" [selected]:\n      - generic: 홈\n    - tab \"리뷰\":\n      - generic: 리뷰\n    - tab \"사진\":\n      - generic: 사진\n    - tab \"정보\":\n      - generic: 정보\n  - strong:\n    - generic: 주소\n  - button \"전남광주 북구 설죽로214번길 111\":\n    - text: 전남광주 북구 설죽로214번길 111\n  - strong:\n    - generic: 영업시간 정보 수정\n  - text: 영업시간 수정 제안하기\n  - button \"추가\":\n    - generic: 추가\n  - button \"사장님, 플레이스를 무료로 직접 관리하세요! 권한 받기\":\n    - text: 사장님, 플레이스를\n    - emphasis: 무료로 직접 관리하세요!\n    - text: 권한 받기\n- contentinfo:\n  - button \"이용약관\"\n  - button \"고객센터\"\n  - button \"리뷰운영정책\"\n  - button \"신고센터\"\n  - button \"네이버\":\n    - generic: 네이버"
+    },
+    {
+      "nid": "1887196713",
+      "name": "왕손주먹구이",
+      "url": "https://pcmap.place.naver.com/restaurant/1887196713/menu/list",
+      "images": [
+        {
+          "alt": "메뉴판 0",
+          "src": "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=f320_320&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20250722_139%2F1753189116006HzjNn_JPEG%2FIMG_1334.jpeg"
+        },
+        {
+          "alt": "메뉴판 1",
+          "src": "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=f320_320&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20221004_188%2F1664857968227sAeWJ_JPEG%2FKakaoTalk_20221004_102647446_13.jpg"
+        }
+      ],
+      "description": "공개 메뉴 확인",
+      "snippet": " - list:\n    - button\n    - button \"밍지몽\":\n      - generic: 밍지몽\n    - button \"시링이에요\":\n      - generic: 시링이에요\n    - button \"맨하탄병아리\":\n      - generic: 맨하탄병아리\n    - button \"밍지몽\":\n      - generic: 밍지몽\n    - button \"지우지나아빠\":\n      - generic: 지우지나아빠\n    - button \"긍정은희망\":\n      - generic: 긍정은희망\n    - button \"볼빵빵다람지\":\n      - generic: 볼빵빵다람지\n    - button \"볼빵빵다람지\":\n      - generic: 볼빵빵다람지\n    - button \"볼빵빵다람지\":\n      - generic: 볼빵빵다람지\n    - button \"더보기\":\n      - text: 더보기\n  - button \"출발\"\n  - button \"도착\"\n  - button \"거리뷰\":\n    - text: 거리뷰\n  - link \"공유\":\n    - /url: \"#\"\n    - text: 공유\n  - button \"알림받기\":\n    - text: 알림받기\n  - tablist:\n    - tab \"홈\":\n      - generic: 홈\n    - tab \"메뉴\" [selected]:\n      - generic: 메뉴\n    - tab \"리뷰\":\n      - generic: 리뷰\n    - tab \"사진\":\n      - generic: 사진\n  - list:\n    - button \"닭발+주먹밥 14,000원\":\n      - generic: 닭발+주먹밥\n      - emphasis: 14,000\n      - text: 원\n    - button \"돼지뒷고기 10,000원\":\n      - generic: 돼지뒷고기\n      - emphasis: 10,000\n      - text: 원\n    - button \"가브리살 13,000원\":\n      - generic: 가브리살\n      - emphasis: 13,000\n      - text: 원\n    - button \"오돌뼈 13,000원\":\n      - generic: 오돌뼈\n      - emphasis: 13,000\n      - text: 원\n    - button \"해맑은막창 13,000원\":\n      - generic: 해맑은막창\n      - emphasis: 13,000\n      - text: 원\n    - button \"목살소금구이 13,000원\":\n      - generic: 목살소금구이\n      - emphasis: 13,000\n      - text: 원\n    - button \"껍데기 5,000원\":\n      - generic: 껍데기\n      - emphasis: 5,000\n      - text: 원\n  - paragraph: 메뉴 항목과 가격은 각 매장의 사정에 따라 기재된 내용과 다를 수 있습니다.\n  - heading \"메뉴판 이미지로 보기2\" [level=2]:\n    - text: 메뉴판 이미지로 보기\n    - emphasis: \"2\"\n  - list:\n    - button \"메뉴판 0\":\n      - img \"메뉴판 0\"\n    - button \"메뉴판 1\":\n      - img \"메뉴판 1\"\n- contentinfo:\n  - button \"이용약관\"\n  - button \"고객센터\"\n  - button \"리뷰운영정책\"\n  - button \"신고센터\"\n  - button \"네이버\":\n    - generic: 네이버"
+    },
+    {
+      "nid": "1346033389",
+      "name": "테트리스찜닭",
+      "url": "https://pcmap.place.naver.com/restaurant/1346033389/menu/list",
+      "images": [],
+      "description": "공개 메뉴 확인",
+      "snippet": "- banner:\n  - button \"이전 페이지\":\n    - generic: 이전 페이지\n  - heading \"테트리스찜닭 전남대점\" [level=1]\n  - button \"페이지 닫기\":\n    - generic: 페이지 닫기\n- main:\n  - generic: 테트리스찜닭 전남대점\n  - text: 찜닭\n  - button \"리뷰 20\"\n  - emphasis: 영업 중\n  - generic: 다음 날 02:00에 영업 종료\n  - list:\n    - button\n    - button \"거리뷰\":\n      - generic: 거리뷰\n  - button \"출발\"\n  - button \"도착\"\n  - button \"거리뷰\":\n    - text: 거리뷰\n  - link \"공유\":\n    - /url: \"#\"\n    - text: 공유\n  - button \"알림받기\":\n    - text: 알림받기\n  - tablist:\n    - tab \"홈\":\n      - generic: 홈\n    - tab \"메뉴\" [selected]:\n      - generic: 메뉴\n    - tab \"리뷰\":\n      - generic: 리뷰\n    - tab \"사진\":\n      - generic: 사진\n    - tab \"정보\":\n      - generic: 정보\n  - iframe\n  - list:\n    - button \"까만찜닭 24,000원\":\n      - generic: 까만찜닭\n      - emphasis: 24,000\n      - text: 원\n    - button \"하얀찜닭 23,000원\":\n      - generic: 하얀찜닭\n      - emphasis: 23,000\n      - text: 원\n    - button \"빨간찜닭 24,000원\":\n      - generic: 빨간찜닭\n      - emphasis: 24,000\n      - text: 원\n    - button \"까만찜닭(순살) 25,000원\":\n      - generic: 까만찜닭(순살)\n      - emphasis: 25,000\n      - text: 원\n    - button \"하얀찜닭(순살) 28,000원\":\n      - generic: 하얀찜닭(순살)\n      - emphasis: 28,000\n      - text: 원\n    - button \"빨간찜닭(순살) 25,000원\":\n      - generic: 빨간찜닭(순살)\n      - emphasis: 25,000\n      - text: 원\n  - paragraph: 메뉴 항목과 가격은 각 매장의 사정에 따라 기재된 내용과 다를 수 있습니다.\n- contentinfo:\n  - button \"이용약관\"\n  - button \"고객센터\"\n  - button \"리뷰운영정책\"\n  - button \"신고센터\"\n  - button \"네이버\":\n    - generic: 네이버"
+    },
+    {
+      "nid": "20369720",
+      "name": "동산회관",
+      "url": "https://pcmap.place.naver.com/restaurant/20369720/menu/list",
+      "images": [
+        {
+          "alt": "메뉴판 0",
+          "src": "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=f320_320&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20250905_40%2F1757041065151jinDu_JPEG%2FIMG_3961.jpeg"
+        }
+      ],
+      "description": "공개 메뉴 확인",
+      "snippet": " \"이전 페이지\":\n    - generic: 이전 페이지\n  - heading \"동산회관\" [level=1]\n  - button \"페이지 닫기\":\n    - generic: 페이지 닫기\n- main:\n  - generic: 동산회관\n  - text: 한식\n  - generic: 별점\n  - text: \"4.5\"\n  - button \"리뷰 1,200\"\n  - emphasis: 영업 종료\n  - text: 11:00에 영업 시작\n  - text: 특별한 양념이 빛나는 별미비빔밥\n  - button \"AI 요약\":\n    - text: AI 요약\n  - list:\n    - button\n    - button \"아하7831\":\n      - generic: 아하7831\n    - button \"슬기로운새로생활\":\n      - generic: 슬기로운새로생활\n    - button \"내부\":\n      - generic: 내부\n    - button \"음식·음료\":\n      - generic: 음식·음료\n    - button \"외부\":\n      - generic: 외부\n    - button \"JANETdimi\":\n      - generic: JANETdimi\n    - button \"슬기로운새로생활\":\n      - generic: 슬기로운새로생활\n    - button \"광파\":\n      - generic: 광파\n    - button \"나훈or\":\n      - generic: 나훈or\n    - button \"더보기\":\n      - text: 더보기\n  - button \"출발\"\n  - button \"도착\"\n  - button \"거리뷰\":\n    - text: 거리뷰\n  - link \"공유\":\n    - /url: \"#\"\n    - text: 공유\n  - button \"알림받기\":\n    - text: 알림받기\n  - tablist:\n    - tab \"홈\":\n      - generic: 홈\n    - tab \"소식\":\n      - generic: 소식\n    - tab \"메뉴\" [selected]:\n      - generic: 메뉴\n    - tab \"리뷰\":\n      - generic: 리뷰\n    - tab \"사진\":\n      - generic: 사진\n    - tab \"정보\":\n      - generic: 정보\n  - list:\n    - button \"한방양념삼겹살 11,000원\":\n      - generic: 한방양념삼겹살\n      - emphasis: 11,000\n      - text: 원\n    - button \"별미비빔밥 2,500원\":\n      - generic: 별미비빔밥\n      - emphasis: 2,500\n      - text: 원\n    - button \"버섯사리 2,500원\":\n      - generic: 버섯사리\n      - emphasis: 2,500\n      - text: 원\n  - paragraph: 최근 업데이트 25.09.05\n  - paragraph: 메뉴 항목과 가격은 각 매장의 사정에 따라 기재된 내용과 다를 수 있습니다.\n  - heading \"메뉴판 이미지로 보기1\" [level=2]:\n    - text: 메뉴판 이미지로 보기\n    - emphasis: \"1\"\n  - list:\n    - button \"메뉴판 0\":\n      - img \"메뉴판 0\"\n- contentinfo:\n  - button \"이용약관\"\n  - button \"고객센터\"\n  - button \"리뷰운영정책\"\n  - button \"신고센터\"\n  - button \"네이버\":\n    - generic: 네이버"
+    },
+    {
+      "nid": "21519977",
+      "name": "한우촌",
+      "url": "https://pcmap.place.naver.com/restaurant/21519977/menu/list",
+      "images": [
+        {
+          "alt": "메뉴판 0",
+          "src": "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=f320_320&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20260415_36%2F17762253744555Nqsz_JPEG%2F1776225359382.jpg"
+        },
+        {
+          "alt": "메뉴판 1",
+          "src": "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=f320_320&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20230224_112%2F1677201027482gc3Hd_JPEG%2F1677201012526.jpg"
+        }
+      ],
+      "description": "공개 메뉴 확인",
+      "snippet": "      - generic: MOOLU\n    - button \"씨스터모해\":\n      - generic: 씨스터모해\n    - button \"ire****\":\n      - generic: ire****\n    - button \"뷰티풀74\":\n      - generic: 뷰티풀74\n    - button \"bong6\":\n      - generic: bong6\n    - button \"더보기\":\n      - text: 더보기\n  - button \"출발\"\n  - button \"도착\"\n  - button \"거리뷰\":\n    - text: 거리뷰\n  - link \"공유\":\n    - /url: \"#\"\n    - text: 공유\n  - tablist:\n    - tab \"홈\":\n      - generic: 홈\n    - tab \"메뉴\" [selected]:\n      - generic: 메뉴\n    - tab \"리뷰\":\n      - generic: 리뷰\n    - tab \"사진\":\n      - generic: 사진\n  - list:\n    - button \"생삼겹 13,000원\":\n      - generic: 생삼겹\n      - emphasis: 13,000\n      - text: 원\n    - button \"대패삼겹 13,000원\":\n      - generic: 대패삼겹\n      - emphasis: 13,000\n      - text: 원\n    - button \"목살 13,000원\":\n      - generic: 목살\n      - emphasis: 13,000\n      - text: 원\n    - button \"주물럭 소 20,000원\":\n      - generic: 주물럭 소\n      - emphasis: 20,000\n      - text: 원\n    - button \"주물럭 중 30,000원\":\n      - generic: 주물럭 중\n      - emphasis: 30,000\n      - text: 원\n    - button \"꽃살 28,000원\":\n      - generic: 꽃살\n      - emphasis: 28,000\n      - text: 원\n    - button \"갈비살 28,000원\":\n      - generic: 갈비살\n      - emphasis: 28,000\n      - text: 원\n    - button \"꽃등심 30,000원\":\n      - generic: 꽃등심\n      - emphasis: 30,000\n      - text: 원\n    - button \"생고기 24,000원\":\n      - generic: 생고기\n      - emphasis: 24,000\n      - text: 원\n    - button \"차돌박이 18,000원\":\n      - generic: 차돌박이\n      - emphasis: 18,000\n      - text: 원\n  - paragraph: 메뉴 항목과 가격은 각 매장의 사정에 따라 기재된 내용과 다를 수 있습니다.\n  - heading \"메뉴판 이미지로 보기2\" [level=2]:\n    - text: 메뉴판 이미지로 보기\n    - emphasis: \"2\"\n  - list:\n    - button \"메뉴판 0\":\n      - img \"메뉴판 0\"\n    - button \"메뉴판 1\":\n      - img \"메뉴판 1\"\n- contentinfo:\n  - button \"이용약관\"\n  - button \"고객센터\"\n  - button \"리뷰운영정책\"\n  - button \"신고센터\"\n  - button \"네이버\":\n    - generic: 네이버"
+    },
+    {
+      "nid": "34706804",
+      "name": "나루터",
+      "url": "https://pcmap.place.naver.com/restaurant/34706804/menu/list",
+      "images": [
+        {
+          "alt": "메뉴판 0",
+          "src": "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=f320_320&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20230125_234%2F167462847958330gVe_JPEG%2F1674628467863.jpg"
+        },
+        {
+          "alt": "메뉴판 1",
+          "src": "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=f320_320&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20221208_126%2F1670485719216Et4nd_PNG%2F%25B3%25AA%25B7%25E7%25C5%25CD.png"
+        }
+      ],
+      "description": "가격 변동 항목 있음",
+      "snippet": "tton \"광고 옵션\":\n      - generic: 광고 옵션\n    - link \"새 창 광고 이미지 삼성역 도보 2분 회의실 & 세미나실 6~120인까지 수용 가능한 공간대여!\":\n      - /url: https://ader.naver.com/collection/gfa/CTj0rPSObA9cIELc3hR7xW3dmH28I9ICx2R7AQKG1no2VU64i1PfT7auJ-c6RDAmP_HJ66KIogzwfYRfbodnKjKC1CZTWf8dERPyflVDp_d4h4HLiE1_4XoAMipqya303KNvgdLjhl0zGkUtf0GuMs1tmM-YAevxslfBzXkj5fVYzeZvh0ZtXYiXk6RyfDxsm-5hlSqwnE6Hcis899zgCdhzHKSdduFkhyt9UDSWb6lzZ-fMdLBhwSLU8gTFTPlNlz-1JeeSMG_dJ0_CKicU7PvmWVMgXJaKIsdbTiCw0yQhgYhe8v8nkojumzEz3Y4K\n      - generic: 새 창\n      - img \"광고 이미지\"\n      - strong: 삼성역 도보 2분 회의실 & 세미나실\n      - paragraph: 6~120인까지 수용 가능한 공간대여!\n  - list:\n    - button \"조기매운탕 25,000원\":\n      - generic: 조기매운탕\n      - emphasis: 25,000\n      - text: 원\n    - button \"우럭매운탕 대 35,000원\":\n      - generic: 우럭매운탕 대\n      - emphasis: 35,000\n      - text: 원\n    - button \"우럭매운탕 소 22,000원\":\n      - generic: 우럭매운탕 소\n      - emphasis: 22,000\n      - text: 원\n    - button \"알탕 20,000원\":\n      - generic: 알탕\n      - emphasis: 20,000\n      - text: 원\n    - button \"꽃게탕 가격 변동\":\n      - generic: 꽃게탕\n      - emphasis: 가격 변동\n    - button \"갈치조림 40,000원\":\n      - generic: 갈치조림\n      - emphasis: 40,000\n      - text: 원\n    - button \"병어조림 가격 변동\":\n      - generic: 병어조림\n      - emphasis: 가격 변동\n    - button \"오리주물럭 가격 변동\":\n      - generic: 오리주물럭\n      - emphasis: 가격 변동\n    - button \"오리로스 가격 변동\":\n      - generic: 오리로스\n      - emphasis: 가격 변동\n    - button \"오리탕 가격 변동\":\n      - generic: 오리탕\n      - emphasis: 가격 변동\n  - paragraph: 메뉴 항목과 가격은 각 매장의 사정에 따라 기재된 내용과 다를 수 있습니다.\n  - heading \"메뉴판 이미지로 보기2\" [level=2]:\n    - text: 메뉴판 이미지로 보기\n    - emphasis: \"2\"\n  - list:\n    - button \"메뉴판 0\":\n      - img \"메뉴판 0\"\n    - button \"메뉴판 1\":\n      - img \"메뉴판 1\"\n- contentinfo:\n  - button \"이용약관\"\n  - button \"고객센터\"\n  - button \"리뷰운영정책\"\n  - button \"신고센터\"\n  - button \"네이버\":\n    - generic: 네이버"
+    },
+    {
+      "nid": "1911743486",
+      "name": "뉴요커피자",
+      "url": "https://pcmap.place.naver.com/restaurant/1911743486/menu/list",
+      "images": [
+        {
+          "alt": "메뉴판 0",
+          "src": "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=f320_320&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20260127_255%2F1769489305801dDJN9_JPEG%2FKakaoTalk_20260127_134632480_02.jpg"
+        }
+      ],
+      "description": "공개 메뉴 확인",
+      "snippet": " button \"스위트 고구마무스 피자 R:18,900원 L:22,900원 18,900원\":\n      - generic: 스위트 고구마무스 피자\n      - generic: R:18,900원 L:22,900원\n      - emphasis: 18,900\n      - text: 원\n    - button \"스위트 콘치즈 피자 R:18,900원 L:22,900원 18,900원\":\n      - generic: 스위트 콘치즈 피자\n      - generic: R:18,900원 L:22,900원\n      - emphasis: 18,900\n      - text: 원\n    - button \"고르곤졸라 피자 R:17,900원 L:21,900원 17,900원\":\n      - generic: 고르곤졸라 피자\n      - generic: R:17,900원 L:21,900원\n      - emphasis: 17,900\n      - text: 원\n    - button \"더블 치즈 피자 R:17,900원 L:21,900원 17,900원\":\n      - generic: 더블 치즈 피자\n      - generic: R:17,900원 L:21,900원\n      - emphasis: 17,900\n      - text: 원\n    - button \"뉴욕 페퍼로니 피자 R:18,900원 L:22,900원 18,900원\":\n      - generic: 뉴욕 페퍼로니 피자\n      - generic: R:18,900원 L:22,900원\n      - emphasis: 18,900\n      - text: 원\n    - button \"리얼 불고기 피자 R:18,900원 L:22,900원 18,900원\":\n      - generic: 리얼 불고기 피자\n      - generic: R:18,900원 L:22,900원\n      - emphasis: 18,900\n      - text: 원\n    - button \"훈제치킨 13,000원\":\n      - generic: 훈제치킨\n      - emphasis: 13,000\n      - text: 원\n    - button \"치즈오븐스파게티 6,000원\":\n      - generic: 치즈오븐스파게티\n      - emphasis: 6,000\n      - text: 원\n    - button \"버팔로 봉 5ea:6,000원 8ea:8,000원 6,000원\":\n      - generic: 버팔로 봉\n      - generic: 5ea:6,000원 8ea:8,000원\n      - emphasis: 6,000\n      - text: 원\n    - button \"버팔로 윙 5ea:6,000원 8ea:8,000원 6,000원\":\n      - generic: 버팔로 윙\n      - generic: 5ea:6,000원 8ea:8,000원\n      - emphasis: 6,000\n      - text: 원\n  - paragraph: 최근 업데이트 26.01.27\n  - paragraph: 메뉴 항목과 가격은 각 매장의 사정에 따라 기재된 내용과 다를 수 있습니다.\n  - heading \"메뉴판 이미지로 보기1\" [level=2]:\n    - text: 메뉴판 이미지로 보기\n    - emphasis: \"1\"\n  - list:\n    - button \"메뉴판 0\":\n      - img \"메뉴판 0\"\n- contentinfo:\n  - button \"이용약관\"\n  - button \"고객센터\"\n  - button \"리뷰운영정책\"\n  - button \"신고센터\"\n  - button \"네이버\":\n    - generic: 네이버"
+    },
+    {
+      "nid": "2022595457",
+      "name": "푸다회전훠궈",
+      "url": "https://pcmap.place.naver.com/restaurant/2022595457/menu/list",
+      "images": [
+        {
+          "alt": "메뉴판 0",
+          "src": "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=f320_320&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20260509_184%2F1778264941033V8DC8_JPEG%2FKakaoTalk_20260509_000756378.jpg"
+        }
+      ],
+      "description": "공개 메뉴 확인",
+      "snippet": "neric: 푸다회전훠궈 전대점\n  - text: 중식당\n  - generic: 별점\n  - text: \"4.89\"\n  - button \"리뷰 2,598\"\n  - emphasis: 영업 종료\n  - text: 11:00에 영업 시작\n  - text: 다양한 메뉴가 기다리는 훠궈 천국\n  - button \"AI 요약\":\n    - text: AI 요약\n  - list:\n    - button\n    - button \"효니\":\n      - generic: 효니\n    - button\n    - button \"내부\":\n      - generic: 내부\n    - button \"음식·음료\":\n      - generic: 음식·음료\n    - button \"훠궈\":\n      - generic: 훠궈\n    - button \"외부\":\n      - generic: 외부\n    - button \"공주다아아당\":\n      - generic: 공주다아아당\n    - button \"푸푸492\":\n      - generic: 푸푸492\n    - button \"김수빈782\":\n      - generic: 김수빈782\n    - button \"더보기\":\n      - text: 더보기\n  - button \"출발\"\n  - button \"도착\"\n  - button \"거리뷰\":\n    - text: 거리뷰\n  - link \"공유\":\n    - /url: \"#\"\n    - text: 공유\n  - button \"알림받기\":\n    - text: 알림받기\n  - tablist:\n    - tab \"홈\":\n      - generic: 홈\n    - tab \"메뉴\" [selected]:\n      - generic: 메뉴\n    - tab \"리뷰\":\n      - generic: 리뷰\n    - tab \"사진\":\n      - generic: 사진\n    - tab \"정보\":\n      - generic: 정보\n  - iframe\n  - list:\n    - button \"회전훠궈-점심 점심시간 11시~15시 가격입니다. 19,900원\":\n      - generic: 회전훠궈-점심\n      - generic: 점심시간 11시~15시 가격입니다.\n      - emphasis: 19,900\n      - text: 원\n    - button \"회전훠궈-저녁 저녁시간 15시~20시 가격입니다. 22,900원\":\n      - generic: 회전훠궈-저녁\n      - generic: 저녁시간 15시~20시 가격입니다.\n      - emphasis: 22,900\n      - text: 원\n    - button \"회전훠궈-어린이 4세 ~ 12세 어린이의 가격입니다. 12,900원\":\n      - generic: 회전훠궈-어린이\n      - generic: 4세 ~ 12세 어린이의 가격입니다.\n      - emphasis: 12,900\n      - text: 원\n  - paragraph: 최근 업데이트 26.08.09\n  - paragraph: 메뉴 항목과 가격은 각 매장의 사정에 따라 기재된 내용과 다를 수 있습니다.\n  - heading \"메뉴판 이미지로 보기1\" [level=2]:\n    - text: 메뉴판 이미지로 보기\n    - emphasis: \"1\"\n  - list:\n    - button \"메뉴판 0\":\n      - img \"메뉴판 0\"\n- contentinfo:\n  - button \"이용약관\"\n  - button \"고객센터\"\n  - button \"리뷰운영정책\"\n  - button \"신고센터\"\n  - button \"네이버\":\n    - generic: 네이버"
+    },
+    {
+      "nid": "2071340968",
+      "name": "감쪽",
+      "url": "https://pcmap.place.naver.com/restaurant/2071340968/menu/list",
+      "images": [
+        {
+          "alt": "메뉴판 0",
+          "src": "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=f320_320&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20260818_223%2F1787026336542zunG3_JPEG%2F%25B0%25A8%25C2%25CA_%25BD%25C5%25B8%25DE%25B4%25BA_%25B9%25DD%25BF%25B5_%25B8%25DE%25B4%25BA%25C6%25C7.jpg"
+        }
+      ],
+      "description": "공개 메뉴 확인",
+      "snippet": "   - emphasis: 4,900\n      - text: 원\n    - button \"우렁된장술밥 우렁의 쫄깃한 식감과 구수한 된장 맛이 살아있는 술밥 7,900원\":\n      - generic: 우렁된장술밥\n      - generic: 우렁의 쫄깃한 식감과 구수한 된장 맛이 살아있는 술밥\n      - emphasis: 7,900\n      - text: 원\n    - button \"김치수제비 얼큰한 김치 국물에 쫄깃한 수제비를 푸짐하게 담은 한 그릇 6,900원\":\n      - generic: 김치수제비\n      - generic: 얼큰한 김치 국물에 쫄깃한 수제비를 푸짐하게 담은 한 그릇\n      - emphasis: 6,900\n      - text: 원\n    - button \"얼큰 계란라면 얼큰한 라면에 부드러운 계란을 더해 해장으로 제격인 메뉴 4,900원\":\n      - generic: 얼큰 계란라면\n      - generic: 얼큰한 라면에 부드러운 계란을 더해 해장으로 제격인 메뉴\n      - emphasis: 4,900\n      - text: 원\n    - button \"뽀글이 라밥 쪽갈비랑 함께 탄단지 끝판왕!! 감쪽에서 꼭 맛봐야되는 필수 사이드 3,900원\":\n      - generic: 뽀글이 라밥\n      - generic: 쪽갈비랑 함께 탄단지 끝판왕!! 감쪽에서 꼭 맛봐야되는 필수 사이드\n      - emphasis: 3,900\n      - text: 원\n    - button \"깍두기냉국수 아삭한 깍두기를 듬뿍 넣어 시원하고 새콤하게 즐기는 냉국수 6,900원\":\n      - generic: 깍두기냉국수\n      - generic: 아삭한 깍두기를 듬뿍 넣어 시원하고 새콤하게 즐기는 냉국수\n      - emphasis: 6,900\n      - text: 원\n    - button \"미니계란찜 폭신하고 부드러운 식감, 누구나 부담 없이 즐기는 기본 사이드 3,900원\":\n      - generic: 미니계란찜\n      - generic: 폭신하고 부드러운 식감, 누구나 부담 없이 즐기는 기본 사이드\n      - emphasis: 3,900\n      - text: 원\n    - button \"날치알 주먹밥 톡톡 터지는 날치알과 고소한 밥의 조합, 쪽갈비와 찰떡궁합 5,000원\":\n      - generic: 날치알 주먹밥\n      - generic: 톡톡 터지는 날치알과 고소한 밥의 조합, 쪽갈비와 찰떡궁합\n      - emphasis: 5,000\n      - text: 원\n    - button \"치즈퐁듀 진하게 녹인 치즈에 찍어 먹는 재미까지 더한 인기 메뉴 4,500원\":\n      - generic: 치즈퐁듀\n      - generic: 진하게 녹인 치즈에 찍어 먹는 재미까지 더한 인기 메뉴\n      - emphasis: 4,500\n      - text: 원\n  - paragraph: 최근 업데이트 26.11.05\n  - paragraph: 메뉴 항목과 가격은 각 매장의 사정에 따라 기재된 내용과 다를 수 있습니다.\n  - heading \"메뉴판 이미지로 보기1\" [level=2]:\n    - text: 메뉴판 이미지로 보기\n    - emphasis: \"1\"\n  - list:\n    - button \"메뉴판 0\":\n      - img \"메뉴판 0\"\n- contentinfo:\n  - button \"이용약관\"\n  - button \"고객센터\"\n  - button \"리뷰운영정책\"\n  - button \"신고센터\"\n  - button \"네이버\":\n    - generic: 네이버"
+    },
+    {
+      "nid": "2091246902",
+      "name": "꿈에그린분식",
+      "url": "https://pcmap.place.naver.com/restaurant/2091246902/menu/list",
+      "images": [
+        {
+          "alt": "메뉴판 0",
+          "src": "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=f320_320&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20251225_208%2F1766673295513uttHQ_JPEG%2F1000012253.jpg"
+        }
+      ],
+      "description": "공개 메뉴 확인",
+      "snippet": "- banner:\n  - button \"이전 페이지\":\n    - generic: 이전 페이지\n  - heading \"꿈에그린분식\" [level=1]\n  - button \"페이지 닫기\":\n    - generic: 페이지 닫기\n- main:\n  - generic: 꿈에그린분식\n  - text: 종합분식\n  - button \"리뷰 4\"\n  - emphasis: 영업 종료\n  - text: 10:00에 영업 시작\n  - list:\n    - button\n    - button\n    - button\n    - button \"당거24\":\n      - generic: 당거24\n    - button \"더보기\":\n      - text: 더보기\n  - button \"출발\"\n  - button \"도착\"\n  - button \"거리뷰\":\n    - text: 거리뷰\n  - link \"공유\":\n    - /url: \"#\"\n    - text: 공유\n  - button \"알림받기\":\n    - text: 알림받기\n  - tablist:\n    - tab \"홈\":\n      - generic: 홈\n    - tab \"메뉴\" [selected]:\n      - generic: 메뉴\n    - tab \"리뷰\":\n      - generic: 리뷰\n    - tab \"사진\":\n      - generic: 사진\n    - tab \"정보\":\n      - generic: 정보\n  - heading \"추천 메뉴\" [level=2]:\n    - generic: 추천 메뉴\n  - list:\n    - button \"대표 튀김 튀김 이 다섯종류로 특히 고추 튀김이 맛있습니다 1,500원\":\n      - generic: 대표\n      - generic: 튀김\n      - generic: 튀김 이 다섯종류로 특히 고추 튀김이 맛있습니다\n      - emphasis: 1,500\n      - text: 원\n  - list:\n    - button \"대표 튀김 튀김 이 다섯종류로 특히 고추 튀김이 맛있습니다 1,500원\":\n      - generic: 대표\n      - generic: 튀김\n      - generic: 튀김 이 다섯종류로 특히 고추 튀김이 맛있습니다\n      - emphasis: 1,500\n      - text: 원\n  - paragraph: 최근 업데이트 25.12.25\n  - paragraph: 메뉴 항목과 가격은 각 매장의 사정에 따라 기재된 내용과 다를 수 있습니다.\n  - heading \"메뉴판 이미지로 보기1\" [level=2]:\n    - text: 메뉴판 이미지로 보기\n    - emphasis: \"1\"\n  - list:\n    - button \"메뉴판 0\":\n      - img \"메뉴판 0\"\n- contentinfo:\n  - button \"이용약관\"\n  - button \"고객센터\"\n  - button \"리뷰운영정책\"\n  - button \"신고센터\"\n  - button \"네이버\":\n    - generic: 네이버"
+    },
+    {
+      "nid": "2015557853",
+      "name": "신사장국밥",
+      "url": "https://pcmap.place.naver.com/restaurant/2015557853/menu/list",
+      "images": [
+        {
+          "alt": "메뉴판 0",
+          "src": "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=f320_320&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20260812_11%2F1786537399067RKpPj_JPEG%2F1000075446.jpg"
+        }
+      ],
+      "description": "공개 메뉴 확인",
+      "snippet": "  - emphasis: 13,000\n      - text: 원\n    - button \"산더미고기국밥(특) 산더미고기국밥을 더욱 푸짐하게! 특 사이즈로 더욱 넉넉하게 담았습니다. 13,000원\":\n      - generic: 산더미고기국밥(특)\n      - generic: 산더미고기국밥을 더욱 푸짐하게! 특 사이즈로 더욱 넉넉하게 담았습니다.\n      - emphasis: 13,000\n      - text: 원\n    - button \"보쌈 소 매일 정성껏 삶은 부드러운 보쌈에 국내산 무김치와 배추김치가 잘 어울리는 일품 메뉴 28,000원\":\n      - generic: 보쌈 소\n      - generic: 매일 정성껏 삶은 부드러운 보쌈에 국내산 무김치와 배추김치가 잘 어울리는 일품 메뉴\n      - emphasis: 28,000\n      - text: 원\n    - button \"보쌈 중 매일 정성껏 삶은 부드러운 보쌈에 국내산 무김치와 배추김치가 잘 어울리는 일품 메뉴 39,000원\":\n      - generic: 보쌈 중\n      - generic: 매일 정성껏 삶은 부드러운 보쌈에 국내산 무김치와 배추김치가 잘 어울리는 일품 메뉴\n      - emphasis: 39,000\n      - text: 원\n    - button \"보쌈 대 매일 정성껏 삶은 부드러운 보쌈에 국내산 무김치와 배추김치가 잘 어울리는 일품 메뉴 48,000원\":\n      - generic: 보쌈 대\n      - generic: 매일 정성껏 삶은 부드러운 보쌈에 국내산 무김치와 배추김치가 잘 어울리는 일품 메뉴\n      - emphasis: 48,000\n      - text: 원\n    - button \"수육물밀면 시원한 육수에 부드러운 수육이 올려진 부산 밀면 10,000원\":\n      - generic: 수육물밀면\n      - generic: 시원한 육수에 부드러운 수육이 올려진 부산 밀면\n      - emphasis: 10,000\n      - text: 원\n    - button \"수육비빔밀면 매콤달콤한 비빔장에 부드러운 수육이 올려진 부산 밀면 10,000원\":\n      - generic: 수육비빔밀면\n      - generic: 매콤달콤한 비빔장에 부드러운 수육이 올려진 부산 밀면\n      - emphasis: 10,000\n      - text: 원\n    - button \"공기밥 1,000원\":\n      - generic: 공기밥\n      - emphasis: 1,000\n      - text: 원\n    - button \"음료 2,000원\":\n      - generic: 음료\n      - emphasis: 2,000\n      - text: 원\n    - button \"소주/맥주 4,000원\":\n      - generic: 소주/맥주\n      - emphasis: 4,000\n      - text: 원\n  - paragraph: 최근 업데이트 26.09.03\n  - paragraph: 메뉴 항목과 가격은 각 매장의 사정에 따라 기재된 내용과 다를 수 있습니다.\n  - heading \"메뉴판 이미지로 보기1\" [level=2]:\n    - text: 메뉴판 이미지로 보기\n    - emphasis: \"1\"\n  - list:\n    - button \"메뉴판 0\":\n      - img \"메뉴판 0\"\n- contentinfo:\n  - button \"이용약관\"\n  - button \"고객센터\"\n  - button \"리뷰운영정책\"\n  - button \"신고센터\"\n  - button \"네이버\":\n    - generic: 네이버"
+    },
+    {
+      "nid": "33741131",
+      "name": "국수나무",
+      "url": "https://pcmap.place.naver.com/restaurant/33741131/menu/list",
+      "images": [
+        {
+          "alt": "메뉴판 0",
+          "src": "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=f320_320&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20240319_113%2F17108231330077pB2S_PNG%2FKakaoTalk_20231215_144647099_05.png"
+        },
+        {
+          "alt": "메뉴판 1",
+          "src": "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=f320_320&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20240319_111%2F1710823138080IyWN5_PNG%2FKakaoTalk_20231215_144647099_03.png"
+        },
+        {
+          "alt": "메뉴판 2",
+          "src": "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=f320_320&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20240319_230%2F1710823143137AvHuA_PNG%2FKakaoTalk_20231215_144647099_08.png"
+        },
+        {
+          "alt": "메뉴판 3",
+          "src": "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=f320_320&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20240319_168%2F1710823140806GBlKa_PNG%2FKakaoTalk_20231215_144647099_04.png"
+        },
+        {
+          "alt": "메뉴판 4",
+          "src": "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=f320_320&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20240319_98%2F1710823148615fEPle_PNG%2FKakaoTalk_20231215_144647099.png"
+        }
+      ],
+      "description": "공개 메뉴 확인",
+      "snippet": " 맛을 내어 풍미 깊은 농축 간장소스와 국내산돈까스를 사용한 일본식돈까스덮밥\n      - emphasis: 9,900\n      - text: 원\n  - button \"펼쳐서 더보기\":\n    - text: 펼쳐서 더보기\n  - heading \"꿀조합 곁들임\" [level=2]:\n    - generic: 꿀조합 곁들임\n  - list:\n    - button \"왕만두3개 고기만두2 + 김치만두 1 2,800원\":\n      - generic: 왕만두3개\n      - generic: 고기만두2 + 김치만두 1\n      - emphasis: 2,800\n      - text: 원\n    - button \"15cm감자전 4,500원\":\n      - generic: 15cm감자전\n      - emphasis: 4,500\n      - text: 원\n    - button \"15cm김치전 4,500원\":\n      - generic: 15cm김치전\n      - emphasis: 4,500\n      - text: 원\n    - button \"크림치즈볼 2,800원\":\n      - generic: 크림치즈볼\n      - emphasis: 2,800\n      - text: 원\n    - button \"치킨가라아게4pcs 3,300원\":\n      - generic: 치킨가라아게4pcs\n      - emphasis: 3,300\n      - text: 원\n  - button \"펼쳐서 더보기\":\n    - text: 펼쳐서 더보기\n  - heading \"메뉴판 이미지로 보기5\" [level=2]:\n    - text: 메뉴판 이미지로 보기\n    - emphasis: \"5\"\n  - list:\n    - button \"메뉴판 0\":\n      - img \"메뉴판 0\"\n    - button \"메뉴판 1\":\n      - img \"메뉴판 1\"\n    - button \"메뉴판 2\":\n      - img \"메뉴판 2\"\n    - button \"메뉴판 3\":\n      - img \"메뉴판 3\"\n    - button \"메뉴판 4\":\n      - img \"메뉴판 4\"\n  - heading \"원산지 접기\" [level=2]:\n    - generic: 원산지\n    - button \"접기\" [expanded]:\n      - generic: 접기\n  - generic: 돼지고기/국내산(돈까스, 김치찌개돈까스, 돈까스카레덮밥, 땡초장비빔국수,가츠동, 찐만두),돼지고기/국내산(고고제육덮밥, 소고기짬뽕, 상하이진한짬뽕,칼짬뽕,폭신폭신계란짬뽕밥(해물,소고기)),돼지고기/외국산(연탄직화불고기),소고기/미국산(베트남소고기쌀국수, 안동국시, 칼짬뽕(소고기), 규동, 소고기낙지덮밥, 폭신폭신계란짬뽕밥(소고기)),소고기/호주산(안동국시),닭고기/국내산(초계국수),닭고기/브라질산(치킨카레덮밥, 치킨가라아게),오징어/외국산(칠레산, 페루산, 중국산)(상하이진한짬뽕, 칼짬뽕(해물),폭신폭신계란짬뽕밥(해물),오징어김치전),낙지/베트남산(소고기낙지덮밥),가쓰오부시/인도네시아산(메밀소바, 국수나무우동, 새우튀김우동, 국수나무알밥),콩(콩국수),쌀/국내산(고고제육덮밥, 규동, 소고기낙지덮밥, 가츠동,국수나무알밥,돈까스카레덮밥,치킨카레덮밥,만들어먹는주먹밥,공기밥,폭신폭신계란짬뽕밥(해물,소고기),쌀/외국산(오리엔탈오므라이스),배추/중국산(반찬김치, 김치찌개돈까스),고추가루/중국산\n- contentinfo:\n  - button \"이용약관\"\n  - button \"고객센터\"\n  - button \"리뷰운영정책\"\n  - button \"신고센터\"\n  - button \"네이버\":\n    - generic: 네이버"
+    },
+    {
+      "nid": "37346559",
+      "name": "버거킹",
+      "url": "https://pcmap.place.naver.com/restaurant/37346559/menu/list",
+      "images": [],
+      "description": "배달 메뉴 표시",
+      "snippet": "sis: 3,500\n      - text: 원\n    - button \"크리스퍼 랩 든든하게 채우는 한입, 크리스퍼 스낵 4,600원\":\n      - generic: 크리스퍼 랩\n      - generic: 든든하게 채우는 한입, 크리스퍼 스낵\n      - emphasis: 4,600\n      - text: 원\n  - button \"펼쳐서 더보기\":\n    - text: 펼쳐서 더보기\n  - heading \"드링크\" [level=2]:\n    - generic: 드링크\n  - list:\n    - button \"아메리카노 자연을 담은 버거킹 RA인증커피 2,600원\":\n      - generic: 아메리카노\n      - generic: 자연을 담은 버거킹 RA인증커피\n      - emphasis: 2,600\n      - text: 원\n    - button \"아이스 아메리카노 자연을 담은 버거킹 RA인증커피 2,600원\":\n      - generic: 아이스 아메리카노\n      - generic: 자연을 담은 버거킹 RA인증커피\n      - emphasis: 2,600\n      - text: 원\n    - button \"닥터페퍼 제로(L) 톡쏘는 유니크함, Zero로 라이트하게 3,400원\":\n      - generic: 닥터페퍼 제로(L)\n      - generic: 톡쏘는 유니크함, Zero로 라이트하게\n      - emphasis: 3,400\n      - text: 원\n    - button \"닥터페퍼 제로(R) 톡쏘는 유니크함, Zero로 라이트하게 3,200원\":\n      - generic: 닥터페퍼 제로(R)\n      - generic: 톡쏘는 유니크함, Zero로 라이트하게\n      - emphasis: 3,200\n      - text: 원\n    - button \"코카콜라(L) 코카콜라로 더 짜릿하게 3,400원\":\n      - generic: 코카콜라(L)\n      - generic: 코카콜라로 더 짜릿하게\n      - emphasis: 3,400\n      - text: 원\n  - button \"펼쳐서 더보기\":\n    - text: 펼쳐서 더보기\n  - heading \"원산지 접기\" [level=2]:\n    - generic: 원산지\n    - button \"접기\" [expanded]:\n      - generic: 접기\n  - generic: \"[쇠고기] 호주산과 뉴질랜드산 섞음 : 쇠고기패티[와퍼류,더오치맥시멈2,몬스터맥시멈(2,3),메종트러플치즈버거,블랙트러플치즈버거] - 호주산과 뉴질랜드산 섞음 : 쇠고기패티[버거류(주니어포함),비프킹랩] - 호주산과 뉴질랜드산 섞음 : 쇠고기패티[오리지널스 뉴욕스테이크/엘파소치폴레] [돼지고기] - 외국산 : 베이컨[오리지널스 뉴욕스테이크,몬스터와퍼,베이컨치즈와퍼,치킨킹BLT,더크리스퍼베이컨&치즈,오리지널스 엘파소치폴레,BLT오믈렛 크루아상위치,몬스터맥시멈(2,3),(핫)트러플머쉬룸와퍼,메종트러플치즈버거,쯔란로제딥치즈크리스퍼] - 국내산 : 잠봉햄[잠봉햄&치즈오믈렛 크루아상위치] [닭고기] - 국내산 : 너겟킹,크리스퍼 텐더,닭고기패티[크리스퍼랩,더크리스퍼(베이컨&치즈),쯔란로제크리스퍼,쯔란로제딥치즈크리스퍼]- 태국산과 국내산 섞음 : 닭고기패티[(불고기)롱치킨버거]- 외국산 : 바삭킹,닭고기패티[치킨킹(BLT)],몬스터맥시멈(2,3)\"\n- contentinfo:\n  - button \"이용약관\"\n  - button \"고객센터\"\n  - button \"리뷰운영정책\"\n  - button \"신고센터\"\n  - button \"네이버\":\n    - generic: 네이버"
+    },
+    {
+      "nid": "38710685",
+      "name": "깨순이김밥",
+      "url": "https://pcmap.place.naver.com/restaurant/38710685/menu/list",
+      "images": [
+        {
+          "alt": "메뉴판 0",
+          "src": "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=f320_320&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20260908_265%2F1788826075144D9GcY_JPEG%2Fimage.jpg"
+        }
+      ],
+      "description": "공개 메뉴 확인",
+      "snippet": "- banner:\n  - button \"이전 페이지\":\n    - generic: 이전 페이지\n  - heading \"깨순이김밥 전대정문점\" [level=1]\n  - button \"페이지 닫기\":\n    - generic: 페이지 닫기\n- main:\n  - generic: 깨순이김밥 전대정문점\n  - text: 김밥\n  - button \"리뷰 400\"\n  - emphasis: 영업 종료\n  - text: 08:00에 영업 시작\n  - text: 눈치 보지 않는 편안한 식사 공간\n  - button \"AI 요약\":\n    - text: AI 요약\n  - list:\n    - button\n    - button \"쩨\":\n      - generic: 쩨\n    - button\n    - button \"음식·음료\":\n      - generic: 음식·음료\n    - button \"광주맛집탐방러\":\n      - generic: 광주맛집탐방러\n    - button \"okja2017\":\n      - generic: okja2017\n    - button \"옥자인테리어필름\":\n      - generic: 옥자인테리어필름\n    - button \"책읽는멍멍이\":\n      - generic: 책읽는멍멍이\n    - button \"피터팬1216\":\n      - generic: 피터팬1216\n    - button \"피터팬1216\":\n      - generic: 피터팬1216\n    - button \"더보기\":\n      - text: 더보기\n  - button \"출발\"\n  - button \"도착\"\n  - button \"거리뷰\":\n    - text: 거리뷰\n  - link \"공유\":\n    - /url: \"#\"\n    - text: 공유\n  - button \"알림받기\":\n    - text: 알림받기\n  - button \"주문종료\" [disabled]:\n    - text: 주문종료\n  - tablist:\n    - tab \"홈\":\n      - generic: 홈\n    - tab \"메뉴\" [selected]:\n      - generic: 메뉴\n    - tab \"리뷰\":\n      - generic: 리뷰\n    - tab \"사진\":\n      - generic: 사진\n    - tab \"정보\":\n      - generic: 정보\n  - list:\n    - button \"깨순이김밥 3,500원\":\n      - generic: 깨순이김밥\n      - emphasis: 3,500\n      - text: 원\n  - paragraph: 최근 업데이트 26.09.08\n  - paragraph: 메뉴 항목과 가격은 각 매장의 사정에 따라 기재된 내용과 다를 수 있습니다.\n  - heading \"메뉴판 이미지로 보기1\" [level=2]:\n    - text: 메뉴판 이미지로 보기\n    - emphasis: \"1\"\n  - list:\n    - button \"메뉴판 0\":\n      - img \"메뉴판 0\"\n- contentinfo:\n  - button \"이용약관\"\n  - button \"고객센터\"\n  - button \"리뷰운영정책\"\n  - button \"신고센터\"\n  - button \"네이버\":\n    - generic: 네이버"
+    },
+    {
+      "nid": "1131985085",
+      "name": "알아지즈",
+      "url": "https://pcmap.place.naver.com/restaurant/1131985085/home",
+      "images": [],
+      "description": "공개 메뉴 확인",
+      "snippet": "- banner:\n  - button \"이전 페이지\":\n    - generic: 이전 페이지\n  - heading \"알아지즈 상대점\" [level=1]\n  - button \"페이지 닫기\":\n    - generic: 페이지 닫기\n- main:\n  - generic: 알아지즈 상대점\n  - text: 아시아음식\n  - button \"리뷰 16\"\n  - list:\n    - button\n    - button\n    - button \"도마도4989\":\n      - generic: 도마도4989\n    - button \"별레8\":\n      - generic: 별레8\n    - button \"truebuddy\":\n      - generic: truebuddy\n    - button \"Pofi\":\n      - generic: Pofi\n    - button \"더보기\":\n      - text: 더보기\n  - button \"출발\"\n  - button \"도착\"\n  - button \"거리뷰\":\n    - text: 거리뷰\n  - link \"공유\":\n    - /url: \"#\"\n    - text: 공유\n  - button \"알림받기\":\n    - text: 알림받기\n  - tablist:\n    - tab \"홈\" [selected]:\n      - generic: 홈\n    - tab \"리뷰\":\n      - generic: 리뷰\n    - tab \"사진\":\n      - generic: 사진\n    - tab \"정보\":\n      - generic: 정보\n  - strong:\n    - generic: 주소\n  - button \"전남광주 북구 설죽로202번길 49 1층\":\n    - text: 전남광주 북구 설죽로202번길 49 1층\n  - strong:\n    - generic: 찾아가는길\n  - generic: 전남대학교 후문 근처 입니다\n  - strong:\n    - generic: 영업시간 정보 수정\n  - text: 영업시간 수정 제안하기\n  - button \"추가\":\n    - generic: 추가\n  - strong:\n    - generic: 전화번호\n  - button \"전화번호 보기 안내\":\n    - text: 전화번호 보기\n    - generic: 안내\n- contentinfo:\n  - button \"이용약관\"\n  - button \"고객센터\"\n  - button \"리뷰운영정책\"\n  - button \"신고센터\"\n  - button \"네이버\":\n    - generic: 네이버"
+    },
+    {
+      "nid": "1328708142",
+      "name": "마라푸우",
+      "url": "https://pcmap.place.naver.com/restaurant/1328708142/home",
+      "images": [],
+      "description": "공개 메뉴 확인",
+      "snippet": "- banner:\n  - button \"이전 페이지\":\n    - generic: 이전 페이지\n  - heading \"마라푸우 상대점\" [level=1]\n  - button \"페이지 닫기\":\n    - generic: 페이지 닫기\n- main:\n  - generic: 마라푸우 상대점\n  - text: 중식당\n  - button \"리뷰 19\"\n  - text: 식약처 지정 식품안심업소\n  - list:\n    - button \"act****\":\n      - generic: act****\n    - button \"올리브좋아\":\n      - generic: 올리브좋아\n    - button \"더보기\":\n      - text: 더보기\n  - button \"출발\"\n  - button \"도착\"\n  - button \"거리뷰\":\n    - text: 거리뷰\n  - link \"공유\":\n    - /url: \"#\"\n    - text: 공유\n  - tablist:\n    - tab \"홈\" [selected]:\n      - generic: 홈\n    - tab \"리뷰\":\n      - generic: 리뷰\n    - tab \"사진\":\n      - generic: 사진\n    - tab \"정보\":\n      - generic: 정보\n  - strong:\n    - generic: 주소\n  - button \"전남광주 북구 설죽로202번길 90 (용봉동)\":\n    - text: 전남광주 북구 설죽로202번길 90 (용봉동)\n  - strong:\n    - generic: 영업시간 정보 수정\n  - text: 영업시간 수정 제안하기\n  - button \"추가\":\n    - generic: 추가\n  - button \"사장님, 플레이스를 무료로 직접 관리하세요! 권한 받기\":\n    - text: 사장님, 플레이스를\n    - emphasis: 무료로 직접 관리하세요!\n    - text: 권한 받기\n- contentinfo:\n  - button \"이용약관\"\n  - button \"고객센터\"\n  - button \"리뷰운영정책\"\n  - button \"신고센터\"\n  - button \"네이버\":\n    - generic: 네이버"
+    },
+    {
+      "nid": "1378290309",
+      "name": "도야짬뽕",
+      "url": "https://pcmap.place.naver.com/restaurant/1378290309/menu/list",
+      "images": [
+        {
+          "alt": "메뉴판 0",
+          "src": "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=f320_320&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20250320_298%2F17424572802237n40c_JPEG%2F%25BC%25BC%25C6%25AE.jpg"
+        },
+        {
+          "alt": "메뉴판 1",
+          "src": "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=f320_320&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20250320_118%2F17424572709822NnB7_JPEG%2F%25C2%25AB%25BB%25CD.jpg"
+        },
+        {
+          "alt": "메뉴판 2",
+          "src": "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=f320_320&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20250320_275%2F1742457263160GD8qf_JPEG%2F%25C2%25AB%25BB%25CD2.jpg"
+        },
+        {
+          "alt": "메뉴판 3",
+          "src": "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=f320_320&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20250320_213%2F1742457255434MYgBd_JPEG%2F%25C2%25A5%25C0%25E5.jpg"
+        },
+        {
+          "alt": "메뉴판 4",
+          "src": "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=f320_320&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20250320_283%2F1742457249266Br2ga_JPEG%2F%25BB%25E7%25C0%25CC%25B5%25E5.jpg"
+        },
+        {
+          "alt": "메뉴판 5",
+          "src": "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=f320_320&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20250320_123%2F1742457243826I0s46_JPEG%2F%25C6%25A2%25B1%25E8.jpg"
+        },
+        {
+          "alt": "메뉴판 6",
+          "src": "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=f320_320&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20250320_124%2F1742457235030MFrpQ_JPEG%2F%25BB%25F5%25BF%25EC.jpg"
+        },
+        {
+          "alt": "메뉴판 7",
+          "src": "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=f320_320&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20250320_240%2F1742457226574sQVaw_JPEG%2F%25C7%25C1%25B8%25AE%25B9%25CC%25BE%25F6.jpg"
+        },
+        {
+          "alt": "메뉴판 8",
+          "src": "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=f320_320&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20250320_216%2F1742457212244xfBdm_JPEG%2F%25BC%25FA%25BE%25C8%25C1%25D6%25BC%25BC%25C6%25AE.jpg"
+        },
+        {
+          "alt": "메뉴판 9",
+          "src": "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=f320_320&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20250320_48%2F17424571992021zzmY_JPEG%2F%25C1%25D6%25B7%25F9.jpg"
+        }
+      ],
+      "description": "공개 메뉴 확인",
+      "snippet": "000원\":\n      - generic: 촉촉한입 물만두\n      - generic: 20pcs\n      - emphasis: 6,000\n      - text: 원\n    - button \"달달연유 꽃빵튀김 4pcs 5,000원\":\n      - generic: 달달연유 꽃빵튀김\n      - generic: 4pcs\n      - emphasis: 5,000\n      - text: 원\n    - button \"새우품은 멘보샤 8pcs 9,000원\":\n      - generic: 새우품은 멘보샤\n      - generic: 8pcs\n      - emphasis: 9,000\n      - text: 원\n    - button \"고추잡채 21,000원\":\n      - generic: 고추잡채\n      - emphasis: 21,000\n      - text: 원\n    - button \"깐풍기 21,000원\":\n      - generic: 깐풍기\n      - emphasis: 21,000\n      - text: 원\n    - button \"유린기 21,000원\":\n      - generic: 유린기\n      - emphasis: 21,000\n      - text: 원\n    - button \"깐풍새우 23,000원\":\n      - generic: 깐풍새우\n      - emphasis: 23,000\n      - text: 원\n    - button \"칠리새우 23,000원\":\n      - generic: 칠리새우\n      - emphasis: 23,000\n      - text: 원\n    - button \"크림새우 23,000원\":\n      - generic: 크림새우\n      - emphasis: 23,000\n      - text: 원\n    - button \"해물짬뽕탕 23,000원\":\n      - generic: 해물짬뽕탕\n      - emphasis: 23,000\n      - text: 원\n  - paragraph: 최근 업데이트 26.09.22\n  - paragraph: 메뉴 항목과 가격은 각 매장의 사정에 따라 기재된 내용과 다를 수 있습니다.\n  - heading \"메뉴판 이미지로 보기10\" [level=2]:\n    - text: 메뉴판 이미지로 보기\n    - emphasis: \"10\"\n  - list:\n    - button \"메뉴판 0\":\n      - img \"메뉴판 0\"\n    - button \"메뉴판 1\":\n      - img \"메뉴판 1\"\n    - button \"메뉴판 2\":\n      - img \"메뉴판 2\"\n    - button \"메뉴판 3\":\n      - img \"메뉴판 3\"\n    - button \"메뉴판 4\":\n      - img \"메뉴판 4\"\n    - button \"메뉴판 5\":\n      - img \"메뉴판 5\"\n    - button \"메뉴판 6\":\n      - img \"메뉴판 6\"\n    - button \"메뉴판 7\":\n      - img \"메뉴판 7\"\n    - button \"메뉴판 8\":\n      - img \"메뉴판 8\"\n    - button \"메뉴판 9\":\n      - img \"메뉴판 9\"\n  - button \"이전\" [disabled]:\n    - generic: 이전\n  - button \"다음\":\n    - generic: 다음\n- contentinfo:\n  - button \"이용약관\"\n  - button \"고객센터\"\n  - button \"리뷰운영정책\"\n  - button \"신고센터\"\n  - button \"네이버\":\n    - generic: 네이버"
+    },
+    {
+      "nid": "1429688748",
+      "name": "마왕족발",
+      "url": "https://pcmap.place.naver.com/restaurant/1429688748/menu/list",
+      "images": [
+        {
+          "alt": "메뉴판 0",
+          "src": "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=f320_320&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20260401_24%2F17749978830292KQHr_JPEG%2F%25C0%25CF%25B9%25DD_1.jpg"
+        },
+        {
+          "alt": "메뉴판 1",
+          "src": "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=f320_320&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20260401_21%2F1774997890447etgcE_JPEG%2F%25C0%25CF%25B9%25DD_2.jpg"
+        }
+      ],
+      "description": "공개 메뉴 확인",
+      "snippet": "]:\n    - generic: 기타메뉴\n  - list:\n    - button \"당면추가(200g) 2,000원\":\n      - generic: 당면추가(200g)\n      - emphasis: 2,000\n      - text: 원\n    - button \"쌈추가 1,500원\":\n      - generic: 쌈추가\n      - emphasis: 1,500\n      - text: 원\n    - button \"6찬추가 무김치,무쌈,궁채절임,마늘,고추,쌈장 2,000원\":\n      - generic: 6찬추가\n      - generic: 무김치,무쌈,궁채절임,마늘,고추,쌈장\n      - emphasis: 2,000\n      - text: 원\n    - button \"마늘후레이크 1,000원\":\n      - generic: 마늘후레이크\n      - emphasis: 1,000\n      - text: 원\n    - button \"공기밥 2,000원\":\n      - generic: 공기밥\n      - emphasis: 2,000\n      - text: 원\n  - button \"펼쳐서 더보기\":\n    - text: 펼쳐서 더보기\n  - heading \"음료\" [level=2]:\n    - generic: 음료\n  - list:\n    - button \"펩시콜라(500ml) 2,000원\":\n      - generic: 펩시콜라(500ml)\n      - emphasis: 2,000\n      - text: 원\n    - button \"펩시콜라(1.25L) 3,000원\":\n      - generic: 펩시콜라(1.25L)\n      - emphasis: 3,000\n      - text: 원\n    - button \"칠성사이다(500ml) 2,000원\":\n      - generic: 칠성사이다(500ml)\n      - emphasis: 2,000\n      - text: 원\n    - button \"칠성사이다(1.25L) 3,000원\":\n      - generic: 칠성사이다(1.25L)\n      - emphasis: 3,000\n      - text: 원\n    - button \"펩시콜라제로(500ml) 2,000원\":\n      - generic: 펩시콜라제로(500ml)\n      - emphasis: 2,000\n      - text: 원\n  - button \"펼쳐서 더보기\":\n    - text: 펼쳐서 더보기\n  - heading \"메뉴판 이미지로 보기2\" [level=2]:\n    - text: 메뉴판 이미지로 보기\n    - emphasis: \"2\"\n  - list:\n    - button \"메뉴판 0\":\n      - img \"메뉴판 0\"\n    - button \"메뉴판 1\":\n      - img \"메뉴판 1\"\n  - heading \"원산지 접기\" [level=2]:\n    - generic: 원산지\n    - button \"접기\" [expanded]:\n      - generic: 접기\n  - generic: \"족발(돼지고기): 외국산 / 보쌈삼겹(돼지고기): 외국산 / 미니족(돼지고기): 외국산 / 무뼈족(돼지고기): 외국산 / 껍데기(돼지고기): 국내산 / 쌀: 외국산 / 술국(돼지고기): 국내산 / 김치전 김치(배추,정제소금): 국내산, 김치(마늘,고추가루): 중국산 / 쭈꾸미: 베트남산\"\n- contentinfo:\n  - button \"이용약관\"\n  - button \"고객센터\"\n  - button \"리뷰운영정책\"\n  - button \"신고센터\"\n  - button \"네이버\":\n    - generic: 네이버"
+    },
+    {
+      "nid": "1697423048",
+      "name": "난타5000용봉",
+      "url": "https://pcmap.place.naver.com/restaurant/1697423048/menu/list",
+      "images": [
+        {
+          "alt": "메뉴판 0",
+          "src": "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=f320_320&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20230523_68%2F1684768403688eN5ce_JPEG%2F1684768259402.jpg"
+        }
+      ],
+      "description": "배달 메뉴 표시",
+      "snippet": "0,500\n      - text: 원\n    - button \"치킨 윙 봉(12조각) 13,000원\":\n      - generic: 치킨 윙 봉(12조각)\n      - emphasis: 13,000\n      - text: 원\n    - button \"오븐구이 치킨 오븐에 구어 기름기를 쫙 뺀 담백한 치킨 15,000원\":\n      - generic: 오븐구이 치킨\n      - generic: 오븐에 구어 기름기를 쫙 뺀 담백한 치킨\n      - emphasis: 15,000\n      - text: 원\n  - button \"펼쳐서 더보기\":\n    - text: 펼쳐서 더보기\n  - heading \"인기추천메뉴\" [level=2]:\n    - generic: 인기추천메뉴\n  - list:\n    - button \"대박세트(L) 41,000원\":\n      - generic: 대박세트(L)\n      - emphasis: 41,000\n      - text: 원\n  - heading \"리치골드피자\" [level=2]:\n    - generic: 리치골드피자\n  - list:\n    - button \"리치골드스테이크(L) 23,500원\":\n      - generic: 리치골드스테이크(L)\n      - emphasis: 23,500\n      - text: 원\n    - button \"리치골드스테이크(XXL) 44,000원\":\n      - generic: 리치골드스테이크(XXL)\n      - emphasis: 44,000\n      - text: 원\n    - button \"리치골드베이컨(L) 22,500원\":\n      - generic: 리치골드베이컨(L)\n      - emphasis: 22,500\n      - text: 원\n    - button \"리치골드베이컨(XXL) 42,000원\":\n      - generic: 리치골드베이컨(XXL)\n      - emphasis: 42,000\n      - text: 원\n    - button \"리치골드프리미엄소불고기(L) 23,500원\":\n      - generic: 리치골드프리미엄소불고기(L)\n      - emphasis: 23,500\n      - text: 원\n  - button \"펼쳐서 더보기\":\n    - text: 펼쳐서 더보기\n  - heading \"메뉴판 이미지로 보기1\" [level=2]:\n    - text: 메뉴판 이미지로 보기\n    - emphasis: \"1\"\n  - list:\n    - button \"메뉴판 0\":\n      - img \"메뉴판 0\"\n  - heading \"원산지 접기\" [level=2]:\n    - generic: 원산지\n    - button \"접기\" [expanded]:\n      - generic: 접기\n  - generic: 떡갈비:국내산+미국산(돼지고기)호주산 소고기, 스테이크:국내산(돼지고기), 베이컨:외국산(오스트리아,벨기에,스페인등)(돼지고기), 불고기(외국산(미국,벨기에,스페인등)(돼지고기), 골드베스트:외국산(오스트리아,벨기에,스페인 등)(돼지고기), 페파로니:국내산,호주산(돼지고기, 소고기), 핫치킨:국내산+브라질산(닭고기), 오븐구이치킨:국내산(닭고기), 치킨윙/봉,치킨텐더:태국산(닭고기), 프리미엄불고기:호주산(쇠고기), 피자재료:햄:외국산(미국,벨기에,스페인등)+국내산, 돼지고기)(소세지:국내산,돼지고기)\n- contentinfo:\n  - button \"이용약관\"\n  - button \"고객센터\"\n  - button \"리뷰운영정책\"\n  - button \"신고센터\"\n  - button \"네이버\":\n    - generic: 네이버"
+    },
+    {
+      "nid": "85019125",
+      "name": "맥도날드",
+      "url": "https://pcmap.place.naver.com/restaurant/85019125/menu/list",
+      "images": [
+        {
+          "alt": "메뉴판 0",
+          "src": "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=f320_320&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20210518_90%2F1621307140101bXflB_JPEG%2FDU0z8gULyNUjexLdTYBp-UaK.jpg"
+        },
+        {
+          "alt": "메뉴판 1",
+          "src": "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=f320_320&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20220615_123%2F1655259280170YAe4M_JPEG%2FF4E97603-4A12-4556-AD0B-EA5646AAD0A8.jpeg"
+        }
+      ],
+      "description": "가격 변동 항목 있음",
+      "snippet": "사진\n    - tab \"정보\":\n      - generic: 정보\n  - list:\n    - button \"빅맥® 세트 100% 순 쇠고기 패티 두 장에 빅맥®만의 특별한 소스 입안에서 살살 녹는 치즈와 신선한 양상추, 양파, 그리고 피클까지 50년 넘게 전 세계인의 입맛을 사로 잡은 버거의 대명사 가격 변동\":\n      - generic: 빅맥® 세트\n      - generic: 100% 순 쇠고기 패티 두 장에 빅맥®만의 특별한 소스 입안에서 살살 녹는 치즈와 신선한 양상추, 양파, 그리고 피클까지 50년 넘게 전 세계인의 입맛을 사로 잡은 버거의 대명사\n      - emphasis: 가격 변동\n    - button \"맥스파이시® 상하이 버거 세트 매콤한 시즈닝을 입힌 100% 닭가슴 통살 위에 아삭아삭한 양상추와 신선한 토마토~ 겉은 바삭, 속은 부드러운 치킨 패티의 매콤함으로 입맛도 기분도 화끈하게! 가격 변동\":\n      - generic: 맥스파이시® 상하이 버거 세트\n      - generic: 매콤한 시즈닝을 입힌 100% 닭가슴 통살 위에 아삭아삭한 양상추와 신선한 토마토~ 겉은 바삭, 속은 부드러운 치킨 패티의 매콤함으로 입맛도 기분도 화끈하게!\n      - emphasis: 가격 변동\n    - button \"1955 버거™ 세트 113g 두툼한 순 쇠고기 패티, 더 풍성해진 신선한 양상추, 깊은 풍미의 그릴드 어니언까지! 맥도날드가 처음 생긴 1955년의 맛을 담은 영원한 오리지널 1955 버거 가격 변동\":\n      - generic: 1955 버거™ 세트\n      - generic: 113g 두툼한 순 쇠고기 패티, 더 풍성해진 신선한 양상추, 깊은 풍미의 그릴드 어니언까지! 맥도날드가 처음 생긴 1955년의 맛을 담은 영원한 오리지널 1955 버거\n      - emphasis: 가격 변동\n    - button \"불고기 버거 세트 한국인의 입맛에 딱 맞는 불고기 소스에 잘 재운 패티와 고소한 마요네즈, 신선한 양상추의 맛있는 조합. 가격 변동\":\n      - generic: 불고기 버거 세트\n      - generic: 한국인의 입맛에 딱 맞는 불고기 소스에 잘 재운 패티와 고소한 마요네즈, 신선한 양상추의 맛있는 조합.\n      - emphasis: 가격 변동\n    - button \"슈슈 버거 세트 탱~글한 통새우살 가득~ 슈슈 버거 가격 변동\":\n      - generic: 슈슈 버거 세트\n      - generic: 탱~글한 통새우살 가득~ 슈슈 버거\n      - emphasis: 가격 변동\n    - button \"베이컨 토마토 디럭스 세트 더욱 풍부하고 신선한 맛의 프리미엄 버거 가격 변동\":\n      - generic: 베이컨 토마토 디럭스 세트\n      - generic: 더욱 풍부하고 신선한 맛의 프리미엄 버거\n      - emphasis: 가격 변동\n  - paragraph: 메뉴 항목과 가격은 각 매장의 사정에 따라 기재된 내용과 다를 수 있습니다.\n  - heading \"메뉴판 이미지로 보기2\" [level=2]:\n    - text: 메뉴판 이미지로 보기\n    - emphasis: \"2\"\n  - list:\n    - button \"메뉴판 0\":\n      - img \"메뉴판 0\"\n    - button \"메뉴판 1\":\n      - img \"메뉴판 1\"\n- contentinfo:\n  - button \"이용약관\"\n  - button \"고객센터\"\n  - button \"리뷰운영정책\"\n  - button \"신고센터\"\n  - button \"네이버\":\n    - generic: 네이버"
+    },
+    {
+      "nid": "16173961",
+      "name": "난타5000정문",
+      "url": "https://pcmap.place.naver.com/restaurant/16173961/menu/list",
+      "images": [],
+      "description": "배달 메뉴 표시",
+      "snippet": "t: 원\n  - button \"펼쳐서 더보기\":\n    - text: 펼쳐서 더보기\n  - heading \"오븐에 두번 구워 기름이 쫙 가격이 쫙\" [level=2]:\n    - generic: 오븐에 두번 구워 기름이 쫙 가격이 쫙\n  - list:\n    - button \"오븐구이치킨+스크린피자 중 택1+콜라1.25 30,000원\":\n      - generic: 오븐구이치킨+스크린피자 중 택1+콜라1.25\n      - emphasis: 30,000\n      - text: 원\n    - button \"오븐구이치킨+치즈크러스트피자 중 택1+콜라1.25 32,000원\":\n      - generic: 오븐구이치킨+치즈크러스트피자 중 택1+콜라1.25\n      - emphasis: 32,000\n      - text: 원\n  - heading \"사이드메뉴\" [level=2]:\n    - generic: 사이드메뉴\n  - list:\n    - button \"오븐구이치킨+콜라1.25 17,000원\":\n      - generic: 오븐구이치킨+콜라1.25\n      - emphasis: 17,000\n      - text: 원\n    - button \"치즈스파게티 7,000원\":\n      - generic: 치즈스파게티\n      - emphasis: 7,000\n      - text: 원\n    - button \"베이컨스파게티 7,000원\":\n      - generic: 베이컨스파게티\n      - emphasis: 7,000\n      - text: 원\n    - button \"핫치킨스파게티 7,000원\":\n      - generic: 핫치킨스파게티\n      - emphasis: 7,000\n      - text: 원\n    - button \"치킨봉(6조각) 7,000원\":\n      - generic: 치킨봉(6조각)\n      - emphasis: 7,000\n      - text: 원\n  - button \"펼쳐서 더보기\":\n    - text: 펼쳐서 더보기\n  - heading \"치즈토핑추가\" [level=2]:\n    - generic: 치즈토핑추가\n  - list:\n    - button \"치즈추가L 2,500원\":\n      - generic: 치즈추가L\n      - emphasis: 2,500\n      - text: 원\n    - button \"치즈추가XXL 5,000원\":\n      - generic: 치즈추가XXL\n      - emphasis: 5,000\n      - text: 원\n  - heading \"원산지 접기\" [level=2]:\n    - generic: 원산지\n    - button \"접기\" [expanded]:\n      - generic: 접기\n  - generic: 치즈(미국산/뉴질랜드산/유럽산), 쌀가루(국내산), 밀가루(미국산/호주산), 오뗄스스모크햄(수입산/국내산), 에쓰푸드햄(수입산/국내산), 소세지(국내산), 페파로니(국내산/호주산), 포크토핑(수입산/국내산), 베이컨(수입산), 스테이크(국내산), 델리훈제치킨(국내산), 오뗼핫치킨(브라질산), 스파이시핫치킨(국내산/브라질산), 미들윙(태국산), 윙스틱봉(태국산), 새우(베트남산), 블랙올리브(스페인산), 스위트콘(태국산), 피클(중국산), 유탕고구마(중국산/인도네시아산),감자(미국산/캐나다산), 양파(국내산), 새송이버섯(국내산),\n- contentinfo:\n  - button \"이용약관\"\n  - button \"고객센터\"\n  - button \"리뷰운영정책\"\n  - button \"신고센터\"\n  - button \"네이버\":\n    - generic: 네이버"
+    },
+    {
+      "nid": "2015557853",
+      "name": "신사장국밥",
+      "url": "https://pcmap.place.naver.com/restaurant/2015557853/menu/list",
+      "menuButtons": [
+        "대표수육듬뿍국밥정성껏 삶아낸 돼지고기를 먹기 좋은 크기로 썰어\n시원한 바지락 육수와 함께 담았습니다.10,000원",
+        "대표산더미고기국밥시원하고 깔끔한 바지락 육수에 숙주 위로 돼지고기를 산더미처럼 푸짐하게 담았습니다.10,000원",
+        "대표수육듬뿍국밥정성껏 삶아낸 돼지고기를 먹기 좋은 크기로 썰어\n시원한 바지락 육수와 함께 담았습니다.10,000원",
+        "대표산더미고기국밥시원하고 깔끔한 바지락 육수에 숙주 위로 돼지고기를 산더미처럼 푸짐하게 담았습니다.10,000원",
+        "수육듬뿍국밥(특)수육듬뿍국밥의 푸짐함을 한 단계 더!13,000원",
+        "산더미고기국밥(특)산더미고기국밥을 더욱 푸짐하게! 특 사이즈로 더욱 넉넉하게 담았습니다.13,000원",
+        "보쌈 소매일 정성껏 삶은 부드러운 보쌈에 국내산 무김치와 배추김치가 잘 어울리는 일품 메뉴28,000원",
+        "보쌈 중매일 정성껏 삶은 부드러운 보쌈에 국내산 무김치와 배추김치가 잘 어울리는 일품 메뉴39,000원",
+        "보쌈 대매일 정성껏 삶은 부드러운 보쌈에 국내산 무김치와 배추김치가 잘 어울리는 일품 메뉴48,000원",
+        "수육물밀면시원한 육수에 부드러운 수육이 올려진 부산 밀면10,000원",
+        "수육비빔밀면매콤달콤한 비빔장에 부드러운 수육이 올려진 부산 밀면10,000원",
+        "공기밥1,000원",
+        "음료2,000원",
+        "소주/맥주4,000원"
+      ],
+      "delivery": false
+    },
+    {
+      "nid": "38710685",
+      "name": "깨순이김밥",
+      "url": "https://pcmap.place.naver.com/restaurant/38710685/menu/list",
+      "menuButtons": [
+        "깨순이김밥3,500원"
+      ],
+      "delivery": false
+    },
+    {
+      "nid": "1378290309",
+      "name": "도야짬뽕",
+      "url": "https://pcmap.place.naver.com/restaurant/1378290309/menu/list",
+      "menuButtons": [
+        "도야짜장곱빼기 8,500원7,000원",
+        "청양고추짜장곱빼기 10,000원8,500원",
+        "도야짬뽕곱빼기 11,500원10,000원",
+        "청양고추짬뽕곱빼기 13,000원11,500원",
+        "소고기짬뽕곱빼기 13,500원12,000원",
+        "순두부짬뽕곱빼기 13,500원12,000원",
+        "해물짬뽕곱빼기 13,500원12,000원",
+        "크림짬뽕곱빼기 13,500원12,000원",
+        "해물백짬뽕곱빼기 13,500원12,000원",
+        "마라짬뽕곱빼기 13,500원12,000원",
+        "도야볶음밥곱빼기 10,500원9,000원",
+        "불고기잡채밥곱빼기 13,500원12,000원",
+        "찹쌀탕수육 미니소 19,000원 중 24,000원 대 29,000원13,000원",
+        "해물쟁반짜장(2~3인분)곱빼기 24,500원23,000원",
+        "해물쟁반짬뽕(2~3인분)곱빼기 26,500원25,000원",
+        "겉바속촉 辛군만두4pcs 4,000원\n8pcs 8,000원8,000원",
+        "촉촉한입 물만두20pcs6,000원",
+        "달달연유 꽃빵튀김4pcs5,000원",
+        "새우품은 멘보샤8pcs9,000원",
+        "고추잡채21,000원",
+        "깐풍기21,000원",
+        "유린기21,000원",
+        "깐풍새우23,000원",
+        "칠리새우23,000원",
+        "크림새우23,000원",
+        "해물짬뽕탕23,000원"
+      ],
+      "delivery": false
+    },
+    {
+      "nid": "33741131",
+      "name": "국수나무",
+      "url": "https://pcmap.place.naver.com/restaurant/33741131/menu/list",
+      "menuButtons": [
+        "대표국치정식생면국수+미니치즈돈까스11,300원",
+        "대표베트남소고기쌀국수9,400원",
+        "대표상하이진한짬뽕10,400원",
+        "대표소고기낙지덮밥10,400원",
+        "대표국수나무우동정통 우동국물에 통통한 면발을 즐기는 우동7,900원",
+        "오므라이스정식오리엔탈오므라이스+미니우동12,000원",
+        "제육덮밥정식제육덮밥+미니우동12,500원",
+        "로제돈까스정식로제돈까스+미니우동13,900원",
+        "국만정식(잔치+왕만두2개)잔치(생면)국수와 왕만두 2개가 제공되는 정식8,900원",
+        "돈쫄정식(쫄면+미니돈까스)새콤달콤 쫄면과 미니돈까스가 제공되는 정식11,500원",
+        "[아쿠아돈까스아삭하고 신선한 야채와 바삭한 돈까스,\n상큼한 오리엔탈 드레싱 그리고 참깨 소스의 조화11,900원",
+        "치즈돈까스11,900원",
+        "김치찌개돈까스9,500원",
+        "쫄면새콤달콤 매콤 소스와 다양한 야채를 곁들인 쫄면8,500원",
+        "냉국수8,900원",
+        "매콤달달生비빔국수72시간 저온숙성 생면과 배를 갈아넣은 매콤달달 소스로 향수를 불러일으키는 추억의 메뉴7,900원",
+        "칼짬뽕(소고기)우삼겹과 데친 숙주가 토핑으로 올라간 얼큰담백 칼국수 짬뽕11,400원",
+        "칼짬뽕(해물)다양한 해산물과 돼지고기, 야채가 푸짐하게 더해진 칼국수 짬뽕10,400원",
+        "물냉면치밀 쫄깃한 냉면과 시원한 육수의 만남8,500원",
+        "비빔냉면매콤 새콤한 비빔장과 치밀 쫄깃한 냉면의 만남9,000원",
+        "[초계국수톡 쏘는 겨자소스로 맛을 낸 닭가슴살과 살얼음 육수가 입맛을 돋우는 시원한 별미9,800원",
+        "돈까스오므라이스등심돈까스와 오므라이스를 동시에 즐겨 더욱 푸짐한 돈까스오므라이스11,900원",
+        "NEW돈까스카레덮밥돈까스 와 카레덮밥을 동시에 즐겨 더욱 푸짐한 돈까스카레덮밥9,900원",
+        "NEW치킨카레덮밥치킨 가라아케와 카레덮밥을 동시에 즐겨 더욱 푸짐한 치킨카레덮밥9,900원",
+        "제육돈까스전국의 소울푸드 제육과 돈까스의 콜라보레이션으로 든든한 한끼11,900원",
+        "가츠동훈연한 가다랑어포로 맛을 내어 풍미 깊은 농축 간장소스와 국내산돈까스를 사용한 일본식돈까스덮밥9,900원",
+        "왕만두3개고기만두2 + 김치만두 12,800원",
+        "15cm감자전4,500원",
+        "15cm김치전4,500원",
+        "크림치즈볼2,800원",
+        "치킨가라아게4pcs3,300원"
+      ],
+      "delivery": false
+    },
+    {
+      "nid": "1429688748",
+      "name": "마왕족발",
+      "url": "https://pcmap.place.naver.com/restaurant/1429688748/menu/list",
+      "menuButtons": [
+        "대표마왕통구이((소))비빔국수+6찬(무김치/무쌈/궁채/마늘/고추/쌈장)+쌈채소+콜라 [새우젓,초장 필요시 요청해주세요]36,000원",
+        "대표마왕통구이((중))비빔국수+6찬(무김치/무쌈/궁채/마늘/고추/쌈장)+쌈채소+콜라 [새우젓,초장 필요시 요청해주세요]42,000원",
+        "대표마왕통구이((대))비빔국수+6찬(무김치/무쌈/궁채/마늘/고추/쌈장)+쌈채소+콜라 [새우젓,초장 필요시 요청해주세요]47,000원",
+        "대표마왕세트((소))마왕통구이/보쌈구이(택1)+사이드1인(택1)42,000원",
+        "대표마왕세트((중))마왕통구이/보쌈구이(택1)+사이드1인(택1)48,000원",
+        "대표마왕통구이((소))비빔국수+6찬(무김치/무쌈/궁채/마늘/고추/쌈장)+쌈채소+콜라 [새우젓,초장 필요시 요청해주세요]36,000원",
+        "대표마왕통구이((중))비빔국수+6찬(무김치/무쌈/궁채/마늘/고추/쌈장)+쌈채소+콜라 [새우젓,초장 필요시 요청해주세요]42,000원",
+        "대표마왕통구이((대))비빔국수+6찬(무김치/무쌈/궁채/마늘/고추/쌈장)+쌈채소+콜라 [새우젓,초장 필요시 요청해주세요]47,000원",
+        "보쌈구이((소))비빔국수+6찬(무김치/무쌈/궁채/마늘/고추/쌈장)+쌈채소+콜라 [새우젓,초장 필요시 요청해주세요]36,000원",
+        "보쌈구이((중))비빔국수+6찬(무김치/무쌈/궁채/마늘/고추/쌈장)+쌈채소+콜라 [새우젓,초장 필요시 요청해주세요]42,000원",
+        "대표마왕세트((소))마왕통구이/보쌈구이(택1)+사이드1인(택1)42,000원",
+        "대표마왕세트((중))마왕통구이/보쌈구이(택1)+사이드1인(택1)48,000원",
+        "대표마왕세트((대))마왕통구이/보쌈구이(택1)+사이드1인(택1)53,000원",
+        "대표천사세트((중))마왕통구이+불족발/갈릭족발/소금구이(택1)47,000원",
+        "대표천사세트((대))마왕통구이+불족발/갈릭족발/소금구이(택1)51,000원",
+        "[1인도시락]보쌈구이+사이드메뉴보쌈(150g)+사이드메뉴[볶음밥/마왕국수/비빔국수] 中 택121,000원",
+        "[1인도시락]불보쌈+사이드메뉴불보쌈(150g)+사이드메뉴[볶음밥/마왕국수/비빔국수] 中 택121,000원",
+        "대표족발볶음밥(1인)고슬고슬한 밥에 족발살은 얹어 놓은 마왕족발 베스트 메뉴8,000원",
+        "대표족발볶음밥(2인)고슬고슬한 밥에 족발살은 얹어 놓은 마왕족발 베스트 메뉴15,000원",
+        "비빔국수(1인)한 젓가락 휘휘 감아 즐기는 매콤한 비빔국수8,000원",
+        "비빔국수(2인)한 젓가락 휘휘 감아 즐기는 매콤한 비빔국수15,000원",
+        "막국수(1인)족발에 쟁반국수는 국룰. / 풍성한 야채와 쫀득한 메밀면의 환상적인 맛8,000원",
+        "핫블랙소스(매운맛소스)1,000원",
+        "핫마요소스1,000원",
+        "불족소스1,000원",
+        "갈릭소스1,000원",
+        "당면추가(200g)2,000원",
+        "쌈추가1,500원",
+        "6찬추가무김치,무쌈,궁채절임,마늘,고추,쌈장2,000원",
+        "마늘후레이크1,000원",
+        "공기밥2,000원",
+        "펩시콜라(500ml)2,000원",
+        "펩시콜라(1.25L)3,000원",
+        "칠성사이다(500ml)2,000원",
+        "칠성사이다(1.25L)3,000원",
+        "펩시콜라제로(500ml)2,000원"
+      ],
+      "delivery": false
+    },
+    {
+      "nid": "37346559",
+      "name": "버거킹",
+      "url": "https://pcmap.place.naver.com/restaurant/37346559/menu/list",
+      "menuButtons": [
+        "대표블랙 트러플치즈 버거블랙 트러플 번으로 더 깊어진, NEW 블랙 트머와11,700원",
+        "대표트러플 머쉬룸 와퍼진한 트러플 향과 4가지 버섯의 깊은 풍미10,700원",
+        "대표핫 트러플 머쉬룸 와퍼매콤한 트러플 소스의 색다른 매력10,700원",
+        "대표메종 트러플 치즈 버거트러플 치즈와 트러플 소스가 선사하는 깊고 풍성한 트러플 풍미의 프리미엄 버거11,500원",
+        "대표몬스터맥시멈3몬스터,맥시멈으로 등장19,600원",
+        "오리지널스 엘파소 치폴레팩오리지널스 엘파소 치폴레+콰트로치즈와퍼+코카콜라R+코카콜라R+너겟킹4조각30,900원",
+        "콰트로치즈와퍼 2인팩콰트로치즈와퍼+통새우와퍼주니어+코카콜라R+코카콜라R+프렌치프라이R25,500원",
+        "불고기와퍼 2인팩불고기와퍼+롱치킨버거+코카콜라R+코카콜라R+크리스퍼 텐더25,100원",
+        "쯔란로제 크리스퍼알싸한 쯔란과 부드러운 로제의 극적 만남7,200원",
+        "쯔란로제 크리스퍼 세트쯔란로제 크리스퍼+프렌치프라이R+콜라R9,900원",
+        "쯔란로제 딥 치즈 크리스퍼쯔란로제 크리스퍼에 4가지 치즈를 더해 더 부드럽게8,200원",
+        "쯔란로제 딥 치즈 크리스퍼 세트쯔란로제 딥 치즈 크리스퍼+프렌치프라이R+콜라R10,900원",
+        "대표블랙 트러플치즈 버거블랙 트러플 번으로 더 깊어진, NEW 블랙 트머와11,700원",
+        "더오치 맥시멈2 세트더오치 맥시멈2+프렌치프라이R+콜라R14,500원",
+        "베이컨치즈와퍼 세트풍미 가득한 아메리칸 클래식의 완벽한 조화12,900원",
+        "몬스터와퍼 세트디아블로 소스의 매콤함, 불에 직접 구운 100% 순쇠고기 패티와 치킨패티까지 압도적 크기의 몬스터와퍼12,800원",
+        "콰트로치즈와퍼 세트콰트로치즈와퍼+프렌치프라이R+콜라R11,900원",
+        "통새우와퍼세트입안에서 톡톡 터지는 통새우가 매콤한 스파이시 토마토소스와 100% 순쇠고기 패티를 만나 완성한 통새우와퍼11,900원",
+        "몬스터 주니어 세트순 쇠고기 패티에 치킨 패티를 더해 든든함이 두 배8,400원",
+        "통새우와퍼주니어세트불맛 가득 순쇠고기, 탱글한 통새우, 매콤한 스파이시토마토소스가 더해진 통새우와퍼주니어9,300원",
+        "콰트로치즈와퍼주니어세트네가지 고품격 치즈와 100% 순쇠고기 패티의 만남, 작지만 꽉 찬 콰트로치즈와퍼주니어9,300원",
+        "치즈와퍼주니어세트불에 직접 구운 100% 순쇠고기 패티에 고소한 치즈까지, 치즈와퍼주니어9,000원",
+        "와퍼주니어세트불에 직접 구운 100% 순쇠고기 패티가 들어 작지만 꽉 찼다. 와퍼주니어8,700원",
+        "롱치킨버거 세트롱치킨버거+프렌치프라이R+콜라R8,700원",
+        "불고기 롱치킨버거 세트불고기 롱치킨버거+프렌치프라이R+콜라R8,700원",
+        "치킨 치즈 마요 버거 세트치킨 치즈 마요 버거+프렌치프라이R+콜라R7,400원",
+        "더블비프불고기버거 세트달콤한 불고기 소스에 더블 패티로 더욱 깊어진 감칠맛8,500원",
+        "치킨킹 세트스파이시한 통닭다리살과 고소한 브리오쉬번이 만나 더 풍부해진 프리미엄 치킨버거10,500원",
+        "더오치 맥시멈2맥시멈에 도전하라11,800원",
+        "몬스터와퍼디아블로 소스의 매콤함, 불에 직접 구운 100% 순쇠고기 패티와 치킨패티까지 압도적 크기의 몬스터와퍼10,600원",
+        "베이컨치즈와퍼풍미 가득한 아메리칸 클래식의 완벽한 조화10,200원",
+        "콰트로치즈와퍼 단품네가지 고품격 치즈와 100% 순쇠고기 패티로 탄생한 버거킹의 스테디 셀러, 콰트로치즈와퍼9,200원",
+        "통새우와퍼입안에서 톡톡 터지는 통새우가 매콤한 스파이시 토마토소스와 100% 순쇠고기 패티를 만나 완성한 통새우와퍼9,200원",
+        "몬스터 주니어순 쇠고기 패티에 치킨 패티를 더해 든든함이 두 배6,200원",
+        "통새우와퍼주니어불맛 가득 순쇠고기, 탱글한 통새우, 매콤한 스파이시토마토소스가 더해진 통새우와퍼주니어6,600원",
+        "콰트로치즈와퍼주니어네가지 고품격 치즈와 100% 순쇠고기 패티의 만남, 작지만 꽉 찬 콰트로치즈와퍼주니어6,600원",
+        "치즈와퍼주니어불에 직접 구운 100% 순쇠고기 패티에 고소한 치즈까지, 치즈와퍼주니어6,300원",
+        "와퍼주니어불에 직접 구운 100% 순쇠고기 패티가 들어 작지만 꽉 찼다. 와퍼주니어6,000원",
+        "롱치킨버거담백한 치킨 패티에 부드러운 마요네즈 소스와 싱싱한 야채가 듬뿍6,000원",
+        "불고기 롱치킨버거담백한 치킨 패티에 부드러운 마요네즈 소스, 달콤한 불고기 소스까지6,000원",
+        "치킨 치즈 마요 버거엑스트라 마요네즈와 치즈로 더욱 고소한 치킨치즈마요버거5,200원",
+        "더블비프불고기버거달콤한 불고기 소스에 더블 패티로 더욱 깊어진 감칠맛6,300원",
+        "치킨킹스파이시한 통닭다리살과 고소한 브리오쉬번이 만나 더 풍부해진 프리미엄 치킨버거7,800원",
+        "딥 트러플 프라이딥한 풍미의 트러플 프라이4,000원",
+        "트러플 머쉬룸 파이 로얄고급스러운 풍미의 트러플 머쉬룸 파이 로얄3,700원",
+        "비프 킹 랩불맛 가득한 비프가 들어간 든든하고 간편한 랩4,600원",
+        "애플파이 로얄바삭한 파이에 사과 과육이 가득3,500원",
+        "크리스퍼 랩든든하게 채우는 한입, 크리스퍼 스낵4,600원",
+        "아메리카노자연을 담은 버거킹 RA인증커피2,600원",
+        "아이스 아메리카노자연을 담은 버거킹 RA인증커피2,600원",
+        "닥터페퍼 제로(L)톡쏘는 유니크함, Zero로 라이트하게3,400원",
+        "닥터페퍼 제로(R)톡쏘는 유니크함, Zero로 라이트하게3,200원",
+        "코카콜라(L)코카콜라로 더 짜릿하게3,400원"
+      ],
+      "delivery": true
+    }
+  ],
+  "exactMenus": [
+    {
+      "nid": "2015557853",
+      "name": "신사장국밥",
+      "url": "https://pcmap.place.naver.com/restaurant/2015557853/menu/list",
+      "priceContext": "in_store",
+      "menus": [
+        {
+          "description": "정성껏 삶아낸 돼지고기를 먹기 좋은 크기로 썰어\n시원한 바지락 육수와 함께 담았습니다.",
+          "name": "수육듬뿍국밥",
+          "priceText": "10,000원"
+        },
+        {
+          "description": "시원하고 깔끔한 바지락 육수에 숙주 위로 돼지고기를 산더미처럼 푸짐하게 담았습니다.",
+          "name": "산더미고기국밥",
+          "priceText": "10,000원"
+        },
+        {
+          "description": "수육듬뿍국밥의 푸짐함을 한 단계 더!",
+          "name": "수육듬뿍국밥(특)",
+          "priceText": "13,000원"
+        },
+        {
+          "description": "산더미고기국밥을 더욱 푸짐하게! 특 사이즈로 더욱 넉넉하게 담았습니다.",
+          "name": "산더미고기국밥(특)",
+          "priceText": "13,000원"
+        },
+        {
+          "description": "매일 정성껏 삶은 부드러운 보쌈에 국내산 무김치와 배추김치가 잘 어울리는 일품 메뉴",
+          "name": "보쌈 소",
+          "priceText": "28,000원"
+        },
+        {
+          "description": "매일 정성껏 삶은 부드러운 보쌈에 국내산 무김치와 배추김치가 잘 어울리는 일품 메뉴",
+          "name": "보쌈 중",
+          "priceText": "39,000원"
+        },
+        {
+          "description": "매일 정성껏 삶은 부드러운 보쌈에 국내산 무김치와 배추김치가 잘 어울리는 일품 메뉴",
+          "name": "보쌈 대",
+          "priceText": "48,000원"
+        },
+        {
+          "description": "시원한 육수에 부드러운 수육이 올려진 부산 밀면",
+          "name": "수육물밀면",
+          "priceText": "10,000원"
+        },
+        {
+          "description": "매콤달콤한 비빔장에 부드러운 수육이 올려진 부산 밀면",
+          "name": "수육비빔밀면",
+          "priceText": "10,000원"
+        },
+        {
+          "name": "공기밥",
+          "priceText": "1,000원"
+        },
+        {
+          "name": "음료",
+          "priceText": "2,000원"
+        },
+        {
+          "name": "소주/맥주",
+          "priceText": "4,000원"
+        }
+      ]
+    },
+    {
+      "nid": "38710685",
+      "name": "깨순이김밥",
+      "url": "https://pcmap.place.naver.com/restaurant/38710685/menu/list",
+      "priceContext": "in_store",
+      "menus": [
+        {
+          "name": "깨순이김밥",
+          "priceText": "3,500원"
+        }
+      ]
+    },
+    {
+      "nid": "1378290309",
+      "name": "도야짬뽕",
+      "url": "https://pcmap.place.naver.com/restaurant/1378290309/menu/list",
+      "priceContext": "in_store",
+      "menus": [
+        {
+          "description": "곱빼기 8,500원",
+          "name": "도야짜장",
+          "priceText": "7,000원"
+        },
+        {
+          "description": "곱빼기 10,000원",
+          "name": "청양고추짜장",
+          "priceText": "8,500원"
+        },
+        {
+          "description": "곱빼기 11,500원",
+          "name": "도야짬뽕",
+          "priceText": "10,000원"
+        },
+        {
+          "description": "곱빼기 13,000원",
+          "name": "청양고추짬뽕",
+          "priceText": "11,500원"
+        },
+        {
+          "description": "곱빼기 13,500원",
+          "name": "소고기짬뽕",
+          "priceText": "12,000원"
+        },
+        {
+          "description": "곱빼기 13,500원",
+          "name": "순두부짬뽕",
+          "priceText": "12,000원"
+        },
+        {
+          "description": "곱빼기 13,500원",
+          "name": "해물짬뽕",
+          "priceText": "12,000원"
+        },
+        {
+          "description": "곱빼기 13,500원",
+          "name": "크림짬뽕",
+          "priceText": "12,000원"
+        },
+        {
+          "description": "곱빼기 13,500원",
+          "name": "해물백짬뽕",
+          "priceText": "12,000원"
+        },
+        {
+          "description": "곱빼기 13,500원",
+          "name": "마라짬뽕",
+          "priceText": "12,000원"
+        },
+        {
+          "description": "곱빼기 10,500원",
+          "name": "도야볶음밥",
+          "priceText": "9,000원"
+        },
+        {
+          "description": "곱빼기 13,500원",
+          "name": "불고기잡채밥",
+          "priceText": "12,000원"
+        },
+        {
+          "description": "소 19,000원 중 24,000원 대 29,000원",
+          "name": "찹쌀탕수육 미니",
+          "priceText": "13,000원"
+        },
+        {
+          "description": "곱빼기 24,500원",
+          "name": "해물쟁반짜장(2~3인분)",
+          "priceText": "23,000원"
+        },
+        {
+          "description": "곱빼기 26,500원",
+          "name": "해물쟁반짬뽕(2~3인분)",
+          "priceText": "25,000원"
+        },
+        {
+          "description": "4pcs 4,000원\n8pcs 8,000원",
+          "name": "겉바속촉 辛군만두",
+          "priceText": "8,000원"
+        },
+        {
+          "description": "20pcs",
+          "name": "촉촉한입 물만두",
+          "priceText": "6,000원"
+        },
+        {
+          "description": "4pcs",
+          "name": "달달연유 꽃빵튀김",
+          "priceText": "5,000원"
+        },
+        {
+          "description": "8pcs",
+          "name": "새우품은 멘보샤",
+          "priceText": "9,000원"
+        },
+        {
+          "name": "고추잡채",
+          "priceText": "21,000원"
+        },
+        {
+          "name": "깐풍기",
+          "priceText": "21,000원"
+        },
+        {
+          "name": "유린기",
+          "priceText": "21,000원"
+        },
+        {
+          "name": "깐풍새우",
+          "priceText": "23,000원"
+        },
+        {
+          "name": "칠리새우",
+          "priceText": "23,000원"
+        },
+        {
+          "name": "크림새우",
+          "priceText": "23,000원"
+        },
+        {
+          "name": "해물짬뽕탕",
+          "priceText": "23,000원"
+        }
+      ]
+    },
+    {
+      "nid": "33741131",
+      "name": "국수나무",
+      "url": "https://pcmap.place.naver.com/restaurant/33741131/menu/list",
+      "priceContext": "delivery",
+      "menus": [],
+      "assessment": "배달 탭 선택 상태의 메뉴. 매장 가격으로 적용하지 않음."
+    },
+    {
+      "nid": "1429688748",
+      "name": "마왕족발",
+      "url": "https://pcmap.place.naver.com/restaurant/1429688748/menu/list",
+      "priceContext": "delivery",
+      "menus": [],
+      "assessment": "배달 탭 선택 상태의 메뉴. 매장 가격으로 적용하지 않음."
+    },
+    {
+      "nid": "1346033389",
+      "name": "테트리스찜닭",
+      "url": "https://pcmap.place.naver.com/restaurant/1346033389/menu/list",
+      "priceContext": "in_store",
+      "menus": [
+        {
+          "name": "까만찜닭",
+          "priceText": "24,000원"
+        },
+        {
+          "name": "하얀찜닭",
+          "priceText": "23,000원"
+        },
+        {
+          "name": "빨간찜닭",
+          "priceText": "24,000원"
+        },
+        {
+          "name": "까만찜닭(순살)",
+          "priceText": "25,000원"
+        },
+        {
+          "name": "하얀찜닭(순살)",
+          "priceText": "28,000원"
+        },
+        {
+          "name": "빨간찜닭(순살)",
+          "priceText": "25,000원"
+        }
+      ]
+    },
+    {
+      "nid": "2091246902",
+      "name": "꿈에그린분식",
+      "url": "https://pcmap.place.naver.com/restaurant/2091246902/menu/list",
+      "priceContext": "in_store",
+      "menus": [
+        {
+          "description": "튀김 이 다섯종류로 특히 고추 튀김이 맛있습니다",
+          "name": "튀김",
+          "priceText": "1,500원"
+        }
+      ]
+    },
+    {
+      "nid": "2022595457",
+      "name": "푸다회전훠궈",
+      "url": "https://pcmap.place.naver.com/restaurant/2022595457/menu/list",
+      "priceContext": "in_store",
+      "menus": [
+        {
+          "name": "회전훠궈-점심",
+          "priceText": "19,900원",
+          "description": "점심시간 11시~15시 가격입니다.",
+          "orderWindow": {
+            "start": "11:00",
+            "end": "15:00"
+          }
+        },
+        {
+          "name": "회전훠궈-저녁",
+          "priceText": "22,900원",
+          "description": "저녁시간 15시~20시 가격입니다.",
+          "orderWindow": {
+            "start": "15:00",
+            "end": "20:00"
+          }
+        },
+        {
+          "name": "회전훠궈-어린이",
+          "priceText": "12,900원",
+          "description": "4세 ~ 12세 어린이의 가격입니다."
+        }
+      ]
+    }
+  ],
+  "photoFacts": [
+    {
+      "nid": "2079438672",
+      "name": "삼향집",
+      "imageUrl": "https://ldb-phinf.pstatic.net/20260905_140/1788594362203Hsjfx_JPEG/IMG_4512.jpg",
+      "menus": [
+        {
+          "name": "곰탕",
+          "price": 11000,
+          "main": true
+        },
+        {
+          "name": "뚝배기 소불고기",
+          "price": 10000,
+          "main": true
+        },
+        {
+          "name": "제육볶음 (2인 표시)",
+          "price": 10000,
+          "main": false
+        },
+        {
+          "name": "만두",
+          "price": 5000,
+          "main": false
+        },
+        {
+          "name": "수육",
+          "price": 35000,
+          "main": false
+        },
+        {
+          "name": "소주",
+          "price": 4000,
+          "main": false
+        },
+        {
+          "name": "맥주",
+          "price": 4000,
+          "main": false
+        },
+        {
+          "name": "음료수",
+          "price": 2000,
+          "main": false
+        }
+      ]
+    },
+    {
+      "nid": "1805335047",
+      "name": "찐한사골국밥",
+      "imageUrl": "https://ldb-phinf.pstatic.net/20230606_169/1686044387863SEOnG_JPEG/KakaoTalk_20230606_183918145.jpg",
+      "status": "historical_unconfirmed",
+      "note": "공개 사진 URL은 2023년 자료로 현재 매장 가격을 추가 확인하지 못함",
+      "menus": [
+        {
+          "name": "순대국밥",
+          "price": 6500,
+          "main": true
+        },
+        {
+          "name": "돼지국밥",
+          "price": 7500,
+          "main": true
+        },
+        {
+          "name": "돼지순대국밥",
+          "price": 8000,
+          "main": true
+        },
+        {
+          "name": "섞어국밥",
+          "price": 8000,
+          "main": true
+        },
+        {
+          "name": "얼큰국밥",
+          "price": 8000,
+          "main": true
+        },
+        {
+          "name": "사골떡만두국밥",
+          "price": 8500,
+          "main": true
+        },
+        {
+          "name": "모듬국밥",
+          "price": 9500,
+          "main": true
+        }
+      ]
+    },
+    {
+      "nid": "35523968",
+      "name": "동대문엽기떡볶이",
+      "imageUrl": "https://ldb-phinf.pstatic.net/20261103_50/1793667390539KmHgx_JPEG/edited-1793667387536-0.jpg",
+      "menus": [
+        {
+          "name": "엽기떡볶이",
+          "price": 14000,
+          "main": true
+        },
+        {
+          "name": "로제떡볶이",
+          "price": 16000,
+          "main": true
+        },
+        {
+          "name": "마라떡볶이",
+          "price": 16000,
+          "main": true
+        },
+        {
+          "name": "마라로제떡볶이",
+          "price": 18000,
+          "main": true
+        },
+        {
+          "name": "2인 엽떡",
+          "price": 9000,
+          "main": true
+        },
+        {
+          "name": "엽기닭볶음탕",
+          "price": 24000,
+          "main": true
+        },
+        {
+          "name": "참치마요밥",
+          "price": 3500,
+          "main": false
+        },
+        {
+          "name": "주먹김밥(셀프)",
+          "price": 2000,
+          "main": false
+        },
+        {
+          "name": "계란찜",
+          "price": 2000,
+          "main": false
+        }
+      ],
+      "note": "메뉴판에 홀 주문/배달·포장 혜택 구분. 2인 엽떡 등 공유 메뉴를 1인 가격으로 나누지 않음"
+    },
+    {
+      "nid": "13570391",
+      "name": "초가왕족발",
+      "imageUrl": "https://ldb-phinf.pstatic.net/20260812_134/1786520786163s8j4h_JPEG/temp_picture.jpg",
+      "menus": [
+        {
+          "name": "미니족(국내산)",
+          "price": 23000,
+          "main": false
+        },
+        {
+          "name": "앞다리(국내산)",
+          "price": 41000,
+          "main": true
+        },
+        {
+          "name": "뒷다리(국내산)",
+          "price": 37000,
+          "main": true
+        },
+        {
+          "name": "소주/맥주",
+          "price": 5000,
+          "main": false
+        },
+        {
+          "name": "공기밥",
+          "price": 1000,
+          "main": false
+        },
+        {
+          "name": "음료수",
+          "price": 2000,
+          "main": false
+        }
+      ],
+      "note": "벽면 매장 메뉴판. 매주 일요일 쉼 표시도 확인. 족발 공유 분량을 임의로 1인 가격으로 환산하지 않음"
+    },
+    {
+      "nid": "38710685",
+      "name": "깨순이김밥",
+      "imageUrl": "https://ldb-phinf.pstatic.net/20260908_265/1788826075144D9GcY_JPEG/image.jpg",
+      "note": "전대 정문점 이름·전화번호가 인쇄된 매장 메뉴판. 반사로 읽히지 않는 가격은 null.",
+      "menus": [
+        {
+          "name": "깨순이김밥",
+          "price": 3500,
+          "main": true
+        },
+        {
+          "name": "참치마요치즈김밥",
+          "price": 4500,
+          "main": true
+        },
+        {
+          "name": "참치고추장김밥",
+          "price": 4500,
+          "main": true
+        },
+        {
+          "name": "참치매운고추김밥",
+          "price": 5000,
+          "main": true
+        },
+        {
+          "name": "참치김치김밥",
+          "price": 5000,
+          "main": true
+        },
+        {
+          "name": "김치김밥",
+          "price": 4000,
+          "main": true
+        },
+        {
+          "name": "김치치즈김밥",
+          "price": 4500,
+          "main": true
+        },
+        {
+          "name": "치즈김밥",
+          "price": 4000,
+          "main": true
+        },
+        {
+          "name": "소고기김밥",
+          "price": 4500,
+          "main": true
+        },
+        {
+          "name": "멸추김밥",
+          "price": 5000,
+          "main": true
+        },
+        {
+          "name": "매운고추김밥",
+          "price": 4000,
+          "main": true
+        },
+        {
+          "name": "참치치즈김밥",
+          "price": 5000,
+          "main": true
+        },
+        {
+          "name": "샐러드김밥",
+          "price": 4000,
+          "main": true
+        },
+        {
+          "name": "새우튀김김밥",
+          "price": 5000,
+          "main": true
+        },
+        {
+          "name": "참치김치덮밥",
+          "price": 8000,
+          "main": true
+        },
+        {
+          "name": "소고기덮밥",
+          "price": 8500,
+          "main": true
+        },
+        {
+          "name": "낙지덮밥",
+          "price": 8500,
+          "main": true
+        },
+        {
+          "name": "오징어덮밥",
+          "price": 8500,
+          "main": true
+        },
+        {
+          "name": "제육덮밥",
+          "price": 8000,
+          "main": true
+        },
+        {
+          "name": "깨순이스페셜",
+          "price": 10000,
+          "main": true
+        },
+        {
+          "name": "치즈제육덮밥",
+          "price": 9000,
+          "main": true
+        },
+        {
+          "name": "제육돌솥밥",
+          "price": 9000,
+          "main": true
+        },
+        {
+          "name": "치즈제육돌솥밥",
+          "price": 10000,
+          "main": true
+        },
+        {
+          "name": "돌솥밥(이름 일부 판독 불가)",
+          "price": 9500,
+          "main": false
+        },
+        {
+          "name": "김치치즈돌솥밥",
+          "price": 8500,
+          "main": true
+        },
+        {
+          "name": "돌솥비빔밥",
+          "price": 8000,
+          "main": true
+        },
+        {
+          "name": "비빔밥",
+          "price": 7500,
+          "main": true
+        },
+        {
+          "name": "참치비빔밥",
+          "price": 8000,
+          "main": true
+        },
+        {
+          "name": "낙지비빔밥",
+          "price": 8500,
+          "main": true
+        },
+        {
+          "name": "낙지돌솥밥",
+          "price": 9000,
+          "main": true
+        },
+        {
+          "name": "카레라이스",
+          "price": 8000,
+          "main": true
+        },
+        {
+          "name": "뚝배기알밥",
+          "price": 7500,
+          "main": true
+        },
+        {
+          "name": "떡국",
+          "price": 7000,
+          "main": true
+        },
+        {
+          "name": "만두국",
+          "price": 7000,
+          "main": true
+        },
+        {
+          "name": "떡만두국",
+          "price": 7500,
+          "main": true
+        },
+        {
+          "name": "감자수제비",
+          "price": 8000,
+          "main": true
+        },
+        {
+          "name": "얼큰손수제비",
+          "price": 8000,
+          "main": true
+        },
+        {
+          "name": "애호박찌개",
+          "price": 8000,
+          "main": true
+        },
+        {
+          "name": "김치찌개",
+          "price": 7500,
+          "main": true
+        },
+        {
+          "name": "참치찌개",
+          "price": 8000,
+          "main": true
+        },
+        {
+          "name": "된장찌개",
+          "price": 7500,
+          "main": true
+        },
+        {
+          "name": "부대찌개",
+          "price": null,
+          "main": true
+        },
+        {
+          "name": "순두부찌개",
+          "price": null,
+          "main": true
+        },
+        {
+          "name": "육개장",
+          "price": null,
+          "main": true
+        },
+        {
+          "name": "갈비탕",
+          "price": 9000,
+          "main": true
+        },
+        {
+          "name": "소뚝불고기",
+          "price": 8500,
+          "main": true
+        },
+        {
+          "name": "참치김치볶음밥",
+          "price": 8000,
+          "main": true
+        },
+        {
+          "name": "김치볶음밥",
+          "price": 7500,
+          "main": true
+        },
+        {
+          "name": "참치볶음밥",
+          "price": 7500,
+          "main": true
+        },
+        {
+          "name": "치즈김치볶음밥",
+          "price": 8500,
+          "main": true
+        },
+        {
+          "name": "소고기볶음밥",
+          "price": 8000,
+          "main": true
+        },
+        {
+          "name": "새우볶음밥",
+          "price": 8000,
+          "main": true
+        },
+        {
+          "name": "오므라이스",
+          "price": 7500,
+          "main": true
+        },
+        {
+          "name": "참치오므라이스",
+          "price": 8500,
+          "main": true
+        },
+        {
+          "name": "치즈오므라이스",
+          "price": 8500,
+          "main": true
+        },
+        {
+          "name": "우동",
+          "price": 5000,
+          "main": true
+        },
+        {
+          "name": "해물우동",
+          "price": 6500,
+          "main": true
+        },
+        {
+          "name": "해물볶음우동",
+          "price": 6500,
+          "main": true
+        },
+        {
+          "name": "칼만두",
+          "price": 6000,
+          "main": true
+        },
+        {
+          "name": "쫄면",
+          "price": 7000,
+          "main": true
+        },
+        {
+          "name": "잔치국수",
+          "price": 7500,
+          "main": true
+        },
+        {
+          "name": "비빔국수",
+          "price": 7500,
+          "main": true
+        },
+        {
+          "name": "라면",
+          "price": 4500,
+          "main": true
+        },
+        {
+          "name": "떡라면",
+          "price": 5000,
+          "main": true
+        },
+        {
+          "name": "치즈라면",
+          "price": 5000,
+          "main": true
+        },
+        {
+          "name": "김치라면",
+          "price": 5000,
+          "main": true
+        },
+        {
+          "name": "만두라면",
+          "price": 5000,
+          "main": true
+        },
+        {
+          "name": "짬뽕라면",
+          "price": 6000,
+          "main": true
+        },
+        {
+          "name": "순살돈까스",
+          "price": 7500,
+          "main": true
+        },
+        {
+          "name": "치즈돈까스",
+          "price": 8000,
+          "main": true
+        },
+        {
+          "name": "고구마치즈돈까스",
+          "price": 8000,
+          "main": true
+        },
+        {
+          "name": "돈까스+우동",
+          "price": 11000,
+          "main": true
+        },
+        {
+          "name": "물냉면",
+          "price": 7500,
+          "main": true
+        },
+        {
+          "name": "비빔냉면",
+          "price": 7500,
+          "main": true
+        },
+        {
+          "name": "콩물국수",
+          "price": 7500,
+          "main": true
+        },
+        {
+          "name": "오뎅",
+          "price": 5000,
+          "main": false
+        },
+        {
+          "name": "물만두",
+          "price": 5000,
+          "main": false
+        },
+        {
+          "name": "고기만두",
+          "price": 5000,
+          "main": false
+        },
+        {
+          "name": "김치만두",
+          "price": 5000,
+          "main": false
+        },
+        {
+          "name": "떡볶이",
+          "price": 5000,
+          "main": false
+        },
+        {
+          "name": "치즈떡볶이",
+          "price": 6000,
+          "main": false
+        },
+        {
+          "name": "라볶이",
+          "price": 5500,
+          "main": false
+        },
+        {
+          "name": "치즈라볶이",
+          "price": 6500,
+          "main": false
+        },
+        {
+          "name": "공기밥",
+          "price": 1500,
+          "main": false
+        },
+        {
+          "name": "음료수(콜라,칠성사이다)",
+          "price": 1500,
+          "main": false
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "공개 화면 재확인. 방문·전화 검증이 아님. 오래된 메뉴판 및 권장가격은 현재 매장 가격으로 확정하지 않는다.",
+    "배달 탭이 선택된 가격은 배달 가격으로 보관하며 매장 가격으로 사용하지 않는다."
+  ]
+}

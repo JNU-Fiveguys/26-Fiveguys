@@ -1,0 +1,107 @@
+{
+  "version": 1,
+  "id": "p_0093",
+  "name": "노브랜드버거광주 전남대점",
+  "category": "패스트푸드",
+  "lat": 35.175403,
+  "lng": 126.912737,
+  "address": "전남광주통합특별시 북구 우치로 90",
+  "source": "semas",
+  "sourceId": "MA0101202602A0026828",
+  "sourceStatus": "active",
+  "attrs": {
+    "status": "partial",
+    "menus": [
+      {
+        "name": "그릴드 불고기",
+        "price": 2900,
+        "main": true
+      },
+      {
+        "name": "NBB 시그니처",
+        "price": 4800,
+        "main": true
+      },
+      {
+        "name": "NBB 오리지널",
+        "price": 3900,
+        "main": true
+      }
+    ]
+  },
+  "research": {
+    "identityStatus": "matched",
+    "queries": [
+      "\"노브랜드버거\" \"광주전남대점\""
+    ],
+    "sources": [
+      {
+        "id": "s1",
+        "url": "https://www.diningcode.com/profile.php?rid=vlY0rjXYna5P",
+        "title": "노브랜드버거 광주전남대점 매장 정보",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "상호와 도로명 주소를 대조함. URL을 직접 열어 주소와 본문을 확인함."
+      }
+    ],
+    "facts": {
+      "menus": {
+        "status": "confirmed",
+        "value": [
+          {
+            "name": "그릴드 불고기",
+            "price": 2900,
+            "main": true
+          },
+          {
+            "name": "NBB 시그니처",
+            "price": 4800,
+            "main": true
+          },
+          {
+            "name": "NBB 오리지널",
+            "price": 3900,
+            "main": true
+          }
+        ],
+        "sourceIds": [
+          "s1"
+        ],
+        "note": "동일 주소 지점 메뉴란 단품 게시 가격. 전국 공통 가격을 지점 가격으로 대신 넣지 않음."
+      },
+      "hours": {
+        "status": "conflict",
+        "sourceIds": [
+          "s1"
+        ],
+        "note": "현재 주간 영업란은 매일 09:30~23:55, 같은 페이지 블로그 요약은 09:30~23:30. 종료시간이 충돌해 구조값을 확정하지 않음."
+      }
+    },
+    "notes": [],
+    "checkedAt": "2026-11-11",
+    "method": "web",
+    "unknownFields": [
+      "hours",
+      "mealType",
+      "takeout",
+      "verifiedAt",
+      "verifiedBy",
+      "break",
+      "lastOrder"
+    ]
+  },
+  "availability": {
+    "status": "excluded",
+    "provider": "naver",
+    "checkedAt": "2026-11-11",
+    "sourceUrl": "https://map.naver.com/p/search/%EC%A0%84%EB%82%A8%EB%8C%80%20%EC%9D%8C%EC%8B%9D%EC%A0%90",
+    "naverPlaceId": null,
+    "observedName": "",
+    "observedAddress": "",
+    "district": null,
+    "addressVerified": false,
+    "nearby": false,
+    "reason": "네이버 지도에서 확인한 네 식당가 명단에 포함되지 않아 제외"
+  }
+}

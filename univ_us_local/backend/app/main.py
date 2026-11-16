@@ -19,7 +19,7 @@ from fastapi.staticfiles import StaticFiles
 
 from . import academic, activity, assistant, attendance, briefing, calendar_events, exams, graduation, materials, placement, priority, scholarship
 from . import config as C
-from . import eclass_data, login_creds, meal, student_profile
+from . import eclass_data, login_creds, meal_recommendation, student_profile
 
 
 @asynccontextmanager
@@ -228,10 +228,8 @@ if (_c4_router := briefing.router(lambda start, end: calendar_events.collect(CAL
 if (_ca2_router := assistant.router()) is not None:
     app.include_router(_ca2_router, prefix="/api/assistant")
 
-# CA1 공강 식사 추천 — /api/meal/ui(화면) · recommend · schedule · places (campus/CA1_Meal_agent/meal/preview.py)
-# 시간표는 F3 출결(위에서 붙인 attendance 와 같은 데이터)을 CA1 이 직접 읽는다. 화면 오른쪽 아래 전룡(MealLauncher)이 /api/meal/ui 를 창으로 연다.
-if (_ca1_router := meal.router()) is not None:
-    app.include_router(_ca1_router)
+# CA1 기존 식사 화면·API — 부모 앱의 세션/Origin 검사와 /api 개발 프록시를 공유한다.
+app.mount("/api/meal", meal_recommendation.application(), name="meal")
 
 
 # ---------------------------------------------------------------- 데스크톱 앱

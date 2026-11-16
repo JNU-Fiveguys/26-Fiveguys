@@ -1,0 +1,82 @@
+{
+  "version": 1,
+  "id": "p_0066",
+  "name": "그램샐러드",
+  "category": "양식",
+  "lat": 35.173879,
+  "lng": 126.911147,
+  "address": "전남광주통합특별시 북구 용봉로 77",
+  "source": "semas",
+  "sourceId": "MA0101202310A0081126",
+  "sourceStatus": "active",
+  "attrs": {
+    "status": "partial"
+  },
+  "research": {
+    "identityStatus": "matched",
+    "queries": [
+      "\"그램샐러드\" \"용봉로 77\" 메뉴 영업시간",
+      "전남대학교 그램샐러드 메뉴 가격 청아관"
+    ],
+    "sources": [
+      {
+        "id": "s1",
+        "url": "https://banchan.ayo.pe.kr/banchan/3232a5d85aded46a0abe873c37d4a2f8",
+        "title": "그램샐러드 인허가정보",
+        "type": "directory",
+        "addressMatch": true,
+        "note": "전남대학생생활관1층즉석판매제조가공업.",
+        "observedAt": "2026-11-11"
+      },
+      {
+        "id": "s2",
+        "url": "https://iupche.kr/u/1432626/%EA%B7%B8%EB%9E%A8%EC%83%90%EB%9F%AC%EB%93%9C",
+        "title": "그램샐러드 식품자동판매기업",
+        "type": "directory",
+        "addressMatch": true,
+        "note": "청아관1층자동판매기업이력도검색됨. 판매방식/매장범위확인필요.",
+        "observedAt": "2026-11-11"
+      }
+    ],
+    "facts": {
+      "menus": {
+        "status": "unconfirmed",
+        "sourceIds": [],
+        "note": "동일 지점의 메뉴와 현행 가격을 확인하지 못함. 값은 생성하지 않음."
+      },
+      "hours": {
+        "status": "unconfirmed",
+        "sourceIds": [],
+        "note": "동일 지점의 요일별 영업시간·휴무를 확인하지 못함. 임의 시간 입력하지 않음."
+      }
+    },
+    "notes": [
+      "생활관입점·자동판매기신고이력이있어매장식사/외부인접근및메뉴별판매방식별도확인필요."
+    ],
+    "checkedAt": "2026-11-11",
+    "method": "web",
+    "unknownFields": [
+      "menus",
+      "hours",
+      "mealType",
+      "takeout",
+      "verifiedAt",
+      "verifiedBy",
+      "break",
+      "lastOrder"
+    ]
+  },
+  "availability": {
+    "status": "excluded",
+    "provider": "naver",
+    "checkedAt": "2026-11-11",
+    "sourceUrl": "https://map.naver.com/p/search/%EC%A0%84%EB%82%A8%EB%8C%80%20%EC%9D%8C%EC%8B%9D%EC%A0%90",
+    "naverPlaceId": null,
+    "observedName": "",
+    "observedAddress": "",
+    "district": null,
+    "addressVerified": false,
+    "nearby": false,
+    "reason": "네이버 지도에서 확인한 네 식당가 명단에 포함되지 않아 제외"
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "version": 1,
+  "id": "p_0099",
+  "name": "씨앤코컴퍼니전남대학교점",
+  "category": "한식",
+  "lat": 35.173879,
+  "lng": 126.911147,
+  "address": "전남광주통합특별시 북구 용봉로 77",
+  "source": "semas",
+  "sourceId": "MA0106202201A0824712",
+  "sourceStatus": "active",
+  "attrs": {
+    "status": "partial"
+  },
+  "research": {
+    "identityStatus": "uncertain",
+    "queries": [
+      "\"씨앤코컴퍼니\" \"전남대학교\""
+    ],
+    "sources": [
+      {
+        "id": "s1",
+        "url": "https://pay.falltip.com/list.php?category=%EC%8B%9D%EB%8B%B9&sido=%EA%B4%91%EC%A3%BC&sigungu=%EB%B6%81%EA%B5%AC",
+        "title": "씨앤코컴퍼니 전남대학교점 지역화폐 가맹점 목록",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "용봉로 77 지하1층 도서관본관 제79호 사업자명은 일치. 공개 검색결과에서 확인했으며 직접 본문은 조회하지 않음."
+      }
+    ],
+    "facts": {
+      "menus": {
+        "status": "unconfirmed",
+        "sourceIds": [],
+        "note": "주소가 일치하는 매장의 메뉴·가격을 확인하지 못함."
+      },
+      "hours": {
+        "status": "unconfirmed",
+        "sourceIds": [],
+        "note": "요일별 영업시간·휴무를 확인하지 못함."
+      }
+    },
+    "notes": [
+      "사업자명만 있고 실제 상호·메뉴가 없으므로 식당인지 교내 매점/카페인지 확인할 수 없음. 같은 회사 다른 지점 정보를 대입하지 않음."
+    ],
+    "checkedAt": "2026-11-11",
+    "method": "web",
+    "unknownFields": [
+      "menus",
+      "hours",
+      "mealType",
+      "takeout",
+      "verifiedAt",
+      "verifiedBy",
+      "break",
+      "lastOrder"
+    ]
+  },
+  "availability": {
+    "status": "excluded",
+    "provider": "naver",
+    "checkedAt": "2026-11-11",
+    "sourceUrl": "https://map.naver.com/p/search/%EC%A0%84%EB%82%A8%EB%8C%80%20%EC%9D%8C%EC%8B%9D%EC%A0%90",
+    "naverPlaceId": null,
+    "observedName": "",
+    "observedAddress": "",
+    "district": null,
+    "addressVerified": false,
+    "nearby": false,
+    "reason": "네이버 지도에서 확인한 네 식당가 명단에 포함되지 않아 제외"
+  }
+}

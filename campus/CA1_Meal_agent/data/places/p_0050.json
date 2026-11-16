@@ -1,0 +1,291 @@
+{
+  "version": 1,
+  "id": "p_0050",
+  "name": "알촌 전남대점",
+  "category": "한식",
+  "lat": 35.1776503032027,
+  "lng": 126.904216079449,
+  "address": "광주 북구 설죽로214번길 122",
+  "source": "semas",
+  "sourceId": "MA010120220813512145",
+  "sourceStatus": "active",
+  "attrs": {
+    "status": "partial",
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목"
+        ],
+        "open": "11:00",
+        "close": "19:30",
+        "lastOrder": "19:25",
+        "break": {
+          "start": "14:30",
+          "end": "17:00"
+        }
+      },
+      {
+        "days": [
+          "금"
+        ],
+        "open": "11:00",
+        "close": "14:30",
+        "lastOrder": "14:25"
+      }
+    ],
+    "menus": [
+      {
+        "name": "약매알밥",
+        "price": 4700,
+        "main": true
+      },
+      {
+        "name": "매콤알밥",
+        "price": 4700,
+        "main": true
+      },
+      {
+        "name": "갈릭알밥",
+        "price": 5100,
+        "main": true
+      },
+      {
+        "name": "순한알밥",
+        "price": 4300,
+        "main": true
+      },
+      {
+        "name": "진매알밥",
+        "price": 4800,
+        "main": true
+      },
+      {
+        "name": "카레알밥",
+        "price": 5100,
+        "main": true
+      },
+      {
+        "name": "짜장알밥",
+        "price": 5100,
+        "main": true
+      },
+      {
+        "name": "오밥",
+        "price": 5100,
+        "main": true
+      },
+      {
+        "name": "갈릭그릴드치킨알밥",
+        "price": 5700,
+        "main": true
+      },
+      {
+        "name": "갈리오밥",
+        "price": 5600,
+        "main": true
+      },
+      {
+        "name": "그릴드치킨알밥",
+        "price": 5200,
+        "main": true
+      },
+      {
+        "name": "불고기알밥",
+        "price": 5700,
+        "main": true
+      }
+    ]
+  },
+  "research": {
+    "identityStatus": "matched",
+    "queries": [
+      "\"알촌 전남대점\" 메뉴 가격 영업시간"
+    ],
+    "sources": [
+      {
+        "id": "s1",
+        "url": "https://www.diningcode.com/profile.php?rid=98YkYz2D4DrS",
+        "title": "알촌 전남대점",
+        "type": "directory",
+        "addressMatch": true,
+        "note": "지점메뉴목록과 후기 가격,영업시간 차이 있음.",
+        "observedAt": "2026-11-11"
+      }
+    ],
+    "facts": {
+      "menus": {
+        "status": "partial",
+        "value": [
+          {
+            "name": "순한맛 기본메뉴",
+            "price": 5800,
+            "main": true
+          },
+          {
+            "name": "마라알밥",
+            "price": 7000,
+            "main": true
+          },
+          {
+            "name": "갈릭카레알밥",
+            "price": 7100,
+            "main": true
+          }
+        ],
+        "sourceIds": [
+          "s1"
+        ],
+        "note": "현재목록 게시가격. 후기 순한알밥4,800원 등과 달라 현장/배달가격 차이 또는 변경 여부 재확인."
+      },
+      "hours": {
+        "status": "conflict",
+        "sourceIds": [
+          "s1"
+        ],
+        "note": "주간목록의 일부요일11:00~14:30와 다른요일11:00~19:30(휴식14:30~17:00,LO19:25), 후기월~토동일안내가 상충. 과거10:30~21:00안내도 존재."
+      }
+    },
+    "notes": [],
+    "checkedAt": "2026-11-11",
+    "method": "web",
+    "unknownFields": [
+      "menus",
+      "hours",
+      "mealType",
+      "takeout",
+      "verifiedAt",
+      "verifiedBy",
+      "break",
+      "lastOrder"
+    ]
+  },
+  "availability": {
+    "status": "listed",
+    "provider": "naver",
+    "checkedAt": "2026-11-11",
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/37915784/home",
+    "naverPlaceId": "37915784",
+    "observedName": "알촌 전남대점",
+    "observedAddress": "광주 북구 설죽로214번길 122",
+    "district": "상대",
+    "addressVerified": true,
+    "nearby": true,
+    "reason": "공개 네이버 지도에서 동일 주소의 전남대 상대 식당으로 확인"
+  },
+  "menuObservation": {
+    "status": "confirmed",
+    "priceContext": "in_store",
+    "checkedAt": "2026-11-12",
+    "sourceUrl": "https://place.map.kakao.com/1320251809",
+    "placeSourceUrl": "https://pcmap.place.naver.com/restaurant/37915784/home",
+    "sourceAddress": "전남광주통합특별시 북구 설죽로214번길 122 1층",
+    "menus": [
+      {
+        "name": "약매알밥",
+        "price": 4700,
+        "main": true
+      },
+      {
+        "name": "매콤알밥",
+        "price": 4700,
+        "main": true
+      },
+      {
+        "name": "갈릭알밥",
+        "price": 5100,
+        "main": true
+      },
+      {
+        "name": "순한알밥",
+        "price": 4300,
+        "main": true
+      },
+      {
+        "name": "진매알밥",
+        "price": 4800,
+        "main": true
+      },
+      {
+        "name": "카레알밥",
+        "price": 5100,
+        "main": true
+      },
+      {
+        "name": "짜장알밥",
+        "price": 5100,
+        "main": true
+      },
+      {
+        "name": "오밥",
+        "price": 5100,
+        "main": true
+      },
+      {
+        "name": "갈릭그릴드치킨알밥",
+        "price": 5700,
+        "main": true
+      },
+      {
+        "name": "갈리오밥",
+        "price": 5600,
+        "main": true
+      },
+      {
+        "name": "그릴드치킨알밥",
+        "price": 5200,
+        "main": true
+      },
+      {
+        "name": "불고기알밥",
+        "price": 5700,
+        "main": true
+      }
+    ],
+    "note": "같은 상호·도로명 건물번호의 카카오맵 메뉴 게시값. 배달 탭 가격과 구분해 수집. 게시값 확인이며 현장 현재 가격 확인은 아님."
+  },
+  "hoursObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/37915784/home",
+    "checkedAt": "2026-11-12",
+    "status": "confirmed",
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목"
+        ],
+        "open": "11:00",
+        "close": "19:30",
+        "lastOrder": "19:25",
+        "break": {
+          "start": "14:30",
+          "end": "17:00"
+        }
+      },
+      {
+        "days": [
+          "금"
+        ],
+        "open": "11:00",
+        "close": "14:30",
+        "lastOrder": "14:25"
+      }
+    ],
+    "note": "매장 영업시간 관찰. 기존 attrs/research를 덮어쓰지 않습니다."
+  },
+  "followupReview": {
+    "checkedAt": "2026-11-12",
+    "reasons": [
+      "공개 매장 식사 가격과 요일별 영업시간을 연결하여 추천 대상으로 전환했습니다."
+    ],
+    "sources": [
+      "https://pcmap.place.naver.com/restaurant/37915784/home",
+      "https://pcmap.place.naver.com/restaurant/37915784/menu/list",
+      "https://place.map.kakao.com/1320251809"
+    ]
+  }
+}

@@ -1,0 +1,206 @@
+{
+  "version": 1,
+  "id": "p_0113",
+  "source": "team",
+  "sourceId": "naver:34706804",
+  "name": "나루터",
+  "address": "전남광주 북구 용주로30번길 21",
+  "category": "한식",
+  "lat": 35.180992540231,
+  "lng": 126.901972535287,
+  "sourceStatus": "active",
+  "availability": {
+    "status": "listed",
+    "provider": "naver",
+    "checkedAt": "2026-11-11",
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/34706804/home?fromPanelNum=1&additionalHeight=76&timestamp=202611112342&locale=ko&svcName=map_pcv5&searchText=%EB%82%98%EB%A3%A8%ED%84%B0%20%EC%9A%A9%EB%B4%89%EB%8F%99",
+    "naverPlaceId": "34706804",
+    "observedName": "나루터",
+    "observedAddress": "전남광주 북구 용주로30번길 21",
+    "district": "예대",
+    "addressVerified": true,
+    "nearby": true,
+    "reason": "공개 네이버 지도에서 동일 주소의 전남대 예대 식당으로 확인"
+  },
+  "menuObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/34706804/menu?fromPanelNum=1&additionalHeight=76&timestamp=202611112342&locale=ko&svcName=map_pcv5&searchText=%EB%82%98%EB%A3%A8%ED%84%B0%20%EC%9A%A9%EB%B4%89%EB%8F%99",
+    "checkedAt": "2026-11-11",
+    "priceContext": "in_store",
+    "menus": [
+      {
+        "name": "조기매운탕",
+        "price": 25000,
+        "main": true
+      },
+      {
+        "name": "우럭매운탕 대",
+        "price": 35000,
+        "main": true
+      },
+      {
+        "name": "우럭매운탕 소",
+        "price": 22000,
+        "main": true
+      },
+      {
+        "name": "알탕",
+        "price": 20000,
+        "main": true
+      },
+      {
+        "name": "꽃게탕",
+        "price": null,
+        "priceText": "가격 변동",
+        "main": true
+      },
+      {
+        "name": "갈치조림",
+        "price": 40000,
+        "main": true
+      },
+      {
+        "name": "병어조림",
+        "price": null,
+        "priceText": "가격 변동",
+        "main": true
+      },
+      {
+        "name": "오리주물럭",
+        "price": null,
+        "priceText": "가격 변동",
+        "main": true
+      },
+      {
+        "name": "오리로스",
+        "price": null,
+        "priceText": "가격 변동",
+        "main": true
+      },
+      {
+        "name": "오리탕",
+        "price": null,
+        "priceText": "가격 변동",
+        "main": true
+      }
+    ],
+    "note": "메뉴 상태: confirmed. 원본 관찰·좌표 출처는 적용 manifest에 보관합니다.",
+    "status": "confirmed"
+  },
+  "attrs": {
+    "status": "partial",
+    "menus": [
+      {
+        "name": "조기매운탕",
+        "price": 25000,
+        "main": true
+      },
+      {
+        "name": "우럭매운탕 대",
+        "price": 35000,
+        "main": true
+      },
+      {
+        "name": "우럭매운탕 소",
+        "price": 22000,
+        "main": true
+      },
+      {
+        "name": "알탕",
+        "price": 20000,
+        "main": true
+      },
+      {
+        "name": "갈치조림",
+        "price": 40000,
+        "main": true
+      }
+    ]
+  },
+  "hoursObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/34706804/home?fromPanelNum=1&additionalHeight=76&timestamp=202611112342&locale=ko&svcName=map_pcv5&searchText=%EB%82%98%EB%A3%A8%ED%84%B0%20%EC%9A%A9%EB%B4%89%EB%8F%99",
+    "checkedAt": "2026-11-11",
+    "status": "unconfirmed",
+    "hours": [],
+    "note": "매장 영업시간 관찰. 기존 attrs/research를 덮어쓰지 않습니다."
+  },
+  "research": {
+    "checkedAt": "2026-11-11",
+    "method": "web",
+    "identityStatus": "matched",
+    "queries": [
+      "나루터 전남광주 북구 용주로30번길 21"
+    ],
+    "sources": [
+      {
+        "id": "naver-place",
+        "url": "https://pcmap.place.naver.com/restaurant/34706804/home?fromPanelNum=1&additionalHeight=76&timestamp=202611112342&locale=ko&svcName=map_pcv5&searchText=%EB%82%98%EB%A3%A8%ED%84%B0%20%EC%9A%A9%EB%B4%89%EB%8F%99",
+        "title": "나루터 네이버 지도",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "같은 주소의 지점 확인. 지도 등록 확인은 실시간 영업 중 보증이 아님"
+      },
+      {
+        "id": "naver-menu",
+        "url": "https://pcmap.place.naver.com/restaurant/34706804/menu?fromPanelNum=1&additionalHeight=76&timestamp=202611112342&locale=ko&svcName=map_pcv5&searchText=%EB%82%98%EB%A3%A8%ED%84%B0%20%EC%9A%A9%EB%B4%89%EB%8F%99",
+        "title": "나루터 메뉴 탭",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "가격 맥락: in_store"
+      },
+      {
+        "id": "naver-hours",
+        "url": "https://pcmap.place.naver.com/restaurant/34706804/home?fromPanelNum=1&additionalHeight=76&timestamp=202611112342&locale=ko&svcName=map_pcv5&searchText=%EB%82%98%EB%A3%A8%ED%84%B0%20%EC%9A%A9%EB%B4%89%EB%8F%99",
+        "title": "나루터 영업시간",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "게시된 요일별 영업시간. 미확인은 추정하지 않음"
+      }
+    ],
+    "facts": {
+      "menus": {
+        "status": "unconfirmed",
+        "sourceIds": [],
+        "note": "매장 기준 정보 미확인. 배달·가격 맥락 불명 자료는 확정하지 않습니다."
+      },
+      "hours": {
+        "status": "unconfirmed",
+        "sourceIds": [],
+        "note": "매장 기준 정보 미확인. 배달·가격 맥락 불명 자료는 확정하지 않습니다."
+      }
+    },
+    "unknownFields": [
+      "menus",
+      "hours",
+      "mealType",
+      "takeout",
+      "verifiedAt",
+      "verifiedBy",
+      "break",
+      "lastOrder"
+    ],
+    "notes": [
+      "네이버 공개 지도 상세·메뉴 탭 직접 확인.",
+      "고기 단위 가격·공유 탕/조림 메뉴는 1인 식사 가격으로 확정할 수 없어 main=false로 보존.",
+      "메뉴 탭에 게시된 전체 텍스트 메뉴 기준. 메뉴판 이미지 전체와 대조한 것은 아님.",
+      "원문 메뉴명·가격은 모두 보존. 가격 변동은 price=null 및 priceText로 기록.",
+      "학교 출입구에서 실제 도보 10분 이내 여부는 별도 경로 감사 대상이며 이 파일에서 거리나 소요시간을 추정하지 않음.",
+      "원문 영업시간은 rear_art_batch6.json에 보관. 미게시 영업시간·브레이크·라스트오더는 임의로 채우지 않음.",
+      "병합 입력: rear_art_batch6_manifest.json",
+      "공개 네이버 화면 관찰이며 현장 검증이 아닙니다."
+    ]
+  },
+  "followupReview": {
+    "checkedAt": "2026-11-12",
+    "reasons": [
+      "요일별 영업시간: 월~일 영업·휴무와 개점·마감 시간이 필요합니다. 브레이크·마지막 주문은 확인한 경우만 입력하세요."
+    ],
+    "sources": [
+      "https://pcmap.place.naver.com/restaurant/34706804/home",
+      "https://pcmap.place.naver.com/restaurant/34706804/menu/list",
+      "https://pcmap.place.naver.com/restaurant/34706804/menu?fromPanelNum=1&additionalHeight=76&timestamp=202611112342&locale=ko&svcName=map_pcv5&searchText=%EB%82%98%EB%A3%A8%ED%84%B0%20%EC%9A%A9%EB%B4%89%EB%8F%99"
+    ]
+  }
+}

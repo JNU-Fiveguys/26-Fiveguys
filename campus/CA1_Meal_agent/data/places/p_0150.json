@@ -1,0 +1,383 @@
+{
+  "version": 1,
+  "id": "p_0150",
+  "source": "team",
+  "sourceId": "naver:1957531584",
+  "name": "라멘 키노리 전대후문",
+  "address": "전남광주 북구 호동로 9-1 1층",
+  "category": "일식",
+  "lat": 35.1750613620585,
+  "lng": 126.913473358352,
+  "sourceStatus": "active",
+  "availability": {
+    "status": "listed",
+    "provider": "naver",
+    "checkedAt": "2026-11-11",
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/1957531584/home",
+    "naverPlaceId": "1957531584",
+    "observedName": "라멘 키노리 전대후문",
+    "observedAddress": "전남광주 북구 호동로 9-1 1층",
+    "district": "후문",
+    "addressVerified": true,
+    "nearby": true,
+    "reason": "공개 네이버 지도에서 동일 주소의 전남대 후문 식당으로 확인"
+  },
+  "menuObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/1957531584/menu",
+    "checkedAt": "2026-11-11",
+    "priceContext": "in_store",
+    "menus": [
+      {
+        "name": "토리파이탄 라멘",
+        "price": 10500,
+        "main": true
+      },
+      {
+        "name": "카라파이탄 라멘",
+        "price": 10500,
+        "main": true
+      },
+      {
+        "name": "마제소바",
+        "price": 10000,
+        "main": true
+      },
+      {
+        "name": "가라아게 4p",
+        "price": 4500,
+        "main": false
+      },
+      {
+        "name": "토리파이탄+1",
+        "price": 12000,
+        "main": true
+      },
+      {
+        "name": "카라파이탄+2",
+        "price": 13500,
+        "main": true
+      },
+      {
+        "name": "미니차슈덮밥",
+        "price": 3000,
+        "main": false
+      },
+      {
+        "name": "우롱차",
+        "price": 3000,
+        "main": false
+      },
+      {
+        "name": "콜라",
+        "price": 2000,
+        "main": false
+      },
+      {
+        "name": "사이다",
+        "price": 2000,
+        "main": false
+      },
+      {
+        "name": "기린이치방",
+        "price": 6000,
+        "main": false
+      },
+      {
+        "name": "카스",
+        "price": 3000,
+        "main": false
+      }
+    ],
+    "note": "메뉴 상태: confirmed. 원본 관찰·좌표 출처는 적용 manifest에 보관합니다.",
+    "status": "confirmed"
+  },
+  "attrs": {
+    "status": "partial",
+    "menus": [
+      {
+        "name": "토리파이탄 라멘",
+        "price": 10500,
+        "main": true
+      },
+      {
+        "name": "카라파이탄 라멘",
+        "price": 10500,
+        "main": true
+      },
+      {
+        "name": "마제소바",
+        "price": 10000,
+        "main": true
+      },
+      {
+        "name": "가라아게 4p",
+        "price": 4500,
+        "main": false
+      },
+      {
+        "name": "토리파이탄+1",
+        "price": 12000,
+        "main": true
+      },
+      {
+        "name": "카라파이탄+2",
+        "price": 13500,
+        "main": true
+      },
+      {
+        "name": "미니차슈덮밥",
+        "price": 3000,
+        "main": false
+      },
+      {
+        "name": "우롱차",
+        "price": 3000,
+        "main": false
+      },
+      {
+        "name": "콜라",
+        "price": 2000,
+        "main": false
+      },
+      {
+        "name": "사이다",
+        "price": 2000,
+        "main": false
+      },
+      {
+        "name": "기린이치방",
+        "price": 6000,
+        "main": false
+      },
+      {
+        "name": "카스",
+        "price": 3000,
+        "main": false
+      }
+    ],
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금",
+          "토",
+          "일"
+        ],
+        "open": "11:30",
+        "close": "15:00",
+        "lastOrder": "14:30"
+      },
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금",
+          "토",
+          "일"
+        ],
+        "open": "17:00",
+        "close": "20:30",
+        "lastOrder": "20:00"
+      }
+    ]
+  },
+  "hoursObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/1957531584/home",
+    "checkedAt": "2026-11-11",
+    "status": "confirmed",
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금",
+          "토",
+          "일"
+        ],
+        "open": "11:30",
+        "close": "15:00",
+        "lastOrder": "14:30"
+      },
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금",
+          "토",
+          "일"
+        ],
+        "open": "17:00",
+        "close": "20:30",
+        "lastOrder": "20:00"
+      }
+    ],
+    "note": "매장 영업시간 관찰. 기존 attrs/research를 덮어쓰지 않습니다."
+  },
+  "research": {
+    "checkedAt": "2026-11-11",
+    "method": "web",
+    "identityStatus": "matched",
+    "queries": [
+      "라멘 키노리 전대후문 전남광주 북구 호동로 9-1 1층"
+    ],
+    "sources": [
+      {
+        "id": "naver-place",
+        "url": "https://pcmap.place.naver.com/restaurant/1957531584/home",
+        "title": "라멘 키노리 전대후문 네이버 지도",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "같은 주소의 지점 확인. 지도 등록 확인은 실시간 영업 중 보증이 아님"
+      },
+      {
+        "id": "naver-menu",
+        "url": "https://pcmap.place.naver.com/restaurant/1957531584/menu",
+        "title": "라멘 키노리 전대후문 메뉴 탭",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "가격 맥락: in_store"
+      },
+      {
+        "id": "naver-hours",
+        "url": "https://pcmap.place.naver.com/restaurant/1957531584/home",
+        "title": "라멘 키노리 전대후문 영업시간",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "게시된 요일별 영업시간. 미확인은 추정하지 않음"
+      }
+    ],
+    "facts": {
+      "menus": {
+        "status": "confirmed",
+        "sourceIds": [
+          "naver-menu"
+        ],
+        "note": "매장 게시값을 확인했습니다.",
+        "value": [
+          {
+            "name": "토리파이탄 라멘",
+            "price": 10500,
+            "main": true
+          },
+          {
+            "name": "카라파이탄 라멘",
+            "price": 10500,
+            "main": true
+          },
+          {
+            "name": "마제소바",
+            "price": 10000,
+            "main": true
+          },
+          {
+            "name": "가라아게 4p",
+            "price": 4500,
+            "main": false
+          },
+          {
+            "name": "토리파이탄+1",
+            "price": 12000,
+            "main": true
+          },
+          {
+            "name": "카라파이탄+2",
+            "price": 13500,
+            "main": true
+          },
+          {
+            "name": "미니차슈덮밥",
+            "price": 3000,
+            "main": false
+          },
+          {
+            "name": "우롱차",
+            "price": 3000,
+            "main": false
+          },
+          {
+            "name": "콜라",
+            "price": 2000,
+            "main": false
+          },
+          {
+            "name": "사이다",
+            "price": 2000,
+            "main": false
+          },
+          {
+            "name": "기린이치방",
+            "price": 6000,
+            "main": false
+          },
+          {
+            "name": "카스",
+            "price": 3000,
+            "main": false
+          }
+        ]
+      },
+      "hours": {
+        "status": "confirmed",
+        "sourceIds": [
+          "naver-hours"
+        ],
+        "note": "매장 게시값을 확인했습니다.",
+        "value": [
+          {
+            "days": [
+              "월",
+              "화",
+              "수",
+              "목",
+              "금",
+              "토",
+              "일"
+            ],
+            "open": "11:30",
+            "close": "15:00",
+            "lastOrder": "14:30"
+          },
+          {
+            "days": [
+              "월",
+              "화",
+              "수",
+              "목",
+              "금",
+              "토",
+              "일"
+            ],
+            "open": "17:00",
+            "close": "20:30",
+            "lastOrder": "20:00"
+          }
+        ]
+      }
+    },
+    "unknownFields": [
+      "mealType",
+      "takeout",
+      "verifiedAt",
+      "verifiedBy",
+      "break"
+    ],
+    "notes": [
+      "네이버 공개 지도 상세·메뉴 탭 직접 확인.",
+      "음료·주류·후식·곁들임·다인분 공유 메뉴는 원문 메뉴 전체에 보존하되 1인 식사 가격 계산 main=false로 분류했다.",
+      "병합 입력: rear_batch2_manifest.json",
+      "공개 네이버 화면 관찰이며 현장 검증이 아닙니다."
+    ]
+  }
+}

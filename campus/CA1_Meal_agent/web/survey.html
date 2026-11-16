@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>식당 정보 입력 · 유니버스</title>
+  <link rel="stylesheet" href="assets/survey.css">
+  <script src="assets/survey.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#editor">입력 영역으로 건너뛰기</a>
+<header><a class="brand" href="./">유니버스 <small>Univ-Us</small></a><a href="./">식사 추천으로 돌아가기 ↗</a></header>
+<main>
+  <div class="page-title"><div><p class="eyebrow">식당 조사 입력함</p><h1>빈 정보를 함께 채워요</h1><p class="muted">식당을 고르고, 직접 확인한 메뉴·매장 가격·영업시간을 입력해 주세요.</p></div><button type="button" id="overview-open">식당별 미확인 항목표</button></div>
+  <div class="stats" aria-label="조사 진행 현황"><div><span>추가 확인 식당</span><strong id="count-total">—</strong></div><div><span>메뉴·가격 확인 필요</span><strong id="count-menus">—</strong></div><div><span>영업시간 확인 필요</span><strong id="count-hours">—</strong></div><div><span>입력 저장</span><strong id="count-saved">—</strong></div></div>
+  <p class="workflow">입력 저장 → 제가 내용·출처 검토 → 추천용 JSON 반영 <span>일부만 입력해도 저장할 수 있습니다.</span></p>
+  <div id="page-error" class="error" role="alert" hidden></div>
+  <div class="workspace">
+    <aside class="panel"><div class="list-head"><h2>확인이 필요한 식당</h2><span id="list-count" class="muted"></span></div>
+      <label class="sr-only" for="search">식당 이름 검색</label><input id="search" type="search" placeholder="식당 이름 검색" autocomplete="off">
+      <div class="filters"><label class="sr-only" for="district">식당가 선택</label><select id="district"><option value="">모든 식당가</option><option>후문</option><option>상대</option><option>정문</option><option>예대</option></select><label class="sr-only" for="filter">확인 항목 선택</label><select id="filter"><option value="">전체 항목</option><option value="hours-only">영업시간만</option><option value="menus-only">메뉴·가격만</option><option value="both">둘 다 미확인</option><option value="menus">메뉴·가격 필요</option><option value="hours">영업시간 필요</option><option value="empty">아직 미입력</option><option value="saved">입력 저장됨</option></select></div>
+      <nav id="place-list" aria-label="조사할 식당 목록"><p class="muted">식당을 불러오고 있습니다…</p></nav>
+    </aside>
+    <section class="panel editor" id="editor" aria-label="식당 정보 입력">
+      <div id="empty"><h2>왼쪽에서 식당을 선택해 주세요</h2><p class="muted">필요한 항목과 기존 조사 내용을 함께 볼 수 있습니다.</p></div>
+      <div id="editing" hidden>
+        <div class="detail-head"><div><span id="place-district" class="badge"></span><h2 id="place-name" tabindex="-1"></h2><p id="place-address" class="muted"></p></div><a id="map-link" target="_blank" rel="noreferrer">네이버 지도 ↗</a></div>
+        <div id="missing-info" class="missing-info"></div>
+        <details id="reference"><summary>기존에 확인한 내용 · 참고 자료</summary><div id="reference-body"></div></details>
+        <p id="input-scope" class="help">미확인 항목만 입력할 수 있습니다. 확인된 내용은 위 참고 자료에서 볼 수 있습니다.</p>
+        <form id="survey-form">
+          <section class="form-section"><h3>확인한 자료</h3><div class="two"><label>확인일<input type="date" id="checked-at"></label><label>확인 방법<select id="method"><option value="unknown">아직 선택 안 함</option><option value="store_menu">매장 메뉴판 사진</option><option value="visit">직접 방문</option><option value="phone">매장 전화</option><option value="official">매장 공식 홈페이지·SNS</option><option value="map">지도 게시 정보</option></select></label></div>
+            <label for="sources">출처 링크 <span class="muted">한 줄에 하나씩</span></label><textarea id="sources" rows="2" placeholder="메뉴판 사진 또는 매장 정보 링크"></textarea>
+          </section>
+          <section id="menus-section" class="form-section"><div class="section-head"><h3>메뉴·가격</h3><button id="add-menu" type="button" class="small-button">+ 메뉴 추가</button></div><p class="help">가격을 모르면 비워 두세요. 고기 중량·몇 인분·점심 한정 등의 조건은 메모에 적어 주세요.</p>
+            <label for="price-context">입력한 가격 기준</label><select id="price-context"><option value="unknown">아직 확인 안 됨</option><option value="in_store">매장 가격</option><option value="delivery">배달 가격 · 추천 미적용</option></select>
+            <div id="menu-rows"></div>
+            <label class="check"><input type="checkbox" id="menus-confirmed">매장 기준 주 식사 메뉴와 가격을 확인했어요</label>
+          </section>
+          <section id="hours-section" class="form-section"><div class="section-head"><h3>요일별 영업시간</h3><button id="add-hours" type="button" class="small-button">+ 시간 구간 추가</button></div><p class="help">같은 시간인 요일을 묶어 주세요. 새벽 마감도 입력할 수 있습니다. 점심·저녁 시간이 다르면 구간을 나눠 주세요.</p>
+            <div id="hour-rows"></div>
+            <fieldset class="closed"><legend>매주 휴무로 확인된 요일</legend><div id="closed-days" class="days"></div></fieldset>
+            <label for="hours-note">휴무·시간 관련 메모</label><textarea id="hours-note" rows="2" placeholder="예: 둘째·넷째 월요일 휴무 / 매장 마감과 배달 마감이 다름"></textarea>
+            <label class="check"><input type="checkbox" id="hours-confirmed">월~일 영업 또는 휴무를 모두 확인했어요</label>
+          </section>
+          <section class="form-section"><label for="notes">추가 메모</label><textarea id="notes" rows="3" placeholder="방문·전화 확인 내용, 아직 불명확한 점 등을 적어 주세요."></textarea></section>
+          <div class="save-bar"><div><p id="save-status" role="status" aria-live="polite">아직 저장하지 않았습니다.</p><p class="help">저장 후에도 추천 목록은 검토·반영 전까지 그대로입니다.</p></div><button id="save" class="primary" type="submit">입력 내용 저장</button></div>
+          <div id="form-error" class="error" role="alert" hidden></div>
+        </form>
+      </div>
+    </section>
+  </div>
+</main>
+<dialog id="overview" aria-labelledby="overview-title"><div class="dialog-heading"><div><h2 id="overview-title">식당별 미확인 항목</h2><p class="help">가격·시간 항목은 서로 겹칠 수 있습니다. 식당을 누르면 입력 화면으로 이동합니다.</p></div><button id="overview-close" type="button" aria-label="미확인 항목표 닫기">닫기 ✕</button></div><div class="tablewrap"><table><thead><tr><th>식당</th><th>식당가</th><th>추가 확인할 정보</th><th>입력 상태</th></tr></thead><tbody id="overview-body"></tbody></table></div></dialog>
+</body>
+</html>

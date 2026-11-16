@@ -1,0 +1,182 @@
+{
+  "version": 1,
+  "id": "p_0084",
+  "name": "돈부리가게",
+  "category": "일식",
+  "lat": 35.1779563113815,
+  "lng": 126.903644857344,
+  "address": "광주 북구 설죽로214번길 109 1층",
+  "source": "semas",
+  "sourceId": "MA0101202508A0008587",
+  "sourceStatus": "active",
+  "attrs": {
+    "status": "partial",
+    "menus": [
+      {
+        "name": "오야꼬동",
+        "price": 6000,
+        "main": true
+      },
+      {
+        "name": "믹스동",
+        "price": 7000,
+        "main": true
+      },
+      {
+        "name": "돈까스카레",
+        "price": 6500,
+        "main": true
+      }
+    ],
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금"
+        ],
+        "open": "10:00",
+        "close": "20:00",
+        "lastOrder": "19:30"
+      }
+    ]
+  },
+  "research": {
+    "identityStatus": "matched",
+    "queries": [
+      "\"돈부리가게\" \"설죽로214번길\""
+    ],
+    "sources": [
+      {
+        "id": "s1",
+        "url": "https://www.diningcode.com/profile.php?rid=H0BejhjXnkKy",
+        "title": "돈부리가게 설죽로214번길109",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "상호와 도로명 주소를 대조함. URL을 직접 열어 주소와 본문을 확인함."
+      }
+    ],
+    "facts": {
+      "menus": {
+        "status": "confirmed",
+        "value": [
+          {
+            "name": "오야꼬동",
+            "price": 6000,
+            "main": true
+          },
+          {
+            "name": "믹스동",
+            "price": 7000,
+            "main": true
+          },
+          {
+            "name": "돈까스카레",
+            "price": 6500,
+            "main": true
+          }
+        ],
+        "sourceIds": [
+          "s1"
+        ],
+        "note": "주소가 일치하는 지점 페이지에 게시된 메뉴·가격. 실제 결제 가격은 현장 재확인 필요."
+      },
+      "hours": {
+        "status": "conflict",
+        "sourceIds": [
+          "s1"
+        ],
+        "note": "본문 주간 정보는 평일 10:00~20:00·마지막 주문 19:30·주말 휴무, 검색 결과는 19:00 종료·마지막 주문 18:30을 제시함. 최신 마감시간 재확인 필요."
+      }
+    },
+    "notes": [
+      "설죽로214번길122의옛주소자료는현재109주소와혼합하지않음."
+    ],
+    "checkedAt": "2026-11-11",
+    "method": "web",
+    "unknownFields": [
+      "hours",
+      "mealType",
+      "takeout",
+      "verifiedAt",
+      "verifiedBy",
+      "break",
+      "lastOrder"
+    ]
+  },
+  "availability": {
+    "status": "listed",
+    "provider": "naver",
+    "checkedAt": "2026-11-11",
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/1905749016/home",
+    "naverPlaceId": "1905749016",
+    "observedName": "돈부리가게",
+    "observedAddress": "광주 북구 설죽로214번길 109 1층",
+    "district": "상대",
+    "addressVerified": true,
+    "nearby": true,
+    "reason": "공개 네이버 지도에서 동일 주소의 전남대 상대 식당으로 확인"
+  },
+  "menuObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/1905749016/menu/list",
+    "checkedAt": "2026-11-11",
+    "priceContext": "in_store",
+    "menus": [
+      {
+        "name": "믹스동",
+        "price": 7000,
+        "main": true,
+        "priceContext": "in_store"
+      },
+      {
+        "name": "치즈가쯔동",
+        "price": 7500,
+        "main": true,
+        "priceContext": "in_store"
+      },
+      {
+        "name": "오야꼬동",
+        "price": 6000,
+        "main": true,
+        "priceContext": "in_store"
+      },
+      {
+        "name": "돈까스카레",
+        "price": 6500,
+        "main": true,
+        "priceContext": "in_store"
+      },
+      {
+        "name": "등심까스",
+        "price": 6000,
+        "main": true,
+        "priceContext": "in_store"
+      }
+    ],
+    "note": "메뉴 상태: confirmed. 원본 관찰·좌표 출처는 적용 manifest에 보관합니다.",
+    "status": "confirmed"
+  },
+  "hoursObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/1905749016/home",
+    "checkedAt": "2026-11-11",
+    "status": "confirmed",
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금"
+        ],
+        "open": "10:00",
+        "close": "20:00",
+        "lastOrder": "19:30"
+      }
+    ],
+    "note": "매장 영업시간 관찰. 기존 attrs/research를 덮어쓰지 않습니다."
+  }
+}

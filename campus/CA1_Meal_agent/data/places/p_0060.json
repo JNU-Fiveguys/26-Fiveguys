@@ -1,0 +1,73 @@
+{
+  "version": 1,
+  "id": "p_0060",
+  "name": "피자플렉스 전남대점",
+  "category": "양식",
+  "lat": 35.177069,
+  "lng": 126.899299,
+  "address": "전남광주통합특별시 북구 설죽로202번길 34-4",
+  "source": "semas",
+  "sourceId": "MA0101202211A0068738",
+  "sourceStatus": "active",
+  "attrs": {
+    "status": "partial"
+  },
+  "research": {
+    "identityStatus": "matched",
+    "queries": [
+      "\"피자플렉스 전남대점\" 메뉴 영업시간",
+      "\"피자플렉스\" \"전남대\" 가격 영업시간",
+      "피자플렉스 전남대점 광주 설죽로202 34-4",
+      "\"피자플렉스 전남대점\""
+    ],
+    "sources": [
+      {
+        "id": "s1",
+        "url": "https://acs.purpleo.kr/article/8249",
+        "title": "피자플렉스 전남대점 상가정보",
+        "type": "directory",
+        "addressMatch": true,
+        "note": "sourceId 및주소일치. 지점가격시간없음.",
+        "observedAt": "2026-11-11"
+      }
+    ],
+    "facts": {
+      "menus": {
+        "status": "unconfirmed",
+        "sourceIds": [],
+        "note": "동일 지점의 메뉴와 현행 가격을 확인하지 못함. 값은 생성하지 않음."
+      },
+      "hours": {
+        "status": "unconfirmed",
+        "sourceIds": [],
+        "note": "동일 지점의 요일별 영업시간·휴무를 확인하지 못함. 임의 시간 입력하지 않음."
+      }
+    },
+    "notes": [],
+    "checkedAt": "2026-11-11",
+    "method": "web",
+    "unknownFields": [
+      "menus",
+      "hours",
+      "mealType",
+      "takeout",
+      "verifiedAt",
+      "verifiedBy",
+      "break",
+      "lastOrder"
+    ]
+  },
+  "availability": {
+    "status": "excluded",
+    "provider": "naver",
+    "checkedAt": "2026-11-11",
+    "sourceUrl": "https://map.naver.com/p/search/%EC%A0%84%EB%82%A8%EB%8C%80%20%EC%9D%8C%EC%8B%9D%EC%A0%90",
+    "naverPlaceId": null,
+    "observedName": "",
+    "observedAddress": "",
+    "district": null,
+    "addressVerified": false,
+    "nearby": false,
+    "reason": "네이버 지도에서 확인한 네 식당가 명단에 포함되지 않아 제외"
+  }
+}

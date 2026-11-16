@@ -1,0 +1,187 @@
+{
+  "version": 1,
+  "id": "p_0127",
+  "source": "team",
+  "sourceId": "naver:1037261717",
+  "name": "후토루 전대후문점",
+  "address": "전남광주 북구 호동로 6-3 1층 후토루",
+  "category": "분식",
+  "lat": 35.1744845488226,
+  "lng": 126.913550813211,
+  "sourceStatus": "active",
+  "availability": {
+    "status": "listed",
+    "provider": "naver",
+    "checkedAt": "2026-11-11",
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/1037261717/home",
+    "naverPlaceId": "1037261717",
+    "observedName": "후토루 전대후문점",
+    "observedAddress": "전남광주 북구 호동로 6-3 1층 후토루",
+    "district": "후문",
+    "addressVerified": true,
+    "nearby": true,
+    "reason": "공개 네이버 지도에서 동일 주소의 전남대 후문 식당으로 확인"
+  },
+  "menuObservation": {
+    "sourceUrl": "https://blog.naver.com/kswze7/224337808590",
+    "placeSourceUrl": "https://pcmap.place.naver.com/restaurant/1037261717/home",
+    "sourceAddress": "전남광주 북구 호동로 6-3 1층 후토루",
+    "sourcePublishedAt": "2026-07-06",
+    "checkedAt": "2026-11-12",
+    "priceContext": "in_store",
+    "status": "confirmed",
+    "menus": [
+      {
+        "name": "지단후토마키",
+        "price": 8900,
+        "main": true
+      },
+      {
+        "name": "참치그린키토",
+        "price": 10500,
+        "main": true
+      },
+      {
+        "name": "크림파스타",
+        "price": 12900,
+        "main": true
+      }
+    ],
+    "note": "동일 지점·주소의 매장 방문 자료에서 읽히는 메뉴·가격만 반영. 게시 이후 변경 가능하며 현장 현재 가격 보증은 아님."
+  },
+  "attrs": {
+    "status": "partial",
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금",
+          "토",
+          "일"
+        ],
+        "open": "11:30",
+        "close": "20:00"
+      }
+    ],
+    "menus": [
+      {
+        "name": "지단후토마키",
+        "price": 8900,
+        "main": true
+      },
+      {
+        "name": "참치그린키토",
+        "price": 10500,
+        "main": true
+      },
+      {
+        "name": "크림파스타",
+        "price": 12900,
+        "main": true
+      }
+    ]
+  },
+  "hoursObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/1037261717/home",
+    "checkedAt": "2026-11-12",
+    "status": "confirmed",
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금",
+          "토",
+          "일"
+        ],
+        "open": "11:30",
+        "close": "20:00"
+      }
+    ],
+    "note": "매장 영업시간 관찰. 기존 attrs/research를 덮어쓰지 않습니다."
+  },
+  "research": {
+    "checkedAt": "2026-11-11",
+    "method": "web",
+    "identityStatus": "matched",
+    "queries": [
+      "후토루 전대후문점 전남광주 북구 호동로 6-3 1층 후토루"
+    ],
+    "sources": [
+      {
+        "id": "naver-place",
+        "url": "https://pcmap.place.naver.com/restaurant/1037261717/home",
+        "title": "후토루 전대후문점 네이버 지도",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "같은 주소의 지점 확인. 지도 등록 확인은 실시간 영업 중 보증이 아님"
+      },
+      {
+        "id": "naver-menu",
+        "url": "https://pcmap.place.naver.com/restaurant/1037261717/menu",
+        "title": "후토루 전대후문점 메뉴 탭",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "가격 맥락: delivery"
+      },
+      {
+        "id": "naver-hours",
+        "url": "https://pcmap.place.naver.com/restaurant/1037261717/home",
+        "title": "후토루 전대후문점 영업시간",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "게시된 요일별 영업시간. 미확인은 추정하지 않음"
+      }
+    ],
+    "facts": {
+      "menus": {
+        "status": "unconfirmed",
+        "sourceIds": [],
+        "note": "매장 기준 정보 미확인. 배달·가격 맥락 불명 자료는 확정하지 않습니다."
+      },
+      "hours": {
+        "status": "unconfirmed",
+        "sourceIds": [],
+        "note": "매장 기준 정보 미확인. 배달·가격 맥락 불명 자료는 확정하지 않습니다."
+      }
+    },
+    "unknownFields": [
+      "menus",
+      "hours",
+      "mealType",
+      "takeout",
+      "verifiedAt",
+      "verifiedBy",
+      "break",
+      "lastOrder"
+    ],
+    "notes": [
+      "네이버 공개 지도 상세·메뉴 탭 직접 확인.",
+      "공개 메뉴는 배달 가격만 확인됨. 매장 가격으로 승격하지 않으며 예산·대표가격에 사용하지 않음.",
+      "전체 공개 메뉴 탭의 메뉴명·가격을 보존. 가격 범위·변동은 price=null 및 priceText로 보관.",
+      "출입구에서 실제 도보 10분 이내 여부는 별도 OSM 경로 감사 대기. 이 파일의 주소 좌표 일치가 거리 통과를 의미하지 않음.",
+      "영업시간 원문은 rear_batch7.json에 보존. 확인되지 않은 브레이크·라스트오더는 생성하지 않음.",
+      "병합 입력: rear_batch7_manifest.json",
+      "공개 네이버 화면 관찰이며 현장 검증이 아닙니다."
+    ]
+  },
+  "followupReview": {
+    "checkedAt": "2026-11-12",
+    "reasons": [
+      "공개 매장 식사 가격과 요일별 영업시간을 연결하여 추천 대상으로 전환했습니다."
+    ],
+    "sources": [
+      "https://pcmap.place.naver.com/restaurant/1037261717/home",
+      "https://pcmap.place.naver.com/restaurant/1037261717/menu/list",
+      "https://blog.naver.com/kswze7/224337808590"
+    ]
+  }
+}

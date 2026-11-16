@@ -15,7 +15,6 @@ const MAX_SIZE = 160;
 const MASCOT_IMAGE = "/images/jeonryong-spoon-fork-3d.png";
 
 // CA1의 화면과 상태를 그대로 보존한다. 앱의 학사 페이지에는 버튼만 추가한다.
-// (김종연 integration/pr4-local 에서 가져옴 — 화면 주소만 은지 CA1 의 /api/meal/ui 로 바꿈)
 export default function MealLauncher() {
   const pathname = usePathname();
   const dialog = useRef<HTMLDialogElement>(null);
@@ -131,7 +130,7 @@ export default function MealLauncher() {
               <X size={22} aria-hidden />
             </button>
           </header>
-          {loaded && <iframe className={styles.frame} src="/api/meal/ui" title="공강 식사 추천 화면" />}
+          {loaded && <iframe className={styles.frame} src="/api/meal/" title="기존 식당 추천 화면" />}
         </div>
       </dialog>
     </>

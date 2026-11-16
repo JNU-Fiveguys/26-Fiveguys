@@ -1,0 +1,265 @@
+{
+  "version": 1,
+  "id": "p_0069",
+  "name": "서울깍두기 전남대점",
+  "category": "국밥·찌개",
+  "lat": 35.1746463211208,
+  "lng": 126.912891980357,
+  "address": "전남광주 북구 우치로 80 1층 104호",
+  "source": "semas",
+  "sourceId": "MA0101202406A0022005",
+  "sourceStatus": "active",
+  "attrs": {
+    "status": "partial",
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금",
+          "토",
+          "일"
+        ],
+        "open": "00:00",
+        "close": "24:00"
+      }
+    ],
+    "menus": [
+      {
+        "name": "찐~한 우사골의 깊은맛 '설렁탕'",
+        "price": 13000,
+        "main": true
+      },
+      {
+        "name": "부드러운 양지고기의 품격 ‘특설렁탕’",
+        "price": 16000,
+        "main": true
+      },
+      {
+        "name": "매콤칼칼 해장 한 그릇 ‘얼큰설렁탕’",
+        "price": 14000,
+        "main": true
+      },
+      {
+        "name": "몸보신에 제격 일품 '갈비탕'",
+        "price": 22000,
+        "main": true
+      },
+      {
+        "name": "쫀득함 최상위, 고급진맛 '도가니탕'",
+        "price": 23000,
+        "main": true
+      },
+      {
+        "name": "기력충전 보양 한 그릇 ‘꼬리곰탕’",
+        "price": 25000,
+        "main": true
+      },
+      {
+        "name": "여름 보양 대표 메뉴 ‘사골삼계탕’",
+        "price": 19000,
+        "main": true
+      },
+      {
+        "name": "풍부한 육즙 가득 '한우소불고기'",
+        "price": 25000,
+        "main": false
+      },
+      {
+        "name": "수육 (기본 사골육수 제공)",
+        "price": 63000,
+        "main": false
+      },
+      {
+        "name": "소갈비찜 (기본 사골육수 제공)",
+        "price": 63000,
+        "main": false
+      },
+      {
+        "name": "매콤새콤 입맛 돋우는 ‘도가니무침’",
+        "price": 24000,
+        "main": false
+      },
+      {
+        "name": "담백하고 부드러운 별미 ‘양지수육’",
+        "price": 25000,
+        "main": false
+      }
+    ]
+  },
+  "research": {
+    "identityStatus": "matched",
+    "queries": [
+      "서울깍두기 전남대점 우치로 80 메뉴 가격 영업시간",
+      "\"서울깍두기\" \"전남대점\""
+    ],
+    "sources": [
+      {
+        "id": "s1",
+        "url": "https://www.diningcode.com/profile.php?rid=extjIWtDUJpl",
+        "title": "서울깍두기 전남대점 매장 정보",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "상호와 도로명 주소를 대조함. URL을 직접 열어 주소와 본문을 확인함."
+      },
+      {
+        "id": "s2",
+        "url": "https://www.seoggagmall.com/23",
+        "title": "서울깍두기 공식 전국 매장",
+        "type": "official",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "공식 매장 페이지 URL을 직접 열어 전남대점 상호·우치로 80 주소·매일 00:00~24:00 연중무휴 게시 내용을 확인함."
+      }
+    ],
+    "facts": {
+      "menus": {
+        "status": "conflict",
+        "sourceIds": [
+          "s1"
+        ],
+        "note": "본문에는 설렁탕 13,000원·특설렁탕 16,000원·얼큰설렁탕 14,000원, 같은 URL의 검색 결과에는 각각 12,000원·15,000원·13,000원이 표시되어 가격 충돌. 최신 지점 메뉴판 재확인 전 구조값을 확정하지 않음."
+      },
+      "hours": {
+        "status": "confirmed",
+        "value": [
+          {
+            "days": [
+              "월",
+              "화",
+              "수",
+              "목",
+              "금",
+              "토",
+              "일"
+            ],
+            "open": "00:00",
+            "close": "24:00"
+          }
+        ],
+        "sourceIds": [
+          "s2"
+        ],
+        "note": "공식 전국 매장 페이지에서 우치로 80 전남대점 매일 00:00~24:00, 연중무휴를 확인."
+      }
+    },
+    "notes": [],
+    "checkedAt": "2026-11-11",
+    "method": "web",
+    "unknownFields": [
+      "menus",
+      "mealType",
+      "takeout",
+      "verifiedAt",
+      "verifiedBy",
+      "break",
+      "lastOrder"
+    ]
+  },
+  "availability": {
+    "status": "listed",
+    "provider": "naver",
+    "checkedAt": "2026-11-11",
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/1303402941/home",
+    "naverPlaceId": "1303402941",
+    "observedName": "서울깍두기 전남대점",
+    "observedAddress": "전남광주 북구 우치로 80 1층 104호",
+    "district": "후문",
+    "addressVerified": true,
+    "nearby": true,
+    "reason": "공개 네이버 지도에서 동일 주소의 전남대 후문 식당으로 확인"
+  },
+  "menuObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/1303402941/menu/list",
+    "checkedAt": "2026-11-11",
+    "priceContext": "in_store",
+    "menus": [
+      {
+        "name": "찐~한 우사골의 깊은맛 '설렁탕'",
+        "price": 13000,
+        "main": true
+      },
+      {
+        "name": "부드러운 양지고기의 품격 ‘특설렁탕’",
+        "price": 16000,
+        "main": true
+      },
+      {
+        "name": "매콤칼칼 해장 한 그릇 ‘얼큰설렁탕’",
+        "price": 14000,
+        "main": true
+      },
+      {
+        "name": "몸보신에 제격 일품 '갈비탕'",
+        "price": 22000,
+        "main": true
+      },
+      {
+        "name": "쫀득함 최상위, 고급진맛 '도가니탕'",
+        "price": 23000,
+        "main": true
+      },
+      {
+        "name": "기력충전 보양 한 그릇 ‘꼬리곰탕’",
+        "price": 25000,
+        "main": true
+      },
+      {
+        "name": "여름 보양 대표 메뉴 ‘사골삼계탕’",
+        "price": 19000,
+        "main": true
+      },
+      {
+        "name": "풍부한 육즙 가득 '한우소불고기'",
+        "price": 25000,
+        "main": false
+      },
+      {
+        "name": "수육 (기본 사골육수 제공)",
+        "price": 63000,
+        "main": false
+      },
+      {
+        "name": "소갈비찜 (기본 사골육수 제공)",
+        "price": 63000,
+        "main": false
+      },
+      {
+        "name": "매콤새콤 입맛 돋우는 ‘도가니무침’",
+        "price": 24000,
+        "main": false
+      },
+      {
+        "name": "담백하고 부드러운 별미 ‘양지수육’",
+        "price": 25000,
+        "main": false
+      }
+    ],
+    "note": "메뉴 상태: confirmed. 원본 관찰·좌표 출처는 적용 manifest에 보관합니다.",
+    "status": "confirmed"
+  },
+  "hoursObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/1303402941/home",
+    "checkedAt": "2026-11-11",
+    "status": "confirmed",
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금",
+          "토",
+          "일"
+        ],
+        "open": "00:00",
+        "close": "24:00"
+      }
+    ],
+    "note": "매장 영업시간 관찰. 기존 attrs/research를 덮어쓰지 않습니다."
+  }
+}

@@ -1,236 +1,419 @@
-"""추천 순위 — 정의서 CA1 4-라 · 5절 · 수용 기준을 가짜 식당으로 고정한다."""
+import copy
+import json
+from itertools import permutations
+from functools import partial
 
 import pytest
 
-from meal.ranking import MealRequest, Place, Taste, Weights, recommend
-from meal.timing import MealType
+from meal.places import SAMPLES_DIR, check_dirs
+from meal.ranking import Filters, MealContext, TasteSummary, _features, rank
+from meal.routing import EstimateRouter
+from meal.settings import SETTINGS_PATH, Settings, load_settings, to_min
+from meal.timing import compute
 
-O = (35.1765, 126.9055)          # 출발 = 다음 건물(같은 건물로 돌아온다)
-WED = 2
-# 위도 0.001도 ≈ 111m → 도보 = ceil(m × 1.3 / 70)
-NEAR, MID, FAR = 0.0015, 0.003, 0.006    # 도보 4분 · 7분 · 13분
-LUNCH_HOURS = {WED: [(11 * 60, 15 * 60), (17 * 60, 21 * 60)]}   # 15:00~17:00 브레이크
-
-
-def place(pid, category="한식", meal_type=MealType.REGULAR, dlat=NEAR, **kw):
-    attrs = dict(price_band="A", solo_ok=True, seats="M", hours=LUNCH_HOURS)
-    attrs.update(kw)
-    return Place(pid, pid, category, meal_type, O[0] + dlat, O[1], **attrs)
+WED, SUN = 2, 6
+CENTER = (35.1765, 126.9095)
+PLACES = check_dirs([SAMPLES_DIR]).places
+# 점수 정책 회귀는 보행망 갱신과 분리한다. OSM 통합은 test_route_integration에서 검증한다.
+rank = partial(rank, router=EstimateRouter())
 
 
-def req(**kw):
-    base = dict(slot_start=11 * 60, slot_min=100, weekday=WED, origin=O, dest=O)
-    base.update(kw)
-    return MealRequest(**base)
+def ctx(start="11:50", end="13:30", day=WED, **kw):
+    return MealContext(weekday=day, start=to_min(start), end=to_min(end) if end else None,
+                       origin=CENTER, dest=CENTER, **kw)
 
 
 def ids(cands):
-    return [c.placeId for c in cands]
+    return [c.place_id for c in cands]
 
 
-# --- 기본 ---------------------------------------------------------------------
-
-def test_three_places_with_times_and_chips():
-    r = recommend([place("kor"), place("jpn", "일식", dlat=MID), place("snack", "분식", MealType.QUICK, dlat=FAR)], req())
-    assert len(r.top) == 3 and not r.more and not r.tight
-    kor = next(c for c in r.top if c.placeId == "kor")
-    # 도보 4 + 대기 3 + 식사 30 + 돌아오는 도보 4 + 여유 5
-    assert (kor.walkToMin, kor.walkBackMin, kor.needMin, kor.slackMin, kor.fit) == (4, 4, 46, 54, "ok")
-    assert kor.openUntil == "15:00"
-    assert 2 <= len(kor.reasons) <= 3 and "혼밥 OK" in kor.reasons
+def all_ids(r):
+    return set(ids(r.top) + ids(r.more) + ids(r.tight) + ids(r.cafeteria))
 
 
-def test_same_input_same_output():  # CA1-R30
-    ps = [place(f"p{i}", c, dlat=d) for i, (c, d) in enumerate([("한식", NEAR), ("일식", MID), ("중식", MID), ("양식", FAR)])]
-    assert recommend(ps, req()) == recommend(list(ps), req())
+def place_variant(pid, category, *, meters=0, tags=(), meal_type="일반"):
+    p = copy.deepcopy(next(p for p in PLACES if p["id"] == "s_01"))
+    p.update(id=pid, category=category, lat=CENTER[0] + meters / 111_195, lng=CENTER[1])
+    p["attrs"].update(tags=list(tags), mealType=meal_type)
+    return p
 
 
-def test_no_attrs_never_recommended():  # CA1-R11
-    r = recommend([place("x", price_band=None), place("y", hours=None), place("ok")], req())
-    assert ids(r.top) == ["ok"]
-    assert r.excluded["정보 없음"] == 2
+# ── 기본 동작 ───────────────────────────────────────────────
+
+def test_top3_and_cafeteria_separate():
+    r = rank(PLACES, ctx())
+    assert len(r.top) == 3
+    assert ids(r.cafeteria) == ["s_08"]
+    assert "s_08" not in ids(r.top) + ids(r.more)
 
 
-# --- 반드시 빼는 것 ----------------------------------------------------------
-
-def test_break_time_excluded():  # CA1-R13 — 15:00~17:00 브레이크인 곳이 15:30 추천에 없다
-    r = recommend([place("brk")], req(slot_start=15 * 60 + 30, slot_min=120))
-    assert r.top == () and r.excluded == {"영업 아님": 1}
-
-
-def test_meal_must_finish_before_break():
-    # 14:20 출발 → 14:24 도착 → 14:57 식사 끝(대기 3 · 식사 30) → 15:00 브레이크 전이라 OK
-    assert ids(recommend([place("a")], req(slot_start=14 * 60 + 20)).top) == ["a"]
-    # 14:25 출발 → 15:02 끝 → 브레이크에 걸림
-    assert recommend([place("a")], req(slot_start=14 * 60 + 25)).excluded == {"영업 아님": 1}
+def test_deterministic():
+    a = rank(PLACES, ctx()).to_dict()
+    b = rank(list(reversed(PLACES)), ctx()).to_dict()
+    assert a == b
 
 
-def test_last_order_excluded():
-    # 점심 구간 라스트오더 13:50 — 13:46 도착은 OK, 13:56 도착은 주문 마감
-    lo = {WED: [13 * 60 + 50, 20 * 60 + 30]}
-    assert ids(recommend([place("a", last_order=lo)], req(slot_start=13 * 60 + 42)).top) == ["a"]
-    assert recommend([place("a", last_order=lo)], req(slot_start=13 * 60 + 52)).excluded == {"주문 마감": 1}
-    # 저녁 구간은 그 구간의 라스트오더(20:30)를 본다
-    assert ids(recommend([place("a", last_order=lo)], req(slot_start=17 * 60)).top) == ["a"]
+def test_scores_sorted_desc_in_more():
+    r = rank(PLACES, ctx())
+    scores = [c.score for c in r.more]
+    assert scores == sorted(scores, reverse=True)
 
 
-def test_last_order_after_midnight_ignored():
-    # 새벽 00:40 라스트오더는 자정에서 끊은 구간 밖 → 무시
-    p = place("late", hours={WED: [(11 * 60, 1440)]}, last_order={WED: [40]})
-    assert ids(recommend([p], req(slot_start=20 * 60)).top) == ["late"]
+def test_excluded_counts_sum_to_total():
+    r = rank(PLACES, ctx())
+    assert sum(r.excluded.values()) + len(all_ids(r)) == len(PLACES)
 
 
-def test_hours_unknown_kept_with_chip():
-    # 영업시간을 모르는 곳은 하루 종일 연 것으로 두고, 카드에 '영업시간 확인 필요' 칩 · 마감 시각은 비운다
-    allday = {d: [(0, 1440)] for d in range(7)}
-    c = recommend([place("u", hours=allday, hours_unknown=True)], req(slot_start=16 * 60)).top[0]
-    assert c.reasons[0] == "영업시간 확인 필요" and c.openUntil == ""
+# ── 반드시 빼기 ─────────────────────────────────────────────
+
+def test_no_info_excluded_without_solo_or_party_policy():
+    r = rank(PLACES, ctx())
+    assert "s_06" not in all_ids(r) and r.excluded["noInfo"] == 1
+    assert "solo" not in r.excluded and "party" not in r.excluded
 
 
-def test_router_replaces_straight_line():
-    # 길 거리를 주면 우회 계수 없이 ⌈m ÷ 70⌉ — 직선으로는 도보 4분이지만 길로 700m 면 10분
-    c = recommend([place("a")], req(), router=lambda a, b: 700.0).top[0]
-    assert (c.walkToMin, c.walkBackMin) == (10, 10)
-    # 길이 이어지지 않으면(None) 직선 × 1.3 으로 돌아간다
-    c = recommend([place("a")], req(), router=lambda a, b: None).top[0]
-    assert c.walkToMin == 4
+def test_closed_excluded_sunday():
+    r = rank(PLACES, ctx(day=SUN, start="12:00", end="14:00"))
+    assert {"s_01", "s_02", "s_03", "s_08"}.isdisjoint(all_ids(r))
+    assert r.excluded["closed"] >= 4
 
 
-def test_closed_day_excluded():
-    assert recommend([place("a")], req(weekday=6)).excluded == {"영업 아님": 1}
+def test_over_time_excluded_short_gap():
+    r = rank(PLACES, ctx(start="11:00", end="11:40"))
+    assert "s_07" not in all_ids(r)
+    assert r.excluded["overTime"] >= 1
 
 
-def test_time_out_and_tight():  # D5 · CA1-R21
-    ps = [place("near"), place("far", dlat=FAR)]   # 필요 46분 · 64분
-    r = recommend(ps, req(slot_min=60))
-    assert ids(r.top) == ["near"]
-    assert ids(r.tight) == ["far"] and r.tight[0].fit == "tight" and r.tight[0].slackMin == -4
-    r = recommend(ps, req(slot_min=58))
-    assert r.excluded == {"시간 초과": 1}
+def test_tight_listed_separately():
+    # s_07: 필요 91분(피크 대기) — 공강 88분이면 3분 초과 → 빠듯
+    r = rank(PLACES, ctx(start="11:50", end="13:18"))
+    assert "s_07" in ids(r.tight)
+    assert "s_07" not in ids(r.top) + ids(r.more)
 
 
-def test_last_block_no_return_walk():  # CA1-R04
-    c = recommend([place("a")], req(dest=None)).top[0]
-    assert (c.walkBackMin, c.needMin) == (None, 42)
+def test_never_again():
+    r = rank(PLACES, ctx(), taste=TasteSummary(never=frozenset({"s_01"})))
+    assert "s_01" not in all_ids(r) and r.excluded["never"] == 1
 
 
-def test_explicit_budget_excludes_default_budget_only_scores():  # CA1-R05 · 5절
-    ps = [place("cheap", price_band="A"), place("pricey", "일식", price_band="C")]
-    r = recommend(ps, req(budget=7000))
-    assert ids(r.top) == ["cheap"] and r.excluded == {"예산 초과": 1}
-    r = recommend(ps, req(), Taste(budget_default=7000))
-    assert ids(r.top) == ["cheap", "pricey"]   # 남지만 점수가 낮다
+def test_exclude_tag_spicy():
+    r = rank(PLACES, ctx(), Filters(exclude=("매운 음식",)))
+    assert {"s_03", "s_05"}.isdisjoint(all_ids(r))
 
 
-def test_solo_and_group_seats():  # CA1-R43
-    ps = [place("solo", solo_ok=True, seats="S"), place("group", "고기", solo_ok=False, seats="L")]
-    assert ids(recommend(ps, req()).top) == ["solo"]
-    r = recommend(ps, req(party_size=5))
-    assert ids(r.top) == ["group"] and r.excluded == {"좌석 부족": 1}
+def test_include_category():
+    r = rank(PLACES, ctx(), Filters(include=("일식",)))
+    assert ids(r.top) == ["s_02"]
 
 
-def test_solo_unknown_is_kept_without_chip():
-    ps = [place("unknown", solo_ok=None), place("no", "일식", solo_ok=False)]
-    r = recommend(ps, req())
-    assert ids(r.top) == ["unknown"] and r.excluded == {"혼밥 불가": 1}
-    assert "혼밥 OK" not in r.top[0].reasons
+def test_include_quick_meal():
+    r = rank(PLACES, ctx(), Filters(include=("빠른 식사",)))
+    assert all_ids(r) == {"s_05"}  # 간단식(식사 15분)만
 
 
-def test_never_exclude_include_max_walk():
-    ps = [place("a"), place("b", "일식"), place("c", "분식", MealType.QUICK, dlat=FAR)]
-    assert ids(recommend(ps, req(), Taste(never=frozenset({"a"}))).top) == ["b", "c"]
-    assert ids(recommend(ps, req(exclude=frozenset({"일식"}))).top) == ["a", "c"]
-    assert ids(recommend(ps, req(include=frozenset({"빠른 식사"}))).top) == ["c"]
-    assert ids(recommend(ps, req(max_walk_min=5)).top) == ["a", "b"]
+def test_unknown_vocabulary_rejected():
+    with pytest.raises(ValueError):
+        rank(PLACES, ctx(), Filters(include=("맛집",)))
 
 
-# --- 점수 · 다양성 -----------------------------------------------------------
-
-def test_rain_moves_near_place_up():  # CA1-R06
-    ps = [place("near"), place("liked_far", "일식", dlat=FAR)]
-    taste = Taste(likes={"일식": 1.0})
-    assert ids(recommend(ps, req(slot_min=200), taste).top)[0] == "liked_far"
-    r = recommend(ps, req(slot_min=200, rain=True), taste)
-    assert ids(r.top)[0] == "near"
-    assert "비 와서 가까운 곳" in r.top[0].reasons
-
-
-def test_rain_weights_renormalized():
-    w = Weights().as_dict(rain=True)
-    assert sum(w.values()) == pytest.approx(1.0)
-    assert w["distance"] == pytest.approx(0.30 / 1.15)
+@pytest.mark.parametrize("explicit", [False, True])
+def test_category_and_required_tag_both_must_match(explicit):
+    places = [
+        place_variant("s_91", "일식"),
+        place_variant("s_92", "한식", tags=("채식 가능",)),
+        place_variant("s_93", "일식", tags=("채식 가능",)),
+    ]
+    filters = (Filters(include=("일식",), required_tags=("채식 가능",)) if explicit
+               else Filters(include=("일식", "채식 가능")))
+    result = rank(places, ctx(), filters)
+    assert all_ids(result) == {"s_93"}
+    assert result.excluded["filtered"] == 2
 
 
-def test_liked_category_rises():  # CA1-R53 수용 기준 — 일식에 👍 뒤 일식이 위로
-    ps = [place("kor"), place("jpn", "일식", dlat=MID)]
-    assert ids(recommend(ps, req()).top)[0] == "kor"
-    r = recommend(ps, req(), Taste(likes={"일식": 0.488}))   # 0 → 👍 세 번(0.2·0.36·0.488)
-    assert ids(r.top)[0] == "jpn" and "좋아하는 일식" in r.top[0].reasons
+@pytest.mark.parametrize("explicit", [False, True])
+def test_categories_are_or_but_required_traits_are_all_required(explicit):
+    places = [
+        place_variant("s_91", "일식", tags=("채식 가능",), meal_type="간단식"),
+        place_variant("s_92", "중식", tags=("채식 가능",), meal_type="간단식"),
+        place_variant("s_93", "한식", tags=("채식 가능",), meal_type="간단식"),
+        place_variant("s_94", "일식", tags=("채식 가능",)),
+        place_variant("s_95", "중식", meal_type="간단식"),
+    ]
+    filters = (Filters(include=("일식", "중식"), required_tags=("채식 가능", "빠른 식사")) if explicit
+               else Filters(include=("일식", "중식", "채식 가능", "빠른 식사")))
+    result = rank(places, ctx(), filters)
+    assert all_ids(result) == {"s_91", "s_92"}
+    assert result.excluded["filtered"] == 3
 
 
-def test_price_chip_only_when_it_is_a_reason():
-    ps = [place("cheap", price_band="A"), place("pricey", "양식", price_band="C")]
-    chips = {c.placeId: c.reasons for c in recommend(ps, req()).top}
-    assert "7천 원 이하" in chips["cheap"]
-    assert "1만~1.5만 원" not in chips["pricey"]          # 비싼 건 이유가 아니다
-    chips = {c.placeId: c.reasons for c in recommend(ps, req(), Taste(budget_default=15000)).top}
-    assert "1만~1.5만 원" in chips["pricey"]              # 예산 안이면 칩
+def test_explicit_and_legacy_traits_are_combined_and_exclusions_still_win():
+    places = [
+        place_variant("s_91", "일식", tags=("채식 가능",), meal_type="간단식"),
+        place_variant("s_92", "일식", tags=("채식 가능",)),
+        place_variant("s_93", "일식", tags=("채식 가능", "매운 음식"), meal_type="간단식"),
+        place_variant("s_94", "중식", tags=("채식 가능",), meal_type="간단식"),
+        place_variant("s_95", "한식", meal_type="간단식"),
+    ]
+    result = rank(places, ctx(), Filters(include=("채식 가능",), required_tags=("빠른 식사",),
+                                         exclude=("매운 음식", "중식")))
+    assert all_ids(result) == {"s_91"}
+    assert result.excluded["filtered"] == 4
 
 
-def test_top3_categories_do_not_repeat():  # CA1-R31
-    ps = [place("k1"), place("k2"), place("k3"), place("j", "일식", dlat=FAR)]
-    r = recommend(ps, req(slot_min=200))
-    cats = [c.category for c in r.top]
-    assert "일식" in cats and len(r.top) == 3
-    assert ids(r.more) == [x for x in ["k1", "k2", "k3"] if x not in ids(r.top)]
+def test_required_tags_without_category_accept_any_matching_category():
+    places = [
+        place_variant("s_91", "일식", tags=("채식 가능",)),
+        place_variant("s_92", "한식", tags=("채식 가능",)),
+        place_variant("s_93", "중식"),
+    ]
+    assert all_ids(rank(places, ctx(), Filters(required_tags=("채식 가능",)))) == {"s_91", "s_92"}
 
 
-def test_top3_filled_when_few_categories():
-    r = recommend([place("k1"), place("k2"), place("k3"), place("k4")], req())
-    assert len(r.top) == 3 and len(r.more) == 1
+@pytest.mark.parametrize("value", ["일식", "맛집"])
+def test_required_tags_reject_categories_and_unknown_values(value):
+    with pytest.raises(ValueError, match="required_tags"):
+        rank(PLACES, ctx(), Filters(required_tags=(value,)))
 
 
-def test_explore_and_repeat():
-    ps = [place("a"), place("b")]
-    assert ids(recommend(ps, req(), Taste(visited=frozenset({"a"}))).top)[0] == "b"
-    assert ids(recommend(ps, req(), Taste(recent=frozenset({"a"}))).top)[0] == "b"
+def test_explicit_budget_keeps_place_with_cheap_menu():
+    # s_01 대표가 7250 이지만 제육 7000 이 있으니 '7천 원 이하'에 남는다
+    r = rank(PLACES, ctx(), Filters(budget=7000, budget_explicit=True))
+    assert "s_01" in all_ids(r)
+    assert {"s_02", "s_07"}.isdisjoint(all_ids(r))  # 대표 메뉴가 모두 7천 원 초과
 
 
-def test_hurry_prefers_quick_meal():  # CA1-R35
-    ps = [place("regular", dlat=NEAR), place("quick", "분식", MealType.QUICK, dlat=MID)]
-    base = recommend(ps, req(slot_min=200)).top
-    hurry = recommend(ps, req(slot_min=200, hurry=True)).top
-    qs = lambda cands: next(c.score for c in cands if c.placeId == "quick")
-    assert qs(hurry) == pytest.approx(qs(base) + 0.05)
+def test_default_budget_only_scores():
+    r = rank(PLACES, ctx(), taste=TasteSummary(budget_default=7000))
+    assert {"s_02", "s_07"} <= all_ids(r)
 
 
-def test_reputation_shrinks_small_samples():
-    ps = [place("a"), place("b"), place("c")]
-    # a: 1/1 👍 (표본 1개) · b: 18/20 · c: 5/20 → 전체 평균(24/41)으로 당기면 a 는 0.66, b 는 0.84
-    r = recommend(ps, req(), reputation={"a": (1, 1), "b": (18, 20), "c": (5, 20)})
-    assert ids(r.top) == ["b", "a", "c"]
+def test_max_walk():
+    r = rank(PLACES, ctx(), Filters(max_walk_min=5))
+    assert all(c.timing.breakdown.walk_to <= 5 for c in r.top + r.more + r.tight + r.cafeteria)
+    assert r.excluded["tooFar"] >= 1
 
 
-def test_chips_show_what_beats_the_others():
-    # 둘 다 여유·예산 만점 → 칩은 서로 다른 점: kor 는 가까움, jpn 은 취향
-    r = recommend([place("kor"), place("jpn", "일식", dlat=MID)], req(), Taste(likes={"일식": 0.488}))
-    chips = {c.placeId: c.reasons for c in r.top}
-    assert chips["jpn"][0] == "좋아하는 일식"
-    assert chips["kor"][0] == "도보 4분"
+def test_max_walk_filter_still_limits_only_the_outbound_leg():
+    place = place_variant("s_91", "한식", meters=-100)
+    dest = (CENTER[0] + 600 / 111_195, CENTER[1])
+    result = rank([place], MealContext(WED, 660, 840, CENTER, dest), Filters(max_walk_min=3))
+    assert ids(result.top) == ["s_91"]
+    assert result.top[0].timing.breakdown.walk_to <= 3
+    assert result.top[0].timing.breakdown.walk_total > 3
 
 
-# --- 학식 ---------------------------------------------------------------------
-
-def test_cafeteria_separate_with_same_timing():  # CA1-R34
-    ps = [place("caf", "학식", MealType.CAFETERIA), place("kor")]
-    r = recommend(ps, req())
-    assert ids(r.cafeteria) == ["caf"] and ids(r.top) == ["kor"]
-    assert r.cafeteria[0].needMin == 4 + 3 + 20 + 4 + 5
+def test_removed_seating_and_solo_filters_are_not_accepted():
+    for option in ({"party_size": 5}, {"solo": True}):
+        with pytest.raises(TypeError):
+            Filters(**option)
 
 
-def test_cafeteria_crowded_at_peak():
-    caf = place("caf", "학식", MealType.CAFETERIA)
-    calm = recommend([caf], req(slot_start=11 * 60)).cafeteria[0]
-    peak = recommend([caf], req(slot_start=12 * 60)).cafeteria[0]
-    assert peak.needMin == calm.needMin + 7          # 피크 대기 10분
-    assert peak.score < calm.score
+def test_bbq_dinner_does_not_require_seating_or_solo_information():
+    """확인된 메뉴와 시간만 있으면 저녁 고기집도 추천한다."""
+    r = rank(PLACES, ctx(start="18:00", end="20:30"), Filters(include=("고기",)))
+    assert ids(r.top) == ["s_04"]
+
+
+# ── 점수 ────────────────────────────────────────────────────
+
+def test_taste_moves_liked_category_up():
+    base = rank(PLACES, ctx())
+    liked = rank(PLACES, ctx(), taste=TasteSummary(likes={"일식": 1.0}))
+    assert ids(base.top)[0] != "s_02"
+    assert ids(liked.top)[0] == "s_02"
+
+
+def test_rain_favors_near():
+    dry = rank(PLACES, ctx())
+    wet = rank(PLACES, ctx(rain=True))
+    assert ids(wet.top)[0] == "s_05"   # 총 도보 4분
+    dry_scores = {c.place_id: c.score for c in dry.top + dry.more}
+    wet_scores = {c.place_id: c.score for c in wet.top + wet.more}
+    # 맑을 때 이미 1위여도, 비가 오면 가까운 곳의 상대 이점은 더 커져야 한다.
+    assert wet_scores["s_05"] - wet_scores["s_01"] > dry_scores["s_05"] - dry_scores["s_01"]
+
+
+@pytest.mark.parametrize("walk_to,walk_back,dest,expected", [
+    (0, 0, CENTER, 1),
+    (4, 6, CENTER, 2 / 3),
+    (6, 6, CENTER, 0.6),  # 같은 건물 왕복이면 기존 편도/15와 같다.
+    (6, 0, CENTER, 0.8),  # 다음 건물까지 0분이어도 목적지가 있으면 기준은 30분.
+    (15, 15, CENTER, 0),
+    (16, 20, CENTER, 0),
+    (6, None, None, 0.6),
+])
+def test_distance_factor_counts_whole_route_and_clamps(walk_to, walk_back, dest, expected):
+    context = MealContext(WED, 660, 960, CENTER, dest)
+    timing = compute(start=660, end=960, walk_to=walk_to, walk_back=walk_back, meal_type="일반")
+    p = place_variant("s_91", "한식")
+    features = _features(p, timing, Filters(), TasteSummary(), context, load_settings())
+    assert features["distance"] == pytest.approx(expected)
+
+
+@pytest.mark.parametrize("rain", [False, True])
+def test_route_to_next_building_can_beat_nearest_restaurant(rain):
+    # 가까운 A는 출발점 남쪽, B는 다음 건물로 가는 북쪽 경로에 있다.
+    places = [place_variant("s_91", "한식", meters=-100),
+              place_variant("s_92", "한식", meters=300)]
+    dest = (CENTER[0] + 600 / 111_195, CENTER[1])
+    result = rank(places, MealContext(WED, 660, 840, CENTER, dest, rain=rain))
+    assert ids(result.top) == ["s_92", "s_91"]
+    b, a = result.top
+    assert a.timing.breakdown.walk_to < b.timing.breakdown.walk_to
+    assert a.timing.breakdown.walk_total > b.timing.breakdown.walk_total
+    assert b.features["distance"] > a.features["distance"]
+    for candidate in result.top:
+        assert candidate.to_dict()["totalWalkMin"] == candidate.timing.breakdown.walk_total
+
+
+def test_no_next_building_uses_outbound_distance_only():
+    places = [place_variant("s_91", "한식", meters=-100),
+              place_variant("s_92", "한식", meters=300)]
+    result = rank(places, MealContext(WED, 660, None, CENTER, None))
+    assert ids(result.top) == ["s_91", "s_92"]
+    for c in result.top:
+        assert c.timing.breakdown.walk_back == 0
+        assert c.features["distance"] == pytest.approx(1 - c.timing.breakdown.walk_to / 15)
+
+
+def test_restaurant_at_next_building_keeps_two_leg_distance_scale():
+    place = place_variant("s_91", "한식", meters=300)
+    dest = (place["lat"], place["lng"])
+    candidate = rank([place], MealContext(WED, 660, 840, CENTER, dest)).top[0]
+    walk = candidate.timing.breakdown
+    assert walk.walk_to > 0 and walk.walk_back == 0
+    assert candidate.features["distance"] == pytest.approx(1 - walk.walk_to / 30)
+
+
+def test_legacy_seat_and_solo_values_cannot_change_scores_or_filtering():
+    small = place_variant("s_91", "한식")
+    small["attrs"]["seats"] = "S"
+    small["attrs"]["soloOk"] = False
+    large = place_variant("s_92", "한식")
+    large["attrs"]["seats"] = "L"
+    large["attrs"]["soloOk"] = True
+    current = load_settings()
+    old_data = json.loads(SETTINGS_PATH.read_text(encoding="utf-8"))
+    old_data["ranking"]["weights"]["crowd"] = 0.1
+    old = Settings.from_dict(old_data)
+
+    def gap(context, settings):
+        candidates = rank([small, large], context, s=settings).top
+        scores = {c.place_id: c.score for c in candidates}
+        return scores["s_92"] - scores["s_91"]
+
+    assert current.ranking.weights["crowd"] == 0.03
+    assert gap(ctx(), current) == pytest.approx(0)
+    assert gap(ctx(), old) == pytest.approx(0)
+    assert gap(ctx(start="11:00", end="14:00"), current) == pytest.approx(0)
+
+
+def test_recent_penalty_and_new_bonus():
+    base = {c.place_id: c.score for c in rank(PLACES, ctx()).top}
+    t = TasteSummary(visited=frozenset({"s_01", "s_03"}), recent=frozenset({"s_01"}))
+    after = {c.place_id: c.score for c in rank(PLACES, ctx(), taste=t).top + rank(PLACES, ctx(), taste=t).more}
+    assert after["s_01"] == pytest.approx(base["s_01"] - 0.05)
+    assert after["s_05"] == pytest.approx(base["s_05"] + 0.05)  # 안 가 본 곳
+
+
+def test_exam_period_quick_bonus():
+    base = {c.place_id: c.score for c in rank(PLACES, ctx()).top}
+    exam = {c.place_id: c.score for c in rank(PLACES, ctx(exam_period=True)).top}
+    assert exam["s_05"] == pytest.approx(base["s_05"] + 0.05)
+    assert exam["s_01"] == pytest.approx(base["s_01"])
+
+
+# ── 다양성 ──────────────────────────────────────────────────
+
+def test_top3_categories_distinct():
+    extra = copy.deepcopy(json.loads((SAMPLES_DIR / "s_01.json").read_text(encoding="utf-8")))
+    extra.update(id="s_91", name="한식 2호점", lat=CENTER[0], lng=CENTER[1])  # 아주 가까운 한식 → 점수 높음
+    r = rank(PLACES + [extra], ctx())
+    cats = [c.place["category"] for c in r.top]
+    assert len(cats) == len(set(cats))
+    assert "s_91" in ids(r.top) and "s_01" in ids(r.more)
+
+
+def test_fill_when_categories_run_out():
+    only_korean = [p for p in PLACES if p["id"] == "s_01"]
+    twin = copy.deepcopy(only_korean[0])
+    twin.update(id="s_92")
+    r = rank(only_korean + [twin], ctx())
+    assert len(r.top) == 2  # 종류가 하나뿐이어도 있는 만큼 채운다
+
+
+def test_filled_top_stays_in_score_order_for_every_input_order():
+    places = [
+        place_variant("s_91", "한식", meters=0),
+        place_variant("s_92", "한식", meters=150),
+        place_variant("s_93", "중식", meters=500),
+    ]
+    for order in permutations(places):
+        result = rank(list(order), ctx(start="11:00", end="14:00"))
+        assert ids(result.top) == ["s_91", "s_92", "s_93"]
+        assert result.top[0].score > result.top[1].score > result.top[2].score
+        assert result.more == []
+
+
+def test_filled_top_breaks_score_ties_by_need_then_id_for_every_input_order():
+    # 전체 도보 30분 이상이라 거리 점수는 모두 0, 여유는 모두 만점이다.
+    places = [
+        place_variant("s_91", "한식", meters=900),
+        place_variant("s_92", "한식", meters=850),
+        place_variant("s_93", "중식", meters=900),
+    ]
+    for order in permutations(places):
+        result = rank(list(order), ctx(start="11:00", end="14:00"))
+        assert ids(result.top) == ["s_92", "s_91", "s_93"]
+        assert len({c.score for c in result.top}) == 1
+        assert result.top[0].timing.need_min < result.top[1].timing.need_min
+        assert result.top[1].timing.need_min == result.top[2].timing.need_min
+
+
+# ── 이유 칩 ─────────────────────────────────────────────────
+
+def test_chips_are_2_to_3_and_match_factors():
+    r = rank(PLACES, ctx())
+    for c in r.top + r.cafeteria:
+        assert 1 <= len(c.reasons) <= 3
+        for chip in c.reasons:
+            if chip["factor"] in c.features:
+                assert c.features[chip["factor"]] >= 0.5  # 약한 요소는 이유로 내지 않는다
+
+
+def test_no_solo_chip_and_rain_chip():
+    r = rank(PLACES, ctx(rain=True))
+    texts = [x["text"] for x in r.top[0].reasons]
+    assert not any("혼밥" in text for text in texts)
+    assert f"비 · 총 도보 {r.top[0].timing.breakdown.walk_total}분" in texts
+
+
+def test_taste_chip_only_when_liked():
+    r = rank(PLACES, ctx(), taste=TasteSummary(likes={"일식": 1.0}))
+    assert r.top[0].reasons[0]["text"] == "좋아하는 일식"
+    assert all("좋아하는" not in x["text"] for c in rank(PLACES, ctx()).top for x in c.reasons)
+
+
+def test_to_dict_has_card_fields():
+    d = rank(PLACES, ctx()).to_dict()
+    card = d["candidates"][0]
+    for key in ("placeId", "name", "needMin", "totalWalkMin", "slackMin", "leaveBy", "breakdown", "priceLabel", "reasons", "openUntil"):
+        assert key in card
+    assert set(d["excluded"]) >= {"noInfo", "closed", "overTime"}
+    assert "soloOk" not in card and "seats" not in card
+    assert card["mealTimeEstimated"] is False
+
+
+def test_missing_meal_type_uses_configured_general_time_without_inventing_attrs():
+    p = place_variant("s_91", "일식")
+    p["attrs"].pop("mealType")
+    p["attrs"].pop("takeout")
+    attrs_before = copy.deepcopy(p["attrs"])
+    data = json.loads(SETTINGS_PATH.read_text(encoding="utf-8"))
+    data["mealTypes"]["일반"]["eat"] = 37
+    result = rank([p], ctx(start="11:00", end="14:00"), s=Settings.from_dict(data))
+    card = result.top[0]
+    assert card.timing.breakdown.eat == 37
+    assert card.to_dict()["mealTimeEstimated"] is True
+    assert card.to_dict()["takeout"] is None
+    assert p["attrs"] == attrs_before

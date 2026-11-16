@@ -1,0 +1,207 @@
+{
+  "version": 1,
+  "id": "p_0152",
+  "source": "team",
+  "sourceId": "naver:1992635726",
+  "name": "마피아떡볶이 광주북구점",
+  "address": "전남광주 북구 반룡로 18 1층",
+  "category": "분식",
+  "lat": 35.1791431555343,
+  "lng": 126.900009640554,
+  "sourceStatus": "active",
+  "availability": {
+    "status": "listed",
+    "provider": "naver",
+    "checkedAt": "2026-11-11",
+    "sourceUrl": "https://pcmap.place.naver.com/place/1992635726",
+    "naverPlaceId": "1992635726",
+    "observedName": "마피아떡볶이 광주북구점",
+    "observedAddress": "전남광주 북구 반룡로 18 1층",
+    "district": "상대",
+    "addressVerified": true,
+    "nearby": true,
+    "reason": "공개 네이버 지도에서 동일 주소의 전남대 상대 식당으로 확인"
+  },
+  "menuObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/1992635726/menu/list",
+    "checkedAt": "2026-11-11",
+    "priceContext": "in_store",
+    "menus": [
+      {
+        "name": "마피아떡볶이",
+        "price": 14000,
+        "main": true
+      },
+      {
+        "name": "마피아세트1번",
+        "price": 17000,
+        "main": true
+      }
+    ],
+    "note": "메뉴 상태: confirmed. 원본 관찰·좌표 출처는 적용 manifest에 보관합니다.",
+    "status": "confirmed"
+  },
+  "attrs": {
+    "status": "partial",
+    "menus": [
+      {
+        "name": "마피아떡볶이",
+        "price": 14000,
+        "main": true
+      },
+      {
+        "name": "마피아세트1번",
+        "price": 17000,
+        "main": true
+      }
+    ],
+    "hours": [
+      {
+        "days": [
+          "일",
+          "월",
+          "화",
+          "수",
+          "목",
+          "금"
+        ],
+        "open": "17:00",
+        "close": "24:00"
+      },
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금",
+          "토"
+        ],
+        "open": "00:00",
+        "close": "03:00"
+      }
+    ]
+  },
+  "hoursObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/1992635726/home",
+    "checkedAt": "2026-11-12",
+    "status": "confirmed",
+    "hours": [
+      {
+        "days": [
+          "일",
+          "월",
+          "화",
+          "수",
+          "목",
+          "금"
+        ],
+        "open": "17:00",
+        "close": "24:00"
+      },
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금",
+          "토"
+        ],
+        "open": "00:00",
+        "close": "03:00"
+      }
+    ],
+    "note": "매장 영업시간 관찰. 기존 attrs/research를 덮어쓰지 않습니다."
+  },
+  "research": {
+    "checkedAt": "2026-11-11",
+    "method": "web",
+    "identityStatus": "matched",
+    "queries": [
+      "마피아떡볶이 광주북구점 전남광주 북구 반룡로 18 1층"
+    ],
+    "sources": [
+      {
+        "id": "naver-place",
+        "url": "https://pcmap.place.naver.com/place/1992635726",
+        "title": "마피아떡볶이 광주북구점 네이버 지도",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "같은 주소의 지점 확인. 지도 등록 확인은 실시간 영업 중 보증이 아님"
+      },
+      {
+        "id": "naver-menu",
+        "url": "https://pcmap.place.naver.com/restaurant/1992635726/menu/list",
+        "title": "마피아떡볶이 광주북구점 메뉴 탭",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "가격 맥락: in_store"
+      },
+      {
+        "id": "naver-hours",
+        "url": "https://pcmap.place.naver.com/place/1992635726",
+        "title": "마피아떡볶이 광주북구점 영업시간",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "게시된 요일별 영업시간. 미확인은 추정하지 않음"
+      }
+    ],
+    "facts": {
+      "menus": {
+        "status": "confirmed",
+        "sourceIds": [
+          "naver-menu"
+        ],
+        "note": "매장 게시값을 확인했습니다.",
+        "value": [
+          {
+            "name": "마피아떡볶이",
+            "price": 14000,
+            "main": true
+          },
+          {
+            "name": "마피아세트1번",
+            "price": 17000,
+            "main": true
+          }
+        ]
+      },
+      "hours": {
+        "status": "unconfirmed",
+        "sourceIds": [],
+        "note": "매장 기준 정보 미확인. 배달·가격 맥락 불명 자료는 확정하지 않습니다."
+      }
+    },
+    "unknownFields": [
+      "hours",
+      "mealType",
+      "takeout",
+      "verifiedAt",
+      "verifiedBy",
+      "break",
+      "lastOrder"
+    ],
+    "notes": [
+      "메뉴 업데이트26.03.03.",
+      "영업시간 원문: 일~금17:00-다음날03:00; 토 정기휴무",
+      "원본 관찰은 front_sangdae_more.json. main은 1인 식사 예산용 분류이며 공유 피자는 false로 보수적으로 표시.",
+      "자정 이후 종료 영업은 현재 영업시간스키마 미지원. 정규hours를 임의로 자르거나 다음요일로 복제하지 않고 미확인 유지.",
+      "병합 입력: front_more_normalized_manifest.json",
+      "공개 네이버 화면 관찰이며 현장 검증이 아닙니다."
+    ]
+  },
+  "followupReview": {
+    "checkedAt": "2026-11-12",
+    "reasons": [
+      "확인된 매장 식사 가격과 요일별 영업시간을 연결하여 추천 대상으로 전환했습니다."
+    ],
+    "sources": [
+      "https://pcmap.place.naver.com/restaurant/1992635726/home",
+      "https://pcmap.place.naver.com/restaurant/1992635726/menu/list"
+    ]
+  }
+}

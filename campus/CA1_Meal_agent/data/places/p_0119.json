@@ -1,0 +1,173 @@
+{
+  "version": 1,
+  "id": "p_0119",
+  "source": "team",
+  "sourceId": "naver:37500690",
+  "name": "마마",
+  "address": "광주 북구 설죽로214번길 69",
+  "category": "한식",
+  "lat": 35.1780357294002,
+  "lng": 126.901525981073,
+  "sourceStatus": "active",
+  "availability": {
+    "status": "listed",
+    "provider": "naver",
+    "checkedAt": "2026-11-11",
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/37500690/home",
+    "naverPlaceId": "37500690",
+    "observedName": "마마",
+    "observedAddress": "광주 북구 설죽로214번길 69",
+    "district": "상대",
+    "addressVerified": true,
+    "nearby": true,
+    "reason": "공개 네이버 지도에서 동일 주소의 전남대 상대 식당으로 확인"
+  },
+  "menuObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/37500690/menu/list",
+    "checkedAt": "2026-11-11",
+    "priceContext": "in_store",
+    "menus": [
+      {
+        "name": "순두부찌개",
+        "price": 6000,
+        "main": true,
+        "priceContext": "in_store"
+      },
+      {
+        "name": "참치볶음밥",
+        "price": 6000,
+        "main": true,
+        "priceContext": "in_store"
+      },
+      {
+        "name": "제육볶음",
+        "price": 7000,
+        "main": true,
+        "priceContext": "in_store"
+      }
+    ],
+    "note": "메뉴 상태: confirmed. 원본 관찰·좌표 출처는 적용 manifest에 보관합니다.",
+    "status": "confirmed"
+  },
+  "attrs": {
+    "status": "partial",
+    "menus": [
+      {
+        "name": "순두부찌개",
+        "price": 6000,
+        "main": true
+      },
+      {
+        "name": "참치볶음밥",
+        "price": 6000,
+        "main": true
+      },
+      {
+        "name": "제육볶음",
+        "price": 7000,
+        "main": true
+      }
+    ]
+  },
+  "hoursObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/37500690/home",
+    "checkedAt": "2026-11-11",
+    "status": "unconfirmed",
+    "hours": [],
+    "note": "매장 영업시간 관찰. 기존 attrs/research를 덮어쓰지 않습니다."
+  },
+  "research": {
+    "checkedAt": "2026-11-11",
+    "method": "web",
+    "identityStatus": "matched",
+    "queries": [
+      "마마 광주 북구 설죽로214번길 69"
+    ],
+    "sources": [
+      {
+        "id": "naver-place",
+        "url": "https://pcmap.place.naver.com/restaurant/37500690/home",
+        "title": "마마 네이버 지도",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "같은 주소의 지점 확인. 지도 등록 확인은 실시간 영업 중 보증이 아님"
+      },
+      {
+        "id": "naver-menu",
+        "url": "https://pcmap.place.naver.com/restaurant/37500690/menu/list",
+        "title": "마마 메뉴 탭",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "가격 맥락: in_store"
+      },
+      {
+        "id": "naver-hours",
+        "url": "https://pcmap.place.naver.com/restaurant/37500690/home",
+        "title": "마마 영업시간",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "게시된 요일별 영업시간. 미확인은 추정하지 않음"
+      }
+    ],
+    "facts": {
+      "menus": {
+        "status": "confirmed",
+        "sourceIds": [
+          "naver-menu"
+        ],
+        "note": "매장 게시값을 확인했습니다.",
+        "value": [
+          {
+            "name": "순두부찌개",
+            "price": 6000,
+            "main": true
+          },
+          {
+            "name": "참치볶음밥",
+            "price": 6000,
+            "main": true
+          },
+          {
+            "name": "제육볶음",
+            "price": 7000,
+            "main": true
+          }
+        ]
+      },
+      "hours": {
+        "status": "unconfirmed",
+        "sourceIds": [],
+        "note": "매장 기준 정보 미확인. 배달·가격 맥락 불명 자료는 확정하지 않습니다."
+      }
+    },
+    "unknownFields": [
+      "hours",
+      "mealType",
+      "takeout",
+      "verifiedAt",
+      "verifiedBy",
+      "break",
+      "lastOrder"
+    ],
+    "notes": [
+      "공개 메뉴 탭 전체3개. 영업시간 없음. 사진 미대조.",
+      "영업시간 원문: None",
+      "원본 관찰·메뉴별 가격채널/사진 근거는 front_sangdae_final.json. 매장가격과 배달가격을 혼합하지 않음.",
+      "병합 입력: front_final_normalized_manifest.json",
+      "공개 네이버 화면 관찰이며 현장 검증이 아닙니다."
+    ]
+  },
+  "followupReview": {
+    "checkedAt": "2026-11-12",
+    "reasons": [
+      "요일별 영업시간: 월~일 영업·휴무와 개점·마감 시간이 필요합니다. 브레이크·마지막 주문은 확인한 경우만 입력하세요."
+    ],
+    "sources": [
+      "https://pcmap.place.naver.com/restaurant/37500690/home",
+      "https://pcmap.place.naver.com/restaurant/37500690/menu/list"
+    ]
+  }
+}

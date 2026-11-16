@@ -22,7 +22,6 @@
 .dialog {
   position: fixed;
   inset: 0;
-  /* 화면 가장자리만 조금 남기고 크게 연다(전에는 1280×960 이 상한이라 세로가 남았다) */
   width: min(1600px, calc(100vw - 24px));
   max-width: none;
   height: calc(100dvh - 24px);
@@ -53,7 +52,7 @@
 @media (max-width: 767px) {
   /* 기존 학사 화면의 우측 하단 일정 추가 버튼 위치를 유지한다. */
   .launcher { right: max(16px, env(safe-area-inset-right)); bottom: calc(92px + env(safe-area-inset-bottom)); }
-  .dialog { width: calc(100vw - 16px); height: calc(100dvh - 16px); border-radius: 16px; }
+  .dialog { width: calc(100vw - 16px); height: calc(100dvh - 24px); border-radius: 16px; }
   .toolbar { gap: 8px; padding: 8px; flex-wrap: wrap; }
   .toolbar h2 { font-size: 14px; }
   .controls { order: 3; width: 100%; gap: 8px; }

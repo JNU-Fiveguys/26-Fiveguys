@@ -1,0 +1,885 @@
+{
+  "version": 1,
+  "id": "p_0116",
+  "source": "team",
+  "sourceId": "naver:37346559",
+  "name": "버거킹 전남대후문점",
+  "address": "전남광주 북구 우치로 76",
+  "category": "패스트푸드",
+  "lat": 35.1741866687903,
+  "lng": 126.912947358802,
+  "sourceStatus": "active",
+  "availability": {
+    "status": "listed",
+    "provider": "naver",
+    "checkedAt": "2026-11-11",
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/37346559/home",
+    "naverPlaceId": "37346559",
+    "observedName": "버거킹 전남대후문점",
+    "observedAddress": "전남광주 북구 우치로 76",
+    "district": "후문",
+    "addressVerified": true,
+    "nearby": true,
+    "reason": "공개 네이버 지도에서 동일 주소의 전남대 후문 식당으로 확인"
+  },
+  "menuObservation": {
+    "sourceUrl": "https://m.booking.naver.com/order/bizes/916853/items/5097110?theme=place&service-target=map-pc&refererCode=menutab&lang=ko&area=bmp",
+    "checkedAt": "2026-11-12",
+    "priceContext": "delivery",
+    "status": "unconfirmed",
+    "menus": [
+      {
+        "name": "쯔란로제 크리스퍼",
+        "price": 7200,
+        "main": false,
+        "priceText": "7,200원"
+      },
+      {
+        "name": "쯔란로제 딥 치즈 크리스퍼",
+        "price": 8200,
+        "main": false,
+        "priceText": "8,200원"
+      },
+      {
+        "name": "블랙 트러플치즈 버거",
+        "price": 11700,
+        "main": false,
+        "priceText": "11,700원"
+      },
+      {
+        "name": "트러플 머쉬룸 와퍼",
+        "price": 10700,
+        "main": false,
+        "priceText": "10,700원"
+      },
+      {
+        "name": "핫 트러플 머쉬룸 와퍼",
+        "price": 10700,
+        "main": false,
+        "priceText": "10,700원"
+      },
+      {
+        "name": "메종 트러플 치즈 버거",
+        "price": 11500,
+        "main": false,
+        "priceText": "11,500원"
+      },
+      {
+        "name": "몬스터 맥시멈",
+        "price": 13000,
+        "main": false,
+        "priceText": "13,000원"
+      },
+      {
+        "name": "몬스터 맥시멈2",
+        "price": 16400,
+        "main": false,
+        "priceText": "16,400원"
+      },
+      {
+        "name": "몬스터 맥시멈3",
+        "price": 19600,
+        "main": false,
+        "priceText": "19,600원"
+      },
+      {
+        "name": "오리지널스 엘파소 치폴레",
+        "price": 12000,
+        "main": false,
+        "priceText": "12,000원"
+      },
+      {
+        "name": "오리지널스 뉴욕 스테이크",
+        "price": 12000,
+        "main": false,
+        "priceText": "12,000원"
+      },
+      {
+        "name": "더 크리스퍼",
+        "price": 6700,
+        "main": false,
+        "priceText": "6,700원"
+      },
+      {
+        "name": "더 크리스퍼 베이컨&치즈",
+        "price": 7700,
+        "main": false,
+        "priceText": "7,700원"
+      },
+      {
+        "name": "쯔란로제 크리스퍼 세트",
+        "price": 9900,
+        "main": false,
+        "priceText": "9,900원"
+      },
+      {
+        "name": "쯔란로제 딥 치즈 크리스퍼 세트",
+        "price": 10900,
+        "main": false,
+        "priceText": "10,900원"
+      },
+      {
+        "name": "블랙 트러플치즈 버거 세트",
+        "price": 14400,
+        "main": false,
+        "priceText": "14,400원"
+      },
+      {
+        "name": "트러플 머쉬룸 와퍼세트",
+        "price": 13400,
+        "main": false,
+        "priceText": "13,400원"
+      },
+      {
+        "name": "핫 트러플 머쉬룸 와퍼세트",
+        "price": 13400,
+        "main": false,
+        "priceText": "13,400원"
+      },
+      {
+        "name": "메종 트러플 치즈 버거세트",
+        "price": 14200,
+        "main": false,
+        "priceText": "14,200원"
+      },
+      {
+        "name": "몬스터 맥시멈 세트",
+        "price": 15700,
+        "main": false,
+        "priceText": "15,700원"
+      },
+      {
+        "name": "몬스터 맥시멈2 세트",
+        "price": 19100,
+        "main": false,
+        "priceText": "19,100원"
+      },
+      {
+        "name": "몬스터 맥시멈3 세트",
+        "price": 22300,
+        "main": false,
+        "priceText": "22,300원"
+      },
+      {
+        "name": "오리지널스 엘파소 치폴레 세트",
+        "price": 14700,
+        "main": false,
+        "priceText": "14,700원"
+      },
+      {
+        "name": "오리지널스 뉴욕 스테이크 세트",
+        "price": 14700,
+        "main": false,
+        "priceText": "14,700원"
+      },
+      {
+        "name": "더 크리스퍼 세트",
+        "price": 9400,
+        "main": false,
+        "priceText": "9,400원"
+      },
+      {
+        "name": "더크리스퍼 베이컨&치즈 세트",
+        "price": 10400,
+        "main": false,
+        "priceText": "10,400원"
+      },
+      {
+        "name": "와퍼세트",
+        "price": 11100,
+        "main": false,
+        "priceText": "11,100원"
+      },
+      {
+        "name": "통새우와퍼세트",
+        "price": 11900,
+        "main": false,
+        "priceText": "11,900원"
+      },
+      {
+        "name": "치즈와퍼세트",
+        "price": 11700,
+        "main": false,
+        "priceText": "11,700원"
+      },
+      {
+        "name": "더오치 맥시멈2 세트",
+        "price": 14500,
+        "main": false,
+        "priceText": "14,500원"
+      },
+      {
+        "name": "갈릭불고기와퍼 세트",
+        "price": 11400,
+        "main": false,
+        "priceText": "11,400원"
+      },
+      {
+        "name": "베이컨치즈와퍼 세트",
+        "price": 12900,
+        "main": false,
+        "priceText": "12,900원"
+      },
+      {
+        "name": "몬스터와퍼 세트",
+        "price": 12800,
+        "main": false,
+        "priceText": "12,800원"
+      },
+      {
+        "name": "콰트로치즈와퍼 세트",
+        "price": 11900,
+        "main": false,
+        "priceText": "11,900원"
+      },
+      {
+        "name": "불고기와퍼세트",
+        "price": 11100,
+        "main": false,
+        "priceText": "11,100원"
+      },
+      {
+        "name": "치즈버거세트",
+        "price": 7500,
+        "main": false,
+        "priceText": "7,500원"
+      },
+      {
+        "name": "통새우와퍼주니어세트",
+        "price": 9300,
+        "main": false,
+        "priceText": "9,300원"
+      },
+      {
+        "name": "콰트로치즈와퍼주니어세트",
+        "price": 9300,
+        "main": false,
+        "priceText": "9,300원"
+      },
+      {
+        "name": "치즈와퍼주니어세트",
+        "price": 9000,
+        "main": false,
+        "priceText": "9,000원"
+      },
+      {
+        "name": "와퍼주니어세트",
+        "price": 8700,
+        "main": false,
+        "priceText": "8,700원"
+      },
+      {
+        "name": "불고기와퍼주니어세트",
+        "price": 8700,
+        "main": false,
+        "priceText": "8,700원"
+      },
+      {
+        "name": "몬스터 주니어 세트",
+        "price": 8400,
+        "main": false,
+        "priceText": "8,400원"
+      },
+      {
+        "name": "롱치킨버거 세트",
+        "price": 8700,
+        "main": false,
+        "priceText": "8,700원"
+      },
+      {
+        "name": "불고기 롱치킨버거 세트",
+        "price": 8700,
+        "main": false,
+        "priceText": "8,700원"
+      },
+      {
+        "name": "치킨 치즈 마요 버거 세트",
+        "price": 7400,
+        "main": false,
+        "priceText": "7,400원"
+      },
+      {
+        "name": "치킨킹BLT 세트",
+        "price": 11500,
+        "main": false,
+        "priceText": "11,500원"
+      },
+      {
+        "name": "더블비프불고기버거 세트",
+        "price": 8500,
+        "main": false,
+        "priceText": "8,500원"
+      },
+      {
+        "name": "치킨킹 세트",
+        "price": 10500,
+        "main": false,
+        "priceText": "10,500원"
+      },
+      {
+        "name": "비프불고기버거 세트",
+        "price": 7500,
+        "main": false,
+        "priceText": "7,500원"
+      },
+      {
+        "name": "통새우 슈림프버거 세트",
+        "price": 9500,
+        "main": false,
+        "priceText": "9,500원"
+      },
+      {
+        "name": "치킨버거 세트",
+        "price": 7200,
+        "main": false,
+        "priceText": "7,200원"
+      },
+      {
+        "name": "더오치 맥시멈2",
+        "price": 11800,
+        "main": false,
+        "priceText": "11,800원"
+      },
+      {
+        "name": "베이컨치즈와퍼",
+        "price": 10200,
+        "main": false,
+        "priceText": "10,200원"
+      },
+      {
+        "name": "몬스터와퍼",
+        "price": 10600,
+        "main": false,
+        "priceText": "10,600원"
+      },
+      {
+        "name": "콰트로치즈와퍼",
+        "price": 9200,
+        "main": false,
+        "priceText": "9,200원"
+      },
+      {
+        "name": "통새우와퍼",
+        "price": 9200,
+        "main": false,
+        "priceText": "9,200원"
+      },
+      {
+        "name": "치즈와퍼",
+        "price": 9000,
+        "main": false,
+        "priceText": "9,000원"
+      },
+      {
+        "name": "갈릭불고기와퍼",
+        "price": 8700,
+        "main": false,
+        "priceText": "8,700원"
+      },
+      {
+        "name": "와퍼",
+        "price": 8400,
+        "main": false,
+        "priceText": "8,400원"
+      },
+      {
+        "name": "불고기와퍼",
+        "price": 8100,
+        "main": false,
+        "priceText": "8,100원"
+      },
+      {
+        "name": "치즈버거",
+        "price": 4800,
+        "main": false,
+        "priceText": "4,800원"
+      },
+      {
+        "name": "통새우와퍼주니어",
+        "price": 6600,
+        "main": false,
+        "priceText": "6,600원"
+      },
+      {
+        "name": "콰트로치즈와퍼주니어",
+        "price": 6600,
+        "main": false,
+        "priceText": "6,600원"
+      },
+      {
+        "name": "몬스터 주니어",
+        "price": 6200,
+        "main": false,
+        "priceText": "6,200원"
+      },
+      {
+        "name": "치즈와퍼주니어",
+        "price": 6300,
+        "main": false,
+        "priceText": "6,300원"
+      },
+      {
+        "name": "와퍼주니어",
+        "price": 6000,
+        "main": false,
+        "priceText": "6,000원"
+      },
+      {
+        "name": "불고기와퍼주니어",
+        "price": 6000,
+        "main": false,
+        "priceText": "6,000원"
+      },
+      {
+        "name": "치킨 치즈 마요 버거",
+        "price": 5200,
+        "main": false,
+        "priceText": "5,200원"
+      },
+      {
+        "name": "롱치킨버거",
+        "price": 6000,
+        "main": false,
+        "priceText": "6,000원"
+      },
+      {
+        "name": "불고기 롱치킨버거",
+        "price": 6000,
+        "main": false,
+        "priceText": "6,000원"
+      },
+      {
+        "name": "더블비프불고기버거",
+        "price": 6300,
+        "main": false,
+        "priceText": "6,300원"
+      },
+      {
+        "name": "치킨버거",
+        "price": 5000,
+        "main": false,
+        "priceText": "5,000원"
+      },
+      {
+        "name": "치킨킹",
+        "price": 7800,
+        "main": false,
+        "priceText": "7,800원"
+      },
+      {
+        "name": "치킨킹BLT",
+        "price": 8800,
+        "main": false,
+        "priceText": "8,800원"
+      },
+      {
+        "name": "비프불고기버거",
+        "price": 5300,
+        "main": false,
+        "priceText": "5,300원"
+      },
+      {
+        "name": "통새우 슈림프버거",
+        "price": 7300,
+        "main": false,
+        "priceText": "7,300원"
+      },
+      {
+        "name": "딥 트러플 프라이",
+        "price": 4000,
+        "main": false,
+        "priceText": "4,000원"
+      },
+      {
+        "name": "트러플 머쉬룸 파이 로얄",
+        "price": 3700,
+        "main": false,
+        "priceText": "3,700원"
+      },
+      {
+        "name": "애플파이 로얄",
+        "price": 3500,
+        "main": false,
+        "priceText": "3,500원"
+      },
+      {
+        "name": "크리스퍼 랩",
+        "price": 4600,
+        "main": false,
+        "priceText": "4,600원"
+      },
+      {
+        "name": "크리스퍼 텐더",
+        "price": 4300,
+        "main": false,
+        "priceText": "4,300원"
+      },
+      {
+        "name": "리얼 어니언링R",
+        "price": 3800,
+        "main": false,
+        "priceText": "3,800원"
+      },
+      {
+        "name": "리얼 어니언링L",
+        "price": 5200,
+        "main": false,
+        "priceText": "5,200원"
+      },
+      {
+        "name": "너겟킹4조각",
+        "price": 3300,
+        "main": false,
+        "priceText": "3,300원"
+      },
+      {
+        "name": "너겟킹 8조각",
+        "price": 5500,
+        "main": false,
+        "priceText": "5,500원"
+      },
+      {
+        "name": "너겟킹10조각",
+        "price": 6600,
+        "main": false,
+        "priceText": "6,600원"
+      },
+      {
+        "name": "21치즈스틱",
+        "price": 3600,
+        "main": false,
+        "priceText": "3,600원"
+      },
+      {
+        "name": "바삭킹8조각,스위트칠리소스",
+        "price": 13900,
+        "main": false,
+        "priceText": "13,900원"
+      },
+      {
+        "name": "바삭킹8조각,디아블로소스",
+        "price": 13900,
+        "main": false,
+        "priceText": "13,900원"
+      },
+      {
+        "name": "바삭킹2조각",
+        "price": 4400,
+        "main": false,
+        "priceText": "4,400원"
+      },
+      {
+        "name": "바삭킹4조각",
+        "price": 7500,
+        "main": false,
+        "priceText": "7,500원"
+      },
+      {
+        "name": "쉐이킹프라이 구운갈릭",
+        "price": 3600,
+        "main": false,
+        "priceText": "3,600원"
+      },
+      {
+        "name": "쉐이킹프라이 매콤치즈",
+        "price": 3600,
+        "main": false,
+        "priceText": "3,600원"
+      },
+      {
+        "name": "쉐이킹프라이 스윗어니언",
+        "price": 3600,
+        "main": false,
+        "priceText": "3,600원"
+      },
+      {
+        "name": "코코넛슈림프3조각+스위트칠리소스",
+        "price": 5100,
+        "main": false,
+        "priceText": "5,100원"
+      },
+      {
+        "name": "코코넛슈림프6조각+스위트칠리소스",
+        "price": 8200,
+        "main": false,
+        "priceText": "8,200원"
+      },
+      {
+        "name": "코코넛슈림프9조각+스위트칠리소스",
+        "price": 11100,
+        "main": false,
+        "priceText": "11,100원"
+      },
+      {
+        "name": "프렌치프라이(L)",
+        "price": 3800,
+        "main": false,
+        "priceText": "3,800원"
+      },
+      {
+        "name": "프렌치프라이(R)",
+        "price": 3300,
+        "main": false,
+        "priceText": "3,300원"
+      },
+      {
+        "name": "코울슬로",
+        "price": 3300,
+        "main": false,
+        "priceText": "3,300원"
+      },
+      {
+        "name": "콘샐러드",
+        "price": 3300,
+        "main": false,
+        "priceText": "3,300원"
+      },
+      {
+        "name": "빅 딥 체다치즈",
+        "price": 3000,
+        "main": false,
+        "priceText": "3,000원"
+      },
+      {
+        "name": "스위트칠리소스",
+        "price": 600,
+        "main": false,
+        "priceText": "600원"
+      },
+      {
+        "name": "디아블로소스",
+        "price": 600,
+        "main": false,
+        "priceText": "600원"
+      },
+      {
+        "name": "허니머드타드 소스",
+        "price": 200,
+        "main": false,
+        "priceText": "200원"
+      },
+      {
+        "name": "구운갈릭 시즈닝",
+        "price": 400,
+        "main": false,
+        "priceText": "400원"
+      },
+      {
+        "name": "매콤치즈 시즈닝",
+        "price": 400,
+        "main": false,
+        "priceText": "400원"
+      },
+      {
+        "name": "스윗어니언 시즈닝",
+        "price": 400,
+        "main": false,
+        "priceText": "400원"
+      },
+      {
+        "name": "아메리카노",
+        "price": 2600,
+        "main": false,
+        "priceText": "2,600원"
+      },
+      {
+        "name": "아이스 아메리카노",
+        "price": 2600,
+        "main": false,
+        "priceText": "2,600원"
+      },
+      {
+        "name": "닥터페퍼 제로(R)",
+        "price": 3200,
+        "main": false,
+        "priceText": "3,200원"
+      },
+      {
+        "name": "닥터페퍼 제로(L)",
+        "price": 3400,
+        "main": false,
+        "priceText": "3,400원"
+      },
+      {
+        "name": "코카콜라R",
+        "price": 3200,
+        "main": false,
+        "priceText": "3,200원"
+      },
+      {
+        "name": "코카콜라L",
+        "price": 3400,
+        "main": false,
+        "priceText": "3,400원"
+      },
+      {
+        "name": "코카콜라 제로L",
+        "price": 3400,
+        "main": false,
+        "priceText": "3,400원"
+      },
+      {
+        "name": "코카콜라 제로R",
+        "price": 3200,
+        "main": false,
+        "priceText": "3,200원"
+      },
+      {
+        "name": "스프라이트(L)",
+        "price": 3400,
+        "main": false,
+        "priceText": "3,400원"
+      },
+      {
+        "name": "스프라이트(R)",
+        "price": 3200,
+        "main": false,
+        "priceText": "3,200원"
+      },
+      {
+        "name": "스프라이트 제로L",
+        "price": 3400,
+        "main": false,
+        "priceText": "3,400원"
+      },
+      {
+        "name": "스프라이트 제로R",
+        "price": 3200,
+        "main": false,
+        "priceText": "3,200원"
+      },
+      {
+        "name": "미닛메이드",
+        "price": 3900,
+        "main": false,
+        "priceText": "3,900원"
+      },
+      {
+        "name": "순수",
+        "price": 2400,
+        "main": false,
+        "priceText": "2,400원"
+      }
+    ],
+    "placeSourceUrl": "https://pcmap.place.naver.com/restaurant/37346559/home",
+    "note": "배달 주문 게시 가격입니다. 매장 가격은 미확인으로 유지합니다."
+  },
+  "attrs": {
+    "status": "partial",
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금",
+          "토",
+          "일"
+        ],
+        "open": "00:00",
+        "close": "24:00"
+      }
+    ]
+  },
+  "hoursObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/37346559/home",
+    "checkedAt": "2026-11-12",
+    "status": "confirmed",
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금",
+          "토",
+          "일"
+        ],
+        "open": "00:00",
+        "close": "24:00"
+      }
+    ],
+    "note": "매장 영업시간 관찰. 기존 attrs/research를 덮어쓰지 않습니다."
+  },
+  "research": {
+    "checkedAt": "2026-11-11",
+    "method": "web",
+    "identityStatus": "matched",
+    "queries": [
+      "버거킹 전남대후문점 전남광주 북구 우치로 76"
+    ],
+    "sources": [
+      {
+        "id": "naver-place",
+        "url": "https://pcmap.place.naver.com/restaurant/37346559/home",
+        "title": "버거킹 전남대후문점 네이버 지도",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "같은 주소의 지점 확인. 지도 등록 확인은 실시간 영업 중 보증이 아님"
+      },
+      {
+        "id": "naver-menu",
+        "url": "https://pcmap.place.naver.com/restaurant/37346559/home",
+        "title": "버거킹 전남대후문점 메뉴 탭",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "가격 맥락: unknown"
+      },
+      {
+        "id": "naver-hours",
+        "url": "https://pcmap.place.naver.com/restaurant/37346559/home",
+        "title": "버거킹 전남대후문점 영업시간",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "게시된 요일별 영업시간. 미확인은 추정하지 않음"
+      }
+    ],
+    "facts": {
+      "menus": {
+        "status": "unconfirmed",
+        "sourceIds": [],
+        "note": "매장 기준 정보 미확인. 배달·가격 맥락 불명 자료는 확정하지 않습니다."
+      },
+      "hours": {
+        "status": "unconfirmed",
+        "sourceIds": [],
+        "note": "매장 기준 정보 미확인. 배달·가격 맥락 불명 자료는 확정하지 않습니다."
+      }
+    },
+    "unknownFields": [
+      "menus",
+      "hours",
+      "mealType",
+      "takeout",
+      "verifiedAt",
+      "verifiedBy",
+      "break",
+      "lastOrder"
+    ],
+    "notes": [
+      "네이버 공개 지도 상세·메뉴 탭 직접 확인.",
+      "공개 플레이스 메뉴 이외 경로는 수집하지 않음",
+      "네이버 표시 업종: 햄버거",
+      "전체 메뉴 탭에 보인 메뉴명·가격·가격 미확인 원문을 누락 없이 보존. 1인 식사로 확인하기 어려운 고기 단위·후식·공유세트·어린이·점심 한정은 일반 예산 대표 메뉴에서 제외.",
+      "학교 해당 식당가 출입구에서 OSM 도보 10분 이내 검증 후 최종 적용 예정.",
+      "병합 입력: rear_batch8_manifest.json",
+      "공개 네이버 화면 관찰이며 현장 검증이 아닙니다."
+    ]
+  },
+  "followupReview": {
+    "checkedAt": "2026-11-12",
+    "reasons": [
+      "매장 메뉴·가격: 배달 가격 또는 가격 구분이 불명확한 자료만 있어 매장 가격을 확인해야 합니다.",
+      "보조 지도 매장 메뉴에도 숫자 가격이 게시되지 않아 배달가·다른 지점 가격으로 대체하지 않았습니다."
+    ],
+    "sources": [
+      "https://pcmap.place.naver.com/restaurant/37346559/home",
+      "https://m.booking.naver.com/order/bizes/916853/items/5097110?theme=place&service-target=map-pc&refererCode=menutab&lang=ko&area=bmp"
+    ]
+  }
+}

@@ -1,0 +1,249 @@
+{
+  "version": 1,
+  "id": "p_0143",
+  "source": "team",
+  "sourceId": "naver:1698820321",
+  "name": "호수짱뚱어탕",
+  "address": "전남광주 북구 자미로66번길 17-1 1층",
+  "category": "한식",
+  "lat": 35.1715853556906,
+  "lng": 126.905727080256,
+  "sourceStatus": "active",
+  "availability": {
+    "status": "listed",
+    "provider": "naver",
+    "checkedAt": "2026-11-11",
+    "sourceUrl": "https://pcmap.place.naver.com/place/1698820321",
+    "naverPlaceId": "1698820321",
+    "observedName": "호수짱뚱어탕",
+    "observedAddress": "전남광주 북구 자미로66번길 17-1 1층",
+    "district": "정문",
+    "addressVerified": true,
+    "nearby": true,
+    "reason": "공개 네이버 지도에서 동일 주소의 전남대 정문 식당으로 확인"
+  },
+  "menuObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/1698820321/menu/list",
+    "checkedAt": "2026-11-11",
+    "priceContext": "in_store",
+    "menus": [
+      {
+        "name": "짱뚱어탕",
+        "price": 12000,
+        "main": true
+      },
+      {
+        "name": "황태고추장볶음",
+        "price": 11000,
+        "main": true
+      },
+      {
+        "name": "흑돼지 주물럭",
+        "price": 12000,
+        "main": true
+      },
+      {
+        "name": "황태탕",
+        "price": 10000,
+        "main": true
+      },
+      {
+        "name": "짱뚱어전골 중",
+        "price": 50000,
+        "main": true
+      },
+      {
+        "name": "황태전골 중",
+        "price": 45000,
+        "main": true
+      }
+    ],
+    "note": "메뉴 상태: confirmed. 원본 관찰·좌표 출처는 적용 manifest에 보관합니다.",
+    "status": "confirmed"
+  },
+  "attrs": {
+    "status": "partial",
+    "menus": [
+      {
+        "name": "짱뚱어탕",
+        "price": 12000,
+        "main": true
+      },
+      {
+        "name": "황태고추장볶음",
+        "price": 11000,
+        "main": true
+      },
+      {
+        "name": "흑돼지 주물럭",
+        "price": 12000,
+        "main": true
+      },
+      {
+        "name": "황태탕",
+        "price": 10000,
+        "main": true
+      },
+      {
+        "name": "짱뚱어전골 중",
+        "price": 50000,
+        "main": true
+      },
+      {
+        "name": "황태전골 중",
+        "price": 45000,
+        "main": true
+      }
+    ],
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금",
+          "토"
+        ],
+        "open": "11:30",
+        "close": "20:30",
+        "lastOrder": "20:00"
+      }
+    ]
+  },
+  "hoursObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/place/1698820321",
+    "checkedAt": "2026-11-11",
+    "status": "confirmed",
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금",
+          "토"
+        ],
+        "open": "11:30",
+        "close": "20:30",
+        "lastOrder": "20:00"
+      }
+    ],
+    "note": "매장 영업시간 관찰. 기존 attrs/research를 덮어쓰지 않습니다."
+  },
+  "research": {
+    "checkedAt": "2026-11-11",
+    "method": "web",
+    "identityStatus": "matched",
+    "queries": [
+      "호수짱뚱어탕 전남광주 북구 자미로66번길 17-1 1층"
+    ],
+    "sources": [
+      {
+        "id": "naver-place",
+        "url": "https://pcmap.place.naver.com/place/1698820321",
+        "title": "호수짱뚱어탕 네이버 지도",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "같은 주소의 지점 확인. 지도 등록 확인은 실시간 영업 중 보증이 아님"
+      },
+      {
+        "id": "naver-menu",
+        "url": "https://pcmap.place.naver.com/restaurant/1698820321/menu/list",
+        "title": "호수짱뚱어탕 메뉴 탭",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "가격 맥락: in_store"
+      },
+      {
+        "id": "naver-hours",
+        "url": "https://pcmap.place.naver.com/place/1698820321",
+        "title": "호수짱뚱어탕 영업시간",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "게시된 요일별 영업시간. 미확인은 추정하지 않음"
+      }
+    ],
+    "facts": {
+      "menus": {
+        "status": "confirmed",
+        "sourceIds": [
+          "naver-menu"
+        ],
+        "note": "매장 게시값을 확인했습니다.",
+        "value": [
+          {
+            "name": "짱뚱어탕",
+            "price": 12000,
+            "main": true
+          },
+          {
+            "name": "황태고추장볶음",
+            "price": 11000,
+            "main": true
+          },
+          {
+            "name": "흑돼지 주물럭",
+            "price": 12000,
+            "main": true
+          },
+          {
+            "name": "황태탕",
+            "price": 10000,
+            "main": true
+          },
+          {
+            "name": "짱뚱어전골 중",
+            "price": 50000,
+            "main": true
+          },
+          {
+            "name": "황태전골 중",
+            "price": 45000,
+            "main": true
+          }
+        ]
+      },
+      "hours": {
+        "status": "confirmed",
+        "sourceIds": [
+          "naver-hours"
+        ],
+        "note": "매장 게시값을 확인했습니다.",
+        "value": [
+          {
+            "days": [
+              "월",
+              "화",
+              "수",
+              "목",
+              "금",
+              "토"
+            ],
+            "open": "11:30",
+            "close": "20:30",
+            "lastOrder": "20:00"
+          }
+        ]
+      }
+    },
+    "unknownFields": [
+      "mealType",
+      "takeout",
+      "verifiedAt",
+      "verifiedBy",
+      "break"
+    ],
+    "notes": [
+      "메뉴 업데이트26.06.01. 황태고추장볶음/흑돼지주물럭 2인 이상 주문; 주물럭 공깃밥 별도.",
+      "영업시간 원문: 월~토 11:30-20:30 라스트오더20:00; 일 정기휴무",
+      "원문 메뉴 목록·분류는 front.json에 보존. main은 1인 식사 예산용 조사자 분류이며 공유 메뉴는 false로 보수적으로 표시.",
+      "병합 입력: front_normalized_manifest.json",
+      "공개 네이버 화면 관찰이며 현장 검증이 아닙니다."
+    ]
+  }
+}

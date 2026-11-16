@@ -1,0 +1,337 @@
+{
+  "version": 1,
+  "id": "p_0128",
+  "source": "team",
+  "sourceId": "naver:1115995409",
+  "name": "그여자의 밥상",
+  "address": "광주 북구 설죽로214번길 123",
+  "category": "일식",
+  "lat": 35.1779118178027,
+  "lng": 126.904369466523,
+  "sourceStatus": "active",
+  "availability": {
+    "status": "listed",
+    "provider": "naver",
+    "checkedAt": "2026-11-11",
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/1115995409/home",
+    "naverPlaceId": "1115995409",
+    "observedName": "그여자의 밥상",
+    "observedAddress": "광주 북구 설죽로214번길 123",
+    "district": "상대",
+    "addressVerified": true,
+    "nearby": true,
+    "reason": "공개 네이버 지도에서 동일 주소의 전남대 상대 식당으로 확인"
+  },
+  "menuObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/1115995409/menu/list",
+    "checkedAt": "2026-11-11",
+    "priceContext": "in_store",
+    "menus": [
+      {
+        "name": "가츠동",
+        "price": 6900,
+        "main": true,
+        "priceContext": "in_store"
+      },
+      {
+        "name": "에비동",
+        "price": 6900,
+        "main": true,
+        "priceContext": "in_store"
+      },
+      {
+        "name": "믹스가츠동",
+        "price": 7500,
+        "main": true,
+        "priceContext": "in_store"
+      },
+      {
+        "name": "고추삼겹동",
+        "price": 7500,
+        "main": true,
+        "priceContext": "in_store"
+      },
+      {
+        "name": "규동",
+        "price": 7900,
+        "main": true,
+        "priceContext": "in_store"
+      },
+      {
+        "name": "돈가츠 백반 정식",
+        "price": 9000,
+        "main": true,
+        "priceContext": "in_store"
+      },
+      {
+        "name": "돈가츠 치즈 백반 정식",
+        "price": 10000,
+        "main": true,
+        "priceContext": "in_store"
+      },
+      {
+        "name": "등심 돈가츠",
+        "price": 7000,
+        "main": true,
+        "priceContext": "in_store"
+      },
+      {
+        "name": "가케우동/온소바",
+        "price": 6000,
+        "main": true,
+        "priceContext": "in_store"
+      }
+    ],
+    "note": "메뉴 상태: confirmed. 원본 관찰·좌표 출처는 적용 manifest에 보관합니다.",
+    "status": "confirmed"
+  },
+  "attrs": {
+    "status": "partial",
+    "menus": [
+      {
+        "name": "가츠동",
+        "price": 6900,
+        "main": true
+      },
+      {
+        "name": "에비동",
+        "price": 6900,
+        "main": true
+      },
+      {
+        "name": "믹스가츠동",
+        "price": 7500,
+        "main": true
+      },
+      {
+        "name": "고추삼겹동",
+        "price": 7500,
+        "main": true
+      },
+      {
+        "name": "규동",
+        "price": 7900,
+        "main": true
+      },
+      {
+        "name": "돈가츠 백반 정식",
+        "price": 9000,
+        "main": true
+      },
+      {
+        "name": "돈가츠 치즈 백반 정식",
+        "price": 10000,
+        "main": true
+      },
+      {
+        "name": "등심 돈가츠",
+        "price": 7000,
+        "main": true
+      },
+      {
+        "name": "가케우동/온소바",
+        "price": 6000,
+        "main": true
+      }
+    ],
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금"
+        ],
+        "open": "10:10",
+        "close": "20:00",
+        "lastOrder": "19:30",
+        "break": {
+          "start": "15:30",
+          "end": "16:50"
+        }
+      },
+      {
+        "days": [
+          "토"
+        ],
+        "open": "10:30",
+        "close": "15:30",
+        "lastOrder": "15:00"
+      }
+    ]
+  },
+  "hoursObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/1115995409/home",
+    "checkedAt": "2026-11-11",
+    "status": "confirmed",
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금"
+        ],
+        "open": "10:10",
+        "close": "20:00",
+        "lastOrder": "19:30",
+        "break": {
+          "start": "15:30",
+          "end": "16:50"
+        }
+      },
+      {
+        "days": [
+          "토"
+        ],
+        "open": "10:30",
+        "close": "15:30",
+        "lastOrder": "15:00"
+      }
+    ],
+    "note": "매장 영업시간 관찰. 기존 attrs/research를 덮어쓰지 않습니다."
+  },
+  "research": {
+    "checkedAt": "2026-11-11",
+    "method": "web",
+    "identityStatus": "matched",
+    "queries": [
+      "그여자의 밥상 광주 북구 설죽로214번길 123"
+    ],
+    "sources": [
+      {
+        "id": "naver-place",
+        "url": "https://pcmap.place.naver.com/restaurant/1115995409/home",
+        "title": "그여자의 밥상 네이버 지도",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "같은 주소의 지점 확인. 지도 등록 확인은 실시간 영업 중 보증이 아님"
+      },
+      {
+        "id": "naver-menu",
+        "url": "https://pcmap.place.naver.com/restaurant/1115995409/menu/list",
+        "title": "그여자의 밥상 메뉴 탭",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "가격 맥락: in_store"
+      },
+      {
+        "id": "naver-hours",
+        "url": "https://pcmap.place.naver.com/restaurant/1115995409/home",
+        "title": "그여자의 밥상 영업시간",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "게시된 요일별 영업시간. 미확인은 추정하지 않음"
+      }
+    ],
+    "facts": {
+      "menus": {
+        "status": "confirmed",
+        "sourceIds": [
+          "naver-menu"
+        ],
+        "note": "매장 게시값을 확인했습니다.",
+        "value": [
+          {
+            "name": "가츠동",
+            "price": 6900,
+            "main": true
+          },
+          {
+            "name": "에비동",
+            "price": 6900,
+            "main": true
+          },
+          {
+            "name": "믹스가츠동",
+            "price": 7500,
+            "main": true
+          },
+          {
+            "name": "고추삼겹동",
+            "price": 7500,
+            "main": true
+          },
+          {
+            "name": "규동",
+            "price": 7900,
+            "main": true
+          },
+          {
+            "name": "돈가츠 백반 정식",
+            "price": 9000,
+            "main": true
+          },
+          {
+            "name": "돈가츠 치즈 백반 정식",
+            "price": 10000,
+            "main": true
+          },
+          {
+            "name": "등심 돈가츠",
+            "price": 7000,
+            "main": true
+          },
+          {
+            "name": "가케우동/온소바",
+            "price": 6000,
+            "main": true
+          }
+        ]
+      },
+      "hours": {
+        "status": "confirmed",
+        "sourceIds": [
+          "naver-hours"
+        ],
+        "note": "매장 게시값을 확인했습니다.",
+        "value": [
+          {
+            "days": [
+              "월",
+              "화",
+              "수",
+              "목",
+              "금"
+            ],
+            "open": "10:10",
+            "close": "20:00",
+            "lastOrder": "19:30",
+            "break": {
+              "start": "15:30",
+              "end": "16:50"
+            }
+          },
+          {
+            "days": [
+              "토"
+            ],
+            "open": "10:30",
+            "close": "15:30",
+            "lastOrder": "15:00"
+          }
+        ]
+      }
+    },
+    "unknownFields": [
+      "mealType",
+      "takeout",
+      "verifiedAt",
+      "verifiedBy",
+      "break"
+    ],
+    "notes": [
+      "공개 메뉴 탭 전체9개. 최근 업데이트25.03.04 표기. 사진 미대조. 기존 오모야 후보와 같은주소지만 현재 상호/ID로 추가.",
+      "영업시간 원문: 영업 종료 10시 10분에 영업 시작 수 10:10 - 20:00 15:30 - 16:50 브레이크타임 19:30 라스트오더 목 10:10 - 20:00 15:30 - 16:50 브레이크타임 19:30 라스트오더 금 10:10 - 20:00 15:30 - 16:50 브레이크타임 19:30 라스트오더 토 10:30 - 15:30 15:00 라스트오더 일 정기휴무 (매주 일요일) 월 10:10 - 20:00 15:30 - 16:50 브레이크타임 19:30 라스트오더 화 10:10 - 20:00 15:30 - 16:50 브레이크타임 19:30 라스트오더 접기",
+      "원본 관찰·메뉴별 가격채널/사진 근거는 front_sangdae_final.json. 매장가격과 배달가격을 혼합하지 않음.",
+      "동주소 p_0007 오모야는 현재 상호와 다르므로 ID를 연결하지 않음.",
+      "병합 입력: front_final_normalized_manifest.json",
+      "공개 네이버 화면 관찰이며 현장 검증이 아닙니다."
+    ]
+  }
+}

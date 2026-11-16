@@ -1,0 +1,900 @@
+{
+  "version": 1,
+  "id": "p_0137",
+  "source": "team",
+  "sourceId": "naver:1507113408",
+  "name": "로니의몬스터피자 전남대점",
+  "address": "전남광주 북구 자미로66번길 17 1층",
+  "category": "양식",
+  "lat": 35.1715852702121,
+  "lng": 126.905617307543,
+  "sourceStatus": "active",
+  "availability": {
+    "status": "listed",
+    "provider": "naver",
+    "checkedAt": "2026-11-11",
+    "sourceUrl": "https://pcmap.place.naver.com/place/1507113408",
+    "naverPlaceId": "1507113408",
+    "observedName": "로니의몬스터피자 전남대점",
+    "observedAddress": "전남광주 북구 자미로66번길 17 1층",
+    "district": "정문",
+    "addressVerified": true,
+    "nearby": true,
+    "reason": "공개 네이버 지도에서 동일 주소의 전남대 정문 식당으로 확인"
+  },
+  "menuObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/1507113408/menu/list",
+    "checkedAt": "2026-11-12",
+    "priceContext": "in_store",
+    "status": "confirmed",
+    "menus": [
+      {
+        "name": "몬스터 콘치즈피자 (R)",
+        "price": 18900,
+        "main": true
+      },
+      {
+        "name": "몬스터 콘치즈피자 (L)",
+        "price": 22900,
+        "main": true
+      },
+      {
+        "name": "몬스터 콘치즈피자 (18인치 M)",
+        "price": 31900,
+        "main": true
+      },
+      {
+        "name": "몬스터 콤비네이션 (R)",
+        "price": 19900,
+        "main": true
+      },
+      {
+        "name": "몬스터 콤비네이션 (L)",
+        "price": 23900,
+        "main": true
+      },
+      {
+        "name": "몬스터 콤비네이션 (18인치 M)",
+        "price": 33900,
+        "main": true
+      },
+      {
+        "name": "페퍼로니피자 (R)",
+        "price": 19900,
+        "main": true
+      },
+      {
+        "name": "페퍼로니피자 (L)",
+        "price": 23900,
+        "main": true
+      },
+      {
+        "name": "페퍼로니피자 (18인치 M)",
+        "price": 33900,
+        "main": true
+      },
+      {
+        "name": "스파이시 페퍼로니피자 (R)",
+        "price": 20900,
+        "main": true
+      },
+      {
+        "name": "스파이시 페퍼로니피자 (L)",
+        "price": 24900,
+        "main": true
+      },
+      {
+        "name": "스파이시 페퍼로니피자 (18인치 M)",
+        "price": 34900,
+        "main": true
+      },
+      {
+        "name": "불고기피자 (R)",
+        "price": 19900,
+        "main": true
+      },
+      {
+        "name": "불고기피자 (L)",
+        "price": 23900,
+        "main": true
+      },
+      {
+        "name": "불고기피자 (18인치 M)",
+        "price": 33900,
+        "main": true
+      },
+      {
+        "name": "스파이시 불고기피자 (R)",
+        "price": 20900,
+        "main": true
+      },
+      {
+        "name": "스파이시 불고기피자 (L)",
+        "price": 24900,
+        "main": true
+      },
+      {
+        "name": "스파이시 불고기피자 (18인치 M)",
+        "price": 34900,
+        "main": true
+      },
+      {
+        "name": "몬스터 하와이안피자 (R)",
+        "price": 19900,
+        "main": true
+      },
+      {
+        "name": "몬스터 하와이안피자 (L)",
+        "price": 23900,
+        "main": true
+      },
+      {
+        "name": "몬스터 하와이안피자 (18인치 M)",
+        "price": 33900,
+        "main": true
+      },
+      {
+        "name": "통고구마피자 (R)",
+        "price": 19900,
+        "main": true
+      },
+      {
+        "name": "통고구마피자 (L)",
+        "price": 23900,
+        "main": true
+      },
+      {
+        "name": "통고구마피자 (18인치 M)",
+        "price": 33900,
+        "main": true
+      },
+      {
+        "name": "베이컨 고구마피자 (R)",
+        "price": 19900,
+        "main": true
+      },
+      {
+        "name": "베이컨 고구마피자 (L)",
+        "price": 23900,
+        "main": true
+      },
+      {
+        "name": "베이컨 고구마피자 (18인치 M)",
+        "price": 33900,
+        "main": true
+      },
+      {
+        "name": "베이컨 체다후라이피자 (R)",
+        "price": 19900,
+        "main": true
+      },
+      {
+        "name": "베이컨 체다후라이피자 (L)",
+        "price": 23900,
+        "main": true
+      },
+      {
+        "name": "베이컨 체다후라이피자 (18인치 M)",
+        "price": 33900,
+        "main": true
+      },
+      {
+        "name": "체다베이컨피자 (R)",
+        "price": 19900,
+        "main": true
+      },
+      {
+        "name": "체다베이컨피자 (L)",
+        "price": 23900,
+        "main": true
+      },
+      {
+        "name": "체다베이컨피자 (18인치 M)",
+        "price": 33900,
+        "main": true
+      },
+      {
+        "name": "베이컨포테이토피자 (R)",
+        "price": 19900,
+        "main": true
+      },
+      {
+        "name": "베이컨포테이토피자 (L)",
+        "price": 23900,
+        "main": true
+      },
+      {
+        "name": "베이컨포테이토피자 (18인치 M)",
+        "price": 33900,
+        "main": true
+      },
+      {
+        "name": "바베큐 치킨피자 (R)",
+        "price": 19900,
+        "main": true
+      },
+      {
+        "name": "바베큐 치킨피자 (L)",
+        "price": 23900,
+        "main": true
+      },
+      {
+        "name": "바베큐 치킨피자 (18인치 M)",
+        "price": 33900,
+        "main": true
+      },
+      {
+        "name": "바삭바삭 포테이토피자 (R)",
+        "price": 20900,
+        "main": true
+      },
+      {
+        "name": "바삭바삭 포테이토피자 (L)",
+        "price": 24900,
+        "main": true
+      },
+      {
+        "name": "바삭바삭 포테이토피자 (18인치 M)",
+        "price": 34900,
+        "main": true
+      },
+      {
+        "name": "핫불닭 포테이토피자 (R)",
+        "price": 20900,
+        "main": true
+      },
+      {
+        "name": "핫불닭 포테이토피자 (L)",
+        "price": 24900,
+        "main": true
+      },
+      {
+        "name": "핫불닭 포테이토피자 (18인치 M)",
+        "price": 34900,
+        "main": true
+      },
+      {
+        "name": "불닭쉬림프피자 (R)",
+        "price": 21900,
+        "main": true
+      },
+      {
+        "name": "불닭쉬림프피자 (L)",
+        "price": 24900,
+        "main": true
+      },
+      {
+        "name": "불닭쉬림프피자 (18인치 M)",
+        "price": 34900,
+        "main": true
+      },
+      {
+        "name": "소불고기 청양마요피자 (R)",
+        "price": 20900,
+        "main": true
+      },
+      {
+        "name": "소불고기 청양마요피자 (L)",
+        "price": 24900,
+        "main": true
+      },
+      {
+        "name": "소불고기 청양마요피자 (18인치 M)",
+        "price": 34900,
+        "main": true
+      },
+      {
+        "name": "갈릭스테이크쉬림프피자 (R)",
+        "price": 21900,
+        "main": true
+      },
+      {
+        "name": "갈릭스테이크쉬림프피자 (L)",
+        "price": 25900,
+        "main": true
+      },
+      {
+        "name": "갈릭스테이크쉬림프피자 (18인치 M)",
+        "price": 35900,
+        "main": true
+      },
+      {
+        "name": "하와이안쉬림프피자 (R)",
+        "price": 21900,
+        "main": true
+      },
+      {
+        "name": "하와이안쉬림프피자 (L)",
+        "price": 25900,
+        "main": true
+      },
+      {
+        "name": "하와이안쉬림프피자 (18인치 M)",
+        "price": 35900,
+        "main": true
+      },
+      {
+        "name": "페퍼로니폭탄피자 (R)",
+        "price": 20900,
+        "main": true
+      },
+      {
+        "name": "페퍼로니폭탄피자 (L)",
+        "price": 24900,
+        "main": true
+      },
+      {
+        "name": "페퍼로니폭탄피자 (18인치 M)",
+        "price": 36900,
+        "main": true
+      },
+      {
+        "name": "치즈폭탄피자 (R)",
+        "price": 20900,
+        "main": true
+      },
+      {
+        "name": "치즈폭탄피자 (L)",
+        "price": 25900,
+        "main": true
+      },
+      {
+        "name": "치즈폭탄피자 (18인치 M)",
+        "price": 37900,
+        "main": true
+      },
+      {
+        "name": "갈릭 비프스테이크피자 (R)",
+        "price": 19900,
+        "main": true
+      },
+      {
+        "name": "갈릭 비프스테이크피자 (L)",
+        "price": 23900,
+        "main": true
+      },
+      {
+        "name": "갈릭 비프스테이크피자 (18인치 M)",
+        "price": 34900,
+        "main": true
+      },
+      {
+        "name": "갈릭 포크피자 (R)",
+        "price": 19900,
+        "main": true
+      },
+      {
+        "name": "갈릭 포크피자 (L)",
+        "price": 25900,
+        "main": true
+      },
+      {
+        "name": "갈릭 포크피자 (18인치 M)",
+        "price": 35900,
+        "main": true
+      },
+      {
+        "name": "할라 크림새우피자 (R)",
+        "price": 20900,
+        "main": true
+      },
+      {
+        "name": "할라 크림새우피자 (L)",
+        "price": 24900,
+        "main": true
+      },
+      {
+        "name": "할라 크림새우피자 (18인치 M)",
+        "price": 35900,
+        "main": true
+      },
+      {
+        "name": "4가지 몬스터피자 (R)",
+        "price": 23900,
+        "main": true
+      },
+      {
+        "name": "4가지 몬스터피자 (L)",
+        "price": 26900,
+        "main": true
+      },
+      {
+        "name": "4가지 몬스터피자 (18인치 M)",
+        "price": 36900,
+        "main": true
+      }
+    ],
+    "note": "매장 메뉴판의 사이즈별 게시 총액을 그대로 예산에 적용. 메뉴판: https://ldb-phinf.pstatic.net/20260605_84/17806302484445RHdu_JPEG/temp_picture.jpg"
+  },
+  "attrs": {
+    "status": "partial",
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금",
+          "토",
+          "일"
+        ],
+        "open": "10:30",
+        "close": "23:45"
+      }
+    ],
+    "menus": [
+      {
+        "name": "몬스터 콘치즈피자 (R)",
+        "price": 18900,
+        "main": true
+      },
+      {
+        "name": "몬스터 콘치즈피자 (L)",
+        "price": 22900,
+        "main": true
+      },
+      {
+        "name": "몬스터 콘치즈피자 (18인치 M)",
+        "price": 31900,
+        "main": true
+      },
+      {
+        "name": "몬스터 콤비네이션 (R)",
+        "price": 19900,
+        "main": true
+      },
+      {
+        "name": "몬스터 콤비네이션 (L)",
+        "price": 23900,
+        "main": true
+      },
+      {
+        "name": "몬스터 콤비네이션 (18인치 M)",
+        "price": 33900,
+        "main": true
+      },
+      {
+        "name": "페퍼로니피자 (R)",
+        "price": 19900,
+        "main": true
+      },
+      {
+        "name": "페퍼로니피자 (L)",
+        "price": 23900,
+        "main": true
+      },
+      {
+        "name": "페퍼로니피자 (18인치 M)",
+        "price": 33900,
+        "main": true
+      },
+      {
+        "name": "스파이시 페퍼로니피자 (R)",
+        "price": 20900,
+        "main": true
+      },
+      {
+        "name": "스파이시 페퍼로니피자 (L)",
+        "price": 24900,
+        "main": true
+      },
+      {
+        "name": "스파이시 페퍼로니피자 (18인치 M)",
+        "price": 34900,
+        "main": true
+      },
+      {
+        "name": "불고기피자 (R)",
+        "price": 19900,
+        "main": true
+      },
+      {
+        "name": "불고기피자 (L)",
+        "price": 23900,
+        "main": true
+      },
+      {
+        "name": "불고기피자 (18인치 M)",
+        "price": 33900,
+        "main": true
+      },
+      {
+        "name": "스파이시 불고기피자 (R)",
+        "price": 20900,
+        "main": true
+      },
+      {
+        "name": "스파이시 불고기피자 (L)",
+        "price": 24900,
+        "main": true
+      },
+      {
+        "name": "스파이시 불고기피자 (18인치 M)",
+        "price": 34900,
+        "main": true
+      },
+      {
+        "name": "몬스터 하와이안피자 (R)",
+        "price": 19900,
+        "main": true
+      },
+      {
+        "name": "몬스터 하와이안피자 (L)",
+        "price": 23900,
+        "main": true
+      },
+      {
+        "name": "몬스터 하와이안피자 (18인치 M)",
+        "price": 33900,
+        "main": true
+      },
+      {
+        "name": "통고구마피자 (R)",
+        "price": 19900,
+        "main": true
+      },
+      {
+        "name": "통고구마피자 (L)",
+        "price": 23900,
+        "main": true
+      },
+      {
+        "name": "통고구마피자 (18인치 M)",
+        "price": 33900,
+        "main": true
+      },
+      {
+        "name": "베이컨 고구마피자 (R)",
+        "price": 19900,
+        "main": true
+      },
+      {
+        "name": "베이컨 고구마피자 (L)",
+        "price": 23900,
+        "main": true
+      },
+      {
+        "name": "베이컨 고구마피자 (18인치 M)",
+        "price": 33900,
+        "main": true
+      },
+      {
+        "name": "베이컨 체다후라이피자 (R)",
+        "price": 19900,
+        "main": true
+      },
+      {
+        "name": "베이컨 체다후라이피자 (L)",
+        "price": 23900,
+        "main": true
+      },
+      {
+        "name": "베이컨 체다후라이피자 (18인치 M)",
+        "price": 33900,
+        "main": true
+      },
+      {
+        "name": "체다베이컨피자 (R)",
+        "price": 19900,
+        "main": true
+      },
+      {
+        "name": "체다베이컨피자 (L)",
+        "price": 23900,
+        "main": true
+      },
+      {
+        "name": "체다베이컨피자 (18인치 M)",
+        "price": 33900,
+        "main": true
+      },
+      {
+        "name": "베이컨포테이토피자 (R)",
+        "price": 19900,
+        "main": true
+      },
+      {
+        "name": "베이컨포테이토피자 (L)",
+        "price": 23900,
+        "main": true
+      },
+      {
+        "name": "베이컨포테이토피자 (18인치 M)",
+        "price": 33900,
+        "main": true
+      },
+      {
+        "name": "바베큐 치킨피자 (R)",
+        "price": 19900,
+        "main": true
+      },
+      {
+        "name": "바베큐 치킨피자 (L)",
+        "price": 23900,
+        "main": true
+      },
+      {
+        "name": "바베큐 치킨피자 (18인치 M)",
+        "price": 33900,
+        "main": true
+      },
+      {
+        "name": "바삭바삭 포테이토피자 (R)",
+        "price": 20900,
+        "main": true
+      },
+      {
+        "name": "바삭바삭 포테이토피자 (L)",
+        "price": 24900,
+        "main": true
+      },
+      {
+        "name": "바삭바삭 포테이토피자 (18인치 M)",
+        "price": 34900,
+        "main": true
+      },
+      {
+        "name": "핫불닭 포테이토피자 (R)",
+        "price": 20900,
+        "main": true
+      },
+      {
+        "name": "핫불닭 포테이토피자 (L)",
+        "price": 24900,
+        "main": true
+      },
+      {
+        "name": "핫불닭 포테이토피자 (18인치 M)",
+        "price": 34900,
+        "main": true
+      },
+      {
+        "name": "불닭쉬림프피자 (R)",
+        "price": 21900,
+        "main": true
+      },
+      {
+        "name": "불닭쉬림프피자 (L)",
+        "price": 24900,
+        "main": true
+      },
+      {
+        "name": "불닭쉬림프피자 (18인치 M)",
+        "price": 34900,
+        "main": true
+      },
+      {
+        "name": "소불고기 청양마요피자 (R)",
+        "price": 20900,
+        "main": true
+      },
+      {
+        "name": "소불고기 청양마요피자 (L)",
+        "price": 24900,
+        "main": true
+      },
+      {
+        "name": "소불고기 청양마요피자 (18인치 M)",
+        "price": 34900,
+        "main": true
+      },
+      {
+        "name": "갈릭스테이크쉬림프피자 (R)",
+        "price": 21900,
+        "main": true
+      },
+      {
+        "name": "갈릭스테이크쉬림프피자 (L)",
+        "price": 25900,
+        "main": true
+      },
+      {
+        "name": "갈릭스테이크쉬림프피자 (18인치 M)",
+        "price": 35900,
+        "main": true
+      },
+      {
+        "name": "하와이안쉬림프피자 (R)",
+        "price": 21900,
+        "main": true
+      },
+      {
+        "name": "하와이안쉬림프피자 (L)",
+        "price": 25900,
+        "main": true
+      },
+      {
+        "name": "하와이안쉬림프피자 (18인치 M)",
+        "price": 35900,
+        "main": true
+      },
+      {
+        "name": "페퍼로니폭탄피자 (R)",
+        "price": 20900,
+        "main": true
+      },
+      {
+        "name": "페퍼로니폭탄피자 (L)",
+        "price": 24900,
+        "main": true
+      },
+      {
+        "name": "페퍼로니폭탄피자 (18인치 M)",
+        "price": 36900,
+        "main": true
+      },
+      {
+        "name": "치즈폭탄피자 (R)",
+        "price": 20900,
+        "main": true
+      },
+      {
+        "name": "치즈폭탄피자 (L)",
+        "price": 25900,
+        "main": true
+      },
+      {
+        "name": "치즈폭탄피자 (18인치 M)",
+        "price": 37900,
+        "main": true
+      },
+      {
+        "name": "갈릭 비프스테이크피자 (R)",
+        "price": 19900,
+        "main": true
+      },
+      {
+        "name": "갈릭 비프스테이크피자 (L)",
+        "price": 23900,
+        "main": true
+      },
+      {
+        "name": "갈릭 비프스테이크피자 (18인치 M)",
+        "price": 34900,
+        "main": true
+      },
+      {
+        "name": "갈릭 포크피자 (R)",
+        "price": 19900,
+        "main": true
+      },
+      {
+        "name": "갈릭 포크피자 (L)",
+        "price": 25900,
+        "main": true
+      },
+      {
+        "name": "갈릭 포크피자 (18인치 M)",
+        "price": 35900,
+        "main": true
+      },
+      {
+        "name": "할라 크림새우피자 (R)",
+        "price": 20900,
+        "main": true
+      },
+      {
+        "name": "할라 크림새우피자 (L)",
+        "price": 24900,
+        "main": true
+      },
+      {
+        "name": "할라 크림새우피자 (18인치 M)",
+        "price": 35900,
+        "main": true
+      },
+      {
+        "name": "4가지 몬스터피자 (R)",
+        "price": 23900,
+        "main": true
+      },
+      {
+        "name": "4가지 몬스터피자 (L)",
+        "price": 26900,
+        "main": true
+      },
+      {
+        "name": "4가지 몬스터피자 (18인치 M)",
+        "price": 36900,
+        "main": true
+      }
+    ]
+  },
+  "hoursObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/place/1507113408",
+    "checkedAt": "2026-11-12",
+    "status": "confirmed",
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금",
+          "토",
+          "일"
+        ],
+        "open": "10:30",
+        "close": "23:45"
+      }
+    ],
+    "note": "매장 영업시간 관찰. 기존 attrs/research를 덮어쓰지 않습니다."
+  },
+  "research": {
+    "checkedAt": "2026-11-11",
+    "method": "web",
+    "identityStatus": "matched",
+    "queries": [
+      "로니의몬스터피자 전남대점 전남광주 북구 자미로66번길 17 1층"
+    ],
+    "sources": [
+      {
+        "id": "naver-place",
+        "url": "https://pcmap.place.naver.com/place/1507113408",
+        "title": "로니의몬스터피자 전남대점 네이버 지도",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "같은 주소의 지점 확인. 지도 등록 확인은 실시간 영업 중 보증이 아님"
+      },
+      {
+        "id": "naver-menu",
+        "url": "https://pcmap.place.naver.com/restaurant/1507113408/menu/list",
+        "title": "로니의몬스터피자 전남대점 메뉴 탭",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "가격 맥락: delivery"
+      },
+      {
+        "id": "naver-hours",
+        "url": "https://pcmap.place.naver.com/place/1507113408",
+        "title": "로니의몬스터피자 전남대점 영업시간",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "게시된 요일별 영업시간. 미확인은 추정하지 않음"
+      }
+    ],
+    "facts": {
+      "menus": {
+        "status": "unconfirmed",
+        "sourceIds": [],
+        "note": "매장 기준 정보 미확인. 배달·가격 맥락 불명 자료는 확정하지 않습니다."
+      },
+      "hours": {
+        "status": "unconfirmed",
+        "sourceIds": [],
+        "note": "매장 기준 정보 미확인. 배달·가격 맥락 불명 자료는 확정하지 않습니다."
+      }
+    },
+    "unknownFields": [
+      "menus",
+      "hours",
+      "mealType",
+      "takeout",
+      "verifiedAt",
+      "verifiedBy",
+      "break",
+      "lastOrder"
+    ],
+    "notes": [
+      "배달 메뉴 가격; 매장 가격 미확인. 메뉴탭 전체펼침기준.",
+      "원본 전체관찰·사진/배달가격 구분은 front_more.json. 영업시간 원문: 매일10:30-23:45",
+      "병합 입력: front_more2_normalized_manifest.json",
+      "공개 네이버 화면 관찰이며 현장 검증이 아닙니다."
+    ]
+  },
+  "followupReview": {
+    "checkedAt": "2026-11-12",
+    "reasons": [
+      "공개 매장 식사 가격과 요일별 영업시간을 연결하여 추천 대상으로 전환했습니다."
+    ],
+    "sources": [
+      "https://pcmap.place.naver.com/restaurant/1507113408/home",
+      "https://pcmap.place.naver.com/restaurant/1507113408/menu/list"
+    ]
+  }
+}

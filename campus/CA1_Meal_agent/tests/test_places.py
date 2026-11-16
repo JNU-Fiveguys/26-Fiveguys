@@ -1,280 +1,213 @@
-"""상가정보 CSV → 후보 · 조사 양식. 가짜 가게로만 시험한다(실제 원천 파일은 저장소에 넣지 않는다)."""
-
-import csv
+import copy
 import json
+from datetime import date
 
 import pytest
 
 from meal.places import (
-    Anchor,
-    Campus,
-    build_candidates,
-    classify,
-    main,
-    read_rows,
-    read_text,
-    suspect_closed,
+    DATA_DIR,
+    SAMPLES_DIR,
+    check_dirs,
+    price_band,
+    price_label,
+    rep_price,
+    recommendation_ready,
+    load_places,
 )
-from meal.timing import MealType
 
-CENTER = (35.1765, 126.9055)
-# 위도 0.001도 ≈ 111m
-NEAR = (35.1785, 126.9055)    # 약 222m
-EDGE = (35.1855, 126.9055)    # 약 1000m
-FAR = (35.2000, 126.9055)     # 약 2.6km
-
-HEADER = ["상가업소번호", "상호명", "지점명", "상권업종대분류명", "상권업종중분류명", "상권업종소분류명", "지번주소", "도로명주소", "층정보", "경도", "위도"]
+TODAY = date(2026, 11, 11)
 
 
-def row(id_, name, large, middle, small, at, branch="", floor="1"):
-    return [id_, name, branch, large, middle, small, "광주 북구 용봉동 1", "광주광역시 북구 가상로 1", floor, str(at[1]), str(at[0])]
+def _load(pid: str) -> dict:
+    return json.loads((SAMPLES_DIR / f"{pid}.json").read_text(encoding="utf-8"))
 
 
-ROWS = [
-    row("A1", "가상김밥", "음식", "기타 간이", "김밥/만두/분식", NEAR),
-    row("A2", "가상고기", "음식", "한식", "돼지고기 구이/찜", EDGE),
-    row("A3", "가상카페", "음식", "비알코올", "카페", NEAR, branch="전남대점"),
-    row("A4", "가상포차", "음식", "주점", "요리 주점", NEAR),           # 주점 → 뺀다
-    row("A5", "가상세탁", "수리·개인", "세탁", "세탁소", NEAR),         # 음식 아님 → 뺀다
-    row("A6", "먼식당", "음식", "한식", "백반/한정식", FAR),            # 반경 밖 → 뺀다
-    row("A7", "가상국밥", "음식", "한식", "국/탕/찌개류", EDGE),
-    row("A8", "가상스시", "음식", "일식", "일식 회/초밥", NEAR),
-    row("A9", "가상떡볶이", "음식", "기타 간이", "떡볶이", NEAR),
-]
+def _check_one(tmp_path, place: dict, folder: str = "samples"):
+    d = tmp_path / folder
+    d.mkdir(exist_ok=True)
+    (d / f"{place['id']}.json").write_text(json.dumps(place, ensure_ascii=False), encoding="utf-8")
+    return check_dirs([d], today=TODAY)
 
 
-@pytest.fixture
-def campus():
-    return Campus("테스트 캠퍼스", (Anchor("중심", *CENTER),), 1200)
+# ── 샘플 데이터 자체 ─────────────────────────────────────────
+
+def test_samples_have_no_errors():
+    result = check_dirs([SAMPLES_DIR], today=TODAY)
+    assert result.errors == []
+    assert len(result.places) == 8
 
 
-def to_csv(rows, header=HEADER, delim=","):
-    lines = [delim.join(header)] + [delim.join(r) for r in rows]
-    return "\n".join(lines) + "\n"
+def test_sample_without_attrs_is_warned_not_error():
+    result = check_dirs([SAMPLES_DIR], today=TODAY)
+    s06 = [i for i in result.issues if i.file.endswith("s_06.json")]
+    assert [i.level for i in s06] == ["warn"]
 
 
-# --- 분류 ---------------------------------------------------------------------
+def test_far_place_is_warned(tmp_path):
+    p = _load("s_07")  # 원래 약 1.3km — 경고 기준(1.5km) 안쪽
+    assert not any("캠퍼스 중심" in i.message for i in _check_one(tmp_path, p).issues)
+    p["lat"] = 35.15   # 약 3km
+    result = _check_one(tmp_path, p)
+    assert result.errors == []
+    assert any("캠퍼스 중심" in i.message for i in result.issues)
+
+
+# ── 가격대 ──────────────────────────────────────────────────
 
 @pytest.mark.parametrize(
-    "large, middle, small, expected",
-    [
-        ("음식", "기타 간이", "김밥/만두/분식", ("분식", MealType.QUICK)),
-        ("음식", "기타 간이", "떡볶이", ("분식", MealType.QUICK)),          # '떡' 이 카페로 가면 안 된다
-        ("음식", "한식", "돼지고기 구이/찜", ("고기", MealType.GROUP)),     # 소분류 우선
-        ("음식", "한식", "국/탕/찌개류", ("국밥·찌개", MealType.REGULAR)),
-        ("음식", "한식", "백반/한정식", ("한식", MealType.QUICK)),
-        ("음식", "비알코올", "카페", ("카페·베이커리", MealType.CAFE)),
-        ("음식", "기타 간이", "버거", ("패스트푸드", MealType.QUICK)),
-        ("음식", "기타 간이", "치킨", ("패스트푸드", MealType.REGULAR)),
-        ("음식", "중식", "중국집", ("중식", MealType.REGULAR)),
-        ("음식", "서양식", "파스타/스테이크", ("양식", MealType.REGULAR)),
-        ("음식", "동남아시아", "베트남식 전문", ("아시안", MealType.REGULAR)),
-        # 2026-09 광주 실제 원천에서 잘못 붙던 업종들
-        ("음식", "중식", "마라탕/훠궈", ("중식", MealType.REGULAR)),
-        ("음식", "일식", "일식 카레/돈가스/덮밥", ("일식", MealType.QUICK)),
-        ("음식", "한식", "족발/보쌈", ("고기", MealType.GROUP)),
-        ("음식", "한식", "횟집", ("한식", MealType.GROUP)),
-        ("음식", "기타 간이", "떡/한과", ("카페·베이커리", MealType.CAFE)),
-        ("음식", "한식", "국수/칼국수", ("한식", MealType.QUICK)),
-        ("음식", "기타", "무언가", ("미분류", MealType.REGULAR)),
-        ("음식", "주점", "요리 주점", None),
-        ("음식", "구내식당·뷔페", "구내식당", None),
-        ("소매", "식료품", "슈퍼마켓", None),
-    ],
+    "price, band, label",
+    [(3500, "A", "3천 원대"), (7000, "A", "7천 원대"), (7250, "B", "7천 원대"),
+     (10000, "B", "1만 원대"), (14000, "C", "1만 원대"), (15001, "D", "1만 원대"), (None, None, None)],
 )
-def test_classify(large, middle, small, expected):
-    assert classify(large, middle, small) == expected
+def test_price_band_and_label(price, band, label):
+    assert price_band(price) == band
+    assert price_label(price) == label
 
 
-# --- 후보 ---------------------------------------------------------------------
-
-def test_build_candidates_filters_and_sorts(campus):
-    places = build_candidates(read_rows(to_csv(ROWS)), campus)
-    names = [p.name for p in places]
-    # 주점 · 세탁소 · 반경 밖은 빠지고, 가까운 순(같으면 이름순)
-    assert "가상포차" not in names and "가상세탁" not in names and "먼식당" not in names
-    assert [p.distanceM <= 1200 for p in places] == [True] * len(places)
-    assert [p.distanceM for p in places] == sorted(p.distanceM for p in places)
-    cafe = next(p for p in places if p.sourceId == "A3")
-    assert cafe.name == "가상카페 전남대점"
-    assert cafe.id == "semas-A3"
-    assert cafe.zone == "중심"
-    assert cafe.address == "광주광역시 북구 가상로 1"
-    assert cafe.rawCategory == "비알코올 > 카페"
-    assert 215 <= cafe.distanceM <= 230
-    assert len(places) == 6
+def test_rep_price_is_median_of_main_menus():
+    assert rep_price(_load("s_01")) == 7250   # 7000 · 7500 (계란말이 6000 은 main 아님)
+    assert rep_price(_load("s_05")) == 4500   # 3500 · 4500 · 4500
+    assert rep_price(_load("s_06")) is None   # 정보 없음
 
 
-def test_nearest_anchor_wins():
-    c = Campus("c", (Anchor("정문", *CENTER), Anchor("후문", *EDGE)), 1200)
-    places = build_candidates(read_rows(to_csv([row("B1", "후문식당", "음식", "한식", "백반/한정식", EDGE)])), c)
-    assert (places[0].zone, places[0].distanceM) == ("후문", 0)
+def baseline_place(pid):
+    baseline = json.loads((DATA_DIR / "survey" / "naver_2026-11-11" / "baseline_catalog.json").read_text(encoding="utf-8"))
+    return next(p for p in baseline["places"] if p["id"] == pid)
 
 
-def test_duplicate_ids_kept_once(campus):
-    places = build_candidates(read_rows(to_csv([ROWS[0], ROWS[0]])), campus)
-    assert len(places) == 1
+def test_legacy_confirmed_menu_and_hours_remain_supported():
+    baseline = json.loads((DATA_DIR / "survey" / "naver_2026-11-11" / "baseline_catalog.json").read_text(encoding="utf-8"))
+    ready = {p["id"] for p in baseline["places"] if recommendation_ready(p)}
+    assert ready == {"p_0001", "p_0011", "p_0040", "p_0068", "p_0071", "p_0076", "p_0078", "p_0089", "p_0092"}
 
 
-def test_bad_coordinates_skipped(campus):
-    bad = row("C1", "좌표없음", "음식", "한식", "백반/한정식", ("", ""))
-    assert build_candidates(read_rows(to_csv([bad])), campus) == []
+@pytest.mark.parametrize("field", ["menus", "hours"])
+@pytest.mark.parametrize("status", ["unconfirmed", "partial", "conflict"])
+def test_incomplete_web_evidence_stays_out_of_recommendations(field, status):
+    p = baseline_place("p_0040")
+    assert recommendation_ready(p)
+    p["research"]["facts"][field]["status"] = status
+    assert not recommendation_ready(p)
 
 
-def test_pipe_delimited_and_cp949(tmp_path, campus):
-    p = tmp_path / "old.csv"
-    p.write_bytes(to_csv(ROWS[:1], delim="|").encode("cp949"))
-    places = build_candidates(read_rows(read_text(p)), campus)
-    assert [x.name for x in places] == ["가상김밥"]
+def test_samples_no_longer_store_seating_or_solo_attributes():
+    for p in check_dirs([SAMPLES_DIR], today=TODAY).places:
+        assert "soloOk" not in p.get("attrs", {})
+        assert "seats" not in p.get("attrs", {})
 
 
-def test_missing_required_column_is_clear():
-    with pytest.raises(ValueError, match="위도"):
-        list(read_rows("상가업소번호,상호명,상권업종대분류명,경도\n1,a,음식,126.9\n"))
+@pytest.mark.parametrize("field, value", [("soloOk", True), ("seats", "M")])
+def test_removed_attributes_are_rejected_by_schema(tmp_path, field, value):
+    p = _load("s_01")
+    p["attrs"][field] = value
+    assert _check_one(tmp_path, p).errors
 
 
-# --- 폐업 의심 ---------------------------------------------------------------
+# ── 규칙 위반을 잡는지 ──────────────────────────────────────
 
-def test_suspect_closed(campus):
-    now = build_candidates(read_rows(to_csv(ROWS)), campus)
-    prev = [{"id": "semas-A1", "name": "가상김밥"}, {"id": "semas-Z9", "name": "사라진집"}]
-    assert suspect_closed(prev, now) == [{"id": "semas-Z9", "name": "사라진집"}]
-
-
-# --- CLI 전체 ----------------------------------------------------------------
-
-def test_main_writes_bundle_survey_and_diff(tmp_path, capsys):
-    src = tmp_path / "gwangju.csv"
-    src.write_text(to_csv(ROWS), encoding="utf-8")
-    campus_file = tmp_path / "campus.json"
-    campus_file.write_text(
-        json.dumps({"name": "테스트", "radiusM": 1200, "anchors": [{"name": "중심", "lat": CENTER[0], "lng": CENTER[1]}]}),
-        encoding="utf-8",
-    )
-    prev = tmp_path / "prev.json"
-    prev.write_text(json.dumps({"places": [{"id": "semas-Z9", "name": "사라진집"}]}), encoding="utf-8")
-    out = tmp_path / "out"
-
-    assert main([str(src), "--campus", str(campus_file), "--out", str(out), "--prev", str(prev), "--survey-within", "0", "--survey-cafe"]) == 0
-
-    bundle = json.loads((out / "places.candidates.json").read_text(encoding="utf-8"))
-    assert bundle["count"] == 6 and bundle["campus"] == "테스트"
-    assert {"id", "name", "category", "mealTypeGuess", "lat", "lng", "zone", "distanceM", "address", "source", "sourceId"} <= set(bundle["places"][0])
-
-    raw = (out / "survey.csv").read_bytes()
-    assert raw.startswith(b"\xef\xbb\xbf")  # 엑셀이 한글을 깨뜨리지 않게 BOM
-    rows = list(csv.reader(raw.decode("utf-8-sig").splitlines()))
-    assert rows[0][:2] == ["id", "식당 이름"] and "가격대" in rows[0] and "혼밥(O/X)" in rows[0]
-    assert len(rows) == 1 + 6
-    assert rows[1][-1] == ""  # 채울 칸은 비어 있다
-
-    gone = json.loads((out / "closed.suspect.json").read_text(encoding="utf-8"))
-    assert [g["id"] for g in gone] == ["semas-Z9"]
-    assert "후보 6곳" in capsys.readouterr().out
+def test_schema_error_bad_category(tmp_path):
+    p = _load("s_01")
+    p["category"] = "맛집"
+    assert any("형식 category" in i.message for i in _check_one(tmp_path, p).errors)
 
 
-def test_survey_defaults_near_and_no_cafe(tmp_path):
-    src = tmp_path / "gwangju.csv"
-    src.write_text(to_csv(ROWS), encoding="utf-8")
-    campus_file = tmp_path / "campus.json"
-    campus_file.write_text(
-        json.dumps({"name": "t", "radiusM": 1200, "anchors": [{"name": "중심", "lat": CENTER[0], "lng": CENTER[1]}]}),
-        encoding="utf-8",
-    )
-    out = tmp_path / "out"
-    assert main([str(src), "--campus", str(campus_file), "--out", str(out), "--survey-within", "500"]) == 0
-    rows = list(csv.reader((out / "survey.csv").read_text(encoding="utf-8-sig").splitlines()))[1:]
-    # 500m 안(NEAR 약 222m) · 카페 제외 → 김밥 · 스시 · 떡볶이. EDGE(약 1km) 의 고기·국밥은 빠진다
-    assert sorted(r[1] for r in rows) == ["가상김밥", "가상떡볶이", "가상스시"]
-    # 후보 목록은 그대로 전부
-    assert json.loads((out / "places.candidates.json").read_text(encoding="utf-8"))["count"] == 6
+def test_break_outside_hours(tmp_path):
+    p = _load("s_02")
+    p["attrs"]["hours"][0]["break"] = {"start": "10:00", "end": "11:30"}
+    assert any("브레이크" in i.message for i in _check_one(tmp_path, p).errors)
 
 
-def test_rerun_keeps_filled_rows(tmp_path):
-    src = tmp_path / "gwangju.csv"
-    src.write_text(to_csv(ROWS), encoding="utf-8")
-    campus_file = tmp_path / "campus.json"
-    campus_file.write_text(
-        json.dumps({"name": "t", "radiusM": 1200, "anchors": [{"name": "중심", "lat": CENTER[0], "lng": CENTER[1]}]}),
-        encoding="utf-8",
-    )
-    out = tmp_path / "out"
-    args = [str(src), "--campus", str(campus_file), "--out", str(out), "--survey-within", "500"]
-    assert main(args) == 0
-
-    # 김밥집(범위 안)과 사라질 가게 줄을 채운다
-    path = out / "survey.csv"
-    rows = list(csv.DictReader(path.read_text(encoding="utf-8-sig").splitlines()))
-    header = list(rows[0].keys())
-    for r in rows:
-        if r["id"] == "semas-A1":
-            r["가격대"], r["메모"] = "A", "채움"
-    rows.append({**{k: "" for k in header}, "id": "semas-GONE", "식당 이름": "사라진집", "가격대": "B"})
-    with open(path, "w", encoding="utf-8-sig", newline="") as f:
-        w = csv.DictWriter(f, fieldnames=header)
-        w.writeheader()
-        w.writerows(rows)
-
-    # 범위를 좁혀(김밥집 222m 는 범위 밖) 다시 만들어도 채운 줄은 남는다
-    assert main(args[:-1] + ["100"]) == 0
-    again = {r["id"]: r for r in csv.DictReader(path.read_text(encoding="utf-8-sig").splitlines())}
-    assert again["semas-A1"]["가격대"] == "A" and again["semas-A1"]["메모"] == "채움"
-    assert again["semas-GONE"]["식당 이름"] == "사라진집" and again["semas-GONE"]["가격대"] == "B"
-    assert "semas-A8" not in again                  # 안 채운 범위 밖 줄은 빠진다
+@pytest.mark.parametrize("last_order", ["14:30", "15:00", "16:00", "17:00"])
+def test_last_order_before_or_during_break_is_rejected(tmp_path, last_order):
+    p = _load("s_02")
+    p["attrs"]["hours"][0]["lastOrder"] = last_order
+    errors = _check_one(tmp_path, p).errors
+    assert any("lastOrder" in i.message and "hours 행을 나눠" in i.message for i in errors)
 
 
-def test_default_campus_file_loads():
-    from meal.places import DEFAULT_CAMPUS
-
-    c = Campus.load(DEFAULT_CAMPUS)
-    assert c.radius_m == 1200 and len(c.boundary) > 100
-    # 캠퍼스 중심은 경계 안 · 서문은 경계 위
-    assert c.locate(*c.center) == ("캠퍼스 안", 0.0)
-    zone, d = c.locate(35.1722459, 126.8979984)
-    assert d < 1
+@pytest.mark.parametrize("last_order", ["17:01", "20:30", "21:00"])
+def test_last_order_in_final_segment_is_valid(tmp_path, last_order):
+    p = _load("s_02")
+    p["attrs"]["hours"][0]["lastOrder"] = last_order
+    assert _check_one(tmp_path, p).errors == []
 
 
-# --- 경계 기준 거리 (정의서 D1 '캠퍼스 경계에서') -------------------------------
-
-# 한 변 약 222m 정사각형 캠퍼스 (위도 ±0.001 · 경도 ±0.00122)
-SQ = ((35.1755, 126.90428), (35.1755, 126.90672), (35.1775, 126.90672), (35.1775, 126.90428))
-
-
-def boxed(**kw):
-    return Campus("네모", kw.pop("anchors", ()), kw.pop("radius", 1200), SQ, center_point=CENTER, **kw)
-
-
-def test_boundary_inside_is_zero():
-    assert boxed().locate(*CENTER) == ("캠퍼스 안", 0.0)
+def test_separate_lunch_and_dinner_last_orders_are_valid(tmp_path):
+    p = _load("s_02")
+    days = p["attrs"]["hours"][0]["days"]
+    p["attrs"]["hours"] = [
+        {"days": days, "open": "11:00", "close": "15:00", "lastOrder": "14:30"},
+        {"days": days, "open": "17:00", "close": "21:00", "lastOrder": "20:30"},
+    ]
+    assert _check_one(tmp_path, p).errors == []
 
 
-def test_boundary_distance_from_edge_not_center():
-    zone, d = boxed().locate(35.1795, 126.9055)          # 북쪽 변(35.1775)에서 0.002도 ≈ 221m
-    assert zone == "캠퍼스 북쪽" and d == pytest.approx(221, abs=2)
-    zone, d = boxed().locate(35.1795, 126.9090)          # 북동쪽 모서리 바깥
-    assert zone == "캠퍼스 북동쪽"
-    assert boxed().locate(35.1765, 126.9000)[0] == "캠퍼스 서쪽"
-    assert boxed().locate(35.1740, 126.9055)[0] == "캠퍼스 남쪽"
+def test_load_places_rejects_ambiguous_last_order(tmp_path, monkeypatch):
+    from meal import places
+
+    p = _load("s_02")
+    p["attrs"]["hours"][0]["lastOrder"] = "14:30"
+    _check_one(tmp_path, p)
+    monkeypatch.setattr(places, "PLACES_DIR", tmp_path / "places")
+    monkeypatch.setattr(places, "SAMPLES_DIR", tmp_path / "samples")
+    with pytest.raises(ValueError, match="hours 행을 나눠"):
+        places.load_places(include_samples=True)
 
 
-def test_boundary_zone_uses_gate_when_close():
-    gate = Anchor("북문", 35.1775, 126.9055)
-    c = boxed(anchors=(gate,))
-    assert c.locate(35.1795, 126.9055)[0] == "북문 쪽"
-    assert c.locate(35.1765, 126.8950)[0] == "캠퍼스 서쪽"   # 문에서 멀면 방향
+def test_overlapping_hours_same_day(tmp_path):
+    p = _load("s_08")
+    p["attrs"]["hours"][1]["open"] = "13:00"
+    assert any("겹칩니다" in i.message for i in _check_one(tmp_path, p).errors)
 
 
-def test_boundary_radius_filters_from_edge():
-    # 중심에서 1.3km 지만 경계에서는 약 1.19km → 들어온다
-    c = boxed()
-    row_ok = row("D1", "경계 근처", "음식", "한식", "백반/한정식", (35.1765 + 0.0117, 126.9055))
-    row_far = row("D2", "멀리", "음식", "한식", "백반/한정식", (35.1765 + 0.0130, 126.9055))
-    names = [p.name for p in build_candidates(read_rows(to_csv([row_ok, row_far])), c)]
-    assert names == ["경계 근처"]
+def test_no_main_menu(tmp_path):
+    p = _load("s_01")
+    for m in p["attrs"]["menus"]:
+        m["main"] = False
+    assert any("대표 메뉴" in i.message for i in _check_one(tmp_path, p).errors)
 
 
-def test_campus_file_needs_anchor_or_boundary(tmp_path):
-    p = tmp_path / "c.json"
-    p.write_text(json.dumps({"name": "x", "radiusM": 1}), encoding="utf-8")
-    with pytest.raises(ValueError):
-        Campus.load(p)
+def test_future_verified_at(tmp_path):
+    p = _load("s_01")
+    p["attrs"]["verifiedAt"] = "2027-01-01"
+    assert any("미래" in i.message for i in _check_one(tmp_path, p).errors)
+
+
+def test_stale_verified_at_is_warning(tmp_path):
+    p = _load("s_01")
+    p["attrs"]["verifiedAt"] = "2026-06-01"
+    result = _check_one(tmp_path, p)
+    assert result.errors == []
+    assert any("다시 확인" in i.message for i in result.issues)
+
+
+def test_sample_in_places_dir_is_error(tmp_path):
+    assert any("data/samples" in i.message for i in _check_one(tmp_path, _load("s_01"), "places").errors)
+
+
+def test_real_place_needs_sourceid_for_semas(tmp_path):
+    p = copy.deepcopy(_load("s_01"))
+    p.update(id="p_001", source="semas")
+    assert any("sourceId" in i.message for i in _check_one(tmp_path, p, "places").errors)
+
+
+@pytest.mark.parametrize("source_id", ["   ", " source-1", "source-1 "])
+def test_semas_sourceid_must_not_be_blank_or_padded(tmp_path, source_id):
+    p = _load("s_01")
+    p.update(id="p_001", source="semas", sourceId=source_id)
+    assert any("sourceId" in i.message for i in _check_one(tmp_path, p, "places").errors)
+
+
+@pytest.mark.parametrize("key,value", [("lat", float("nan")), ("lng", float("nan")),
+                                       ("lat", float("inf")), ("lng", float("-inf"))])
+def test_nonfinite_coordinates_rejected(tmp_path, key, value):
+    p = _load("s_01")
+    p[key] = value
+    assert _check_one(tmp_path, p).errors
+
+
+def test_filename_must_match_id(tmp_path):
+    d = tmp_path / "samples"
+    d.mkdir()
+    (d / "wrong.json").write_text(json.dumps(_load("s_01"), ensure_ascii=False), encoding="utf-8")
+    assert any("파일 이름" in i.message for i in check_dirs([d], today=TODAY).errors)

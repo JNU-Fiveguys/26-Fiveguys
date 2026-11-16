@@ -1,0 +1,52 @@
+{
+  "version": 1,
+  "id": "s_05",
+  "name": "샘플식당 05 · 포장 되는 분식",
+  "category": "분식",
+  "lat": 35.177,
+  "lng": 126.9105,
+  "address": "샘플 주소 (가짜 데이터)",
+  "source": "sample",
+  "attrs": {
+    "mealType": "간단식",
+    "takeout": true,
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금",
+          "토",
+          "일"
+        ],
+        "open": "09:00",
+        "close": "20:00"
+      }
+    ],
+    "menus": [
+      {
+        "name": "김밥",
+        "price": 3500,
+        "main": true
+      },
+      {
+        "name": "라면",
+        "price": 4500,
+        "main": true
+      },
+      {
+        "name": "떡볶이",
+        "price": 4500,
+        "main": true
+      }
+    ],
+    "tags": [
+      "매운 음식"
+    ],
+    "note": "가깝고 빠른 식사 — 짧은 공강·포장 모드 확인용",
+    "verifiedAt": "2026-11-11",
+    "verifiedBy": "sample"
+  }
+}

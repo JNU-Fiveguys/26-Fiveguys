@@ -1,0 +1,140 @@
+{
+  "version": 1,
+  "id": "p_0064",
+  "name": "생돈까스",
+  "category": "양식",
+  "lat": 35.177731,
+  "lng": 126.903228,
+  "address": "전남광주통합특별시 북구 설죽로214번길 100",
+  "source": "semas",
+  "sourceId": "MA0101202308A0086929",
+  "sourceStatus": "active",
+  "attrs": {
+    "status": "partial",
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금",
+          "토"
+        ],
+        "open": "11:00",
+        "close": "15:00",
+        "lastOrder": "14:00"
+      },
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금",
+          "토"
+        ],
+        "open": "17:00",
+        "close": "21:00",
+        "lastOrder": "20:00"
+      }
+    ]
+  },
+  "research": {
+    "identityStatus": "matched",
+    "queries": [
+      "\"생돈까스\" \"설죽로214번길 100\" 메뉴 영업시간"
+    ],
+    "sources": [
+      {
+        "id": "s1",
+        "url": "https://www.diningcode.com/profile.php?rid=AF1QxUfvMsMP",
+        "title": "생돈까스 전대",
+        "type": "directory",
+        "addressMatch": true,
+        "note": "2층동주소. 주간시간·점심저녁라스트오더 명시. 본문을 직접 열어 주소와 해당 게시값을 대조함.",
+        "observedAt": "2026-11-11"
+      },
+      {
+        "id": "s2",
+        "url": "https://www.tabling.co.kr/restaurant/9822",
+        "title": "생돈까스 테이블링",
+        "type": "directory",
+        "addressMatch": true,
+        "note": "같은지점시간표일치. 세트가격은다이닝코드보다낮아상충.",
+        "observedAt": "2026-11-11"
+      }
+    ],
+    "facts": {
+      "menus": {
+        "status": "conflict",
+        "value": [],
+        "sourceIds": [
+          "s1",
+          "s2"
+        ],
+        "note": "세트1(돈까스+치즈돈까스)10,000원/9,000원, 세트2 18,000원/16,000원으로상충. 단품왕돈까스8,000·혼밥1 11,000원은다이닝코드게시이나전체가격변경여부재확인."
+      },
+      "hours": {
+        "status": "confirmed",
+        "value": [
+          {
+            "days": [
+              "월",
+              "화",
+              "수",
+              "목",
+              "금",
+              "토"
+            ],
+            "open": "11:00",
+            "close": "15:00",
+            "lastOrder": "14:00"
+          },
+          {
+            "days": [
+              "월",
+              "화",
+              "수",
+              "목",
+              "금",
+              "토"
+            ],
+            "open": "17:00",
+            "close": "21:00",
+            "lastOrder": "20:00"
+          }
+        ],
+        "sourceIds": [
+          "s1",
+          "s2"
+        ],
+        "note": "일요일휴무,브레이크15~17. 점심/저녁주문마감별도행으로표현."
+      }
+    },
+    "notes": [],
+    "checkedAt": "2026-11-11",
+    "method": "web",
+    "unknownFields": [
+      "menus",
+      "mealType",
+      "takeout",
+      "verifiedAt",
+      "verifiedBy",
+      "break"
+    ]
+  },
+  "availability": {
+    "status": "excluded",
+    "provider": "naver",
+    "checkedAt": "2026-11-11",
+    "sourceUrl": "https://map.naver.com/p/search/%EC%A0%84%EB%82%A8%EB%8C%80%20%EC%9D%8C%EC%8B%9D%EC%A0%90",
+    "naverPlaceId": null,
+    "observedName": "",
+    "observedAddress": "",
+    "district": null,
+    "addressVerified": false,
+    "nearby": false,
+    "reason": "네이버 지도에서 확인한 네 식당가 명단에 포함되지 않아 제외"
+  }
+}

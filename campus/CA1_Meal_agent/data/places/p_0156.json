@@ -1,0 +1,432 @@
+{
+  "version": 1,
+  "id": "p_0156",
+  "source": "team",
+  "sourceId": "naver:2031303618",
+  "name": "젠키라멘 전대상대 본점",
+  "address": "전남광주 북구 설죽로196번길 27 1층",
+  "category": "일식",
+  "lat": 35.1770778648259,
+  "lng": 126.898585027161,
+  "sourceStatus": "active",
+  "availability": {
+    "status": "listed",
+    "provider": "naver",
+    "checkedAt": "2026-11-11",
+    "sourceUrl": "https://pcmap.place.naver.com/place/2031303618",
+    "naverPlaceId": "2031303618",
+    "observedName": "젠키라멘 전대상대 본점",
+    "observedAddress": "전남광주 북구 설죽로196번길 27 1층",
+    "district": "상대",
+    "addressVerified": true,
+    "nearby": true,
+    "reason": "공개 네이버 지도에서 동일 주소의 전남대 상대 식당으로 확인"
+  },
+  "menuObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/2031303618/menu/list",
+    "checkedAt": "2026-11-11",
+    "priceContext": "in_store",
+    "menus": [
+      {
+        "name": "젠키라멘카츠세트",
+        "price": 13000,
+        "main": true
+      },
+      {
+        "name": "차차라멘미니소보로동세트",
+        "price": 10000,
+        "main": true
+      },
+      {
+        "name": "차차라멘",
+        "price": 9000,
+        "main": true
+      },
+      {
+        "name": "마제소바",
+        "price": 10000,
+        "main": true
+      },
+      {
+        "name": "로스카츠",
+        "price": 10000,
+        "main": true
+      },
+      {
+        "name": "특제가라아게동",
+        "price": 10000,
+        "main": true
+      },
+      {
+        "name": "사사미카츠(닭안심)",
+        "price": 10000,
+        "main": true
+      },
+      {
+        "name": "치킨난반",
+        "price": 10000,
+        "main": true
+      },
+      {
+        "name": "로스카츠동",
+        "price": 10000,
+        "main": true
+      },
+      {
+        "name": "규동(우삼겹덮밥)",
+        "price": 10000,
+        "main": true
+      },
+      {
+        "name": "(세트)수제 가라아게 4p",
+        "price": 2000,
+        "main": false
+      },
+      {
+        "name": "(세트)교자튀김3p",
+        "price": 2000,
+        "main": false
+      },
+      {
+        "name": "(세트)새우튀김2p",
+        "price": 2000,
+        "main": false
+      },
+      {
+        "name": "가쿠하이레몬",
+        "price": 5000,
+        "main": false
+      },
+      {
+        "name": "소주(진로,새로,새로살구,참이슬)",
+        "price": 4000,
+        "main": false
+      },
+      {
+        "name": "맥주(카스,테라)",
+        "price": 4000,
+        "main": false
+      }
+    ],
+    "note": "메뉴 상태: confirmed. 원본 관찰·좌표 출처는 적용 manifest에 보관합니다.",
+    "status": "confirmed"
+  },
+  "attrs": {
+    "status": "partial",
+    "menus": [
+      {
+        "name": "젠키라멘카츠세트",
+        "price": 13000,
+        "main": true
+      },
+      {
+        "name": "차차라멘미니소보로동세트",
+        "price": 10000,
+        "main": true
+      },
+      {
+        "name": "차차라멘",
+        "price": 9000,
+        "main": true
+      },
+      {
+        "name": "마제소바",
+        "price": 10000,
+        "main": true
+      },
+      {
+        "name": "로스카츠",
+        "price": 10000,
+        "main": true
+      },
+      {
+        "name": "특제가라아게동",
+        "price": 10000,
+        "main": true
+      },
+      {
+        "name": "사사미카츠(닭안심)",
+        "price": 10000,
+        "main": true
+      },
+      {
+        "name": "치킨난반",
+        "price": 10000,
+        "main": true
+      },
+      {
+        "name": "로스카츠동",
+        "price": 10000,
+        "main": true
+      },
+      {
+        "name": "규동(우삼겹덮밥)",
+        "price": 10000,
+        "main": true
+      },
+      {
+        "name": "(세트)수제 가라아게 4p",
+        "price": 2000,
+        "main": false
+      },
+      {
+        "name": "(세트)교자튀김3p",
+        "price": 2000,
+        "main": false
+      },
+      {
+        "name": "(세트)새우튀김2p",
+        "price": 2000,
+        "main": false
+      },
+      {
+        "name": "가쿠하이레몬",
+        "price": 5000,
+        "main": false
+      },
+      {
+        "name": "소주(진로,새로,새로살구,참이슬)",
+        "price": 4000,
+        "main": false
+      },
+      {
+        "name": "맥주(카스,테라)",
+        "price": 4000,
+        "main": false
+      }
+    ],
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금"
+        ],
+        "open": "11:00",
+        "close": "20:30",
+        "lastOrder": "20:00",
+        "break": {
+          "start": "15:00",
+          "end": "17:00"
+        }
+      },
+      {
+        "days": [
+          "토"
+        ],
+        "open": "11:00",
+        "close": "15:00",
+        "lastOrder": "14:30"
+      }
+    ]
+  },
+  "hoursObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/place/2031303618",
+    "checkedAt": "2026-11-11",
+    "status": "confirmed",
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금"
+        ],
+        "open": "11:00",
+        "close": "20:30",
+        "lastOrder": "20:00",
+        "break": {
+          "start": "15:00",
+          "end": "17:00"
+        }
+      },
+      {
+        "days": [
+          "토"
+        ],
+        "open": "11:00",
+        "close": "15:00",
+        "lastOrder": "14:30"
+      }
+    ],
+    "note": "매장 영업시간 관찰. 기존 attrs/research를 덮어쓰지 않습니다."
+  },
+  "research": {
+    "checkedAt": "2026-11-11",
+    "method": "web",
+    "identityStatus": "matched",
+    "queries": [
+      "젠키라멘 전대상대 본점 전남광주 북구 설죽로196번길 27 1층"
+    ],
+    "sources": [
+      {
+        "id": "naver-place",
+        "url": "https://pcmap.place.naver.com/place/2031303618",
+        "title": "젠키라멘 전대상대 본점 네이버 지도",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "같은 주소의 지점 확인. 지도 등록 확인은 실시간 영업 중 보증이 아님"
+      },
+      {
+        "id": "naver-menu",
+        "url": "https://pcmap.place.naver.com/restaurant/2031303618/menu/list",
+        "title": "젠키라멘 전대상대 본점 메뉴 탭",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "가격 맥락: in_store"
+      },
+      {
+        "id": "naver-hours",
+        "url": "https://pcmap.place.naver.com/place/2031303618",
+        "title": "젠키라멘 전대상대 본점 영업시간",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "게시된 요일별 영업시간. 미확인은 추정하지 않음"
+      }
+    ],
+    "facts": {
+      "menus": {
+        "status": "confirmed",
+        "sourceIds": [
+          "naver-menu"
+        ],
+        "note": "매장 게시값을 확인했습니다.",
+        "value": [
+          {
+            "name": "젠키라멘카츠세트",
+            "price": 13000,
+            "main": true
+          },
+          {
+            "name": "차차라멘미니소보로동세트",
+            "price": 10000,
+            "main": true
+          },
+          {
+            "name": "차차라멘",
+            "price": 9000,
+            "main": true
+          },
+          {
+            "name": "마제소바",
+            "price": 10000,
+            "main": true
+          },
+          {
+            "name": "로스카츠",
+            "price": 10000,
+            "main": true
+          },
+          {
+            "name": "특제가라아게동",
+            "price": 10000,
+            "main": true
+          },
+          {
+            "name": "사사미카츠(닭안심)",
+            "price": 10000,
+            "main": true
+          },
+          {
+            "name": "치킨난반",
+            "price": 10000,
+            "main": true
+          },
+          {
+            "name": "로스카츠동",
+            "price": 10000,
+            "main": true
+          },
+          {
+            "name": "규동(우삼겹덮밥)",
+            "price": 10000,
+            "main": true
+          },
+          {
+            "name": "(세트)수제 가라아게 4p",
+            "price": 2000,
+            "main": false
+          },
+          {
+            "name": "(세트)교자튀김3p",
+            "price": 2000,
+            "main": false
+          },
+          {
+            "name": "(세트)새우튀김2p",
+            "price": 2000,
+            "main": false
+          },
+          {
+            "name": "가쿠하이레몬",
+            "price": 5000,
+            "main": false
+          },
+          {
+            "name": "소주(진로,새로,새로살구,참이슬)",
+            "price": 4000,
+            "main": false
+          },
+          {
+            "name": "맥주(카스,테라)",
+            "price": 4000,
+            "main": false
+          }
+        ]
+      },
+      "hours": {
+        "status": "confirmed",
+        "sourceIds": [
+          "naver-hours"
+        ],
+        "note": "매장 게시값을 확인했습니다.",
+        "value": [
+          {
+            "days": [
+              "월",
+              "화",
+              "수",
+              "목",
+              "금"
+            ],
+            "open": "11:00",
+            "close": "20:30",
+            "lastOrder": "20:00",
+            "break": {
+              "start": "15:00",
+              "end": "17:00"
+            }
+          },
+          {
+            "days": [
+              "토"
+            ],
+            "open": "11:00",
+            "close": "15:00",
+            "lastOrder": "14:30"
+          }
+        ]
+      }
+    },
+    "unknownFields": [
+      "mealType",
+      "takeout",
+      "verifiedAt",
+      "verifiedBy",
+      "break"
+    ],
+    "notes": [
+      "메뉴 업데이트26.11.11. 마제소바 시즌메뉴.",
+      "영업시간 원문: 월~금11:00-20:30; 브레이크15:00-17:00; 라스트오더20:00. 토11:00-15:00 라스트오더14:30. 일 정기휴무",
+      "원문 메뉴 목록·분류는 front_sangdae.json에 보존. main은 1인 식사 예산용 조사자 분류이며 공유 메뉴는 false로 보수적으로 표시.",
+      "병합 입력: front_normalized_manifest.json",
+      "공개 네이버 화면 관찰이며 현장 검증이 아닙니다."
+    ]
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "version": 1,
+  "id": "p_0058",
+  "name": "소망식당",
+  "category": "한식",
+  "lat": 35.172417,
+  "lng": 126.897691,
+  "address": "전남광주통합특별시 북구 용봉로 5",
+  "source": "semas",
+  "sourceId": "MA0101202211A0042710",
+  "sourceStatus": "active",
+  "attrs": {
+    "status": "partial"
+  },
+  "research": {
+    "identityStatus": "matched",
+    "queries": [
+      "\"소망식당\" \"용봉로 5\" 메뉴 영업시간"
+    ],
+    "sources": [
+      {
+        "id": "s1",
+        "url": "https://www.diningcode.com/profile.php?rid=SovkHrXr0U3I",
+        "title": "소망식당 용봉동",
+        "type": "directory",
+        "addressMatch": true,
+        "note": "주소확인. 일부후기에타지역동명업소가혼재해메뉴현장재확인필요.",
+        "observedAt": "2026-11-11"
+      }
+    ],
+    "facts": {
+      "menus": {
+        "status": "partial",
+        "value": [
+          {
+            "name": "애호박찌개",
+            "price": 9000,
+            "main": true
+          },
+          {
+            "name": "제육덮밥",
+            "price": 9000,
+            "main": true
+          },
+          {
+            "name": "김치찌개",
+            "price": 9000,
+            "main": true
+          }
+        ],
+        "sourceIds": [
+          "s1"
+        ],
+        "note": "현재 지점목록 게시가격이나 동명업소후기 혼재로 현장확인전잠정. 영업시간확인필요표시."
+      },
+      "hours": {
+        "status": "unconfirmed",
+        "sourceIds": [],
+        "note": "동일 지점의 요일별 영업시간·휴무를 확인하지 못함. 임의 시간 입력하지 않음."
+      }
+    },
+    "notes": [],
+    "checkedAt": "2026-11-11",
+    "method": "web",
+    "unknownFields": [
+      "menus",
+      "hours",
+      "mealType",
+      "takeout",
+      "verifiedAt",
+      "verifiedBy",
+      "break",
+      "lastOrder"
+    ]
+  },
+  "availability": {
+    "status": "excluded",
+    "provider": "naver",
+    "checkedAt": "2026-11-11",
+    "sourceUrl": "https://map.naver.com/p/search/%EC%A0%84%EB%82%A8%EB%8C%80%20%EC%9D%8C%EC%8B%9D%EC%A0%90",
+    "naverPlaceId": null,
+    "observedName": "",
+    "observedAddress": "",
+    "district": null,
+    "addressVerified": false,
+    "nearby": false,
+    "reason": "네이버 지도에서 확인한 네 식당가 명단에 포함되지 않아 제외"
+  }
+}

@@ -1,402 +1,407 @@
-"""추천 순위 — 반드시 빼는 조건 · 규칙 점수 · 다양성 · 이유 칩 (정의서 CA1 4-라 · 5절).
+"""추천 순위 (기능 정의서 CA1 4-라 · 5절) — 빼기 → 점수 → 다양성 → 이유 칩.
 
-식사 화면과 CA2 대화(`recommend_meal`)가 모두 `recommend()` 하나를 부른다(코드 규칙 3).
-같은 입력이면 언제나 같은 결과가 나온다(CA1-R30) — 무작위·현재 시각을 쓰지 않는다.
+    1. 반드시 빼기  정보 없음 · 다시 안 보기 · 종류/특징 필터
+                   · 문장에 적은 예산 초과 · 최대 도보 초과 · 시간 초과 · 영업 아님
+    2. 점수        Σ wᵢ · fᵢ (fᵢ 는 0~1, 가중치는 settings.json — 비 오면 거리 ×2 뒤 다시 정규화)
+                   거리 = 전체 도보(출발 → 식당 → 다음 건물), 다음 건물이 없으면 편도
+                   + 새 곳 +0.05 · 최근 추천 −0.05 · 시험기간 빠른 식사 +0.05
+    3. 다양성      상위 3곳은 종류가 겹치지 않게
+    4. 이유 칩     점수에 가장 크게 기여한 요소 2개
+
+학식은 식당 추천과 나란히 보이는 별도 목록(cafeteria)으로 돌려준다 (CA1-R34).
+같은 입력이면 언제나 같은 결과가 나온다 (CA1-R30) — 동점은 필요 시간 → id 순.
 """
 
 from __future__ import annotations
 
-from collections import Counter
-from dataclasses import dataclass, field
-from typing import Callable, Mapping, Sequence
+import json
+from dataclasses import dataclass, field, replace
+from datetime import date
+from functools import lru_cache
+from statistics import median
 
-from .timing import (
-    DEFAULT_CONFIG,
-    Fit,
-    MealType,
-    TimingConfig,
-    distance_m,
-    evaluate,
-    to_hhmm,
-    walk_minutes,
-    walk_minutes_path,
-)
+from .hours import OpenStatus, check_timing
+from .places import (SCHEMA_PATH, price_band, price_label, rep_price, recommendation_ready,
+                     meal_type_for_timing, meal_menus, effective_price_source)
+from .availability import candidate_active
+from .settings import Settings, load_settings, to_min
+from .timing import LatLng, Timing, compute_for_place
 
-LatLng = tuple[float, float]
+BANDS = "ABCD"
+QUICK = "빠른 식사"
+CAFETERIA = "학식"
 
-
-# ---------------------------------------------------------------------------
-# 입력
-# ---------------------------------------------------------------------------
-
-PRICE_BANDS = ("A", "B", "C", "D")
-PRICE_BAND_UPPER = {"A": 7000, "B": 10000, "C": 15000, "D": None}   # 정의서 7절 ⏳
-PRICE_BAND_LABEL = {"A": "7천 원 이하", "B": "7천~1만 원", "C": "1만~1.5만 원", "D": "1.5만 원 넘음"}
-SEAT_ORDER = {"S": 0, "M": 1, "L": 2}
-HOURS_UNKNOWN_CHIP = "영업시간 확인 필요"
+# 빠진 이유 — 화면의 '왜 없는지 한 줄'과 완화 칩에 쓴다 (먼저 걸린 이유 하나만 센다)
+EXCLUDE_KEYS = ("unavailable", "noInfo", "never", "filtered", "overBudget", "tooFar", "overTime", "closed")
 
 
 @dataclass(frozen=True)
-class Place:
-    """`Place` + `PlaceAttr` (정의서 7절) 중 계산에 쓰는 것.
-
-    hours: 요일(0=월 … 6=일) → 영업 구간 [(시작분, 끝분), …]. 구간 사이 빈 곳이 브레이크, 요일이 없으면 휴무.
-    """
-
-    id: str
-    name: str
-    category: str
-    meal_type: MealType
-    lat: float
-    lng: float
-    price_band: str | None = None
-    solo_ok: bool | None = None
-    seats: str | None = None
-    hours: Mapping[int, Sequence[tuple[int, int]]] | None = None
-    tags: frozenset[str] = frozenset()
-    # 요일 → 라스트오더 시각(분) 목록. 영업 구간 안에 있는 것만 그 구간의 주문 마감으로 본다.
-    last_order: Mapping[int, Sequence[int]] | None = None
-    # 영업시간을 몰라 하루 종일 연 것으로 두고 추천한 곳 — 카드에 `영업시간 확인 필요` 칩을 붙인다 (2026-11-13 팀 결정)
-    hours_unknown: bool = False
-
-    @property
-    def has_attrs(self) -> bool:
-        """조사 속성이 없는 곳은 추천하지 않는다 (CA1-R11)."""
-        return self.price_band in PRICE_BANDS and self.hours is not None
+class MealContext:
+    """언제 · 어디서 — 오늘 맥락이나 직접 입력에서 만든다."""
+    weekday: int                 # 0=월 … 6=일
+    start: int                   # 공강 시작(또는 지금), 자정부터 분
+    end: int | None              # 다음 블록 시작. None = 끝이 없음
+    origin: LatLng               # 출발 위치
+    dest: LatLng | None          # 다음 건물. None = 없음
+    rain: bool = False           # 도착 1시간 안 비 예보
+    exam_period: bool = False
+    on_date: date | None = None
 
 
 @dataclass(frozen=True)
-class Taste:
-    """폰에서 보내는 취향 요약 (CA1-R52). 서버는 저장하지 않는다."""
+class Filters:
+    """무엇을 — 필터 화면이나 MealQuery 에서 만든다. 모든 필터는 빼기 조건이다 (CA1-R36)."""
+    budget: int | None = None            # 1인 예산(원)
+    budget_explicit: bool = False        # 문장·필터에서 직접 정한 예산이면 초과는 뺀다. 기본 예산이면 점수로만
+    include: tuple[str, ...] = ()        # 종류는 OR. 기존 입력의 특징 태그는 required_tags 와 합쳐 AND
+    exclude: tuple[str, ...] = ()        # 하나라도 맞으면 뺀다
+    max_walk_min: int | None = None      # 편도 최대 도보
+    required_tags: tuple[str, ...] = ()  # 모두 만족해야 하는 특징('빠른 식사' 포함). 종류는 include 에
+    budget_min: int | None = None        # 명시적 예산 범위 하한(포함). 미지정이면 하한 없음
+    budget_max: int | None = None        # 명시적 예산 범위 상한(포함). 미지정이면 상한 없음
 
-    likes: Mapping[str, float] = field(default_factory=dict)   # 카테고리 → −1~1
-    never: frozenset[str] = frozenset()                        # 다시 안 보기 placeId
+
+@dataclass(frozen=True)
+class TasteSummary:
+    """폰이 보내는 취향 요약 (CA1-R52). 서버는 저장하지 않는다."""
+    likes: dict[str, float] = field(default_factory=dict)  # 종류 → −1~1
+    never: frozenset[str] = frozenset()                    # '다시 안 보기' 한 placeId
     budget_default: int | None = None
-    visited: frozenset[str] = frozenset()                      # 가 본 곳
-    recent: frozenset[str] = frozenset()                       # 최근 3번 추천된 곳
-
-
-@dataclass(frozen=True)
-class MealRequest:
-    slot_start: int                    # 출발(공강 시작 또는 지금), 자정부터 분
-    slot_min: int                      # 쓸 수 있는 분
-    weekday: int                       # 0=월
-    origin: LatLng                     # 출발 위치(건물 좌표 또는 반올림한 폰 위치)
-    dest: LatLng | None = None         # 다음 건물. 없으면 돌아오는 도보 없음 (CA1-R04)
-    party_size: int = 1
-    budget: int | None = None          # 요청 문장에 적은 1인 예산 → 넘으면 뺀다 (CA1-R05)
-    include: frozenset[str] = frozenset()
-    exclude: frozenset[str] = frozenset()
-    solo: bool | None = None           # None 이면 party_size == 1
-    max_walk_min: int | None = None
-    rain: bool = False                 # 도착 1시간 안 비 예보 (CA1-R06)
-    hurry: bool = False                # 시험기간 또는 24시간 안 마감 (CA1-R35)
-
-
-# ---------------------------------------------------------------------------
-# 가중치 (5절 초기값 ⏳ — 2차에서 학습으로 다시 정한다)
-# ---------------------------------------------------------------------------
-
-@dataclass(frozen=True)
-class Weights:
-    slack: float = 0.20
-    budget: float = 0.20
-    taste: float = 0.25
-    distance: float = 0.15
-    crowd: float = 0.10
-    reputation: float = 0.10
-
-    def as_dict(self, rain: bool) -> dict[str, float]:
-        w = {
-            "slack": self.slack, "budget": self.budget, "taste": self.taste,
-            "distance": self.distance * (2 if rain else 1), "crowd": self.crowd, "reputation": self.reputation,
-        }
-        total = sum(w.values())
-        return {k: v / total for k, v in w.items()}
-
-
-@dataclass(frozen=True)
-class RankingConfig:
-    weights: Weights = Weights()
-    top_n: int = 3
-    explore_bonus: float = 0.05     # 가 본 적 없는 곳
-    repeat_penalty: float = 0.05    # 최근 3번 추천된 곳
-    hurry_bonus: float = 0.05       # 시험기간 · 빠른 식사 유형
-    rep_prior_n: int = 5            # 평판 표본이 적을 때 전체 평균 쪽으로 당기는 세기
-    group_party: int = 5            # 이 인원 이상이면 좌석 M 이상 (CA1-R43 ⏳)
-    timing: TimingConfig = DEFAULT_CONFIG
-
-
-DEFAULT_RANKING = RankingConfig()
-
-
-# ---------------------------------------------------------------------------
-# 출력
-# ---------------------------------------------------------------------------
-
-@dataclass(frozen=True)
-class MealCandidate:
-    """정의서 7절 `MealCandidate` — 응답에만 있고 저장하지 않는다."""
-
-    placeId: str
-    name: str
-    category: str
-    walkToMin: int
-    walkBackMin: int | None
-    needMin: int
-    slackMin: int
-    fit: str            # ok | tight
-    score: float
-    reasons: tuple[str, ...]
-    openUntil: str      # 지금 영업 구간이 끝나는 시각(마감 또는 브레이크 시작)
-    priceBand: str
-
-
-@dataclass(frozen=True)
-class Recommendation:
-    top: tuple[MealCandidate, ...]       # 적합 상위 3곳 (카테고리 겹치지 않게)
-    more: tuple[MealCandidate, ...]      # 적합 나머지 (`더 보기`)
-    tight: tuple[MealCandidate, ...]     # 빠듯 — 적합 아래에 칩과 함께
-    cafeteria: tuple[MealCandidate, ...] # 학식 카드 — 같은 시간 계산 (CA1-R34)
-    excluded: Mapping[str, int]          # 뺀 이유별 개수 — '후보 0곳' 화면의 한 줄·완화 칩용
-
-
-# ---------------------------------------------------------------------------
-# 계산
-# ---------------------------------------------------------------------------
-
-QUICK_TYPES = frozenset({MealType.QUICK, MealType.CAFETERIA, MealType.CAFE})
-
-
-# 두 점 사이 길 거리(m)를 주는 함수 — 길이 없으면 None. 주지 않으면 직선거리 × 우회 계수.
-Router = Callable[[LatLng, LatLng], "float | None"]
-
-
-def _walk(a: LatLng, b: LatLng, cfg: TimingConfig, router: Router | None = None) -> int:
-    if router is not None:
-        m = router(a, b)
-        if m is not None:
-            return walk_minutes_path(m, cfg)
-    return walk_minutes(distance_m(a[0], a[1], b[0], b[1]), cfg)
-
-
-def _open_interval(place: Place, weekday: int, start: int, end: int) -> tuple[int, int] | None:
-    """[start, end] 가 통째로 들어가는 영업 구간 — 도착해서 다 먹을 때까지 브레이크·마감에 걸리지 않아야 한다."""
-    for o, c in (place.hours or {}).get(weekday, ()):
-        if o <= start and end <= c:
-            return o, c
-    return None
-
-
-def _order_deadline(place: Place, weekday: int, interval: tuple[int, int]) -> int | None:
-    """그 영업 구간의 라스트오더 — 구간 안(시작 뒤 · 마감 이전)에 있는 것 중 가장 이른 것. 없으면 None.
-
-    새벽까지 여는 곳의 00:40 같은 라스트오더는 자정에서 끊은 구간 밖이라 무시된다.
-    """
-    o, c = interval
-    times = [t for t in (place.last_order or {}).get(weekday, ()) if o < t <= c]
-    return min(times) if times else None
-
-
-def _band_over(band: str, budget: int) -> int:
-    """예산 안 가격대보다 몇 단계 위인지 (0 이하 = 예산 안)."""
-    ok = [b for b in PRICE_BANDS if PRICE_BAND_UPPER[b] is not None and PRICE_BAND_UPPER[b] <= budget]
-    max_ok = PRICE_BANDS.index(ok[-1]) if ok else -1
-    return PRICE_BANDS.index(band) - max_ok
-
-
-def _matches(place: Place, terms: frozenset[str], cfg: TimingConfig) -> bool:
-    if not terms:
-        return False
-    if place.category in terms or place.tags & terms:
-        return True
-    if "빠른 식사" in terms and cfg.durations[place.meal_type].eat <= 15:
-        return True
-    return False
-
-
-def _reputation(rep: Mapping[str, tuple[int, int]], cfg: RankingConfig) -> tuple[float, dict[str, float]]:
-    ups = sum(u for u, _ in rep.values())
-    total = sum(n for _, n in rep.values())
-    prior = ups / total if total else 0.5
-    k = cfg.rep_prior_n
-    return prior, {pid: (u + prior * k) / (n + k) for pid, (u, n) in rep.items()}
+    visited: frozenset[str] = frozenset()                  # 가 본 곳 — 없으면 '새 곳'
+    recent: frozenset[str] = frozenset()                   # 최근 3번 안에 추천된 곳
 
 
 @dataclass
-class _Scored:
-    place: Place
-    walk_to: int
-    walk_back: int | None
-    need: int
-    slack: int
-    fit: Fit
-    open_until: int
+class Candidate:
+    place: dict
+    timing: Timing
+    open: OpenStatus
+    price: int | None
+    features: dict[str, float]
+    contributions: dict[str, float]
     score: float
-    parts: dict[str, float]     # 요소별 기여 wᵢ·fᵢ
-    reasons: tuple[str, ...] = ()
+    reasons: list[dict]
+    menu_choices: list[dict] = field(default_factory=list)
+
+    @property
+    def place_id(self) -> str:
+        return self.place["id"]
+
+    def to_dict(self) -> dict:
+        p = self.place
+        return {
+            "placeId": p["id"],
+            "name": p["name"],
+            "category": p["category"],
+            "lat": p["lat"],
+            "lng": p["lng"],
+            "repPrice": self.price,
+            "priceSource": effective_price_source(p),
+            "effectiveMenus": [dict(m) for m in self.menu_choices],
+            "priceBand": price_band(self.price),
+            "priceLabel": price_label(self.price),
+            "takeout": p["attrs"].get("takeout"),
+            "mealTimeEstimated": "mealType" not in p["attrs"],
+            **self.timing.to_dict(),
+            "openUntil": self.open.to_dict()["openUntil"],
+            "score": round(self.score, 4),
+            "reasons": self.reasons,
+        }
 
 
-def _reasons(
-    s: _Scored, req: MealRequest, taste: Taste, mean_parts: Mapping[str, float], budget: int | None = None,
-) -> tuple[str, ...]:
-    """점수에 가장 크게 기여한 요소 2개 + (혼밥 요청이면) `혼밥 OK` (5절 이유 칩 · CA1-R32).
+@dataclass
+class RankResult:
+    top: list[Candidate]
+    more: list[Candidate]
+    tight: list[Candidate]
+    cafeteria: list[Candidate]
+    excluded: dict[str, int]
 
-    '기여'는 같은 요청의 다른 후보들 평균보다 얼마나 더 받았는지(wᵢ·fᵢ − 평균)로 잰다.
-    그냥 wᵢ·fᵢ 로 고르면 거의 모든 곳이 만점인 여유·예산이 늘 칩을 차지해 이유가 되지 못한다.
-    평균보다 나은 요소가 모자라면 기여가 큰 순서로 채운다.
-    """
-    labels: dict[str, str | None] = {
-        "slack": f"여유 {s.slack}분" if s.slack > 0 else None,
-        # 가격 칩은 '이유'가 될 때만 — 예산을 정했으면 예산 안, 안 정했으면 가장 싼 가격대(A)
-        "budget": PRICE_BAND_LABEL[s.place.price_band] if (
-            (budget is not None and _band_over(s.place.price_band, budget) <= 0)
-            or (budget is None and s.place.price_band == "A")
-        ) else None,
-        "taste": f"좋아하는 {s.place.category}" if taste.likes.get(s.place.category, 0) > 0 else None,
-        "distance": ("비 와서 가까운 곳" if req.rain else f"도보 {s.walk_to}분") if s.parts["distance"] > 0 else None,
-        "crowd": None,       # 감점 요소라 칩으로는 보이지 않는다
-        "reputation": None,  # 익명 피드백이 쌓이면 '평이 좋은 곳' 칩을 검토 ⏳
-    }
-    edge = {k: s.parts[k] - mean_parts.get(k, 0.0) for k in s.parts}
-    ahead = [k for k in sorted(edge, key=lambda k: (-edge[k], k)) if edge[k] > 1e-9]
-    rest = [k for k in sorted(s.parts, key=lambda k: (-s.parts[k], k)) if k not in ahead]
-    chips = [labels[k] for k in ahead + rest if labels[k]][:2]
-    solo = req.solo if req.solo is not None else req.party_size == 1
-    if solo and s.place.solo_ok:
-        chips.append("혼밥 OK")
-    if s.place.hours_unknown:
-        chips.insert(0, HOURS_UNKNOWN_CHIP)
-    return tuple(chips[:3])
+    def to_dict(self) -> dict:
+        return {
+            "candidates": [c.to_dict() for c in self.top],
+            "more": [c.to_dict() for c in self.more],
+            "tight": [c.to_dict() for c in self.tight],
+            "cafeteria": [c.to_dict() for c in self.cafeteria],
+            "excluded": self.excluded,
+        }
 
 
-def _to_candidate(s: _Scored) -> MealCandidate:
-    return MealCandidate(
-        placeId=s.place.id, name=s.place.name, category=s.place.category,
-        walkToMin=s.walk_to, walkBackMin=s.walk_back, needMin=s.need, slackMin=s.slack,
-        fit=s.fit.value, score=round(s.score, 4), reasons=s.reasons,
-        openUntil="" if s.place.hours_unknown else to_hhmm(s.open_until), priceBand=s.place.price_band or "",
-    )
+# ── 사전 ────────────────────────────────────────────────────
+
+@lru_cache(maxsize=1)
+def _vocabularies() -> tuple[frozenset[str], frozenset[str]]:
+    """종류와 필수 특징을 나눠 읽는다 — 특징에는 계산으로 얻는 '빠른 식사'도 포함."""
+    schema = json.loads(SCHEMA_PATH.read_text(encoding="utf-8"))
+    cats = schema["properties"]["category"]["enum"]
+    tags = schema["$defs"]["attrs"]["properties"]["tags"]["items"]["enum"]
+    return frozenset(cats), frozenset([*tags, QUICK])
 
 
-def _diverse_top(items: list[_Scored], n: int) -> tuple[list[_Scored], list[_Scored]]:
-    """상위 n 곳의 카테고리가 겹치지 않게 (5절 다양성 · CA1-R31). 종류가 모자라면 점수순으로 채운다."""
-    top: list[_Scored] = []
+def vocabulary() -> frozenset[str]:
+    """include · exclude 에 쓸 수 있는 종류·특징 사전."""
+    cats, tags = _vocabularies()
+    return cats | tags
+
+
+def _normalize_filters(f: Filters) -> Filters:
+    """종류는 하나 이상, 필수 특징은 모두 일치하도록 기존 혼합 include 도 분리한다."""
+    for value in (f.budget_min, f.budget_max):
+        if value is not None and (isinstance(value, bool) or not isinstance(value, int) or value < 0):
+            raise ValueError("예산 범위는 0 이상의 정수로 지정하세요.")
+    if _has_budget_range(f):
+        if f.budget is not None:
+            raise ValueError("예산은 budget 또는 budget_min/budget_max 중 한 방식으로 지정하세요.")
+        if f.budget_min is not None and f.budget_max is not None and f.budget_min > f.budget_max:
+            raise ValueError("최소 예산은 최대 예산보다 클 수 없습니다.")
+    cats, tags = _vocabularies()
+    invalid_tags = set(f.required_tags) - tags
+    if invalid_tags:
+        raise ValueError(f"required_tags 에는 특징 태그만 넣으세요(종류는 include): {sorted(invalid_tags)}")
+    requested = set(f.include)
+    unknown = (requested | set(f.exclude)) - vocabulary()
+    if unknown:
+        raise ValueError(f"사전에 없는 종류·특징: {sorted(unknown)}")
+    return replace(f, include=tuple(sorted(requested & cats)),
+                   required_tags=tuple(sorted((requested & tags) | set(f.required_tags))))
+
+
+def _labels(place: dict, s: Settings) -> set[str]:
+    attrs = place["attrs"]
+    out = {place["category"], *attrs.get("tags", [])}
+    if s.meal_types[meal_type_for_timing(place)].eat <= s.quick_eat_max_min:
+        out.add(QUICK)
+    return out
+
+
+# ── 1. 빼기 ─────────────────────────────────────────────────
+
+def _has_budget_range(f: Filters) -> bool:
+    return f.budget_min is not None or f.budget_max is not None
+
+
+def _price_for_filters(place: dict, f: Filters, order_at: int | None = None) -> int | None:
+    """범위 선택 시 실제 범위 안 대표 메뉴들만 가격·점수에 사용한다."""
+    if not _has_budget_range(f) and order_at is None:
+        return rep_price(place)
+    prices = [m["price"] for m in _menus_for_filters(place, f, order_at)]
+    return int(median(prices)) if prices else None
+
+
+def _menus_for_filters(place: dict, f: Filters, order_at: int | None = None) -> list[dict]:
+    return [m for m in meal_menus(place)
+            if (f.budget_min is None or m["price"] >= f.budget_min)
+            and (f.budget_max is None or m["price"] <= f.budget_max)
+            and (order_at is None or not m.get("orderWindow") or
+                 to_min(m["orderWindow"]["start"]) <= order_at < to_min(m["orderWindow"]["end"]))]
+
+
+def _exclusion(place: dict, f: Filters, taste: TasteSummary, s: Settings, *, skip_budget=False, order_at=None) -> str | None:
+    """시간·영업을 보기 전에 가게 속성만으로 빼는 이유."""
+    if not candidate_active(place):
+        return "unavailable"
+    attrs = place.get("attrs")
+    if not recommendation_ready(place):
+        return "noInfo"
+    if place["id"] in taste.never:
+        return "never"
+    labels = _labels(place, s)
+    if f.exclude and labels & set(f.exclude):
+        return "filtered"
+    if f.include and place["category"] not in f.include:
+        return "filtered"
+    if not set(f.required_tags).issubset(labels):
+        return "filtered"
+    if skip_budget:
+        return None
+    if order_at is not None and not _menus_for_filters(place, Filters(), order_at):
+        return "filtered"
+    if _has_budget_range(f) and _price_for_filters(place, f, order_at) is None:
+        return "overBudget"  # 기존 응답 키 호환: 범위의 아래/위 모두 포함
+    # 직접 정한 예산: 예산 안에서 먹을 대표 메뉴가 하나도 없으면 뺀다 (점수는 대표 가격 중앙값으로)
+    cheapest = min((m["price"] for m in _menus_for_filters(place, Filters(), order_at)), default=None)
+    if f.budget_explicit and f.budget is not None and cheapest is not None and cheapest > f.budget:
+        return "overBudget"
+    return None
+
+
+# ── 2. 점수 ─────────────────────────────────────────────────
+
+def _features(place: dict, t: Timing, f: Filters, taste: TasteSummary, ctx: MealContext, s: Settings) -> dict[str, float]:
+    r = s.ranking
+    # 여유: 끝이 없으면 1, 빠듯(음수)이면 0
+    slack = 1.0 if t.slack_min is None else max(0.0, min(t.slack_min / r.slack_full_min, 1.0))
+
+    budget = f.budget if f.budget is not None else taste.budget_default
+    price = _price_for_filters(place, f, t.arrive_at + t.breakdown.wait)
+    if _has_budget_range(f):
+        f_budget = 1.0 if price is not None else 0.0
+    elif budget is None or price is None:
+        f_budget = 0.5  # 예산을 모르면 모두 같게
+    elif price <= budget:
+        f_budget = 1.0
+    elif BANDS.index(price_band(price)) <= BANDS.index(price_band(budget)) + 1:
+        f_budget = r.over_budget_one_band
+    else:
+        f_budget = 0.0
+
+    like = max(-1.0, min(1.0, taste.likes.get(place["category"], 0.0)))
+    f_taste = (like + 1) / 2
+
+    # 왕복/다음 건물 이동은 두 구간이므로 편도당 기준의 2배를 사용한다.
+    # 같은 건물로 돌아올 때 기존 거리 감도를 유지하면서 돌아갈 경로도 점수에 반영한다.
+    distance_limit = r.distance_zero_min * (2 if ctx.dest is not None else 1)
+    f_dist = max(0.0, 1 - t.breakdown.walk_total / distance_limit)
+
+    # 혼잡은 학식 피크 신호만 사용한다. 좌석 규모를 점수 근거로 쓰지 않는다.
+    crowded = t.peak and meal_type_for_timing(place) == "학식"
+    f_crowd = 0.0 if crowded else 1.0
+
+    return {"slack": slack, "budget": f_budget, "taste": f_taste, "distance": f_dist, "crowd": f_crowd}
+
+
+def _weights(ctx: MealContext, s: Settings) -> dict[str, float]:
+    w = dict(s.ranking.weights)
+    if ctx.rain:
+        w["distance"] *= s.ranking.rain_distance_multiplier
+    total = sum(w.values())
+    return {k: v / total for k, v in w.items()}
+
+
+def _bonus(place: dict, taste: TasteSummary, ctx: MealContext, s: Settings) -> float:
+    r = s.ranking
+    b = 0.0
+    if taste.visited and place["id"] not in taste.visited:
+        b += r.bonus_new_place
+    if place["id"] in taste.recent:
+        b -= r.penalty_recent
+    if ctx.exam_period and s.meal_types[meal_type_for_timing(place)].eat <= s.quick_eat_max_min:
+        b += r.bonus_exam_quick
+    return b
+
+
+# ── 4. 이유 칩 ──────────────────────────────────────────────
+
+def _chip_text(key: str, place: dict, t: Timing, price: int | None, ctx: MealContext) -> str | None:
+    if key == "slack":
+        return f"여유 {t.slack_min}분" if t.slack_min is not None else None
+    if key == "budget":
+        return price_label(price)
+    if key == "taste":
+        return f"좋아하는 {place['category']}"
+    if key == "distance":
+        text = f"총 도보 {t.breakdown.walk_total}분"
+        return f"비 · {text}" if ctx.rain else text
+    return None  # crowd 는 칩으로 내지 않는다
+
+
+def _reasons(place: dict, t: Timing, price: int | None, feats: dict, contribs: dict, mean: dict,
+             f: Filters, taste: TasteSummary, ctx: MealContext, s: Settings) -> list[dict]:
+    """점수 기여가 다른 후보 평균보다 큰 순서로 칩을 고른다 — 모두가 같은 값(예: 여유 만점)은 이유가 되지 않는다."""
+    chips: list[dict] = []
+    edge = {k: contribs[k] - mean.get(k, 0.0) for k in contribs}
+    for key in sorted(edge, key=lambda k: (-edge[k], -contribs[k], k)):
+        if len(chips) == 2:
+            break
+        if feats[key] < s.ranking.chip_min_factor:
+            continue
+        if key == "taste" and taste.likes.get(place["category"], 0.0) <= 0:
+            continue  # 취향 정보가 없거나 싫어하는 종류는 이유가 아니다
+        text = _chip_text(key, place, t, price, ctx)
+        if text:
+            chips.append({"factor": key, "text": text})
+    if not chips:
+        chips.append({"factor": "need", "text": f"왕복 포함 {t.need_min}분"})
+    return chips[:3]
+
+
+# ── 전체 ────────────────────────────────────────────────────
+
+def _candidate_order(c: Candidate) -> tuple[float, int, str]:
+    return -c.score, c.timing.need_min, c.place_id
+
+
+def _diverse_top(cands: list[Candidate], n: int = 3) -> tuple[list[Candidate], list[Candidate]]:
+    """점수 순으로 보되 종류가 겹치지 않게 n 곳. 모자라면 남은 순서대로 채운다 (CA1-R31)."""
+    top: list[Candidate] = []
     seen: set[str] = set()
-    for s in items:
-        if len(top) == n:
+    for c in cands:
+        if len(top) < n and c.place["category"] not in seen:
+            top.append(c)
+            seen.add(c.place["category"])
+    for c in cands:
+        if len(top) >= n:
             break
-        if s.place.category not in seen:
-            top.append(s)
-            seen.add(s.place.category)
-    for s in items:
-        if len(top) == n:
-            break
-        if s not in top:
-            top.append(s)
-    rest = [s for s in items if s not in top]
+        if c not in top:
+            top.append(c)
+    # 종류가 모자라 보충한 후보도 최종 카드에서는 점수·필요 시간·id 순으로 보여 준다.
+    top.sort(key=_candidate_order)
+    rest = [c for c in cands if c not in top]
     return top, rest
 
 
-def recommend(
-    places: Sequence[Place],
-    req: MealRequest,
-    taste: Taste = Taste(),
-    reputation: Mapping[str, tuple[int, int]] | None = None,   # placeId → (👍 수, 전체 수)
-    config: RankingConfig = DEFAULT_RANKING,
-    router: Router | None = None,      # 길 기준 도보(meal.walkgraph) — 없으면 직선 × 1.3
-) -> Recommendation:
-    cfg = config.timing
-    weights = config.weights.as_dict(req.rain)
-    prior, rep = _reputation(reputation or {}, config)
-    solo = req.solo if req.solo is not None else req.party_size == 1
-    budget = req.budget if req.budget is not None else taste.budget_default
+def rank(
+    places: list[dict],
+    ctx: MealContext,
+    filters: Filters | None = None,
+    taste: TasteSummary | None = None,
+    s: Settings | None = None,
+    router=None,
+) -> RankResult:
+    f = _normalize_filters(filters or Filters())
+    taste = taste or TasteSummary()
+    s = s or load_settings()
 
-    excluded: Counter[str] = Counter()
-    scored: list[_Scored] = []
+    weights = _weights(ctx, s)
+    excluded = {k: 0 for k in EXCLUDE_KEYS}
+    ok: list[Candidate] = []
+    tight: list[Candidate] = []
+    cafeteria: list[Candidate] = []
 
-    for p in places:
-        # --- 반드시 빼는 것 (5절) --------------------------------------------
-        if not p.has_attrs:
-            excluded["정보 없음"] += 1
-            continue
-        if p.id in taste.never:
-            excluded["다시 안 보기"] += 1
-            continue
-        if _matches(p, req.exclude, cfg):
-            excluded["제외한 종류"] += 1
-            continue
-        if req.include and not _matches(p, req.include, cfg):
-            excluded["요청한 종류 아님"] += 1
-            continue
-        if solo and p.solo_ok is False:     # 모름(None)은 빼지 않는다 — 조사 초기에도 추천이 나오게 (2026-11-12 결정)
-            excluded["혼밥 불가"] += 1
-            continue
-        if req.party_size >= config.group_party and SEAT_ORDER.get(p.seats or "", -1) < SEAT_ORDER["M"]:
-            excluded["좌석 부족"] += 1
-            continue
-        if req.budget is not None and _band_over(p.price_band, req.budget) > 0:
-            excluded["예산 초과"] += 1
+    for place in places:
+        why = _exclusion(place, f, taste, s, skip_budget=True)
+        if why:
+            excluded[why] += 1
             continue
 
-        walk_to = _walk(req.origin, (p.lat, p.lng), cfg, router)
-        if req.max_walk_min is not None and walk_to > req.max_walk_min:
-            excluded["도보 초과"] += 1
+        t = compute_for_place(place, start=ctx.start, end=ctx.end, origin=ctx.origin, dest=ctx.dest, s=s, router=router)
+        order_at = t.arrive_at + t.breakdown.wait
+        why = _exclusion(place, f, taste, s, order_at=order_at)
+        if why:
+            excluded[why] += 1
             continue
-        walk_back = _walk(req.dest, (p.lat, p.lng), cfg, router) if req.dest else None   # 길은 양방향 — 다음 건물에서 한 번 계산해 재사용
-
-        t = evaluate(req.slot_min, walk_to, walk_back, p.meal_type, depart_at=req.slot_start, config=cfg)
-        if t.fit is Fit.OUT:
-            excluded["시간 초과"] += 1
+        if f.max_walk_min is not None and t.breakdown.walk_to > f.max_walk_min:
+            excluded["tooFar"] += 1
             continue
-
-        arrive = req.slot_start + walk_to
-        d = cfg.durations[p.meal_type]
-        meal_end = arrive + (d.wait_peak if t.peak else d.wait) + d.eat
-        interval = _open_interval(p, req.weekday, arrive, meal_end)
-        if interval is None:
-            excluded["영업 아님"] += 1
+        if t.fit == "out":
+            excluded["overTime"] += 1
             continue
-        deadline = _order_deadline(p, req.weekday, interval)
-        if deadline is not None and arrive > deadline:
-            excluded["주문 마감"] += 1
+        st = check_timing(place, ctx.weekday, t, on_date=ctx.on_date)
+        if not st.ok:
+            excluded["closed"] += 1
             continue
 
-        # --- 점수 Σ wᵢ·fᵢ ---------------------------------------------------
-        f = {
-            "slack": min(max(t.slack_min, 0) / 20, 1.0),
-            "budget": 1.0 if budget is None else (1.0 if (o := _band_over(p.price_band, budget)) <= 0 else 0.4 if o == 1 else 0.0),
-            "taste": (max(-1.0, min(1.0, taste.likes.get(p.category, 0.0))) + 1) / 2,
-            "distance": max(0.0, 1 - walk_to / 15),
-            "crowd": 0.0 if t.peak and (p.meal_type is MealType.CAFETERIA or p.seats == "S") else 1.0,
-            "reputation": rep.get(p.id, prior),
-        }
-        parts = {k: weights[k] * v for k, v in f.items()}
-        score = sum(parts.values())
-        if p.id not in taste.visited:
-            score += config.explore_bonus
-        if p.id in taste.recent:
-            score -= config.repeat_penalty
-        if req.hurry and p.meal_type in QUICK_TYPES:
-            score += config.hurry_bonus
+        feats = _features(place, t, f, taste, ctx, s)
+        contribs = {k: weights[k] * feats[k] for k in weights}
+        score = sum(contribs.values()) + _bonus(place, taste, ctx, s)
+        price = _price_for_filters(place, f, order_at)
+        cand = Candidate(place=place, timing=t, open=st, price=price, features=feats,
+                         contributions=contribs, score=score, reasons=[], menu_choices=_menus_for_filters(place, f, order_at))
 
-        scored.append(_Scored(p, walk_to, walk_back, t.need_min, t.slack_min, t.fit, interval[1], score, parts))
+        if place["category"] == CAFETERIA:
+            cafeteria.append(cand)
+        elif t.fit == "tight":
+            tight.append(cand)
+        else:
+            ok.append(cand)
 
-    if scored:
-        mean_parts = {k: sum(s.parts[k] for s in scored) / len(scored) for k in scored[0].parts}
-        for s in scored:
-            s.reasons = _reasons(s, req, taste, mean_parts, budget)
+    everyone = ok + tight + cafeteria
+    mean = {k: sum(c.contributions[k] for c in everyone) / len(everyone) for k in weights} if everyone else {}
+    for c in everyone:
+        c.reasons = _reasons(c.place, c.timing, c.price, c.features, c.contributions, mean, f, taste, ctx, s)
 
-    scored.sort(key=lambda s: (-s.score, s.need, s.place.id))
-    cafeteria = [s for s in scored if s.place.meal_type is MealType.CAFETERIA]
-    ok = [s for s in scored if s.fit is Fit.OK and s.place.meal_type is not MealType.CAFETERIA]
-    tight = [s for s in scored if s.fit is Fit.TIGHT and s.place.meal_type is not MealType.CAFETERIA]
-    top, more = _diverse_top(ok, config.top_n)
-
-    return Recommendation(
-        top=tuple(map(_to_candidate, top)),
-        more=tuple(map(_to_candidate, more)),
-        tight=tuple(map(_to_candidate, tight)),
-        cafeteria=tuple(map(_to_candidate, cafeteria)),
-        excluded=dict(excluded),
-    )
+    ok.sort(key=_candidate_order)
+    tight.sort(key=_candidate_order)
+    cafeteria.sort(key=_candidate_order)
+    top, more = _diverse_top(ok)
+    return RankResult(top=top, more=more, tight=tight, cafeteria=cafeteria, excluded=excluded)

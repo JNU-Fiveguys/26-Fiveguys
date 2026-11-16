@@ -1,0 +1,85 @@
+{
+  "version": 1,
+  "id": "p_0004",
+  "name": "백련옥",
+  "category": "한식",
+  "lat": 35.171401,
+  "lng": 126.900173,
+  "address": "전남광주통합특별시 북구 용봉로 30",
+  "source": "semas",
+  "sourceId": "MA010120220804468849",
+  "sourceStatus": "active",
+  "attrs": {
+    "status": "partial"
+  },
+  "research": {
+    "identityStatus": "matched",
+    "queries": [
+      "백련옥 광주 용봉로 30 메뉴 영업시간",
+      "\"백련옥\" \"용봉로\" 메뉴",
+      "\"백련옥\" 광주 가격"
+    ],
+    "sources": [
+      {
+        "id": "s1",
+        "url": "https://foodstory3409.tistory.com/480",
+        "title": "광주광역시 백년식당 백년가게",
+        "type": "review",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "상호·주소 일치"
+      },
+      {
+        "id": "s2",
+        "url": "https://webzine.8899.or.kr/autoalbum/a_mode/webupload/upload_dir/kbiz/images/2022/202206_3.pdf",
+        "title": "2022 중소기업 관련 백년가게 소개",
+        "type": "public_data",
+        "observedAt": "2026-11-11",
+        "addressMatch": false,
+        "note": "광주 북구 백련옥의 생선조림 소개. 2022년 자료로 현재메뉴·가격 확인 아님."
+      }
+    ],
+    "facts": {
+      "menus": {
+        "status": "partial",
+        "value": [],
+        "sourceIds": [
+          "s2"
+        ],
+        "note": "과거 소개에서 생선조림을 확인했으나 현재 가격 미확인."
+      },
+      "hours": {
+        "status": "unconfirmed",
+        "value": [],
+        "sourceIds": [],
+        "note": "요일별 영업시간을 확인하지 못함."
+      }
+    },
+    "notes": [],
+    "checkedAt": "2026-11-11",
+    "method": "web",
+    "unknownFields": [
+      "menus",
+      "hours",
+      "mealType",
+      "takeout",
+      "verifiedAt",
+      "verifiedBy",
+      "break",
+      "lastOrder"
+    ]
+  },
+  "availability": {
+    "status": "excluded",
+    "provider": "naver",
+    "checkedAt": "2026-11-11",
+    "sourceUrl": "https://map.naver.com/p/search/%EC%A0%84%EB%82%A8%EB%8C%80%20%EC%9D%8C%EC%8B%9D%EC%A0%90",
+    "naverPlaceId": null,
+    "observedName": "",
+    "observedAddress": "",
+    "district": null,
+    "addressVerified": false,
+    "nearby": false,
+    "reason": "네이버 지도에서 확인한 네 식당가 명단에 포함되지 않아 제외"
+  }
+}

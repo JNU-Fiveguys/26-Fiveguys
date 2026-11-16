@@ -1,0 +1,242 @@
+{
+  "version": 1,
+  "id": "p_0107",
+  "source": "team",
+  "sourceId": "naver:19868696",
+  "name": "김밥나라 전대예대점",
+  "address": "전남광주 북구 용주로30번길 36",
+  "category": "분식",
+  "lat": 35.1806777559145,
+  "lng": 126.902829236478,
+  "sourceStatus": "active",
+  "availability": {
+    "status": "listed",
+    "provider": "naver",
+    "checkedAt": "2026-11-11",
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/19868696/home",
+    "naverPlaceId": "19868696",
+    "observedName": "김밥나라 전대예대점",
+    "observedAddress": "전남광주 북구 용주로30번길 36",
+    "district": "예대",
+    "addressVerified": true,
+    "nearby": true,
+    "reason": "공개 네이버 지도에서 동일 주소의 전남대 예대 식당으로 확인"
+  },
+  "menuObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/19868696/menu",
+    "checkedAt": "2026-11-11",
+    "priceContext": "in_store",
+    "menus": [
+      {
+        "name": "일반김밥",
+        "price": 3000,
+        "main": true
+      },
+      {
+        "name": "참치김밥",
+        "price": 3500,
+        "main": true
+      },
+      {
+        "name": "치즈김밥",
+        "price": 3500,
+        "main": true
+      },
+      {
+        "name": "비빔밥",
+        "price": 5500,
+        "main": true
+      },
+      {
+        "name": "김치찌개",
+        "price": 6500,
+        "main": true
+      }
+    ],
+    "note": "메뉴 상태: confirmed. 원본 관찰·좌표 출처는 적용 manifest에 보관합니다.",
+    "status": "confirmed"
+  },
+  "attrs": {
+    "status": "partial",
+    "menus": [
+      {
+        "name": "일반김밥",
+        "price": 3000,
+        "main": true
+      },
+      {
+        "name": "참치김밥",
+        "price": 3500,
+        "main": true
+      },
+      {
+        "name": "치즈김밥",
+        "price": 3500,
+        "main": true
+      },
+      {
+        "name": "비빔밥",
+        "price": 5500,
+        "main": true
+      },
+      {
+        "name": "김치찌개",
+        "price": 6500,
+        "main": true
+      }
+    ],
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금"
+        ],
+        "open": "10:00",
+        "close": "20:00",
+        "break": {
+          "start": "15:00",
+          "end": "17:00"
+        }
+      }
+    ]
+  },
+  "hoursObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/19868696/home",
+    "checkedAt": "2026-11-11",
+    "status": "confirmed",
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금"
+        ],
+        "open": "10:00",
+        "close": "20:00",
+        "break": {
+          "start": "15:00",
+          "end": "17:00"
+        }
+      }
+    ],
+    "note": "매장 영업시간 관찰. 기존 attrs/research를 덮어쓰지 않습니다."
+  },
+  "research": {
+    "checkedAt": "2026-11-11",
+    "method": "web",
+    "identityStatus": "matched",
+    "queries": [
+      "김밥나라 전대예대점 전남광주 북구 용주로30번길 36"
+    ],
+    "sources": [
+      {
+        "id": "naver-place",
+        "url": "https://pcmap.place.naver.com/restaurant/19868696/home",
+        "title": "김밥나라 전대예대점 네이버 지도",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "같은 주소의 지점 확인. 지도 등록 확인은 실시간 영업 중 보증이 아님"
+      },
+      {
+        "id": "naver-menu",
+        "url": "https://pcmap.place.naver.com/restaurant/19868696/menu",
+        "title": "김밥나라 전대예대점 메뉴 탭",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "가격 맥락: in_store"
+      },
+      {
+        "id": "naver-hours",
+        "url": "https://pcmap.place.naver.com/restaurant/19868696/home",
+        "title": "김밥나라 전대예대점 영업시간",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "게시된 요일별 영업시간. 미확인은 추정하지 않음"
+      }
+    ],
+    "facts": {
+      "menus": {
+        "status": "confirmed",
+        "sourceIds": [
+          "naver-menu"
+        ],
+        "note": "매장 게시값을 확인했습니다.",
+        "value": [
+          {
+            "name": "일반김밥",
+            "price": 3000,
+            "main": true
+          },
+          {
+            "name": "참치김밥",
+            "price": 3500,
+            "main": true
+          },
+          {
+            "name": "치즈김밥",
+            "price": 3500,
+            "main": true
+          },
+          {
+            "name": "비빔밥",
+            "price": 5500,
+            "main": true
+          },
+          {
+            "name": "김치찌개",
+            "price": 6500,
+            "main": true
+          }
+        ]
+      },
+      "hours": {
+        "status": "confirmed",
+        "sourceIds": [
+          "naver-hours"
+        ],
+        "note": "매장 게시값을 확인했습니다.",
+        "value": [
+          {
+            "days": [
+              "월",
+              "화",
+              "수",
+              "목",
+              "금"
+            ],
+            "open": "10:00",
+            "close": "20:00",
+            "break": {
+              "start": "15:00",
+              "end": "17:00"
+            }
+          }
+        ]
+      }
+    },
+    "unknownFields": [
+      "mealType",
+      "takeout",
+      "verifiedAt",
+      "verifiedBy",
+      "lastOrder"
+    ],
+    "notes": [
+      "네이버 공개 지도 상세·메뉴 탭 직접 확인.",
+      "메뉴 탭에 게시된 전체 텍스트 메뉴 기준. 메뉴판 이미지 전체와 대조한 것은 아님.",
+      "main은 1인 식사 계산을 위한 조사자 분류. 곁들임·음료·공유세트·분량 불명 메뉴는 false로 보수적으로 분류.",
+      "원문 영업시간은 rear_art_batch3.json에 보관.",
+      "토요일·일요일은 매주 정기휴무로 명시됨. 라스트오더는 미게시여서 추가하지 않음.",
+      "병합 입력: rear_art_batch3_manifest.json",
+      "공개 네이버 화면 관찰이며 현장 검증이 아닙니다."
+    ]
+  }
+}

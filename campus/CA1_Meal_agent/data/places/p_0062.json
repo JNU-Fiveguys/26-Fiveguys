@@ -1,0 +1,107 @@
+{
+  "version": 1,
+  "id": "p_0062",
+  "name": "버거리 전남대점",
+  "category": "패스트푸드",
+  "lat": 35.175584,
+  "lng": 126.912715,
+  "address": "전남광주통합특별시 북구 우치로 92",
+  "source": "semas",
+  "sourceId": "MA0101202307A0085849",
+  "sourceStatus": "active",
+  "attrs": {
+    "status": "partial",
+    "menus": [
+      {
+        "name": "텍사스바베큐버거 단품",
+        "price": 4900,
+        "main": true
+      },
+      {
+        "name": "그릴드치즈버거 단품",
+        "price": 9500,
+        "main": true
+      },
+      {
+        "name": "더블그릴드치즈버거 단품",
+        "price": 12400,
+        "main": true
+      }
+    ]
+  },
+  "research": {
+    "identityStatus": "matched",
+    "queries": [
+      "\"버거리 전남대점\" 메뉴 영업시간"
+    ],
+    "sources": [
+      {
+        "id": "s1",
+        "url": "https://www.diningcode.com/profile.php?rid=g5Gi9e3yLhdm",
+        "title": "버거리 광주전남대점",
+        "type": "directory",
+        "addressMatch": true,
+        "note": "주소일치. 메뉴가격게시. 개점시각10:00/10:30서로다름. 본문을 직접 열어 주소와 해당 게시값을 대조함.",
+        "observedAt": "2026-11-11"
+      }
+    ],
+    "facts": {
+      "menus": {
+        "status": "confirmed",
+        "value": [
+          {
+            "name": "텍사스바베큐버거 단품",
+            "price": 4900,
+            "main": true
+          },
+          {
+            "name": "그릴드치즈버거 단품",
+            "price": 9500,
+            "main": true
+          },
+          {
+            "name": "더블그릴드치즈버거 단품",
+            "price": 12400,
+            "main": true
+          }
+        ],
+        "sourceIds": [
+          "s1"
+        ],
+        "note": "해당지점목록의 단품게시가격. 세트가격과구분."
+      },
+      "hours": {
+        "status": "conflict",
+        "sourceIds": [
+          "s1"
+        ],
+        "note": "주간목록매일10:00~23:00, 후기10:30~23:00·휴무별도공지. 개점시각재확인필요."
+      }
+    },
+    "notes": [],
+    "checkedAt": "2026-11-11",
+    "method": "web",
+    "unknownFields": [
+      "hours",
+      "mealType",
+      "takeout",
+      "verifiedAt",
+      "verifiedBy",
+      "break",
+      "lastOrder"
+    ]
+  },
+  "availability": {
+    "status": "excluded",
+    "provider": "naver",
+    "checkedAt": "2026-11-11",
+    "sourceUrl": "https://map.naver.com/p/search/%EC%A0%84%EB%82%A8%EB%8C%80%20%EC%9D%8C%EC%8B%9D%EC%A0%90",
+    "naverPlaceId": null,
+    "observedName": "",
+    "observedAddress": "",
+    "district": null,
+    "addressVerified": false,
+    "nearby": false,
+    "reason": "네이버 지도에서 확인한 네 식당가 명단에 포함되지 않아 제외"
+  }
+}

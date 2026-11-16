@@ -1,0 +1,564 @@
+{
+  "version": 1,
+  "id": "p_0105",
+  "source": "team",
+  "sourceId": "naver:16178952",
+  "name": "삼호반점",
+  "address": "전남광주 북구 용주로30번길 9",
+  "category": "중식",
+  "lat": 35.1813077297007,
+  "lng": 126.901620842041,
+  "sourceStatus": "active",
+  "availability": {
+    "status": "listed",
+    "provider": "naver",
+    "checkedAt": "2026-11-11",
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/16178952/home",
+    "naverPlaceId": "16178952",
+    "observedName": "삼호반점",
+    "observedAddress": "전남광주 북구 용주로30번길 9",
+    "district": "예대",
+    "addressVerified": true,
+    "nearby": true,
+    "reason": "공개 네이버 지도에서 동일 주소의 전남대 예대 식당으로 확인"
+  },
+  "menuObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/16178952/menu",
+    "checkedAt": "2026-11-11",
+    "priceContext": "in_store",
+    "menus": [
+      {
+        "name": "탕수육(中)",
+        "price": 20000,
+        "main": false
+      },
+      {
+        "name": "짜장",
+        "price": 5000,
+        "main": true
+      },
+      {
+        "name": "우동",
+        "price": 5500,
+        "main": true
+      },
+      {
+        "name": "간짜장",
+        "price": 5500,
+        "main": true
+      },
+      {
+        "name": "기스면",
+        "price": 9000,
+        "main": true
+      },
+      {
+        "name": "볶음밥",
+        "price": 6000,
+        "main": true
+      },
+      {
+        "name": "잡채밥",
+        "price": 7000,
+        "main": true
+      },
+      {
+        "name": "해물덮밥",
+        "price": 9000,
+        "main": true
+      },
+      {
+        "name": "삼선짜장",
+        "price": 8000,
+        "main": true
+      },
+      {
+        "name": "삼선짬뽕",
+        "price": 8000,
+        "main": true
+      },
+      {
+        "name": "짬뽕",
+        "price": 5500,
+        "main": true
+      },
+      {
+        "name": "울면",
+        "price": 6000,
+        "main": true
+      },
+      {
+        "name": "삼선간짜장",
+        "price": 8000,
+        "main": true
+      },
+      {
+        "name": "잡탕밥",
+        "price": 12000,
+        "main": true
+      },
+      {
+        "name": "오므라이스",
+        "price": 7000,
+        "main": true
+      },
+      {
+        "name": "야끼만두",
+        "price": 5000,
+        "main": false
+      },
+      {
+        "name": "국밥",
+        "price": 6000,
+        "main": true
+      },
+      {
+        "name": "삼선국밥",
+        "price": 9000,
+        "main": true
+      },
+      {
+        "name": "곰탕",
+        "price": 7000,
+        "main": true
+      },
+      {
+        "name": "육개장",
+        "price": 7000,
+        "main": true
+      },
+      {
+        "name": "계란탕",
+        "price": 12000,
+        "main": false
+      },
+      {
+        "name": "잡채",
+        "price": 13000,
+        "main": false
+      },
+      {
+        "name": "팔보채",
+        "price": 30000,
+        "main": false
+      },
+      {
+        "name": "양장피",
+        "price": 30000,
+        "main": false
+      },
+      {
+        "name": "난자완스",
+        "price": 30000,
+        "main": false
+      },
+      {
+        "name": "콩물국수",
+        "price": 7000,
+        "main": true
+      },
+      {
+        "name": "떡국",
+        "price": 7000,
+        "main": true
+      }
+    ],
+    "note": "메뉴 상태: confirmed. 원본 관찰·좌표 출처는 적용 manifest에 보관합니다.",
+    "status": "confirmed"
+  },
+  "attrs": {
+    "status": "partial",
+    "menus": [
+      {
+        "name": "탕수육(中)",
+        "price": 20000,
+        "main": false
+      },
+      {
+        "name": "짜장",
+        "price": 5000,
+        "main": true
+      },
+      {
+        "name": "우동",
+        "price": 5500,
+        "main": true
+      },
+      {
+        "name": "간짜장",
+        "price": 5500,
+        "main": true
+      },
+      {
+        "name": "기스면",
+        "price": 9000,
+        "main": true
+      },
+      {
+        "name": "볶음밥",
+        "price": 6000,
+        "main": true
+      },
+      {
+        "name": "잡채밥",
+        "price": 7000,
+        "main": true
+      },
+      {
+        "name": "해물덮밥",
+        "price": 9000,
+        "main": true
+      },
+      {
+        "name": "삼선짜장",
+        "price": 8000,
+        "main": true
+      },
+      {
+        "name": "삼선짬뽕",
+        "price": 8000,
+        "main": true
+      },
+      {
+        "name": "짬뽕",
+        "price": 5500,
+        "main": true
+      },
+      {
+        "name": "울면",
+        "price": 6000,
+        "main": true
+      },
+      {
+        "name": "삼선간짜장",
+        "price": 8000,
+        "main": true
+      },
+      {
+        "name": "잡탕밥",
+        "price": 12000,
+        "main": true
+      },
+      {
+        "name": "오므라이스",
+        "price": 7000,
+        "main": true
+      },
+      {
+        "name": "야끼만두",
+        "price": 5000,
+        "main": false
+      },
+      {
+        "name": "국밥",
+        "price": 6000,
+        "main": true
+      },
+      {
+        "name": "삼선국밥",
+        "price": 9000,
+        "main": true
+      },
+      {
+        "name": "곰탕",
+        "price": 7000,
+        "main": true
+      },
+      {
+        "name": "육개장",
+        "price": 7000,
+        "main": true
+      },
+      {
+        "name": "계란탕",
+        "price": 12000,
+        "main": false
+      },
+      {
+        "name": "잡채",
+        "price": 13000,
+        "main": false
+      },
+      {
+        "name": "팔보채",
+        "price": 30000,
+        "main": false
+      },
+      {
+        "name": "양장피",
+        "price": 30000,
+        "main": false
+      },
+      {
+        "name": "난자완스",
+        "price": 30000,
+        "main": false
+      },
+      {
+        "name": "콩물국수",
+        "price": 7000,
+        "main": true
+      },
+      {
+        "name": "떡국",
+        "price": 7000,
+        "main": true
+      }
+    ],
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금",
+          "토"
+        ],
+        "open": "11:00",
+        "close": "19:30"
+      }
+    ]
+  },
+  "hoursObservation": {
+    "sourceUrl": "https://place.map.kakao.com/10427755",
+    "checkedAt": "2026-11-12",
+    "status": "confirmed",
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금",
+          "토"
+        ],
+        "open": "11:00",
+        "close": "19:30"
+      }
+    ],
+    "note": "동일 상호·도로명 건물번호의 카카오맵 영업정보. 매주 요일별 영업/휴무와 게시된 브레이크만 반영. 배달업체 제공 시간은 제외.",
+    "placeSourceUrl": "https://pcmap.place.naver.com/restaurant/16178952/home",
+    "sourceAddress": "전남광주통합특별시 북구 용주로30번길 9 1층",
+    "hoursContext": "in_store"
+  },
+  "research": {
+    "checkedAt": "2026-11-11",
+    "method": "web",
+    "identityStatus": "matched",
+    "queries": [
+      "삼호반점 전남광주 북구 용주로30번길 9"
+    ],
+    "sources": [
+      {
+        "id": "naver-place",
+        "url": "https://pcmap.place.naver.com/restaurant/16178952/home",
+        "title": "삼호반점 네이버 지도",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "같은 주소의 지점 확인. 지도 등록 확인은 실시간 영업 중 보증이 아님"
+      },
+      {
+        "id": "naver-menu",
+        "url": "https://pcmap.place.naver.com/restaurant/16178952/menu",
+        "title": "삼호반점 메뉴 탭",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "가격 맥락: in_store"
+      },
+      {
+        "id": "naver-hours",
+        "url": "https://pcmap.place.naver.com/restaurant/16178952/home",
+        "title": "삼호반점 영업시간",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "게시된 요일별 영업시간. 미확인은 추정하지 않음"
+      }
+    ],
+    "facts": {
+      "menus": {
+        "status": "confirmed",
+        "sourceIds": [
+          "naver-menu"
+        ],
+        "note": "매장 게시값을 확인했습니다.",
+        "value": [
+          {
+            "name": "탕수육(中)",
+            "price": 20000,
+            "main": false
+          },
+          {
+            "name": "짜장",
+            "price": 5000,
+            "main": true
+          },
+          {
+            "name": "우동",
+            "price": 5500,
+            "main": true
+          },
+          {
+            "name": "간짜장",
+            "price": 5500,
+            "main": true
+          },
+          {
+            "name": "기스면",
+            "price": 9000,
+            "main": true
+          },
+          {
+            "name": "볶음밥",
+            "price": 6000,
+            "main": true
+          },
+          {
+            "name": "잡채밥",
+            "price": 7000,
+            "main": true
+          },
+          {
+            "name": "해물덮밥",
+            "price": 9000,
+            "main": true
+          },
+          {
+            "name": "삼선짜장",
+            "price": 8000,
+            "main": true
+          },
+          {
+            "name": "삼선짬뽕",
+            "price": 8000,
+            "main": true
+          },
+          {
+            "name": "짬뽕",
+            "price": 5500,
+            "main": true
+          },
+          {
+            "name": "울면",
+            "price": 6000,
+            "main": true
+          },
+          {
+            "name": "삼선간짜장",
+            "price": 8000,
+            "main": true
+          },
+          {
+            "name": "잡탕밥",
+            "price": 12000,
+            "main": true
+          },
+          {
+            "name": "오므라이스",
+            "price": 7000,
+            "main": true
+          },
+          {
+            "name": "야끼만두",
+            "price": 5000,
+            "main": false
+          },
+          {
+            "name": "국밥",
+            "price": 6000,
+            "main": true
+          },
+          {
+            "name": "삼선국밥",
+            "price": 9000,
+            "main": true
+          },
+          {
+            "name": "곰탕",
+            "price": 7000,
+            "main": true
+          },
+          {
+            "name": "육개장",
+            "price": 7000,
+            "main": true
+          },
+          {
+            "name": "계란탕",
+            "price": 12000,
+            "main": false
+          },
+          {
+            "name": "잡채",
+            "price": 13000,
+            "main": false
+          },
+          {
+            "name": "팔보채",
+            "price": 30000,
+            "main": false
+          },
+          {
+            "name": "양장피",
+            "price": 30000,
+            "main": false
+          },
+          {
+            "name": "난자완스",
+            "price": 30000,
+            "main": false
+          },
+          {
+            "name": "콩물국수",
+            "price": 7000,
+            "main": true
+          },
+          {
+            "name": "떡국",
+            "price": 7000,
+            "main": true
+          }
+        ]
+      },
+      "hours": {
+        "status": "unconfirmed",
+        "sourceIds": [],
+        "note": "매장 기준 정보 미확인. 배달·가격 맥락 불명 자료는 확정하지 않습니다."
+      }
+    },
+    "unknownFields": [
+      "hours",
+      "mealType",
+      "takeout",
+      "verifiedAt",
+      "verifiedBy",
+      "break",
+      "lastOrder"
+    ],
+    "notes": [
+      "네이버 공개 지도 상세·메뉴 탭 직접 확인.",
+      "메뉴 탭에 게시된 전체 텍스트 메뉴 기준. 메뉴판 이미지 전체와 대조한 것은 아님.",
+      "main은 식사 가격 계산을 위한 보수적 분류. 공유 요리·곁들임·주류 세트·분량 불명 메뉴를 false로 두며 원문 메뉴와 가격은 모두 보존.",
+      "원문 영업시간은 art_batch4.json에 보관. 미게시 브레이크·라스트오더의 존재 여부는 확인하지 못함.",
+      "요일별 영업시간을 확인하지 못해 hours를 비움.",
+      "병합 입력: art_batch4_manifest.json",
+      "공개 네이버 화면 관찰이며 현장 검증이 아닙니다."
+    ]
+  },
+  "followupReview": {
+    "checkedAt": "2026-11-12",
+    "reasons": [
+      "공개 매장 식사 가격과 요일별 영업시간을 연결하여 추천 대상으로 전환했습니다."
+    ],
+    "sources": [
+      "https://pcmap.place.naver.com/restaurant/16178952/home",
+      "https://pcmap.place.naver.com/restaurant/16178952/menu/list",
+      "https://place.map.kakao.com/10427755",
+      "https://pcmap.place.naver.com/restaurant/16178952/menu"
+    ]
+  }
+}

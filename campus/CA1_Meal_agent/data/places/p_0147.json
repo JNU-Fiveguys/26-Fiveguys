@@ -1,0 +1,257 @@
+{
+  "version": 1,
+  "id": "p_0147",
+  "source": "team",
+  "sourceId": "naver:1879261018",
+  "name": "이런이궈마라탕 전남대점",
+  "address": "전남광주 북구 호동로 4-6 1층",
+  "category": "중식",
+  "lat": 35.1741507327552,
+  "lng": 126.91311206151,
+  "sourceStatus": "active",
+  "availability": {
+    "status": "listed",
+    "provider": "naver",
+    "checkedAt": "2026-11-11",
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/1879261018/home",
+    "naverPlaceId": "1879261018",
+    "observedName": "이런이궈마라탕 전남대점",
+    "observedAddress": "전남광주 북구 호동로 4-6 1층",
+    "district": "후문",
+    "addressVerified": true,
+    "nearby": true,
+    "reason": "공개 네이버 지도에서 동일 주소의 전남대 후문 식당으로 확인"
+  },
+  "menuObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/1879261018/menu/list",
+    "checkedAt": "2026-11-12",
+    "priceContext": "delivery",
+    "status": "unconfirmed",
+    "menus": [
+      {
+        "name": "[ 단골's pick ] 마라탕(국물요리)(1인분)",
+        "price": 14000,
+        "main": true,
+        "priceText": "14,000원"
+      },
+      {
+        "name": "[ 단골's pick ] 마라탕(국물요리)(2인분)",
+        "price": 17000,
+        "main": false,
+        "priceText": "17,000원"
+      },
+      {
+        "name": "[ 단골's pick ] 마라탕(국물요리)(3인분)",
+        "price": 22000,
+        "main": false,
+        "priceText": "22,000원"
+      },
+      {
+        "name": "[ 단골's pick ] 마라탕(국물요리)(5~6인분)",
+        "price": 32000,
+        "main": false,
+        "priceText": "32,000원"
+      },
+      {
+        "name": "[ 중독적인 ] 마라샹궈(볶음요리)(2인분)",
+        "price": 20000,
+        "main": false,
+        "priceText": "20,000원"
+      },
+      {
+        "name": "[ 중독적인 ] 마라샹궈(볶음요리)(3인분)",
+        "price": 30000,
+        "main": false,
+        "priceText": "30,000원"
+      },
+      {
+        "name": "[ 중독적인 ] 마라샹궈(볶음요리)(5~6인분)",
+        "price": 50000,
+        "main": false,
+        "priceText": "50,000원"
+      },
+      {
+        "name": "[ 겉바속쫀 ] 꿔바로우(소스 따로 안돼요)(1~2인)",
+        "price": 10000,
+        "main": false,
+        "priceText": "10,000원"
+      },
+      {
+        "name": "[ 겉바속쫀 ] 꿔바로우(소스 따로 안돼요)(2~3인)",
+        "price": 16000,
+        "main": false,
+        "priceText": "16,000원"
+      },
+      {
+        "name": "1인세트(마라탕8000원+꿔바로우)",
+        "price": 17800,
+        "main": true,
+        "priceText": "17,800원"
+      },
+      {
+        "name": "땅콩소스",
+        "price": 500,
+        "main": false,
+        "priceText": "500원"
+      },
+      {
+        "name": "간장소스",
+        "price": 500,
+        "main": false,
+        "priceText": "500원"
+      },
+      {
+        "name": "공기밥",
+        "price": 1000,
+        "main": false,
+        "priceText": "1,000원"
+      },
+      {
+        "name": "라면사리",
+        "price": 2000,
+        "main": false,
+        "priceText": "2,000원"
+      },
+      {
+        "name": "콜라(캔)",
+        "price": 2000,
+        "main": false,
+        "priceText": "2,000원"
+      },
+      {
+        "name": "환타 파인맛(캔)",
+        "price": 2000,
+        "main": false,
+        "priceText": "2,000원"
+      },
+      {
+        "name": "빙홍차(중국식 레몬홍차)",
+        "price": 3000,
+        "main": false,
+        "priceText": "3,000원"
+      },
+      {
+        "name": "빙탕설리(중국식 갈아만든배음료)",
+        "price": 3000,
+        "main": false,
+        "priceText": "3,000원"
+      }
+    ],
+    "note": "배달 주문 게시 가격입니다. 매장 가격은 미확인으로 유지합니다."
+  },
+  "attrs": {
+    "status": "partial",
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금",
+          "토",
+          "일"
+        ],
+        "open": "10:40",
+        "close": "22:00"
+      }
+    ]
+  },
+  "hoursObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/1879261018/home",
+    "checkedAt": "2026-11-12",
+    "status": "confirmed",
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금",
+          "토",
+          "일"
+        ],
+        "open": "10:40",
+        "close": "22:00"
+      }
+    ],
+    "note": "매장 영업시간 관찰. 기존 attrs/research를 덮어쓰지 않습니다."
+  },
+  "research": {
+    "checkedAt": "2026-11-11",
+    "method": "web",
+    "identityStatus": "matched",
+    "queries": [
+      "이런이궈마라탕 전남대점 전남광주 북구 호동로 4-6 1층"
+    ],
+    "sources": [
+      {
+        "id": "naver-place",
+        "url": "https://pcmap.place.naver.com/restaurant/1879261018/home",
+        "title": "이런이궈마라탕 전남대점 네이버 지도",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "같은 주소의 지점 확인. 지도 등록 확인은 실시간 영업 중 보증이 아님"
+      },
+      {
+        "id": "naver-menu",
+        "url": "https://pcmap.place.naver.com/restaurant/1879261018/menu",
+        "title": "이런이궈마라탕 전남대점 메뉴 탭",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "가격 맥락: delivery"
+      },
+      {
+        "id": "naver-hours",
+        "url": "https://pcmap.place.naver.com/restaurant/1879261018/home",
+        "title": "이런이궈마라탕 전남대점 영업시간",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "게시된 요일별 영업시간. 미확인은 추정하지 않음"
+      }
+    ],
+    "facts": {
+      "menus": {
+        "status": "unconfirmed",
+        "sourceIds": [],
+        "note": "매장 기준 정보 미확인. 배달·가격 맥락 불명 자료는 확정하지 않습니다."
+      },
+      "hours": {
+        "status": "unconfirmed",
+        "sourceIds": [],
+        "note": "매장 기준 정보 미확인. 배달·가격 맥락 불명 자료는 확정하지 않습니다."
+      }
+    },
+    "unknownFields": [
+      "menus",
+      "hours",
+      "mealType",
+      "takeout",
+      "verifiedAt",
+      "verifiedBy",
+      "break",
+      "lastOrder"
+    ],
+    "notes": [
+      "네이버 공개 지도 상세·메뉴 탭 직접 확인.",
+      "음료·주류·후식·곁들임·다인분 공유 메뉴는 원문 메뉴 전체에 보존하되 1인 식사 가격 계산 main=false로 분류했다.",
+      "메뉴 탭에 배달 주문이 표시되어 배달 가격으로 저장한다. 매장 가격으로 확정하지 않는다.",
+      "병합 입력: rear_batch2_manifest.json",
+      "공개 네이버 화면 관찰이며 현장 검증이 아닙니다."
+    ]
+  },
+  "followupReview": {
+    "checkedAt": "2026-11-12",
+    "reasons": [
+      "매장 메뉴·가격: 배달 가격 또는 가격 구분이 불명확한 자료만 있어 매장 가격을 확인해야 합니다."
+    ],
+    "sources": [
+      "https://pcmap.place.naver.com/restaurant/1879261018/home",
+      "https://pcmap.place.naver.com/restaurant/1879261018/menu/list"
+    ]
+  }
+}

@@ -1,416 +1,377 @@
-"""상가(상권)정보 → 캠퍼스 주변 식당 후보 목록 + 현장 조사 양식 (정의서 CA1 D2 · CA1-R10 · 7절).
+"""가게 데이터 읽기 · 검증 · 가격대 계산.
 
-원천: 공공데이터포털 '소상공인시장진흥공단_상가(상권)정보' 시도별 CSV (광주광역시 파일).
-사람이 내려받은 파일을 읽기만 한다 — 이 스크립트는 네트워크에 접속하지 않는다.
-
-    python -m meal.places <상가정보.csv> [--campus directory/campus.json] [--out data] [--prev data/places.candidates.json]
-
-만드는 것 (--out 폴더)
-- places.candidates.json : 기준점 반경 안 음식점 → `Place` 후보(종류·식사 유형은 업종에서 추정, 조사 때 확인)
-- survey.csv             : 현장 조사 양식(가까운 순). 엑셀에서 바로 열린다(UTF-8 BOM)
-- closed.suspect.json    : --prev 를 주면, 지난 목록에 있었는데 이번에 사라진 곳 = 폐업 의심 (CA1-R10)
+가게 한 곳 = 파일 하나 (data/places/p_001.json, 개발용 샘플은 data/samples/s_01.json).
+형식은 data/schema/place.schema.json 이 기준이고, 스키마로 표현하기 어려운 규칙(시간 순서 등)은 여기서 검사한다.
 """
 
 from __future__ import annotations
 
-import argparse
-import csv
-import io
 import json
+import copy
 import math
-import sys
-from dataclasses import asdict, dataclass
+from dataclasses import dataclass, field
 from datetime import date
 from pathlib import Path
-from typing import Iterable, Iterator, Mapping, Sequence
+from statistics import median
 
-from .timing import MealType, distance_m
+from jsonschema import Draft202012Validator, FormatChecker
 
-AGENT_DIR = Path(__file__).resolve().parents[1]
-DEFAULT_CAMPUS = AGENT_DIR / "directory" / "campus.json"
+from .availability import availability_verified, candidate_active, fresh_store_menu_observation, fresh_store_observations, fresh_hours_observation
+from .settings import to_min
 
+ROOT = Path(__file__).resolve().parent.parent
+DATA_DIR = ROOT / "data"
+SCHEMA_PATH = DATA_DIR / "schema" / "place.schema.json"
+PLACES_DIR = DATA_DIR / "places"
+SAMPLES_DIR = DATA_DIR / "samples"
 
-# ---------------------------------------------------------------------------
-# 캠퍼스 기준점
-# ---------------------------------------------------------------------------
+# 광주 캠퍼스 대략 중심 ⏳ — 건물 마스터가 생기면 캠퍼스 경계 기준으로 바꾼다
+CAMPUS_CENTER = (35.1765, 126.9095)
+FAR_WARN_M = 1500
 
-@dataclass(frozen=True)
-class Anchor:
-    name: str
-    lat: float
-    lng: float
-
-
-_DIRECTIONS = ("동쪽", "북동쪽", "북쪽", "북서쪽", "서쪽", "남서쪽", "남쪽", "남동쪽")
-
-
-def _xy(lat: float, lng: float, lat0: float, lng0: float) -> tuple[float, float]:
-    """(lat0, lng0) 기준 평면 좌표(m). 캠퍼스 몇 km 범위에서는 오차가 1% 안쪽이다."""
-    return (lng - lng0) * 111_320 * math.cos(math.radians(lat0)), (lat - lat0) * 110_574
+# 가격대 상한(원) ⏳ — 기능 정의서 CA1 7절: A 7천 이하 · B 1만 이하 · C 1.5만 이하 · D 그 위
+PRICE_BANDS = (("A", 7000), ("B", 10000), ("C", 15000))
 
 
-def _seg_dist(p: tuple[float, float], a: tuple[float, float], b: tuple[float, float]) -> float:
-    (px, py), (ax, ay), (bx, by) = p, a, b
-    dx, dy = bx - ax, by - ay
-    t = 0.0 if dx == dy == 0 else max(0.0, min(1.0, ((px - ax) * dx + (py - ay) * dy) / (dx * dx + dy * dy)))
-    return math.hypot(px - ax - t * dx, py - ay - t * dy)
+@dataclass
+class Issue:
+    level: str  # "error" | "warn"
+    file: str
+    message: str
+
+    def __str__(self) -> str:
+        mark = "오류" if self.level == "error" else "경고"
+        return f"[{mark}] {self.file}: {self.message}"
 
 
-def _inside(p: tuple[float, float], poly: Sequence[tuple[float, float]]) -> bool:
-    x, y = p
-    hit = False
-    for (x1, y1), (x2, y2) in zip(poly, poly[1:] + poly[:1]):
-        if (y1 > y) != (y2 > y) and x < x1 + (y - y1) * (x2 - x1) / (y2 - y1):
-            hit = not hit
-    return hit
-
-
-@dataclass(frozen=True)
-class Campus:
-    """후보를 고르는 기준. `boundary`(캠퍼스 경계 다각형)가 있으면 **경계에서** 잰다(정의서 D1).
-
-    없으면 `anchors`(기준점) 중 가장 가까운 점에서 잰다.
-    구역 이름은 `gate_zone_m` 안에 있는 가장 가까운 문(anchors), 없으면 캠퍼스 중심에서 본 방향.
-    """
-
-    name: str
-    anchors: tuple[Anchor, ...]
-    radius_m: float
-    boundary: tuple[tuple[float, float], ...] = ()   # (lat, lng)
-    gate_zone_m: float = 400
-    center_point: tuple[float, float] | None = None   # 방향 이름 · --try 출발점. 없으면 경계 꼭짓점 평균
-
-    @classmethod
-    def load(cls, path: Path) -> "Campus":
-        raw = json.loads(Path(path).read_text(encoding="utf-8"))
-        anchors = tuple(Anchor(a["name"], float(a["lat"]), float(a["lng"])) for a in raw.get("anchors", []))
-        boundary = tuple((float(a), float(b)) for a, b in raw.get("boundary", []))
-        if not anchors and len(boundary) < 3:
-            raise ValueError("기준점(anchors) 또는 경계(boundary)가 있어야 한다")
-        center = tuple(map(float, raw["center"])) if raw.get("center") else None
-        return cls(raw["name"], anchors, float(raw["radiusM"]), boundary, float(raw.get("gateZoneM", 400)), center)
-
-    def nearest(self, lat: float, lng: float) -> tuple[Anchor, float]:
-        return min(((a, distance_m(a.lat, a.lng, lat, lng)) for a in self.anchors), key=lambda x: x[1])
+@dataclass
+class CheckResult:
+    places: list[dict] = field(default_factory=list)
+    issues: list[Issue] = field(default_factory=list)
 
     @property
-    def center(self) -> tuple[float, float]:
-        if self.center_point:
-            return self.center_point
-        if self.boundary:
-            pts = self.boundary
-            return sum(p[0] for p in pts) / len(pts), sum(p[1] for p in pts) / len(pts)
-        return self.anchors[0].lat, self.anchors[0].lng
-
-    def locate(self, lat: float, lng: float) -> tuple[str, float]:
-        """(구역 이름, 캠퍼스에서의 거리 m). 경계가 있으면 경계 안은 0."""
-        if not self.boundary:
-            a, d = self.nearest(lat, lng)
-            return a.name, d
-        c_lat, c_lng = self.center
-        poly = [_xy(a, b, c_lat, c_lng) for a, b in self.boundary]
-        if poly[0] == poly[-1]:
-            poly = poly[:-1]
-        p = _xy(lat, lng, c_lat, c_lng)
-        dist = 0.0 if _inside(p, poly) else min(_seg_dist(p, a, b) for a, b in zip(poly, poly[1:] + poly[:1]))
-        if dist == 0.0:
-            return "캠퍼스 안", 0.0
-        if self.anchors:
-            gate, gd = self.nearest(lat, lng)
-            if gd <= self.gate_zone_m:
-                return f"{gate.name} 쪽", dist
-        angle = math.degrees(math.atan2(p[1], p[0])) % 360
-        return f"캠퍼스 {_DIRECTIONS[int((angle + 22.5) // 45) % 8]}", dist
+    def errors(self) -> list[Issue]:
+        return [i for i in self.issues if i.level == "error"]
 
 
-# ---------------------------------------------------------------------------
-# CSV 읽기 — 연도마다 인코딩·열 이름이 조금씩 달라서 너그럽게 읽는다
-# ---------------------------------------------------------------------------
+# ── 계산 도우미 ─────────────────────────────────────────────
 
-# 우리 이름 → 원천에서 쓰였던 열 이름들(앞쪽 우선)
-COLUMNS: dict[str, tuple[str, ...]] = {
-    "id": ("상가업소번호",),
-    "name": ("상호명",),
-    "branch": ("지점명",),
-    "large": ("상권업종대분류명",),
-    "middle": ("상권업종중분류명",),
-    "small": ("상권업종소분류명",),
-    "road_addr": ("도로명주소",),
-    "jibun_addr": ("지번주소",),
-    "floor": ("층정보",),
-    "lng": ("경도",),
-    "lat": ("위도",),
-}
-REQUIRED = ("id", "name", "large", "lng", "lat")
-
-
-def read_text(path: Path) -> str:
-    data = Path(path).read_bytes()
-    for enc in ("utf-8-sig", "cp949"):
-        try:
-            return data.decode(enc)
-        except UnicodeDecodeError:
-            continue
-    raise ValueError(f"{path}: UTF-8 도 CP949 도 아니다")
+def recommendation_ready(place: dict) -> bool:
+    """메뉴·가격과 요일별 영업시간이 확인된 가게를 추천 대상으로 삼는다."""
+    attrs = place.get("attrs") or {}
+    if not candidate_active(place) or not effective_hours(place) or not meal_menus(place):
+        return False
+    if fresh_store_observations(place):
+        return True
+    research = place.get("research")
+    if research and research.get("identityStatus") == "closed":
+        return False
+    # 웹 추가 조사에서 값을 못 찾았어도 기존 사람 검수 결과를 무효화하지 않는다.
+    if attrs.get("status") != "partial" and attrs.get("verifiedAt") and attrs.get("verifiedBy"):
+        return True
+    if research:
+        return (research.get("identityStatus") == "matched" and all(
+            research.get("facts", {}).get(field, {}).get("status") == "confirmed"
+            for field in ("menus", "hours")
+        ))
+    return False
 
 
-def _resolve_columns(header: Sequence[str]) -> dict[str, str]:
-    cleaned = {h.strip(): h for h in header}
-    found: dict[str, str] = {}
-    for key, names in COLUMNS.items():
-        for n in names:
-            if n in cleaned:
-                found[key] = cleaned[n]
-                break
-    missing = [k for k in REQUIRED if k not in found]
-    if missing:
-        raise ValueError(f"상가정보 CSV 열을 찾지 못했다: {', '.join(COLUMNS[k][0] for k in missing)}")
-    return found
+def meal_type_for_timing(place: dict) -> str:
+    """미조사 식사유형은 저장하지 않고 계산에만 설정의 일반 식사 시간을 쓴다."""
+    return place.get("attrs", {}).get("mealType", "일반")
 
 
-def read_rows(text: str) -> Iterator[dict[str, str]]:
-    """CSV 텍스트 → 우리 열 이름으로 바꾼 행. 쉼표·파이프(|) 구분 둘 다 받는다."""
-    first = text.split("\n", 1)[0]
-    delim = "|" if first.count("|") > first.count(",") else ","
-    reader = csv.DictReader(io.StringIO(text), delimiter=delim)
-    cols = _resolve_columns(reader.fieldnames or [])
-    for row in reader:
-        yield {k: (row.get(src) or "").strip() for k, src in cols.items()}
+def rep_price(place: dict) -> int | None:
+    """현재 적용할 매장 대표 메뉴 가격의 중앙값. 원본 attrs는 수정하지 않는다."""
+    prices = [m["price"] for m in meal_menus(place)]
+    return int(median(prices)) if prices else None
 
 
-# ---------------------------------------------------------------------------
-# 업종 → 카테고리 사전 · 식사 유형 (정의서 7절 사전 · 5절 유형). 추정값이고 조사 때 고친다.
-# ---------------------------------------------------------------------------
+def effective_menus(place: dict) -> list[dict]:
+    """검증된 최신 매장 관찰을 우선하되 배달·미확인·0원 메뉴는 계산에서 뺀다.
 
-# 아예 후보에서 빼는 업종 (밥집이 아님 · 학식은 따로 다룸)
-EXCLUDE_KEYWORDS = ("주점", "호프", "맥주", "소주", "포차", "요리주점", "바(BAR)", "유흥", "나이트", "단란", "구내식당", "급식", "출장", "케이터링")
-
-# (키워드들, 카테고리, 식사 유형) — 위에서부터 먼저 맞는 것
-RULES: tuple[tuple[tuple[str, ...], str, MealType], ...] = (
-    (("카페", "커피", "제과", "제빵", "빵", "베이커리", "디저트", "아이스크림", "빙수", "도넛", "떡집", "떡 전문", "떡/한과", "차 전문", "주스"), "카페·베이커리", MealType.CAFE),
-    (("김밥", "분식", "떡볶이", "만두", "라면"), "분식", MealType.QUICK),
-    (("버거", "햄버거", "샌드위치", "토스트", "핫도그"), "패스트푸드", MealType.QUICK),
-    (("치킨", "닭강정", "피자"), "패스트푸드", MealType.REGULAR),
-    (("돈가스", "돈까스", "카레"), "일식", MealType.QUICK),          # 원천 '일식 카레/돈가스/덮밥' — 덮밥 규칙보다 먼저
-    (("마라", "훠궈"), "중식", MealType.REGULAR),                    # '마라탕' 이 '탕' 에 걸리기 전에
-    (("돼지고기", "소고기", "고기", "구이", "갈비", "삼겹", "곱창", "막창", "양꼬치", "오리", "족발", "보쌈"), "고기", MealType.GROUP),
-    (("횟집",), "한식", MealType.GROUP),
-    (("국밥", "해장", "국/탕", "찌개", "탕"), "국밥·찌개", MealType.REGULAR),
-    (("덮밥", "도시락", "백반", "국수"), "한식", MealType.QUICK),
-    (("쌀국수", "베트남", "태국", "인도", "동남아", "아시아", "아시안", "마라", "훠궈"), "아시안", MealType.REGULAR),
-    (("중식", "중국", "짜장", "짬뽕"), "중식", MealType.REGULAR),
-    (("일식", "초밥", "스시", "돈가스", "돈까스", "라멘", "우동", "회", "일본"), "일식", MealType.REGULAR),
-    (("양식", "서양식", "파스타", "스테이크", "레스토랑", "브런치", "멕시코", "기타 외국식"), "양식", MealType.REGULAR),
-    (("한식", "한정식"), "한식", MealType.REGULAR),
-)
-
-
-def classify(large: str, middle: str, small: str) -> tuple[str, MealType] | None:
-    """(카테고리, 식사 유형). 밥집이 아니면 None. 음식 업종인데 못 맞추면 ('미분류', 일반)."""
-    if "음식" not in large:
-        return None
-    text = f"{middle} {small}"
-    if any(k in text for k in EXCLUDE_KEYWORDS):
-        return None
-    # 소분류가 더 구체적이라 먼저 본다 (예: 중분류 '한식' · 소분류 '돼지고기 구이' → 고기)
-    for part in (small, middle):
-        for keywords, category, meal_type in RULES:
-            if any(k in part for k in keywords):
-                return category, meal_type
-    return "미분류", MealType.REGULAR
-
-
-# ---------------------------------------------------------------------------
-# 후보 만들기
-# ---------------------------------------------------------------------------
-
-@dataclass(frozen=True)
-class PlaceCandidate:
-    """정의서 7절 `Place` + 조사에 도움이 되는 값. 조사 전이라 추천에는 쓰지 않는다(CA1-R11)."""
-
-    id: str
-    name: str
-    category: str          # 추정 — 조사 때 확인
-    mealTypeGuess: str     # 추정 — 조사 때 확인
-    lat: float
-    lng: float
-    zone: str              # 구역: '서문 쪽' · '캠퍼스 북동쪽' · '캠퍼스 안' (경계가 없으면 가장 가까운 기준점)
-    distanceM: int         # 캠퍼스 경계에서 직선거리 (경계 안 0, 경계가 없으면 기준점에서)
-    address: str
-    floor: str
-    rawCategory: str       # 원천 업종(중분류 > 소분류)
-    source: str = "semas"
-    sourceId: str = ""
-
-
-def build_candidates(rows: Iterable[Mapping[str, str]], campus: Campus) -> list[PlaceCandidate]:
-    out: dict[str, PlaceCandidate] = {}
-    for r in rows:
-        cls = classify(r.get("large", ""), r.get("middle", ""), r.get("small", ""))
-        if cls is None:
-            continue
-        try:
-            lat, lng = float(r["lat"]), float(r["lng"])
-        except (KeyError, ValueError):
-            continue
-        zone, dist = campus.locate(lat, lng)
-        if dist > campus.radius_m:
-            continue
-        name = r["name"] + (f" {r['branch']}" if r.get("branch") else "")
-        category, meal_type = cls
-        pid = f"semas-{r['id']}"
-        out[pid] = PlaceCandidate(
-            id=pid,
-            name=name,
-            category=category,
-            mealTypeGuess=meal_type.value,
-            lat=round(lat, 6),
-            lng=round(lng, 6),
-            zone=zone,
-            distanceM=round(dist),
-            address=r.get("road_addr") or r.get("jibun_addr", ""),
-            floor=r.get("floor", ""),
-            rawCategory=" > ".join(x for x in (r.get("middle", ""), r.get("small", "")) if x),
-            sourceId=r["id"],
-        )
-    return sorted(out.values(), key=lambda p: (p.distanceM, p.name))
-
-
-def suspect_closed(prev: Sequence[Mapping], current: Sequence[PlaceCandidate]) -> list[dict]:
-    """지난 목록에 있었는데 이번 원천에서 사라진 곳 (CA1-R10 '폐업 의심')."""
-    now_ids = {p.id for p in current}
-    return [dict(p) for p in prev if p.get("id") not in now_ids]
-
-
-# ---------------------------------------------------------------------------
-# 현장 조사 양식 (정의서 D3 · 7절 PlaceAttr)
-# ---------------------------------------------------------------------------
-
-SURVEY_FIXED = ["id", "식당 이름", "주소", "층", "구역", "거리(m)", "원천 업종", "종류(추정)", "식사 유형(추정)"]
-SURVEY_FILL = [
-    "종류(확인)",            # 한식·중식·일식·양식·분식·고기·국밥·찌개·패스트푸드·아시안·카페·베이커리
-    "식사 유형(확인)",        # cafeteria·quick·regular·group·cafe
-    "가격대",                # PRICE_BANDS_NOTE
-    "혼밥(O/X)",
-    "좌석(S/M/L)",
-    "영업시간",              # 예: 월-금 11:00-21:00 / 토 11:00-15:00
-    "브레이크",              # 예: 15:00-17:00
-    "라스트오더",            # 예: 14:30 20:00 / 토 14:00 (구간마다 하나, 없으면 비움)
-    "휴무",                  # 예: 일
-    "대표 메뉴와 가격",       # 예: 참치김밥 4500 / 라볶이 6000
-    "영업 상태",             # 영업 / 폐업 / 못 찾음
-    "확인일",
-    "확인자",
-    "메모",
-]
-PRICE_BANDS_NOTE = "A ≤7천 · B 7천~1만 · C 1만~1.5만 · D >1.5만"
-MEAL_TYPE_KO = {
-    MealType.CAFETERIA.value: "학식",
-    MealType.QUICK.value: "분식·덮밥·패스트푸드",
-    MealType.REGULAR.value: "일반 식당",
-    MealType.GROUP.value: "고기·단체",
-    MealType.CAFE.value: "카페·베이커리",
-}
-
-
-def survey_targets(places: Sequence[PlaceCandidate], within_m: float | None, include_cafe: bool) -> list[PlaceCandidate]:
-    """조사할 곳만 — 가까운 곳부터 (정의서 목표 11주차 60곳 · 기말 100곳). 카페는 Q5 미결이라 기본 제외."""
-    return [
-        p for p in places
-        if (within_m is None or p.distanceM <= within_m) and (include_cafe or p.category != "카페·베이커리")
-    ]
-
-
-def _filled_rows(path: Path) -> dict[str, dict[str, str]]:
-    """이미 있는 조사 양식에서 한 칸이라도 채운 줄 (id → 줄)."""
-    if not path.exists():
-        return {}
-    rows = csv.DictReader(io.StringIO(read_text(path)))
-    return {
-        r["id"].strip(): r for r in rows
-        if (r.get("id") or "").strip() and any((r.get(k) or "").strip() for k in SURVEY_FILL)
-    }
-
-
-def write_survey(
-    path: Path,
-    places: Sequence[PlaceCandidate],
-    keep: Mapping[str, Mapping[str, str]] | None = None,
-    all_places: Sequence[PlaceCandidate] = (),
-) -> int:
-    """조사 양식을 쓴다. `keep`(이미 채운 줄)의 채운 칸은 그대로 옮기고, 이번 범위 밖이어도 지우지 않는다.
-
-    돌려주는 값: 옮겨 온 줄 수.
+    반환값은 독립된 사본이다. 관찰 원문과 과거 attrs는 상세 API에서 별도로 보존한다.
     """
-    keep = dict(keep or {})
-    by_id = {p.id: p for p in all_places}
-    order = list(places) + [by_id[i] for i in keep if i in by_id and i not in {p.id for p in places}]
-    kept = 0
-    with open(path, "w", encoding="utf-8-sig", newline="") as f:
-        w = csv.writer(f)
-        w.writerow(SURVEY_FIXED + SURVEY_FILL)
-        for p in order:
-            old = keep.pop(p.id, None)
-            kept += old is not None
-            w.writerow(
-                [p.id, p.name, p.address, p.floor, p.zone, p.distanceM, p.rawCategory, p.category, MEAL_TYPE_KO[p.mealTypeGuess]]
-                + [(old or {}).get(k, "") for k in SURVEY_FILL]
-            )
-        for old in keep.values():   # 이번 원천에서 사라진 곳(폐업 의심) — 채운 값을 잃지 않게 그대로 둔다
-            kept += 1
-            w.writerow([old.get(k, "") for k in SURVEY_FIXED + SURVEY_FILL])
-    return kept
+    current = fresh_store_menu_observation(place)
+    menus = (place["menuObservation"]["menus"] if current else place.get("attrs", {}).get("menus", []))
+    return [{"name": m["name"], "price": m["price"], "main": m.get("main") is True,
+             **({"orderWindow": copy.deepcopy(m["orderWindow"])} if m.get("orderWindow") else {})}
+            for m in menus if isinstance(m, dict) and type(m.get("price")) is int and m["price"] > 0
+            and (not current or m.get("priceContext", "in_store") == "in_store")]
 
 
-# ---------------------------------------------------------------------------
-# CLI
-# ---------------------------------------------------------------------------
-
-def main(argv: Sequence[str] | None = None) -> int:
-    ap = argparse.ArgumentParser(prog="python -m meal.places", description="상가(상권)정보 CSV → 캠퍼스 주변 식당 후보 + 조사 양식")
-    ap.add_argument("csv", type=Path, help="상가(상권)정보 시도별 CSV (광주광역시)")
-    ap.add_argument("--campus", type=Path, default=DEFAULT_CAMPUS, help="기준점·반경 JSON")
-    ap.add_argument("--out", type=Path, default=AGENT_DIR / "data", help="결과 폴더")
-    ap.add_argument("--prev", type=Path, help="지난번 places.candidates.json (폐업 의심 비교)")
-    ap.add_argument("--survey-within", type=float, default=50, help="조사 양식에 넣을 캠퍼스 경계에서의 최대 거리(m), 0 이면 전부 (기본 50)")
-    ap.add_argument("--survey-cafe", action="store_true", help="조사 양식에 카페·베이커리도 넣기")
-    args = ap.parse_args(argv)
-
-    campus = Campus.load(args.campus)
-    places = build_candidates(read_rows(read_text(args.csv)), campus)
-
-    args.out.mkdir(parents=True, exist_ok=True)
-    bundle = {
-        "source": "소상공인시장진흥공단 상가(상권)정보",
-        "sourceFile": args.csv.name,
-        "builtAt": date.today().isoformat(),
-        "campus": campus.name,
-        "radiusM": campus.radius_m,
-        "count": len(places),
-        "places": [asdict(p) for p in places],
-    }
-    (args.out / "places.candidates.json").write_text(json.dumps(bundle, ensure_ascii=False, indent=2), encoding="utf-8")
-    targets = survey_targets(places, args.survey_within or None, args.survey_cafe)
-    survey_path = args.out / "survey.csv"
-    kept = write_survey(survey_path, targets, _filled_rows(survey_path), places)
-
-    print(f"후보 {len(places)}곳 → {args.out / 'places.candidates.json'}")
-    scope = f"경계에서 {args.survey_within:.0f}m 안" if args.survey_within else "전체"
-    print(f"조사 양식 {len(targets)}곳({scope}{'' if args.survey_cafe else ' · 카페 제외'}) → {survey_path}")
-    if kept:
-        print(f"  이미 채운 {kept}곳은 채운 값을 그대로 옮겼다")
-    by_cat: dict[str, int] = {}
-    for p in places:
-        by_cat[p.category] = by_cat.get(p.category, 0) + 1
-    print("종류별: " + " · ".join(f"{k} {v}" for k, v in sorted(by_cat.items(), key=lambda x: -x[1])))
-
-    if args.prev:
-        prev = json.loads(args.prev.read_text(encoding="utf-8")).get("places", [])
-        gone = suspect_closed(prev, places)
-        (args.out / "closed.suspect.json").write_text(json.dumps(gone, ensure_ascii=False, indent=2), encoding="utf-8")
-        print(f"폐업 의심 {len(gone)}곳 → {args.out / 'closed.suspect.json'}")
-    return 0
+def meal_menus(place: dict) -> list[dict]:
+    """예산·대표 가격 계산에 쓸, 가격이 확인된 주 식사 메뉴만 돌려준다."""
+    return [m for m in effective_menus(place) if m["main"]]
 
 
-if __name__ == "__main__":
-    sys.exit(main())
+def effective_price_source(place: dict) -> dict:
+    if fresh_store_menu_observation(place):
+        observation = place["menuObservation"]
+        kind = "kakao_in_store" if observation["sourceUrl"].startswith("https://place.map.kakao.com/") else "naver_in_store"
+        if observation["sourceUrl"].startswith("https://blog.naver.com/"):
+            kind = "naver_blog_in_store"
+        return {"kind": kind, "priceContext": "in_store",
+                "sourceUrl": observation["sourceUrl"], "checkedAt": observation["checkedAt"]}
+    return {"kind": "attrs", "priceContext": "legacy", "sourceUrl": None,
+            "checkedAt": place.get("attrs", {}).get("verifiedAt")}
+
+
+def effective_hours(place: dict) -> list[dict]:
+    observation = place.get("hoursObservation", {})
+    hours = observation.get("hours", []) if fresh_hours_observation(place) else place.get("attrs", {}).get("hours", [])
+    return copy.deepcopy(hours)
+
+
+def effective_closed_dates(place: dict) -> list[str]:
+    if not fresh_hours_observation(place):
+        return []
+    return list(place["hoursObservation"].get("closedDates", []))
+
+
+def price_band(price: int | None) -> str | None:
+    if price is None:
+        return None
+    for band, upper in PRICE_BANDS:
+        if price <= upper:
+            return band
+    return "D"
+
+
+def price_label(price: int | None) -> str | None:
+    """이유 칩 문구: 7500 → '7천 원대', 14000 → '1만 원대'."""
+    if price is None:
+        return None
+    if price < 10000:
+        return f"{price // 1000}천 원대"
+    return f"{price // 10000}만 원대"
+
+
+def distance_m(lat1: float, lng1: float, lat2: float, lng2: float) -> float:
+    """두 좌표 사이 직선거리(m, haversine)."""
+    r = 6371000.0
+    p1, p2 = math.radians(lat1), math.radians(lat2)
+    dp, dl = p2 - p1, math.radians(lng2 - lng1)
+    a = math.sin(dp / 2) ** 2 + math.cos(p1) * math.cos(p2) * math.sin(dl / 2) ** 2
+    return 2 * r * math.asin(math.sqrt(a))
+
+
+# ── 검증 ────────────────────────────────────────────────────
+
+def _validator() -> Draft202012Validator:
+    schema = json.loads(SCHEMA_PATH.read_text(encoding="utf-8"))
+    return Draft202012Validator(schema, format_checker=FormatChecker())
+
+
+def _hours_errors(hours: list[dict]) -> list[str]:
+    out = []
+    by_day: dict[str, list[tuple[int, int]]] = {}
+    for idx, h in enumerate(hours, 1):
+        o, c = to_min(h["open"]), to_min(h["close"])
+        tag = f"hours[{idx}]"
+        if o >= c:
+            out.append(f"{tag} open {h['open']} 이 close {h['close']} 보다 늦습니다 (자정 넘김은 아직 지원하지 않음)")
+            continue
+        if "break" in h:
+            bs, be = to_min(h["break"]["start"]), to_min(h["break"]["end"])
+            if not (o < bs < be < c):
+                out.append(f"{tag} 브레이크 {h['break']['start']}~{h['break']['end']} 가 영업시간 안에 있지 않습니다")
+        if "lastOrder" in h:
+            lo = to_min(h["lastOrder"])
+            # 자정 라스트오더를 익일 00:00~마감 구간으로 나눈 관찰은 그대로 표현한다.
+            if not (o < lo <= c or o == lo == 0):
+                out.append(f"{tag} lastOrder {h['lastOrder']} 가 영업시간 안에 있지 않습니다")
+            elif "break" in h and lo <= to_min(h["break"]["end"]):
+                out.append(f"{tag} lastOrder {h['lastOrder']} 는 브레이크 종료 후여야 합니다. 점심·저녁 라스트오더는 hours 행을 나눠 기록하세요")
+        for day in h["days"]:
+            by_day.setdefault(day, []).append((o, c))
+    for day, spans in by_day.items():
+        spans.sort()
+        for (_, c1), (o2, _) in zip(spans, spans[1:]):
+            if o2 < c1:
+                out.append(f"{day}요일 영업 구간이 겹칩니다")
+    return out
+
+
+def _check_rules(place: dict, fname: str, is_sample_dir: bool, today: date) -> list[Issue]:
+    out: list[Issue] = []
+
+    def err(msg: str) -> None:
+        out.append(Issue("error", fname, msg))
+
+    def warn(msg: str) -> None:
+        out.append(Issue("warn", fname, msg))
+
+    pid = place["id"]
+    if Path(fname).name != f"{pid}.json":
+        err(f"파일 이름이 id 와 다릅니다 (id={pid})")
+
+    is_sample = place["source"] == "sample"
+    if pid.startswith("s_") != is_sample:
+        err("s_ 아이디와 source=sample 은 함께 써야 합니다")
+    if is_sample != is_sample_dir:
+        err("샘플은 data/samples/ 에만, 실제 가게는 data/places/ 에만 둡니다")
+    if place["source"] == "semas":
+        source_id = place.get("sourceId", "")
+        if not source_id.strip():
+            err("source=semas 이면 sourceId(상가업소번호)가 필요합니다")
+        elif source_id != source_id.strip():
+            err("sourceId(상가업소번호) 앞뒤 공백을 제거하세요")
+
+    # JSON 파서는 NaN을 읽으며 JSON Schema 범위 검사만으로는 걸러지지 않는다.
+    try:
+        finite = all(math.isfinite(place[key]) for key in ("lat", "lng"))
+    except (OverflowError, TypeError):
+        finite = False
+    if not finite:
+        err("lat/lng 좌표는 유한한 숫자여야 합니다")
+        return out
+
+    if place.get("sourceStatus", "active") == "missing":
+        warn("후보 목록에서 빠짐 → 재확인 전 추천에서 제외합니다(폐업 확정 아님)")
+
+    for field in ("availability", "menuObservation", "hoursObservation"):
+        observation = place.get(field)
+        if observation and date.fromisoformat(observation["checkedAt"]) > today:
+            err(f"{field}.checkedAt이 미래입니다")
+    if "availability" in place and not availability_verified(place):
+        warn("지도 재확인에서 제외·미확인 → 기본 식당 목록과 추천에서 제외합니다(폐업 판정과 구분)")
+    menu_observation = place.get("menuObservation", {})
+    if menu_observation.get("status") == "confirmed" and not any(
+        type(menu.get("price")) is int and menu["price"] > 0 for menu in menu_observation.get("menus", [])
+    ):
+        err("menuObservation 확인됨에는 가격이 확인된 매장 메뉴가 필요합니다")
+    for message in _hours_errors(place.get("hoursObservation", {}).get("hours", [])):
+        err("hoursObservation." + message)
+    for menu in menu_observation.get("menus", []):
+        window = menu.get("orderWindow")
+        if window and to_min(window["start"]) >= to_min(window["end"]):
+            err("menuObservation.orderWindow 시작은 종료보다 빨라야 합니다")
+
+    d = distance_m(place["lat"], place["lng"], *CAMPUS_CENTER)
+    if d > FAR_WARN_M:
+        warn(f"캠퍼스 중심에서 {d:.0f}m — 좌표를 확인하세요")
+
+    research = place.get("research")
+    if research:
+        source_ids = [s["id"] for s in research["sources"]]
+        if len(source_ids) != len(set(source_ids)):
+            err("research 출처 id가 중복되었습니다")
+        sources = {s["id"]: s for s in research["sources"]}
+        if date.fromisoformat(research["checkedAt"]) > today:
+            err("research.checkedAt이 미래입니다")
+        for key, evidence in research["facts"].items():
+            if not set(evidence["sourceIds"]).issubset(sources):
+                err(f"research.{key}에 없는 출처 id가 있습니다")
+            if evidence["status"] == "confirmed":
+                if not evidence.get("value") or not evidence["sourceIds"]:
+                    err(f"research.{key} 확인됨에는 값과 출처가 필요합니다")
+                if research["identityStatus"] != "matched" or not any(
+                    sources.get(sid, {}).get("addressMatch") for sid in evidence["sourceIds"]
+                ):
+                    err(f"research.{key} 확인됨에는 동일 주소 업소 확인이 필요합니다")
+                if key == "hours":
+                    for message in _hours_errors(evidence.get("value", [])):
+                        err(f"research.{message}")
+                elif key == "menus" and evidence.get("value"):
+                    menus = evidence["value"]
+                    if not any(m["main"] for m in menus) or len({m["name"] for m in menus}) != len(menus):
+                        err("research.menus 대표 메뉴가 없거나 이름이 중복됩니다")
+
+    attrs = place.get("attrs")
+    if not attrs:
+        warn("attrs 없음 → '정보 없음'으로만 보이고 추천하지 않습니다")
+        return out
+
+    # 영업시간: 순서 · 브레이크 · 라스트오더 · 같은 요일 구간 겹침
+    if attrs.get("status") == "partial":
+        if recommendation_ready(place):
+            warn("attrs 부분 조사 → 메뉴·가격·영업시간 확인으로 추천 가능, 나머지 정보는 미확인")
+        else:
+            warn("attrs 부분 조사 → 메뉴·가격·영업시간 확인 전 추천하지 않습니다")
+    for message in _hours_errors(attrs.get("hours", [])):
+        err(message)
+
+    # 메뉴
+    if "menus" in attrs and not any(m["main"] for m in attrs["menus"]):
+        err("대표 메뉴(main=true)가 하나도 없습니다 — 가격대를 계산할 수 없습니다")
+    names = [m["name"] for m in attrs.get("menus", [])]
+    for menu in attrs.get("menus", []):
+        window = menu.get("orderWindow")
+        if window and to_min(window["start"]) >= to_min(window["end"]):
+            err("attrs.menus.orderWindow 시작은 종료보다 빨라야 합니다")
+    if len(names) != len(set(names)):
+        err("같은 이름의 메뉴가 두 번 있습니다")
+
+    # 검증일
+    if "verifiedAt" not in attrs:
+        return out
+    verified = date.fromisoformat(attrs["verifiedAt"])
+    if verified > today:
+        err(f"verifiedAt {verified} 이 미래입니다")
+    elif (today - verified).days > 90:
+        warn(f"검증한 지 {(today - verified).days}일 — 다시 확인하세요")
+
+    return out
+
+
+def check_dirs(dirs: list[Path] | None = None, today: date | None = None) -> CheckResult:
+    """data/places · data/samples 의 모든 파일을 읽어 검사한다."""
+    dirs = dirs if dirs is not None else [PLACES_DIR, SAMPLES_DIR]
+    today = today or date.today()
+    validator = _validator()
+    result = CheckResult()
+    seen: dict[str, str] = {}
+    seen_source: dict[str, str] = {}
+    seen_naver: dict[str, str] = {}
+
+    for folder in dirs:
+        is_sample_dir = folder.name == "samples"
+        for path in sorted(folder.glob("*.json")):
+            fname = f"{folder.name}/{path.name}"
+            try:
+                place = json.loads(path.read_text(encoding="utf-8"))
+            except (json.JSONDecodeError, UnicodeDecodeError) as e:
+                result.issues.append(Issue("error", fname, f"JSON 을 읽을 수 없습니다: {e}"))
+                continue
+
+            schema_errors = sorted(validator.iter_errors(place), key=lambda e: list(e.path))
+            if schema_errors:
+                for e in schema_errors:
+                    where = "/".join(str(p) for p in e.path) or "(최상위)"
+                    result.issues.append(Issue("error", fname, f"형식 {where}: {e.message}"))
+                continue
+
+            if place["id"] in seen:
+                result.issues.append(Issue("error", fname, f"id {place['id']} 가 {seen[place['id']]} 와 겹칩니다"))
+                continue
+            seen[place["id"]] = fname
+
+            if place["source"] == "semas" and place.get("sourceId", "").strip():
+                source_id = place["sourceId"].strip()
+                if source_id in seen_source:
+                    result.issues.append(Issue("error", fname, f"sourceId {source_id} 가 {seen_source[source_id]} 와 겹칩니다"))
+                    continue
+                seen_source[source_id] = fname
+
+            if candidate_active(place) and place.get("availability"):
+                naver_id = place["availability"]["naverPlaceId"]
+                if naver_id in seen_naver:
+                    result.issues.append(Issue("error", fname, f"naverPlaceId {naver_id} 가 {seen_naver[naver_id]} 와 겹칩니다"))
+                    continue
+                seen_naver[naver_id] = fname
+
+            result.issues.extend(_check_rules(place, fname, is_sample_dir, today))
+            result.places.append(place)
+
+    return result
+
+
+def load_places(include_samples: bool = False) -> list[dict]:
+    """추천 계산에 쓸 가게 목록. 검증 오류가 있으면 예외를 던진다."""
+    dirs = [PLACES_DIR] + ([SAMPLES_DIR] if include_samples else [])
+    result = check_dirs(dirs)
+    if result.errors:
+        raise ValueError("가게 데이터 오류:\n" + "\n".join(map(str, result.errors)))
+    return result.places

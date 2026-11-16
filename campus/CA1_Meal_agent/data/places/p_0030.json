@@ -1,0 +1,94 @@
+{
+  "version": 1,
+  "id": "p_0030",
+  "name": "파파존스",
+  "category": "패스트푸드",
+  "lat": 35.175196,
+  "lng": 126.912979,
+  "address": "전남광주통합특별시 북구 우치로90번길 8-6",
+  "source": "semas",
+  "sourceId": "MA010120220807549427",
+  "sourceStatus": "active",
+  "attrs": {
+    "status": "partial"
+  },
+  "research": {
+    "identityStatus": "matched",
+    "queries": [
+      "\"파파존스\" \"우치로90번길\""
+    ],
+    "sources": [
+      {
+        "id": "s1",
+        "url": "https://www.diningcode.com/profile.php?rid=D25Vc6MlpLwR",
+        "title": "파파존스 전남대점 매장정보",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "상호·주소 일치"
+      }
+    ],
+    "facts": {
+      "menus": {
+        "status": "partial",
+        "value": [
+          {
+            "name": "수퍼파파스 오리지널 L",
+            "price": 28500,
+            "main": true
+          },
+          {
+            "name": "수퍼파파스 골드링 L",
+            "price": 32500,
+            "main": true
+          },
+          {
+            "name": "아이리쉬포테이토 골드링 L",
+            "price": 31500,
+            "main": true
+          }
+        ],
+        "sourceIds": [
+          "s1"
+        ],
+        "note": "주소가 일치하는 지점 페이지 메뉴표이나 열람 결과가 약 7개월 전 캐시로 표시되어 현행가격 확인 보류. 라지 피자 한 판 가격이며 1인 식사가격이 아님. 할인·배달 수수료 미반영."
+      },
+      "hours": {
+        "status": "partial",
+        "value": [],
+        "sourceIds": [
+          "s1"
+        ],
+        "note": "열람한 페이지는 매일 11:00~22:00를 게시하지만 약 7개월 전 캐시(4월 날짜)라 현재 영업시간 확인 보류."
+      }
+    },
+    "notes": [
+      "가격은 여러 사람이 나누어 먹는 피자 한 판 단위이므로 1인 식사가격과 구분 필요."
+    ],
+    "checkedAt": "2026-11-11",
+    "method": "web",
+    "unknownFields": [
+      "menus",
+      "hours",
+      "mealType",
+      "takeout",
+      "verifiedAt",
+      "verifiedBy",
+      "break",
+      "lastOrder"
+    ]
+  },
+  "availability": {
+    "status": "excluded",
+    "provider": "naver",
+    "checkedAt": "2026-11-11",
+    "sourceUrl": "https://map.naver.com/p/search/%EC%A0%84%EB%82%A8%EB%8C%80%20%EC%9D%8C%EC%8B%9D%EC%A0%90",
+    "naverPlaceId": null,
+    "observedName": "",
+    "observedAddress": "",
+    "district": null,
+    "addressVerified": false,
+    "nearby": false,
+    "reason": "네이버 지도에서 확인한 네 식당가 명단에 포함되지 않아 제외"
+  }
+}
