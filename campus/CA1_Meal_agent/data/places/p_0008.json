@@ -1,0 +1,87 @@
+{
+  "version": 1,
+  "id": "p_0008",
+  "name": "마라",
+  "category": "중식",
+  "lat": 35.177243,
+  "lng": 126.902416,
+  "address": "전남광주통합특별시 북구 설죽로202번길 90",
+  "source": "semas",
+  "sourceId": "MA010120220805020652",
+  "sourceStatus": "active",
+  "attrs": {
+    "status": "partial"
+  },
+  "research": {
+    "identityStatus": "uncertain",
+    "queries": [
+      "\"마라\" \"설죽로202번길 90\""
+    ],
+    "sources": [
+      {
+        "id": "s1",
+        "url": "https://dining.ayo.pe.kr/restaurant/d1db0031887def0b635f58afcca815b9",
+        "title": "마라 인허가 업소정보",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "상호·주소 일치"
+      },
+      {
+        "id": "s2",
+        "url": "https://www.diningcode.com/profile.php?rid=L07KLL5eInHE",
+        "title": "마라푸우 상대점",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "주소는 같으나 원본상호 마라와 마라푸우의 동일운영자/매장인지 추가 확인 필요"
+      }
+    ],
+    "facts": {
+      "menus": {
+        "status": "partial",
+        "value": [],
+        "sourceIds": [
+          "s2"
+        ],
+        "note": "같은 주소의 마라푸우에서 마라탕을 파나 상호 관계와 가격 미확인."
+      },
+      "hours": {
+        "status": "partial",
+        "value": [],
+        "sourceIds": [
+          "s2"
+        ],
+        "note": "같은 주소 마라푸우 후기상 매일10:00~22:50. 원본상호와의 관계 및 현시점 일정 미확인."
+      }
+    },
+    "notes": [
+      "상호 변경/동일 매장 여부 현장 확인 필요."
+    ],
+    "checkedAt": "2026-11-11",
+    "method": "web",
+    "unknownFields": [
+      "menus",
+      "hours",
+      "mealType",
+      "takeout",
+      "verifiedAt",
+      "verifiedBy",
+      "break",
+      "lastOrder"
+    ]
+  },
+  "availability": {
+    "status": "excluded",
+    "provider": "naver",
+    "checkedAt": "2026-11-11",
+    "sourceUrl": "https://map.naver.com/p/search/%EC%A0%84%EB%82%A8%EB%8C%80%20%EC%9D%8C%EC%8B%9D%EC%A0%90",
+    "naverPlaceId": null,
+    "observedName": "",
+    "observedAddress": "",
+    "district": null,
+    "addressVerified": false,
+    "nearby": false,
+    "reason": "네이버 지도에서 확인한 네 식당가 명단에 포함되지 않아 제외"
+  }
+}

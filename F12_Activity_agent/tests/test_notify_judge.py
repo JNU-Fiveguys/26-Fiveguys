@@ -84,8 +84,8 @@ def test_llm_judges_only_unhit_open_items(profile):
         add_notice(con, "www:1", "[공모전] 2026 AI 경진대회", OPEN)              # 키워드로 이미 맞음 — 묻지 않는다
         add_notice(con, "www:2", "[대학생활] 합창단 단원 모집", OPEN)
         add_notice(con, "www:3", "[대학생활] 지난 모집", OPEN.replace("10. 30.(금)", "10. 1.(목)"))   # 마감 — 묻지 않는다
-        n = judge.run_batch(con, profile, fake)
-        it = {i["id"]: i for i in service.evaluate(con, profile)}
+        n = judge.run_batch(con, profile, fake, today=NOW.date())
+        it = {i["id"]: i for i in service.evaluate(con, profile, today=NOW.date())}
     assert n == 1 and len(asked) == 1 and "합창단" in asked[0] and "반도체" in asked[0]
     assert "인공지능학부" not in asked[0]                                          # 관심사와 공지만 보낸다
     assert it["www:2"]["grade"] == "match" and it["www:2"]["by"] == "llm" and it["www:2"]["chips"] == ["LLM 판단"]

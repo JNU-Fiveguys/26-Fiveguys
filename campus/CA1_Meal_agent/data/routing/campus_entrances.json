@@ -1,0 +1,76 @@
+{
+  "version": 1,
+  "entrances": [
+    {
+      "id": "front_boundary",
+      "district": "정문",
+      "name": "정문 진입로 경계 교차점",
+      "verification": {
+        "status": "confirmed",
+        "checkedAt": "2026-11-11",
+        "sourceUrl": "https://mba.jnu.ac.kr/mba_eng/20496/subview.do",
+        "note": "전남대학교 공식 광주캠퍼스 지도 이미지 https://mba.jnu.ac.kr/sites/mba_eng/images/sub/map-img.jpg 를 직접 확인. E01 정문이 종합운동장(E02) 서남쪽, 남쪽 외부 도로와 캠퍼스 중앙 진입도로가 만나는 위치에 표시됨. OSM 정문 이름 node5326431271 북쪽 진입로 way256927670과 학교경계의 교차점이 같은 도로 연결에 해당함. 좌표는 공식 그림에서 추정하지 않고 해당 OSM 교차점으로 계산. 현장 개방 여부 검증은 아님."
+      },
+      "osm": {
+        "boundaryWayId": 105125653, "walkWayId": 256927670,
+        "walkNodeIds": [6572567847, 1211682895],
+        "boundaryNodeIds": [1211658079, 10562969370]
+      }
+    },
+    {
+      "id": "rear_boundary",
+      "district": "후문",
+      "name": "후문·동문 진입로 경계 교차점",
+      "verification": {
+        "status": "confirmed",
+        "checkedAt": "2026-11-11",
+        "sourceUrl": "https://mba.jnu.ac.kr/mba_eng/20496/subview.do",
+        "note": "전남대학교 공식 광주캠퍼스 지도 이미지 https://mba.jnu.ac.kr/sites/mba_eng/images/sub/map-img.jpg 를 직접 확인. E06 동문이 용지(E05)와 체육관(D06) 사이 동쪽 외부도로 연결에 표시되며 OSM way105132483과 학교경계의 교차점과 주변 지형·도로 연결이 일치. 학교의 2026-10-07 공지 https://today.jnu.ac.kr/WebApp/web/HOM/COM/Board/board.aspx?bbsMode=view&boardID=342&key=1011 에서 동문(후문) 명칭을 함께 사용함. 좌표는 OSM 교차점으로 계산하며 현장 개방 여부 검증은 아님."
+      },
+      "osm": {
+        "boundaryWayId": 105125653, "walkWayId": 105132483,
+        "walkNodeIds": [10562969625, 6572567852],
+        "boundaryNodeIds": [10564450296, 10542777524]
+      }
+    },
+    {
+      "id": "sangdae_boundary",
+      "district": "상대",
+      "name": "상대 방향 경계 보행로",
+      "verification": {"status": "pending", "checkedAt": "2026-11-11", "sourceUrl": "https://mba.jnu.ac.kr/mba_eng/20496/subview.do", "note": "경영대 북쪽 설죽로214번길 인접 보행로. 공식 캠퍼스 그림에는 이 쪽문의 이름·경계 통과 지점이 구체적으로 표시되지 않아 확정하지 않음. 네이버지도 등에서 인문대 쪽문과 보행 접근 연결 대조 필요"},
+      "osm": {"boundaryWayId": 105125653, "walkWayId": 1125136650, "nodeId": 10289073132}
+    },
+    {
+      "id": "sangdae_west_boundary",
+      "district": "상대",
+      "name": "상대 서쪽 경계 보행로",
+      "verification": {
+        "status": "confirmed",
+        "checkedAt": "2026-11-11",
+        "sourceUrl": "https://map.naver.com/p/search/%EC%B9%B4%ED%8E%98%EC%95%84%ED%94%84%EB%A6%AC%EC%B9%B4%20%EC%A0%84%EB%82%A8%EB%8C%80/place/1378393842",
+        "note": "root 에이전트가 별도 CUA 네이버지도에서 카페아프리카(1378393842), 설죽로202번길94의 공개 상세 설명 '전남대학교 상대골목 진리관 건물 바로 옆'을 확인. 일반지도에서 카페 남쪽 학교경계와 경영대1호관·농업생명과학대3호관 방향 교내 보행로의 연결을 시각 확인하고 OSM 경계 보행교차 후보와 지형·건물 관계를 대조함. 좌표는 네이버 그림에서 추정하지 않고 OSM way470934154와 학교경계 way105125653의 실제 교차점으로 산출. 상대 식당가 방향의 지도상 보행 연결을 확인한 것이며 공식 쪽문 명칭이나 현장·실시간 개방 여부를 보증하지 않음."
+      },
+      "osm": {
+        "boundaryWayId": 105125653, "walkWayId": 470934154,
+        "walkNodeIds": [4650961685, 4650961686],
+        "boundaryNodeIds": [1211658014, 1211658143]
+      }
+    },
+    {
+      "id": "art_boundary",
+      "district": "예대",
+      "name": "예대 방향 경계 보행로",
+      "verification": {
+        "status": "confirmed",
+        "checkedAt": "2026-11-11",
+        "sourceUrl": "https://map.naver.com/p/search/%EC%9A%A9%EB%B4%89%EA%B3%A8%20%EC%A0%84%EB%82%A8%EB%8C%80",
+        "note": "root 에이전트가 별도 CUA 네이버지도에서 용봉골(37500825)·골목집(1002803145) 주변 위성지도를 확대해 예술대 합주관 북쪽, 골목집 남동쪽·용봉골 동북쪽의 골목과 교내 통로 연결을 시각 확인하고 OSM 경계 보행교차 후보와 지형·건물 관계를 대조함. 좌표는 위성사진에서 추정하지 않고 OSM way290470536과 학교경계 way105125653의 실제 교차점으로 산출. 예대 식당가 방향의 지도상 보행 연결을 확인한 것이며 공식 쪽문 명칭이나 현장·실시간 개방 여부를 보증하지 않음."
+      },
+      "osm": {
+        "boundaryWayId": 105125653, "walkWayId": 290470536,
+        "walkNodeIds": [2939992965, 2939992966],
+        "boundaryNodeIds": [10291957760, 1211658126]
+      }
+    }
+  ]
+}

@@ -1,0 +1,363 @@
+{
+  "version": 1,
+  "id": "p_0144",
+  "source": "team",
+  "sourceId": "naver:1778734539",
+  "name": "페퍼콘",
+  "address": "전남광주 북구 호동로 43 1F",
+  "category": "양식",
+  "lat": 35.1757666371596,
+  "lng": 126.916634230184,
+  "sourceStatus": "active",
+  "availability": {
+    "status": "listed",
+    "provider": "naver",
+    "checkedAt": "2026-11-11",
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/1778734539/home",
+    "naverPlaceId": "1778734539",
+    "observedName": "페퍼콘",
+    "observedAddress": "전남광주 북구 호동로 43 1F",
+    "district": "후문",
+    "addressVerified": true,
+    "nearby": true,
+    "reason": "공개 네이버 지도에서 동일 주소의 전남대 후문 식당으로 확인"
+  },
+  "menuObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/1778734539/menu",
+    "checkedAt": "2026-11-11",
+    "priceContext": "in_store",
+    "menus": [
+      {
+        "name": "쉬림프 로제 리조또",
+        "price": 16000,
+        "main": true
+      },
+      {
+        "name": "머쉬룸 크림 파스타",
+        "price": 16000,
+        "main": true
+      },
+      {
+        "name": "라자냐",
+        "price": 16000,
+        "main": true
+      },
+      {
+        "name": "클래식 까르보나라",
+        "price": 14000,
+        "main": true
+      },
+      {
+        "name": "바질 크림 파스타",
+        "price": 16000,
+        "main": true
+      },
+      {
+        "name": "머쉬룸 스프",
+        "price": 7000,
+        "main": false
+      },
+      {
+        "name": "브레드 샐러드",
+        "price": 12000,
+        "main": true
+      },
+      {
+        "name": "잠봉 샐러드",
+        "price": 10000,
+        "main": true
+      },
+      {
+        "name": "부라타 샐러드",
+        "price": 12000,
+        "main": true
+      },
+      {
+        "name": "미트로프",
+        "price": 19000,
+        "main": true
+      },
+      {
+        "name": "엔초비 파스타",
+        "price": 16000,
+        "main": true
+      },
+      {
+        "name": "프리타타",
+        "price": 14000,
+        "main": true
+      },
+      {
+        "name": "잠봉뵈르",
+        "price": 10000,
+        "main": true
+      }
+    ],
+    "note": "메뉴 상태: confirmed. 원본 관찰·좌표 출처는 적용 manifest에 보관합니다.",
+    "status": "confirmed"
+  },
+  "attrs": {
+    "status": "partial",
+    "menus": [
+      {
+        "name": "쉬림프 로제 리조또",
+        "price": 16000,
+        "main": true
+      },
+      {
+        "name": "머쉬룸 크림 파스타",
+        "price": 16000,
+        "main": true
+      },
+      {
+        "name": "라자냐",
+        "price": 16000,
+        "main": true
+      },
+      {
+        "name": "클래식 까르보나라",
+        "price": 14000,
+        "main": true
+      },
+      {
+        "name": "바질 크림 파스타",
+        "price": 16000,
+        "main": true
+      },
+      {
+        "name": "머쉬룸 스프",
+        "price": 7000,
+        "main": false
+      },
+      {
+        "name": "브레드 샐러드",
+        "price": 12000,
+        "main": true
+      },
+      {
+        "name": "잠봉 샐러드",
+        "price": 10000,
+        "main": true
+      },
+      {
+        "name": "부라타 샐러드",
+        "price": 12000,
+        "main": true
+      },
+      {
+        "name": "미트로프",
+        "price": 19000,
+        "main": true
+      },
+      {
+        "name": "엔초비 파스타",
+        "price": 16000,
+        "main": true
+      },
+      {
+        "name": "프리타타",
+        "price": 14000,
+        "main": true
+      },
+      {
+        "name": "잠봉뵈르",
+        "price": 10000,
+        "main": true
+      }
+    ],
+    "hours": [
+      {
+        "days": [
+          "화",
+          "수",
+          "목",
+          "금",
+          "토",
+          "일"
+        ],
+        "open": "11:00",
+        "close": "22:00",
+        "break": {
+          "start": "15:00",
+          "end": "17:00"
+        }
+      }
+    ]
+  },
+  "hoursObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/1778734539/home",
+    "checkedAt": "2026-11-11",
+    "status": "confirmed",
+    "hours": [
+      {
+        "days": [
+          "화",
+          "수",
+          "목",
+          "금",
+          "토",
+          "일"
+        ],
+        "open": "11:00",
+        "close": "22:00",
+        "break": {
+          "start": "15:00",
+          "end": "17:00"
+        }
+      }
+    ],
+    "note": "매장 영업시간 관찰. 기존 attrs/research를 덮어쓰지 않습니다."
+  },
+  "research": {
+    "checkedAt": "2026-11-11",
+    "method": "web",
+    "identityStatus": "matched",
+    "queries": [
+      "페퍼콘 전남광주 북구 호동로 43 1F"
+    ],
+    "sources": [
+      {
+        "id": "naver-place",
+        "url": "https://pcmap.place.naver.com/restaurant/1778734539/home",
+        "title": "페퍼콘 네이버 지도",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "같은 주소의 지점 확인. 지도 등록 확인은 실시간 영업 중 보증이 아님"
+      },
+      {
+        "id": "naver-menu",
+        "url": "https://pcmap.place.naver.com/restaurant/1778734539/menu",
+        "title": "페퍼콘 메뉴 탭",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "가격 맥락: in_store"
+      },
+      {
+        "id": "naver-hours",
+        "url": "https://pcmap.place.naver.com/restaurant/1778734539/home",
+        "title": "페퍼콘 영업시간",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "게시된 요일별 영업시간. 미확인은 추정하지 않음"
+      }
+    ],
+    "facts": {
+      "menus": {
+        "status": "confirmed",
+        "sourceIds": [
+          "naver-menu"
+        ],
+        "note": "매장 게시값을 확인했습니다.",
+        "value": [
+          {
+            "name": "쉬림프 로제 리조또",
+            "price": 16000,
+            "main": true
+          },
+          {
+            "name": "머쉬룸 크림 파스타",
+            "price": 16000,
+            "main": true
+          },
+          {
+            "name": "라자냐",
+            "price": 16000,
+            "main": true
+          },
+          {
+            "name": "클래식 까르보나라",
+            "price": 14000,
+            "main": true
+          },
+          {
+            "name": "바질 크림 파스타",
+            "price": 16000,
+            "main": true
+          },
+          {
+            "name": "머쉬룸 스프",
+            "price": 7000,
+            "main": false
+          },
+          {
+            "name": "브레드 샐러드",
+            "price": 12000,
+            "main": true
+          },
+          {
+            "name": "잠봉 샐러드",
+            "price": 10000,
+            "main": true
+          },
+          {
+            "name": "부라타 샐러드",
+            "price": 12000,
+            "main": true
+          },
+          {
+            "name": "미트로프",
+            "price": 19000,
+            "main": true
+          },
+          {
+            "name": "엔초비 파스타",
+            "price": 16000,
+            "main": true
+          },
+          {
+            "name": "프리타타",
+            "price": 14000,
+            "main": true
+          },
+          {
+            "name": "잠봉뵈르",
+            "price": 10000,
+            "main": true
+          }
+        ]
+      },
+      "hours": {
+        "status": "confirmed",
+        "sourceIds": [
+          "naver-hours"
+        ],
+        "note": "매장 게시값을 확인했습니다.",
+        "value": [
+          {
+            "days": [
+              "화",
+              "수",
+              "목",
+              "금",
+              "토",
+              "일"
+            ],
+            "open": "11:00",
+            "close": "22:00",
+            "break": {
+              "start": "15:00",
+              "end": "17:00"
+            }
+          }
+        ]
+      }
+    },
+    "unknownFields": [
+      "mealType",
+      "takeout",
+      "verifiedAt",
+      "verifiedBy",
+      "lastOrder"
+    ],
+    "notes": [
+      "네이버 공개 지도 상세·메뉴 탭 직접 확인.",
+      "음료·주류·후식·곁들임·다인분 공유 메뉴는 원문 메뉴 전체에 보존하되 1인 식사 가격 계산 main=false로 분류했다.",
+      "공공 원본 업종은 카페로 기록되어 있으나 최신 네이버 관찰 업종은 양식이며 파스타·리조또 등 식사 메뉴를 확인했다. 좌표 용도로만 공공 자료를 사용했다.",
+      "병합 입력: rear_batch2_manifest.json",
+      "공개 네이버 화면 관찰이며 현장 검증이 아닙니다."
+    ]
+  }
+}

@@ -1,0 +1,473 @@
+{
+  "metadata": {
+    "attribution": "© OpenStreetMap contributors",
+    "license": "ODbL-1.0",
+    "licenseUrl": "https://www.openstreetmap.org/copyright",
+    "osmTimestamp": "2026-11-11T08:57:13Z",
+    "sourceFile": "data/routing/osm_buildings.json",
+    "supplementalSourceFiles": ["data/routing/osm_engineering2.json"],
+    "notes": [
+      "건물 좌표는 OSM에 표시된 출입구 또는 건물 중심점이며 현장 검증 전이다.",
+      "code는 앱 내부 선택 코드다. 이름이 확인되지 않은 건물을 비슷한 이름에 자동 연결하지 않는다.",
+      "공2 본관은 OSM relation 15057693, 공2별관은 way 1125471453으로 서로 구분한다."
+    ]
+  },
+  "buildings": [
+    {
+      "code": "공2",
+      "name": "공과대 2호관",
+      "aliases": [
+        "공과대학 2호관",
+        "공대2호관"
+      ],
+      "campus": "광주",
+      "lat": 35.1792471,
+      "lng": 126.9088783,
+      "coordinateType": "building_centroid",
+      "source": {
+        "provider": "OpenStreetMap",
+        "osmType": "relation",
+        "osmId": 15057693,
+        "url": "https://www.openstreetmap.org/relation/15057693"
+      }
+    },
+    {
+      "code": "공4",
+      "name": "공과대 4호관",
+      "aliases": [
+        "공과대학 4호관",
+        "공대4호관"
+      ],
+      "campus": "광주",
+      "lat": 35.1786251,
+      "lng": 126.9090907,
+      "coordinateType": "building_centroid",
+      "source": {
+        "provider": "OpenStreetMap",
+        "osmType": "way",
+        "osmId": 1131138757,
+        "url": "https://www.openstreetmap.org/way/1131138757"
+      }
+    },
+    {
+      "code": "공6",
+      "name": "공과대 6호관",
+      "aliases": [
+        "공과대학 6호관",
+        "공대6호관"
+      ],
+      "campus": "광주",
+      "lat": 35.1797736,
+      "lng": 126.9087088,
+      "coordinateType": "building_centroid",
+      "source": {
+        "provider": "OpenStreetMap",
+        "osmType": "way",
+        "osmId": 667143410,
+        "url": "https://www.openstreetmap.org/way/667143410"
+      }
+    },
+    {
+      "code": "공7",
+      "name": "공과대 7호관",
+      "aliases": [
+        "공과대학 7호관",
+        "공대7호관"
+      ],
+      "campus": "광주",
+      "lat": 35.178227,
+      "lng": 126.9091507,
+      "coordinateType": "building_centroid",
+      "source": {
+        "provider": "OpenStreetMap",
+        "osmType": "way",
+        "osmId": 1131138758,
+        "url": "https://www.openstreetmap.org/way/1131138758"
+      }
+    },
+    {
+      "code": "공2별관",
+      "name": "공과대 2호관 별관",
+      "aliases": [
+        "공과대학 2호관 별관"
+      ],
+      "campus": "광주",
+      "lat": 35.178837,
+      "lng": 126.9083999,
+      "coordinateType": "building_centroid",
+      "source": {
+        "provider": "OpenStreetMap",
+        "osmType": "way",
+        "osmId": 1125471453,
+        "url": "https://www.openstreetmap.org/way/1125471453"
+      }
+    },
+    {
+      "code": "자동차공학관",
+      "name": "공과대 자동차공학관",
+      "aliases": [],
+      "campus": "광주",
+      "lat": 35.1795615,
+      "lng": 126.9101297,
+      "coordinateType": "mapped_entrance",
+      "source": {
+        "provider": "OpenStreetMap",
+        "osmType": "way",
+        "osmId": 1126709187,
+        "url": "https://www.openstreetmap.org/way/1126709187"
+      }
+    },
+    {
+      "code": "경영1",
+      "name": "경영대 1호관",
+      "aliases": [
+        "경영대학 1호관"
+      ],
+      "campus": "광주",
+      "lat": 35.1768165,
+      "lng": 126.9040362,
+      "coordinateType": "building_centroid",
+      "source": {
+        "provider": "OpenStreetMap",
+        "osmType": "way",
+        "osmId": 1125131715,
+        "url": "https://www.openstreetmap.org/way/1125131715"
+      }
+    },
+    {
+      "code": "경영2",
+      "name": "경영대 2호관",
+      "aliases": [
+        "경영대학 2호관"
+      ],
+      "campus": "광주",
+      "lat": 35.1765877,
+      "lng": 126.9036149,
+      "coordinateType": "building_centroid",
+      "source": {
+        "provider": "OpenStreetMap",
+        "osmType": "way",
+        "osmId": 1125131708,
+        "url": "https://www.openstreetmap.org/way/1125131708"
+      }
+    },
+    {
+      "code": "인문1",
+      "name": "인문대 1호관",
+      "aliases": [
+        "인문대학 1호관"
+      ],
+      "campus": "광주",
+      "lat": 35.1774069,
+      "lng": 126.9046434,
+      "coordinateType": "building_centroid",
+      "source": {
+        "provider": "OpenStreetMap",
+        "osmType": "way",
+        "osmId": 271056106,
+        "url": "https://www.openstreetmap.org/way/271056106"
+      }
+    },
+    {
+      "code": "인문2",
+      "name": "인문대 2호관",
+      "aliases": [
+        "인문대학 2호관"
+      ],
+      "campus": "광주",
+      "lat": 35.1780143,
+      "lng": 126.905145,
+      "coordinateType": "building_centroid",
+      "source": {
+        "provider": "OpenStreetMap",
+        "osmType": "way",
+        "osmId": 1125136653,
+        "url": "https://www.openstreetmap.org/way/1125136653"
+      }
+    },
+    {
+      "code": "인문3",
+      "name": "인문대 3호관",
+      "aliases": [
+        "인문대학 3호관"
+      ],
+      "campus": "광주",
+      "lat": 35.176848,
+      "lng": 126.9049062,
+      "coordinateType": "building_centroid",
+      "source": {
+        "provider": "OpenStreetMap",
+        "osmType": "way",
+        "osmId": 271056107,
+        "url": "https://www.openstreetmap.org/way/271056107"
+      }
+    },
+    {
+      "code": "자연1",
+      "name": "자연과학대학 1호관",
+      "aliases": [
+        "자연대 1호관"
+      ],
+      "campus": "광주",
+      "lat": 35.1775305,
+      "lng": 126.9098041,
+      "coordinateType": "mapped_entrance",
+      "source": {
+        "provider": "OpenStreetMap",
+        "osmType": "way",
+        "osmId": 1131867320,
+        "url": "https://www.openstreetmap.org/way/1131867320"
+      }
+    },
+    {
+      "code": "자연2",
+      "name": "자연과학대학 2호관",
+      "aliases": [
+        "자연대 2호관"
+      ],
+      "campus": "광주",
+      "lat": 35.1768543,
+      "lng": 126.9101652,
+      "coordinateType": "building_centroid",
+      "source": {
+        "provider": "OpenStreetMap",
+        "osmType": "way",
+        "osmId": 1131867349,
+        "url": "https://www.openstreetmap.org/way/1131867349"
+      }
+    },
+    {
+      "code": "자연3",
+      "name": "자연과학대학 3호관",
+      "aliases": [
+        "자연대 3호관"
+      ],
+      "campus": "광주",
+      "lat": 35.176612,
+      "lng": 126.9104098,
+      "coordinateType": "mapped_entrance",
+      "source": {
+        "provider": "OpenStreetMap",
+        "osmType": "way",
+        "osmId": 277767350,
+        "url": "https://www.openstreetmap.org/way/277767350"
+      }
+    },
+    {
+      "code": "자연4",
+      "name": "자연과학대학 4호관",
+      "aliases": [
+        "자연대 4호관"
+      ],
+      "campus": "광주",
+      "lat": 35.1761219,
+      "lng": 126.9095954,
+      "coordinateType": "mapped_entrance",
+      "source": {
+        "provider": "OpenStreetMap",
+        "osmType": "way",
+        "osmId": 277767349,
+        "url": "https://www.openstreetmap.org/way/277767349"
+      }
+    },
+    {
+      "code": "자연5",
+      "name": "자연과학대학 5호관",
+      "aliases": [
+        "자연대 5호관"
+      ],
+      "campus": "광주",
+      "lat": 35.1758977,
+      "lng": 126.9110055,
+      "coordinateType": "building_centroid",
+      "source": {
+        "provider": "OpenStreetMap",
+        "osmType": "way",
+        "osmId": 1132925644,
+        "url": "https://www.openstreetmap.org/way/1132925644"
+      }
+    },
+    {
+      "code": "사범1",
+      "name": "사범대 1호관",
+      "aliases": [
+        "사범대학 1호관"
+      ],
+      "campus": "광주",
+      "lat": 35.1778654,
+      "lng": 126.9058339,
+      "coordinateType": "building_centroid",
+      "source": {
+        "provider": "OpenStreetMap",
+        "osmType": "way",
+        "osmId": 1125136664,
+        "url": "https://www.openstreetmap.org/way/1125136664"
+      }
+    },
+    {
+      "code": "과학교육관",
+      "name": "사범대 과학교육관",
+      "aliases": [],
+      "campus": "광주",
+      "lat": 35.1778223,
+      "lng": 126.9096219,
+      "coordinateType": "building_centroid",
+      "source": {
+        "provider": "OpenStreetMap",
+        "osmType": "way",
+        "osmId": 277767969,
+        "url": "https://www.openstreetmap.org/way/277767969"
+      }
+    },
+    {
+      "code": "체육교육관",
+      "name": "사범대 체육교육관",
+      "aliases": [],
+      "campus": "광주",
+      "lat": 35.1746157,
+      "lng": 126.9116874,
+      "coordinateType": "building_centroid",
+      "source": {
+        "provider": "OpenStreetMap",
+        "osmType": "way",
+        "osmId": 1132920008,
+        "url": "https://www.openstreetmap.org/way/1132920008"
+      }
+    },
+    {
+      "code": "사회과학대학",
+      "name": "사회과학대학",
+      "aliases": [],
+      "campus": "광주",
+      "lat": 35.1751157,
+      "lng": 126.9040021,
+      "coordinateType": "building_centroid",
+      "source": {
+        "provider": "OpenStreetMap",
+        "osmType": "way",
+        "osmId": 1120956383,
+        "url": "https://www.openstreetmap.org/way/1120956383"
+      }
+    },
+    {
+      "code": "사회과학대학별관",
+      "name": "사회과학대학별관",
+      "aliases": [],
+      "campus": "광주",
+      "lat": 35.1750924,
+      "lng": 126.9038539,
+      "coordinateType": "building_centroid",
+      "source": {
+        "provider": "OpenStreetMap",
+        "osmType": "way",
+        "osmId": 1120956384,
+        "url": "https://www.openstreetmap.org/way/1120956384"
+      }
+    },
+    {
+      "code": "생활과학대학",
+      "name": "생활과학대학",
+      "aliases": [],
+      "campus": "광주",
+      "lat": 35.1738918,
+      "lng": 126.9112055,
+      "coordinateType": "building_centroid",
+      "source": {
+        "provider": "OpenStreetMap",
+        "osmType": "way",
+        "osmId": 270550646,
+        "url": "https://www.openstreetmap.org/way/270550646"
+      }
+    },
+    {
+      "code": "AI융합대학",
+      "name": "AI융합대학",
+      "aliases": [],
+      "campus": "광주",
+      "lat": 35.1796432,
+      "lng": 126.9068155,
+      "coordinateType": "mapped_entrance",
+      "source": {
+        "provider": "OpenStreetMap",
+        "osmType": "way",
+        "osmId": 271056455,
+        "url": "https://www.openstreetmap.org/way/271056455"
+      }
+    },
+    {
+      "code": "중앙도서관",
+      "name": "중앙도서관",
+      "aliases": [],
+      "campus": "광주",
+      "lat": 35.1769805,
+      "lng": 126.9058929,
+      "coordinateType": "building_centroid",
+      "source": {
+        "provider": "OpenStreetMap",
+        "osmType": "way",
+        "osmId": 270549104,
+        "url": "https://www.openstreetmap.org/way/270549104"
+      }
+    },
+    {
+      "code": "도서관별관",
+      "name": "도서관 별관",
+      "aliases": [],
+      "campus": "광주",
+      "lat": 35.177891,
+      "lng": 126.9068424,
+      "coordinateType": "mapped_entrance",
+      "source": {
+        "provider": "OpenStreetMap",
+        "osmType": "way",
+        "osmId": 1125314697,
+        "url": "https://www.openstreetmap.org/way/1125314697"
+      }
+    },
+    {
+      "code": "정보마루",
+      "name": "정보마루",
+      "aliases": [],
+      "campus": "광주",
+      "lat": 35.1766645,
+      "lng": 126.9055325,
+      "coordinateType": "building_centroid",
+      "source": {
+        "provider": "OpenStreetMap",
+        "osmType": "way",
+        "osmId": 1120956385,
+        "url": "https://www.openstreetmap.org/way/1120956385"
+      }
+    },
+    {
+      "code": "제1학생마루",
+      "name": "제1학생마루",
+      "aliases": [],
+      "campus": "광주",
+      "lat": 35.1770143,
+      "lng": 126.9073084,
+      "coordinateType": "mapped_entrance",
+      "source": {
+        "provider": "OpenStreetMap",
+        "osmType": "way",
+        "osmId": 277766413,
+        "url": "https://www.openstreetmap.org/way/277766413"
+      }
+    },
+    {
+      "code": "진리관",
+      "name": "진리관",
+      "aliases": [],
+      "campus": "광주",
+      "lat": 35.1771248,
+      "lng": 126.90319,
+      "coordinateType": "building_centroid",
+      "source": {
+        "provider": "OpenStreetMap",
+        "osmType": "way",
+        "osmId": 1125131723,
+        "url": "https://www.openstreetmap.org/way/1125131723"
+      }
+    }
+  ]
+}

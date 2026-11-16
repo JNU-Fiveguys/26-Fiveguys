@@ -1,0 +1,188 @@
+{
+  "version": 1,
+  "id": "p_0029",
+  "name": "용봉골",
+  "category": "한식",
+  "lat": 35.1812105965547,
+  "lng": 126.904135052728,
+  "address": "전남광주 북구 용주로30번길 75",
+  "source": "semas",
+  "sourceId": "MA010120220807547209",
+  "sourceStatus": "active",
+  "attrs": {
+    "status": "partial",
+    "menus": [
+      {
+        "name": "동태탕",
+        "price": 8000,
+        "main": true
+      },
+      {
+        "name": "추어탕",
+        "price": 7000,
+        "main": true
+      },
+      {
+        "name": "청국장",
+        "price": 7000,
+        "main": true
+      },
+      {
+        "name": "북어해장국",
+        "price": 7000,
+        "main": true
+      }
+    ]
+  },
+  "research": {
+    "identityStatus": "matched",
+    "queries": [
+      "\"용봉골\" 메뉴 영업시간"
+    ],
+    "sources": [
+      {
+        "id": "s1",
+        "url": "https://www.diningcode.com/profile.php?rid=DU8cOAI5QznU",
+        "title": "용봉골 매장정보",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "상호·주소 일치"
+      }
+    ],
+    "facts": {
+      "menus": {
+        "status": "confirmed",
+        "value": [
+          {
+            "name": "동태탕",
+            "price": 8000,
+            "main": true
+          },
+          {
+            "name": "추어탕",
+            "price": 7000,
+            "main": true
+          },
+          {
+            "name": "청국장",
+            "price": 7000,
+            "main": true
+          },
+          {
+            "name": "북어해장국",
+            "price": 7000,
+            "main": true
+          }
+        ],
+        "sourceIds": [
+          "s1"
+        ],
+        "note": "주소가 일치하는 매장 메뉴표에 게시된 가격."
+      },
+      "hours": {
+        "status": "unconfirmed",
+        "value": [],
+        "sourceIds": [],
+        "note": "요일별 영업시간을 확인하지 못함."
+      }
+    },
+    "notes": [],
+    "checkedAt": "2026-11-11",
+    "method": "web",
+    "unknownFields": [
+      "hours",
+      "mealType",
+      "takeout",
+      "verifiedAt",
+      "verifiedBy",
+      "break",
+      "lastOrder"
+    ]
+  },
+  "availability": {
+    "status": "listed",
+    "provider": "naver",
+    "checkedAt": "2026-11-11",
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/37500825/home?fromPanelNum=2&timestamp=202611112333&locale=ko&svcName=map_pcv5&searchText=%EC%9A%A9%EB%B4%89%EA%B3%A8%20%EA%B4%91%EC%A3%BC",
+    "naverPlaceId": "37500825",
+    "observedName": "용봉골",
+    "observedAddress": "전남광주 북구 용주로30번길 75",
+    "district": "예대",
+    "addressVerified": true,
+    "nearby": true,
+    "reason": "공개 네이버 지도에서 동일 주소의 전남대 예대 식당으로 확인"
+  },
+  "menuObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/37500825/menu?fromPanelNum=2&timestamp=202611112333&locale=ko&svcName=map_pcv5&searchText=%EC%9A%A9%EB%B4%89%EA%B3%A8%20%EA%B4%91%EC%A3%BC",
+    "checkedAt": "2026-11-11",
+    "priceContext": "in_store",
+    "menus": [
+      {
+        "name": "코다리찜",
+        "price": 25000,
+        "main": false
+      },
+      {
+        "name": "제육볶음(밥별도)",
+        "price": 10000,
+        "main": false
+      },
+      {
+        "name": "조기매운탕 대",
+        "price": 30000,
+        "main": false
+      },
+      {
+        "name": "동태탕",
+        "price": 8000,
+        "main": true
+      },
+      {
+        "name": "추어탕",
+        "price": 7000,
+        "main": true
+      },
+      {
+        "name": "청국장",
+        "price": 7000,
+        "main": true
+      },
+      {
+        "name": "북어해장국",
+        "price": 7000,
+        "main": true
+      },
+      {
+        "name": "애호박찌개",
+        "price": 7000,
+        "main": true
+      },
+      {
+        "name": "동지죽(겨울)",
+        "price": 8000,
+        "main": false
+      }
+    ],
+    "note": "메뉴 상태: confirmed. 원본 관찰·좌표 출처는 적용 manifest에 보관합니다.",
+    "status": "confirmed"
+  },
+  "hoursObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/37500825/home",
+    "checkedAt": "2026-11-11",
+    "status": "unconfirmed",
+    "hours": [],
+    "note": "매장 영업시간 관찰. 기존 attrs/research를 덮어쓰지 않습니다."
+  },
+  "followupReview": {
+    "checkedAt": "2026-11-12",
+    "reasons": [
+      "요일별 영업시간: 월~일 영업·휴무와 개점·마감 시간이 필요합니다. 브레이크·마지막 주문은 확인한 경우만 입력하세요."
+    ],
+    "sources": [
+      "https://pcmap.place.naver.com/restaurant/37500825/home",
+      "https://pcmap.place.naver.com/restaurant/37500825/menu/list",
+      "https://pcmap.place.naver.com/restaurant/37500825/menu?fromPanelNum=2&timestamp=202611112333&locale=ko&svcName=map_pcv5&searchText=%EC%9A%A9%EB%B4%89%EA%B3%A8%20%EA%B4%91%EC%A3%BC"
+    ]
+  }
+}

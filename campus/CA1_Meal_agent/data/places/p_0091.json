@@ -1,0 +1,603 @@
+{
+  "version": 1,
+  "id": "p_0091",
+  "name": "육회바른연어 전남대점",
+  "category": "한식",
+  "lat": 35.1760973229327,
+  "lng": 126.912637941143,
+  "address": "전남광주 북구 우치로 98 1층",
+  "source": "semas",
+  "sourceId": "MA0101202602A0013480",
+  "sourceStatus": "active",
+  "attrs": {
+    "status": "partial",
+    "menus": [
+      {
+        "name": "★NEW★ 마늘듬뿍육회덮밥",
+        "price": 8900,
+        "main": true
+      },
+      {
+        "name": "★NEW★ 마늘듬뿍육회",
+        "price": 16900,
+        "main": false
+      },
+      {
+        "name": "★NEW★ 들기름육회쫄면",
+        "price": 6900,
+        "main": true
+      },
+      {
+        "name": "★NEW★ 불닭마요연어쫄면",
+        "price": 7900,
+        "main": true
+      },
+      {
+        "name": "[점심특선] 불닭마요연어덮밥세트",
+        "price": 10900,
+        "main": false
+      },
+      {
+        "name": "[점심특선] 육연덮밥세트",
+        "price": 9900,
+        "main": false
+      },
+      {
+        "name": "[점심특선] 연어덮밥세트",
+        "price": 9900,
+        "main": false
+      },
+      {
+        "name": "[점심특선] 육회덮밥세트",
+        "price": 8900,
+        "main": false
+      },
+      {
+        "name": "[점심특선] 육회초밥",
+        "price": 12400,
+        "main": false
+      },
+      {
+        "name": "[점심특선] 연어초밥",
+        "price": 13400,
+        "main": false
+      },
+      {
+        "name": "[점심특선] 스테이크초밥",
+        "price": 13400,
+        "main": false
+      },
+      {
+        "name": "육회한접시",
+        "price": 14400,
+        "main": false
+      },
+      {
+        "name": "연어한접시",
+        "price": 22400,
+        "main": false
+      },
+      {
+        "name": "불닭마요연어깍두기",
+        "price": 14900,
+        "main": false
+      },
+      {
+        "name": "간장연어장",
+        "price": 5500,
+        "main": false
+      },
+      {
+        "name": "육바연세트(1인)",
+        "price": 16900,
+        "main": true
+      },
+      {
+        "name": "육바연세트(2인)",
+        "price": 32400,
+        "main": false
+      },
+      {
+        "name": "육회초밥",
+        "price": 8400,
+        "main": true
+      },
+      {
+        "name": "연어초밥",
+        "price": 8900,
+        "main": true
+      },
+      {
+        "name": "육바연3단변신초밥",
+        "price": 11400,
+        "main": true
+      },
+      {
+        "name": "스테이크초밥",
+        "price": 8900,
+        "main": true
+      },
+      {
+        "name": "육회바른연어",
+        "price": 19400,
+        "main": false
+      },
+      {
+        "name": "불닭마요연어초밥",
+        "price": 9200,
+        "main": true
+      },
+      {
+        "name": "모둠초밥",
+        "price": 8900,
+        "main": true
+      },
+      {
+        "name": "육회유부초밥",
+        "price": 3000,
+        "main": false
+      },
+      {
+        "name": "연어유부초밥",
+        "price": 3000,
+        "main": false
+      },
+      {
+        "name": "스테이크유부초밥",
+        "price": 3000,
+        "main": false
+      },
+      {
+        "name": "들기름육회막국수",
+        "price": 9900,
+        "main": true
+      },
+      {
+        "name": "비빔육회막국수",
+        "price": 9900,
+        "main": true
+      },
+      {
+        "name": "육회쫄면",
+        "price": 9900,
+        "main": true
+      },
+      {
+        "name": "컵물육회",
+        "price": 9900,
+        "main": false
+      },
+      {
+        "name": "육회덮밥",
+        "price": 7900,
+        "main": true
+      },
+      {
+        "name": "연어덮밥",
+        "price": 8900,
+        "main": true
+      },
+      {
+        "name": "육연덮밥",
+        "price": 8900,
+        "main": true
+      },
+      {
+        "name": "불닭마요연어덮밥",
+        "price": 9400,
+        "main": true
+      },
+      {
+        "name": "간장연어장덮밥",
+        "price": 11900,
+        "main": true
+      },
+      {
+        "name": "양념연어장덮밥",
+        "price": 11900,
+        "main": true
+      },
+      {
+        "name": "숯불닭고기덮밥",
+        "price": 9400,
+        "main": true
+      },
+      {
+        "name": "혼밥세트 A",
+        "price": 12400,
+        "main": true
+      },
+      {
+        "name": "혼밥세트 B",
+        "price": 15900,
+        "main": true
+      },
+      {
+        "name": "혼면세트 A",
+        "price": 13900,
+        "main": true
+      },
+      {
+        "name": "혼면세트 B",
+        "price": 17400,
+        "main": true
+      },
+      {
+        "name": "덮덮초세트",
+        "price": 23900,
+        "main": false
+      },
+      {
+        "name": "면면초세트",
+        "price": 26900,
+        "main": false
+      },
+      {
+        "name": "덮면초세트",
+        "price": 25900,
+        "main": false
+      }
+    ],
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금",
+          "토",
+          "일"
+        ],
+        "open": "11:00",
+        "close": "22:30",
+        "break": {
+          "start": "15:30",
+          "end": "16:30"
+        }
+      }
+    ]
+  },
+  "research": {
+    "identityStatus": "matched",
+    "queries": [
+      "\"육회바른연어\" \"전남대점\""
+    ],
+    "sources": [
+      {
+        "id": "s1",
+        "url": "https://www.tabling.co.kr/restaurant/15468",
+        "title": "육회바른연어 전남대점 영업·메뉴정보",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "주소가 일치하는 공개 검색결과 본문에서 지점 영업표와 가격 확인. 직접 열기는 403이어서 추가 접근하지 않음."
+      }
+    ],
+    "facts": {
+      "menus": {
+        "status": "partial",
+        "value": [
+          {
+            "name": "간장연어장 덮밥",
+            "price": 11900,
+            "main": true
+          },
+          {
+            "name": "양념연어장 덮밥",
+            "price": 11900,
+            "main": true
+          },
+          {
+            "name": "들기름 육회 막국수",
+            "price": 9500,
+            "main": true
+          },
+          {
+            "name": "비빔 육회 막국수",
+            "price": 9500,
+            "main": true
+          }
+        ],
+        "sourceIds": [
+          "s1"
+        ],
+        "note": "주소가 일치하는 지점 페이지에 게시된 메뉴·가격. 실제 결제 가격은 현장 재확인 필요. 공개 검색결과만 확인했고 직접 본문 조회 403으로 현행 가격 확인 보류."
+      },
+      "hours": {
+        "status": "partial",
+        "sourceIds": [
+          "s1"
+        ],
+        "note": "공개 검색에 월~일 11:00~22:30 게시. 휴식 15:30~16:30은 '오늘'로만 표시되어 주간 전체 적용 여부 미확인. 마지막 주문 미확인."
+      }
+    },
+    "notes": [
+      "덮밥·국수 식사 메뉴는 확인했지만 요리주점으로 소개하는 자료도 있어 밥집 전용 후보 분류 재검토 필요."
+    ],
+    "checkedAt": "2026-11-11",
+    "method": "web",
+    "unknownFields": [
+      "menus",
+      "hours",
+      "mealType",
+      "takeout",
+      "verifiedAt",
+      "verifiedBy",
+      "break",
+      "lastOrder"
+    ]
+  },
+  "availability": {
+    "status": "listed",
+    "provider": "naver",
+    "checkedAt": "2026-11-11",
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/2040422124/home",
+    "naverPlaceId": "2040422124",
+    "observedName": "육회바른연어 전남대점",
+    "observedAddress": "전남광주 북구 우치로 98 1층",
+    "district": "후문",
+    "addressVerified": true,
+    "nearby": true,
+    "reason": "공개 네이버 지도에서 동일 주소의 전남대 후문 식당으로 확인"
+  },
+  "menuObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/2040422124/menu",
+    "checkedAt": "2026-11-11",
+    "priceContext": "in_store",
+    "menus": [
+      {
+        "name": "★NEW★ 마늘듬뿍육회덮밥",
+        "price": 8900,
+        "main": true
+      },
+      {
+        "name": "★NEW★ 마늘듬뿍육회",
+        "price": 16900,
+        "main": false
+      },
+      {
+        "name": "★NEW★ 들기름육회쫄면",
+        "price": 6900,
+        "main": true
+      },
+      {
+        "name": "★NEW★ 불닭마요연어쫄면",
+        "price": 7900,
+        "main": true
+      },
+      {
+        "name": "[점심특선] 불닭마요연어덮밥세트",
+        "price": 10900,
+        "main": false
+      },
+      {
+        "name": "[점심특선] 육연덮밥세트",
+        "price": 9900,
+        "main": false
+      },
+      {
+        "name": "[점심특선] 연어덮밥세트",
+        "price": 9900,
+        "main": false
+      },
+      {
+        "name": "[점심특선] 육회덮밥세트",
+        "price": 8900,
+        "main": false
+      },
+      {
+        "name": "[점심특선] 육회초밥",
+        "price": 12400,
+        "main": false
+      },
+      {
+        "name": "[점심특선] 연어초밥",
+        "price": 13400,
+        "main": false
+      },
+      {
+        "name": "[점심특선] 스테이크초밥",
+        "price": 13400,
+        "main": false
+      },
+      {
+        "name": "육회한접시",
+        "price": 14400,
+        "main": false
+      },
+      {
+        "name": "연어한접시",
+        "price": 22400,
+        "main": false
+      },
+      {
+        "name": "불닭마요연어깍두기",
+        "price": 14900,
+        "main": false
+      },
+      {
+        "name": "간장연어장",
+        "price": 5500,
+        "main": false
+      },
+      {
+        "name": "육바연세트(1인)",
+        "price": 16900,
+        "main": true
+      },
+      {
+        "name": "육바연세트(2인)",
+        "price": 32400,
+        "main": false
+      },
+      {
+        "name": "육회초밥",
+        "price": 8400,
+        "main": true
+      },
+      {
+        "name": "연어초밥",
+        "price": 8900,
+        "main": true
+      },
+      {
+        "name": "육바연3단변신초밥",
+        "price": 11400,
+        "main": true
+      },
+      {
+        "name": "스테이크초밥",
+        "price": 8900,
+        "main": true
+      },
+      {
+        "name": "육회바른연어",
+        "price": 19400,
+        "main": false
+      },
+      {
+        "name": "불닭마요연어초밥",
+        "price": 9200,
+        "main": true
+      },
+      {
+        "name": "모둠초밥",
+        "price": 8900,
+        "main": true
+      },
+      {
+        "name": "육회유부초밥",
+        "price": 3000,
+        "main": false
+      },
+      {
+        "name": "연어유부초밥",
+        "price": 3000,
+        "main": false
+      },
+      {
+        "name": "스테이크유부초밥",
+        "price": 3000,
+        "main": false
+      },
+      {
+        "name": "들기름육회막국수",
+        "price": 9900,
+        "main": true
+      },
+      {
+        "name": "비빔육회막국수",
+        "price": 9900,
+        "main": true
+      },
+      {
+        "name": "육회쫄면",
+        "price": 9900,
+        "main": true
+      },
+      {
+        "name": "컵물육회",
+        "price": 9900,
+        "main": false
+      },
+      {
+        "name": "육회덮밥",
+        "price": 7900,
+        "main": true
+      },
+      {
+        "name": "연어덮밥",
+        "price": 8900,
+        "main": true
+      },
+      {
+        "name": "육연덮밥",
+        "price": 8900,
+        "main": true
+      },
+      {
+        "name": "불닭마요연어덮밥",
+        "price": 9400,
+        "main": true
+      },
+      {
+        "name": "간장연어장덮밥",
+        "price": 11900,
+        "main": true
+      },
+      {
+        "name": "양념연어장덮밥",
+        "price": 11900,
+        "main": true
+      },
+      {
+        "name": "숯불닭고기덮밥",
+        "price": 9400,
+        "main": true
+      },
+      {
+        "name": "혼밥세트 A",
+        "price": 12400,
+        "main": true
+      },
+      {
+        "name": "혼밥세트 B",
+        "price": 15900,
+        "main": true
+      },
+      {
+        "name": "혼면세트 A",
+        "price": 13900,
+        "main": true
+      },
+      {
+        "name": "혼면세트 B",
+        "price": 17400,
+        "main": true
+      },
+      {
+        "name": "덮덮초세트",
+        "price": 23900,
+        "main": false
+      },
+      {
+        "name": "면면초세트",
+        "price": 26900,
+        "main": false
+      },
+      {
+        "name": "덮면초세트",
+        "price": 25900,
+        "main": false
+      }
+    ],
+    "note": "메뉴 상태: confirmed. 원본 관찰·좌표 출처는 적용 manifest에 보관합니다.",
+    "status": "confirmed"
+  },
+  "hoursObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/2040422124/home",
+    "checkedAt": "2026-11-11",
+    "status": "confirmed",
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금",
+          "토",
+          "일"
+        ],
+        "open": "11:00",
+        "close": "22:30",
+        "break": {
+          "start": "15:30",
+          "end": "16:30"
+        }
+      }
+    ],
+    "note": "매장 영업시간 관찰. 기존 attrs/research를 덮어쓰지 않습니다."
+  }
+}

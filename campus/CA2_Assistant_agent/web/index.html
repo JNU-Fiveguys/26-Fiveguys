@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>캠퍼스 도우미 (CA2 프로토타입)</title>
+<style>
+  :root { --bg:#f4f1ea; --card:#fffdf8; --line:#e2dccf; --ink:#22231f; --sub:#6d6a60; --accent:#3f6b54; --warn:#b7791f; --bad:#b0413e; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font:15px/1.55 -apple-system, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif; }
+  main { max-width:760px; margin:0 auto; padding:20px 16px 140px; }
+  header { display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:12px; }
+  h1 { font-size:18px; margin:0; }
+  button { font:inherit; border:1px solid var(--line); background:var(--card); border-radius:10px; padding:7px 12px; cursor:pointer; }
+  button.primary { background:var(--accent); color:#fff; border-color:var(--accent); }
+  button:disabled { opacity:.5; cursor:default; }
+  .band { background:#fbf3df; border:1px solid #ecd9a8; color:#7a5a12; border-radius:10px; padding:8px 12px; margin-bottom:12px; display:none; }
+  .panel { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:16px; margin-bottom:14px; display:none; }
+  .panel label { display:block; font-size:13px; color:var(--sub); margin:10px 0 4px; }
+  .panel input, .panel select { width:100%; font:inherit; padding:8px 10px; border:1px solid var(--line); border-radius:8px; background:#fff; }
+  .row { display:flex; gap:8px; flex-wrap:wrap; margin-top:12px; align-items:center; }
+  .note { font-size:13px; color:var(--sub); }
+  .msg { margin:10px 0; display:flex; flex-direction:column; }
+  .msg.user { align-items:flex-end; }
+  .bubble { max-width:88%; padding:9px 13px; border-radius:14px; white-space:pre-wrap; overflow-wrap:anywhere; }
+  .user .bubble { background:var(--accent); color:#fff; }
+  .assistant .bubble { background:var(--card); border:1px solid var(--line); }
+  .chipline { font-size:13px; color:var(--sub); margin:4px 2px; }
+  .cardbox { max-width:88%; background:var(--card); border:1px solid var(--line); border-radius:12px; padding:10px 12px; margin-top:6px; font-size:14px; }
+  .cardbox .t { font-weight:600; }
+  .cardbox .m { color:var(--sub); font-size:13px; }
+  .cardbox.stale { border-color:#ecd9a8; background:#fdf8ea; }
+  .cardbox .q { margin-top:6px; overflow-wrap:anywhere; }
+  .err { color:var(--bad); }
+  .chips { display:flex; gap:8px; flex-wrap:wrap; margin:10px 0; }
+  form#ask { position:fixed; left:0; right:0; bottom:0; background:var(--bg); border-top:1px solid var(--line); padding:10px 16px 16px; }
+  form#ask div { max-width:760px; margin:0 auto; display:flex; gap:8px; }
+  form#ask input { flex:1; min-width:0; font:inherit; padding:10px 12px; border:1px solid var(--line); border-radius:10px; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>캠퍼스 도우미 <span class="note">CA2 프로토타입</span></h1>
+    <button id="openSettings">AI 연결 설정</button>
+  </header>
+  <div class="band" id="simpleBand">간단 모드 — AI 가 연결되지 않아 저장된 자료 검색만 합니다. ‘AI 연결 설정’에서 내 API 키를 넣으면 대화가 켜집니다.</div>
+
+  <section class="panel" id="settings">
+    <strong>AI 연결 설정</strong>
+    <div class="note">내 API 키는 이 PC 의 암호 저장소(키체인)에만 저장됩니다. 질문 문장은 고른 AI 회사로 전송됩니다.</div>
+    <label for="provider">제공자</label><select id="provider"></select>
+    <label for="baseUrl">주소</label><input id="baseUrl" placeholder="https://…/v1" autocomplete="off">
+    <label for="apiKey">API 키 <span id="keyHint"></span></label><input id="apiKey" type="password" placeholder="새 키를 넣을 때만 입력" autocomplete="off">
+    <label for="model">모델</label><input id="model" list="modelList" placeholder="모델 이름" autocomplete="off"><datalist id="modelList"></datalist>
+    <div class="row">
+      <button id="loadModels" type="button">모델 목록 불러오기</button>
+      <button id="save" type="button" class="primary">저장</button>
+      <button id="test" type="button">연결 시험</button>
+      <button id="clear" type="button">지우기</button>
+    </div>
+    <div class="note" id="settingsMsg" role="status"></div>
+  </section>
+
+  <div id="empty">
+    <div class="note">이렇게 물어보세요</div>
+    <div class="chips" id="examples"></div>
+  </div>
+  <div id="log" aria-live="polite"></div>
+</main>
+<form id="ask"><div>
+  <input id="text" placeholder="캠퍼스 생활 질문을 입력하세요" autocomplete="off">
+  <button class="primary" id="send">보내기</button>
+</div></form>
+<script>
+const $ = (id) => document.getElementById(id);
+const el = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; };
+const api = async (path, method = "GET", body) => {
+  const r = await fetch(path, { method, headers: body ? { "Content-Type": "application/json" } : {}, body: body ? JSON.stringify(body) : undefined });
+  const data = await r.json().catch(() => ({}));
+  if (!r.ok) throw new Error(data.detail || `오류 (${r.status})`);
+  return data;
+};
+let history = [];        // 대화는 이 화면(메모리)에만 있다 — 새로 고치면 지워진다
+let providers = [];
+let busy = false;
+
+// ── 설정 ──
+function showSettings(v) {
+  providers = v.providers;
+  const sel = $("provider");
+  sel.replaceChildren(...providers.map((p) => { const o = el("option", null, p.label); o.value = p.key; return o; }));
+  sel.value = v.provider || providers[0].key;
+  $("baseUrl").value = v.baseUrl || (providers.find((p) => p.key === sel.value) || {}).baseUrl || "";
+  $("model").value = v.model || "";
+  $("model").placeholder = (providers.find((p) => p.key === sel.value) || {}).modelHint || "모델 이름";
+  $("apiKey").value = "";
+  $("keyHint").textContent = v.source === "env" ? "(.env 의 키 사용 중)" : v.hasKey && v.keyHint ? `(저장됨 ${v.keyHint})` : "";
+  $("simpleBand").style.display = v.configured ? "none" : "block";
+}
+$("provider").addEventListener("change", () => {
+  const p = providers.find((x) => x.key === $("provider").value) || {};
+  $("baseUrl").value = p.baseUrl || "";
+  $("model").value = "";
+  $("model").placeholder = p.modelHint || "모델 이름";
+  $("modelList").replaceChildren();
+});
+const say = (t, bad) => { $("settingsMsg").textContent = t; $("settingsMsg").className = bad ? "note err" : "note"; };
+$("openSettings").addEventListener("click", () => { const s = $("settings"); s.style.display = s.style.display === "block" ? "none" : "block"; });
+$("loadModels").addEventListener("click", async () => {
+  say("모델 목록을 불러오는 중…");
+  try {
+    const { models } = await api("/v1/settings/llm/models", "POST", { baseUrl: $("baseUrl").value, apiKey: $("apiKey").value });
+    $("modelList").replaceChildren(...models.map((m) => { const o = el("option"); o.value = m; return o; }));
+    say(`모델 ${models.length}개를 찾았어요. 모델 칸에서 골라 주세요.`);
+  } catch (e) { say(e.message, true); }
+});
+$("save").addEventListener("click", async () => {
+  try {
+    showSettings(await api("/v1/settings/llm", "PUT", { provider: $("provider").value, baseUrl: $("baseUrl").value, model: $("model").value, apiKey: $("apiKey").value || null }));
+    say("저장했어요. ‘연결 시험’으로 확인해 보세요.");
+  } catch (e) { say(e.message, true); }
+});
+$("test").addEventListener("click", async () => {
+  say("연결을 시험하는 중…");
+  try {
+    const r = await api("/v1/settings/llm/test", "POST");
+    say(!r.ok ? `연결 실패: ${r.error}` : r.tools ? "연결됐어요. 도구 호출도 됩니다." : "연결됐어요. 다만 이 모델은 도구 호출을 하지 않아 질문 답변이 부정확할 수 있어요.", !r.ok);
+  } catch (e) { say(e.message, true); }
+});
+$("clear").addEventListener("click", async () => {
+  try { showSettings(await api("/v1/settings/llm", "DELETE")); say("설정과 키를 지웠어요."); } catch (e) { say(e.message, true); }
+});
+
+// ── 대화 ──
+const TOOL_LABEL = { search_campus_info: "자료를 찾는 중…", create_reminder: "알림 미리보기를 만드는 중…" };
+function sourceCard(d) {
+  const box = el("div", "cardbox" + (d.stale ? " stale" : ""));
+  box.append(el("div", "t", `${d.title} · ${d.section}`));
+  box.append(el("div", "m", `${d.dept || "담당 부서 미상"} · 검증일 ${d.verifiedAt || "없음"}${d.stale ? " · 정보가 바뀌었을 수 있어요" : ""}`));
+  box.append(el("div", "q", d.text));
+  if (/^https?:\/\//.test(d.sourceUrl || "")) { const a = el("a", null, "원문 열기"); a.href = d.sourceUrl; a.target = "_blank"; a.rel = "noopener noreferrer"; box.append(a); }
+  return box;
+}
+function pendingCard(p) {
+  const box = el("div", "cardbox");
+  box.append(el("div", "t", "알림 미리보기"), el("div", "q", p.preview), el("div", "m", "확인하기 전에는 예약되지 않아요 · 10분 뒤 만료"));
+  const row = el("div", "row"), ok = el("button", "primary", "확인"), no = el("button", null, "취소");
+  const done = (t) => { row.remove(); box.append(el("div", "m", t)); };
+  ok.addEventListener("click", () => done(new Date(p.expiresAt) < new Date() ? "만료됐어요. 다시 말씀해 주세요." : "확인했어요. (프로토타입 — 실제 알림 발송은 아직 연결되지 않았습니다)"));
+  no.addEventListener("click", () => done("취소했어요."));
+  row.append(ok, no); box.append(row);
+  return box;
+}
+async function ask(text, confirmPii = false) {
+  if (busy || !text.trim()) return;
+  busy = true; $("send").disabled = true; $("empty").style.display = "none";
+  if (!confirmPii) { history.push({ role: "user", content: text }); const m = el("div", "msg user"); m.append(el("div", "bubble", text)); $("log").append(m); }
+  const wrap = el("div", "msg assistant"), bubble = el("div", "bubble", "…"), status = el("div", "chipline");
+  wrap.append(status, bubble); $("log").append(wrap); wrap.scrollIntoView({ block: "end" });
+  let answer = "";
+  const on = (event, data) => {
+    if (event === "delta") { answer += data; bubble.textContent = answer; }
+    else if (event === "tool") status.textContent = TOOL_LABEL[data.name] || "처리 중…";
+    else if (event === "mode") $("simpleBand").style.display = "block";
+    else if (event === "card" && data.type === "source") wrap.append(sourceCard(data.data));
+    else if (event === "card") wrap.append(el("div", "cardbox", data.data.text));
+    else if (event === "pending") wrap.append(pendingCard(data));
+    else if (event === "error") { bubble.textContent = answer || "답하지 못했어요."; wrap.append(el("div", "chipline err", data)); }
+    else if (event === "warn") {
+      bubble.textContent = data.text;
+      const row = el("div", "row"), yes = el("button", null, "그래도 보내기"), no = el("button", "primary", "보내지 않기");
+      yes.addEventListener("click", () => { wrap.remove(); ask(text, true); });
+      no.addEventListener("click", () => { wrap.remove(); history.pop(); });
+      row.append(no, yes); wrap.append(row);
+    }
+  };
+  try {
+    const r = await fetch("/v1/agent/chat", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ messages: history.slice(-12), confirmPii }) });
+    if (!r.ok || !r.body) throw new Error(`오류 (${r.status})`);
+    const reader = r.body.getReader(), dec = new TextDecoder();
+    let buf = "";
+    for (;;) {
+      const { value, done } = await reader.read();
+      if (done) break;
+      buf += dec.decode(value, { stream: true });
+      let i;
+      while ((i = buf.indexOf("\n\n")) >= 0) {
+        const block = buf.slice(0, i); buf = buf.slice(i + 2);
+        const ev = (block.match(/^event: (.*)$/m) || [])[1], data = (block.match(/^data: (.*)$/m) || [])[1];
+        if (ev) on(ev, JSON.parse(data));
+      }
+    }
+  } catch (e) { bubble.textContent = "답하지 못했어요."; wrap.append(el("div", "chipline err", e.message)); }
+  status.remove();
+  if (answer) history.push({ role: "assistant", content: answer });
+  if (bubble.textContent === "…") bubble.textContent = "(답이 비어 있어요)";
+  busy = false; $("send").disabled = false; wrap.scrollIntoView({ block: "end" });
+}
+$("ask").addEventListener("submit", (e) => { e.preventDefault(); const t = $("text").value; $("text").value = ""; ask(t); });
+for (const q of ["학생증 재발급 어디서 해?", "도서관 몇 시까지 해?", "휴학 신청 언제까지야?"]) {
+  const b = el("button", null, q); b.type = "button"; b.addEventListener("click", () => ask(q)); $("examples").append(b);
+}
+api("/v1/settings/llm").then(showSettings).catch((e) => say(e.message, true));
+</script>
+</body>
+</html>

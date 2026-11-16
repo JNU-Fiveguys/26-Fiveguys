@@ -1,0 +1,92 @@
+{
+  "version": 1,
+  "id": "p_0032",
+  "name": "한솥도시락전남대 후문점",
+  "category": "한식",
+  "lat": 35.177224,
+  "lng": 126.912692,
+  "address": "전남광주통합특별시 북구 우치로110번길 6",
+  "source": "semas",
+  "sourceId": "MA010120220807551805",
+  "sourceStatus": "active",
+  "attrs": {
+    "status": "partial"
+  },
+  "research": {
+    "identityStatus": "matched",
+    "queries": [
+      "\"한솥도시락\" \"전남대후문점\" 메뉴 시간"
+    ],
+    "sources": [
+      {
+        "id": "s1",
+        "url": "https://www.diningcode.com/profile.php?rid=t2i2AlV77Bwj",
+        "title": "한솥도시락 전남대후문점 매장정보",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "상호·주소 일치"
+      }
+    ],
+    "facts": {
+      "menus": {
+        "status": "partial",
+        "value": [
+          {
+            "name": "치킨마요",
+            "price": 5100,
+            "main": true
+          },
+          {
+            "name": "빅치킨마요",
+            "price": 5800,
+            "main": true
+          },
+          {
+            "name": "참치마요",
+            "price": 5000,
+            "main": true
+          }
+        ],
+        "sourceIds": [
+          "s1"
+        ],
+        "note": "해당 지점 페이지에 게시된 메뉴이나 권장가격 안내가 있어 지점 실판매가격 확인 필요."
+      },
+      "hours": {
+        "status": "unconfirmed",
+        "value": [],
+        "sourceIds": [],
+        "note": "요일별 영업시간을 확인하지 못함."
+      }
+    },
+    "notes": [
+      "매장 페이지 영업시간은 확인 필요로 표시됨. 과거 명절 영업 공지나 특정 배달서비스의 운영시간을 일반 영업시간으로 사용하지 않음."
+    ],
+    "checkedAt": "2026-11-11",
+    "method": "web",
+    "unknownFields": [
+      "menus",
+      "hours",
+      "mealType",
+      "takeout",
+      "verifiedAt",
+      "verifiedBy",
+      "break",
+      "lastOrder"
+    ]
+  },
+  "availability": {
+    "status": "excluded",
+    "provider": "naver",
+    "checkedAt": "2026-11-11",
+    "sourceUrl": "https://map.naver.com/p/search/%EC%A0%84%EB%82%A8%EB%8C%80%20%EC%9D%8C%EC%8B%9D%EC%A0%90",
+    "naverPlaceId": null,
+    "observedName": "",
+    "observedAddress": "",
+    "district": null,
+    "addressVerified": false,
+    "nearby": false,
+    "reason": "네이버 지도에서 확인한 네 식당가 명단에 포함되지 않아 제외"
+  }
+}

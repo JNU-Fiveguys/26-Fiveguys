@@ -12,6 +12,7 @@ desktop.ini
 __pycache__/
 *.pyc
 .venv/
+/.local/
 
 # Claude Code 개인 설정
 .claude/settings.local.json

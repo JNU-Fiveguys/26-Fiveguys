@@ -1,0 +1,65 @@
+{
+  "_설명": "필요 시간 계산 기본값 (기능 정의서 CA1 5절). 모두 ⏳ 초기값 — 실측으로 고치고, 코드에는 박지 않는다 (CA1-R23)",
+  "walk": {
+    "detourFactor": 1.3,
+    "metersPerMin": 70
+  },
+  "bufferMin": 5,
+  "tightMarginMin": 5,
+  "mealTypes": {
+    "학식": {
+      "eat": 20,
+      "wait": 3,
+      "waitPeak": 10
+    },
+    "간단식": {
+      "eat": 15,
+      "wait": 2,
+      "waitPeak": 7
+    },
+    "일반": {
+      "eat": 30,
+      "wait": 3,
+      "waitPeak": 8
+    },
+    "고기·단체": {
+      "eat": 60,
+      "wait": 5,
+      "waitPeak": 10
+    },
+    "카페": {
+      "eat": 15,
+      "wait": 3,
+      "waitPeak": 5
+    }
+  },
+  "peaks": [
+    [
+      "11:50",
+      "12:30"
+    ],
+    [
+      "17:50",
+      "18:30"
+    ]
+  ],
+  "quickEatMaxMin": 15,
+  "ranking": {
+    "_설명": "순위 점수 = Σ 가중치 × 요소(0~1) — 정의서 CA1 5절. 평판(0.10)은 피드백 데이터가 없어 1차에서 뺐다. 합이 1 이 아니어도 계산할 때 다시 나눈다",
+    "weights": {
+      "slack": 0.2,
+      "budget": 0.2,
+      "taste": 0.25,
+      "distance": 0.15,
+      "crowd": 0.1
+    },
+    "rainDistanceMultiplier": 2.0,
+    "slackFullMin": 20,
+    "distanceZeroMin": 15,
+    "overBudgetOneBand": 0.4,
+    "bonusNewPlace": 0.05,
+    "penaltyRecent": 0.05,
+    "bonusExamQuick": 0.05,
+    "chipMinFactor": 0.5
+  }
+}

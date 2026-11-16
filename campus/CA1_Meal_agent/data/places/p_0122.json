@@ -1,0 +1,806 @@
+{
+  "version": 1,
+  "id": "p_0122",
+  "source": "team",
+  "sourceId": "naver:38230445",
+  "name": "피자스쿨 광주전대상대점",
+  "address": "전남광주 북구 반룡로 25 1층",
+  "category": "양식",
+  "lat": 35.1791888732389,
+  "lng": 126.900800022366,
+  "sourceStatus": "active",
+  "availability": {
+    "status": "listed",
+    "provider": "naver",
+    "checkedAt": "2026-11-11",
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/38230445/home",
+    "naverPlaceId": "38230445",
+    "observedName": "피자스쿨 광주전대상대점",
+    "observedAddress": "전남광주 북구 반룡로 25 1층",
+    "district": "상대",
+    "addressVerified": true,
+    "nearby": true,
+    "reason": "공개 네이버 지도에서 동일 주소의 전남대 상대 식당으로 확인"
+  },
+  "menuObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/38230445/menu/list",
+    "checkedAt": "2026-11-11",
+    "priceContext": "in_store",
+    "menus": [
+      {
+        "name": "비프타코피자",
+        "price": 15900,
+        "main": false
+      },
+      {
+        "name": "치킨타코피자",
+        "price": 15900,
+        "main": false
+      },
+      {
+        "name": "콘치즈피자",
+        "price": 10900,
+        "main": false
+      },
+      {
+        "name": "프리미엄스테이크피자",
+        "price": 15900,
+        "main": false
+      },
+      {
+        "name": "크림치즈꽈배기",
+        "price": 5900,
+        "main": false
+      },
+      {
+        "name": "치즈피자",
+        "price": 8900,
+        "main": false
+      },
+      {
+        "name": "페퍼로니피자",
+        "price": 9900,
+        "main": false
+      },
+      {
+        "name": "콤비네이션피자",
+        "price": 10900,
+        "main": false
+      },
+      {
+        "name": "고구마피자",
+        "price": 10900,
+        "main": false
+      },
+      {
+        "name": "핫치킨피자",
+        "price": 10900,
+        "main": false
+      },
+      {
+        "name": "불고기피자",
+        "price": 11900,
+        "main": false
+      },
+      {
+        "name": "포테이토피자",
+        "price": 11900,
+        "main": false
+      },
+      {
+        "name": "나폴리피자",
+        "price": 12900,
+        "main": false
+      },
+      {
+        "name": "고르곤졸라피자",
+        "price": 12900,
+        "main": false
+      },
+      {
+        "name": "까르보네피자",
+        "price": 12900,
+        "main": false
+      },
+      {
+        "name": "아이리쉬포테이토피자",
+        "price": 12900,
+        "main": false
+      },
+      {
+        "name": "불닭고구마피자",
+        "price": 13900,
+        "main": false
+      },
+      {
+        "name": "트러플머쉬룸피자",
+        "price": 13900,
+        "main": false
+      },
+      {
+        "name": "트러플포테이토피자",
+        "price": 13900,
+        "main": false
+      },
+      {
+        "name": "야채퀘사디아피자",
+        "price": 13900,
+        "main": false
+      },
+      {
+        "name": "치킨퀘사디아",
+        "price": 13900,
+        "main": false
+      },
+      {
+        "name": "비프퀘사디아",
+        "price": 13900,
+        "main": false
+      },
+      {
+        "name": "더블갈릭바베큐피자",
+        "price": 13900,
+        "main": false
+      },
+      {
+        "name": "직화파인애플피자",
+        "price": 13900,
+        "main": false
+      },
+      {
+        "name": "깐쇼새우피자",
+        "price": 14900,
+        "main": false
+      },
+      {
+        "name": "닭안심살피자",
+        "price": 14900,
+        "main": false
+      },
+      {
+        "name": "직화홀릭바이트피자",
+        "price": 14900,
+        "main": false
+      },
+      {
+        "name": "도이치바이트피자",
+        "price": 14900,
+        "main": false
+      },
+      {
+        "name": "멕시칸바이트피자",
+        "price": 14900,
+        "main": false
+      },
+      {
+        "name": "오지치즈포테이토피자",
+        "price": 14900,
+        "main": false
+      },
+      {
+        "name": "미트러버피자",
+        "price": 15900,
+        "main": false
+      },
+      {
+        "name": "크림스파게티",
+        "price": 6900,
+        "main": true
+      },
+      {
+        "name": "오지치즈그라탕",
+        "price": 6900,
+        "main": false
+      },
+      {
+        "name": "치즈오븐스파게티",
+        "price": 6900,
+        "main": true
+      },
+      {
+        "name": "치킨스틱&윙",
+        "price": 6900,
+        "main": false
+      },
+      {
+        "name": "치킨텐더",
+        "price": 5900,
+        "main": false
+      },
+      {
+        "name": "새우링",
+        "price": 5900,
+        "main": false
+      },
+      {
+        "name": "트러플포테이토스틱",
+        "price": 4900,
+        "main": false
+      },
+      {
+        "name": "갈릭포테이토",
+        "price": 4900,
+        "main": false
+      },
+      {
+        "name": "크림치즈볼",
+        "price": 4900,
+        "main": false
+      },
+      {
+        "name": "할라피뇨",
+        "price": 500,
+        "main": false
+      },
+      {
+        "name": "스리라차마요소스",
+        "price": 500,
+        "main": false
+      }
+    ],
+    "note": "메뉴 상태: confirmed. 원본 관찰·좌표 출처는 적용 manifest에 보관합니다.",
+    "status": "confirmed"
+  },
+  "attrs": {
+    "status": "partial",
+    "menus": [
+      {
+        "name": "비프타코피자",
+        "price": 15900,
+        "main": false
+      },
+      {
+        "name": "치킨타코피자",
+        "price": 15900,
+        "main": false
+      },
+      {
+        "name": "콘치즈피자",
+        "price": 10900,
+        "main": false
+      },
+      {
+        "name": "프리미엄스테이크피자",
+        "price": 15900,
+        "main": false
+      },
+      {
+        "name": "크림치즈꽈배기",
+        "price": 5900,
+        "main": false
+      },
+      {
+        "name": "치즈피자",
+        "price": 8900,
+        "main": false
+      },
+      {
+        "name": "페퍼로니피자",
+        "price": 9900,
+        "main": false
+      },
+      {
+        "name": "콤비네이션피자",
+        "price": 10900,
+        "main": false
+      },
+      {
+        "name": "고구마피자",
+        "price": 10900,
+        "main": false
+      },
+      {
+        "name": "핫치킨피자",
+        "price": 10900,
+        "main": false
+      },
+      {
+        "name": "불고기피자",
+        "price": 11900,
+        "main": false
+      },
+      {
+        "name": "포테이토피자",
+        "price": 11900,
+        "main": false
+      },
+      {
+        "name": "나폴리피자",
+        "price": 12900,
+        "main": false
+      },
+      {
+        "name": "고르곤졸라피자",
+        "price": 12900,
+        "main": false
+      },
+      {
+        "name": "까르보네피자",
+        "price": 12900,
+        "main": false
+      },
+      {
+        "name": "아이리쉬포테이토피자",
+        "price": 12900,
+        "main": false
+      },
+      {
+        "name": "불닭고구마피자",
+        "price": 13900,
+        "main": false
+      },
+      {
+        "name": "트러플머쉬룸피자",
+        "price": 13900,
+        "main": false
+      },
+      {
+        "name": "트러플포테이토피자",
+        "price": 13900,
+        "main": false
+      },
+      {
+        "name": "야채퀘사디아피자",
+        "price": 13900,
+        "main": false
+      },
+      {
+        "name": "치킨퀘사디아",
+        "price": 13900,
+        "main": false
+      },
+      {
+        "name": "비프퀘사디아",
+        "price": 13900,
+        "main": false
+      },
+      {
+        "name": "더블갈릭바베큐피자",
+        "price": 13900,
+        "main": false
+      },
+      {
+        "name": "직화파인애플피자",
+        "price": 13900,
+        "main": false
+      },
+      {
+        "name": "깐쇼새우피자",
+        "price": 14900,
+        "main": false
+      },
+      {
+        "name": "닭안심살피자",
+        "price": 14900,
+        "main": false
+      },
+      {
+        "name": "직화홀릭바이트피자",
+        "price": 14900,
+        "main": false
+      },
+      {
+        "name": "도이치바이트피자",
+        "price": 14900,
+        "main": false
+      },
+      {
+        "name": "멕시칸바이트피자",
+        "price": 14900,
+        "main": false
+      },
+      {
+        "name": "오지치즈포테이토피자",
+        "price": 14900,
+        "main": false
+      },
+      {
+        "name": "미트러버피자",
+        "price": 15900,
+        "main": false
+      },
+      {
+        "name": "크림스파게티",
+        "price": 6900,
+        "main": true
+      },
+      {
+        "name": "오지치즈그라탕",
+        "price": 6900,
+        "main": false
+      },
+      {
+        "name": "치즈오븐스파게티",
+        "price": 6900,
+        "main": true
+      },
+      {
+        "name": "치킨스틱&윙",
+        "price": 6900,
+        "main": false
+      },
+      {
+        "name": "치킨텐더",
+        "price": 5900,
+        "main": false
+      },
+      {
+        "name": "새우링",
+        "price": 5900,
+        "main": false
+      },
+      {
+        "name": "트러플포테이토스틱",
+        "price": 4900,
+        "main": false
+      },
+      {
+        "name": "갈릭포테이토",
+        "price": 4900,
+        "main": false
+      },
+      {
+        "name": "크림치즈볼",
+        "price": 4900,
+        "main": false
+      },
+      {
+        "name": "할라피뇨",
+        "price": 500,
+        "main": false
+      },
+      {
+        "name": "스리라차마요소스",
+        "price": 500,
+        "main": false
+      }
+    ],
+    "hours": [
+      {
+        "days": [
+          "월",
+          "수",
+          "목",
+          "금"
+        ],
+        "open": "10:00",
+        "close": "23:30"
+      },
+      {
+        "days": [
+          "토",
+          "일"
+        ],
+        "open": "10:00",
+        "close": "24:00"
+      }
+    ]
+  },
+  "hoursObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/38230445/home",
+    "checkedAt": "2026-11-11",
+    "status": "confirmed",
+    "hours": [
+      {
+        "days": [
+          "월",
+          "수",
+          "목",
+          "금"
+        ],
+        "open": "10:00",
+        "close": "23:30"
+      },
+      {
+        "days": [
+          "토",
+          "일"
+        ],
+        "open": "10:00",
+        "close": "24:00"
+      }
+    ],
+    "note": "매장 영업시간 관찰. 기존 attrs/research를 덮어쓰지 않습니다."
+  },
+  "research": {
+    "checkedAt": "2026-11-11",
+    "method": "web",
+    "identityStatus": "matched",
+    "queries": [
+      "피자스쿨 광주전대상대점 전남광주 북구 반룡로 25 1층"
+    ],
+    "sources": [
+      {
+        "id": "naver-place",
+        "url": "https://pcmap.place.naver.com/restaurant/38230445/home",
+        "title": "피자스쿨 광주전대상대점 네이버 지도",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "같은 주소의 지점 확인. 지도 등록 확인은 실시간 영업 중 보증이 아님"
+      },
+      {
+        "id": "naver-menu",
+        "url": "https://pcmap.place.naver.com/restaurant/38230445/menu/list",
+        "title": "피자스쿨 광주전대상대점 메뉴 탭",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "가격 맥락: in_store"
+      },
+      {
+        "id": "naver-hours",
+        "url": "https://pcmap.place.naver.com/restaurant/38230445/home",
+        "title": "피자스쿨 광주전대상대점 영업시간",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "게시된 요일별 영업시간. 미확인은 추정하지 않음"
+      }
+    ],
+    "facts": {
+      "menus": {
+        "status": "confirmed",
+        "sourceIds": [
+          "naver-menu"
+        ],
+        "note": "매장 게시값을 확인했습니다.",
+        "value": [
+          {
+            "name": "비프타코피자",
+            "price": 15900,
+            "main": false
+          },
+          {
+            "name": "치킨타코피자",
+            "price": 15900,
+            "main": false
+          },
+          {
+            "name": "콘치즈피자",
+            "price": 10900,
+            "main": false
+          },
+          {
+            "name": "프리미엄스테이크피자",
+            "price": 15900,
+            "main": false
+          },
+          {
+            "name": "크림치즈꽈배기",
+            "price": 5900,
+            "main": false
+          },
+          {
+            "name": "치즈피자",
+            "price": 8900,
+            "main": false
+          },
+          {
+            "name": "페퍼로니피자",
+            "price": 9900,
+            "main": false
+          },
+          {
+            "name": "콤비네이션피자",
+            "price": 10900,
+            "main": false
+          },
+          {
+            "name": "고구마피자",
+            "price": 10900,
+            "main": false
+          },
+          {
+            "name": "핫치킨피자",
+            "price": 10900,
+            "main": false
+          },
+          {
+            "name": "불고기피자",
+            "price": 11900,
+            "main": false
+          },
+          {
+            "name": "포테이토피자",
+            "price": 11900,
+            "main": false
+          },
+          {
+            "name": "나폴리피자",
+            "price": 12900,
+            "main": false
+          },
+          {
+            "name": "고르곤졸라피자",
+            "price": 12900,
+            "main": false
+          },
+          {
+            "name": "까르보네피자",
+            "price": 12900,
+            "main": false
+          },
+          {
+            "name": "아이리쉬포테이토피자",
+            "price": 12900,
+            "main": false
+          },
+          {
+            "name": "불닭고구마피자",
+            "price": 13900,
+            "main": false
+          },
+          {
+            "name": "트러플머쉬룸피자",
+            "price": 13900,
+            "main": false
+          },
+          {
+            "name": "트러플포테이토피자",
+            "price": 13900,
+            "main": false
+          },
+          {
+            "name": "야채퀘사디아피자",
+            "price": 13900,
+            "main": false
+          },
+          {
+            "name": "치킨퀘사디아",
+            "price": 13900,
+            "main": false
+          },
+          {
+            "name": "비프퀘사디아",
+            "price": 13900,
+            "main": false
+          },
+          {
+            "name": "더블갈릭바베큐피자",
+            "price": 13900,
+            "main": false
+          },
+          {
+            "name": "직화파인애플피자",
+            "price": 13900,
+            "main": false
+          },
+          {
+            "name": "깐쇼새우피자",
+            "price": 14900,
+            "main": false
+          },
+          {
+            "name": "닭안심살피자",
+            "price": 14900,
+            "main": false
+          },
+          {
+            "name": "직화홀릭바이트피자",
+            "price": 14900,
+            "main": false
+          },
+          {
+            "name": "도이치바이트피자",
+            "price": 14900,
+            "main": false
+          },
+          {
+            "name": "멕시칸바이트피자",
+            "price": 14900,
+            "main": false
+          },
+          {
+            "name": "오지치즈포테이토피자",
+            "price": 14900,
+            "main": false
+          },
+          {
+            "name": "미트러버피자",
+            "price": 15900,
+            "main": false
+          },
+          {
+            "name": "크림스파게티",
+            "price": 6900,
+            "main": true
+          },
+          {
+            "name": "오지치즈그라탕",
+            "price": 6900,
+            "main": false
+          },
+          {
+            "name": "치즈오븐스파게티",
+            "price": 6900,
+            "main": true
+          },
+          {
+            "name": "치킨스틱&윙",
+            "price": 6900,
+            "main": false
+          },
+          {
+            "name": "치킨텐더",
+            "price": 5900,
+            "main": false
+          },
+          {
+            "name": "새우링",
+            "price": 5900,
+            "main": false
+          },
+          {
+            "name": "트러플포테이토스틱",
+            "price": 4900,
+            "main": false
+          },
+          {
+            "name": "갈릭포테이토",
+            "price": 4900,
+            "main": false
+          },
+          {
+            "name": "크림치즈볼",
+            "price": 4900,
+            "main": false
+          },
+          {
+            "name": "할라피뇨",
+            "price": 500,
+            "main": false
+          },
+          {
+            "name": "스리라차마요소스",
+            "price": 500,
+            "main": false
+          }
+        ]
+      },
+      "hours": {
+        "status": "confirmed",
+        "sourceIds": [
+          "naver-hours"
+        ],
+        "note": "매장 게시값을 확인했습니다.",
+        "value": [
+          {
+            "days": [
+              "월",
+              "수",
+              "목",
+              "금"
+            ],
+            "open": "10:00",
+            "close": "23:30"
+          },
+          {
+            "days": [
+              "토",
+              "일"
+            ],
+            "open": "10:00",
+            "close": "24:00"
+          }
+        ]
+      }
+    },
+    "unknownFields": [
+      "mealType",
+      "takeout",
+      "verifiedAt",
+      "verifiedBy",
+      "break",
+      "lastOrder"
+    ],
+    "notes": [
+      "500원 추가소스 2종 제외.",
+      "영업시간 원문: 월수목금10:00-23:30; 토일10:00-24:00; 화 정기휴무",
+      "원본 관찰은 front_sangdae_more.json. main은 1인 식사 예산용 분류이며 공유 피자는 false로 보수적으로 표시.",
+      "전체메뉴 보정: 공개 메뉴탭에서 확인한 소스·피클 가격은 front_menu_supplements.json에 별도 근거 보존. main=false로 추가.",
+      "병합 입력: front_more_normalized_manifest.json",
+      "공개 네이버 화면 관찰이며 현장 검증이 아닙니다."
+    ]
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "version": 1,
+  "id": "p_0012",
+  "name": "전돼지",
+  "category": "고기",
+  "lat": 35.172388,
+  "lng": 126.906275,
+  "address": "전남광주통합특별시 북구 용봉로 88",
+  "source": "semas",
+  "sourceId": "MA010120220806569003",
+  "sourceStatus": "active",
+  "attrs": {
+    "status": "partial"
+  },
+  "research": {
+    "identityStatus": "matched",
+    "queries": [
+      "\"전돼지\" \"용봉로\""
+    ],
+    "sources": [
+      {
+        "id": "s1",
+        "url": "https://dining.ayo.pe.kr/restaurant/0d5757c330f70090c336a402c8c29d38",
+        "title": "전돼지 인허가 정보",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "상호·주소 일치"
+      }
+    ],
+    "facts": {
+      "menus": {
+        "status": "unconfirmed",
+        "value": [],
+        "sourceIds": [],
+        "note": "매장별 메뉴·가격을 확인하지 못함."
+      },
+      "hours": {
+        "status": "unconfirmed",
+        "value": [],
+        "sourceIds": [],
+        "note": "요일별 영업시간을 확인하지 못함."
+      }
+    },
+    "notes": [
+      "용봉로88 2층 전돼지 인허가만 확인. 1층 술돼지 메뉴를 복사하지 않음."
+    ],
+    "checkedAt": "2026-11-11",
+    "method": "web",
+    "unknownFields": [
+      "menus",
+      "hours",
+      "mealType",
+      "takeout",
+      "verifiedAt",
+      "verifiedBy",
+      "break",
+      "lastOrder"
+    ]
+  },
+  "availability": {
+    "status": "excluded",
+    "provider": "naver",
+    "checkedAt": "2026-11-11",
+    "sourceUrl": "https://map.naver.com/p/search/%EC%A0%84%EB%82%A8%EB%8C%80%20%EC%9D%8C%EC%8B%9D%EC%A0%90",
+    "naverPlaceId": null,
+    "observedName": "",
+    "observedAddress": "",
+    "district": null,
+    "addressVerified": false,
+    "nearby": false,
+    "reason": "네이버 지도에서 확인한 네 식당가 명단에 포함되지 않아 제외"
+  }
+}

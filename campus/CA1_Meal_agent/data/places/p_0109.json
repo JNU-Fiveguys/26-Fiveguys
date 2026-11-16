@@ -1,0 +1,396 @@
+{
+  "version": 1,
+  "id": "p_0109",
+  "source": "team",
+  "sourceId": "naver:21519977",
+  "name": "한우촌",
+  "address": "전남광주 북구 용주로30번길 36",
+  "category": "한식",
+  "lat": 35.1806777559145,
+  "lng": 126.902829236478,
+  "sourceStatus": "active",
+  "availability": {
+    "status": "listed",
+    "provider": "naver",
+    "checkedAt": "2026-11-11",
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/21519977/home?fromPanelNum=1&additionalHeight=76&timestamp=202611112342&locale=ko&svcName=map_pcv5&searchText=%ED%95%9C%EC%9A%B0%EC%B4%8C%20%EA%B4%91%EC%A3%BC%20%EC%9A%A9%EC%A3%BC%EB%A1%9C30%EB%B2%88%EA%B8%B8",
+    "naverPlaceId": "21519977",
+    "observedName": "한우촌",
+    "observedAddress": "전남광주 북구 용주로30번길 36",
+    "district": "예대",
+    "addressVerified": true,
+    "nearby": true,
+    "reason": "공개 네이버 지도에서 동일 주소의 전남대 예대 식당으로 확인"
+  },
+  "menuObservation": {
+    "status": "confirmed",
+    "priceContext": "in_store",
+    "checkedAt": "2026-11-12",
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/21519977/menu/list",
+    "menus": [
+      {
+        "name": "꽃살(180g)",
+        "price": 28000,
+        "main": true
+      },
+      {
+        "name": "갈비살(180g)",
+        "price": 28000,
+        "main": true
+      },
+      {
+        "name": "꽃등심(180g)",
+        "price": 30000,
+        "main": true
+      },
+      {
+        "name": "생고기(180g)",
+        "price": 24000,
+        "main": true
+      },
+      {
+        "name": "차돌박이(180g)",
+        "price": 18000,
+        "main": true
+      },
+      {
+        "name": "육회 소",
+        "price": 25000,
+        "main": false
+      },
+      {
+        "name": "육회 중",
+        "price": 35000,
+        "main": false
+      },
+      {
+        "name": "육회 대",
+        "price": 45000,
+        "main": false
+      },
+      {
+        "name": "생삼겹(180g)",
+        "price": 13000,
+        "main": true
+      },
+      {
+        "name": "대패삼겹(180g)",
+        "price": 13000,
+        "main": true
+      },
+      {
+        "name": "목살(180g)",
+        "price": 13000,
+        "main": true
+      },
+      {
+        "name": "주물럭 소",
+        "price": 20000,
+        "main": false
+      },
+      {
+        "name": "주물럭 중",
+        "price": 30000,
+        "main": false
+      },
+      {
+        "name": "주물럭 대",
+        "price": 40000,
+        "main": false
+      },
+      {
+        "name": "애호박찌개",
+        "price": 8000,
+        "main": true
+      },
+      {
+        "name": "김치찌개",
+        "price": 8000,
+        "main": true
+      },
+      {
+        "name": "갈비탕",
+        "price": 9000,
+        "main": true
+      },
+      {
+        "name": "생·익비빔밥",
+        "price": 10000,
+        "main": true
+      },
+      {
+        "name": "육개장",
+        "price": 9000,
+        "main": true
+      },
+      {
+        "name": "된장찌개",
+        "price": 8000,
+        "main": true
+      },
+      {
+        "name": "냉면",
+        "price": 7000,
+        "main": true
+      },
+      {
+        "name": "누룽지",
+        "price": 2000,
+        "main": false
+      },
+      {
+        "name": "음료수",
+        "price": 2000,
+        "main": false
+      }
+    ],
+    "note": "공개 매장 메뉴판에 읽히는 이름·가격만 반영. 공유 분량과 사이드 메뉴를 임의로 1인 식사로 환산하지 않음. 메뉴판: https://ldb-phinf.pstatic.net/20260415_36/17762253744555Nqsz_JPEG/1776225359382.jpg"
+  },
+  "attrs": {
+    "status": "partial",
+    "menus": [
+      {
+        "name": "꽃살(180g)",
+        "price": 28000,
+        "main": false
+      },
+      {
+        "name": "갈비살(180g)",
+        "price": 28000,
+        "main": false
+      },
+      {
+        "name": "꽃등심(180g)",
+        "price": 30000,
+        "main": false
+      },
+      {
+        "name": "생고기(180g)",
+        "price": 24000,
+        "main": false
+      },
+      {
+        "name": "차돌박이(180g)",
+        "price": 18000,
+        "main": false
+      },
+      {
+        "name": "육회 소",
+        "price": 25000,
+        "main": false
+      },
+      {
+        "name": "육회 중",
+        "price": 35000,
+        "main": false
+      },
+      {
+        "name": "육회 대",
+        "price": 45000,
+        "main": false
+      },
+      {
+        "name": "생삼겹(180g)",
+        "price": 13000,
+        "main": false
+      },
+      {
+        "name": "대패삼겹(180g)",
+        "price": 13000,
+        "main": false
+      },
+      {
+        "name": "목살(180g)",
+        "price": 13000,
+        "main": false
+      },
+      {
+        "name": "주물럭 소",
+        "price": 20000,
+        "main": false
+      },
+      {
+        "name": "주물럭 중",
+        "price": 30000,
+        "main": false
+      },
+      {
+        "name": "주물럭 대",
+        "price": 40000,
+        "main": false
+      },
+      {
+        "name": "애호박찌개",
+        "price": 8000,
+        "main": true
+      },
+      {
+        "name": "김치찌개",
+        "price": 8000,
+        "main": true
+      },
+      {
+        "name": "갈비탕",
+        "price": 9000,
+        "main": true
+      },
+      {
+        "name": "생·익비빔밥",
+        "price": 10000,
+        "main": true
+      },
+      {
+        "name": "육개장",
+        "price": 9000,
+        "main": true
+      },
+      {
+        "name": "된장찌개",
+        "price": 8000,
+        "main": true
+      },
+      {
+        "name": "냉면",
+        "price": 7000,
+        "main": true
+      },
+      {
+        "name": "누룽지",
+        "price": 2000,
+        "main": false
+      },
+      {
+        "name": "음료수",
+        "price": 2000,
+        "main": false
+      }
+    ],
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금",
+          "토"
+        ],
+        "open": "11:30",
+        "close": "21:30",
+        "break": {
+          "start": "14:00",
+          "end": "17:00"
+        }
+      }
+    ]
+  },
+  "hoursObservation": {
+    "sourceUrl": "https://place.map.kakao.com/15777781",
+    "checkedAt": "2026-11-12",
+    "status": "confirmed",
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금",
+          "토"
+        ],
+        "open": "11:30",
+        "close": "21:30",
+        "break": {
+          "start": "14:00",
+          "end": "17:00"
+        }
+      }
+    ],
+    "note": "동일 상호·도로명 건물번호의 카카오맵 영업정보. 매주 요일별 영업/휴무와 게시된 브레이크만 반영. 배달업체 제공 시간은 제외.",
+    "placeSourceUrl": "https://pcmap.place.naver.com/restaurant/21519977/home",
+    "sourceAddress": "전남광주통합특별시 북구 용주로30번길 36",
+    "hoursContext": "in_store"
+  },
+  "research": {
+    "checkedAt": "2026-11-11",
+    "method": "web",
+    "identityStatus": "matched",
+    "queries": [
+      "한우촌 전남광주 북구 용주로30번길 36"
+    ],
+    "sources": [
+      {
+        "id": "naver-place",
+        "url": "https://pcmap.place.naver.com/restaurant/21519977/home?fromPanelNum=1&additionalHeight=76&timestamp=202611112342&locale=ko&svcName=map_pcv5&searchText=%ED%95%9C%EC%9A%B0%EC%B4%8C%20%EA%B4%91%EC%A3%BC%20%EC%9A%A9%EC%A3%BC%EB%A1%9C30%EB%B2%88%EA%B8%B8",
+        "title": "한우촌 네이버 지도",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "같은 주소의 지점 확인. 지도 등록 확인은 실시간 영업 중 보증이 아님"
+      },
+      {
+        "id": "naver-menu",
+        "url": "https://pcmap.place.naver.com/restaurant/21519977/menu?fromPanelNum=1&additionalHeight=76&timestamp=202611112342&locale=ko&svcName=map_pcv5&searchText=%ED%95%9C%EC%9A%B0%EC%B4%8C%20%EA%B4%91%EC%A3%BC%20%EC%9A%A9%EC%A3%BC%EB%A1%9C30%EB%B2%88%EA%B8%B8",
+        "title": "한우촌 메뉴 탭",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "가격 맥락: in_store"
+      },
+      {
+        "id": "naver-hours",
+        "url": "https://pcmap.place.naver.com/restaurant/21519977/home?fromPanelNum=1&additionalHeight=76&timestamp=202611112342&locale=ko&svcName=map_pcv5&searchText=%ED%95%9C%EC%9A%B0%EC%B4%8C%20%EA%B4%91%EC%A3%BC%20%EC%9A%A9%EC%A3%BC%EB%A1%9C30%EB%B2%88%EA%B8%B8",
+        "title": "한우촌 영업시간",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "게시된 요일별 영업시간. 미확인은 추정하지 않음"
+      }
+    ],
+    "facts": {
+      "menus": {
+        "status": "unconfirmed",
+        "sourceIds": [],
+        "note": "매장 기준 정보 미확인. 배달·가격 맥락 불명 자료는 확정하지 않습니다."
+      },
+      "hours": {
+        "status": "unconfirmed",
+        "sourceIds": [],
+        "note": "매장 기준 정보 미확인. 배달·가격 맥락 불명 자료는 확정하지 않습니다."
+      }
+    },
+    "unknownFields": [
+      "menus",
+      "hours",
+      "mealType",
+      "takeout",
+      "verifiedAt",
+      "verifiedBy",
+      "break",
+      "lastOrder"
+    ],
+    "notes": [
+      "네이버 공개 지도 상세·메뉴 탭 직접 확인.",
+      "고기 단위 가격·공유 탕/조림 메뉴는 1인 식사 가격으로 확정할 수 없어 main=false로 보존.",
+      "메뉴 탭에 게시된 전체 텍스트 메뉴 기준. 메뉴판 이미지 전체와 대조한 것은 아님.",
+      "원문 메뉴명·가격은 모두 보존. 가격 변동은 price=null 및 priceText로 기록.",
+      "학교 출입구에서 실제 도보 10분 이내 여부는 별도 경로 감사 대상이며 이 파일에서 거리나 소요시간을 추정하지 않음.",
+      "원문 영업시간은 rear_art_batch6.json에 보관. 미게시 영업시간·브레이크·라스트오더는 임의로 채우지 않음.",
+      "병합 입력: rear_art_batch6_manifest.json",
+      "공개 네이버 화면 관찰이며 현장 검증이 아닙니다."
+    ]
+  },
+  "followupReview": {
+    "checkedAt": "2026-11-12",
+    "reasons": [
+      "공개 매장 식사 가격과 요일별 영업시간을 연결하여 추천 대상으로 전환했습니다."
+    ],
+    "sources": [
+      "https://pcmap.place.naver.com/restaurant/21519977/home",
+      "https://pcmap.place.naver.com/restaurant/21519977/menu/list",
+      "https://ldb-phinf.pstatic.net/20260415_36/17762253744555Nqsz_JPEG/1776225359382.jpg",
+      "https://place.map.kakao.com/15777781",
+      "https://pcmap.place.naver.com/restaurant/21519977/menu?fromPanelNum=1&additionalHeight=76&timestamp=202611112342&locale=ko&svcName=map_pcv5&searchText=%ED%95%9C%EC%9A%B0%EC%B4%8C%20%EA%B4%91%EC%A3%BC%20%EC%9A%A9%EC%A3%BC%EB%A1%9C30%EB%B2%88%EA%B8%B8"
+    ]
+  }
+}

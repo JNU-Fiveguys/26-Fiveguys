@@ -1,0 +1,805 @@
+{
+  "version": 1,
+  "id": "p_0111",
+  "source": "team",
+  "sourceId": "naver:33022542",
+  "name": "로니로티 전남대점",
+  "address": "전남광주 북구 호동로15번길 13 로니로티",
+  "category": "양식",
+  "lat": 35.1757559373618,
+  "lng": 126.914219115696,
+  "sourceStatus": "active",
+  "availability": {
+    "status": "listed",
+    "provider": "naver",
+    "checkedAt": "2026-11-11",
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/33022542/home",
+    "naverPlaceId": "33022542",
+    "observedName": "로니로티 전남대점",
+    "observedAddress": "전남광주 북구 호동로15번길 13 로니로티",
+    "district": "후문",
+    "addressVerified": true,
+    "nearby": true,
+    "reason": "공개 네이버 지도에서 동일 주소의 전남대 후문 식당으로 확인"
+  },
+  "menuObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/33022542/menu",
+    "checkedAt": "2026-11-11",
+    "priceContext": "in_store",
+    "menus": [
+      {
+        "name": "🧡목살 스테이크 샐러드S",
+        "price": 16900,
+        "main": true
+      },
+      {
+        "name": "🧡시금치피자",
+        "price": 17900,
+        "main": false
+      },
+      {
+        "name": "갈릭삼겹살스테이크 S",
+        "price": 15900,
+        "main": true
+      },
+      {
+        "name": "함박스테이크 S (1피스)",
+        "price": 15900,
+        "main": true
+      },
+      {
+        "name": "알리오올리오 S",
+        "price": 7900,
+        "main": true
+      },
+      {
+        "name": "봉골레S",
+        "price": 7900,
+        "main": true
+      },
+      {
+        "name": "바질파스타 S",
+        "price": 8900,
+        "main": true
+      },
+      {
+        "name": "상하이파스타 S",
+        "price": 9900,
+        "main": true
+      },
+      {
+        "name": "오이스터크림파스타 S(치킨/베이컨)",
+        "price": 11900,
+        "main": true
+      },
+      {
+        "name": "치킨크림파스타 S",
+        "price": 10900,
+        "main": true
+      },
+      {
+        "name": "베이컨까르보나라 S",
+        "price": 10900,
+        "main": true
+      },
+      {
+        "name": "해산물토마토파스타 S",
+        "price": 10900,
+        "main": true
+      },
+      {
+        "name": "로제쉬림프파스타 S",
+        "price": 12900,
+        "main": true
+      },
+      {
+        "name": "눈꽃치즈볼로네제 S",
+        "price": 15900,
+        "main": true
+      },
+      {
+        "name": "해산물야끼필라프 S",
+        "price": 11900,
+        "main": true
+      },
+      {
+        "name": "새우필라프 S",
+        "price": 9900,
+        "main": true
+      },
+      {
+        "name": "김치필라프 S",
+        "price": 8900,
+        "main": true
+      },
+      {
+        "name": "삼겹살 필라프 S",
+        "price": 10900,
+        "main": true
+      },
+      {
+        "name": "목살필라프 S",
+        "price": 10900,
+        "main": true
+      },
+      {
+        "name": "함박스테이크리조또 S",
+        "price": 15900,
+        "main": true
+      },
+      {
+        "name": "오이스터크림리조또S (치킨/베이컨)",
+        "price": 11900,
+        "main": true
+      },
+      {
+        "name": "치킨크림리조또 S",
+        "price": 10900,
+        "main": true
+      },
+      {
+        "name": "해산물토마토리조또 S",
+        "price": 10900,
+        "main": true
+      },
+      {
+        "name": "상하이리조또 S",
+        "price": 9900,
+        "main": true
+      },
+      {
+        "name": "베이커크림리조또 S",
+        "price": 10900,
+        "main": true
+      },
+      {
+        "name": "김치불고기팬치즈리조또",
+        "price": 17900,
+        "main": false
+      },
+      {
+        "name": "고르곤졸라피자",
+        "price": 14900,
+        "main": false
+      },
+      {
+        "name": "마르게리타피자",
+        "price": 14900,
+        "main": false
+      },
+      {
+        "name": "디아볼라피자",
+        "price": 16900,
+        "main": false
+      },
+      {
+        "name": "화와이언피자",
+        "price": 16900,
+        "main": false
+      },
+      {
+        "name": "불고기피자",
+        "price": 16900,
+        "main": false
+      },
+      {
+        "name": "훈제연어샐러드",
+        "price": 13900,
+        "main": false
+      },
+      {
+        "name": "리코타치즈샐러드",
+        "price": 12900,
+        "main": false
+      },
+      {
+        "name": "치킨털더샐러드",
+        "price": 11900,
+        "main": false
+      },
+      {
+        "name": "허니버터감자튀김",
+        "price": 4900,
+        "main": false
+      },
+      {
+        "name": "버팔로윙봉샐러드",
+        "price": 12900,
+        "main": false
+      },
+      {
+        "name": "추가샐러드",
+        "price": 6900,
+        "main": false
+      },
+      {
+        "name": "상하이짬뽕",
+        "price": 9900,
+        "main": true
+      },
+      {
+        "name": "크림짬뽕",
+        "price": 12900,
+        "main": true
+      },
+      {
+        "name": "로제짬뽕",
+        "price": 12900,
+        "main": true
+      },
+      {
+        "name": "해물쟁반짜장(1.5인)",
+        "price": 14900,
+        "main": false
+      },
+      {
+        "name": "깐풍왕군만두(3개)",
+        "price": 5500,
+        "main": false
+      }
+    ],
+    "note": "메뉴 상태: confirmed. 원본 관찰·좌표 출처는 적용 manifest에 보관합니다.",
+    "status": "confirmed"
+  },
+  "attrs": {
+    "status": "partial",
+    "menus": [
+      {
+        "name": "🧡목살 스테이크 샐러드S",
+        "price": 16900,
+        "main": true
+      },
+      {
+        "name": "🧡시금치피자",
+        "price": 17900,
+        "main": false
+      },
+      {
+        "name": "갈릭삼겹살스테이크 S",
+        "price": 15900,
+        "main": true
+      },
+      {
+        "name": "함박스테이크 S (1피스)",
+        "price": 15900,
+        "main": true
+      },
+      {
+        "name": "알리오올리오 S",
+        "price": 7900,
+        "main": true
+      },
+      {
+        "name": "봉골레S",
+        "price": 7900,
+        "main": true
+      },
+      {
+        "name": "바질파스타 S",
+        "price": 8900,
+        "main": true
+      },
+      {
+        "name": "상하이파스타 S",
+        "price": 9900,
+        "main": true
+      },
+      {
+        "name": "오이스터크림파스타 S(치킨/베이컨)",
+        "price": 11900,
+        "main": true
+      },
+      {
+        "name": "치킨크림파스타 S",
+        "price": 10900,
+        "main": true
+      },
+      {
+        "name": "베이컨까르보나라 S",
+        "price": 10900,
+        "main": true
+      },
+      {
+        "name": "해산물토마토파스타 S",
+        "price": 10900,
+        "main": true
+      },
+      {
+        "name": "로제쉬림프파스타 S",
+        "price": 12900,
+        "main": true
+      },
+      {
+        "name": "눈꽃치즈볼로네제 S",
+        "price": 15900,
+        "main": true
+      },
+      {
+        "name": "해산물야끼필라프 S",
+        "price": 11900,
+        "main": true
+      },
+      {
+        "name": "새우필라프 S",
+        "price": 9900,
+        "main": true
+      },
+      {
+        "name": "김치필라프 S",
+        "price": 8900,
+        "main": true
+      },
+      {
+        "name": "삼겹살 필라프 S",
+        "price": 10900,
+        "main": true
+      },
+      {
+        "name": "목살필라프 S",
+        "price": 10900,
+        "main": true
+      },
+      {
+        "name": "함박스테이크리조또 S",
+        "price": 15900,
+        "main": true
+      },
+      {
+        "name": "오이스터크림리조또S (치킨/베이컨)",
+        "price": 11900,
+        "main": true
+      },
+      {
+        "name": "치킨크림리조또 S",
+        "price": 10900,
+        "main": true
+      },
+      {
+        "name": "해산물토마토리조또 S",
+        "price": 10900,
+        "main": true
+      },
+      {
+        "name": "상하이리조또 S",
+        "price": 9900,
+        "main": true
+      },
+      {
+        "name": "베이커크림리조또 S",
+        "price": 10900,
+        "main": true
+      },
+      {
+        "name": "김치불고기팬치즈리조또",
+        "price": 17900,
+        "main": false
+      },
+      {
+        "name": "고르곤졸라피자",
+        "price": 14900,
+        "main": false
+      },
+      {
+        "name": "마르게리타피자",
+        "price": 14900,
+        "main": false
+      },
+      {
+        "name": "디아볼라피자",
+        "price": 16900,
+        "main": false
+      },
+      {
+        "name": "화와이언피자",
+        "price": 16900,
+        "main": false
+      },
+      {
+        "name": "불고기피자",
+        "price": 16900,
+        "main": false
+      },
+      {
+        "name": "훈제연어샐러드",
+        "price": 13900,
+        "main": false
+      },
+      {
+        "name": "리코타치즈샐러드",
+        "price": 12900,
+        "main": false
+      },
+      {
+        "name": "치킨털더샐러드",
+        "price": 11900,
+        "main": false
+      },
+      {
+        "name": "허니버터감자튀김",
+        "price": 4900,
+        "main": false
+      },
+      {
+        "name": "버팔로윙봉샐러드",
+        "price": 12900,
+        "main": false
+      },
+      {
+        "name": "추가샐러드",
+        "price": 6900,
+        "main": false
+      },
+      {
+        "name": "상하이짬뽕",
+        "price": 9900,
+        "main": true
+      },
+      {
+        "name": "크림짬뽕",
+        "price": 12900,
+        "main": true
+      },
+      {
+        "name": "로제짬뽕",
+        "price": 12900,
+        "main": true
+      },
+      {
+        "name": "해물쟁반짜장(1.5인)",
+        "price": 14900,
+        "main": false
+      },
+      {
+        "name": "깐풍왕군만두(3개)",
+        "price": 5500,
+        "main": false
+      }
+    ],
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금",
+          "토",
+          "일"
+        ],
+        "open": "11:00",
+        "close": "21:00",
+        "lastOrder": "20:20",
+        "break": {
+          "start": "15:30",
+          "end": "17:00"
+        }
+      }
+    ]
+  },
+  "hoursObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/33022542/home",
+    "checkedAt": "2026-11-11",
+    "status": "confirmed",
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금",
+          "토",
+          "일"
+        ],
+        "open": "11:00",
+        "close": "21:00",
+        "lastOrder": "20:20",
+        "break": {
+          "start": "15:30",
+          "end": "17:00"
+        }
+      }
+    ],
+    "note": "매장 영업시간 관찰. 기존 attrs/research를 덮어쓰지 않습니다."
+  },
+  "research": {
+    "checkedAt": "2026-11-11",
+    "method": "web",
+    "identityStatus": "matched",
+    "queries": [
+      "로니로티 전남대점 전남광주 북구 호동로15번길 13 로니로티"
+    ],
+    "sources": [
+      {
+        "id": "naver-place",
+        "url": "https://pcmap.place.naver.com/restaurant/33022542/home",
+        "title": "로니로티 전남대점 네이버 지도",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "같은 주소의 지점 확인. 지도 등록 확인은 실시간 영업 중 보증이 아님"
+      },
+      {
+        "id": "naver-menu",
+        "url": "https://pcmap.place.naver.com/restaurant/33022542/menu",
+        "title": "로니로티 전남대점 메뉴 탭",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "가격 맥락: in_store"
+      },
+      {
+        "id": "naver-hours",
+        "url": "https://pcmap.place.naver.com/restaurant/33022542/home",
+        "title": "로니로티 전남대점 영업시간",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "게시된 요일별 영업시간. 미확인은 추정하지 않음"
+      }
+    ],
+    "facts": {
+      "menus": {
+        "status": "confirmed",
+        "sourceIds": [
+          "naver-menu"
+        ],
+        "note": "매장 게시값을 확인했습니다.",
+        "value": [
+          {
+            "name": "🧡목살 스테이크 샐러드S",
+            "price": 16900,
+            "main": true
+          },
+          {
+            "name": "🧡시금치피자",
+            "price": 17900,
+            "main": false
+          },
+          {
+            "name": "갈릭삼겹살스테이크 S",
+            "price": 15900,
+            "main": true
+          },
+          {
+            "name": "함박스테이크 S (1피스)",
+            "price": 15900,
+            "main": true
+          },
+          {
+            "name": "알리오올리오 S",
+            "price": 7900,
+            "main": true
+          },
+          {
+            "name": "봉골레S",
+            "price": 7900,
+            "main": true
+          },
+          {
+            "name": "바질파스타 S",
+            "price": 8900,
+            "main": true
+          },
+          {
+            "name": "상하이파스타 S",
+            "price": 9900,
+            "main": true
+          },
+          {
+            "name": "오이스터크림파스타 S(치킨/베이컨)",
+            "price": 11900,
+            "main": true
+          },
+          {
+            "name": "치킨크림파스타 S",
+            "price": 10900,
+            "main": true
+          },
+          {
+            "name": "베이컨까르보나라 S",
+            "price": 10900,
+            "main": true
+          },
+          {
+            "name": "해산물토마토파스타 S",
+            "price": 10900,
+            "main": true
+          },
+          {
+            "name": "로제쉬림프파스타 S",
+            "price": 12900,
+            "main": true
+          },
+          {
+            "name": "눈꽃치즈볼로네제 S",
+            "price": 15900,
+            "main": true
+          },
+          {
+            "name": "해산물야끼필라프 S",
+            "price": 11900,
+            "main": true
+          },
+          {
+            "name": "새우필라프 S",
+            "price": 9900,
+            "main": true
+          },
+          {
+            "name": "김치필라프 S",
+            "price": 8900,
+            "main": true
+          },
+          {
+            "name": "삼겹살 필라프 S",
+            "price": 10900,
+            "main": true
+          },
+          {
+            "name": "목살필라프 S",
+            "price": 10900,
+            "main": true
+          },
+          {
+            "name": "함박스테이크리조또 S",
+            "price": 15900,
+            "main": true
+          },
+          {
+            "name": "오이스터크림리조또S (치킨/베이컨)",
+            "price": 11900,
+            "main": true
+          },
+          {
+            "name": "치킨크림리조또 S",
+            "price": 10900,
+            "main": true
+          },
+          {
+            "name": "해산물토마토리조또 S",
+            "price": 10900,
+            "main": true
+          },
+          {
+            "name": "상하이리조또 S",
+            "price": 9900,
+            "main": true
+          },
+          {
+            "name": "베이커크림리조또 S",
+            "price": 10900,
+            "main": true
+          },
+          {
+            "name": "김치불고기팬치즈리조또",
+            "price": 17900,
+            "main": false
+          },
+          {
+            "name": "고르곤졸라피자",
+            "price": 14900,
+            "main": false
+          },
+          {
+            "name": "마르게리타피자",
+            "price": 14900,
+            "main": false
+          },
+          {
+            "name": "디아볼라피자",
+            "price": 16900,
+            "main": false
+          },
+          {
+            "name": "화와이언피자",
+            "price": 16900,
+            "main": false
+          },
+          {
+            "name": "불고기피자",
+            "price": 16900,
+            "main": false
+          },
+          {
+            "name": "훈제연어샐러드",
+            "price": 13900,
+            "main": false
+          },
+          {
+            "name": "리코타치즈샐러드",
+            "price": 12900,
+            "main": false
+          },
+          {
+            "name": "치킨털더샐러드",
+            "price": 11900,
+            "main": false
+          },
+          {
+            "name": "허니버터감자튀김",
+            "price": 4900,
+            "main": false
+          },
+          {
+            "name": "버팔로윙봉샐러드",
+            "price": 12900,
+            "main": false
+          },
+          {
+            "name": "추가샐러드",
+            "price": 6900,
+            "main": false
+          },
+          {
+            "name": "상하이짬뽕",
+            "price": 9900,
+            "main": true
+          },
+          {
+            "name": "크림짬뽕",
+            "price": 12900,
+            "main": true
+          },
+          {
+            "name": "로제짬뽕",
+            "price": 12900,
+            "main": true
+          },
+          {
+            "name": "해물쟁반짜장(1.5인)",
+            "price": 14900,
+            "main": false
+          },
+          {
+            "name": "깐풍왕군만두(3개)",
+            "price": 5500,
+            "main": false
+          }
+        ]
+      },
+      "hours": {
+        "status": "confirmed",
+        "sourceIds": [
+          "naver-hours"
+        ],
+        "note": "매장 게시값을 확인했습니다.",
+        "value": [
+          {
+            "days": [
+              "월",
+              "화",
+              "수",
+              "목",
+              "금",
+              "토",
+              "일"
+            ],
+            "open": "11:00",
+            "close": "21:00",
+            "lastOrder": "20:20",
+            "break": {
+              "start": "15:30",
+              "end": "17:00"
+            }
+          }
+        ]
+      }
+    },
+    "unknownFields": [
+      "mealType",
+      "takeout",
+      "verifiedAt",
+      "verifiedBy"
+    ],
+    "notes": [
+      "네이버 공개 지도 상세·메뉴 탭 직접 확인.",
+      "S 표기의 개별 파스타·필라프·리조또·스테이크 및 단품 짬뽕을 대표 식사 후보로 분류. 피자·공유짜장·사이드·샐러드와 인원 불명 메뉴는 main=false.",
+      "전체 공개 메뉴 탭의 메뉴명·가격을 보존. 가격 범위·변동은 price=null 및 priceText로 보관.",
+      "출입구에서 실제 도보 10분 이내 여부는 별도 OSM 경로 감사 대기. 이 파일의 주소 좌표 일치가 거리 통과를 의미하지 않음.",
+      "영업시간 원문은 rear_batch7.json에 보존. 확인되지 않은 브레이크·라스트오더는 생성하지 않음.",
+      "병합 입력: rear_batch7_manifest.json",
+      "공개 네이버 화면 관찰이며 현장 검증이 아닙니다."
+    ]
+  }
+}

@@ -99,6 +99,40 @@ def test_sync_records_and_reconciles(fake_collect, db):
     assert db.execute("SELECT COUNT(*) FROM items").fetchone()[0] == 1
 
 
+def test_partial_attachment_success_reconciles_and_reaches_status(fake_collect, db, monkeypatch):
+    from eclass import collect, jobs
+    runner, codes = fake_collect
+    codes += [0]
+    original = collect.run
+
+    def run(**kwargs):
+        result = original(**kwargs)
+        result.partial = True
+        result.warnings = ["첨부파일 2건은 다음 동기화에서 다시 시도합니다."]
+        result.counts.update(attachmentFailures=1, attachmentPending=2)
+        return result
+
+    monkeypatch.setattr(collect, "run", run)
+    monkeypatch.setattr(jobs, "_sync", {"running": False, "started_at": None, "finished_at": None, "exit_code": None})
+    record = runner.run_once("button")
+    assert record["exit_code"] == 0 and record["partial"] and record["error"] is None
+    assert record["ledger"]["new"] == 1 and db.execute("SELECT COUNT(*) FROM items").fetchone()[0] == 1
+    status = jobs.sync_state()
+    assert status["partial"] and status["warnings"] == record["warnings"]
+    assert status["counts"]["attachmentPending"] == 2 and status["errorKind"] is None
+
+
+def test_timeout_kind_reaches_status_without_private_error(state, monkeypatch):
+    from eclass import collect, jobs, runner
+    monkeypatch.setattr(collect, "run", lambda **kw: collect.Result(
+        C.EXIT_NETWORK, error="e클래스 요청 시간이 초과되었습니다.", error_kind="timeout"))
+    monkeypatch.setattr(jobs, "_sync", {"running": False, "started_at": None, "finished_at": None, "exit_code": None})
+    record = runner.run_once("button")
+    status = jobs.sync_state()
+    assert record["errorKind"] == status["errorKind"] == "timeout"
+    assert status["exit_code"] == 4 and not status["partial"] and status["warnings"] == []
+
+
 def test_tick_retries_network_errors_then_succeeds(fake_collect):
     runner, codes = fake_collect
     codes += [4, 4, 0]

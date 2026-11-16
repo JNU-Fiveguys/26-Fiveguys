@@ -1,0 +1,110 @@
+{
+  "version": 1,
+  "id": "p_0074",
+  "name": "나정오리꽃날개",
+  "category": "분식",
+  "lat": 35.182261,
+  "lng": 126.909876,
+  "address": "전남광주통합특별시 북구 우치로 172",
+  "source": "semas",
+  "sourceId": "MA0101202409A0003854",
+  "sourceStatus": "active",
+  "attrs": {
+    "status": "partial",
+    "menus": [
+      {
+        "name": "오리날개튀김 반반 (3~4인분)",
+        "price": 26000,
+        "main": true
+      },
+      {
+        "name": "오리날개튀김 (3~4인분)",
+        "price": 25000,
+        "main": true
+      },
+      {
+        "name": "오리날개훈제 (3~4인분)",
+        "price": 25000,
+        "main": true
+      }
+    ]
+  },
+  "research": {
+    "identityStatus": "matched",
+    "queries": [
+      "\"나정오리꽃날개\" 메뉴 영업시간",
+      "\"나정 오리꽃날개튀김\" \"전대점\""
+    ],
+    "sources": [
+      {
+        "id": "s1",
+        "url": "https://www.diningcode.com/profile.php?rid=IKLvAF7gBrYo",
+        "title": "나정 오리꽃날개튀김 전대점 매장 정보",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "상호와 도로명 주소를 대조함. URL을 직접 열어 주소와 본문을 확인함."
+      }
+    ],
+    "facts": {
+      "menus": {
+        "status": "confirmed",
+        "value": [
+          {
+            "name": "오리날개튀김 반반 (3~4인분)",
+            "price": 26000,
+            "main": true
+          },
+          {
+            "name": "오리날개튀김 (3~4인분)",
+            "price": 25000,
+            "main": true
+          },
+          {
+            "name": "오리날개훈제 (3~4인분)",
+            "price": 25000,
+            "main": true
+          }
+        ],
+        "sourceIds": [
+          "s1"
+        ],
+        "note": "지점 메뉴란 현재 게시 가격. 모두 3~4인분이며 1인 식사가격으로 환산하지 않음. 과거 후기의 22,000원과 차이가 있어 결제 채널·용량 재확인 필요."
+      },
+      "hours": {
+        "status": "partial",
+        "sourceIds": [
+          "s1"
+        ],
+        "note": "매일 14:00~다음 날 00:00, 마지막 주문 23:00 게시. 자정 종료 표기를 구조값으로 강제 변환하지 않고 확인 내용만 보관."
+      }
+    },
+    "notes": [
+      "2025년과 최근 방문 후기에서 포장/배달 전용·매장 식사 불가 언급. 매장식사 태그와 상충하므로 현장 취식 가능 여부 확인 필요."
+    ],
+    "checkedAt": "2026-11-11",
+    "method": "web",
+    "unknownFields": [
+      "hours",
+      "mealType",
+      "takeout",
+      "verifiedAt",
+      "verifiedBy",
+      "break",
+      "lastOrder"
+    ]
+  },
+  "availability": {
+    "status": "excluded",
+    "provider": "naver",
+    "checkedAt": "2026-11-11",
+    "sourceUrl": "https://map.naver.com/p/search/%EC%A0%84%EB%82%A8%EB%8C%80%20%EC%9D%8C%EC%8B%9D%EC%A0%90",
+    "naverPlaceId": null,
+    "observedName": "",
+    "observedAddress": "",
+    "district": null,
+    "addressVerified": false,
+    "nearby": false,
+    "reason": "네이버 지도에서 확인한 네 식당가 명단에 포함되지 않아 제외"
+  }
+}

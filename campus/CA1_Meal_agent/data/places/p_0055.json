@@ -1,0 +1,233 @@
+{
+  "version": 1,
+  "id": "p_0055",
+  "name": "왕손주먹구이",
+  "category": "한식",
+  "lat": 35.1813277901079,
+  "lng": 126.904156872303,
+  "address": "전남광주 북구 용주로30번길 77",
+  "source": "semas",
+  "sourceId": "MA010120220814027054",
+  "sourceStatus": "active",
+  "attrs": {
+    "status": "partial",
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금",
+          "토"
+        ],
+        "open": "15:00",
+        "close": "24:00",
+        "lastOrder": "23:00"
+      }
+    ],
+    "menus": [
+      {
+        "name": "닭발+주먹밥",
+        "price": 14000,
+        "main": false
+      },
+      {
+        "name": "돼지뒷고기",
+        "price": 10000,
+        "main": true
+      },
+      {
+        "name": "가브리살",
+        "price": 13000,
+        "main": true
+      },
+      {
+        "name": "오돌뼈",
+        "price": 13000,
+        "main": true
+      },
+      {
+        "name": "해맑은막창",
+        "price": 13000,
+        "main": true
+      },
+      {
+        "name": "목살소금구이",
+        "price": 13000,
+        "main": true
+      },
+      {
+        "name": "껍데기",
+        "price": 5000,
+        "main": false
+      }
+    ]
+  },
+  "research": {
+    "identityStatus": "matched",
+    "queries": [
+      "\"왕손주먹구이\" 메뉴 영업시간"
+    ],
+    "sources": [
+      {
+        "id": "s1",
+        "url": "https://xn--299ayyj02d.com/%EB%A7%A4%EC%9E%A5/%EC%99%95%EC%86%90%EC%A3%BC%EB%A8%B9%EA%B5%AC%EC%9D%B4",
+        "title": "왕손주먹구이 메뉴·가격·영업시간",
+        "type": "directory",
+        "addressMatch": true,
+        "note": "제3자 재게시정보,2026-10-23기준표기. 직접 매장 확인아님.",
+        "observedAt": "2026-11-11"
+      }
+    ],
+    "facts": {
+      "menus": {
+        "status": "partial",
+        "value": [
+          {
+            "name": "닭발+주먹밥",
+            "price": 14000,
+            "main": true
+          },
+          {
+            "name": "돼지뒷고기",
+            "price": 10000,
+            "main": true
+          },
+          {
+            "name": "목살소금구이",
+            "price": 13000,
+            "main": true
+          }
+        ],
+        "sourceIds": [
+          "s1"
+        ],
+        "note": "게시가격이나 고기 중량·최소주문인분 확인안됨. 1인식사가격으로 활용금지."
+      },
+      "hours": {
+        "status": "partial",
+        "value": [
+          {
+            "days": [
+              "월",
+              "화",
+              "수",
+              "목",
+              "금",
+              "토"
+            ],
+            "open": "15:00",
+            "close": "24:00"
+          }
+        ],
+        "sourceIds": [
+          "s1"
+        ],
+        "note": "제3자 재게시자료의 일요일정기휴무·월~토15~24안내. 원출처 확인전 잠정."
+      }
+    },
+    "notes": [],
+    "checkedAt": "2026-11-11",
+    "method": "web",
+    "unknownFields": [
+      "menus",
+      "hours",
+      "mealType",
+      "takeout",
+      "verifiedAt",
+      "verifiedBy",
+      "break",
+      "lastOrder"
+    ]
+  },
+  "availability": {
+    "status": "listed",
+    "provider": "naver",
+    "checkedAt": "2026-11-11",
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/1887196713/home?fromPanelNum=1&additionalHeight=76&timestamp=202611112341&locale=ko&svcName=map_pcv5&searchText=%EC%99%95%EC%86%90%EC%A3%BC%EB%A8%B9%EA%B5%AC%EC%9D%B4%20%EA%B4%91%EC%A3%BC%20%EC%9A%A9%EB%B4%89%EB%8F%99",
+    "naverPlaceId": "1887196713",
+    "observedName": "왕손주먹구이",
+    "observedAddress": "전남광주 북구 용주로30번길 77",
+    "district": "예대",
+    "addressVerified": true,
+    "nearby": true,
+    "reason": "공개 네이버 지도에서 동일 주소의 전남대 예대 식당으로 확인"
+  },
+  "menuObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/1887196713/menu?fromPanelNum=1&additionalHeight=76&timestamp=202611112341&locale=ko&svcName=map_pcv5&searchText=%EC%99%95%EC%86%90%EC%A3%BC%EB%A8%B9%EA%B5%AC%EC%9D%B4%20%EA%B4%91%EC%A3%BC%20%EC%9A%A9%EB%B4%89%EB%8F%99",
+    "checkedAt": "2026-11-11",
+    "priceContext": "in_store",
+    "menus": [
+      {
+        "name": "닭발+주먹밥",
+        "price": 14000,
+        "main": false
+      },
+      {
+        "name": "돼지뒷고기",
+        "price": 10000,
+        "main": true
+      },
+      {
+        "name": "가브리살",
+        "price": 13000,
+        "main": true
+      },
+      {
+        "name": "오돌뼈",
+        "price": 13000,
+        "main": true
+      },
+      {
+        "name": "해맑은막창",
+        "price": 13000,
+        "main": true
+      },
+      {
+        "name": "목살소금구이",
+        "price": 13000,
+        "main": true
+      },
+      {
+        "name": "껍데기",
+        "price": 5000,
+        "main": false
+      }
+    ],
+    "note": "메뉴 상태: confirmed. 원본 관찰·좌표 출처는 적용 manifest에 보관합니다.",
+    "status": "confirmed"
+  },
+  "hoursObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/1887196713/home?fromPanelNum=1&additionalHeight=76&timestamp=202611112341&locale=ko&svcName=map_pcv5&searchText=%EC%99%95%EC%86%90%EC%A3%BC%EB%A8%B9%EA%B5%AC%EC%9D%B4%20%EA%B4%91%EC%A3%BC%20%EC%9A%A9%EB%B4%89%EB%8F%99",
+    "checkedAt": "2026-11-12",
+    "status": "confirmed",
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금",
+          "토"
+        ],
+        "open": "15:00",
+        "close": "24:00",
+        "lastOrder": "23:00"
+      }
+    ],
+    "note": "매장 영업시간 관찰. 기존 attrs/research를 덮어쓰지 않습니다."
+  },
+  "followupReview": {
+    "checkedAt": "2026-11-12",
+    "reasons": [
+      "공개 매장 식사 가격과 요일별 영업시간을 연결하여 추천 대상으로 전환했습니다."
+    ],
+    "sources": [
+      "https://pcmap.place.naver.com/restaurant/1887196713/home",
+      "https://pcmap.place.naver.com/restaurant/1887196713/menu/list",
+      "https://pcmap.place.naver.com/restaurant/1887196713/menu?fromPanelNum=1&additionalHeight=76&timestamp=202611112341&locale=ko&svcName=map_pcv5&searchText=%EC%99%95%EC%86%90%EC%A3%BC%EB%A8%B9%EA%B5%AC%EC%9D%B4%20%EA%B4%91%EC%A3%BC%20%EC%9A%A9%EB%B4%89%EB%8F%99"
+    ]
+  }
+}

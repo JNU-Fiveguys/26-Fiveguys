@@ -1,0 +1,10 @@
+# 공공데이터 원본 (크고 자주 바뀜 — 가공 결과만 커밋)
+data/raw/
+# 개인 제보·입력은 로컬에만 보관
+data/survey/user_entries/
+# 비밀 값
+.env
+.venv/
+.local/
+__pycache__/
+.pytest_cache/

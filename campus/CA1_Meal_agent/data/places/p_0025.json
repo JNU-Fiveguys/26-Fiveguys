@@ -1,0 +1,75 @@
+{
+  "version": 1,
+  "id": "p_0025",
+  "name": "맛3",
+  "category": "한식",
+  "lat": 35.177713,
+  "lng": 126.9037,
+  "address": "전남광주통합특별시 북구 설죽로214번길 112",
+  "source": "semas",
+  "sourceId": "MA010120220807533447",
+  "sourceStatus": "active",
+  "attrs": {
+    "status": "partial"
+  },
+  "research": {
+    "identityStatus": "matched",
+    "queries": [
+      "\"맛3\" \"설죽로214번길 112\"",
+      "\"맛쓰리\" \"설죽로214번길 112\""
+    ],
+    "sources": [
+      {
+        "id": "s1",
+        "url": "https://opengo.kr/5601fb6e0e887edf2cef38fe",
+        "title": "맛3 영업 등록정보",
+        "type": "public_data",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "해당 상호·주소의 과거 영업 등록정보만 확인"
+      }
+    ],
+    "facts": {
+      "menus": {
+        "status": "unconfirmed",
+        "value": [],
+        "sourceIds": [],
+        "note": "매장별 메뉴·가격을 확인하지 못함."
+      },
+      "hours": {
+        "status": "unconfirmed",
+        "value": [],
+        "sourceIds": [],
+        "note": "요일별 영업시간을 확인하지 못함."
+      }
+    },
+    "notes": [
+      "용주로30번길 55의 맛쓰리 정보는 주소가 달라 결합하지 않음. 등록정보만으로 현재 영업 여부와 메뉴는 확인할 수 없음."
+    ],
+    "checkedAt": "2026-11-11",
+    "method": "web",
+    "unknownFields": [
+      "menus",
+      "hours",
+      "mealType",
+      "takeout",
+      "verifiedAt",
+      "verifiedBy",
+      "break",
+      "lastOrder"
+    ]
+  },
+  "availability": {
+    "status": "excluded",
+    "provider": "naver",
+    "checkedAt": "2026-11-11",
+    "sourceUrl": "https://map.naver.com/p/search/%EC%A0%84%EB%82%A8%EB%8C%80%20%EC%9D%8C%EC%8B%9D%EC%A0%90",
+    "naverPlaceId": null,
+    "observedName": "",
+    "observedAddress": "",
+    "district": null,
+    "addressVerified": false,
+    "nearby": false,
+    "reason": "네이버 지도에서 확인한 네 식당가 명단에 포함되지 않아 제외"
+  }
+}

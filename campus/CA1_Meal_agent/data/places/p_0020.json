@@ -1,0 +1,318 @@
+{
+  "version": 1,
+  "id": "p_0020",
+  "name": "까동",
+  "category": "한식",
+  "lat": 35.1780562510865,
+  "lng": 126.904643751141,
+  "address": "광주 북구 설죽로214번길 129",
+  "source": "semas",
+  "sourceId": "MA010120220807510989",
+  "sourceStatus": "active",
+  "attrs": {
+    "status": "partial",
+    "menus": [
+      {
+        "name": "돈가스소바",
+        "price": 9000,
+        "main": true
+      }
+    ],
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금"
+        ],
+        "open": "10:00",
+        "close": "20:30",
+        "lastOrder": "20:00",
+        "break": {
+          "start": "15:00",
+          "end": "17:00"
+        }
+      }
+    ]
+  },
+  "research": {
+    "identityStatus": "matched",
+    "queries": [
+      "\"까동\" \"전대\" 메뉴 영업시간"
+    ],
+    "sources": [
+      {
+        "id": "s1",
+        "url": "https://www.diningcode.com/profile.php?rid=0IMSwsf5j9ym",
+        "title": "까동 전대 매장정보",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "상호·주소 일치"
+      },
+      {
+        "id": "s2",
+        "url": "https://gladsong.tistory.com/15",
+        "title": "2024년 까동 방문 후기",
+        "type": "review",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "2024-02-17 과거 방문 정보. 현재값과 구분"
+      }
+    ],
+    "facts": {
+      "menus": {
+        "status": "confirmed",
+        "value": [
+          {
+            "name": "돈가스소바",
+            "price": 9000,
+            "main": true
+          }
+        ],
+        "sourceIds": [
+          "s1"
+        ],
+        "note": "매장 메뉴표의 돈가스소바 가격. 후기 속 다른 메뉴의 과거가격은 미반영."
+      },
+      "hours": {
+        "status": "conflict",
+        "value": [],
+        "sourceIds": [
+          "s1",
+          "s2"
+        ],
+        "note": "매장정보 본문은 평일 10:00~20:30·15:00~17:00 브레이크·20:00 주문마감·토일 휴무. 페이지 후기에는 토요일 영업 안내도 있고 2024년 후기에는 10:30 시작으로 기재되어 최신 운영 여부 확인 필요."
+      }
+    },
+    "notes": [],
+    "checkedAt": "2026-11-11",
+    "method": "web",
+    "unknownFields": [
+      "hours",
+      "mealType",
+      "takeout",
+      "verifiedAt",
+      "verifiedBy",
+      "break",
+      "lastOrder"
+    ]
+  },
+  "availability": {
+    "status": "listed",
+    "provider": "naver",
+    "checkedAt": "2026-11-11",
+    "sourceUrl": "https://pcmap.place.naver.com/place/1881507548",
+    "naverPlaceId": "1881507548",
+    "observedName": "까동",
+    "observedAddress": "광주 북구 설죽로214번길 129",
+    "district": "상대",
+    "addressVerified": true,
+    "nearby": true,
+    "reason": "공개 네이버 지도에서 동일 주소의 전남대 상대 식당으로 확인"
+  },
+  "menuObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/1881507548/menu/list",
+    "checkedAt": "2026-11-11",
+    "priceContext": "in_store",
+    "menus": [
+      {
+        "name": "돈가스소바",
+        "price": 9000,
+        "main": true,
+        "priceContext": "in_store"
+      },
+      {
+        "name": "해쉬브라운카레",
+        "price": 7500,
+        "main": true,
+        "priceContext": "in_store"
+      },
+      {
+        "name": "새우튀김카레",
+        "price": 8800,
+        "main": true,
+        "priceContext": "in_store"
+      },
+      {
+        "name": "치킨가라아게카레",
+        "price": 8800,
+        "main": true,
+        "priceContext": "in_store"
+      },
+      {
+        "name": "돈가스카레",
+        "price": 8500,
+        "main": true,
+        "priceContext": "in_store"
+      },
+      {
+        "name": "치즈롤카레",
+        "price": 9500,
+        "main": true,
+        "priceContext": "in_store"
+      },
+      {
+        "name": "치즈품은카레",
+        "price": 9500,
+        "main": true,
+        "priceContext": "in_store"
+      },
+      {
+        "name": "하프돈가스",
+        "price": null,
+        "main": false,
+        "priceContext": "in_store",
+        "priceText": "가격 미확인(메뉴판 사진 반사)"
+      },
+      {
+        "name": "하프치즈롤가스",
+        "price": 4500,
+        "main": false,
+        "priceContext": "in_store"
+      },
+      {
+        "name": "하프치품가스",
+        "price": 4500,
+        "main": false,
+        "priceContext": "in_store"
+      },
+      {
+        "name": "해쉬브라운(2P)",
+        "price": 2500,
+        "main": false,
+        "priceContext": "in_store"
+      },
+      {
+        "name": "새우튀김(2P)",
+        "price": 3800,
+        "main": false,
+        "priceContext": "in_store"
+      },
+      {
+        "name": "치킨가라아게(5P)",
+        "price": 3800,
+        "main": false,
+        "priceContext": "in_store"
+      },
+      {
+        "name": "미니카레(카레만)",
+        "price": 2500,
+        "main": false,
+        "priceContext": "in_store"
+      },
+      {
+        "name": "콜라/스프라이트 캔",
+        "price": 1500,
+        "main": false,
+        "priceContext": "in_store"
+      },
+      {
+        "name": "콜라500ml",
+        "price": 2000,
+        "main": false,
+        "priceContext": "in_store"
+      },
+      {
+        "name": "돈가스",
+        "price": 8000,
+        "main": true,
+        "priceContext": "in_store"
+      },
+      {
+        "name": "옛날돈가스",
+        "price": 8500,
+        "main": true,
+        "priceContext": "in_store"
+      },
+      {
+        "name": "치즈롤가스",
+        "price": 9900,
+        "main": true,
+        "priceContext": "in_store"
+      },
+      {
+        "name": "치즈품은가스",
+        "price": 9900,
+        "main": true,
+        "priceContext": "in_store"
+      },
+      {
+        "name": "돈가스모듬",
+        "price": 8900,
+        "main": true,
+        "priceContext": "in_store"
+      },
+      {
+        "name": "치즈롤모듬",
+        "price": 9900,
+        "main": true,
+        "priceContext": "in_store"
+      },
+      {
+        "name": "치즈품은모듬",
+        "price": 9900,
+        "main": true,
+        "priceContext": "in_store"
+      },
+      {
+        "name": "치즈롤 반반가스",
+        "price": 9000,
+        "main": true,
+        "priceContext": "in_store"
+      },
+      {
+        "name": "치즈품은 반반가스",
+        "price": 9000,
+        "main": true,
+        "priceContext": "in_store"
+      },
+      {
+        "name": "우동",
+        "price": 5000,
+        "main": true,
+        "priceContext": "in_store"
+      },
+      {
+        "name": "메밀소바",
+        "price": 6000,
+        "main": true,
+        "priceContext": "in_store"
+      },
+      {
+        "name": "해물라면",
+        "price": 6000,
+        "main": true,
+        "priceContext": "in_store"
+      }
+    ],
+    "note": "메뉴 상태: confirmed. 원본 관찰·좌표 출처는 적용 manifest에 보관합니다.",
+    "status": "confirmed"
+  },
+  "hoursObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/place/1881507548",
+    "checkedAt": "2026-11-11",
+    "status": "confirmed",
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금"
+        ],
+        "open": "10:00",
+        "close": "20:30",
+        "lastOrder": "20:00",
+        "break": {
+          "start": "15:00",
+          "end": "17:00"
+        }
+      }
+    ],
+    "note": "매장 영업시간 관찰. 기존 attrs/research를 덮어쓰지 않습니다."
+  }
+}

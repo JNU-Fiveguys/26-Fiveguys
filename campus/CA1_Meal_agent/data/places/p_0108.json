@@ -1,0 +1,211 @@
+{
+  "version": 1,
+  "id": "p_0108",
+  "source": "team",
+  "sourceId": "naver:20369720",
+  "name": "동산회관",
+  "address": "전남광주 북구 우치로90번길 12-1",
+  "category": "한식",
+  "lat": 35.1753316747904,
+  "lng": 126.913341338512,
+  "sourceStatus": "active",
+  "availability": {
+    "status": "listed",
+    "provider": "naver",
+    "checkedAt": "2026-11-11",
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/20369720/home?fromPanelNum=1&additionalHeight=76&timestamp=202611112345&locale=ko&svcName=map_pcv5&searchText=%EB%8F%99%EC%82%B0%ED%9A%8C%EA%B4%80%20%EC%A0%84%EB%82%A8%EB%8C%80",
+    "naverPlaceId": "20369720",
+    "observedName": "동산회관",
+    "observedAddress": "전남광주 북구 우치로90번길 12-1",
+    "district": "후문",
+    "addressVerified": true,
+    "nearby": true,
+    "reason": "공개 네이버 지도에서 동일 주소의 전남대 후문 식당으로 확인"
+  },
+  "menuObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/20369720/menu?fromPanelNum=1&additionalHeight=76&timestamp=202611112345&locale=ko&svcName=map_pcv5&searchText=%EB%8F%99%EC%82%B0%ED%9A%8C%EA%B4%80%20%EC%A0%84%EB%82%A8%EB%8C%80",
+    "checkedAt": "2026-11-11",
+    "priceContext": "in_store",
+    "menus": [
+      {
+        "name": "한방양념삼겹살",
+        "price": 11000,
+        "main": true
+      },
+      {
+        "name": "별미비빔밥",
+        "price": 2500,
+        "main": false
+      },
+      {
+        "name": "버섯사리",
+        "price": 2500,
+        "main": false
+      }
+    ],
+    "note": "메뉴 상태: confirmed. 원본 관찰·좌표 출처는 적용 manifest에 보관합니다.",
+    "status": "confirmed"
+  },
+  "attrs": {
+    "status": "partial",
+    "hours": [
+      {
+        "days": [
+          "화",
+          "수",
+          "목",
+          "금",
+          "토",
+          "일"
+        ],
+        "open": "11:00",
+        "close": "21:30",
+        "lastOrder": "20:20",
+        "break": {
+          "start": "15:00",
+          "end": "17:00"
+        }
+      }
+    ],
+    "menus": [
+      {
+        "name": "한방양념삼겹살",
+        "price": 11000,
+        "main": true
+      },
+      {
+        "name": "별미비빔밥",
+        "price": 2500,
+        "main": false
+      },
+      {
+        "name": "버섯사리",
+        "price": 2500,
+        "main": false
+      }
+    ]
+  },
+  "hoursObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/20369720/home?fromPanelNum=1&additionalHeight=76&timestamp=202611112345&locale=ko&svcName=map_pcv5&searchText=%EB%8F%99%EC%82%B0%ED%9A%8C%EA%B4%80%20%EC%A0%84%EB%82%A8%EB%8C%80",
+    "checkedAt": "2026-11-12",
+    "status": "confirmed",
+    "hours": [
+      {
+        "days": [
+          "화",
+          "수",
+          "목",
+          "금",
+          "토",
+          "일"
+        ],
+        "open": "11:00",
+        "close": "21:30",
+        "lastOrder": "20:20",
+        "break": {
+          "start": "15:00",
+          "end": "17:00"
+        }
+      }
+    ],
+    "note": "매장 영업시간 관찰. 기존 attrs/research를 덮어쓰지 않습니다."
+  },
+  "research": {
+    "checkedAt": "2026-11-11",
+    "method": "web",
+    "identityStatus": "matched",
+    "queries": [
+      "동산회관 전남광주 북구 우치로90번길 12-1"
+    ],
+    "sources": [
+      {
+        "id": "naver-place",
+        "url": "https://pcmap.place.naver.com/restaurant/20369720/home?fromPanelNum=1&additionalHeight=76&timestamp=202611112345&locale=ko&svcName=map_pcv5&searchText=%EB%8F%99%EC%82%B0%ED%9A%8C%EA%B4%80%20%EC%A0%84%EB%82%A8%EB%8C%80",
+        "title": "동산회관 네이버 지도",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "같은 주소의 지점 확인. 지도 등록 확인은 실시간 영업 중 보증이 아님"
+      },
+      {
+        "id": "naver-menu",
+        "url": "https://pcmap.place.naver.com/restaurant/20369720/menu?fromPanelNum=1&additionalHeight=76&timestamp=202611112345&locale=ko&svcName=map_pcv5&searchText=%EB%8F%99%EC%82%B0%ED%9A%8C%EA%B4%80%20%EC%A0%84%EB%82%A8%EB%8C%80",
+        "title": "동산회관 메뉴 탭",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "가격 맥락: in_store"
+      },
+      {
+        "id": "naver-hours",
+        "url": "https://pcmap.place.naver.com/restaurant/20369720/home?fromPanelNum=1&additionalHeight=76&timestamp=202611112345&locale=ko&svcName=map_pcv5&searchText=%EB%8F%99%EC%82%B0%ED%9A%8C%EA%B4%80%20%EC%A0%84%EB%82%A8%EB%8C%80",
+        "title": "동산회관 영업시간",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "게시된 요일별 영업시간. 미확인은 추정하지 않음"
+      }
+    ],
+    "facts": {
+      "menus": {
+        "status": "unconfirmed",
+        "sourceIds": [],
+        "note": "매장 기준 정보 미확인. 배달·가격 맥락 불명 자료는 확정하지 않습니다."
+      },
+      "hours": {
+        "status": "confirmed",
+        "sourceIds": [
+          "naver-hours"
+        ],
+        "note": "매장 게시값을 확인했습니다.",
+        "value": [
+          {
+            "days": [
+              "화",
+              "수",
+              "목",
+              "금",
+              "토",
+              "일"
+            ],
+            "open": "11:00",
+            "close": "21:30",
+            "lastOrder": "20:20",
+            "break": {
+              "start": "15:00",
+              "end": "17:00"
+            }
+          }
+        ]
+      }
+    },
+    "unknownFields": [
+      "menus",
+      "mealType",
+      "takeout",
+      "verifiedAt",
+      "verifiedBy"
+    ],
+    "notes": [
+      "네이버 공개 지도 상세·메뉴 탭 직접 확인.",
+      "삼겹살은 최소 주문량·1인 식사 성립 여부가 확인되지 않아 main=false. 별미비빔밥과 버섯사리는 고기 후 추가 식사·사이드로 취급하여 main=false.",
+      "매주 월요일 휴무.",
+      "전체 공개 메뉴 탭의 메뉴명·가격을 보존. 가격 범위·변동은 price=null 및 priceText로 보관.",
+      "출입구에서 실제 도보 10분 이내 여부는 별도 OSM 경로 감사 대기. 이 파일의 주소 좌표 일치가 거리 통과를 의미하지 않음.",
+      "영업시간 원문은 rear_batch7.json에 보존. 확인되지 않은 브레이크·라스트오더는 생성하지 않음.",
+      "병합 입력: rear_batch7_manifest.json",
+      "공개 네이버 화면 관찰이며 현장 검증이 아닙니다."
+    ]
+  },
+  "followupReview": {
+    "checkedAt": "2026-11-12",
+    "reasons": [
+      "공개 매장 식사 가격과 요일별 영업시간을 연결하여 추천 대상으로 전환했습니다."
+    ],
+    "sources": [
+      "https://pcmap.place.naver.com/restaurant/20369720/home",
+      "https://pcmap.place.naver.com/restaurant/20369720/menu/list",
+      "https://pcmap.place.naver.com/restaurant/20369720/menu?fromPanelNum=1&additionalHeight=76&timestamp=202611112345&locale=ko&svcName=map_pcv5&searchText=%EB%8F%99%EC%82%B0%ED%9A%8C%EA%B4%80%20%EC%A0%84%EB%82%A8%EB%8C%80"
+    ]
+  }
+}

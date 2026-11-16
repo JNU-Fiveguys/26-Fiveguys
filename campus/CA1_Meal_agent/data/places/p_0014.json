@@ -1,0 +1,215 @@
+{
+  "version": 1,
+  "id": "p_0014",
+  "name": "카츠앤맘전대점",
+  "category": "일식",
+  "lat": 35.1778835099213,
+  "lng": 126.902777671176,
+  "address": "광주 북구 설죽로214번길 93",
+  "source": "semas",
+  "sourceId": "MA010120220806887717",
+  "sourceStatus": "active",
+  "attrs": {
+    "status": "partial",
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금"
+        ],
+        "open": "11:00",
+        "close": "20:30"
+      },
+      {
+        "days": [
+          "토",
+          "일"
+        ],
+        "open": "11:00",
+        "close": "20:00"
+      }
+    ],
+    "menus": [
+      {
+        "name": "옛날돈까스",
+        "price": 8500,
+        "main": true
+      },
+      {
+        "name": "고구마치즈돈까스",
+        "price": 11900,
+        "main": true
+      }
+    ]
+  },
+  "research": {
+    "identityStatus": "matched",
+    "queries": [
+      "\"카츠앤맘\" 메뉴 영업시간"
+    ],
+    "sources": [
+      {
+        "id": "s1",
+        "url": "https://www.tabling.co.kr/place/677cd84a66de5f0698943ea5",
+        "title": "테이블링 카츠앤맘 전대점",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "상호·주소 일치"
+      },
+      {
+        "id": "s2",
+        "url": "https://www.diningcode.com/profile.php?rid=ywADSyusEswq",
+        "title": "카츠앤맘 전대점 매장정보",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "상호·주소 일치"
+      }
+    ],
+    "facts": {
+      "menus": {
+        "status": "partial",
+        "value": [
+          {
+            "name": "치즈돈가스도시락",
+            "price": 9500,
+            "main": true
+          },
+          {
+            "name": "냉메밀",
+            "price": 6900,
+            "main": true
+          },
+          {
+            "name": "가쯔오우동",
+            "price": 6000,
+            "main": true
+          }
+        ],
+        "sourceIds": [
+          "s1",
+          "s2"
+        ],
+        "note": "확인한 메뉴만 기재. 일반돈가스도시락은8,500/9,000원으로 달라 제외."
+      },
+      "hours": {
+        "status": "confirmed",
+        "value": [
+          {
+            "days": [
+              "월",
+              "화",
+              "수",
+              "목",
+              "금"
+            ],
+            "open": "11:00",
+            "close": "20:30"
+          },
+          {
+            "days": [
+              "토",
+              "일"
+            ],
+            "open": "11:00",
+            "close": "20:00"
+          }
+        ],
+        "sourceIds": [
+          "s1",
+          "s2"
+        ],
+        "note": "두 매장정보 일정 일치. 일부 과거후기 매일20:00표기는 채택하지 않음. 브레이크·라스트오더 미확인."
+      }
+    },
+    "notes": [],
+    "checkedAt": "2026-11-11",
+    "method": "web",
+    "unknownFields": [
+      "menus",
+      "mealType",
+      "takeout",
+      "verifiedAt",
+      "verifiedBy",
+      "break",
+      "lastOrder"
+    ]
+  },
+  "availability": {
+    "status": "listed",
+    "provider": "naver",
+    "checkedAt": "2026-11-11",
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/36894596/home",
+    "naverPlaceId": "36894596",
+    "observedName": "카츠앤맘전대점",
+    "observedAddress": "광주 북구 설죽로214번길 93",
+    "district": "상대",
+    "addressVerified": true,
+    "nearby": true,
+    "reason": "공개 네이버 지도에서 동일 주소의 전남대 상대 식당으로 확인"
+  },
+  "menuObservation": {
+    "sourceUrl": "https://blog.naver.com/ss0_rv/224356779893",
+    "placeSourceUrl": "https://pcmap.place.naver.com/restaurant/36894596/home",
+    "sourceAddress": "광주 북구 설죽로214번길 93",
+    "sourcePublishedAt": "2026-07-24",
+    "checkedAt": "2026-11-12",
+    "priceContext": "in_store",
+    "status": "confirmed",
+    "menus": [
+      {
+        "name": "옛날돈까스",
+        "price": 8500,
+        "main": true
+      },
+      {
+        "name": "고구마치즈돈까스",
+        "price": 11900,
+        "main": true
+      }
+    ],
+    "note": "동일 지점·주소의 매장 방문 자료에서 읽히는 메뉴·가격만 반영. 게시 이후 변경 가능하며 현장 현재 가격 보증은 아님. 매운 소스 추가500원은 기본 메뉴 가격에 합치지 않음."
+  },
+  "hoursObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/36894596/home",
+    "checkedAt": "2026-11-12",
+    "status": "confirmed",
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금"
+        ],
+        "open": "11:00",
+        "close": "20:30"
+      },
+      {
+        "days": [
+          "토",
+          "일"
+        ],
+        "open": "11:00",
+        "close": "20:00"
+      }
+    ],
+    "note": "매장 영업시간 관찰. 기존 attrs/research를 덮어쓰지 않습니다."
+  },
+  "followupReview": {
+    "checkedAt": "2026-11-12",
+    "reasons": [
+      "공개 매장 식사 가격과 요일별 영업시간을 연결하여 추천 대상으로 전환했습니다."
+    ],
+    "sources": [
+      "https://pcmap.place.naver.com/restaurant/36894596/home",
+      "https://pcmap.place.naver.com/restaurant/36894596/menu/list",
+      "https://blog.naver.com/ss0_rv/224356779893"
+    ]
+  }
+}

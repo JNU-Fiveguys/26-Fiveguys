@@ -34,13 +34,13 @@ jobs:
           python -m venv desktop/sidecar/.venv
           desktop/sidecar/.venv/bin/python -m pip install --disable-pip-version-check -q -r desktop/sidecar/requirements.txt
 
-      - name: 단위 테스트 (C0 · C2 · C3 · C4 · F1~F8 · F11 · F12 · 백엔드)
+      - name: 단위 테스트 (C0 · C2 · C3 · C4 · F1~F8 · F11 · F12 · CA2 · 백엔드)
         run: |
           set -e
           PY="$PWD/desktop/sidecar/.venv/bin/python"
           "$PY" -m pytest C0_Platform_agent/tests -q
           for d in C3_Login_agent C2_Profile_agent C4_Briefing_agent F1_Bachelor_agent F2_Graduation_agent F3_Attendance_agent \
-                   F4_Textbook_agent F5_Test_agent F6_Eclass_agent F7_Task_agent F8_Plan_agent F11_Scholarship_agent F12_Activity_agent univ_us_local/backend; do
+                   F4_Textbook_agent F5_Test_agent F6_Eclass_agent F7_Task_agent F8_Plan_agent F11_Scholarship_agent F12_Activity_agent campus/CA2_Assistant_agent univ_us_local/backend; do
             echo "== $d"
             (cd "$d" && "$PY" -m pytest tests -q)
           done

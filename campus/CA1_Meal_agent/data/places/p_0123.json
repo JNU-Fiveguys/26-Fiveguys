@@ -1,0 +1,991 @@
+{
+  "version": 1,
+  "id": "p_0123",
+  "source": "team",
+  "sourceId": "naver:38710685",
+  "name": "깨순이김밥 전대정문점",
+  "address": "전남광주 북구 자미로 60",
+  "category": "분식",
+  "lat": 35.1712059352607,
+  "lng": 126.90464077242,
+  "sourceStatus": "active",
+  "availability": {
+    "status": "listed",
+    "provider": "naver",
+    "checkedAt": "2026-11-11",
+    "sourceUrl": "https://pcmap.place.naver.com/place/38710685",
+    "naverPlaceId": "38710685",
+    "observedName": "깨순이김밥 전대정문점",
+    "observedAddress": "전남광주 북구 자미로 60",
+    "district": "정문",
+    "addressVerified": true,
+    "nearby": true,
+    "reason": "공개 네이버 지도에서 동일 주소의 전남대 정문 식당으로 확인"
+  },
+  "menuObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/38710685/menu/list",
+    "checkedAt": "2026-11-12",
+    "priceContext": "in_store",
+    "menus": [
+      {
+        "name": "깨순이김밥",
+        "price": 3500,
+        "main": true
+      },
+      {
+        "name": "참치마요치즈김밥",
+        "price": 4500,
+        "main": true
+      },
+      {
+        "name": "참치고추장김밥",
+        "price": 4500,
+        "main": true
+      },
+      {
+        "name": "참치매운고추김밥",
+        "price": 5000,
+        "main": true
+      },
+      {
+        "name": "참치김치김밥",
+        "price": 5000,
+        "main": true
+      },
+      {
+        "name": "김치김밥",
+        "price": 4000,
+        "main": true
+      },
+      {
+        "name": "김치치즈김밥",
+        "price": 4500,
+        "main": true
+      },
+      {
+        "name": "치즈김밥",
+        "price": 4000,
+        "main": true
+      },
+      {
+        "name": "소고기김밥",
+        "price": 4500,
+        "main": true
+      },
+      {
+        "name": "멸추김밥",
+        "price": 5000,
+        "main": true
+      },
+      {
+        "name": "매운고추김밥",
+        "price": 4000,
+        "main": true
+      },
+      {
+        "name": "참치치즈김밥",
+        "price": 5000,
+        "main": true
+      },
+      {
+        "name": "샐러드김밥",
+        "price": 4000,
+        "main": true
+      },
+      {
+        "name": "새우튀김김밥",
+        "price": 5000,
+        "main": true
+      },
+      {
+        "name": "참치김치덮밥",
+        "price": 8000,
+        "main": true
+      },
+      {
+        "name": "소고기덮밥",
+        "price": 8500,
+        "main": true
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 8500,
+        "main": true
+      },
+      {
+        "name": "오징어덮밥",
+        "price": 8500,
+        "main": true
+      },
+      {
+        "name": "제육덮밥",
+        "price": 8000,
+        "main": true
+      },
+      {
+        "name": "깨순이스페셜",
+        "price": 10000,
+        "main": true
+      },
+      {
+        "name": "치즈제육덮밥",
+        "price": 9000,
+        "main": true
+      },
+      {
+        "name": "제육돌솥밥",
+        "price": 9000,
+        "main": true
+      },
+      {
+        "name": "치즈제육돌솥밥",
+        "price": 10000,
+        "main": true
+      },
+      {
+        "name": "돌솥밥(이름 일부 판독 불가)",
+        "price": 9500,
+        "main": false
+      },
+      {
+        "name": "김치치즈돌솥밥",
+        "price": 8500,
+        "main": true
+      },
+      {
+        "name": "돌솥비빔밥",
+        "price": 8000,
+        "main": true
+      },
+      {
+        "name": "비빔밥",
+        "price": 7500,
+        "main": true
+      },
+      {
+        "name": "참치비빔밥",
+        "price": 8000,
+        "main": true
+      },
+      {
+        "name": "낙지비빔밥",
+        "price": 8500,
+        "main": true
+      },
+      {
+        "name": "낙지돌솥밥",
+        "price": 9000,
+        "main": true
+      },
+      {
+        "name": "카레라이스",
+        "price": 8000,
+        "main": true
+      },
+      {
+        "name": "뚝배기알밥",
+        "price": 7500,
+        "main": true
+      },
+      {
+        "name": "떡국",
+        "price": 7000,
+        "main": true
+      },
+      {
+        "name": "만두국",
+        "price": 7000,
+        "main": true
+      },
+      {
+        "name": "떡만두국",
+        "price": 7500,
+        "main": true
+      },
+      {
+        "name": "감자수제비",
+        "price": 8000,
+        "main": true
+      },
+      {
+        "name": "얼큰손수제비",
+        "price": 8000,
+        "main": true
+      },
+      {
+        "name": "애호박찌개",
+        "price": 8000,
+        "main": true
+      },
+      {
+        "name": "김치찌개",
+        "price": 7500,
+        "main": true
+      },
+      {
+        "name": "참치찌개",
+        "price": 8000,
+        "main": true
+      },
+      {
+        "name": "된장찌개",
+        "price": 7500,
+        "main": true
+      },
+      {
+        "name": "부대찌개",
+        "price": null,
+        "main": true
+      },
+      {
+        "name": "순두부찌개",
+        "price": null,
+        "main": true
+      },
+      {
+        "name": "육개장",
+        "price": null,
+        "main": true
+      },
+      {
+        "name": "갈비탕",
+        "price": 9000,
+        "main": true
+      },
+      {
+        "name": "소뚝불고기",
+        "price": 8500,
+        "main": true
+      },
+      {
+        "name": "참치김치볶음밥",
+        "price": 8000,
+        "main": true
+      },
+      {
+        "name": "김치볶음밥",
+        "price": 7500,
+        "main": true
+      },
+      {
+        "name": "참치볶음밥",
+        "price": 7500,
+        "main": true
+      },
+      {
+        "name": "치즈김치볶음밥",
+        "price": 8500,
+        "main": true
+      },
+      {
+        "name": "소고기볶음밥",
+        "price": 8000,
+        "main": true
+      },
+      {
+        "name": "새우볶음밥",
+        "price": 8000,
+        "main": true
+      },
+      {
+        "name": "오므라이스",
+        "price": 7500,
+        "main": true
+      },
+      {
+        "name": "참치오므라이스",
+        "price": 8500,
+        "main": true
+      },
+      {
+        "name": "치즈오므라이스",
+        "price": 8500,
+        "main": true
+      },
+      {
+        "name": "우동",
+        "price": 5000,
+        "main": true
+      },
+      {
+        "name": "해물우동",
+        "price": 6500,
+        "main": true
+      },
+      {
+        "name": "해물볶음우동",
+        "price": 6500,
+        "main": true
+      },
+      {
+        "name": "칼만두",
+        "price": 6000,
+        "main": true
+      },
+      {
+        "name": "쫄면",
+        "price": 7000,
+        "main": true
+      },
+      {
+        "name": "잔치국수",
+        "price": 7500,
+        "main": true
+      },
+      {
+        "name": "비빔국수",
+        "price": 7500,
+        "main": true
+      },
+      {
+        "name": "라면",
+        "price": 4500,
+        "main": true
+      },
+      {
+        "name": "떡라면",
+        "price": 5000,
+        "main": true
+      },
+      {
+        "name": "치즈라면",
+        "price": 5000,
+        "main": true
+      },
+      {
+        "name": "김치라면",
+        "price": 5000,
+        "main": true
+      },
+      {
+        "name": "만두라면",
+        "price": 5000,
+        "main": true
+      },
+      {
+        "name": "짬뽕라면",
+        "price": 6000,
+        "main": true
+      },
+      {
+        "name": "순살돈까스",
+        "price": 7500,
+        "main": true
+      },
+      {
+        "name": "치즈돈까스",
+        "price": 8000,
+        "main": true
+      },
+      {
+        "name": "고구마치즈돈까스",
+        "price": 8000,
+        "main": true
+      },
+      {
+        "name": "돈까스+우동",
+        "price": 11000,
+        "main": true
+      },
+      {
+        "name": "물냉면",
+        "price": 7500,
+        "main": true
+      },
+      {
+        "name": "비빔냉면",
+        "price": 7500,
+        "main": true
+      },
+      {
+        "name": "콩물국수",
+        "price": 7500,
+        "main": true
+      },
+      {
+        "name": "오뎅",
+        "price": 5000,
+        "main": false
+      },
+      {
+        "name": "물만두",
+        "price": 5000,
+        "main": false
+      },
+      {
+        "name": "고기만두",
+        "price": 5000,
+        "main": false
+      },
+      {
+        "name": "김치만두",
+        "price": 5000,
+        "main": false
+      },
+      {
+        "name": "떡볶이",
+        "price": 5000,
+        "main": false
+      },
+      {
+        "name": "치즈떡볶이",
+        "price": 6000,
+        "main": false
+      },
+      {
+        "name": "라볶이",
+        "price": 5500,
+        "main": false
+      },
+      {
+        "name": "치즈라볶이",
+        "price": 6500,
+        "main": false
+      },
+      {
+        "name": "공기밥",
+        "price": 1500,
+        "main": false
+      },
+      {
+        "name": "음료수(콜라,칠성사이다)",
+        "price": 1500,
+        "main": false
+      }
+    ],
+    "note": "공개 매장 메뉴판 이미지 대조. 사진 촬영일·현장 현재 가격을 보증하지 않음. 전대 정문점 이름·전화번호가 인쇄된 매장 메뉴판. 반사로 읽히지 않는 가격은 null.",
+    "status": "confirmed"
+  },
+  "attrs": {
+    "status": "partial",
+    "menus": [
+      {
+        "name": "깨순이김밥",
+        "price": 3500,
+        "main": true
+      },
+      {
+        "name": "참치마요치즈김밥",
+        "price": 4500,
+        "main": true
+      },
+      {
+        "name": "참치고추장김밥",
+        "price": 4500,
+        "main": true
+      },
+      {
+        "name": "참치매운고추김밥",
+        "price": 5000,
+        "main": true
+      },
+      {
+        "name": "참치김치김밥",
+        "price": 5000,
+        "main": true
+      },
+      {
+        "name": "김치김밥",
+        "price": 4000,
+        "main": true
+      },
+      {
+        "name": "김치치즈김밥",
+        "price": 4500,
+        "main": true
+      },
+      {
+        "name": "치즈김밥",
+        "price": 4000,
+        "main": true
+      },
+      {
+        "name": "소고기김밥",
+        "price": 4500,
+        "main": true
+      },
+      {
+        "name": "멸추김밥",
+        "price": 5000,
+        "main": true
+      },
+      {
+        "name": "매운고추김밥",
+        "price": 4000,
+        "main": true
+      },
+      {
+        "name": "참치치즈김밥",
+        "price": 5000,
+        "main": true
+      },
+      {
+        "name": "샐러드김밥",
+        "price": 4000,
+        "main": true
+      },
+      {
+        "name": "새우튀김김밥",
+        "price": 5000,
+        "main": true
+      },
+      {
+        "name": "참치김치덮밥",
+        "price": 8000,
+        "main": true
+      },
+      {
+        "name": "소고기덮밥",
+        "price": 8500,
+        "main": true
+      },
+      {
+        "name": "낙지덮밥",
+        "price": 8500,
+        "main": true
+      },
+      {
+        "name": "오징어덮밥",
+        "price": 8500,
+        "main": true
+      },
+      {
+        "name": "제육덮밥",
+        "price": 8000,
+        "main": true
+      },
+      {
+        "name": "깨순이스페셜",
+        "price": 10000,
+        "main": true
+      },
+      {
+        "name": "치즈제육덮밥",
+        "price": 9000,
+        "main": true
+      },
+      {
+        "name": "제육돌솥밥",
+        "price": 9000,
+        "main": true
+      },
+      {
+        "name": "치즈제육돌솥밥",
+        "price": 10000,
+        "main": true
+      },
+      {
+        "name": "돌솥밥(이름 일부 판독 불가)",
+        "price": 9500,
+        "main": false
+      },
+      {
+        "name": "김치치즈돌솥밥",
+        "price": 8500,
+        "main": true
+      },
+      {
+        "name": "돌솥비빔밥",
+        "price": 8000,
+        "main": true
+      },
+      {
+        "name": "비빔밥",
+        "price": 7500,
+        "main": true
+      },
+      {
+        "name": "참치비빔밥",
+        "price": 8000,
+        "main": true
+      },
+      {
+        "name": "낙지비빔밥",
+        "price": 8500,
+        "main": true
+      },
+      {
+        "name": "낙지돌솥밥",
+        "price": 9000,
+        "main": true
+      },
+      {
+        "name": "카레라이스",
+        "price": 8000,
+        "main": true
+      },
+      {
+        "name": "뚝배기알밥",
+        "price": 7500,
+        "main": true
+      },
+      {
+        "name": "떡국",
+        "price": 7000,
+        "main": true
+      },
+      {
+        "name": "만두국",
+        "price": 7000,
+        "main": true
+      },
+      {
+        "name": "떡만두국",
+        "price": 7500,
+        "main": true
+      },
+      {
+        "name": "감자수제비",
+        "price": 8000,
+        "main": true
+      },
+      {
+        "name": "얼큰손수제비",
+        "price": 8000,
+        "main": true
+      },
+      {
+        "name": "애호박찌개",
+        "price": 8000,
+        "main": true
+      },
+      {
+        "name": "김치찌개",
+        "price": 7500,
+        "main": true
+      },
+      {
+        "name": "참치찌개",
+        "price": 8000,
+        "main": true
+      },
+      {
+        "name": "된장찌개",
+        "price": 7500,
+        "main": true
+      },
+      {
+        "name": "갈비탕",
+        "price": 9000,
+        "main": true
+      },
+      {
+        "name": "소뚝불고기",
+        "price": 8500,
+        "main": true
+      },
+      {
+        "name": "참치김치볶음밥",
+        "price": 8000,
+        "main": true
+      },
+      {
+        "name": "김치볶음밥",
+        "price": 7500,
+        "main": true
+      },
+      {
+        "name": "참치볶음밥",
+        "price": 7500,
+        "main": true
+      },
+      {
+        "name": "치즈김치볶음밥",
+        "price": 8500,
+        "main": true
+      },
+      {
+        "name": "소고기볶음밥",
+        "price": 8000,
+        "main": true
+      },
+      {
+        "name": "새우볶음밥",
+        "price": 8000,
+        "main": true
+      },
+      {
+        "name": "오므라이스",
+        "price": 7500,
+        "main": true
+      },
+      {
+        "name": "참치오므라이스",
+        "price": 8500,
+        "main": true
+      },
+      {
+        "name": "치즈오므라이스",
+        "price": 8500,
+        "main": true
+      },
+      {
+        "name": "우동",
+        "price": 5000,
+        "main": true
+      },
+      {
+        "name": "해물우동",
+        "price": 6500,
+        "main": true
+      },
+      {
+        "name": "해물볶음우동",
+        "price": 6500,
+        "main": true
+      },
+      {
+        "name": "칼만두",
+        "price": 6000,
+        "main": true
+      },
+      {
+        "name": "쫄면",
+        "price": 7000,
+        "main": true
+      },
+      {
+        "name": "잔치국수",
+        "price": 7500,
+        "main": true
+      },
+      {
+        "name": "비빔국수",
+        "price": 7500,
+        "main": true
+      },
+      {
+        "name": "라면",
+        "price": 4500,
+        "main": true
+      },
+      {
+        "name": "떡라면",
+        "price": 5000,
+        "main": true
+      },
+      {
+        "name": "치즈라면",
+        "price": 5000,
+        "main": true
+      },
+      {
+        "name": "김치라면",
+        "price": 5000,
+        "main": true
+      },
+      {
+        "name": "만두라면",
+        "price": 5000,
+        "main": true
+      },
+      {
+        "name": "짬뽕라면",
+        "price": 6000,
+        "main": true
+      },
+      {
+        "name": "순살돈까스",
+        "price": 7500,
+        "main": true
+      },
+      {
+        "name": "치즈돈까스",
+        "price": 8000,
+        "main": true
+      },
+      {
+        "name": "고구마치즈돈까스",
+        "price": 8000,
+        "main": true
+      },
+      {
+        "name": "돈까스+우동",
+        "price": 11000,
+        "main": true
+      },
+      {
+        "name": "물냉면",
+        "price": 7500,
+        "main": true
+      },
+      {
+        "name": "비빔냉면",
+        "price": 7500,
+        "main": true
+      },
+      {
+        "name": "콩물국수",
+        "price": 7500,
+        "main": true
+      },
+      {
+        "name": "오뎅",
+        "price": 5000,
+        "main": false
+      },
+      {
+        "name": "물만두",
+        "price": 5000,
+        "main": false
+      },
+      {
+        "name": "고기만두",
+        "price": 5000,
+        "main": false
+      },
+      {
+        "name": "김치만두",
+        "price": 5000,
+        "main": false
+      },
+      {
+        "name": "떡볶이",
+        "price": 5000,
+        "main": false
+      },
+      {
+        "name": "치즈떡볶이",
+        "price": 6000,
+        "main": false
+      },
+      {
+        "name": "라볶이",
+        "price": 5500,
+        "main": false
+      },
+      {
+        "name": "치즈라볶이",
+        "price": 6500,
+        "main": false
+      },
+      {
+        "name": "공기밥",
+        "price": 1500,
+        "main": false
+      },
+      {
+        "name": "음료수(콜라,칠성사이다)",
+        "price": 1500,
+        "main": false
+      }
+    ],
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금",
+          "토",
+          "일"
+        ],
+        "open": "08:00",
+        "close": "21:00",
+        "lastOrder": "20:25"
+      }
+    ]
+  },
+  "hoursObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/place/38710685",
+    "checkedAt": "2026-11-12",
+    "status": "confirmed",
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금",
+          "토",
+          "일"
+        ],
+        "open": "08:00",
+        "close": "21:00",
+        "lastOrder": "20:25"
+      }
+    ],
+    "note": "매장 영업시간 관찰. 기존 attrs/research를 덮어쓰지 않습니다."
+  },
+  "research": {
+    "checkedAt": "2026-11-11",
+    "method": "web",
+    "identityStatus": "matched",
+    "queries": [
+      "깨순이김밥 전대정문점 전남광주 북구 자미로 60"
+    ],
+    "sources": [
+      {
+        "id": "naver-place",
+        "url": "https://pcmap.place.naver.com/place/38710685",
+        "title": "깨순이김밥 전대정문점 네이버 지도",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "같은 주소의 지점 확인. 지도 등록 확인은 실시간 영업 중 보증이 아님"
+      },
+      {
+        "id": "naver-menu",
+        "url": "https://pcmap.place.naver.com/place/38710685",
+        "title": "깨순이김밥 전대정문점 메뉴 탭",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "가격 맥락: unknown"
+      },
+      {
+        "id": "naver-hours",
+        "url": "https://pcmap.place.naver.com/place/38710685",
+        "title": "깨순이김밥 전대정문점 영업시간",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "게시된 요일별 영업시간. 미확인은 추정하지 않음"
+      }
+    ],
+    "facts": {
+      "menus": {
+        "status": "unconfirmed",
+        "sourceIds": [],
+        "note": "매장 기준 정보 미확인. 배달·가격 맥락 불명 자료는 확정하지 않습니다."
+      },
+      "hours": {
+        "status": "unconfirmed",
+        "sourceIds": [],
+        "note": "매장 기준 정보 미확인. 배달·가격 맥락 불명 자료는 확정하지 않습니다."
+      }
+    },
+    "unknownFields": [
+      "menus",
+      "hours",
+      "mealType",
+      "takeout",
+      "verifiedAt",
+      "verifiedBy",
+      "break",
+      "lastOrder"
+    ],
+    "notes": [
+      "메뉴 탭이 예약/주문 출처로 이동하여 자동 승인 검토가 관찰을 거절함. 메뉴 미수집.",
+      "영업시간 원문: 매일08:00-21:00; 라스트오더20:25",
+      "원문 메뉴 목록·분류는 front.json에 보존. main은 1인 식사 예산용 조사자 분류이며 공유 메뉴는 false로 보수적으로 표시.",
+      "공개 메뉴 URL 미확인으로 출처는 확인한 장소 홈 URL. 메뉴를 확인했다는 뜻이 아님.",
+      "병합 입력: front_normalized_manifest.json",
+      "공개 네이버 화면 관찰이며 현장 검증이 아닙니다."
+    ]
+  },
+  "followupReview": {
+    "checkedAt": "2026-11-12",
+    "reasons": [
+      "확인된 매장 식사 가격과 요일별 영업시간을 연결하여 추천 대상으로 전환했습니다."
+    ],
+    "sources": [
+      "https://pcmap.place.naver.com/restaurant/38710685/home",
+      "https://pcmap.place.naver.com/restaurant/38710685/menu/list",
+      "https://pcmap.place.naver.com/place/38710685",
+      "https://ldb-phinf.pstatic.net/20260908_265/1788826075144D9GcY_JPEG/image.jpg"
+    ]
+  }
+}

@@ -1,0 +1,386 @@
+{
+  "version": 1,
+  "id": "p_0106",
+  "source": "team",
+  "sourceId": "naver:19570189",
+  "name": "백년옥",
+  "address": "전남광주 북구 용봉로 30",
+  "category": "한식",
+  "lat": 35.1714006343377,
+  "lng": 126.900172801905,
+  "sourceStatus": "active",
+  "availability": {
+    "status": "listed",
+    "provider": "naver",
+    "checkedAt": "2026-11-11",
+    "sourceUrl": "https://pcmap.place.naver.com/place/19570189",
+    "naverPlaceId": "19570189",
+    "observedName": "백년옥",
+    "observedAddress": "전남광주 북구 용봉로 30",
+    "district": "정문",
+    "addressVerified": true,
+    "nearby": true,
+    "reason": "공개 네이버 지도에서 동일 주소의 전남대 정문 식당으로 확인"
+  },
+  "menuObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/19570189/menu/list",
+    "checkedAt": "2026-11-11",
+    "priceContext": "in_store",
+    "menus": [
+      {
+        "name": "갈치조림 대",
+        "price": 60000,
+        "main": false
+      },
+      {
+        "name": "갈치조림 중",
+        "price": 40000,
+        "main": false
+      },
+      {
+        "name": "병어회",
+        "price": 25000,
+        "main": false
+      },
+      {
+        "name": "보쌈 대",
+        "price": 35000,
+        "main": false
+      },
+      {
+        "name": "아구찜",
+        "price": 30000,
+        "main": false
+      },
+      {
+        "name": "삼합 대",
+        "price": 60000,
+        "main": false
+      },
+      {
+        "name": "삼합 중",
+        "price": 50000,
+        "main": false
+      },
+      {
+        "name": "병어조림 대",
+        "price": 50000,
+        "main": false
+      },
+      {
+        "name": "병어조림 중",
+        "price": 34000,
+        "main": false
+      },
+      {
+        "name": "갈치구이정식",
+        "price": 20000,
+        "main": true
+      },
+      {
+        "name": "쌈밥정식",
+        "price": 9000,
+        "main": true
+      },
+      {
+        "name": "홍어사시미(대)",
+        "price": 50000,
+        "main": false
+      },
+      {
+        "name": "홍어사시미(중)",
+        "price": 40000,
+        "main": false
+      },
+      {
+        "name": "홍어찜(대)",
+        "price": 50000,
+        "main": false
+      },
+      {
+        "name": "홍어찜(중)",
+        "price": 40000,
+        "main": false
+      }
+    ],
+    "note": "메뉴 상태: confirmed. 원본 관찰·좌표 출처는 적용 manifest에 보관합니다.",
+    "status": "confirmed"
+  },
+  "attrs": {
+    "status": "partial",
+    "menus": [
+      {
+        "name": "갈치조림 대",
+        "price": 60000,
+        "main": false
+      },
+      {
+        "name": "갈치조림 중",
+        "price": 40000,
+        "main": false
+      },
+      {
+        "name": "병어회",
+        "price": 25000,
+        "main": false
+      },
+      {
+        "name": "보쌈 대",
+        "price": 35000,
+        "main": false
+      },
+      {
+        "name": "아구찜",
+        "price": 30000,
+        "main": false
+      },
+      {
+        "name": "삼합 대",
+        "price": 60000,
+        "main": false
+      },
+      {
+        "name": "삼합 중",
+        "price": 50000,
+        "main": false
+      },
+      {
+        "name": "병어조림 대",
+        "price": 50000,
+        "main": false
+      },
+      {
+        "name": "병어조림 중",
+        "price": 34000,
+        "main": false
+      },
+      {
+        "name": "갈치구이정식",
+        "price": 20000,
+        "main": true
+      },
+      {
+        "name": "쌈밥정식",
+        "price": 9000,
+        "main": true
+      },
+      {
+        "name": "홍어사시미(대)",
+        "price": 50000,
+        "main": false
+      },
+      {
+        "name": "홍어사시미(중)",
+        "price": 40000,
+        "main": false
+      },
+      {
+        "name": "홍어찜(대)",
+        "price": 50000,
+        "main": false
+      },
+      {
+        "name": "홍어찜(중)",
+        "price": 40000,
+        "main": false
+      }
+    ],
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금",
+          "토",
+          "일"
+        ],
+        "open": "10:00",
+        "close": "22:30"
+      }
+    ]
+  },
+  "hoursObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/place/19570189",
+    "checkedAt": "2026-11-11",
+    "status": "confirmed",
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금",
+          "토",
+          "일"
+        ],
+        "open": "10:00",
+        "close": "22:30"
+      }
+    ],
+    "note": "매장 영업시간 관찰. 기존 attrs/research를 덮어쓰지 않습니다."
+  },
+  "research": {
+    "checkedAt": "2026-11-11",
+    "method": "web",
+    "identityStatus": "matched",
+    "queries": [
+      "백년옥 전남광주 북구 용봉로 30"
+    ],
+    "sources": [
+      {
+        "id": "naver-place",
+        "url": "https://pcmap.place.naver.com/place/19570189",
+        "title": "백년옥 네이버 지도",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "같은 주소의 지점 확인. 지도 등록 확인은 실시간 영업 중 보증이 아님"
+      },
+      {
+        "id": "naver-menu",
+        "url": "https://pcmap.place.naver.com/restaurant/19570189/menu/list",
+        "title": "백년옥 메뉴 탭",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "가격 맥락: in_store"
+      },
+      {
+        "id": "naver-hours",
+        "url": "https://pcmap.place.naver.com/place/19570189",
+        "title": "백년옥 영업시간",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "게시된 요일별 영업시간. 미확인은 추정하지 않음"
+      }
+    ],
+    "facts": {
+      "menus": {
+        "status": "confirmed",
+        "sourceIds": [
+          "naver-menu"
+        ],
+        "note": "매장 게시값을 확인했습니다.",
+        "value": [
+          {
+            "name": "갈치조림 대",
+            "price": 60000,
+            "main": false
+          },
+          {
+            "name": "갈치조림 중",
+            "price": 40000,
+            "main": false
+          },
+          {
+            "name": "병어회",
+            "price": 25000,
+            "main": false
+          },
+          {
+            "name": "보쌈 대",
+            "price": 35000,
+            "main": false
+          },
+          {
+            "name": "아구찜",
+            "price": 30000,
+            "main": false
+          },
+          {
+            "name": "삼합 대",
+            "price": 60000,
+            "main": false
+          },
+          {
+            "name": "삼합 중",
+            "price": 50000,
+            "main": false
+          },
+          {
+            "name": "병어조림 대",
+            "price": 50000,
+            "main": false
+          },
+          {
+            "name": "병어조림 중",
+            "price": 34000,
+            "main": false
+          },
+          {
+            "name": "갈치구이정식",
+            "price": 20000,
+            "main": true
+          },
+          {
+            "name": "쌈밥정식",
+            "price": 9000,
+            "main": true
+          },
+          {
+            "name": "홍어사시미(대)",
+            "price": 50000,
+            "main": false
+          },
+          {
+            "name": "홍어사시미(중)",
+            "price": 40000,
+            "main": false
+          },
+          {
+            "name": "홍어찜(대)",
+            "price": 50000,
+            "main": false
+          },
+          {
+            "name": "홍어찜(중)",
+            "price": 40000,
+            "main": false
+          }
+        ]
+      },
+      "hours": {
+        "status": "confirmed",
+        "sourceIds": [
+          "naver-hours"
+        ],
+        "note": "매장 게시값을 확인했습니다.",
+        "value": [
+          {
+            "days": [
+              "월",
+              "화",
+              "수",
+              "목",
+              "금",
+              "토",
+              "일"
+            ],
+            "open": "10:00",
+            "close": "22:30"
+          }
+        ]
+      }
+    },
+    "unknownFields": [
+      "mealType",
+      "takeout",
+      "verifiedAt",
+      "verifiedBy",
+      "break",
+      "lastOrder"
+    ],
+    "notes": [
+      "공공 원본 백련옥이 지도에서 백년옥 상호로 검색됨; 동일주소. 대/중 요리는 공유메뉴 가격.",
+      "메뉴 탭 텍스트 기준; 사진 미대조.",
+      "원본 전체관찰·사진/배달가격 구분은 front_more.json. 영업시간 원문: 매일10:00-22:30",
+      "동주소 기존p_0004의 상호 백련옥과 네이버 백년옥은 글자가 다름. 동일업체를 확정할 추가 근거가 없어 ID는 자동연결하지 않음.",
+      "병합 입력: front_more2_normalized_manifest.json",
+      "공개 네이버 화면 관찰이며 현장 검증이 아닙니다."
+    ]
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "id": "s_01",
+  "name": "샘플식당 01 · 평범한 한식",
+  "category": "한식",
+  "lat": 35.179,
+  "lng": 126.912,
+  "address": "샘플 주소 (가짜 데이터)",
+  "source": "sample",
+  "attrs": {
+    "mealType": "일반",
+    "takeout": false,
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금",
+          "토"
+        ],
+        "open": "10:30",
+        "close": "21:00"
+      }
+    ],
+    "menus": [
+      {
+        "name": "제육덮밥",
+        "price": 7000,
+        "main": true
+      },
+      {
+        "name": "김치찌개",
+        "price": 7500,
+        "main": true
+      },
+      {
+        "name": "계란말이",
+        "price": 6000,
+        "main": false
+      }
+    ],
+    "note": "기본 경우 — 후문 근처, 7천 원대",
+    "verifiedAt": "2026-11-11",
+    "verifiedBy": "sample"
+  }
+}

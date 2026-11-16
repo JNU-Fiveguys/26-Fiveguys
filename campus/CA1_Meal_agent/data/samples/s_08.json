@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "id": "s_08",
+  "name": "샘플 학생식당",
+  "category": "학식",
+  "lat": 35.176,
+  "lng": 126.909,
+  "address": "샘플 주소 (가짜 데이터)",
+  "source": "sample",
+  "attrs": {
+    "mealType": "학식",
+    "takeout": false,
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금"
+        ],
+        "open": "11:30",
+        "close": "13:30"
+      },
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금"
+        ],
+        "open": "17:00",
+        "close": "18:30"
+      }
+    ],
+    "menus": [
+      {
+        "name": "오늘의 백반",
+        "price": 5000,
+        "main": true
+      }
+    ],
+    "note": "점심·저녁 두 번 운영(같은 요일 여러 구간) · 주말 휴무",
+    "verifiedAt": "2026-11-11",
+    "verifiedBy": "sample"
+  }
+}

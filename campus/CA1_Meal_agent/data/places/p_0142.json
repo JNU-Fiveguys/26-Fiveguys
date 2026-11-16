@@ -1,0 +1,1348 @@
+{
+  "version": 1,
+  "id": "p_0142",
+  "source": "team",
+  "sourceId": "naver:1697423048",
+  "name": "난타5000피자 전대용봉점",
+  "address": "전남광주 북구 용주로30번길 50 1층",
+  "category": "양식",
+  "lat": 35.1806511543847,
+  "lng": 126.903378193121,
+  "sourceStatus": "active",
+  "availability": {
+    "status": "listed",
+    "provider": "naver",
+    "checkedAt": "2026-11-11",
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/1697423048/home",
+    "naverPlaceId": "1697423048",
+    "observedName": "난타5000피자 전대용봉점",
+    "observedAddress": "전남광주 북구 용주로30번길 50 1층",
+    "district": "예대",
+    "addressVerified": true,
+    "nearby": true,
+    "reason": "공개 네이버 지도에서 동일 주소의 전남대 예대 식당으로 확인"
+  },
+  "menuObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/1697423048/menu/list",
+    "checkedAt": "2026-11-12",
+    "priceContext": "delivery",
+    "status": "unconfirmed",
+    "menus": [
+      {
+        "name": "체다 핫치킨 피자(L)",
+        "price": 20500,
+        "main": false,
+        "priceText": "20,500원"
+      },
+      {
+        "name": "체다 핫치킨 피자(XL)",
+        "price": 38000,
+        "main": false,
+        "priceText": "38,000원"
+      },
+      {
+        "name": "골드새우 피자(L)",
+        "price": 26500,
+        "main": false,
+        "priceText": "26,500원"
+      },
+      {
+        "name": "골드새우 피자(XL)",
+        "price": 50000,
+        "main": false,
+        "priceText": "50,000원"
+      },
+      {
+        "name": "포테이토&베이컨(L)",
+        "price": 20500,
+        "main": false,
+        "priceText": "20,500원"
+      },
+      {
+        "name": "포테이토&베이컨(XL)",
+        "price": 38000,
+        "main": false,
+        "priceText": "38,000원"
+      },
+      {
+        "name": "치즈크러스트콘비네이션 피자(L)",
+        "price": 19500,
+        "main": false,
+        "priceText": "19,500원"
+      },
+      {
+        "name": "치즈크러스트콘비네이션 피자(XL)",
+        "price": 36000,
+        "main": false,
+        "priceText": "36,000원"
+      },
+      {
+        "name": "치즈크러스트 프리미엄불고기 피자(L)",
+        "price": 21500,
+        "main": false,
+        "priceText": "21,500원"
+      },
+      {
+        "name": "치즈크러스트 프리미엄불고기 피자(XL)",
+        "price": 40000,
+        "main": false,
+        "priceText": "40,000원"
+      },
+      {
+        "name": "골드 바베큐필레 피자(L)",
+        "price": 27500,
+        "main": false,
+        "priceText": "27,500원"
+      },
+      {
+        "name": "골드 바베큐필레 피자(XL)",
+        "price": 50000,
+        "main": false,
+        "priceText": "50,000원"
+      },
+      {
+        "name": "1.치즈크러스트+스파게티+콜라&스프라이트(L사이즈)",
+        "price": 28000,
+        "main": false,
+        "priceText": "28,000원"
+      },
+      {
+        "name": "1.치즈크러스트+스파게티+콜라&스프라이트(M사이즈)",
+        "price": 25000,
+        "main": false,
+        "priceText": "25,000원"
+      },
+      {
+        "name": "2.리치골드L+스파게티+콜라&스프라이트(L사이즈)",
+        "price": 30000,
+        "main": false,
+        "priceText": "30,000원"
+      },
+      {
+        "name": "2.리치골드L+스파게티+콜라&스프라이트(M사이즈)",
+        "price": 26000,
+        "main": false,
+        "priceText": "26,000원"
+      },
+      {
+        "name": "3.치즈바이트L+스파게티+콜라&스프라이트(L사이즈)",
+        "price": 30500,
+        "main": false,
+        "priceText": "30,500원"
+      },
+      {
+        "name": "3.치즈바이트L+스파게티+콜라&스프라이트(M사이즈)",
+        "price": 27000,
+        "main": false,
+        "priceText": "27,000원"
+      },
+      {
+        "name": "4.체다피자+스파게티+콜라&스프라이트(L사이즈)",
+        "price": 28000,
+        "main": false,
+        "priceText": "28,000원"
+      },
+      {
+        "name": "4.체다피자+스파게티+콜라&스프라이트(M사이즈)",
+        "price": 25000,
+        "main": false,
+        "priceText": "25,000원"
+      },
+      {
+        "name": "골드베스트 피자(L)",
+        "price": 27500,
+        "main": false,
+        "priceText": "27,500원"
+      },
+      {
+        "name": "골드베스트 피자(XL)",
+        "price": 52000,
+        "main": false,
+        "priceText": "52,000원"
+      },
+      {
+        "name": "골드스테이크 피자(L)",
+        "price": 25000,
+        "main": false,
+        "priceText": "25,000원"
+      },
+      {
+        "name": "골드스테이크 피자(XL)",
+        "price": 47000,
+        "main": false,
+        "priceText": "47,000원"
+      },
+      {
+        "name": "골드프리미엄불고기 피자(L)",
+        "price": 25000,
+        "main": false,
+        "priceText": "25,000원"
+      },
+      {
+        "name": "골드프리미엄불고기 피자(XL)",
+        "price": 47000,
+        "main": false,
+        "priceText": "47,000원"
+      },
+      {
+        "name": "골드핫치킨 피자(L)",
+        "price": 24000,
+        "main": false,
+        "priceText": "24,000원"
+      },
+      {
+        "name": "골드핫치킨 피자(XL)",
+        "price": 45000,
+        "main": false,
+        "priceText": "45,000원"
+      },
+      {
+        "name": "골드베이컨 피자(L)",
+        "price": 24000,
+        "main": false,
+        "priceText": "24,000원"
+      },
+      {
+        "name": "골드베이컨 피자(XL)",
+        "price": 45000,
+        "main": false,
+        "priceText": "45,000원"
+      },
+      {
+        "name": "골드포테이토 피자(L)",
+        "price": 23000,
+        "main": false,
+        "priceText": "23,000원"
+      },
+      {
+        "name": "골드포테이토 피자(XL)",
+        "price": 43000,
+        "main": false,
+        "priceText": "43,000원"
+      },
+      {
+        "name": "골드고구마 피자(L)",
+        "price": 23000,
+        "main": false,
+        "priceText": "23,000원"
+      },
+      {
+        "name": "골드고구마 피자(XL)",
+        "price": 43000,
+        "main": false,
+        "priceText": "43,000원"
+      },
+      {
+        "name": "골드하와이안(L)",
+        "price": 23000,
+        "main": false,
+        "priceText": "23,000원"
+      },
+      {
+        "name": "골드하와이안(XL)",
+        "price": 43000,
+        "main": false,
+        "priceText": "43,000원"
+      },
+      {
+        "name": "골드베이컨&포테이토(L)",
+        "price": 25500,
+        "main": false,
+        "priceText": "25,500원"
+      },
+      {
+        "name": "골드베이컨&포테이토(XL)",
+        "price": 48000,
+        "main": false,
+        "priceText": "48,000원"
+      },
+      {
+        "name": "골드반반피자(선택 메모)(L)",
+        "price": 26500,
+        "main": false,
+        "priceText": "26,500원"
+      },
+      {
+        "name": "골드반반피자(선택 메모)(XL)",
+        "price": 49000,
+        "main": false,
+        "priceText": "49,000원"
+      },
+      {
+        "name": "골드네가지맛 A (새우.스테이크.핫치킨.포테이토)(L)",
+        "price": 27000,
+        "main": false,
+        "priceText": "27,000원"
+      },
+      {
+        "name": "골드네가지맛 A (새우.스테이크.핫치킨.포테이토)(XL)",
+        "price": 50500,
+        "main": false,
+        "priceText": "50,500원"
+      },
+      {
+        "name": "골드네가지맛 B (소불고기.고구마.베이컨.바베큐필레)(L)",
+        "price": 27000,
+        "main": false,
+        "priceText": "27,000원"
+      },
+      {
+        "name": "골드네가지맛 B (소불고기.고구마.베이컨.바베큐필레)(XL)",
+        "price": 50500,
+        "main": false,
+        "priceText": "50,500원"
+      },
+      {
+        "name": "골드콘비네이션(L)",
+        "price": 23000,
+        "main": false,
+        "priceText": "23,000원"
+      },
+      {
+        "name": "골드콘비네이션(XL)",
+        "price": 43000,
+        "main": false,
+        "priceText": "43,000원"
+      },
+      {
+        "name": "골드페파로니(L)",
+        "price": 23000,
+        "main": false,
+        "priceText": "23,000원"
+      },
+      {
+        "name": "골드페파로니(XXL)",
+        "price": 43000,
+        "main": false,
+        "priceText": "43,000원"
+      },
+      {
+        "name": "치즈바이트 스테이크 피자(L)",
+        "price": 24000,
+        "main": false,
+        "priceText": "24,000원"
+      },
+      {
+        "name": "치즈바이트 스테이크 피자(XL)",
+        "price": 45000,
+        "main": false,
+        "priceText": "45,000원"
+      },
+      {
+        "name": "치즈바이트 프리미엄불고기 피자(L)",
+        "price": 24000,
+        "main": false,
+        "priceText": "24,000원"
+      },
+      {
+        "name": "치즈바이트 프리미엄불고기 피자(XL)",
+        "price": 45000,
+        "main": false,
+        "priceText": "45,000원"
+      },
+      {
+        "name": "치즈바이트 베이컨 피자(L)",
+        "price": 23000,
+        "main": false,
+        "priceText": "23,000원"
+      },
+      {
+        "name": "치즈바이트 베이컨 피자(XL)",
+        "price": 43000,
+        "main": false,
+        "priceText": "43,000원"
+      },
+      {
+        "name": "치즈바이트 핫치킨 피자(L)",
+        "price": 23000,
+        "main": false,
+        "priceText": "23,000원"
+      },
+      {
+        "name": "치즈바이트 핫치킨 피자(XL)",
+        "price": 43000,
+        "main": false,
+        "priceText": "43,000원"
+      },
+      {
+        "name": "치즈바이트 불고기 피자(L)",
+        "price": 22000,
+        "main": false,
+        "priceText": "22,000원"
+      },
+      {
+        "name": "치즈바이트 불고기 피자(XL)",
+        "price": 41000,
+        "main": false,
+        "priceText": "41,000원"
+      },
+      {
+        "name": "치즈바이트 포테이토 피자(L)",
+        "price": 22000,
+        "main": false,
+        "priceText": "22,000원"
+      },
+      {
+        "name": "치즈바이트 포테이토 피자(XL)",
+        "price": 41000,
+        "main": false,
+        "priceText": "41,000원"
+      },
+      {
+        "name": "치즈바이트 고구마 피자(L)",
+        "price": 22000,
+        "main": false,
+        "priceText": "22,000원"
+      },
+      {
+        "name": "치즈바이트 고구마 피자(XL)",
+        "price": 41000,
+        "main": false,
+        "priceText": "41,000원"
+      },
+      {
+        "name": "치즈바이트 페퍼로니 피자(L)",
+        "price": 22000,
+        "main": false,
+        "priceText": "22,000원"
+      },
+      {
+        "name": "치즈바이트 페퍼로니 피자(XL)",
+        "price": 41000,
+        "main": false,
+        "priceText": "41,000원"
+      },
+      {
+        "name": "치즈바이트 콘비네이션피자(L)",
+        "price": 22000,
+        "main": false,
+        "priceText": "22,000원"
+      },
+      {
+        "name": "치즈바이트 콘비네이션피자(XL)",
+        "price": 41000,
+        "main": false,
+        "priceText": "41,000원"
+      },
+      {
+        "name": "치즈바이트 하와이안(L)",
+        "price": 22000,
+        "main": false,
+        "priceText": "22,000원"
+      },
+      {
+        "name": "치즈바이트 하와이안(XL)",
+        "price": 41000,
+        "main": false,
+        "priceText": "41,000원"
+      },
+      {
+        "name": "치바포테이토&베이컨(ㄴ)",
+        "price": 23500,
+        "main": false,
+        "priceText": "23,500원"
+      },
+      {
+        "name": "치바포테이토&베이컨(XL)",
+        "price": 44000,
+        "main": false,
+        "priceText": "44,000원"
+      },
+      {
+        "name": "치즈바이트 반반(선택 메모)(L)",
+        "price": 25000,
+        "main": false,
+        "priceText": "25,000원"
+      },
+      {
+        "name": "치즈바이트 반반(선택 메모)(XL)",
+        "price": 46500,
+        "main": false,
+        "priceText": "46,500원"
+      },
+      {
+        "name": "치바 네가지맛 A (새우.스테이크.핫치킨.포테이토)(L)",
+        "price": 26500,
+        "main": false,
+        "priceText": "26,500원"
+      },
+      {
+        "name": "치바 네가지맛 A (새우.스테이크.핫치킨.포테이토)(XL)",
+        "price": 47500,
+        "main": false,
+        "priceText": "47,500원"
+      },
+      {
+        "name": "치바네가지맛 B (소불고기.고구마.베이컨.바베큐필레)(L)",
+        "price": 26500,
+        "main": false,
+        "priceText": "26,500원"
+      },
+      {
+        "name": "치바네가지맛 B (소불고기.고구마.베이컨.바베큐필레)(XL)",
+        "price": 47500,
+        "main": false,
+        "priceText": "47,500원"
+      },
+      {
+        "name": "치즈바이트 새우(L)",
+        "price": 24000,
+        "main": false,
+        "priceText": "24,000원"
+      },
+      {
+        "name": "치즈바이트 새우(XL)",
+        "price": 45000,
+        "main": false,
+        "priceText": "45,000원"
+      },
+      {
+        "name": "떡갈비 피자(L)",
+        "price": 19000,
+        "main": false,
+        "priceText": "19,000원"
+      },
+      {
+        "name": "떡갈비 피자(XL)",
+        "price": 35000,
+        "main": false,
+        "priceText": "35,000원"
+      },
+      {
+        "name": "스테이크 피자(L)",
+        "price": 19000,
+        "main": false,
+        "priceText": "19,000원"
+      },
+      {
+        "name": "스테이크 피자(XL)",
+        "price": 35000,
+        "main": false,
+        "priceText": "35,000원"
+      },
+      {
+        "name": "프리미엄불고기 피자(L)",
+        "price": 19000,
+        "main": false,
+        "priceText": "19,000원"
+      },
+      {
+        "name": "프리미엄불고기 피자(XL)",
+        "price": 35000,
+        "main": false,
+        "priceText": "35,000원"
+      },
+      {
+        "name": "베이컨 피자(L)",
+        "price": 18000,
+        "main": false,
+        "priceText": "18,000원"
+      },
+      {
+        "name": "베이컨 피자(XL)",
+        "price": 33000,
+        "main": false,
+        "priceText": "33,000원"
+      },
+      {
+        "name": "핫치킨 피자(L)",
+        "price": 18000,
+        "main": false,
+        "priceText": "18,000원"
+      },
+      {
+        "name": "핫치킨 피자(XL)",
+        "price": 33000,
+        "main": false,
+        "priceText": "33,000원"
+      },
+      {
+        "name": "하와이안 피자(L)",
+        "price": 17000,
+        "main": false,
+        "priceText": "17,000원"
+      },
+      {
+        "name": "하와이안 피자(XL)",
+        "price": 31000,
+        "main": false,
+        "priceText": "31,000원"
+      },
+      {
+        "name": "포테이토 피자(L)",
+        "price": 17000,
+        "main": false,
+        "priceText": "17,000원"
+      },
+      {
+        "name": "포테이토 피자(XL)",
+        "price": 31000,
+        "main": false,
+        "priceText": "31,000원"
+      },
+      {
+        "name": "고구마 피자(L)",
+        "price": 17000,
+        "main": false,
+        "priceText": "17,000원"
+      },
+      {
+        "name": "고구마 피자(XL)",
+        "price": 31000,
+        "main": false,
+        "priceText": "31,000원"
+      },
+      {
+        "name": "불고기 피자(L)",
+        "price": 17000,
+        "main": false,
+        "priceText": "17,000원"
+      },
+      {
+        "name": "불고기 피자(XL)",
+        "price": 31000,
+        "main": false,
+        "priceText": "31,000원"
+      },
+      {
+        "name": "콤비네이션 피자(L)",
+        "price": 17000,
+        "main": false,
+        "priceText": "17,000원"
+      },
+      {
+        "name": "콤비네이션 피자(XL)",
+        "price": 31000,
+        "main": false,
+        "priceText": "31,000원"
+      },
+      {
+        "name": "페파로니 피자(L)",
+        "price": 17000,
+        "main": false,
+        "priceText": "17,000원"
+      },
+      {
+        "name": "페파로니 피자(XL)",
+        "price": 31000,
+        "main": false,
+        "priceText": "31,000원"
+      },
+      {
+        "name": "야채 피자(L)",
+        "price": 16000,
+        "main": false,
+        "priceText": "16,000원"
+      },
+      {
+        "name": "야채 피자(XL)",
+        "price": 29000,
+        "main": false,
+        "priceText": "29,000원"
+      },
+      {
+        "name": "치즈 피자(M)",
+        "price": 12000,
+        "main": false,
+        "priceText": "12,000원"
+      },
+      {
+        "name": "치즈 피자(L)",
+        "price": 15000,
+        "main": false,
+        "priceText": "15,000원"
+      },
+      {
+        "name": "치즈 피자(XL)",
+        "price": 27000,
+        "main": false,
+        "priceText": "27,000원"
+      },
+      {
+        "name": "스크린 반반(선택메모)(L)",
+        "price": 20500,
+        "main": false,
+        "priceText": "20,500원"
+      },
+      {
+        "name": "스크린 반반(선택메모)(XL)",
+        "price": 36000,
+        "main": false,
+        "priceText": "36,000원"
+      },
+      {
+        "name": "체다 바베큐필레 피자(L)",
+        "price": 22000,
+        "main": false,
+        "priceText": "22,000원"
+      },
+      {
+        "name": "체다 바베큐필레 피자(XL)",
+        "price": 41000,
+        "main": false,
+        "priceText": "41,000원"
+      },
+      {
+        "name": "체다 스테이크 피자(L)",
+        "price": 21500,
+        "main": false,
+        "priceText": "21,500원"
+      },
+      {
+        "name": "체다 스테이크 피자(XL)",
+        "price": 40000,
+        "main": false,
+        "priceText": "40,000원"
+      },
+      {
+        "name": "체다 프리미엄 불고기 피자(L)",
+        "price": 21500,
+        "main": false,
+        "priceText": "21,500원"
+      },
+      {
+        "name": "체다 프리미엄 불고기 피자(XL)",
+        "price": 40000,
+        "main": false,
+        "priceText": "40,000원"
+      },
+      {
+        "name": "체다 베이컨 피자(L)",
+        "price": 20500,
+        "main": false,
+        "priceText": "20,500원"
+      },
+      {
+        "name": "체다 베이컨 피자(XL)",
+        "price": 38000,
+        "main": false,
+        "priceText": "38,000원"
+      },
+      {
+        "name": "체다 콤비네이션 피자(L)",
+        "price": 19500,
+        "main": false,
+        "priceText": "19,500원"
+      },
+      {
+        "name": "체다 콤비네이션 피자(XL)",
+        "price": 36000,
+        "main": false,
+        "priceText": "36,000원"
+      },
+      {
+        "name": "체다 불고기 피자(L)",
+        "price": 19500,
+        "main": false,
+        "priceText": "19,500원"
+      },
+      {
+        "name": "체다 불고기 피자(XL)",
+        "price": 36000,
+        "main": false,
+        "priceText": "36,000원"
+      },
+      {
+        "name": "체다 포테이토 피자(L)",
+        "price": 19500,
+        "main": false,
+        "priceText": "19,500원"
+      },
+      {
+        "name": "체다 포테이토 피자(XL)",
+        "price": 36000,
+        "main": false,
+        "priceText": "36,000원"
+      },
+      {
+        "name": "체다 고구마 피자(L)",
+        "price": 19500,
+        "main": false,
+        "priceText": "19,500원"
+      },
+      {
+        "name": "체다 고구마 피자(XL)",
+        "price": 36000,
+        "main": false,
+        "priceText": "36,000원"
+      },
+      {
+        "name": "체다 새우(L)",
+        "price": 22500,
+        "main": false,
+        "priceText": "22,500원"
+      },
+      {
+        "name": "체다 새우(XL)",
+        "price": 42500,
+        "main": false,
+        "priceText": "42,500원"
+      },
+      {
+        "name": "체다포테이토&베이컨(L)",
+        "price": 23000,
+        "main": false,
+        "priceText": "23,000원"
+      },
+      {
+        "name": "체다포테이토&베이컨(XL)",
+        "price": 43000,
+        "main": false,
+        "priceText": "43,000원"
+      },
+      {
+        "name": "체다반반(선택메모)(L)",
+        "price": 23000,
+        "main": false,
+        "priceText": "23,000원"
+      },
+      {
+        "name": "체다반반(선택메모)(XL)",
+        "price": 41500,
+        "main": false,
+        "priceText": "41,500원"
+      },
+      {
+        "name": "체다네가지맛 A (새우스.테이크.핫치킨.포테이토)(L)",
+        "price": 23500,
+        "main": false,
+        "priceText": "23,500원"
+      },
+      {
+        "name": "체다네가지맛 A (새우스.테이크.핫치킨.포테이토)(XL)",
+        "price": 43000,
+        "main": false,
+        "priceText": "43,000원"
+      },
+      {
+        "name": "체다네가지맛 B (소불고기.고구마.베이컨.바베큐필레)(L)",
+        "price": 23500,
+        "main": false,
+        "priceText": "23,500원"
+      },
+      {
+        "name": "체다네가지맛 B (소불고기.고구마.베이컨.바베큐필레)(XL)",
+        "price": 43000,
+        "main": false,
+        "priceText": "43,000원"
+      },
+      {
+        "name": "체다페파로니(L)",
+        "price": 19500,
+        "main": false,
+        "priceText": "19,500원"
+      },
+      {
+        "name": "체다페파로니(XXL)",
+        "price": 36000,
+        "main": false,
+        "priceText": "36,000원"
+      },
+      {
+        "name": "치즈크러스트 떡갈비 피자(L)",
+        "price": 21500,
+        "main": false,
+        "priceText": "21,500원"
+      },
+      {
+        "name": "치즈크러스트 떡갈비 피자(XL)",
+        "price": 40000,
+        "main": false,
+        "priceText": "40,000원"
+      },
+      {
+        "name": "치즈크러스트 스테이크 피자(L)",
+        "price": 21500,
+        "main": false,
+        "priceText": "21,500원"
+      },
+      {
+        "name": "치즈크러스트 스테이크 피자(XL)",
+        "price": 40000,
+        "main": false,
+        "priceText": "40,000원"
+      },
+      {
+        "name": "치즈크러스트 베이컨 피자(L)",
+        "price": 20500,
+        "main": false,
+        "priceText": "20,500원"
+      },
+      {
+        "name": "치즈크러스트 베이컨 피자(XL)",
+        "price": 38000,
+        "main": false,
+        "priceText": "38,000원"
+      },
+      {
+        "name": "치즈크러스트 핫치킨 피자(L)",
+        "price": 20500,
+        "main": false,
+        "priceText": "20,500원"
+      },
+      {
+        "name": "치즈크러스트 핫치킨 피자(XL)",
+        "price": 38000,
+        "main": false,
+        "priceText": "38,000원"
+      },
+      {
+        "name": "치즈크러스트 포테이토 피자(L)",
+        "price": 19500,
+        "main": false,
+        "priceText": "19,500원"
+      },
+      {
+        "name": "치즈크러스트 포테이토 피자(XL)",
+        "price": 36000,
+        "main": false,
+        "priceText": "36,000원"
+      },
+      {
+        "name": "치즈크러스트 고구마 피자(L)",
+        "price": 19500,
+        "main": false,
+        "priceText": "19,500원"
+      },
+      {
+        "name": "치즈크러스트 고구마 피자(XL)",
+        "price": 36000,
+        "main": false,
+        "priceText": "36,000원"
+      },
+      {
+        "name": "치즈크러스트 불고기 피자(L)",
+        "price": 19500,
+        "main": false,
+        "priceText": "19,500원"
+      },
+      {
+        "name": "치즈크러스트 불고기 피자(XL)",
+        "price": 36000,
+        "main": false,
+        "priceText": "36,000원"
+      },
+      {
+        "name": "치즈크러스트 새우피자(L)",
+        "price": 22500,
+        "main": false,
+        "priceText": "22,500원"
+      },
+      {
+        "name": "치즈크러스트 새우피자(XL)",
+        "price": 42000,
+        "main": false,
+        "priceText": "42,000원"
+      },
+      {
+        "name": "치즈크러스트 페파로니(L)",
+        "price": 19500,
+        "main": false,
+        "priceText": "19,500원"
+      },
+      {
+        "name": "치즈크러스트 페파로니(XL)",
+        "price": 36000,
+        "main": false,
+        "priceText": "36,000원"
+      },
+      {
+        "name": "치즈크러스트 하와이안(L)",
+        "price": 19500,
+        "main": false,
+        "priceText": "19,500원"
+      },
+      {
+        "name": "치즈크러스트 하와이안(XXXL)",
+        "price": 36000,
+        "main": false,
+        "priceText": "36,000원"
+      },
+      {
+        "name": "치크포테이토&베이컨(L)",
+        "price": 23000,
+        "main": false,
+        "priceText": "23,000원"
+      },
+      {
+        "name": "치크포테이토&베이컨(XL)",
+        "price": 43000,
+        "main": false,
+        "priceText": "43,000원"
+      },
+      {
+        "name": "치즈크러스트 반반(선택메모)(L)",
+        "price": 22500,
+        "main": false,
+        "priceText": "22,500원"
+      },
+      {
+        "name": "치즈크러스트 반반(선택메모)(XL)",
+        "price": 42500,
+        "main": false,
+        "priceText": "42,500원"
+      },
+      {
+        "name": "치크네가지맛 A (새우.스테이크.핫치킨.포테이토)(L)",
+        "price": 23000,
+        "main": false,
+        "priceText": "23,000원"
+      },
+      {
+        "name": "치크네가지맛 A (새우.스테이크.핫치킨.포테이토)(XL)",
+        "price": 42500,
+        "main": false,
+        "priceText": "42,500원"
+      },
+      {
+        "name": "치크네가지맛 B (소불고기.고구마.베이컨.바베큐필레)(L)",
+        "price": 23000,
+        "main": false,
+        "priceText": "23,000원"
+      },
+      {
+        "name": "치크네가지맛 B (소불고기.고구마.베이컨.바베큐필레)(XL)",
+        "price": 42500,
+        "main": false,
+        "priceText": "42,500원"
+      },
+      {
+        "name": "치즈크러스트 (L)+치즈스파게티+음료 大",
+        "price": 28000,
+        "main": false,
+        "priceText": "28,000원"
+      },
+      {
+        "name": "리치골드(L)+윙 6 & 봉6+음료 大",
+        "price": 36000,
+        "main": false,
+        "priceText": "36,000원"
+      },
+      {
+        "name": "치즈바이트(L)+오븐구이치킨+음료 大",
+        "price": 38500,
+        "main": false,
+        "priceText": "38,500원"
+      },
+      {
+        "name": "골드피자(L)+오븐구이치킨+음료 大",
+        "price": 40000,
+        "main": false,
+        "priceText": "40,000원"
+      },
+      {
+        "name": "치즈스파게티",
+        "price": 7000,
+        "main": false,
+        "priceText": "7,000원"
+      },
+      {
+        "name": "치킨 윙 봉(6조각)",
+        "price": 7000,
+        "main": false,
+        "priceText": "7,000원"
+      },
+      {
+        "name": "치킨 윙 봉(10조각)",
+        "price": 10500,
+        "main": false,
+        "priceText": "10,500원"
+      },
+      {
+        "name": "치킨 윙 봉(12조각)",
+        "price": 13000,
+        "main": false,
+        "priceText": "13,000원"
+      },
+      {
+        "name": "오븐구이 치킨",
+        "price": 15000,
+        "main": false,
+        "priceText": "15,000원"
+      },
+      {
+        "name": "피클(1개)",
+        "price": 600,
+        "main": false,
+        "priceText": "600원"
+      },
+      {
+        "name": "갈릭디핑(1개)",
+        "price": 600,
+        "main": false,
+        "priceText": "600원"
+      },
+      {
+        "name": "핫소스(1개)",
+        "price": 100,
+        "main": false,
+        "priceText": "100원"
+      },
+      {
+        "name": "코카콜라(500m)(1개)",
+        "price": 2000,
+        "main": false,
+        "priceText": "2,000원"
+      },
+      {
+        "name": "스프라이트(1,500m)(1개)",
+        "price": 2500,
+        "main": false,
+        "priceText": "2,500원"
+      },
+      {
+        "name": "코카콜라(1250m)(1개)",
+        "price": 2500,
+        "main": false,
+        "priceText": "2,500원"
+      },
+      {
+        "name": "치즈추가 L",
+        "price": 3000,
+        "main": false,
+        "priceText": "3,000원"
+      },
+      {
+        "name": "치즈추가 XXL",
+        "price": 6000,
+        "main": false,
+        "priceText": "6,000원"
+      },
+      {
+        "name": "파마산치즈가루(1개)",
+        "price": 100,
+        "main": false,
+        "priceText": "100원"
+      },
+      {
+        "name": "웨지감자",
+        "price": 4500,
+        "main": false,
+        "priceText": "4,500원"
+      },
+      {
+        "name": "콜라 제로 355캔(캔)",
+        "price": 1500,
+        "main": false,
+        "priceText": "1,500원"
+      },
+      {
+        "name": "대박세트(L)",
+        "price": 41000,
+        "main": false,
+        "priceText": "41,000원"
+      },
+      {
+        "name": "리치골드스테이크(L)",
+        "price": 23500,
+        "main": false,
+        "priceText": "23,500원"
+      },
+      {
+        "name": "리치골드스테이크(XXL)",
+        "price": 44000,
+        "main": false,
+        "priceText": "44,000원"
+      },
+      {
+        "name": "리치골드베이컨(L)",
+        "price": 22500,
+        "main": false,
+        "priceText": "22,500원"
+      },
+      {
+        "name": "리치골드베이컨(XXL)",
+        "price": 42000,
+        "main": false,
+        "priceText": "42,000원"
+      },
+      {
+        "name": "리치골드프리미엄소불고기(L)",
+        "price": 23500,
+        "main": false,
+        "priceText": "23,500원"
+      },
+      {
+        "name": "리치골드프리미엄소불고기(XXL)",
+        "price": 44000,
+        "main": false,
+        "priceText": "44,000원"
+      },
+      {
+        "name": "리치골드 핫치킨(L)",
+        "price": 22500,
+        "main": false,
+        "priceText": "22,500원"
+      },
+      {
+        "name": "리치골드 핫치킨(XXL)",
+        "price": 42000,
+        "main": false,
+        "priceText": "42,000원"
+      },
+      {
+        "name": "리치골드콤비네이션(L)",
+        "price": 21500,
+        "main": false,
+        "priceText": "21,500원"
+      },
+      {
+        "name": "리치골드콤비네이션(XXL)",
+        "price": 40000,
+        "main": false,
+        "priceText": "40,000원"
+      },
+      {
+        "name": "리치골드불고기(L)",
+        "price": 21500,
+        "main": false,
+        "priceText": "21,500원"
+      },
+      {
+        "name": "리치골드불고기(XXL)",
+        "price": 40000,
+        "main": false,
+        "priceText": "40,000원"
+      },
+      {
+        "name": "리치골드고구마(L)",
+        "price": 21500,
+        "main": false,
+        "priceText": "21,500원"
+      },
+      {
+        "name": "리치골드고구마(XXL)",
+        "price": 40000,
+        "main": false,
+        "priceText": "40,000원"
+      },
+      {
+        "name": "리치골드포테이토(L)",
+        "price": 21500,
+        "main": false,
+        "priceText": "21,500원"
+      },
+      {
+        "name": "리치골드포테이토(XXL)",
+        "price": 40000,
+        "main": false,
+        "priceText": "40,000원"
+      },
+      {
+        "name": "리치골드하와이안(L)",
+        "price": 21500,
+        "main": false,
+        "priceText": "21,500원"
+      },
+      {
+        "name": "리치골드하와이안(XXL)",
+        "price": 40000,
+        "main": false,
+        "priceText": "40,000원"
+      },
+      {
+        "name": "리치골드페파로니(L)",
+        "price": 21500,
+        "main": false,
+        "priceText": "21,500원"
+      },
+      {
+        "name": "리치골드페파로니(XXL)",
+        "price": 40000,
+        "main": false,
+        "priceText": "40,000원"
+      }
+    ],
+    "note": "배달 주문 게시 가격입니다. 매장 가격은 미확인으로 유지합니다."
+  },
+  "attrs": {
+    "status": "partial"
+  },
+  "hoursObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/1697423048/home",
+    "checkedAt": "2026-11-11",
+    "status": "unconfirmed",
+    "hours": [],
+    "note": "매장 영업시간 관찰. 기존 attrs/research를 덮어쓰지 않습니다."
+  },
+  "research": {
+    "checkedAt": "2026-11-11",
+    "method": "web",
+    "identityStatus": "matched",
+    "queries": [
+      "난타5000피자 전대용봉점 전남광주 북구 용주로30번길 50 1층"
+    ],
+    "sources": [
+      {
+        "id": "naver-place",
+        "url": "https://pcmap.place.naver.com/restaurant/1697423048/home",
+        "title": "난타5000피자 전대용봉점 네이버 지도",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "같은 주소의 지점 확인. 지도 등록 확인은 실시간 영업 중 보증이 아님"
+      },
+      {
+        "id": "naver-menu",
+        "url": "https://pcmap.place.naver.com/restaurant/1697423048/menu",
+        "title": "난타5000피자 전대용봉점 메뉴 탭",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "가격 맥락: unknown"
+      },
+      {
+        "id": "naver-hours",
+        "url": "https://pcmap.place.naver.com/restaurant/1697423048/home",
+        "title": "난타5000피자 전대용봉점 영업시간",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "게시된 요일별 영업시간. 미확인은 추정하지 않음"
+      }
+    ],
+    "facts": {
+      "menus": {
+        "status": "unconfirmed",
+        "sourceIds": [],
+        "note": "매장 기준 정보 미확인. 배달·가격 맥락 불명 자료는 확정하지 않습니다."
+      },
+      "hours": {
+        "status": "unconfirmed",
+        "sourceIds": [],
+        "note": "매장 기준 정보 미확인. 배달·가격 맥락 불명 자료는 확정하지 않습니다."
+      }
+    },
+    "unknownFields": [
+      "menus",
+      "hours",
+      "mealType",
+      "takeout",
+      "verifiedAt",
+      "verifiedBy",
+      "break",
+      "lastOrder"
+    ],
+    "notes": [
+      "네이버 공개 지도 상세·메뉴 탭 직접 확인.",
+      "메뉴 탭에 게시된 전체 텍스트 메뉴 기준. 메뉴판 이미지 전체와 대조한 것은 아님.",
+      "원문 메뉴명·가격은 모두 보존. 가격 변동은 price=null 및 priceText로 기록.",
+      "학교 출입구에서 실제 도보 10분 이내 여부는 별도 경로 감사 대상이며 이 파일에서 거리나 소요시간을 추정하지 않음.",
+      "원문 영업시간은 rear_art_batch6.json에 보관. 미게시 영업시간·브레이크·라스트오더는 임의로 채우지 않음.",
+      "병합 입력: rear_art_batch6_manifest.json",
+      "공개 네이버 화면 관찰이며 현장 검증이 아닙니다."
+    ]
+  },
+  "followupReview": {
+    "checkedAt": "2026-11-12",
+    "reasons": [
+      "매장 메뉴·가격: 배달 가격 또는 가격 구분이 불명확한 자료만 있어 매장 가격을 확인해야 합니다.",
+      "요일별 영업시간: 월~일 영업·휴무와 개점·마감 시간이 필요합니다. 브레이크·마지막 주문은 확인한 경우만 입력하세요.",
+      "보조 지도에 영업시간이 있으나 요기요 제공으로 표시되어 매장 영업시간으로 확정하지 않았습니다."
+    ],
+    "sources": [
+      "https://pcmap.place.naver.com/restaurant/1697423048/home",
+      "https://pcmap.place.naver.com/restaurant/1697423048/menu/list"
+    ]
+  }
+}

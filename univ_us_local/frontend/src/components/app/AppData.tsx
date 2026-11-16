@@ -4,7 +4,8 @@ import { createContext, useCallback, useContext, useEffect, useMemo, useRef, use
 import { api } from "@/lib/api";
 import type { AcademicEvent, AcademicOverview, AcademicPatch } from "@/lib/academic";
 import type { ProfileDoc, ProfilePatch } from "@/lib/profile";
-import type { CalEvent, Course, DeadlineProps, Status, SyncState } from "@/lib/types";
+import type { CalEvent, Course, DeadlineProps, Status } from "@/lib/types";
+import { syncResultMessage } from "@/lib/eclassSync";
 import { useToast } from "@/components/ui/Toast";
 
 // 모든 화면이 같이 보는 실제 데이터(e클래스 마감·내 일정·학사 일정·프로필·과목·동기화 상태).
@@ -46,30 +47,6 @@ export function useAppData(): AppData {
   const v = useContext(Ctx);
   if (!v) throw new Error("AppDataProvider 가 없습니다");
   return v;
-}
-
-// e클래스 수집 종료 코드 → 문구 (코드 의미는 F6_Eclass_agent/eclass/runner.py 머리 주석, F6-R56)
-export function syncResultMessage(st: Pick<SyncState, "exit_code" | "ledger" | "error"> | number | null): { text: string; ok: boolean } {
-  const s = typeof st === "number" || st === null ? { exit_code: st, ledger: null, error: null } : st;
-  switch (s.exit_code) {
-    case 0: {
-      const l = s.ledger;
-      const parts = l ? [l.new && `새 과제 ${l.new}건`, l.changed && `마감 변경 ${l.changed}건`, l.submitted && `제출 확인 ${l.submitted}건`].filter(Boolean) : [];
-      return { text: `e클래스 동기화 완료${parts.length ? ` · ${parts.join(" · ")}` : ""}`, ok: true };
-    }
-    case 2:
-      return { text: "e클래스 로그인이 필요합니다 — 수집 원천에서 '로그인 창 열기'", ok: false };
-    case 3:
-      return { text: "다른 동기화가 이미 진행 중이라 건너뛰었습니다", ok: true };
-    case 4:
-      return { text: "인터넷에 연결되지 않아 수집하지 못했습니다 — 잠시 뒤 다시 누르세요", ok: false };
-    case -1:
-      return { text: "수집 시간이 초과되었습니다 — 수집 원천에서 로그를 확인하세요", ok: false };
-    case null:
-      return { text: "동기화 종료 — 수집 원천에서 로그를 확인하세요", ok: false };
-    default:
-      return { text: `동기화 실패 (코드 ${s.exit_code})${s.error ? ` — ${s.error}` : ""}`, ok: false };
-  }
 }
 
 // F1 수집 종료 코드 → 문구 (F1_Bachelor_agent/bachelor/pipeline.py 머리 주석)
@@ -189,7 +166,7 @@ export function AppDataProvider({ children }: { children: ReactNode }) {
           if (was.running && !st.sync.running) {
             await refresh();
             const r = syncResultMessage(st.sync);
-            toast(r.text, { tone: r.ok ? "success" : "error" });
+            toast(r.text, { tone: r.partial ? "default" : r.ok ? "success" : "error" });
           } else if (
             st.updated_at !== lastUpdated.current ||
             (st.attendance?.updatedAt ?? null) !== (lastAttendance.current ?? null) ||

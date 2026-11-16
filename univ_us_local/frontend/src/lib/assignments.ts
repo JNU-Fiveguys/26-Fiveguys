@@ -1,8 +1,8 @@
 // F6 과제·마감 — 백엔드 F6_Eclass_agent/eclass/api.py 와 주고받는 모양 + 화면 문구.
 // 과제 한 건의 모양은 /api/events 의 deadline extendedProps(types.ts DeadlineProps)와 같다.
 
-import type { Tone } from "@/components/ui/Chip";
 import type { DeadlineProps, SyncState } from "./types";
+export { syncRunResult as runResult } from "./eclassSync";
 
 /** GET /api/assignments 의 한 줄 (= 캘린더 deadline 의 extendedProps + id·title·start) */
 export interface AssignmentView extends Omit<DeadlineProps, "kind"> {
@@ -28,6 +28,9 @@ export interface RunRecord {
   attempt?: number;
   counts?: Record<string, number> | null;
   error?: string | null;
+  errorKind?: "timeout" | "network" | null;
+  partial?: boolean;
+  warnings?: string[];
   ledger?: { new: number; changed: number; removed: number; submitted: number } | null;
   dryRun?: boolean;
 }
@@ -139,27 +142,6 @@ export const RUN_SOURCE_LABEL: Record<RunSource, string> = {
   button: "지금 수집",
   manual: "명령줄",
 };
-
-/** 종료 코드 → 짧은 결과 (실행 이력 줄) */
-export function runResult(code: number | null | undefined): { label: string; tone: Tone } {
-  switch (code) {
-    case 0:
-      return { label: "성공", tone: "ok" };
-    case 2:
-      return { label: "로그인 필요", tone: "warn" };
-    case 3:
-      return { label: "건너뜀", tone: "neutral" };
-    case 4:
-      return { label: "네트워크 오류", tone: "danger" };
-    case -1:
-      return { label: "시간 초과", tone: "danger" };
-    case null:
-    case undefined:
-      return { label: "진행 중", tone: "info" };
-    default:
-      return { label: "실패", tone: "danger" };
-  }
-}
 
 /** 소요 초 → '38초' · '1분 19초' */
 export function fmtDuration(s: number | null | undefined): string {

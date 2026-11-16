@@ -1,0 +1,362 @@
+{
+  "version": 1,
+  "id": "p_0157",
+  "source": "team",
+  "sourceId": "naver:2071340968",
+  "name": "감쪽 전남대점",
+  "address": "전남광주 북구 우치로100번길 37 1, 2층",
+  "category": "고기",
+  "lat": 35.176630524384,
+  "lng": 126.914602425574,
+  "sourceStatus": "active",
+  "availability": {
+    "status": "listed",
+    "provider": "naver",
+    "checkedAt": "2026-11-11",
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/2071340968/home?fromPanelNum=1&additionalHeight=76&timestamp=202611112348&locale=ko&svcName=map_pcv5&searchText=%EA%B0%90%EC%AA%BD%20%EC%A0%84%EB%82%A8%EB%8C%80%EC%A0%90",
+    "naverPlaceId": "2071340968",
+    "observedName": "감쪽 전남대점",
+    "observedAddress": "전남광주 북구 우치로100번길 37 1, 2층",
+    "district": "후문",
+    "addressVerified": true,
+    "nearby": true,
+    "reason": "공개 네이버 지도에서 동일 주소의 전남대 후문 식당으로 확인"
+  },
+  "menuObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/2071340968/menu?fromPanelNum=1&additionalHeight=76&timestamp=202611112348&locale=ko&svcName=map_pcv5&searchText=%EA%B0%90%EC%AA%BD%20%EC%A0%84%EB%82%A8%EB%8C%80%EC%A0%90",
+    "checkedAt": "2026-11-11",
+    "priceContext": "in_store",
+    "menus": [
+      {
+        "name": "소금 쪽갈비 (350g)",
+        "price": 18000,
+        "main": true
+      },
+      {
+        "name": "간장 쪽갈비 (350g)",
+        "price": 18500,
+        "main": true
+      },
+      {
+        "name": "양념 쪽갈비 (350g)",
+        "price": 18500,
+        "main": true
+      },
+      {
+        "name": "불쪽갈비(350g)",
+        "price": 18500,
+        "main": true
+      },
+      {
+        "name": "오징어 초무침",
+        "price": 13900,
+        "main": false
+      },
+      {
+        "name": "크림파스타",
+        "price": 13900,
+        "main": false
+      },
+      {
+        "name": "벌집껍데기(1장)",
+        "price": 4900,
+        "main": false
+      },
+      {
+        "name": "우렁된장술밥",
+        "price": 7900,
+        "main": false
+      },
+      {
+        "name": "김치수제비",
+        "price": 6900,
+        "main": false
+      },
+      {
+        "name": "얼큰 계란라면",
+        "price": 4900,
+        "main": false
+      },
+      {
+        "name": "뽀글이 라밥",
+        "price": 3900,
+        "main": false
+      },
+      {
+        "name": "깍두기냉국수",
+        "price": 6900,
+        "main": false
+      },
+      {
+        "name": "미니계란찜",
+        "price": 3900,
+        "main": false
+      },
+      {
+        "name": "날치알 주먹밥",
+        "price": 5000,
+        "main": false
+      },
+      {
+        "name": "치즈퐁듀",
+        "price": 4500,
+        "main": false
+      }
+    ],
+    "note": "메뉴 상태: confirmed. 원본 관찰·좌표 출처는 적용 manifest에 보관합니다.",
+    "status": "confirmed"
+  },
+  "attrs": {
+    "status": "partial",
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금",
+          "토",
+          "일"
+        ],
+        "open": "00:00",
+        "close": "01:00",
+        "lastOrder": "00:30"
+      },
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금",
+          "토",
+          "일"
+        ],
+        "open": "17:00",
+        "close": "24:00"
+      }
+    ],
+    "menus": [
+      {
+        "name": "소금 쪽갈비 (350g)",
+        "price": 18000,
+        "main": true
+      },
+      {
+        "name": "간장 쪽갈비 (350g)",
+        "price": 18500,
+        "main": true
+      },
+      {
+        "name": "양념 쪽갈비 (350g)",
+        "price": 18500,
+        "main": true
+      },
+      {
+        "name": "불쪽갈비(350g)",
+        "price": 18500,
+        "main": true
+      },
+      {
+        "name": "오징어 초무침",
+        "price": 13900,
+        "main": false
+      },
+      {
+        "name": "크림파스타",
+        "price": 13900,
+        "main": false
+      },
+      {
+        "name": "벌집껍데기(1장)",
+        "price": 4900,
+        "main": false
+      },
+      {
+        "name": "우렁된장술밥",
+        "price": 7900,
+        "main": false
+      },
+      {
+        "name": "김치수제비",
+        "price": 6900,
+        "main": false
+      },
+      {
+        "name": "얼큰 계란라면",
+        "price": 4900,
+        "main": false
+      },
+      {
+        "name": "뽀글이 라밥",
+        "price": 3900,
+        "main": false
+      },
+      {
+        "name": "깍두기냉국수",
+        "price": 6900,
+        "main": false
+      },
+      {
+        "name": "미니계란찜",
+        "price": 3900,
+        "main": false
+      },
+      {
+        "name": "날치알 주먹밥",
+        "price": 5000,
+        "main": false
+      },
+      {
+        "name": "치즈퐁듀",
+        "price": 4500,
+        "main": false
+      }
+    ]
+  },
+  "hoursObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/2071340968/home?fromPanelNum=1&additionalHeight=76&timestamp=202611112348&locale=ko&svcName=map_pcv5&searchText=%EA%B0%90%EC%AA%BD%20%EC%A0%84%EB%82%A8%EB%8C%80%EC%A0%90",
+    "checkedAt": "2026-11-11",
+    "status": "confirmed",
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금",
+          "토",
+          "일"
+        ],
+        "open": "00:00",
+        "close": "01:00",
+        "lastOrder": "00:30"
+      },
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금",
+          "토",
+          "일"
+        ],
+        "open": "17:00",
+        "close": "24:00"
+      }
+    ],
+    "note": "매장 영업시간 관찰. 기존 attrs/research를 덮어쓰지 않습니다."
+  },
+  "research": {
+    "checkedAt": "2026-11-11",
+    "method": "web",
+    "identityStatus": "matched",
+    "queries": [
+      "감쪽 전남대점 전남광주 북구 우치로100번길 37 1, 2층"
+    ],
+    "sources": [
+      {
+        "id": "naver-place",
+        "url": "https://pcmap.place.naver.com/restaurant/2071340968/home?fromPanelNum=1&additionalHeight=76&timestamp=202611112348&locale=ko&svcName=map_pcv5&searchText=%EA%B0%90%EC%AA%BD%20%EC%A0%84%EB%82%A8%EB%8C%80%EC%A0%90",
+        "title": "감쪽 전남대점 네이버 지도",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "같은 주소의 지점 확인. 지도 등록 확인은 실시간 영업 중 보증이 아님"
+      },
+      {
+        "id": "naver-menu",
+        "url": "https://pcmap.place.naver.com/restaurant/2071340968/menu?fromPanelNum=1&additionalHeight=76&timestamp=202611112348&locale=ko&svcName=map_pcv5&searchText=%EA%B0%90%EC%AA%BD%20%EC%A0%84%EB%82%A8%EB%8C%80%EC%A0%90",
+        "title": "감쪽 전남대점 메뉴 탭",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "가격 맥락: in_store"
+      },
+      {
+        "id": "naver-hours",
+        "url": "https://pcmap.place.naver.com/restaurant/2071340968/home?fromPanelNum=1&additionalHeight=76&timestamp=202611112348&locale=ko&svcName=map_pcv5&searchText=%EA%B0%90%EC%AA%BD%20%EC%A0%84%EB%82%A8%EB%8C%80%EC%A0%90",
+        "title": "감쪽 전남대점 영업시간",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "게시된 요일별 영업시간. 미확인은 추정하지 않음"
+      }
+    ],
+    "facts": {
+      "menus": {
+        "status": "unconfirmed",
+        "sourceIds": [],
+        "note": "매장 기준 정보 미확인. 배달·가격 맥락 불명 자료는 확정하지 않습니다."
+      },
+      "hours": {
+        "status": "confirmed",
+        "sourceIds": [
+          "naver-hours"
+        ],
+        "note": "매장 게시값을 확인했습니다.",
+        "value": [
+          {
+            "days": [
+              "월",
+              "화",
+              "수",
+              "목",
+              "금",
+              "토",
+              "일"
+            ],
+            "open": "00:00",
+            "close": "01:00",
+            "lastOrder": "00:30"
+          },
+          {
+            "days": [
+              "월",
+              "화",
+              "수",
+              "목",
+              "금",
+              "토",
+              "일"
+            ],
+            "open": "17:00",
+            "close": "24:00"
+          }
+        ]
+      }
+    },
+    "unknownFields": [
+      "menus",
+      "mealType",
+      "takeout",
+      "verifiedAt",
+      "verifiedBy",
+      "break",
+      "lastOrder"
+    ],
+    "notes": [
+      "네이버 공개 지도 상세·메뉴 탭 직접 확인.",
+      "전체 메뉴 탭에 보인 메뉴명·가격·가격 미확인 원문을 누락 없이 보존. 1인 식사로 확인하기 어려운 고기 단위·후식·공유세트·어린이·점심 한정은 일반 예산 대표 메뉴에서 제외.",
+      "학교 해당 식당가 출입구에서 OSM 도보 10분 이내 검증 후 최종 적용 예정.",
+      "후속 공개 홈 확인: 네이버 표시 업종은 육류,고기요리. 쪽갈비·파스타 등은 단독 1인 식사 주문 여부 미확인으로 main=false.",
+      "병합 입력: rear_batch8_manifest.json",
+      "공개 네이버 화면 관찰이며 현장 검증이 아닙니다."
+    ]
+  },
+  "followupReview": {
+    "checkedAt": "2026-11-12",
+    "reasons": [
+      "공개 매장 식사 가격과 요일별 영업시간을 연결하여 추천 대상으로 전환했습니다."
+    ],
+    "sources": [
+      "https://pcmap.place.naver.com/restaurant/2071340968/home",
+      "https://pcmap.place.naver.com/restaurant/2071340968/menu/list",
+      "https://pcmap.place.naver.com/restaurant/2071340968/booking",
+      "https://pcmap.place.naver.com/restaurant/2071340968/menu?fromPanelNum=1&additionalHeight=76&timestamp=202611112348&locale=ko&svcName=map_pcv5&searchText=%EA%B0%90%EC%AA%BD%20%EC%A0%84%EB%82%A8%EB%8C%80%EC%A0%90"
+    ]
+  }
+}

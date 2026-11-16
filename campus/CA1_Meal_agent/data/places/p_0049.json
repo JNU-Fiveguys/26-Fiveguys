@@ -1,0 +1,255 @@
+{
+  "version": 1,
+  "id": "p_0049",
+  "name": "엄마손중국식분식",
+  "category": "분식",
+  "lat": 35.1779203444334,
+  "lng": 126.903754681112,
+  "address": "광주 북구 설죽로214번길 111",
+  "source": "semas",
+  "sourceId": "MA010120220813354641",
+  "sourceStatus": "active",
+  "attrs": {
+    "status": "partial"
+  },
+  "research": {
+    "identityStatus": "matched",
+    "queries": [
+      "\"엄마손중국식분식\" 메뉴 영업시간"
+    ],
+    "sources": [
+      {
+        "id": "s1",
+        "url": "https://www.daangn.com/kr/local-profile/%EC%97%84%EB%A7%88%EC%86%90%EC%A4%91%EA%B5%AD%EC%8B%9D%EB%B6%84%EC%8B%9D-ynuj5gwnfigr/",
+        "title": "엄마손중국식분식 업체페이지",
+        "type": "directory",
+        "addressMatch": true,
+        "note": "2026-03-01수정. 영업11~22이나19시후 문닫혀있으면전화안내.",
+        "observedAt": "2026-11-11"
+      }
+    ],
+    "facts": {
+      "menus": {
+        "status": "partial",
+        "sourceIds": [
+          "s1"
+        ],
+        "note": "탕수육·피망고기채덮밥 메뉴명 확인, 가격 미확인."
+      },
+      "hours": {
+        "status": "partial",
+        "sourceIds": [
+          "s1"
+        ],
+        "note": "11:00~22:00 안내이나 요일 미표기. 19시 이후 전화 필요할 수 있다는 업체안내로 정규주간시간표 확정 불가."
+      }
+    },
+    "notes": [],
+    "checkedAt": "2026-11-11",
+    "method": "web",
+    "unknownFields": [
+      "menus",
+      "hours",
+      "mealType",
+      "takeout",
+      "verifiedAt",
+      "verifiedBy",
+      "break",
+      "lastOrder"
+    ]
+  },
+  "availability": {
+    "status": "listed",
+    "provider": "naver",
+    "checkedAt": "2026-11-11",
+    "sourceUrl": "https://pcmap.place.naver.com/place/1087889426",
+    "naverPlaceId": "1087889426",
+    "observedName": "엄마손중국식분식",
+    "observedAddress": "광주 북구 설죽로214번길 111",
+    "district": "상대",
+    "addressVerified": true,
+    "nearby": true,
+    "reason": "공개 네이버 지도에서 동일 주소의 전남대 상대 식당으로 확인"
+  },
+  "menuObservation": {
+    "status": "unconfirmed",
+    "priceContext": "delivery",
+    "checkedAt": "2026-11-12",
+    "sourceUrl": "https://place.map.kakao.com/449293113",
+    "placeSourceUrl": "https://pcmap.place.naver.com/restaurant/1087889426/home",
+    "sourceAddress": "전남광주통합특별시 북구 설죽로214번길 111 1층",
+    "menus": [
+      {
+        "name": "꿔바로우 锅包肉 2인분",
+        "price": 20000,
+        "main": false
+      },
+      {
+        "name": "류육단고기요리 溜肉段 2인분",
+        "price": 21000,
+        "main": false
+      },
+      {
+        "name": "오징어쯔란볶음 孜然鱿鱼 2인분",
+        "price": 18000,
+        "main": false
+      },
+      {
+        "name": "고추잡채 青椒肉丝配花卷 2인분",
+        "price": 17000,
+        "main": false
+      },
+      {
+        "name": "피망고기채볶음 青椒肉丝 2인분",
+        "price": 16000,
+        "main": false
+      },
+      {
+        "name": "마라뼈다귀 麻辣大骨头 2인분",
+        "price": 19000,
+        "main": false
+      },
+      {
+        "name": "돼지곱창볶음 溜肥腸 2인분",
+        "price": 20000,
+        "main": false
+      },
+      {
+        "name": "궁바우지딩 宫保鸡丁 2인분",
+        "price": 20000,
+        "main": false
+      },
+      {
+        "name": "제육쯔란볶음 孜然肉片 2인분",
+        "price": 19000,
+        "main": false
+      },
+      {
+        "name": "훙사오러우 红烧肉 2인분",
+        "price": 20000,
+        "main": false
+      },
+      {
+        "name": "삼색야채볶음 地三鲜 2인분",
+        "price": 17000,
+        "main": false
+      },
+      {
+        "name": "위샹러우쓰볶음 魚香肉絲 2인분",
+        "price": 17000,
+        "main": false
+      },
+      {
+        "name": "마파두부 麻婆豆腐 2인분",
+        "price": 15000,
+        "main": false
+      },
+      {
+        "name": "피망감자채볶음 青椒土豆丝 2인분",
+        "price": 15000,
+        "main": false
+      },
+      {
+        "name": "토마토계란볶음 番茄鸡蛋 2인분",
+        "price": 15000,
+        "main": false
+      },
+      {
+        "name": "쯔란제육볶음요리와 밥 孜然肉片盖饭 1인분",
+        "price": 8500,
+        "main": true
+      },
+      {
+        "name": "갈비찜덮밥 排骨肉盖浇饭 1인분",
+        "price": 9000,
+        "main": true
+      },
+      {
+        "name": "마라뼈다귀와 밥 麻辣大骨盖浇饭 1인분",
+        "price": 8000,
+        "main": true
+      },
+      {
+        "name": "홍사오러우덮밥 红烧肉盖浇饭 1인분",
+        "price": 9000,
+        "main": true
+      },
+      {
+        "name": "오이제육요리와 밥 溜肉片盖饭 1인분",
+        "price": 8500,
+        "main": true
+      },
+      {
+        "name": "궁바우지딩요리와 밥 宫保鸡丁盖饭 1인분",
+        "price": 9000,
+        "main": true
+      },
+      {
+        "name": "쯔란오징어볶음요리와 밥 孜然鱿鱼盖饭 1인분",
+        "price": 8500,
+        "main": true
+      },
+      {
+        "name": "위샹러우쓰덮밥 鱼香肉丝盖浇饭 1인분",
+        "price": 7500,
+        "main": true
+      },
+      {
+        "name": "닭고기카레덮밥 咖喱鸡肉盖浇饭 1인분",
+        "price": 8500,
+        "main": true
+      },
+      {
+        "name": "카스 韩国啤酒",
+        "price": 4000,
+        "main": false
+      },
+      {
+        "name": "참이슬 후레쉬 韩国烧酒",
+        "price": 4000,
+        "main": false
+      },
+      {
+        "name": "칭따오 青岛",
+        "price": 6000,
+        "main": false
+      },
+      {
+        "name": "설원 林海雪原250ml",
+        "price": 10000,
+        "main": false
+      },
+      {
+        "name": "연태고량주 烟台 500ml",
+        "price": 20000,
+        "main": false
+      },
+      {
+        "name": "설원 林海雪原500ml",
+        "price": 20000,
+        "main": false
+      }
+    ],
+    "note": "카카오맵 요기요 배달 탭의 게시값. 포장·매장 가격은 확인되지 않아 예산·점수·추천에 사용하지 않음."
+  },
+  "hoursObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/place/1087889426",
+    "checkedAt": "2026-11-11",
+    "status": "unconfirmed",
+    "hours": [],
+    "note": "매장 영업시간 관찰. 기존 attrs/research를 덮어쓰지 않습니다."
+  },
+  "followupReview": {
+    "checkedAt": "2026-11-12",
+    "reasons": [
+      "매장 메뉴·가격: 배달 가격 또는 가격 구분이 불명확한 자료만 있어 매장 가격을 확인해야 합니다.",
+      "요일별 영업시간: 월~일 영업·휴무와 개점·마감 시간이 필요합니다. 브레이크·마지막 주문은 확인한 경우만 입력하세요.",
+      "보조 지도에 영업시간이 있으나 요기요 제공으로 표시되어 매장 영업시간으로 확정하지 않았습니다."
+    ],
+    "sources": [
+      "https://pcmap.place.naver.com/restaurant/1087889426/home",
+      "https://place.map.kakao.com/449293113",
+      "https://pcmap.place.naver.com/place/1087889426"
+    ]
+  }
+}

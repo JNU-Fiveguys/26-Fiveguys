@@ -1,0 +1,85 @@
+{
+  "version": 1,
+  "id": "p_0053",
+  "name": "케이투",
+  "category": "분식",
+  "lat": 35.17227,
+  "lng": 126.905166,
+  "address": "전남광주통합특별시 북구 용봉로 76",
+  "source": "semas",
+  "sourceId": "MA010120220813854962",
+  "sourceStatus": "active",
+  "attrs": {
+    "status": "partial"
+  },
+  "research": {
+    "identityStatus": "matched",
+    "queries": [
+      "\"케이투\" \"용봉로 76\" 메뉴 영업시간"
+    ],
+    "sources": [
+      {
+        "id": "s1",
+        "url": "https://www.diningcode.com/profile.php?rid=OnxMXw2uqlXY",
+        "title": "케이투",
+        "type": "directory",
+        "addressMatch": true,
+        "note": "월~토11:30~15:30 및 후기돈까스9,000원.",
+        "observedAt": "2026-11-11"
+      },
+      {
+        "id": "s2",
+        "url": "https://nyam.summari.net/147",
+        "title": "광주 북구 K2 돈까스",
+        "type": "review",
+        "addressMatch": true,
+        "note": "2026-11-10게시 요약자료는11:30~14:30·돈까스10,000원; 원 방문시점 미확인.",
+        "observedAt": "2026-11-11"
+      }
+    ],
+    "facts": {
+      "menus": {
+        "status": "conflict",
+        "sourceIds": [
+          "s1",
+          "s2"
+        ],
+        "note": "돈까스 가격9,000원/10,000원 상충. 어느가격이현행인지확정안함."
+      },
+      "hours": {
+        "status": "conflict",
+        "sourceIds": [
+          "s1",
+          "s2"
+        ],
+        "note": "일요일휴무 공통. 월~토11:30~15:30 및11:30~14:30 상충."
+      }
+    },
+    "notes": [],
+    "checkedAt": "2026-11-11",
+    "method": "web",
+    "unknownFields": [
+      "menus",
+      "hours",
+      "mealType",
+      "takeout",
+      "verifiedAt",
+      "verifiedBy",
+      "break",
+      "lastOrder"
+    ]
+  },
+  "availability": {
+    "status": "excluded",
+    "provider": "naver",
+    "checkedAt": "2026-11-11",
+    "sourceUrl": "https://map.naver.com/p/search/%EC%A0%84%EB%82%A8%EB%8C%80%20%EC%9D%8C%EC%8B%9D%EC%A0%90",
+    "naverPlaceId": null,
+    "observedName": "",
+    "observedAddress": "",
+    "district": null,
+    "addressVerified": false,
+    "nearby": false,
+    "reason": "네이버 지도에서 확인한 네 식당가 명단에 포함되지 않아 제외"
+  }
+}

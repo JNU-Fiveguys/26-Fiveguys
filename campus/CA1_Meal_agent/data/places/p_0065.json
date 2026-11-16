@@ -1,0 +1,107 @@
+{
+  "version": 1,
+  "id": "p_0065",
+  "name": "롯데리아광주 전남대점",
+  "category": "패스트푸드",
+  "lat": 35.177449,
+  "lng": 126.912461,
+  "address": "전남광주통합특별시 북구 우치로 112",
+  "source": "semas",
+  "sourceId": "MA0101202309A0014357",
+  "sourceStatus": "active",
+  "attrs": {
+    "status": "partial",
+    "menus": [
+      {
+        "name": "리아 사각새우 더블 세트",
+        "price": 9900,
+        "main": true
+      },
+      {
+        "name": "모짜렐라 인 더 버거 베이컨 세트",
+        "price": 11700,
+        "main": true
+      },
+      {
+        "name": "야채라이스 불고기",
+        "price": 6700,
+        "main": true
+      }
+    ]
+  },
+  "research": {
+    "identityStatus": "matched",
+    "queries": [
+      "\"롯데리아\" \"우치로 112\" 메뉴 영업시간"
+    ],
+    "sources": [
+      {
+        "id": "s1",
+        "url": "https://www.diningcode.com/profile.php?rid=kSiJlHNkwcq3",
+        "title": "롯데리아 전대후문",
+        "type": "directory",
+        "addressMatch": true,
+        "note": "동주소지점메뉴및주간시간표. 자정넘김시간은현행구조화보류. 본문을 직접 열어 주소와 해당 게시값을 대조함.",
+        "observedAt": "2026-11-11"
+      }
+    ],
+    "facts": {
+      "menus": {
+        "status": "confirmed",
+        "value": [
+          {
+            "name": "리아 사각새우 더블 세트",
+            "price": 9900,
+            "main": true
+          },
+          {
+            "name": "모짜렐라 인 더 버거 베이컨 세트",
+            "price": 11700,
+            "main": true
+          },
+          {
+            "name": "야채라이스 불고기",
+            "price": 6700,
+            "main": true
+          }
+        ],
+        "sourceIds": [
+          "s1"
+        ],
+        "note": "지점메뉴목록게시가격. 배달/매장가격차이여부미확인."
+      },
+      "hours": {
+        "status": "partial",
+        "sourceIds": [
+          "s1"
+        ],
+        "note": "매일09:30~다음날02:20게시. 자정넘김현행스키마미지원이므로잘라추정하지않음."
+      }
+    },
+    "notes": [],
+    "checkedAt": "2026-11-11",
+    "method": "web",
+    "unknownFields": [
+      "hours",
+      "mealType",
+      "takeout",
+      "verifiedAt",
+      "verifiedBy",
+      "break",
+      "lastOrder"
+    ]
+  },
+  "availability": {
+    "status": "excluded",
+    "provider": "naver",
+    "checkedAt": "2026-11-11",
+    "sourceUrl": "https://map.naver.com/p/search/%EC%A0%84%EB%82%A8%EB%8C%80%20%EC%9D%8C%EC%8B%9D%EC%A0%90",
+    "naverPlaceId": null,
+    "observedName": "",
+    "observedAddress": "",
+    "district": null,
+    "addressVerified": false,
+    "nearby": false,
+    "reason": "네이버 지도에서 확인한 네 식당가 명단에 포함되지 않아 제외"
+  }
+}

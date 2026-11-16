@@ -1,0 +1,85 @@
+{
+  "version": 1,
+  "id": "p_0028",
+  "name": "톰하우스",
+  "category": "양식",
+  "lat": 35.173879,
+  "lng": 126.911147,
+  "address": "전남광주통합특별시 북구 용봉로 77",
+  "source": "semas",
+  "sourceId": "MA010120220807542302",
+  "sourceStatus": "active",
+  "attrs": {
+    "status": "partial"
+  },
+  "research": {
+    "identityStatus": "uncertain",
+    "queries": [
+      "\"톰하우스\" \"전남대\"",
+      "\"톰하우스\" 메뉴 광주",
+      "\"톰하우스\" \"피자\""
+    ],
+    "sources": [
+      {
+        "id": "s1",
+        "url": "https://acs.purpleo.kr/article/8013",
+        "title": "톰하우스 상권정보",
+        "type": "public_data",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "용봉로 77·지번 용봉동 300의 등록정보. 검색결과에서 확인했으며 본문 열기는 캐시 미스."
+      },
+      {
+        "id": "s2",
+        "url": "https://bizsurfing.com/%EA%B4%91%EC%A3%BC/%EB%B6%81%EA%B5%AC/%EC%9A%A9%EB%B4%89%EB%8F%99/%EC%B9%B4%ED%8E%98",
+        "title": "용봉동 업체목록",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "상호·용봉로 77은 일치하지만 카페 목록과 한식 분류가 혼재"
+      }
+    ],
+    "facts": {
+      "menus": {
+        "status": "unconfirmed",
+        "value": [],
+        "sourceIds": [],
+        "note": "매장별 메뉴·가격을 확인하지 못함."
+      },
+      "hours": {
+        "status": "unconfirmed",
+        "value": [],
+        "sourceIds": [],
+        "note": "요일별 영업시간을 확인하지 못함."
+      }
+    },
+    "notes": [
+      "캠퍼스 공통주소로 등록된 업체이며 다른 자료의 생활관 내 위치와 현재 실제 영업 장소를 추가 확인해야 함. 메뉴·가격·시간은 확인하지 못함."
+    ],
+    "checkedAt": "2026-11-11",
+    "method": "web",
+    "unknownFields": [
+      "menus",
+      "hours",
+      "mealType",
+      "takeout",
+      "verifiedAt",
+      "verifiedBy",
+      "break",
+      "lastOrder"
+    ]
+  },
+  "availability": {
+    "status": "excluded",
+    "provider": "naver",
+    "checkedAt": "2026-11-11",
+    "sourceUrl": "https://map.naver.com/p/search/%EC%A0%84%EB%82%A8%EB%8C%80%20%EC%9D%8C%EC%8B%9D%EC%A0%90",
+    "naverPlaceId": null,
+    "observedName": "",
+    "observedAddress": "",
+    "district": null,
+    "addressVerified": false,
+    "nearby": false,
+    "reason": "네이버 지도에서 확인한 네 식당가 명단에 포함되지 않아 제외"
+  }
+}

@@ -1,0 +1,1052 @@
+{
+  "version": 1,
+  "id": "p_0013",
+  "name": "한솥도시락 전남대점",
+  "category": "한식",
+  "lat": 35.1718966784179,
+  "lng": 126.900534447243,
+  "address": "전남광주 북구 용봉로 33",
+  "source": "semas",
+  "sourceId": "MA010120220806710701",
+  "sourceStatus": "active",
+  "attrs": {
+    "status": "partial",
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금",
+          "토",
+          "일"
+        ],
+        "open": "09:30",
+        "close": "20:00"
+      }
+    ]
+  },
+  "research": {
+    "identityStatus": "matched",
+    "queries": [
+      "\"한솥도시락 전남대점\" 메뉴 영업시간"
+    ],
+    "sources": [
+      {
+        "id": "s1",
+        "url": "https://www.diningcode.com/profile.php?rid=BKf9wDnV0fG0",
+        "title": "한솥도시락 전남대점 메뉴 및 영업정보",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "상호·주소 일치"
+      },
+      {
+        "id": "s2",
+        "url": "https://www.hsd.co.kr/footer/notice_view/98",
+        "title": "한솥 과거 연휴 영업안내",
+        "type": "official",
+        "observedAt": "2026-11-11",
+        "addressMatch": false,
+        "note": "2019년 명절특례 일정으로 현재 일반영업시간에 쓰지 않음."
+      }
+    ],
+    "facts": {
+      "menus": {
+        "status": "partial",
+        "value": [
+          {
+            "name": "치킨마요",
+            "price": 5100,
+            "main": true
+          },
+          {
+            "name": "빅치킨마요",
+            "price": 5800,
+            "main": true
+          },
+          {
+            "name": "참치마요",
+            "price": 5000,
+            "main": true
+          }
+        ],
+        "sourceIds": [
+          "s1"
+        ],
+        "note": "지점 메뉴표 게시가이나 권장가격 문구와 과거후기 가격차가 있어 실제 매장가 재확인 필요."
+      },
+      "hours": {
+        "status": "confirmed",
+        "value": [
+          {
+            "days": [
+              "월",
+              "화",
+              "수",
+              "목",
+              "금",
+              "토",
+              "일"
+            ],
+            "open": "09:30",
+            "close": "20:00"
+          }
+        ],
+        "sourceIds": [
+          "s1"
+        ],
+        "note": "해당 지점 7일 일정표 동일시간. 브레이크·라스트오더·공휴일 예외 미확인."
+      }
+    },
+    "notes": [],
+    "checkedAt": "2026-11-11",
+    "method": "web",
+    "unknownFields": [
+      "menus",
+      "mealType",
+      "takeout",
+      "verifiedAt",
+      "verifiedBy",
+      "break",
+      "lastOrder"
+    ]
+  },
+  "availability": {
+    "status": "listed",
+    "provider": "naver",
+    "checkedAt": "2026-11-11",
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/13376550/home",
+    "naverPlaceId": "13376550",
+    "observedName": "한솥도시락 전남대점",
+    "observedAddress": "전남광주 북구 용봉로 33",
+    "district": "정문",
+    "addressVerified": true,
+    "nearby": true,
+    "reason": "공개 네이버 지도에서 동일 주소의 전남대 정문 식당으로 확인"
+  },
+  "menuObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/13376550/menu/list",
+    "checkedAt": "2026-11-12",
+    "priceContext": "delivery",
+    "status": "unconfirmed",
+    "menus": [
+      {
+        "name": "더블 칠리 찹쌀탕수육도련님",
+        "price": 9700,
+        "main": true,
+        "priceText": "9,700원"
+      },
+      {
+        "name": "한솥 닭강정(소)",
+        "price": 4100,
+        "main": false,
+        "priceText": "4,100원"
+      },
+      {
+        "name": "스페셜 숯불직화 진달래 도시락",
+        "price": 13200,
+        "main": true,
+        "priceText": "13,200원"
+      },
+      {
+        "name": "스페셜 송정식 떡갈비 도시락",
+        "price": 12200,
+        "main": true,
+        "priceText": "12,200원"
+      },
+      {
+        "name": "제육 잡채밥",
+        "price": 8100,
+        "main": true,
+        "priceText": "8,100원"
+      },
+      {
+        "name": "더블 제육 잡채밥",
+        "price": 11100,
+        "main": true,
+        "priceText": "11,100원"
+      },
+      {
+        "name": "벌교꼬막 비빔밥",
+        "price": 9000,
+        "main": true,
+        "priceText": "9,000원"
+      },
+      {
+        "name": "벌교꼬막 비빔밥+완도 미역국",
+        "price": 10500,
+        "main": true,
+        "priceText": "10,500원"
+      },
+      {
+        "name": "통통 고추튀김",
+        "price": 4300,
+        "main": false,
+        "priceText": "4,300원"
+      },
+      {
+        "name": "[더블덮밥] 치폴레 함박스테이크 덮밥",
+        "price": 16200,
+        "main": true,
+        "priceText": "16,200원"
+      },
+      {
+        "name": "[더블덮밥] 왕갈비맛 함박스테이크 덮밥",
+        "price": 16200,
+        "main": true,
+        "priceText": "16,200원"
+      },
+      {
+        "name": "[사각] 치폴레 함박스테이크",
+        "price": 11100,
+        "main": true,
+        "priceText": "11,100원"
+      },
+      {
+        "name": "[사각] 왕갈비맛 함박스테이크",
+        "price": 11100,
+        "main": true,
+        "priceText": "11,100원"
+      },
+      {
+        "name": "치킨마요 돈까스도련님 콤보",
+        "price": 8900,
+        "main": true,
+        "priceText": "8,900원"
+      },
+      {
+        "name": "치킨마요 제육볶음 콤보",
+        "price": 8600,
+        "main": true,
+        "priceText": "8,600원"
+      },
+      {
+        "name": "치즈 한우 함박스테이크",
+        "price": 11700,
+        "main": true,
+        "priceText": "11,700원"
+      },
+      {
+        "name": "어니언링",
+        "price": 3500,
+        "main": false,
+        "priceText": "3,500원"
+      },
+      {
+        "name": "[덮밥] 치폴레 함박스테이크 덮밥",
+        "price": 10000,
+        "main": true,
+        "priceText": "10,000원"
+      },
+      {
+        "name": "[덮밥] 왕갈비맛 함박스테이크 덮밥",
+        "price": 10000,
+        "main": true,
+        "priceText": "10,000원"
+      },
+      {
+        "name": "미니 찹쌀탕수육+칠리소스",
+        "price": 2900,
+        "main": false,
+        "priceText": "2,900원"
+      },
+      {
+        "name": "왕카레돈까스덮밥",
+        "price": 7900,
+        "main": true,
+        "priceText": "7,900원"
+      },
+      {
+        "name": "왕김치돈까스 덮밥",
+        "price": 7900,
+        "main": true,
+        "priceText": "7,900원"
+      },
+      {
+        "name": "왕카레치킨 덮밥",
+        "price": 7900,
+        "main": true,
+        "priceText": "7,900원"
+      },
+      {
+        "name": "매화 고등어",
+        "price": 12700,
+        "main": true,
+        "priceText": "12,700원"
+      },
+      {
+        "name": "매화 연어",
+        "price": 13700,
+        "main": true,
+        "priceText": "13,700원"
+      },
+      {
+        "name": "소이 청양 소보로덮밥",
+        "price": 6700,
+        "main": true,
+        "priceText": "6,700원"
+      },
+      {
+        "name": "열무 두부강된장 비빔밥",
+        "price": 6700,
+        "main": true,
+        "priceText": "6,700원"
+      },
+      {
+        "name": "열무 감초고추장 비빔밥",
+        "price": 6200,
+        "main": true,
+        "priceText": "6,200원"
+      },
+      {
+        "name": "카츠카츠 고기고기",
+        "price": 9200,
+        "main": true,
+        "priceText": "9,200원"
+      },
+      {
+        "name": "김피탕",
+        "price": 7300,
+        "main": true,
+        "priceText": "7,300원"
+      },
+      {
+        "name": "돼지불백 덮밥",
+        "price": 7100,
+        "main": true,
+        "priceText": "7,100원"
+      },
+      {
+        "name": "김치볶음밥&돼지불백",
+        "price": 9100,
+        "main": true,
+        "priceText": "9,100원"
+      },
+      {
+        "name": "김치볶음밥 치킨콤보",
+        "price": 12000,
+        "main": true,
+        "priceText": "12,000원"
+      },
+      {
+        "name": "카레라이스 치킨콤보",
+        "price": 12000,
+        "main": true,
+        "priceText": "12,000원"
+      },
+      {
+        "name": "스페셜 해바라기 도시락",
+        "price": 14200,
+        "main": true,
+        "priceText": "14,200원"
+      },
+      {
+        "name": "해바라기 도시락",
+        "price": 11500,
+        "main": true,
+        "priceText": "11,500원"
+      },
+      {
+        "name": "진달래 도시락",
+        "price": 10000,
+        "main": true,
+        "priceText": "10,000원"
+      },
+      {
+        "name": "치킨마요 부대찌개 정식",
+        "price": 9300,
+        "main": true,
+        "priceText": "9,300원"
+      },
+      {
+        "name": "(BEST)빅치킨마요 부대찌개 정식",
+        "price": 10000,
+        "main": true,
+        "priceText": "10,000원"
+      },
+      {
+        "name": "(BEST)돈까스도련님 고기고기",
+        "price": 8500,
+        "main": true,
+        "priceText": "8,500원"
+      },
+      {
+        "name": "(추천)새치 고기고기",
+        "price": 9000,
+        "main": true,
+        "priceText": "9,000원"
+      },
+      {
+        "name": "돈치 고기고기",
+        "price": 8000,
+        "main": true,
+        "priceText": "8,000원"
+      },
+      {
+        "name": "치킨마요",
+        "price": 5100,
+        "main": true,
+        "priceText": "5,100원"
+      },
+      {
+        "name": "빅치킨마요",
+        "price": 5800,
+        "main": true,
+        "priceText": "5,800원"
+      },
+      {
+        "name": "(BEST)메가치킨마요",
+        "price": 7800,
+        "main": true,
+        "priceText": "7,800원"
+      },
+      {
+        "name": "스팸마요",
+        "price": 5600,
+        "main": true,
+        "priceText": "5,600원"
+      },
+      {
+        "name": "참치마요",
+        "price": 5000,
+        "main": true,
+        "priceText": "5,000원"
+      },
+      {
+        "name": "(BEST)돈까스도련님",
+        "price": 6400,
+        "main": true,
+        "priceText": "6,400원"
+      },
+      {
+        "name": "제육 돈까스 도련님",
+        "price": 6400,
+        "main": true,
+        "priceText": "6,400원"
+      },
+      {
+        "name": "칠리 찹쌀탕수육도련님",
+        "price": 6200,
+        "main": true,
+        "priceText": "6,200원"
+      },
+      {
+        "name": "더블 돈까스도련님",
+        "price": 11700,
+        "main": true,
+        "priceText": "11,700원"
+      },
+      {
+        "name": "송정식 떡갈비 도시락",
+        "price": 8400,
+        "main": true,
+        "priceText": "8,400원"
+      },
+      {
+        "name": "(BEST)동백",
+        "price": 7900,
+        "main": true,
+        "priceText": "7,900원"
+      },
+      {
+        "name": "(추천)돈치스팸",
+        "price": 6700,
+        "main": true,
+        "priceText": "6,700원"
+      },
+      {
+        "name": "치킨제육",
+        "price": 6700,
+        "main": true,
+        "priceText": "6,700원"
+      },
+      {
+        "name": "김치 제육 덮밥",
+        "price": 6400,
+        "main": true,
+        "priceText": "6,400원"
+      },
+      {
+        "name": "김치 참치 덮밥",
+        "price": 6100,
+        "main": true,
+        "priceText": "6,100원"
+      },
+      {
+        "name": "제육 많이 덮밥",
+        "price": 7700,
+        "main": true,
+        "priceText": "7,700원"
+      },
+      {
+        "name": "빅 제육 많이 덮밥",
+        "price": 8700,
+        "main": true,
+        "priceText": "8,700원"
+      },
+      {
+        "name": "(추천)오리지널 치즈 닭갈비 덮밥",
+        "price": 7700,
+        "main": true,
+        "priceText": "7,700원"
+      },
+      {
+        "name": "(추천)핫 치즈 닭갈비 덮밥",
+        "price": 7700,
+        "main": true,
+        "priceText": "7,700원"
+      },
+      {
+        "name": "(BEST)돈까스 카레",
+        "price": 6300,
+        "main": true,
+        "priceText": "6,300원"
+      },
+      {
+        "name": "돈까스 덮밥",
+        "price": 5900,
+        "main": true,
+        "priceText": "5,900원"
+      },
+      {
+        "name": "(BEST)숯불직화구이 덮밥",
+        "price": 7700,
+        "main": true,
+        "priceText": "7,700원"
+      },
+      {
+        "name": "참치야채감초고추장",
+        "price": 5200,
+        "main": true,
+        "priceText": "5,200원"
+      },
+      {
+        "name": "(추천)시골제육두부강된장비빔밥",
+        "price": 7700,
+        "main": true,
+        "priceText": "7,700원"
+      },
+      {
+        "name": "(BEST)소불고기감초고추장비빔밥",
+        "price": 7200,
+        "main": true,
+        "priceText": "7,200원"
+      },
+      {
+        "name": "김치볶음밥",
+        "price": 5600,
+        "main": true,
+        "priceText": "5,600원"
+      },
+      {
+        "name": "(BEST)스팸 김치볶음밥",
+        "price": 6400,
+        "main": true,
+        "priceText": "6,400원"
+      },
+      {
+        "name": "(추천) 부대찌개(밥포함)",
+        "price": 7700,
+        "main": true,
+        "priceText": "7,700원"
+      },
+      {
+        "name": "(BEST) 묵은지김치찌개(밥포함)",
+        "price": 7200,
+        "main": true,
+        "priceText": "7,200원"
+      },
+      {
+        "name": "단품 부대찌개(밥 미포함)",
+        "price": 6300,
+        "main": true,
+        "priceText": "6,300원"
+      },
+      {
+        "name": "단품 묵은지 김치찌개(밥 미포함)",
+        "price": 5800,
+        "main": true,
+        "priceText": "5,800원"
+      },
+      {
+        "name": "(추천)반찬 토네이도소세지(2개)",
+        "price": 4300,
+        "main": false,
+        "priceText": "4,300원"
+      },
+      {
+        "name": "(추천)반찬 치킨(5개)",
+        "price": 5100,
+        "main": false,
+        "priceText": "5,100원"
+      },
+      {
+        "name": "반찬 순살 고등어 간장구이(3조각)",
+        "price": 5000,
+        "main": false,
+        "priceText": "5,000원"
+      },
+      {
+        "name": "(BEST)반찬 돈까스도련님",
+        "price": 5300,
+        "main": false,
+        "priceText": "5,300원"
+      },
+      {
+        "name": "반찬 돈까스",
+        "price": 4000,
+        "main": false,
+        "priceText": "4,000원"
+      },
+      {
+        "name": "단품 카레",
+        "price": 4000,
+        "main": false,
+        "priceText": "4,000원"
+      },
+      {
+        "name": "미니반찬 김치",
+        "price": 500,
+        "main": false,
+        "priceText": "500원"
+      },
+      {
+        "name": "미니반찬 볶음김치",
+        "price": 500,
+        "main": false,
+        "priceText": "500원"
+      },
+      {
+        "name": "미니반찬 무말랭이",
+        "price": 600,
+        "main": false,
+        "priceText": "600원"
+      },
+      {
+        "name": "김",
+        "price": 100,
+        "main": false,
+        "priceText": "100원"
+      },
+      {
+        "name": "크림 닭강정(소)",
+        "price": 4500,
+        "main": false,
+        "priceText": "4,500원"
+      },
+      {
+        "name": "크림 닭강정(중)",
+        "price": 10500,
+        "main": false,
+        "priceText": "10,500원"
+      },
+      {
+        "name": "한솥 닭강정(중)",
+        "price": 9600,
+        "main": false,
+        "priceText": "9,600원"
+      },
+      {
+        "name": "(BEST)후라이드 순살(중) with 케이준소스,양념",
+        "price": 8100,
+        "main": false,
+        "priceText": "8,100원"
+      },
+      {
+        "name": "후라이드 순살(소) with 양념치킨소스",
+        "price": 4600,
+        "main": false,
+        "priceText": "4,600원"
+      },
+      {
+        "name": "후라이드 순살(소) with 케이준소스",
+        "price": 4600,
+        "main": false,
+        "priceText": "4,600원"
+      },
+      {
+        "name": "미니 찹쌀탕수육+탕수육 소스",
+        "price": 2900,
+        "main": false,
+        "priceText": "2,900원"
+      },
+      {
+        "name": "(추천)뉴 감자고로케(120g)",
+        "price": 3300,
+        "main": false,
+        "priceText": "3,300원"
+      },
+      {
+        "name": "케이준후라이(90g)",
+        "price": 2500,
+        "main": false,
+        "priceText": "2,500원"
+      },
+      {
+        "name": "미니찹쌀핫도그(4개입)",
+        "price": 3400,
+        "main": false,
+        "priceText": "3,400원"
+      },
+      {
+        "name": "제주녹차 미니꿀호떡",
+        "price": 3100,
+        "main": false,
+        "priceText": "3,100원"
+      },
+      {
+        "name": "해시 포테이토 스틱",
+        "price": 2600,
+        "main": false,
+        "priceText": "2,600원"
+      },
+      {
+        "name": "해시 포테이토 스틱+허니버터시즈닝",
+        "price": 2800,
+        "main": false,
+        "priceText": "2,800원"
+      },
+      {
+        "name": "해시 포테이토 스틱+치즈버터시즈닝",
+        "price": 2800,
+        "main": false,
+        "priceText": "2,800원"
+      },
+      {
+        "name": "허니버터시즈닝",
+        "price": 300,
+        "main": false,
+        "priceText": "300원"
+      },
+      {
+        "name": "치즈버터시즈닝",
+        "price": 300,
+        "main": false,
+        "priceText": "300원"
+      },
+      {
+        "name": "사골계란국",
+        "price": 1700,
+        "main": false,
+        "priceText": "1,700원"
+      },
+      {
+        "name": "청양사골계란국",
+        "price": 1700,
+        "main": false,
+        "priceText": "1,700원"
+      },
+      {
+        "name": "완도 미역국",
+        "price": 1700,
+        "main": false,
+        "priceText": "1,700원"
+      },
+      {
+        "name": "매콤 해물 된장국",
+        "price": 1700,
+        "main": false,
+        "priceText": "1,700원"
+      },
+      {
+        "name": "미소 된장국",
+        "price": 1700,
+        "main": false,
+        "priceText": "1,700원"
+      },
+      {
+        "name": "생와사비",
+        "price": 300,
+        "main": false,
+        "priceText": "300원"
+      },
+      {
+        "name": "치킨마요소스",
+        "price": 500,
+        "main": false,
+        "priceText": "500원"
+      },
+      {
+        "name": "빅치킨마요소스",
+        "price": 600,
+        "main": false,
+        "priceText": "600원"
+      },
+      {
+        "name": "양념치킨소스",
+        "price": 600,
+        "main": false,
+        "priceText": "600원"
+      },
+      {
+        "name": "케이준소스",
+        "price": 600,
+        "main": false,
+        "priceText": "600원"
+      },
+      {
+        "name": "양식소스",
+        "price": 300,
+        "main": false,
+        "priceText": "300원"
+      },
+      {
+        "name": "칠리소스",
+        "price": 500,
+        "main": false,
+        "priceText": "500원"
+      },
+      {
+        "name": "마요소스",
+        "price": 200,
+        "main": false,
+        "priceText": "200원"
+      },
+      {
+        "name": "타르타르소스",
+        "price": 400,
+        "main": false,
+        "priceText": "400원"
+      },
+      {
+        "name": "볶음고추장",
+        "price": 1200,
+        "main": false,
+        "priceText": "1,200원"
+      },
+      {
+        "name": "감초볶음고추장소스",
+        "price": 500,
+        "main": false,
+        "priceText": "500원"
+      },
+      {
+        "name": "참기름",
+        "price": 200,
+        "main": false,
+        "priceText": "200원"
+      },
+      {
+        "name": "토마토케찹",
+        "price": 100,
+        "main": false,
+        "priceText": "100원"
+      },
+      {
+        "name": "돈부리소스",
+        "price": 500,
+        "main": false,
+        "priceText": "500원"
+      },
+      {
+        "name": "덮밥용 소이소스",
+        "price": 500,
+        "main": false,
+        "priceText": "500원"
+      },
+      {
+        "name": "라유소스",
+        "price": 300,
+        "main": false,
+        "priceText": "300원"
+      },
+      {
+        "name": "미니탕수육소스",
+        "price": 600,
+        "main": false,
+        "priceText": "600원"
+      },
+      {
+        "name": "두부강된장소스",
+        "price": 1800,
+        "main": false,
+        "priceText": "1,800원"
+      },
+      {
+        "name": "미니콜라 190ml",
+        "price": 1700,
+        "main": false,
+        "priceText": "1,700원"
+      },
+      {
+        "name": "코카콜라 250ml",
+        "price": 2000,
+        "main": false,
+        "priceText": "2,000원"
+      },
+      {
+        "name": "코카콜라 500ml",
+        "price": 2800,
+        "main": false,
+        "priceText": "2,800원"
+      },
+      {
+        "name": "제로 코카콜라 250ml",
+        "price": 2000,
+        "main": false,
+        "priceText": "2,000원"
+      },
+      {
+        "name": "미니사이다 190ml",
+        "price": 1500,
+        "main": false,
+        "priceText": "1,500원"
+      },
+      {
+        "name": "칠성사이다 250ml",
+        "price": 2100,
+        "main": false,
+        "priceText": "2,100원"
+      },
+      {
+        "name": "칠성사이다 500ml",
+        "price": 2800,
+        "main": false,
+        "priceText": "2,800원"
+      },
+      {
+        "name": "제로 칠성사이다 250ml",
+        "price": 2000,
+        "main": false,
+        "priceText": "2,000원"
+      },
+      {
+        "name": "웰치스포도 355ml",
+        "price": 1900,
+        "main": false,
+        "priceText": "1,900원"
+      },
+      {
+        "name": "마운틴듀 355ml",
+        "price": 2100,
+        "main": false,
+        "priceText": "2,100원"
+      },
+      {
+        "name": "환타오렌지 250ml",
+        "price": 1700,
+        "main": false,
+        "priceText": "1,700원"
+      },
+      {
+        "name": "피크닉 사과(200ml)",
+        "price": 1500,
+        "main": false,
+        "priceText": "1,500원"
+      },
+      {
+        "name": "야쿠르트 1971제로 190ml",
+        "price": 1500,
+        "main": false,
+        "priceText": "1,500원"
+      },
+      {
+        "name": "델몬트드링크(오렌지)",
+        "price": 1300,
+        "main": false,
+        "priceText": "1,300원"
+      },
+      {
+        "name": "미니생수",
+        "price": 700,
+        "main": false,
+        "priceText": "700원"
+      },
+      {
+        "name": "풀무원샘물 500ml",
+        "price": 1300,
+        "main": false,
+        "priceText": "1,300원"
+      },
+      {
+        "name": "클룹 제로소다 복숭아 500ml",
+        "price": 3000,
+        "main": false,
+        "priceText": "3,000원"
+      },
+      {
+        "name": "클룹 제로소다 레몬 500ml",
+        "price": 3000,
+        "main": false,
+        "priceText": "3,000원"
+      },
+      {
+        "name": "육개장사발면",
+        "price": 1700,
+        "main": false,
+        "priceText": "1,700원"
+      },
+      {
+        "name": "김치사발면",
+        "price": 1700,
+        "main": false,
+        "priceText": "1,700원"
+      },
+      {
+        "name": "신라면(소)",
+        "price": 1850,
+        "main": false,
+        "priceText": "1,850원"
+      },
+      {
+        "name": "진라면 매운맛(소)",
+        "price": 1800,
+        "main": false,
+        "priceText": "1,800원"
+      },
+      {
+        "name": "한솥밥",
+        "price": 1800,
+        "main": false,
+        "priceText": "1,800원"
+      },
+      {
+        "name": "현미밥",
+        "price": 2500,
+        "main": false,
+        "priceText": "2,500원"
+      },
+      {
+        "name": "12곡밥",
+        "price": 2700,
+        "main": false,
+        "priceText": "2,700원"
+      }
+    ],
+    "note": "배달 주문 게시 가격입니다. 매장 가격은 미확인으로 유지합니다."
+  },
+  "hoursObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/13376550/home",
+    "checkedAt": "2026-11-12",
+    "status": "confirmed",
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금",
+          "토",
+          "일"
+        ],
+        "open": "09:30",
+        "close": "20:00"
+      }
+    ],
+    "note": "매장 영업시간 관찰. 기존 attrs/research를 덮어쓰지 않습니다."
+  },
+  "followupReview": {
+    "checkedAt": "2026-11-12",
+    "reasons": [
+      "매장 메뉴·가격: 배달 가격 또는 가격 구분이 불명확한 자료만 있어 매장 가격을 확인해야 합니다.",
+      "2026-08 메뉴판을 확인했으나 본문에 한솥 메뉴 권장가격으로 표시되어 지점의 매장·포장 확정 가격으로 적용하지 않았습니다."
+    ],
+    "sources": [
+      "https://pcmap.place.naver.com/restaurant/13376550/home",
+      "https://pcmap.place.naver.com/restaurant/13376550/menu/list"
+    ]
+  }
+}

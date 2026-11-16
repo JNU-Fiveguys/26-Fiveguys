@@ -1,0 +1,63 @@
+{
+  "version": 1,
+  "id": "p_0087",
+  "name": "라사천마라탕 용봉점",
+  "category": "중식",
+  "lat": 35.177234,
+  "lng": 126.902208,
+  "address": "전남광주통합특별시 북구 설죽로202번길 88",
+  "source": "semas",
+  "sourceId": "MA0101202511A0017151",
+  "sourceStatus": "active",
+  "attrs": {
+    "status": "partial"
+  },
+  "research": {
+    "identityStatus": "not_found",
+    "queries": [
+      "\"라사천마라탕\" \"용봉점\"",
+      "\"라사천\" \"용봉\""
+    ],
+    "sources": [],
+    "facts": {
+      "menus": {
+        "status": "unconfirmed",
+        "sourceIds": [],
+        "note": "주소가 일치하는 매장의 메뉴·가격을 확인하지 못함."
+      },
+      "hours": {
+        "status": "unconfirmed",
+        "sourceIds": [],
+        "note": "요일별 영업시간·휴무를 확인하지 못함."
+      }
+    },
+    "notes": [
+      "주소가 일치하는 공개 매장 메뉴·가격·영업시간을 찾지 못함. 다른 지역 동명 매장과 배달서비스 업체 목록을 근거로 값을 대입하지 않음."
+    ],
+    "checkedAt": "2026-11-11",
+    "method": "web",
+    "unknownFields": [
+      "menus",
+      "hours",
+      "mealType",
+      "takeout",
+      "verifiedAt",
+      "verifiedBy",
+      "break",
+      "lastOrder"
+    ]
+  },
+  "availability": {
+    "status": "excluded",
+    "provider": "naver",
+    "checkedAt": "2026-11-11",
+    "sourceUrl": "https://map.naver.com/p/search/%EC%A0%84%EB%82%A8%EB%8C%80%20%EC%9D%8C%EC%8B%9D%EC%A0%90",
+    "naverPlaceId": null,
+    "observedName": "",
+    "observedAddress": "",
+    "district": null,
+    "addressVerified": false,
+    "nearby": false,
+    "reason": "네이버 지도에서 확인한 네 식당가 명단에 포함되지 않아 제외"
+  }
+}

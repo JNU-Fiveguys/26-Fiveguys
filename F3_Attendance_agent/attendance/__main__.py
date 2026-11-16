@@ -8,6 +8,7 @@
     cli.py attendance notices                         e클래스 공지에서 찾은 휴강 (자동 휴강 원천)
     cli.py attendance parse 월5월6수5                  강의시간 원문 해석 (시각 포함)
     cli.py attendance periods                         교시 ↔ 시각 (학교 시간표 모듈)
+    cli.py attendance campus-context --date YYYY-MM-DD  식사 추천용 하루 시간표(JSON, 읽기 전용)
     cli.py attendance clear                           출결 기록·시간표·설정 전부 지우기
 """
 from __future__ import annotations
@@ -169,6 +170,13 @@ def cmd_clear(a) -> int:
     return 0
 
 
+def cmd_campus_context(a) -> int:
+    from .meal_context import export_context
+    # 모든 상태는 같은 JSON 계약으로 반환한다. 예외 메시지·과목명 등은 출력하지 않는다.
+    print(json.dumps(export_context(a.date, a.semester), ensure_ascii=False))
+    return 0
+
+
 def main(argv: Optional[list[str]] = None) -> int:
     ap = argparse.ArgumentParser(prog="attendance", description="F3 출결·학사경고 예방")
     sub = ap.add_subparsers(dest="cmd", required=True)
@@ -189,6 +197,10 @@ def main(argv: Optional[list[str]] = None) -> int:
     p.set_defaults(fn=cmd_parse)
     sub.add_parser("periods").set_defaults(fn=cmd_periods)
     sub.add_parser("notices").set_defaults(fn=cmd_notices)
+    p = sub.add_parser("campus-context", help="식사 추천용 하루 시간표를 읽기 전용으로 내보내기")
+    p.add_argument("--date", required=True)
+    p.add_argument("--semester")
+    p.set_defaults(fn=cmd_campus_context)
     sub.add_parser("clear").set_defaults(fn=cmd_clear)
     a = ap.parse_args(argv)
     try:

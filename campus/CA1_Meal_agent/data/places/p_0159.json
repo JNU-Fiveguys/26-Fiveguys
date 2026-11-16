@@ -1,0 +1,390 @@
+{
+  "version": 1,
+  "id": "p_0159",
+  "source": "team",
+  "sourceId": "naver:2091246902",
+  "name": "꿈에그린분식",
+  "address": "전남광주 북구 용주로30번길 49 1층 꿈에그린분식점",
+  "category": "분식",
+  "lat": 35.1808044810548,
+  "lng": 126.903498775394,
+  "sourceStatus": "active",
+  "availability": {
+    "status": "listed",
+    "provider": "naver",
+    "checkedAt": "2026-11-11",
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/2091246902/home?fromPanelNum=1&additionalHeight=76&timestamp=202611112338&locale=ko&svcName=map_pcv5&searchText=%EA%BF%88%EC%97%90%EA%B7%B8%EB%A6%B0%EB%B6%84%EC%8B%9D%20%EC%9A%A9%EB%B4%89%EB%8F%99",
+    "naverPlaceId": "2091246902",
+    "observedName": "꿈에그린분식",
+    "observedAddress": "전남광주 북구 용주로30번길 49 1층 꿈에그린분식점",
+    "district": "예대",
+    "addressVerified": true,
+    "nearby": true,
+    "reason": "공개 네이버 지도에서 동일 주소의 전남대 예대 식당으로 확인"
+  },
+  "menuObservation": {
+    "status": "confirmed",
+    "priceContext": "in_store",
+    "checkedAt": "2026-11-12",
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/2091246902/menu/list",
+    "menus": [
+      {
+        "name": "왕호떡",
+        "price": 1500,
+        "main": false
+      },
+      {
+        "name": "아이스크림호떡",
+        "price": 3000,
+        "main": false
+      },
+      {
+        "name": "떡볶이",
+        "price": 5000,
+        "main": false
+      },
+      {
+        "name": "모듬순대",
+        "price": 6000,
+        "main": false
+      },
+      {
+        "name": "라면",
+        "price": 3500,
+        "main": true
+      },
+      {
+        "name": "떡라면",
+        "price": 4000,
+        "main": true
+      },
+      {
+        "name": "어묵",
+        "price": 700,
+        "main": false
+      },
+      {
+        "name": "어묵(3개)",
+        "price": 2000,
+        "main": false
+      },
+      {
+        "name": "물떡",
+        "price": 1000,
+        "main": false
+      },
+      {
+        "name": "새우튀김",
+        "price": 1500,
+        "main": false
+      },
+      {
+        "name": "오징어튀김",
+        "price": 1500,
+        "main": false
+      },
+      {
+        "name": "야채튀김",
+        "price": 1500,
+        "main": false
+      },
+      {
+        "name": "고구마튀김",
+        "price": 1500,
+        "main": false
+      },
+      {
+        "name": "고추튀김",
+        "price": 2000,
+        "main": false
+      },
+      {
+        "name": "모듬튀김(5개)",
+        "price": 7500,
+        "main": false
+      },
+      {
+        "name": "참치김치찌개",
+        "price": 6000,
+        "main": true
+      },
+      {
+        "name": "돼지김치찌개",
+        "price": 7000,
+        "main": true
+      },
+      {
+        "name": "된장찌개",
+        "price": 6000,
+        "main": true
+      },
+      {
+        "name": "음료수(콜라·사이다·환타)",
+        "price": 1500,
+        "main": false
+      },
+      {
+        "name": "공기",
+        "price": 1500,
+        "main": false
+      },
+      {
+        "name": "꿈에세트",
+        "price": 18000,
+        "main": false
+      },
+      {
+        "name": "그린세트",
+        "price": 14000,
+        "main": false
+      }
+    ],
+    "note": "공개 매장 메뉴판에 읽히는 이름·가격만 반영. 공유 분량과 사이드 메뉴를 임의로 1인 식사로 환산하지 않음. 메뉴판: https://ldb-phinf.pstatic.net/20251225_208/1766673295513uttHQ_JPEG/1000012253.jpg"
+  },
+  "attrs": {
+    "status": "partial",
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금",
+          "토",
+          "일"
+        ],
+        "open": "10:00",
+        "close": "22:00"
+      }
+    ],
+    "menus": [
+      {
+        "name": "왕호떡",
+        "price": 1500,
+        "main": false
+      },
+      {
+        "name": "아이스크림호떡",
+        "price": 3000,
+        "main": false
+      },
+      {
+        "name": "떡볶이",
+        "price": 5000,
+        "main": false
+      },
+      {
+        "name": "모듬순대",
+        "price": 6000,
+        "main": false
+      },
+      {
+        "name": "라면",
+        "price": 3500,
+        "main": true
+      },
+      {
+        "name": "떡라면",
+        "price": 4000,
+        "main": true
+      },
+      {
+        "name": "어묵",
+        "price": 700,
+        "main": false
+      },
+      {
+        "name": "어묵(3개)",
+        "price": 2000,
+        "main": false
+      },
+      {
+        "name": "물떡",
+        "price": 1000,
+        "main": false
+      },
+      {
+        "name": "새우튀김",
+        "price": 1500,
+        "main": false
+      },
+      {
+        "name": "오징어튀김",
+        "price": 1500,
+        "main": false
+      },
+      {
+        "name": "야채튀김",
+        "price": 1500,
+        "main": false
+      },
+      {
+        "name": "고구마튀김",
+        "price": 1500,
+        "main": false
+      },
+      {
+        "name": "고추튀김",
+        "price": 2000,
+        "main": false
+      },
+      {
+        "name": "모듬튀김(5개)",
+        "price": 7500,
+        "main": false
+      },
+      {
+        "name": "참치김치찌개",
+        "price": 6000,
+        "main": true
+      },
+      {
+        "name": "돼지김치찌개",
+        "price": 7000,
+        "main": true
+      },
+      {
+        "name": "된장찌개",
+        "price": 6000,
+        "main": true
+      },
+      {
+        "name": "음료수(콜라·사이다·환타)",
+        "price": 1500,
+        "main": false
+      },
+      {
+        "name": "공기",
+        "price": 1500,
+        "main": false
+      },
+      {
+        "name": "꿈에세트",
+        "price": 18000,
+        "main": false
+      },
+      {
+        "name": "그린세트",
+        "price": 14000,
+        "main": false
+      }
+    ]
+  },
+  "hoursObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/2091246902/home?fromPanelNum=1&additionalHeight=76&timestamp=202611112338&locale=ko&svcName=map_pcv5&searchText=%EA%BF%88%EC%97%90%EA%B7%B8%EB%A6%B0%EB%B6%84%EC%8B%9D%20%EC%9A%A9%EB%B4%89%EB%8F%99",
+    "checkedAt": "2026-11-12",
+    "status": "confirmed",
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금",
+          "토",
+          "일"
+        ],
+        "open": "10:00",
+        "close": "22:00"
+      }
+    ],
+    "note": "매장 영업시간 관찰. 기존 attrs/research를 덮어쓰지 않습니다."
+  },
+  "research": {
+    "checkedAt": "2026-11-11",
+    "method": "web",
+    "identityStatus": "matched",
+    "queries": [
+      "꿈에그린분식 전남광주 북구 용주로30번길 49 1층 꿈에그린분식점"
+    ],
+    "sources": [
+      {
+        "id": "naver-place",
+        "url": "https://pcmap.place.naver.com/restaurant/2091246902/home?fromPanelNum=1&additionalHeight=76&timestamp=202611112338&locale=ko&svcName=map_pcv5&searchText=%EA%BF%88%EC%97%90%EA%B7%B8%EB%A6%B0%EB%B6%84%EC%8B%9D%20%EC%9A%A9%EB%B4%89%EB%8F%99",
+        "title": "꿈에그린분식 네이버 지도",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "같은 주소의 지점 확인. 지도 등록 확인은 실시간 영업 중 보증이 아님"
+      },
+      {
+        "id": "naver-menu",
+        "url": "https://pcmap.place.naver.com/restaurant/2091246902/menu?fromPanelNum=1&additionalHeight=76&timestamp=202611112338&locale=ko&svcName=map_pcv5&searchText=%EA%BF%88%EC%97%90%EA%B7%B8%EB%A6%B0%EB%B6%84%EC%8B%9D%20%EC%9A%A9%EB%B4%89%EB%8F%99",
+        "title": "꿈에그린분식 메뉴 탭",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "가격 맥락: in_store"
+      },
+      {
+        "id": "naver-hours",
+        "url": "https://pcmap.place.naver.com/restaurant/2091246902/home?fromPanelNum=1&additionalHeight=76&timestamp=202611112338&locale=ko&svcName=map_pcv5&searchText=%EA%BF%88%EC%97%90%EA%B7%B8%EB%A6%B0%EB%B6%84%EC%8B%9D%20%EC%9A%A9%EB%B4%89%EB%8F%99",
+        "title": "꿈에그린분식 영업시간",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "게시된 요일별 영업시간. 미확인은 추정하지 않음"
+      }
+    ],
+    "facts": {
+      "menus": {
+        "status": "unconfirmed",
+        "sourceIds": [],
+        "note": "매장 기준 정보 미확인. 배달·가격 맥락 불명 자료는 확정하지 않습니다."
+      },
+      "hours": {
+        "status": "confirmed",
+        "sourceIds": [
+          "naver-hours"
+        ],
+        "note": "매장 게시값을 확인했습니다.",
+        "value": [
+          {
+            "days": [
+              "월",
+              "화",
+              "수",
+              "목",
+              "금",
+              "토",
+              "일"
+            ],
+            "open": "10:00",
+            "close": "22:00"
+          }
+        ]
+      }
+    },
+    "unknownFields": [
+      "menus",
+      "mealType",
+      "takeout",
+      "verifiedAt",
+      "verifiedBy",
+      "break",
+      "lastOrder"
+    ],
+    "notes": [
+      "네이버 공개 지도 상세·메뉴 탭 직접 확인.",
+      "메뉴 탭에 게시된 전체 텍스트 메뉴 기준. 메뉴판 이미지 전체와 대조한 것은 아님.",
+      "main은 식사 예산 계산을 위한 보수적 분류. 공유 찜닭·깐풍기·주류·곁들임·분량 불명 메뉴는 false로 두며 원문 메뉴명과 가격은 모두 보존.",
+      "원문 영업시간은 rear_art_batch5.json에 보관. 미게시 브레이크·라스트오더 존재 여부는 확인하지 못함.",
+      "병합 입력: rear_art_batch5_manifest.json",
+      "공개 네이버 화면 관찰이며 현장 검증이 아닙니다."
+    ]
+  },
+  "followupReview": {
+    "checkedAt": "2026-11-12",
+    "reasons": [
+      "공개 매장 식사 가격과 요일별 영업시간을 연결하여 추천 대상으로 전환했습니다."
+    ],
+    "sources": [
+      "https://pcmap.place.naver.com/restaurant/2091246902/home",
+      "https://pcmap.place.naver.com/restaurant/2091246902/menu/list",
+      "https://ldb-phinf.pstatic.net/20251225_208/1766673295513uttHQ_JPEG/1000012253.jpg",
+      "https://pcmap.place.naver.com/restaurant/2091246902/menu?fromPanelNum=1&additionalHeight=76&timestamp=202611112338&locale=ko&svcName=map_pcv5&searchText=%EA%BF%88%EC%97%90%EA%B7%B8%EB%A6%B0%EB%B6%84%EC%8B%9D%20%EC%9A%A9%EB%B4%89%EB%8F%99"
+    ]
+  }
+}

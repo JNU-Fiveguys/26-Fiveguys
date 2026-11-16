@@ -1,0 +1,261 @@
+{
+  "version": 1,
+  "id": "p_0005",
+  "name": "엄마손맛나름",
+  "category": "한식",
+  "lat": 35.1806789445248,
+  "lng": 126.904322311533,
+  "address": "전남광주 북구 용주로30번길 64-1 1층 엄마손맛나름",
+  "source": "semas",
+  "sourceId": "MA010120220804732381",
+  "sourceStatus": "active",
+  "attrs": {
+    "status": "partial",
+    "menus": [
+      {
+        "name": "뼈해장국",
+        "price": 6000,
+        "main": true
+      },
+      {
+        "name": "돼지머리국밥",
+        "price": 6000,
+        "main": true
+      },
+      {
+        "name": "돼지내장국밥",
+        "price": 6000,
+        "main": true
+      },
+      {
+        "name": "섞어국밥(머리,내장)",
+        "price": 7000,
+        "main": true
+      },
+      {
+        "name": "순대암뽕국밥",
+        "price": 7000,
+        "main": true
+      },
+      {
+        "name": "순두부찌개",
+        "price": 6000,
+        "main": true
+      },
+      {
+        "name": "김치찌개",
+        "price": 6000,
+        "main": true
+      },
+      {
+        "name": "제육덮밥",
+        "price": 7000,
+        "main": true
+      },
+      {
+        "name": "오징어덮밥",
+        "price": 7000,
+        "main": true
+      },
+      {
+        "name": "된장찌개",
+        "price": 8000,
+        "main": true
+      },
+      {
+        "name": "차돌된장찌개",
+        "price": 8000,
+        "main": true
+      },
+      {
+        "name": "김치볶음밥",
+        "price": 7000,
+        "main": true
+      },
+      {
+        "name": "비빔밥",
+        "price": 6000,
+        "main": true
+      },
+      {
+        "name": "대패 삼겹살볶음",
+        "price": 20000,
+        "main": false
+      }
+    ],
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금",
+          "토"
+        ],
+        "open": "08:00",
+        "close": "21:00"
+      }
+    ]
+  },
+  "research": {
+    "identityStatus": "matched",
+    "queries": [
+      "\"엄마손맛나름\" 메뉴 영업시간"
+    ],
+    "sources": [
+      {
+        "id": "s1",
+        "url": "https://www.diningcode.com/profile.php?rid=FLv9BMmeDaYy",
+        "title": "엄마손맛나름 매장정보",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "상호·주소 일치"
+      }
+    ],
+    "facts": {
+      "menus": {
+        "status": "conflict",
+        "value": [],
+        "sourceIds": [
+          "s1"
+        ],
+        "note": "메뉴표 뼈해장국 6,000원과 2025-01-09 후기 9,000~10,000원대 표기가 충돌해 현재 가격 채택 보류. 돼지머리국밥·순두부찌개·제육덮밥 메뉴명 확인."
+      },
+      "hours": {
+        "status": "partial",
+        "value": [],
+        "sourceIds": [
+          "s1"
+        ],
+        "note": "오늘 영업시간은08:00~21:00. 월~토08:00~21:00/일휴무라는 후기 요약은 게시시점이 오래되어 전체주간 확인 보류."
+      }
+    },
+    "notes": [],
+    "checkedAt": "2026-11-11",
+    "method": "web",
+    "unknownFields": [
+      "menus",
+      "hours",
+      "mealType",
+      "takeout",
+      "verifiedAt",
+      "verifiedBy",
+      "break",
+      "lastOrder"
+    ]
+  },
+  "availability": {
+    "status": "listed",
+    "provider": "naver",
+    "checkedAt": "2026-11-11",
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/1808846683/home?fromPanelNum=1&additionalHeight=76&timestamp=202611112331&locale=ko&svcName=map_pcv5&searchText=%EB%82%98%EB%A6%84%20%EA%B4%91%EC%A3%BC%20%EC%9A%A9%EB%B4%89%EB%8F%99",
+    "naverPlaceId": "1808846683",
+    "observedName": "엄마손맛나름",
+    "observedAddress": "전남광주 북구 용주로30번길 64-1 1층 엄마손맛나름",
+    "district": "예대",
+    "addressVerified": true,
+    "nearby": true,
+    "reason": "공개 네이버 지도에서 동일 주소의 전남대 예대 식당으로 확인"
+  },
+  "menuObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/1808846683/menu?fromPanelNum=1&additionalHeight=76&timestamp=202611112331&locale=ko&svcName=map_pcv5&searchText=%EB%82%98%EB%A6%84%20%EA%B4%91%EC%A3%BC%20%EC%9A%A9%EB%B4%89%EB%8F%99",
+    "checkedAt": "2026-11-11",
+    "priceContext": "in_store",
+    "menus": [
+      {
+        "name": "뼈해장국",
+        "price": 6000,
+        "main": true
+      },
+      {
+        "name": "돼지머리국밥",
+        "price": 6000,
+        "main": true
+      },
+      {
+        "name": "돼지내장국밥",
+        "price": 6000,
+        "main": true
+      },
+      {
+        "name": "섞어국밥(머리,내장)",
+        "price": 7000,
+        "main": true
+      },
+      {
+        "name": "순대암뽕국밥",
+        "price": 7000,
+        "main": true
+      },
+      {
+        "name": "순두부찌개",
+        "price": 6000,
+        "main": true
+      },
+      {
+        "name": "김치찌개",
+        "price": 6000,
+        "main": true
+      },
+      {
+        "name": "제육덮밥",
+        "price": 7000,
+        "main": true
+      },
+      {
+        "name": "오징어덮밥",
+        "price": 7000,
+        "main": true
+      },
+      {
+        "name": "된장찌개",
+        "price": 8000,
+        "main": true
+      },
+      {
+        "name": "차돌된장찌개",
+        "price": 8000,
+        "main": true
+      },
+      {
+        "name": "김치볶음밥",
+        "price": 7000,
+        "main": true
+      },
+      {
+        "name": "비빔밥",
+        "price": 6000,
+        "main": true
+      },
+      {
+        "name": "대패 삼겹살볶음",
+        "price": 20000,
+        "main": false
+      }
+    ],
+    "note": "메뉴 상태: confirmed. 원본 관찰·좌표 출처는 적용 manifest에 보관합니다.",
+    "status": "confirmed"
+  },
+  "hoursObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/1808846683/home",
+    "checkedAt": "2026-11-11",
+    "status": "confirmed",
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금",
+          "토"
+        ],
+        "open": "08:00",
+        "close": "21:00"
+      }
+    ],
+    "note": "매장 영업시간 관찰. 기존 attrs/research를 덮어쓰지 않습니다."
+  }
+}

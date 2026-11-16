@@ -1,0 +1,212 @@
+{
+  "version": 1,
+  "id": "p_0001",
+  "name": "천지연삼겹살",
+  "category": "고기",
+  "lat": 35.1776670787467,
+  "lng": 126.902646191688,
+  "address": "전남광주 북구 설죽로214번길 90 1층",
+  "source": "semas",
+  "sourceId": "MA010120220800889963",
+  "sourceStatus": "active",
+  "attrs": {
+    "status": "partial",
+    "menus": [
+      {
+        "name": "고기돌판",
+        "price": 4500,
+        "main": true
+      },
+      {
+        "name": "고기치즈돌판",
+        "price": 7000,
+        "main": true
+      },
+      {
+        "name": "참치돌판",
+        "price": 4500,
+        "main": true
+      },
+      {
+        "name": "야채돌판",
+        "price": 4000,
+        "main": true
+      }
+    ],
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금"
+        ],
+        "open": "10:00",
+        "close": "20:30",
+        "lastOrder": "20:15"
+      }
+    ]
+  },
+  "research": {
+    "identityStatus": "matched",
+    "queries": [
+      "천지연 광주 설죽로214번길 90 메뉴 영업시간",
+      "\"천지연\" \"전대\""
+    ],
+    "sources": [
+      {
+        "id": "s1",
+        "url": "https://www.diningcode.com/profile.php?rid=qrpx5Ck8b7JA",
+        "title": "천지연삼겹살 매장정보",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "상호·주소 일치"
+      },
+      {
+        "id": "s2",
+        "url": "https://newscms.gwangju.go.kr/gallery.es?act=view&bid=0009&cg_code=C03&list_no=4696&mid=a40200000000",
+        "title": "광주시 학교는 졸업해도 이 맛은 졸업 못 해",
+        "type": "official",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "광주시 소개에 상호·주소·고기돌판 4,500원 확인. 과거 기사로 현재가격 보증하지 않음"
+      }
+    ],
+    "facts": {
+      "menus": {
+        "status": "confirmed",
+        "value": [
+          {
+            "name": "고기돌판",
+            "price": 4500,
+            "main": true
+          },
+          {
+            "name": "고기치즈돌판",
+            "price": 7000,
+            "main": true
+          },
+          {
+            "name": "참치돌판",
+            "price": 4500,
+            "main": true
+          },
+          {
+            "name": "야채돌판",
+            "price": 4000,
+            "main": true
+          }
+        ],
+        "sourceIds": [
+          "s1"
+        ],
+        "note": "주소가 일치하는 매장 메뉴표에 게시된 가격. 현장 검증은 아님."
+      },
+      "hours": {
+        "status": "confirmed",
+        "value": [
+          {
+            "days": [
+              "월",
+              "화",
+              "수",
+              "목",
+              "금"
+            ],
+            "open": "10:00",
+            "close": "20:30",
+            "lastOrder": "20:15"
+          }
+        ],
+        "sourceIds": [
+          "s1"
+        ],
+        "note": "매장정보에 평일 10:00~20:30, 토·일 휴무. 공휴일 예외와 브레이크는 미확인."
+      }
+    },
+    "notes": [],
+    "checkedAt": "2026-11-11",
+    "method": "web",
+    "unknownFields": [
+      "mealType",
+      "takeout",
+      "verifiedAt",
+      "verifiedBy",
+      "break"
+    ]
+  },
+  "availability": {
+    "status": "listed",
+    "provider": "naver",
+    "checkedAt": "2026-11-11",
+    "sourceUrl": "https://pcmap.place.naver.com/place/1434981123",
+    "naverPlaceId": "1434981123",
+    "observedName": "천지연삼겹살",
+    "observedAddress": "전남광주 북구 설죽로214번길 90 1층",
+    "district": "상대",
+    "addressVerified": true,
+    "nearby": true,
+    "reason": "공개 네이버 지도에서 동일 주소의 전남대 상대 식당으로 확인"
+  },
+  "menuObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/1434981123/menu/list",
+    "checkedAt": "2026-11-11",
+    "priceContext": "in_store",
+    "menus": [
+      {
+        "name": "수제벌집와인숙성 삼겹살",
+        "price": 9900,
+        "main": true
+      },
+      {
+        "name": "고기돌판",
+        "price": 4500,
+        "main": true
+      },
+      {
+        "name": "고기치즈돌판",
+        "price": 7000,
+        "main": true
+      },
+      {
+        "name": "참치돌판",
+        "price": 4500,
+        "main": true
+      },
+      {
+        "name": "참치치즈돌판",
+        "price": 7000,
+        "main": true
+      },
+      {
+        "name": "야채돌판",
+        "price": 4000,
+        "main": true
+      }
+    ],
+    "note": "메뉴 상태: confirmed. 원본 관찰·좌표 출처는 적용 manifest에 보관합니다.",
+    "status": "confirmed"
+  },
+  "hoursObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/place/1434981123",
+    "checkedAt": "2026-11-11",
+    "status": "confirmed",
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금"
+        ],
+        "open": "10:00",
+        "close": "20:30",
+        "lastOrder": "20:15"
+      }
+    ],
+    "note": "매장 영업시간 관찰. 기존 attrs/research를 덮어쓰지 않습니다."
+  }
+}

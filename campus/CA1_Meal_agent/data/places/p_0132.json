@@ -1,0 +1,272 @@
+{
+  "version": 1,
+  "id": "p_0132",
+  "source": "team",
+  "sourceId": "naver:1328708142",
+  "name": "마라푸우 상대점",
+  "address": "전남광주 북구 설죽로202번길 90 (용봉동)",
+  "category": "중식",
+  "lat": 35.177243256044,
+  "lng": 126.902416158119,
+  "sourceStatus": "active",
+  "availability": {
+    "status": "listed",
+    "provider": "naver",
+    "checkedAt": "2026-11-11",
+    "sourceUrl": "https://pcmap.place.naver.com/place/1328708142",
+    "naverPlaceId": "1328708142",
+    "observedName": "마라푸우 상대점",
+    "observedAddress": "전남광주 북구 설죽로202번길 90 (용봉동)",
+    "district": "상대",
+    "addressVerified": true,
+    "nearby": true,
+    "reason": "공개 네이버 지도에서 동일 주소의 전남대 상대 식당으로 확인"
+  },
+  "menuObservation": {
+    "status": "unconfirmed",
+    "priceContext": "delivery",
+    "checkedAt": "2026-11-12",
+    "sourceUrl": "https://place.map.kakao.com/596883620",
+    "placeSourceUrl": "https://pcmap.place.naver.com/restaurant/1328708142/home",
+    "sourceAddress": "전남광주통합특별시 북구 설죽로202번길 90 1층",
+    "menus": [
+      {
+        "name": "중국식 셀프 마라탕",
+        "price": 2000,
+        "main": false
+      },
+      {
+        "name": "마라푸우 마라탕 1人",
+        "price": 14900,
+        "main": true
+      },
+      {
+        "name": "마라푸우 마라탕 1~2人",
+        "price": 18900,
+        "main": false
+      },
+      {
+        "name": "마라푸우 마라탕 2~3人",
+        "price": 28900,
+        "main": false
+      },
+      {
+        "name": "마라푸우 마라샹궈 1~2人",
+        "price": 19900,
+        "main": false
+      },
+      {
+        "name": "마라푸우 마라샹궈 2~3人",
+        "price": 29900,
+        "main": false
+      },
+      {
+        "name": "마라푸우 마라샹궈 1人",
+        "price": 16900,
+        "main": true
+      },
+      {
+        "name": "공기밥",
+        "price": 1500,
+        "main": false
+      },
+      {
+        "name": "딱:）한입 고추 튀김 5개",
+        "price": 3500,
+        "main": false
+      },
+      {
+        "name": "딱:） 한입 만두 튀김 10개",
+        "price": 3500,
+        "main": false
+      },
+      {
+        "name": "®꽉찬속:） 야끼만두 튀김 5개",
+        "price": 3500,
+        "main": false
+      },
+      {
+        "name": "야채볶음밥",
+        "price": 3500,
+        "main": false
+      },
+      {
+        "name": "꿔바로우+소스",
+        "price": 8000,
+        "main": false
+      },
+      {
+        "name": "❤New:） 멘보샤 6p＋칠리소스❤",
+        "price": 7000,
+        "main": false
+      },
+      {
+        "name": "중국전:） 수라전",
+        "price": 2500,
+        "main": false
+      },
+      {
+        "name": "사이다 355mL",
+        "price": 2000,
+        "main": false
+      },
+      {
+        "name": "팹시콜라 355mL",
+        "price": 2000,
+        "main": false
+      },
+      {
+        "name": "팹시콜라 1.25L",
+        "price": 3000,
+        "main": false
+      },
+      {
+        "name": "사이다 1.25L",
+        "price": 3000,
+        "main": false
+      },
+      {
+        "name": "빙홍차 500mL",
+        "price": 3000,
+        "main": false
+      },
+      {
+        "name": "차파이복숭아500mL",
+        "price": 3000,
+        "main": false
+      },
+      {
+        "name": "땅콩소스（즈마장）",
+        "price": 700,
+        "main": false
+      },
+      {
+        "name": "칠리소스 추가",
+        "price": 1000,
+        "main": false
+      }
+    ],
+    "note": "카카오맵 요기요 배달 탭의 게시값. 포장·매장 가격은 확인되지 않아 예산·점수·추천에 사용하지 않음."
+  },
+  "attrs": {
+    "status": "partial",
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금",
+          "토",
+          "일"
+        ],
+        "open": "10:00",
+        "close": "22:50"
+      }
+    ]
+  },
+  "hoursObservation": {
+    "sourceUrl": "https://place.map.kakao.com/596883620",
+    "checkedAt": "2026-11-12",
+    "status": "confirmed",
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금",
+          "토",
+          "일"
+        ],
+        "open": "10:00",
+        "close": "22:50"
+      }
+    ],
+    "note": "동일 상호·도로명 건물번호의 카카오맵 영업정보. 매주 요일별 영업/휴무와 게시된 브레이크만 반영. 배달업체 제공 시간은 제외.",
+    "placeSourceUrl": "https://pcmap.place.naver.com/restaurant/1328708142/home",
+    "sourceAddress": "전남광주통합특별시 북구 설죽로202번길 90 1층",
+    "hoursContext": "in_store"
+  },
+  "research": {
+    "checkedAt": "2026-11-11",
+    "method": "web",
+    "identityStatus": "matched",
+    "queries": [
+      "마라푸우 상대점 전남광주 북구 설죽로202번길 90 (용봉동)"
+    ],
+    "sources": [
+      {
+        "id": "naver-place",
+        "url": "https://pcmap.place.naver.com/place/1328708142",
+        "title": "마라푸우 상대점 네이버 지도",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "같은 주소의 지점 확인. 지도 등록 확인은 실시간 영업 중 보증이 아님"
+      },
+      {
+        "id": "naver-menu",
+        "url": "https://pcmap.place.naver.com/place/1328708142",
+        "title": "마라푸우 상대점 메뉴 탭",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "가격 맥락: unknown"
+      },
+      {
+        "id": "naver-hours",
+        "url": "https://pcmap.place.naver.com/place/1328708142",
+        "title": "마라푸우 상대점 영업시간",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "게시된 요일별 영업시간. 미확인은 추정하지 않음"
+      }
+    ],
+    "facts": {
+      "menus": {
+        "status": "unconfirmed",
+        "sourceIds": [],
+        "note": "매장 기준 정보 미확인. 배달·가격 맥락 불명 자료는 확정하지 않습니다."
+      },
+      "hours": {
+        "status": "unconfirmed",
+        "sourceIds": [],
+        "note": "매장 기준 정보 미확인. 배달·가격 맥락 불명 자료는 확정하지 않습니다."
+      }
+    },
+    "unknownFields": [
+      "menus",
+      "hours",
+      "mealType",
+      "takeout",
+      "verifiedAt",
+      "verifiedBy",
+      "break",
+      "lastOrder"
+    ],
+    "notes": [
+      "공개 메뉴 탭 없음; 영업시간 미등록.",
+      "영업시간 원문: None",
+      "원문 메뉴 목록·분류는 front_sangdae.json에 보존. main은 1인 식사 예산용 조사자 분류이며 공유 메뉴는 false로 보수적으로 표시.",
+      "공개 메뉴 URL 미확인으로 출처는 확인한 장소 홈 URL. 메뉴를 확인했다는 뜻이 아님.",
+      "동일 주소 기존 p_0008 이름은 마라로만 기재되어 업체 동일성을 확정할 수 없어 기존 ID를 연결하지 않음.",
+      "병합 입력: front_normalized_manifest.json",
+      "공개 네이버 화면 관찰이며 현장 검증이 아닙니다."
+    ]
+  },
+  "followupReview": {
+    "checkedAt": "2026-11-12",
+    "reasons": [
+      "매장 메뉴·가격: 배달 가격 또는 가격 구분이 불명확한 자료만 있어 매장 가격을 확인해야 합니다."
+    ],
+    "sources": [
+      "https://pcmap.place.naver.com/restaurant/1328708142/home",
+      "https://place.map.kakao.com/596883620",
+      "https://pcmap.place.naver.com/place/1328708142"
+    ]
+  }
+}

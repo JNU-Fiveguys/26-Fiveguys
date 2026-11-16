@@ -1,0 +1,390 @@
+{
+  "version": 1,
+  "id": "p_0153",
+  "source": "team",
+  "sourceId": "naver:2013982221",
+  "name": "진초동순두부 북구청 전남대점",
+  "address": "전남광주 북구 호동로 11 1층",
+  "category": "한식",
+  "lat": 35.1750254800778,
+  "lng": 126.913714906748,
+  "sourceStatus": "active",
+  "availability": {
+    "status": "listed",
+    "provider": "naver",
+    "checkedAt": "2026-11-11",
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/2013982221/home?fromPanelNum=1&additionalHeight=76&timestamp=202611112344&locale=ko&svcName=map_pcv5&searchText=%EC%A7%84%EC%B4%88%EB%8F%99%EC%88%9C%EB%91%90%EB%B6%80%20%EB%B6%81%EA%B5%AC%EC%B2%AD%20%EC%A0%84%EB%82%A8%EB%8C%80%EC%A0%90",
+    "naverPlaceId": "2013982221",
+    "observedName": "진초동순두부 북구청 전남대점",
+    "observedAddress": "전남광주 북구 호동로 11 1층",
+    "district": "후문",
+    "addressVerified": true,
+    "nearby": true,
+    "reason": "공개 네이버 지도에서 동일 주소의 전남대 후문 식당으로 확인"
+  },
+  "menuObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/2013982221/menu?fromPanelNum=1&additionalHeight=76&timestamp=202611112344&locale=ko&svcName=map_pcv5&searchText=%EC%A7%84%EC%B4%88%EB%8F%99%EC%88%9C%EB%91%90%EB%B6%80%20%EB%B6%81%EA%B5%AC%EC%B2%AD%20%EC%A0%84%EB%82%A8%EB%8C%80%EC%A0%90",
+    "checkedAt": "2026-11-11",
+    "priceContext": "in_store",
+    "menus": [
+      {
+        "name": "순두부와 돌솥밥 조합으로 든든한 한끼",
+        "price": null,
+        "priceText": "가격 변동",
+        "main": false
+      },
+      {
+        "name": "부모님 식사와 가족외식 하기 좋은 곳",
+        "price": null,
+        "priceText": "가격 변동",
+        "main": false
+      },
+      {
+        "name": "주차 가능해 차량방문 하기 편한 밥집",
+        "price": null,
+        "priceText": "가격 변동",
+        "main": false
+      },
+      {
+        "name": "🦪 굴 듬뿍 순두부",
+        "price": 13500,
+        "main": true
+      },
+      {
+        "name": "진한 수제 콩물 국수[26년마감]",
+        "price": 11000,
+        "main": false
+      },
+      {
+        "name": "두부보쌈+순두부전골",
+        "price": 34900,
+        "main": false
+      },
+      {
+        "name": "초동 정식(순두부찌개+보쌈+돌솥밥)",
+        "price": null,
+        "priceText": "14,000~16,000원",
+        "main": false
+      },
+      {
+        "name": "두부 보쌈",
+        "price": null,
+        "priceText": "26,000~38,000원",
+        "main": false
+      },
+      {
+        "name": "🔥best🔥 차돌 묵은지 순두부",
+        "price": 13000,
+        "main": true
+      },
+      {
+        "name": "차돌 버섯 순두부",
+        "price": 13000,
+        "main": true
+      },
+      {
+        "name": "버섯 듬뿍 순두부",
+        "price": 12000,
+        "main": true
+      },
+      {
+        "name": "남도 묵은지 순두부",
+        "price": 12000,
+        "main": true
+      },
+      {
+        "name": "돼지 듬뿍 순두부",
+        "price": 11000,
+        "main": true
+      },
+      {
+        "name": "광주 애호박 순두부",
+        "price": 11000,
+        "main": true
+      },
+      {
+        "name": "하얀 순두부",
+        "price": 11000,
+        "main": true
+      },
+      {
+        "name": "메밀전병",
+        "price": 4000,
+        "main": false
+      },
+      {
+        "name": "김치 전병",
+        "price": 4000,
+        "main": false
+      },
+      {
+        "name": "두부 김치",
+        "price": 4000,
+        "main": false
+      }
+    ],
+    "note": "메뉴 상태: confirmed. 원본 관찰·좌표 출처는 적용 manifest에 보관합니다.",
+    "status": "confirmed"
+  },
+  "attrs": {
+    "status": "partial",
+    "menus": [
+      {
+        "name": "🦪 굴 듬뿍 순두부",
+        "price": 13500,
+        "main": true
+      },
+      {
+        "name": "진한 수제 콩물 국수[26년마감]",
+        "price": 11000,
+        "main": false
+      },
+      {
+        "name": "두부보쌈+순두부전골",
+        "price": 34900,
+        "main": false
+      },
+      {
+        "name": "🔥best🔥 차돌 묵은지 순두부",
+        "price": 13000,
+        "main": true
+      },
+      {
+        "name": "차돌 버섯 순두부",
+        "price": 13000,
+        "main": true
+      },
+      {
+        "name": "버섯 듬뿍 순두부",
+        "price": 12000,
+        "main": true
+      },
+      {
+        "name": "남도 묵은지 순두부",
+        "price": 12000,
+        "main": true
+      },
+      {
+        "name": "돼지 듬뿍 순두부",
+        "price": 11000,
+        "main": true
+      },
+      {
+        "name": "광주 애호박 순두부",
+        "price": 11000,
+        "main": true
+      },
+      {
+        "name": "하얀 순두부",
+        "price": 11000,
+        "main": true
+      },
+      {
+        "name": "메밀전병",
+        "price": 4000,
+        "main": false
+      },
+      {
+        "name": "김치 전병",
+        "price": 4000,
+        "main": false
+      },
+      {
+        "name": "두부 김치",
+        "price": 4000,
+        "main": false
+      }
+    ],
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금",
+          "토",
+          "일"
+        ],
+        "open": "10:30",
+        "close": "22:00",
+        "lastOrder": "21:20"
+      }
+    ]
+  },
+  "hoursObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/2013982221/home?fromPanelNum=1&additionalHeight=76&timestamp=202611112344&locale=ko&svcName=map_pcv5&searchText=%EC%A7%84%EC%B4%88%EB%8F%99%EC%88%9C%EB%91%90%EB%B6%80%20%EB%B6%81%EA%B5%AC%EC%B2%AD%20%EC%A0%84%EB%82%A8%EB%8C%80%EC%A0%90",
+    "checkedAt": "2026-11-11",
+    "status": "confirmed",
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금",
+          "토",
+          "일"
+        ],
+        "open": "10:30",
+        "close": "22:00",
+        "lastOrder": "21:20"
+      }
+    ],
+    "note": "매장 영업시간 관찰. 기존 attrs/research를 덮어쓰지 않습니다."
+  },
+  "research": {
+    "checkedAt": "2026-11-11",
+    "method": "web",
+    "identityStatus": "matched",
+    "queries": [
+      "진초동순두부 북구청 전남대점 전남광주 북구 호동로 11 1층"
+    ],
+    "sources": [
+      {
+        "id": "naver-place",
+        "url": "https://pcmap.place.naver.com/restaurant/2013982221/home?fromPanelNum=1&additionalHeight=76&timestamp=202611112344&locale=ko&svcName=map_pcv5&searchText=%EC%A7%84%EC%B4%88%EB%8F%99%EC%88%9C%EB%91%90%EB%B6%80%20%EB%B6%81%EA%B5%AC%EC%B2%AD%20%EC%A0%84%EB%82%A8%EB%8C%80%EC%A0%90",
+        "title": "진초동순두부 북구청 전남대점 네이버 지도",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "같은 주소의 지점 확인. 지도 등록 확인은 실시간 영업 중 보증이 아님"
+      },
+      {
+        "id": "naver-menu",
+        "url": "https://pcmap.place.naver.com/restaurant/2013982221/menu?fromPanelNum=1&additionalHeight=76&timestamp=202611112344&locale=ko&svcName=map_pcv5&searchText=%EC%A7%84%EC%B4%88%EB%8F%99%EC%88%9C%EB%91%90%EB%B6%80%20%EB%B6%81%EA%B5%AC%EC%B2%AD%20%EC%A0%84%EB%82%A8%EB%8C%80%EC%A0%90",
+        "title": "진초동순두부 북구청 전남대점 메뉴 탭",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "가격 맥락: in_store"
+      },
+      {
+        "id": "naver-hours",
+        "url": "https://pcmap.place.naver.com/restaurant/2013982221/home?fromPanelNum=1&additionalHeight=76&timestamp=202611112344&locale=ko&svcName=map_pcv5&searchText=%EC%A7%84%EC%B4%88%EB%8F%99%EC%88%9C%EB%91%90%EB%B6%80%20%EB%B6%81%EA%B5%AC%EC%B2%AD%20%EC%A0%84%EB%82%A8%EB%8C%80%EC%A0%90",
+        "title": "진초동순두부 북구청 전남대점 영업시간",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "게시된 요일별 영업시간. 미확인은 추정하지 않음"
+      }
+    ],
+    "facts": {
+      "menus": {
+        "status": "confirmed",
+        "sourceIds": [
+          "naver-menu"
+        ],
+        "note": "매장 게시값을 확인했습니다.",
+        "value": [
+          {
+            "name": "🦪 굴 듬뿍 순두부",
+            "price": 13500,
+            "main": true
+          },
+          {
+            "name": "진한 수제 콩물 국수[26년마감]",
+            "price": 11000,
+            "main": false
+          },
+          {
+            "name": "두부보쌈+순두부전골",
+            "price": 34900,
+            "main": false
+          },
+          {
+            "name": "🔥best🔥 차돌 묵은지 순두부",
+            "price": 13000,
+            "main": true
+          },
+          {
+            "name": "차돌 버섯 순두부",
+            "price": 13000,
+            "main": true
+          },
+          {
+            "name": "버섯 듬뿍 순두부",
+            "price": 12000,
+            "main": true
+          },
+          {
+            "name": "남도 묵은지 순두부",
+            "price": 12000,
+            "main": true
+          },
+          {
+            "name": "돼지 듬뿍 순두부",
+            "price": 11000,
+            "main": true
+          },
+          {
+            "name": "광주 애호박 순두부",
+            "price": 11000,
+            "main": true
+          },
+          {
+            "name": "하얀 순두부",
+            "price": 11000,
+            "main": true
+          },
+          {
+            "name": "메밀전병",
+            "price": 4000,
+            "main": false
+          },
+          {
+            "name": "김치 전병",
+            "price": 4000,
+            "main": false
+          },
+          {
+            "name": "두부 김치",
+            "price": 4000,
+            "main": false
+          }
+        ]
+      },
+      "hours": {
+        "status": "confirmed",
+        "sourceIds": [
+          "naver-hours"
+        ],
+        "note": "매장 게시값을 확인했습니다.",
+        "value": [
+          {
+            "days": [
+              "월",
+              "화",
+              "수",
+              "목",
+              "금",
+              "토",
+              "일"
+            ],
+            "open": "10:30",
+            "close": "22:00",
+            "lastOrder": "21:20"
+          }
+        ]
+      }
+    },
+    "unknownFields": [
+      "mealType",
+      "takeout",
+      "verifiedAt",
+      "verifiedBy",
+      "break"
+    ],
+    "notes": [
+      "네이버 공개 지도 상세·메뉴 탭 직접 확인.",
+      "메뉴 탭의 광고 문구 3개와 범위 가격은 원문 그대로 보존하지만 추천 대표 메뉴로 사용하지 않음.",
+      "26년마감 표기가 있는 콩물국수는 현재 판매 중으로 간주하지 않아 main=false. 공유 보쌈·전골과 사이드는 대표 식사에서 제외.",
+      "전체 공개 메뉴 탭의 메뉴명·가격을 보존. 가격 범위·변동은 price=null 및 priceText로 보관.",
+      "출입구에서 실제 도보 10분 이내 여부는 별도 OSM 경로 감사 대기. 이 파일의 주소 좌표 일치가 거리 통과를 의미하지 않음.",
+      "영업시간 원문은 rear_batch7.json에 보존. 확인되지 않은 브레이크·라스트오더는 생성하지 않음.",
+      "병합 입력: rear_batch7_manifest.json",
+      "공개 네이버 화면 관찰이며 현장 검증이 아닙니다."
+    ]
+  }
+}

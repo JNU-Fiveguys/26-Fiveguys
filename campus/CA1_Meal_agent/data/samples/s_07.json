@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "id": "s_07",
+  "name": "샘플식당 07 · 먼 국밥집",
+  "category": "국밥·찌개",
+  "lat": 35.168,
+  "lng": 126.9,
+  "address": "샘플 주소 (가짜 데이터)",
+  "source": "sample",
+  "attrs": {
+    "mealType": "일반",
+    "takeout": true,
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금",
+          "토",
+          "일"
+        ],
+        "open": "06:00",
+        "close": "22:00"
+      }
+    ],
+    "menus": [
+      {
+        "name": "돼지국밥",
+        "price": 9000,
+        "main": true
+      },
+      {
+        "name": "순대국밥",
+        "price": 9000,
+        "main": true
+      }
+    ],
+    "note": "캠퍼스에서 약 1.2km — 짧은 공강에서 빠지고 긴 공강에서만 나와야 한다",
+    "verifiedAt": "2026-11-11",
+    "verifiedBy": "sample"
+  }
+}

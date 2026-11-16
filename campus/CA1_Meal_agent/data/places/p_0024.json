@@ -1,0 +1,196 @@
+{
+  "version": 1,
+  "id": "p_0024",
+  "name": "무등골금호식당",
+  "category": "한식",
+  "lat": 35.1773778467892,
+  "lng": 126.901658511174,
+  "address": "광주 북구 설죽로202번길 75",
+  "source": "semas",
+  "sourceId": "MA010120220807533140",
+  "sourceStatus": "active",
+  "attrs": {
+    "status": "partial",
+    "menus": [
+      {
+        "name": "김치찌게",
+        "price": 7000,
+        "main": true
+      },
+      {
+        "name": "순두부찌게",
+        "price": 7000,
+        "main": true
+      },
+      {
+        "name": "곰탕",
+        "price": 8000,
+        "main": true
+      },
+      {
+        "name": "뼈해장국",
+        "price": 7000,
+        "main": true
+      }
+    ]
+  },
+  "research": {
+    "identityStatus": "matched",
+    "queries": [
+      "\"무등골금호식당\" 메뉴 영업시간"
+    ],
+    "sources": [
+      {
+        "id": "s1",
+        "url": "https://www.diningcode.com/profile.php?rid=hZSTPGMXTLTW",
+        "title": "무등골금호식당 매장정보",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "상호·주소 일치"
+      }
+    ],
+    "facts": {
+      "menus": {
+        "status": "confirmed",
+        "value": [
+          {
+            "name": "김치찌게",
+            "price": 7000,
+            "main": true
+          },
+          {
+            "name": "순두부찌게",
+            "price": 7000,
+            "main": true
+          },
+          {
+            "name": "곰탕",
+            "price": 8000,
+            "main": true
+          },
+          {
+            "name": "뼈해장국",
+            "price": 7000,
+            "main": true
+          }
+        ],
+        "sourceIds": [
+          "s1"
+        ],
+        "note": "주소가 일치하는 매장 메뉴표에 게시된 가격. 메뉴명은 게시 표기를 따름."
+      },
+      "hours": {
+        "status": "unconfirmed",
+        "value": [],
+        "sourceIds": [],
+        "note": "요일별 영업시간을 확인하지 못함."
+      }
+    },
+    "notes": [],
+    "checkedAt": "2026-11-11",
+    "method": "web",
+    "unknownFields": [
+      "hours",
+      "mealType",
+      "takeout",
+      "verifiedAt",
+      "verifiedBy",
+      "break",
+      "lastOrder"
+    ]
+  },
+  "availability": {
+    "status": "listed",
+    "provider": "naver",
+    "checkedAt": "2026-11-11",
+    "sourceUrl": "https://pcmap.place.naver.com/place/16178351",
+    "naverPlaceId": "16178351",
+    "observedName": "무등골금호식당",
+    "observedAddress": "광주 북구 설죽로202번길 75",
+    "district": "상대",
+    "addressVerified": true,
+    "nearby": true,
+    "reason": "공개 네이버 지도에서 동일 주소의 전남대 상대 식당으로 확인"
+  },
+  "menuObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/16178351/menu/list",
+    "checkedAt": "2026-11-11",
+    "priceContext": "in_store",
+    "menus": [
+      {
+        "name": "부대찌게 소",
+        "price": 20000,
+        "main": false,
+        "priceContext": "in_store"
+      },
+      {
+        "name": "김치찌게",
+        "price": 7000,
+        "main": true,
+        "priceContext": "in_store"
+      },
+      {
+        "name": "순두부찌게",
+        "price": 7000,
+        "main": true,
+        "priceContext": "in_store"
+      },
+      {
+        "name": "곰탕",
+        "price": 8000,
+        "main": true,
+        "priceContext": "in_store"
+      },
+      {
+        "name": "뼈해장국",
+        "price": 7000,
+        "main": true,
+        "priceContext": "in_store"
+      },
+      {
+        "name": "소고기비빔밥",
+        "price": 8000,
+        "main": true,
+        "priceContext": "in_store"
+      },
+      {
+        "name": "삼겹살",
+        "price": 9000,
+        "main": true,
+        "priceContext": "in_store"
+      },
+      {
+        "name": "목살",
+        "price": 9000,
+        "main": true,
+        "priceContext": "in_store"
+      },
+      {
+        "name": "생오리구이",
+        "price": 10000,
+        "main": true,
+        "priceContext": "in_store"
+      }
+    ],
+    "note": "메뉴 상태: confirmed. 원본 관찰·좌표 출처는 적용 manifest에 보관합니다.",
+    "status": "confirmed"
+  },
+  "hoursObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/place/16178351",
+    "checkedAt": "2026-11-11",
+    "status": "unconfirmed",
+    "hours": [],
+    "note": "매장 영업시간 관찰. 기존 attrs/research를 덮어쓰지 않습니다."
+  },
+  "followupReview": {
+    "checkedAt": "2026-11-12",
+    "reasons": [
+      "요일별 영업시간: 월~일 영업·휴무와 개점·마감 시간이 필요합니다. 브레이크·마지막 주문은 확인한 경우만 입력하세요."
+    ],
+    "sources": [
+      "https://pcmap.place.naver.com/restaurant/16178351/home",
+      "https://pcmap.place.naver.com/restaurant/16178351/menu/list"
+    ]
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "version": 1,
+  "id": "p_0063",
+  "name": "핵밥 전남대점",
+  "category": "일식",
+  "lat": 35.175413,
+  "lng": 126.912946,
+  "address": "전남광주통합특별시 북구 우치로90번길 6",
+  "source": "semas",
+  "sourceId": "MA0101202308A0056408",
+  "sourceStatus": "active",
+  "attrs": {
+    "status": "partial"
+  },
+  "research": {
+    "identityStatus": "matched",
+    "queries": [
+      "\"핵밥 전남대점\" 메뉴 영업시간",
+      "\"핵밥\" \"전남대점\" \"메뉴\" \"원\"",
+      "\"핵밥 전남대점\" site:diningcode.com",
+      "\"핵밥 전남대점\" site:haekbap.com"
+    ],
+    "sources": [
+      {
+        "id": "s1",
+        "url": "https://hongsi.io/place/p/337993dc-579e-468f-8055-daab57afc343",
+        "title": "핵밥 전남대점 정보",
+        "type": "directory",
+        "addressMatch": true,
+        "note": "검색결과AI요약이라고명시된2차정보라직접확인사실로승격안함.",
+        "observedAt": "2026-11-11"
+      }
+    ],
+    "facts": {
+      "menus": {
+        "status": "partial",
+        "value": [
+          {
+            "name": "한우대창덮밥",
+            "price": 13900,
+            "main": true
+          }
+        ],
+        "sourceIds": [
+          "s1"
+        ],
+        "note": "2차AI요약자료의 메뉴가격. 원메뉴판확인못해잠정자료로만유지."
+      },
+      "hours": {
+        "status": "partial",
+        "sourceIds": [
+          "s1"
+        ],
+        "note": "2차요약에서11:00~21:00·휴식15:00~17:00언급. 요일·휴무·원출처확인못함."
+      }
+    },
+    "notes": [],
+    "checkedAt": "2026-11-11",
+    "method": "web",
+    "unknownFields": [
+      "menus",
+      "hours",
+      "mealType",
+      "takeout",
+      "verifiedAt",
+      "verifiedBy",
+      "break",
+      "lastOrder"
+    ]
+  },
+  "availability": {
+    "status": "excluded",
+    "provider": "naver",
+    "checkedAt": "2026-11-11",
+    "sourceUrl": "https://map.naver.com/p/search/%EC%A0%84%EB%82%A8%EB%8C%80%20%EC%9D%8C%EC%8B%9D%EC%A0%90",
+    "naverPlaceId": null,
+    "observedName": "",
+    "observedAddress": "",
+    "district": null,
+    "addressVerified": false,
+    "nearby": false,
+    "reason": "네이버 지도에서 확인한 네 식당가 명단에 포함되지 않아 제외"
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "version": 1,
+  "id": "p_0059",
+  "name": "샐러피아",
+  "category": "양식",
+  "lat": 35.175097,
+  "lng": 126.912935,
+  "address": "전남광주통합특별시 북구 우치로 86",
+  "source": "semas",
+  "sourceId": "MA0101202211A0042980",
+  "sourceStatus": "active",
+  "attrs": {
+    "status": "partial"
+  },
+  "research": {
+    "identityStatus": "matched",
+    "queries": [
+      "\"샐러피아\" \"우치로 86\" 메뉴 영업시간"
+    ],
+    "sources": [
+      {
+        "id": "s1",
+        "url": "https://www.diningcode.com/profile.php?rid=5a5aPVMueudB",
+        "title": "샐러피아 전대후문",
+        "type": "directory",
+        "addressMatch": true,
+        "note": "지점주소일치. 후기와 요일표시간이상이하고공휴일휴무섞임.",
+        "observedAt": "2026-11-11"
+      }
+    ],
+    "facts": {
+      "menus": {
+        "status": "partial",
+        "value": [
+          {
+            "name": "새우파스타샐러드",
+            "price": 9800,
+            "main": true
+          }
+        ],
+        "sourceIds": [
+          "s1"
+        ],
+        "note": "2026-05-14 방문후기 가격. 현재지점메뉴판가격확인필요."
+      },
+      "hours": {
+        "status": "conflict",
+        "sourceIds": [
+          "s1"
+        ],
+        "note": "후기월~토10:00~20:00/일휴무, 목록오늘11:30~19:00 등 상충. 토요일·공휴일변동휴무안내존재."
+      }
+    },
+    "notes": [],
+    "checkedAt": "2026-11-11",
+    "method": "web",
+    "unknownFields": [
+      "menus",
+      "hours",
+      "mealType",
+      "takeout",
+      "verifiedAt",
+      "verifiedBy",
+      "break",
+      "lastOrder"
+    ]
+  },
+  "availability": {
+    "status": "excluded",
+    "provider": "naver",
+    "checkedAt": "2026-11-11",
+    "sourceUrl": "https://map.naver.com/p/search/%EC%A0%84%EB%82%A8%EB%8C%80%20%EC%9D%8C%EC%8B%9D%EC%A0%90",
+    "naverPlaceId": null,
+    "observedName": "",
+    "observedAddress": "",
+    "district": null,
+    "addressVerified": false,
+    "nearby": false,
+    "reason": "네이버 지도에서 확인한 네 식당가 명단에 포함되지 않아 제외"
+  }
+}

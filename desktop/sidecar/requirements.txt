@@ -19,3 +19,5 @@ keyring>=25; sys_platform == "darwin"
 # 개발·테스트용 — 사이드카에는 묶이지 않는다 (spec 이 tests/ 를 빼고 pytest 는 excludes)
 pytest>=8.4,<10
 httpx>=0.27
+# CA1 공개 식당·계산 설정 스키마 검증
+jsonschema>=4.20,<5

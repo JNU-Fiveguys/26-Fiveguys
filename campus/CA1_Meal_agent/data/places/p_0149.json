@@ -1,0 +1,661 @@
+{
+  "version": 1,
+  "id": "p_0149",
+  "source": "team",
+  "sourceId": "naver:1941363668",
+  "name": "정동 전대점",
+  "address": "전남광주 북구 우치로90번길 25 1층 정동 전대점",
+  "category": "일식",
+  "lat": 35.1756476578837,
+  "lng": 126.914054562017,
+  "sourceStatus": "active",
+  "availability": {
+    "status": "listed",
+    "provider": "naver",
+    "checkedAt": "2026-11-11",
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/1941363668/home",
+    "naverPlaceId": "1941363668",
+    "observedName": "정동 전대점",
+    "observedAddress": "전남광주 북구 우치로90번길 25 1층 정동 전대점",
+    "district": "후문",
+    "addressVerified": true,
+    "nearby": true,
+    "reason": "공개 네이버 지도에서 동일 주소의 전남대 후문 식당으로 확인"
+  },
+  "menuObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/1941363668/menu",
+    "checkedAt": "2026-11-11",
+    "priceContext": "in_store",
+    "menus": [
+      {
+        "name": "하나야마 냉우동",
+        "price": 16000,
+        "main": true
+      },
+      {
+        "name": "숯불규카츠",
+        "price": 18500,
+        "main": true
+      },
+      {
+        "name": "숯불 모듬카츠",
+        "price": 17000,
+        "main": true
+      },
+      {
+        "name": "숯불 특로스카츠",
+        "price": 15000,
+        "main": true
+      },
+      {
+        "name": "정동 치즈카츠",
+        "price": 14500,
+        "main": true
+      },
+      {
+        "name": "뜨끈꼬꼬우동",
+        "price": 12000,
+        "main": true
+      },
+      {
+        "name": "백미냉우동",
+        "price": 15000,
+        "main": true
+      },
+      {
+        "name": "정동 마제소바",
+        "price": 13000,
+        "main": true
+      },
+      {
+        "name": "정동 마제덮밥",
+        "price": 13000,
+        "main": true
+      },
+      {
+        "name": "멘치 카레덮밥",
+        "price": 12900,
+        "main": true
+      },
+      {
+        "name": "새우 카레덮밥",
+        "price": 11900,
+        "main": true
+      },
+      {
+        "name": "숯불 로스카츠",
+        "price": 13000,
+        "main": true
+      },
+      {
+        "name": "숯불 히레카츠",
+        "price": 14000,
+        "main": true
+      },
+      {
+        "name": "정동 치즈카츠 + 고구마무스 추가",
+        "price": 15500,
+        "main": true
+      },
+      {
+        "name": "정동 경양식 (순한맛/매운맛)",
+        "price": 12900,
+        "main": true
+      },
+      {
+        "name": "정동 경양식 + 고구마무스 추가",
+        "price": 13900,
+        "main": true
+      },
+      {
+        "name": "카레 경양식 (순한맛/매운맛)",
+        "price": 12900,
+        "main": true
+      },
+      {
+        "name": "정동 에비카츠",
+        "price": 11000,
+        "main": true
+      },
+      {
+        "name": "정동 멘치카츠",
+        "price": 12000,
+        "main": true
+      },
+      {
+        "name": "멘치카츠 1ps",
+        "price": 4500,
+        "main": false
+      },
+      {
+        "name": "새우튀김 1ps",
+        "price": 4500,
+        "main": false
+      },
+      {
+        "name": "순카레",
+        "price": 3500,
+        "main": false
+      },
+      {
+        "name": "불카레",
+        "price": 3500,
+        "main": false
+      },
+      {
+        "name": "온센타마고",
+        "price": 1500,
+        "main": false
+      },
+      {
+        "name": "민트유자토마토",
+        "price": 3500,
+        "main": false
+      },
+      {
+        "name": "로투스우유푸딩",
+        "price": 3500,
+        "main": false
+      },
+      {
+        "name": "트리플베리 에이드",
+        "price": 6000,
+        "main": false
+      },
+      {
+        "name": "유자 에이드",
+        "price": 6000,
+        "main": false
+      },
+      {
+        "name": "패션후르츠 에이드",
+        "price": 6000,
+        "main": false
+      },
+      {
+        "name": "버번 하이볼",
+        "price": 7000,
+        "main": false
+      },
+      {
+        "name": "재패니스 하이볼",
+        "price": 7000,
+        "main": false
+      },
+      {
+        "name": "생맥주",
+        "price": 5000,
+        "main": false
+      },
+      {
+        "name": "세모금 생맥주",
+        "price": 3000,
+        "main": false
+      }
+    ],
+    "note": "메뉴 상태: confirmed. 원본 관찰·좌표 출처는 적용 manifest에 보관합니다.",
+    "status": "confirmed"
+  },
+  "attrs": {
+    "status": "partial",
+    "menus": [
+      {
+        "name": "하나야마 냉우동",
+        "price": 16000,
+        "main": true
+      },
+      {
+        "name": "숯불규카츠",
+        "price": 18500,
+        "main": true
+      },
+      {
+        "name": "숯불 모듬카츠",
+        "price": 17000,
+        "main": true
+      },
+      {
+        "name": "숯불 특로스카츠",
+        "price": 15000,
+        "main": true
+      },
+      {
+        "name": "정동 치즈카츠",
+        "price": 14500,
+        "main": true
+      },
+      {
+        "name": "뜨끈꼬꼬우동",
+        "price": 12000,
+        "main": true
+      },
+      {
+        "name": "백미냉우동",
+        "price": 15000,
+        "main": true
+      },
+      {
+        "name": "정동 마제소바",
+        "price": 13000,
+        "main": true
+      },
+      {
+        "name": "정동 마제덮밥",
+        "price": 13000,
+        "main": true
+      },
+      {
+        "name": "멘치 카레덮밥",
+        "price": 12900,
+        "main": true
+      },
+      {
+        "name": "새우 카레덮밥",
+        "price": 11900,
+        "main": true
+      },
+      {
+        "name": "숯불 로스카츠",
+        "price": 13000,
+        "main": true
+      },
+      {
+        "name": "숯불 히레카츠",
+        "price": 14000,
+        "main": true
+      },
+      {
+        "name": "정동 치즈카츠 + 고구마무스 추가",
+        "price": 15500,
+        "main": true
+      },
+      {
+        "name": "정동 경양식 (순한맛/매운맛)",
+        "price": 12900,
+        "main": true
+      },
+      {
+        "name": "정동 경양식 + 고구마무스 추가",
+        "price": 13900,
+        "main": true
+      },
+      {
+        "name": "카레 경양식 (순한맛/매운맛)",
+        "price": 12900,
+        "main": true
+      },
+      {
+        "name": "정동 에비카츠",
+        "price": 11000,
+        "main": true
+      },
+      {
+        "name": "정동 멘치카츠",
+        "price": 12000,
+        "main": true
+      },
+      {
+        "name": "멘치카츠 1ps",
+        "price": 4500,
+        "main": false
+      },
+      {
+        "name": "새우튀김 1ps",
+        "price": 4500,
+        "main": false
+      },
+      {
+        "name": "순카레",
+        "price": 3500,
+        "main": false
+      },
+      {
+        "name": "불카레",
+        "price": 3500,
+        "main": false
+      },
+      {
+        "name": "온센타마고",
+        "price": 1500,
+        "main": false
+      },
+      {
+        "name": "민트유자토마토",
+        "price": 3500,
+        "main": false
+      },
+      {
+        "name": "로투스우유푸딩",
+        "price": 3500,
+        "main": false
+      },
+      {
+        "name": "트리플베리 에이드",
+        "price": 6000,
+        "main": false
+      },
+      {
+        "name": "유자 에이드",
+        "price": 6000,
+        "main": false
+      },
+      {
+        "name": "패션후르츠 에이드",
+        "price": 6000,
+        "main": false
+      },
+      {
+        "name": "버번 하이볼",
+        "price": 7000,
+        "main": false
+      },
+      {
+        "name": "재패니스 하이볼",
+        "price": 7000,
+        "main": false
+      },
+      {
+        "name": "생맥주",
+        "price": 5000,
+        "main": false
+      },
+      {
+        "name": "세모금 생맥주",
+        "price": 3000,
+        "main": false
+      }
+    ],
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금",
+          "토",
+          "일"
+        ],
+        "open": "11:00",
+        "close": "20:30",
+        "lastOrder": "20:00",
+        "break": {
+          "start": "15:00",
+          "end": "16:30"
+        }
+      }
+    ]
+  },
+  "hoursObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/1941363668/home",
+    "checkedAt": "2026-11-12",
+    "status": "confirmed",
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금",
+          "토",
+          "일"
+        ],
+        "open": "11:00",
+        "close": "20:30",
+        "lastOrder": "20:00",
+        "break": {
+          "start": "15:00",
+          "end": "16:30"
+        }
+      }
+    ],
+    "note": "매장 영업시간 관찰. 기존 attrs/research를 덮어쓰지 않습니다."
+  },
+  "research": {
+    "checkedAt": "2026-11-11",
+    "method": "web",
+    "identityStatus": "matched",
+    "queries": [
+      "정동 전대점 전남광주 북구 우치로90번길 25 1층 정동 전대점"
+    ],
+    "sources": [
+      {
+        "id": "naver-place",
+        "url": "https://pcmap.place.naver.com/restaurant/1941363668/home",
+        "title": "정동 전대점 네이버 지도",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "같은 주소의 지점 확인. 지도 등록 확인은 실시간 영업 중 보증이 아님"
+      },
+      {
+        "id": "naver-menu",
+        "url": "https://pcmap.place.naver.com/restaurant/1941363668/menu",
+        "title": "정동 전대점 메뉴 탭",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "가격 맥락: in_store"
+      },
+      {
+        "id": "naver-hours",
+        "url": "https://pcmap.place.naver.com/restaurant/1941363668/home",
+        "title": "정동 전대점 영업시간",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "게시된 요일별 영업시간. 미확인은 추정하지 않음"
+      }
+    ],
+    "facts": {
+      "menus": {
+        "status": "confirmed",
+        "sourceIds": [
+          "naver-menu"
+        ],
+        "note": "매장 게시값을 확인했습니다.",
+        "value": [
+          {
+            "name": "하나야마 냉우동",
+            "price": 16000,
+            "main": true
+          },
+          {
+            "name": "숯불규카츠",
+            "price": 18500,
+            "main": true
+          },
+          {
+            "name": "숯불 모듬카츠",
+            "price": 17000,
+            "main": true
+          },
+          {
+            "name": "숯불 특로스카츠",
+            "price": 15000,
+            "main": true
+          },
+          {
+            "name": "정동 치즈카츠",
+            "price": 14500,
+            "main": true
+          },
+          {
+            "name": "뜨끈꼬꼬우동",
+            "price": 12000,
+            "main": true
+          },
+          {
+            "name": "백미냉우동",
+            "price": 15000,
+            "main": true
+          },
+          {
+            "name": "정동 마제소바",
+            "price": 13000,
+            "main": true
+          },
+          {
+            "name": "정동 마제덮밥",
+            "price": 13000,
+            "main": true
+          },
+          {
+            "name": "멘치 카레덮밥",
+            "price": 12900,
+            "main": true
+          },
+          {
+            "name": "새우 카레덮밥",
+            "price": 11900,
+            "main": true
+          },
+          {
+            "name": "숯불 로스카츠",
+            "price": 13000,
+            "main": true
+          },
+          {
+            "name": "숯불 히레카츠",
+            "price": 14000,
+            "main": true
+          },
+          {
+            "name": "정동 치즈카츠 + 고구마무스 추가",
+            "price": 15500,
+            "main": true
+          },
+          {
+            "name": "정동 경양식 (순한맛/매운맛)",
+            "price": 12900,
+            "main": true
+          },
+          {
+            "name": "정동 경양식 + 고구마무스 추가",
+            "price": 13900,
+            "main": true
+          },
+          {
+            "name": "카레 경양식 (순한맛/매운맛)",
+            "price": 12900,
+            "main": true
+          },
+          {
+            "name": "정동 에비카츠",
+            "price": 11000,
+            "main": true
+          },
+          {
+            "name": "정동 멘치카츠",
+            "price": 12000,
+            "main": true
+          },
+          {
+            "name": "멘치카츠 1ps",
+            "price": 4500,
+            "main": false
+          },
+          {
+            "name": "새우튀김 1ps",
+            "price": 4500,
+            "main": false
+          },
+          {
+            "name": "순카레",
+            "price": 3500,
+            "main": false
+          },
+          {
+            "name": "불카레",
+            "price": 3500,
+            "main": false
+          },
+          {
+            "name": "온센타마고",
+            "price": 1500,
+            "main": false
+          },
+          {
+            "name": "민트유자토마토",
+            "price": 3500,
+            "main": false
+          },
+          {
+            "name": "로투스우유푸딩",
+            "price": 3500,
+            "main": false
+          },
+          {
+            "name": "트리플베리 에이드",
+            "price": 6000,
+            "main": false
+          },
+          {
+            "name": "유자 에이드",
+            "price": 6000,
+            "main": false
+          },
+          {
+            "name": "패션후르츠 에이드",
+            "price": 6000,
+            "main": false
+          },
+          {
+            "name": "버번 하이볼",
+            "price": 7000,
+            "main": false
+          },
+          {
+            "name": "재패니스 하이볼",
+            "price": 7000,
+            "main": false
+          },
+          {
+            "name": "생맥주",
+            "price": 5000,
+            "main": false
+          },
+          {
+            "name": "세모금 생맥주",
+            "price": 3000,
+            "main": false
+          }
+        ]
+      },
+      "hours": {
+        "status": "unconfirmed",
+        "sourceIds": [],
+        "note": "매장 기준 정보 미확인. 배달·가격 맥락 불명 자료는 확정하지 않습니다."
+      }
+    },
+    "unknownFields": [
+      "hours",
+      "mealType",
+      "takeout",
+      "verifiedAt",
+      "verifiedBy",
+      "break",
+      "lastOrder"
+    ],
+    "notes": [
+      "네이버 공개 지도 상세·메뉴 탭 직접 확인.",
+      "메뉴 탭에 게시된 전체 텍스트 메뉴 기준. 메뉴판 이미지 전체와 대조한 것은 아님.",
+      "main은 식사 예산 계산을 위한 보수적 분류. 공유 찜닭·깐풍기·주류·곁들임·분량 불명 메뉴는 false로 두며 원문 메뉴명과 가격은 모두 보존.",
+      "원문 영업시간은 rear_art_batch5.json에 보관. 미게시 브레이크·라스트오더 존재 여부는 확인하지 못함.",
+      "요일별 영업시간 전체를 확인하지 못해 hours를 비움. 당일 개점 또는 라스트오더 안내로 주간 영업시간을 추정하지 않음.",
+      "병합 입력: rear_art_batch5_manifest.json",
+      "공개 네이버 화면 관찰이며 현장 검증이 아닙니다."
+    ]
+  },
+  "followupReview": {
+    "checkedAt": "2026-11-12",
+    "reasons": [
+      "확인된 매장 식사 가격과 요일별 영업시간을 연결하여 추천 대상으로 전환했습니다."
+    ],
+    "sources": [
+      "https://pcmap.place.naver.com/restaurant/1941363668/home",
+      "https://pcmap.place.naver.com/restaurant/1941363668/menu"
+    ]
+  }
+}

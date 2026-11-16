@@ -1,0 +1,821 @@
+{
+  "version": 1,
+  "id": "p_0151",
+  "source": "team",
+  "sourceId": "naver:1984446498",
+  "name": "소중대",
+  "address": "전남광주 북구 자미로66번길 15 1층",
+  "category": "중식",
+  "lat": 35.1716392232085,
+  "lng": 126.905452585868,
+  "sourceStatus": "active",
+  "availability": {
+    "status": "listed",
+    "provider": "naver",
+    "checkedAt": "2026-11-11",
+    "sourceUrl": "https://pcmap.place.naver.com/place/1984446498",
+    "naverPlaceId": "1984446498",
+    "observedName": "소중대",
+    "observedAddress": "전남광주 북구 자미로66번길 15 1층",
+    "district": "정문",
+    "addressVerified": true,
+    "nearby": true,
+    "reason": "공개 네이버 지도에서 동일 주소의 전남대 정문 식당으로 확인"
+  },
+  "menuObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/1984446498/menu/list",
+    "checkedAt": "2026-11-11",
+    "priceContext": "in_store",
+    "menus": [
+      {
+        "name": "짜장면",
+        "price": 6000,
+        "main": true,
+        "priceContext": "in_store"
+      },
+      {
+        "name": "간짜장",
+        "price": 8000,
+        "main": true,
+        "priceContext": "in_store"
+      },
+      {
+        "name": "고추짜장",
+        "price": 8000,
+        "main": true,
+        "priceContext": "in_store"
+      },
+      {
+        "name": "쟁반짜장",
+        "price": 9000,
+        "main": true,
+        "priceContext": "in_store"
+      },
+      {
+        "name": "짬뽕",
+        "price": 8000,
+        "main": true,
+        "priceContext": "in_store"
+      },
+      {
+        "name": "마라짬뽕",
+        "price": 11000,
+        "main": true,
+        "priceContext": "in_store"
+      },
+      {
+        "name": "고추짬뽕",
+        "price": 11000,
+        "main": true,
+        "priceContext": "in_store"
+      },
+      {
+        "name": "삼선짬뽕",
+        "price": 11000,
+        "main": true,
+        "priceContext": "in_store"
+      },
+      {
+        "name": "차돌짬뽕",
+        "price": 11000,
+        "main": true,
+        "priceContext": "in_store"
+      },
+      {
+        "name": "삼선우동",
+        "price": 10000,
+        "main": true,
+        "priceContext": "in_store"
+      },
+      {
+        "name": "짜장밥",
+        "price": 7000,
+        "main": true,
+        "priceContext": "in_store"
+      },
+      {
+        "name": "볶음밥",
+        "price": 8000,
+        "main": true,
+        "priceContext": "in_store"
+      },
+      {
+        "name": "육개장",
+        "price": 10000,
+        "main": true,
+        "priceContext": "in_store"
+      },
+      {
+        "name": "잡채밥",
+        "price": 10000,
+        "main": true,
+        "priceContext": "in_store"
+      },
+      {
+        "name": "해물덮밥",
+        "price": 11000,
+        "main": true,
+        "priceContext": "in_store"
+      },
+      {
+        "name": "국밥",
+        "price": 8000,
+        "main": true,
+        "priceContext": "in_store"
+      },
+      {
+        "name": "삼선국밥",
+        "price": 11000,
+        "main": true,
+        "priceContext": "in_store"
+      },
+      {
+        "name": "차돌국밥",
+        "price": 11000,
+        "main": true,
+        "priceContext": "in_store"
+      },
+      {
+        "name": "삼선볶음밥",
+        "price": 11000,
+        "main": true,
+        "priceContext": "in_store"
+      },
+      {
+        "name": "제육덮밥",
+        "price": 11000,
+        "main": true,
+        "priceContext": "in_store"
+      },
+      {
+        "name": "소주",
+        "price": 4000,
+        "main": false,
+        "priceContext": "in_store"
+      },
+      {
+        "name": "맥주",
+        "price": 5000,
+        "main": false,
+        "priceContext": "in_store"
+      },
+      {
+        "name": "음료",
+        "price": 2000,
+        "main": false,
+        "priceContext": "in_store"
+      },
+      {
+        "name": "고급군만두",
+        "price": 8000,
+        "main": false,
+        "priceContext": "in_store"
+      },
+      {
+        "name": "양장피 중",
+        "price": 20000,
+        "main": false,
+        "priceContext": "in_store"
+      },
+      {
+        "name": "양장피 대",
+        "price": 30000,
+        "main": false,
+        "priceContext": "in_store"
+      },
+      {
+        "name": "팔보채 중",
+        "price": 20000,
+        "main": false,
+        "priceContext": "in_store"
+      },
+      {
+        "name": "팔보채 대",
+        "price": 30000,
+        "main": false,
+        "priceContext": "in_store"
+      },
+      {
+        "name": "고급탕수육 소",
+        "price": 23000,
+        "main": false,
+        "priceContext": "in_store"
+      },
+      {
+        "name": "고급탕수육 중",
+        "price": 28000,
+        "main": false,
+        "priceContext": "in_store"
+      },
+      {
+        "name": "고급탕수육 대",
+        "price": 33000,
+        "main": false,
+        "priceContext": "in_store"
+      },
+      {
+        "name": "깐풍기",
+        "price": 20000,
+        "main": false,
+        "priceContext": "in_store"
+      },
+      {
+        "name": "칠리새우",
+        "price": 25000,
+        "main": false,
+        "priceContext": "in_store"
+      },
+      {
+        "name": "맛있는 술국",
+        "price": 25000,
+        "main": false,
+        "priceContext": "in_store"
+      },
+      {
+        "name": "솔로세트1 탕수육+짜장1",
+        "price": 17000,
+        "main": true,
+        "priceContext": "in_store"
+      },
+      {
+        "name": "솔로세트2 탕수육+짬뽕1",
+        "price": 18000,
+        "main": true,
+        "priceContext": "in_store"
+      },
+      {
+        "name": "솔로세트3 탕수육+볶음밥1",
+        "price": 18000,
+        "main": true,
+        "priceContext": "in_store"
+      },
+      {
+        "name": "커플세트1 탕수육+짜장2",
+        "price": 23000,
+        "main": false,
+        "priceContext": "in_store"
+      },
+      {
+        "name": "커플세트2 탕수육+짬뽕2",
+        "price": 25000,
+        "main": false,
+        "priceContext": "in_store"
+      },
+      {
+        "name": "커플세트3 탕수육+짬뽕1+짜장1",
+        "price": 25000,
+        "main": false,
+        "priceContext": "in_store"
+      },
+      {
+        "name": "커플세트4 탕수육+쟁반짜장2",
+        "price": 27000,
+        "main": false,
+        "priceContext": "in_store"
+      }
+    ],
+    "note": "메뉴 상태: confirmed. 원본 관찰·좌표 출처는 적용 manifest에 보관합니다.",
+    "status": "confirmed"
+  },
+  "attrs": {
+    "status": "partial",
+    "menus": [
+      {
+        "name": "짜장면",
+        "price": 6000,
+        "main": true
+      },
+      {
+        "name": "간짜장",
+        "price": 8000,
+        "main": true
+      },
+      {
+        "name": "고추짜장",
+        "price": 8000,
+        "main": true
+      },
+      {
+        "name": "쟁반짜장",
+        "price": 9000,
+        "main": true
+      },
+      {
+        "name": "짬뽕",
+        "price": 8000,
+        "main": true
+      },
+      {
+        "name": "마라짬뽕",
+        "price": 11000,
+        "main": true
+      },
+      {
+        "name": "고추짬뽕",
+        "price": 11000,
+        "main": true
+      },
+      {
+        "name": "삼선짬뽕",
+        "price": 11000,
+        "main": true
+      },
+      {
+        "name": "차돌짬뽕",
+        "price": 11000,
+        "main": true
+      },
+      {
+        "name": "삼선우동",
+        "price": 10000,
+        "main": true
+      },
+      {
+        "name": "짜장밥",
+        "price": 7000,
+        "main": true
+      },
+      {
+        "name": "볶음밥",
+        "price": 8000,
+        "main": true
+      },
+      {
+        "name": "육개장",
+        "price": 10000,
+        "main": true
+      },
+      {
+        "name": "잡채밥",
+        "price": 10000,
+        "main": true
+      },
+      {
+        "name": "해물덮밥",
+        "price": 11000,
+        "main": true
+      },
+      {
+        "name": "국밥",
+        "price": 8000,
+        "main": true
+      },
+      {
+        "name": "삼선국밥",
+        "price": 11000,
+        "main": true
+      },
+      {
+        "name": "차돌국밥",
+        "price": 11000,
+        "main": true
+      },
+      {
+        "name": "삼선볶음밥",
+        "price": 11000,
+        "main": true
+      },
+      {
+        "name": "제육덮밥",
+        "price": 11000,
+        "main": true
+      },
+      {
+        "name": "소주",
+        "price": 4000,
+        "main": false
+      },
+      {
+        "name": "맥주",
+        "price": 5000,
+        "main": false
+      },
+      {
+        "name": "음료",
+        "price": 2000,
+        "main": false
+      },
+      {
+        "name": "고급군만두",
+        "price": 8000,
+        "main": false
+      },
+      {
+        "name": "양장피 중",
+        "price": 20000,
+        "main": false
+      },
+      {
+        "name": "양장피 대",
+        "price": 30000,
+        "main": false
+      },
+      {
+        "name": "팔보채 중",
+        "price": 20000,
+        "main": false
+      },
+      {
+        "name": "팔보채 대",
+        "price": 30000,
+        "main": false
+      },
+      {
+        "name": "고급탕수육 소",
+        "price": 23000,
+        "main": false
+      },
+      {
+        "name": "고급탕수육 중",
+        "price": 28000,
+        "main": false
+      },
+      {
+        "name": "고급탕수육 대",
+        "price": 33000,
+        "main": false
+      },
+      {
+        "name": "깐풍기",
+        "price": 20000,
+        "main": false
+      },
+      {
+        "name": "칠리새우",
+        "price": 25000,
+        "main": false
+      },
+      {
+        "name": "맛있는 술국",
+        "price": 25000,
+        "main": false
+      },
+      {
+        "name": "솔로세트1 탕수육+짜장1",
+        "price": 17000,
+        "main": true
+      },
+      {
+        "name": "솔로세트2 탕수육+짬뽕1",
+        "price": 18000,
+        "main": true
+      },
+      {
+        "name": "솔로세트3 탕수육+볶음밥1",
+        "price": 18000,
+        "main": true
+      },
+      {
+        "name": "커플세트1 탕수육+짜장2",
+        "price": 23000,
+        "main": false
+      },
+      {
+        "name": "커플세트2 탕수육+짬뽕2",
+        "price": 25000,
+        "main": false
+      },
+      {
+        "name": "커플세트3 탕수육+짬뽕1+짜장1",
+        "price": 25000,
+        "main": false
+      },
+      {
+        "name": "커플세트4 탕수육+쟁반짜장2",
+        "price": 27000,
+        "main": false
+      }
+    ],
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금",
+          "토",
+          "일"
+        ],
+        "open": "09:00",
+        "close": "20:30",
+        "lastOrder": "20:25"
+      }
+    ]
+  },
+  "hoursObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/place/1984446498",
+    "checkedAt": "2026-11-11",
+    "status": "confirmed",
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금",
+          "토",
+          "일"
+        ],
+        "open": "09:00",
+        "close": "20:30",
+        "lastOrder": "20:25"
+      }
+    ],
+    "note": "매장 영업시간 관찰. 기존 attrs/research를 덮어쓰지 않습니다."
+  },
+  "research": {
+    "checkedAt": "2026-11-11",
+    "method": "web",
+    "identityStatus": "matched",
+    "queries": [
+      "소중대 전남광주 북구 자미로66번길 15 1층"
+    ],
+    "sources": [
+      {
+        "id": "naver-place",
+        "url": "https://pcmap.place.naver.com/place/1984446498",
+        "title": "소중대 네이버 지도",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "같은 주소의 지점 확인. 지도 등록 확인은 실시간 영업 중 보증이 아님"
+      },
+      {
+        "id": "naver-menu",
+        "url": "https://pcmap.place.naver.com/restaurant/1984446498/menu/list",
+        "title": "소중대 메뉴 탭",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "가격 맥락: in_store"
+      },
+      {
+        "id": "naver-hours",
+        "url": "https://pcmap.place.naver.com/place/1984446498",
+        "title": "소중대 영업시간",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "게시된 요일별 영업시간. 미확인은 추정하지 않음"
+      }
+    ],
+    "facts": {
+      "menus": {
+        "status": "confirmed",
+        "sourceIds": [
+          "naver-menu"
+        ],
+        "note": "매장 게시값을 확인했습니다.",
+        "value": [
+          {
+            "name": "짜장면",
+            "price": 6000,
+            "main": true
+          },
+          {
+            "name": "간짜장",
+            "price": 8000,
+            "main": true
+          },
+          {
+            "name": "고추짜장",
+            "price": 8000,
+            "main": true
+          },
+          {
+            "name": "쟁반짜장",
+            "price": 9000,
+            "main": true
+          },
+          {
+            "name": "짬뽕",
+            "price": 8000,
+            "main": true
+          },
+          {
+            "name": "마라짬뽕",
+            "price": 11000,
+            "main": true
+          },
+          {
+            "name": "고추짬뽕",
+            "price": 11000,
+            "main": true
+          },
+          {
+            "name": "삼선짬뽕",
+            "price": 11000,
+            "main": true
+          },
+          {
+            "name": "차돌짬뽕",
+            "price": 11000,
+            "main": true
+          },
+          {
+            "name": "삼선우동",
+            "price": 10000,
+            "main": true
+          },
+          {
+            "name": "짜장밥",
+            "price": 7000,
+            "main": true
+          },
+          {
+            "name": "볶음밥",
+            "price": 8000,
+            "main": true
+          },
+          {
+            "name": "육개장",
+            "price": 10000,
+            "main": true
+          },
+          {
+            "name": "잡채밥",
+            "price": 10000,
+            "main": true
+          },
+          {
+            "name": "해물덮밥",
+            "price": 11000,
+            "main": true
+          },
+          {
+            "name": "국밥",
+            "price": 8000,
+            "main": true
+          },
+          {
+            "name": "삼선국밥",
+            "price": 11000,
+            "main": true
+          },
+          {
+            "name": "차돌국밥",
+            "price": 11000,
+            "main": true
+          },
+          {
+            "name": "삼선볶음밥",
+            "price": 11000,
+            "main": true
+          },
+          {
+            "name": "제육덮밥",
+            "price": 11000,
+            "main": true
+          },
+          {
+            "name": "소주",
+            "price": 4000,
+            "main": false
+          },
+          {
+            "name": "맥주",
+            "price": 5000,
+            "main": false
+          },
+          {
+            "name": "음료",
+            "price": 2000,
+            "main": false
+          },
+          {
+            "name": "고급군만두",
+            "price": 8000,
+            "main": false
+          },
+          {
+            "name": "양장피 중",
+            "price": 20000,
+            "main": false
+          },
+          {
+            "name": "양장피 대",
+            "price": 30000,
+            "main": false
+          },
+          {
+            "name": "팔보채 중",
+            "price": 20000,
+            "main": false
+          },
+          {
+            "name": "팔보채 대",
+            "price": 30000,
+            "main": false
+          },
+          {
+            "name": "고급탕수육 소",
+            "price": 23000,
+            "main": false
+          },
+          {
+            "name": "고급탕수육 중",
+            "price": 28000,
+            "main": false
+          },
+          {
+            "name": "고급탕수육 대",
+            "price": 33000,
+            "main": false
+          },
+          {
+            "name": "깐풍기",
+            "price": 20000,
+            "main": false
+          },
+          {
+            "name": "칠리새우",
+            "price": 25000,
+            "main": false
+          },
+          {
+            "name": "맛있는 술국",
+            "price": 25000,
+            "main": false
+          },
+          {
+            "name": "솔로세트1 탕수육+짜장1",
+            "price": 17000,
+            "main": true
+          },
+          {
+            "name": "솔로세트2 탕수육+짬뽕1",
+            "price": 18000,
+            "main": true
+          },
+          {
+            "name": "솔로세트3 탕수육+볶음밥1",
+            "price": 18000,
+            "main": true
+          },
+          {
+            "name": "커플세트1 탕수육+짜장2",
+            "price": 23000,
+            "main": false
+          },
+          {
+            "name": "커플세트2 탕수육+짬뽕2",
+            "price": 25000,
+            "main": false
+          },
+          {
+            "name": "커플세트3 탕수육+짬뽕1+짜장1",
+            "price": 25000,
+            "main": false
+          },
+          {
+            "name": "커플세트4 탕수육+쟁반짜장2",
+            "price": 27000,
+            "main": false
+          }
+        ]
+      },
+      "hours": {
+        "status": "confirmed",
+        "sourceIds": [
+          "naver-hours"
+        ],
+        "note": "매장 게시값을 확인했습니다.",
+        "value": [
+          {
+            "days": [
+              "월",
+              "화",
+              "수",
+              "목",
+              "금",
+              "토",
+              "일"
+            ],
+            "open": "09:00",
+            "close": "20:30",
+            "lastOrder": "20:25"
+          }
+        ]
+      }
+    },
+    "unknownFields": [
+      "mealType",
+      "takeout",
+      "verifiedAt",
+      "verifiedBy",
+      "break"
+    ],
+    "notes": [
+      "2026-11-11 현재 메뉴탭에 게시된 메뉴판 원본 이미지 판독. 이미지 URL의20230505는 촬영일로 단정하지 않음; 실제 현장가격 재확인 필요.",
+      "텍스트 깐풍기25000원은 가격채널 미표기. 사진에 매장20000/배달25000 명시되어 사용자 요청대로 매장20000을 적용.",
+      "매장/배달이 함께 표시된 양장피·팔보채·깐풍기·칠리새우는 매장가만 menus에 사용하고 배달가는 deliveryPriceObservations에 원문근거로 보존.",
+      "원본 전체관찰·사진/배달가격 구분은 front_more.json. 영업시간 원문: 매일09:00-20:30; 라스트오더20:25",
+      "메뉴 탭에서 실제 표시된 매장 메뉴판 사진 URL: https://ldb-phinf.pstatic.net/20230505_156/1683263191585XF7zu_JPEG/1683263173149.jpg",
+      "메뉴판 원본 저장 위치: data/survey/naver_2026-11-11/menu_images/1984446498-menu.jpg. 배달가격6개와 깐풍기 텍스트가격25000은 front_more.json에 별도증거로 보존하며 이번 메뉴 계산에 사용하지 않음.",
+      "병합 입력: front_more2_normalized_manifest.json",
+      "공개 네이버 화면 관찰이며 현장 검증이 아닙니다."
+    ]
+  }
+}

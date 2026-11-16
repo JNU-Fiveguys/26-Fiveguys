@@ -1,0 +1,367 @@
+{
+  "version": 1,
+  "id": "p_0133",
+  "source": "team",
+  "sourceId": "naver:1374906880",
+  "name": "먹고싶은튀김",
+  "address": "전남광주 북구 반룡로 19 1층",
+  "category": "분식",
+  "lat": 35.179305562474,
+  "lng": 126.900207051399,
+  "sourceStatus": "active",
+  "availability": {
+    "status": "listed",
+    "provider": "naver",
+    "checkedAt": "2026-11-11",
+    "sourceUrl": "https://pcmap.place.naver.com/place/1374906880",
+    "naverPlaceId": "1374906880",
+    "observedName": "먹고싶은튀김",
+    "observedAddress": "전남광주 북구 반룡로 19 1층",
+    "district": "상대",
+    "addressVerified": true,
+    "nearby": true,
+    "reason": "공개 네이버 지도에서 동일 주소의 전남대 상대 식당으로 확인"
+  },
+  "menuObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/1374906880/menu/list",
+    "checkedAt": "2026-11-11",
+    "priceContext": "in_store",
+    "menus": [
+      {
+        "name": "사형수 모듬튀김 세트",
+        "price": 9000,
+        "main": false
+      },
+      {
+        "name": "마약범 고추튀김",
+        "price": 2000,
+        "main": false
+      },
+      {
+        "name": "절도범 오징어튀김",
+        "price": 1500,
+        "main": false
+      },
+      {
+        "name": "뺑소니범 떡볶이",
+        "price": 4000,
+        "main": true
+      },
+      {
+        "name": "횡령새우튀김",
+        "price": 1500,
+        "main": false
+      },
+      {
+        "name": "방화범 고구마튀김",
+        "price": 1000,
+        "main": false
+      },
+      {
+        "name": "폭력범 게살튀김",
+        "price": 1000,
+        "main": false
+      },
+      {
+        "name": "순살 후라이드",
+        "price": 11000,
+        "main": false
+      },
+      {
+        "name": "순살 간장치킨",
+        "price": 13000,
+        "main": false
+      },
+      {
+        "name": "순살 양념치킨",
+        "price": 13000,
+        "main": false
+      },
+      {
+        "name": "똥집튀김",
+        "price": 9000,
+        "main": false
+      },
+      {
+        "name": "위조범 김말이튀김",
+        "price": 800,
+        "main": false
+      },
+      {
+        "name": "납치범 계란튀김",
+        "price": 800,
+        "main": false
+      },
+      {
+        "name": "사기범 식빵튀김",
+        "price": 800,
+        "main": false
+      }
+    ],
+    "note": "메뉴 상태: confirmed. 원본 관찰·좌표 출처는 적용 manifest에 보관합니다.",
+    "status": "confirmed"
+  },
+  "attrs": {
+    "status": "partial",
+    "menus": [
+      {
+        "name": "사형수 모듬튀김 세트",
+        "price": 9000,
+        "main": false
+      },
+      {
+        "name": "마약범 고추튀김",
+        "price": 2000,
+        "main": false
+      },
+      {
+        "name": "절도범 오징어튀김",
+        "price": 1500,
+        "main": false
+      },
+      {
+        "name": "뺑소니범 떡볶이",
+        "price": 4000,
+        "main": true
+      },
+      {
+        "name": "횡령새우튀김",
+        "price": 1500,
+        "main": false
+      },
+      {
+        "name": "방화범 고구마튀김",
+        "price": 1000,
+        "main": false
+      },
+      {
+        "name": "폭력범 게살튀김",
+        "price": 1000,
+        "main": false
+      },
+      {
+        "name": "순살 후라이드",
+        "price": 11000,
+        "main": false
+      },
+      {
+        "name": "순살 간장치킨",
+        "price": 13000,
+        "main": false
+      },
+      {
+        "name": "순살 양념치킨",
+        "price": 13000,
+        "main": false
+      },
+      {
+        "name": "똥집튀김",
+        "price": 9000,
+        "main": false
+      },
+      {
+        "name": "위조범 김말이튀김",
+        "price": 800,
+        "main": false
+      },
+      {
+        "name": "납치범 계란튀김",
+        "price": 800,
+        "main": false
+      },
+      {
+        "name": "사기범 식빵튀김",
+        "price": 800,
+        "main": false
+      }
+    ],
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금",
+          "토"
+        ],
+        "open": "15:00",
+        "close": "22:30"
+      }
+    ]
+  },
+  "hoursObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/place/1374906880",
+    "checkedAt": "2026-11-11",
+    "status": "confirmed",
+    "hours": [
+      {
+        "days": [
+          "월",
+          "화",
+          "수",
+          "목",
+          "금",
+          "토"
+        ],
+        "open": "15:00",
+        "close": "22:30"
+      }
+    ],
+    "note": "매장 영업시간 관찰. 기존 attrs/research를 덮어쓰지 않습니다."
+  },
+  "research": {
+    "checkedAt": "2026-11-11",
+    "method": "web",
+    "identityStatus": "matched",
+    "queries": [
+      "먹고싶은튀김 전남광주 북구 반룡로 19 1층"
+    ],
+    "sources": [
+      {
+        "id": "naver-place",
+        "url": "https://pcmap.place.naver.com/place/1374906880",
+        "title": "먹고싶은튀김 네이버 지도",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "같은 주소의 지점 확인. 지도 등록 확인은 실시간 영업 중 보증이 아님"
+      },
+      {
+        "id": "naver-menu",
+        "url": "https://pcmap.place.naver.com/restaurant/1374906880/menu/list",
+        "title": "먹고싶은튀김 메뉴 탭",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "가격 맥락: in_store"
+      },
+      {
+        "id": "naver-hours",
+        "url": "https://pcmap.place.naver.com/place/1374906880",
+        "title": "먹고싶은튀김 영업시간",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "게시된 요일별 영업시간. 미확인은 추정하지 않음"
+      }
+    ],
+    "facts": {
+      "menus": {
+        "status": "confirmed",
+        "sourceIds": [
+          "naver-menu"
+        ],
+        "note": "매장 게시값을 확인했습니다.",
+        "value": [
+          {
+            "name": "사형수 모듬튀김 세트",
+            "price": 9000,
+            "main": false
+          },
+          {
+            "name": "마약범 고추튀김",
+            "price": 2000,
+            "main": false
+          },
+          {
+            "name": "절도범 오징어튀김",
+            "price": 1500,
+            "main": false
+          },
+          {
+            "name": "뺑소니범 떡볶이",
+            "price": 4000,
+            "main": true
+          },
+          {
+            "name": "횡령새우튀김",
+            "price": 1500,
+            "main": false
+          },
+          {
+            "name": "방화범 고구마튀김",
+            "price": 1000,
+            "main": false
+          },
+          {
+            "name": "폭력범 게살튀김",
+            "price": 1000,
+            "main": false
+          },
+          {
+            "name": "순살 후라이드",
+            "price": 11000,
+            "main": false
+          },
+          {
+            "name": "순살 간장치킨",
+            "price": 13000,
+            "main": false
+          },
+          {
+            "name": "순살 양념치킨",
+            "price": 13000,
+            "main": false
+          },
+          {
+            "name": "똥집튀김",
+            "price": 9000,
+            "main": false
+          },
+          {
+            "name": "위조범 김말이튀김",
+            "price": 800,
+            "main": false
+          },
+          {
+            "name": "납치범 계란튀김",
+            "price": 800,
+            "main": false
+          },
+          {
+            "name": "사기범 식빵튀김",
+            "price": 800,
+            "main": false
+          }
+        ]
+      },
+      "hours": {
+        "status": "confirmed",
+        "sourceIds": [
+          "naver-hours"
+        ],
+        "note": "매장 게시값을 확인했습니다.",
+        "value": [
+          {
+            "days": [
+              "월",
+              "화",
+              "수",
+              "목",
+              "금",
+              "토"
+            ],
+            "open": "15:00",
+            "close": "22:30"
+          }
+        ]
+      }
+    },
+    "unknownFields": [
+      "mealType",
+      "takeout",
+      "verifiedAt",
+      "verifiedBy",
+      "break",
+      "lastOrder"
+    ],
+    "notes": [
+      "메뉴 업데이트25.07.09. 튀김/치킨 비중이 높은 분식점; 식사 추천에는 떡볶이만 주식으로 분류.",
+      "영업시간 원문: 월~토15:00-22:30; 일 정기휴무",
+      "원본 관찰은 front_sangdae_more.json. main은 1인 식사 예산용 분류이며 공유 피자는 false로 보수적으로 표시.",
+      "병합 입력: front_more_normalized_manifest.json",
+      "공개 네이버 화면 관찰이며 현장 검증이 아닙니다."
+    ]
+  }
+}

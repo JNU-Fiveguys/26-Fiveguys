@@ -1,0 +1,72 @@
+{
+  "version": 1,
+  "id": "p_0075",
+  "name": "푸라닭광주 용봉점",
+  "category": "패스트푸드",
+  "lat": 35.17142,
+  "lng": 126.902313,
+  "address": "전남광주통합특별시 북구 용봉로 48-1",
+  "source": "semas",
+  "sourceId": "MA0101202409A0145220",
+  "sourceStatus": "active",
+  "attrs": {
+    "status": "partial"
+  },
+  "research": {
+    "identityStatus": "matched",
+    "queries": [
+      "\"푸라닭\" \"용봉점\" 메뉴 영업시간"
+    ],
+    "sources": [
+      {
+        "id": "s1",
+        "url": "https://onkorea.co.kr/gbuk/rYDTTaOxwUk6",
+        "title": "푸라닭광주용봉점 인허가 기반 정보",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "상호와 도로명 주소를 대조함. 공개 검색결과에서 확인했으며 직접 본문은 조회하지 않음."
+      }
+    ],
+    "facts": {
+      "menus": {
+        "status": "unconfirmed",
+        "sourceIds": [],
+        "note": "주소가 일치하는 매장의 메뉴·가격을 확인하지 못함."
+      },
+      "hours": {
+        "status": "unconfirmed",
+        "sourceIds": [],
+        "note": "요일별 영업시간·휴무를 확인하지 못함."
+      }
+    },
+    "notes": [
+      "용봉로48-1 주소 대조. 지점 적용가격·시간을 확인하지 못해 브랜드 공통값을 넣지 않음."
+    ],
+    "checkedAt": "2026-11-11",
+    "method": "web",
+    "unknownFields": [
+      "menus",
+      "hours",
+      "mealType",
+      "takeout",
+      "verifiedAt",
+      "verifiedBy",
+      "break",
+      "lastOrder"
+    ]
+  },
+  "availability": {
+    "status": "excluded",
+    "provider": "naver",
+    "checkedAt": "2026-11-11",
+    "sourceUrl": "https://map.naver.com/p/search/%EC%A0%84%EB%82%A8%EB%8C%80%20%EC%9D%8C%EC%8B%9D%EC%A0%90",
+    "naverPlaceId": null,
+    "observedName": "",
+    "observedAddress": "",
+    "district": null,
+    "addressVerified": false,
+    "nearby": false,
+    "reason": "네이버 지도에서 확인한 네 식당가 명단에 포함되지 않아 제외"
+  }
+}

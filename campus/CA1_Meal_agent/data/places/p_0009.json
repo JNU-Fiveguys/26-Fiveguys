@@ -1,0 +1,99 @@
+{
+  "version": 1,
+  "id": "p_0009",
+  "name": "술돼지",
+  "category": "고기",
+  "lat": 35.172388,
+  "lng": 126.906275,
+  "address": "전남광주통합특별시 북구 용봉로 88",
+  "source": "semas",
+  "sourceId": "MA010120220805104771",
+  "sourceStatus": "active",
+  "attrs": {
+    "status": "partial"
+  },
+  "research": {
+    "identityStatus": "matched",
+    "queries": [
+      "\"술돼지\" \"용봉로 88\" 메뉴 영업시간"
+    ],
+    "sources": [
+      {
+        "id": "s1",
+        "url": "https://www.tabling.co.kr/restaurant/6484",
+        "title": "테이블링 술돼지",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "상호·주소 일치"
+      },
+      {
+        "id": "s2",
+        "url": "https://www.diningcode.com/profile.php?rid=iTfRH09PFJdQ",
+        "title": "술돼지 매장정보",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "상호·주소 일치"
+      },
+      {
+        "id": "s3",
+        "url": "https://xn--299ayyj02d.com/%EB%A7%A4%EC%9E%A5/%EC%88%A0%EB%8F%BC%EC%A7%80",
+        "title": "술돼지 메뉴·가격·영업시간",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "2026-10-23 등록정보를 소개하지만 별도현장검증 아님"
+      }
+    ],
+    "facts": {
+      "menus": {
+        "status": "conflict",
+        "value": [],
+        "sourceIds": [
+          "s1",
+          "s3"
+        ],
+        "note": "이베리코 목살15,000/18,000원·삼겹살14,000/16,000원으로 출처간 가격이 달라 현재가격 보류."
+      },
+      "hours": {
+        "status": "partial",
+        "value": [],
+        "sourceIds": [
+          "s1",
+          "s2",
+          "s3"
+        ],
+        "note": "매일17:00~익일02:00 표기. 다른자료는 일17:00~24:00. 자정넘김 및 일요일 마감 충돌로 구조화 시간 보류."
+      }
+    },
+    "notes": [
+      "고깃집으로 분류되지만 저녁·심야 영업. 낮 공강 식사 후보 재검토 필요."
+    ],
+    "checkedAt": "2026-11-11",
+    "method": "web",
+    "unknownFields": [
+      "menus",
+      "hours",
+      "mealType",
+      "takeout",
+      "verifiedAt",
+      "verifiedBy",
+      "break",
+      "lastOrder"
+    ]
+  },
+  "availability": {
+    "status": "excluded",
+    "provider": "naver",
+    "checkedAt": "2026-11-11",
+    "sourceUrl": "https://map.naver.com/p/search/%EC%A0%84%EB%82%A8%EB%8C%80%20%EC%9D%8C%EC%8B%9D%EC%A0%90",
+    "naverPlaceId": null,
+    "observedName": "",
+    "observedAddress": "",
+    "district": null,
+    "addressVerified": false,
+    "nearby": false,
+    "reason": "네이버 지도에서 확인한 네 식당가 명단에 포함되지 않아 제외"
+  }
+}

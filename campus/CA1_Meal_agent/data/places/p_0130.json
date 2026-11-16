@@ -1,0 +1,464 @@
+{
+  "version": 1,
+  "id": "p_0130",
+  "source": "team",
+  "sourceId": "naver:1219930187",
+  "name": "안탈야케밥",
+  "address": "전남광주 북구 반룡로28번길 35 1층",
+  "category": "아시안",
+  "lat": 35.1774222612858,
+  "lng": 126.900857058915,
+  "sourceStatus": "active",
+  "availability": {
+    "status": "listed",
+    "provider": "naver",
+    "checkedAt": "2026-11-11",
+    "sourceUrl": "https://pcmap.place.naver.com/place/1219930187",
+    "naverPlaceId": "1219930187",
+    "observedName": "안탈야케밥",
+    "observedAddress": "전남광주 북구 반룡로28번길 35 1층",
+    "district": "상대",
+    "addressVerified": true,
+    "nearby": true,
+    "reason": "공개 네이버 지도에서 동일 주소의 전남대 상대 식당으로 확인"
+  },
+  "menuObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/1219930187/menu/list",
+    "checkedAt": "2026-11-11",
+    "priceContext": "in_store",
+    "menus": [
+      {
+        "name": "이스켄데르 케밥",
+        "price": 14900,
+        "main": true
+      },
+      {
+        "name": "믹스 라이스 플레이트",
+        "price": 10900,
+        "main": true
+      },
+      {
+        "name": "양고기 라이스 플레이트",
+        "price": 10900,
+        "main": true
+      },
+      {
+        "name": "치킨 라이스 플레이트",
+        "price": 9900,
+        "main": true
+      },
+      {
+        "name": "소문 믹스",
+        "price": 10900,
+        "main": true
+      },
+      {
+        "name": "소문 양고기",
+        "price": 10900,
+        "main": true
+      },
+      {
+        "name": "소문 치킨",
+        "price": 9900,
+        "main": true
+      },
+      {
+        "name": "믹스 박스",
+        "price": 9900,
+        "main": true
+      },
+      {
+        "name": "양고기 박스",
+        "price": 8900,
+        "main": true
+      },
+      {
+        "name": "치킨 박스",
+        "price": 7900,
+        "main": true
+      },
+      {
+        "name": "믹스 치즈 또띠아",
+        "price": 10900,
+        "main": true
+      },
+      {
+        "name": "양고기 치즈 또띠아",
+        "price": 9900,
+        "main": true
+      },
+      {
+        "name": "치킨 치즈 또띠아",
+        "price": 8900,
+        "main": true
+      },
+      {
+        "name": "믹스 라이스 또띠아",
+        "price": 9900,
+        "main": true
+      },
+      {
+        "name": "양고기 라이스 또띠아",
+        "price": 8900,
+        "main": true
+      },
+      {
+        "name": "치킨 라이스 또띠아",
+        "price": 7900,
+        "main": true
+      },
+      {
+        "name": "믹스 또띠아",
+        "price": 7900,
+        "main": true
+      },
+      {
+        "name": "양고기 또띠아",
+        "price": 7900,
+        "main": true
+      },
+      {
+        "name": "치킨 또띠아",
+        "price": 6900,
+        "main": true
+      }
+    ],
+    "note": "메뉴 상태: confirmed. 원본 관찰·좌표 출처는 적용 manifest에 보관합니다.",
+    "status": "confirmed"
+  },
+  "attrs": {
+    "status": "partial",
+    "menus": [
+      {
+        "name": "이스켄데르 케밥",
+        "price": 14900,
+        "main": true
+      },
+      {
+        "name": "믹스 라이스 플레이트",
+        "price": 10900,
+        "main": true
+      },
+      {
+        "name": "양고기 라이스 플레이트",
+        "price": 10900,
+        "main": true
+      },
+      {
+        "name": "치킨 라이스 플레이트",
+        "price": 9900,
+        "main": true
+      },
+      {
+        "name": "소문 믹스",
+        "price": 10900,
+        "main": true
+      },
+      {
+        "name": "소문 양고기",
+        "price": 10900,
+        "main": true
+      },
+      {
+        "name": "소문 치킨",
+        "price": 9900,
+        "main": true
+      },
+      {
+        "name": "믹스 박스",
+        "price": 9900,
+        "main": true
+      },
+      {
+        "name": "양고기 박스",
+        "price": 8900,
+        "main": true
+      },
+      {
+        "name": "치킨 박스",
+        "price": 7900,
+        "main": true
+      },
+      {
+        "name": "믹스 치즈 또띠아",
+        "price": 10900,
+        "main": true
+      },
+      {
+        "name": "양고기 치즈 또띠아",
+        "price": 9900,
+        "main": true
+      },
+      {
+        "name": "치킨 치즈 또띠아",
+        "price": 8900,
+        "main": true
+      },
+      {
+        "name": "믹스 라이스 또띠아",
+        "price": 9900,
+        "main": true
+      },
+      {
+        "name": "양고기 라이스 또띠아",
+        "price": 8900,
+        "main": true
+      },
+      {
+        "name": "치킨 라이스 또띠아",
+        "price": 7900,
+        "main": true
+      },
+      {
+        "name": "믹스 또띠아",
+        "price": 7900,
+        "main": true
+      },
+      {
+        "name": "양고기 또띠아",
+        "price": 7900,
+        "main": true
+      },
+      {
+        "name": "치킨 또띠아",
+        "price": 6900,
+        "main": true
+      }
+    ],
+    "hours": [
+      {
+        "days": [
+          "수",
+          "목",
+          "금",
+          "토",
+          "일",
+          "월"
+        ],
+        "open": "11:00",
+        "close": "24:00"
+      },
+      {
+        "days": [
+          "목",
+          "금",
+          "토",
+          "일",
+          "월",
+          "화"
+        ],
+        "open": "00:00",
+        "close": "11:00",
+        "lastOrder": "10:30"
+      }
+    ]
+  },
+  "hoursObservation": {
+    "sourceUrl": "https://pcmap.place.naver.com/restaurant/1219930187/home",
+    "checkedAt": "2026-11-12",
+    "status": "confirmed",
+    "hours": [
+      {
+        "days": [
+          "수",
+          "목",
+          "금",
+          "토",
+          "일",
+          "월"
+        ],
+        "open": "11:00",
+        "close": "24:00"
+      },
+      {
+        "days": [
+          "목",
+          "금",
+          "토",
+          "일",
+          "월",
+          "화"
+        ],
+        "open": "00:00",
+        "close": "11:00",
+        "lastOrder": "10:30"
+      }
+    ],
+    "note": "매장 영업시간 관찰. 기존 attrs/research를 덮어쓰지 않습니다."
+  },
+  "research": {
+    "checkedAt": "2026-11-11",
+    "method": "web",
+    "identityStatus": "matched",
+    "queries": [
+      "안탈야케밥 전남광주 북구 반룡로28번길 35 1층"
+    ],
+    "sources": [
+      {
+        "id": "naver-place",
+        "url": "https://pcmap.place.naver.com/place/1219930187",
+        "title": "안탈야케밥 네이버 지도",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "같은 주소의 지점 확인. 지도 등록 확인은 실시간 영업 중 보증이 아님"
+      },
+      {
+        "id": "naver-menu",
+        "url": "https://pcmap.place.naver.com/restaurant/1219930187/menu/list",
+        "title": "안탈야케밥 메뉴 탭",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "가격 맥락: in_store"
+      },
+      {
+        "id": "naver-hours",
+        "url": "https://pcmap.place.naver.com/place/1219930187",
+        "title": "안탈야케밥 영업시간",
+        "type": "directory",
+        "observedAt": "2026-11-11",
+        "addressMatch": true,
+        "note": "게시된 요일별 영업시간. 미확인은 추정하지 않음"
+      }
+    ],
+    "facts": {
+      "menus": {
+        "status": "confirmed",
+        "sourceIds": [
+          "naver-menu"
+        ],
+        "note": "매장 게시값을 확인했습니다.",
+        "value": [
+          {
+            "name": "이스켄데르 케밥",
+            "price": 14900,
+            "main": true
+          },
+          {
+            "name": "믹스 라이스 플레이트",
+            "price": 10900,
+            "main": true
+          },
+          {
+            "name": "양고기 라이스 플레이트",
+            "price": 10900,
+            "main": true
+          },
+          {
+            "name": "치킨 라이스 플레이트",
+            "price": 9900,
+            "main": true
+          },
+          {
+            "name": "소문 믹스",
+            "price": 10900,
+            "main": true
+          },
+          {
+            "name": "소문 양고기",
+            "price": 10900,
+            "main": true
+          },
+          {
+            "name": "소문 치킨",
+            "price": 9900,
+            "main": true
+          },
+          {
+            "name": "믹스 박스",
+            "price": 9900,
+            "main": true
+          },
+          {
+            "name": "양고기 박스",
+            "price": 8900,
+            "main": true
+          },
+          {
+            "name": "치킨 박스",
+            "price": 7900,
+            "main": true
+          },
+          {
+            "name": "믹스 치즈 또띠아",
+            "price": 10900,
+            "main": true
+          },
+          {
+            "name": "양고기 치즈 또띠아",
+            "price": 9900,
+            "main": true
+          },
+          {
+            "name": "치킨 치즈 또띠아",
+            "price": 8900,
+            "main": true
+          },
+          {
+            "name": "믹스 라이스 또띠아",
+            "price": 9900,
+            "main": true
+          },
+          {
+            "name": "양고기 라이스 또띠아",
+            "price": 8900,
+            "main": true
+          },
+          {
+            "name": "치킨 라이스 또띠아",
+            "price": 7900,
+            "main": true
+          },
+          {
+            "name": "믹스 또띠아",
+            "price": 7900,
+            "main": true
+          },
+          {
+            "name": "양고기 또띠아",
+            "price": 7900,
+            "main": true
+          },
+          {
+            "name": "치킨 또띠아",
+            "price": 6900,
+            "main": true
+          }
+        ]
+      },
+      "hours": {
+        "status": "unconfirmed",
+        "sourceIds": [],
+        "note": "매장 기준 정보 미확인. 배달·가격 맥락 불명 자료는 확정하지 않습니다."
+      }
+    },
+    "unknownFields": [
+      "hours",
+      "mealType",
+      "takeout",
+      "verifiedAt",
+      "verifiedBy",
+      "break",
+      "lastOrder"
+    ],
+    "notes": [
+      "메뉴 업데이트25.09.04. 영업시간이 11:00~다음날11:00로 게시되어 24시간처럼 보이지만 입력오류 가능성 미확인; 임의로23시로 변경하지 않음.",
+      "영업시간 원문: 월수목금토일11:00-다음날11:00, 라스트오더 다음날10:30; 화 정기휴무. 원문 이상표기 확인필요",
+      "원본 관찰은 front_sangdae_more.json. main은 1인 식사 예산용 분류이며 공유 피자는 false로 보수적으로 표시.",
+      "다음날11:00 영업종료의 이상표기와 화요일 휴무 해석을 확정하지 못해 정규hours미확인 유지.",
+      "병합 입력: front_more_normalized_manifest.json",
+      "공개 네이버 화면 관찰이며 현장 검증이 아닙니다."
+    ]
+  },
+  "followupReview": {
+    "checkedAt": "2026-11-12",
+    "reasons": [
+      "확인된 매장 식사 가격과 요일별 영업시간을 연결하여 추천 대상으로 전환했습니다."
+    ],
+    "sources": [
+      "https://pcmap.place.naver.com/restaurant/1219930187/home",
+      "https://pcmap.place.naver.com/restaurant/1219930187/menu/list"
+    ]
+  }
+}
